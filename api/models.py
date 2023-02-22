@@ -1,0 +1,164 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+from django.db import models
+from .utils.db_types import *
+
+class City(models.Model):
+    city_id = models.AutoField(primary_key=True)
+    province = models.ForeignKey('Province', models.DO_NOTHING)
+    name = models.CharField(max_length=256, blank=True, null=True)
+    lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'city'
+
+
+class DayAndHour(models.Model):
+    dah_id = models.AutoField(primary_key=True)
+    poh = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
+    weekday = WeekDayField() 
+    opening_hour = models.TimeField()
+    closing_hour = models.TimeField()
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'day_and_hour'
+
+
+class Image(models.Model):
+    image_id = models.AutoField(primary_key=True)
+    poi = models.ForeignKey('Poi', models.DO_NOTHING)
+    url = models.CharField(max_length=1024, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'image'
+
+
+class Poi(models.Model):
+    poi_id = models.AutoField(primary_key=True)
+    city = models.ForeignKey(City, models.DO_NOTHING)
+    name = models.CharField(max_length=256)
+    lat = models.DecimalField(max_digits=9, decimal_places=7)
+    lon = models.DecimalField(max_digits=9, decimal_places=7)
+    address = models.CharField(max_length=256, blank=True, null=True)
+    type = models.CharField(max_length=128)
+    poh = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING)
+    phone = models.CharField(max_length=64, blank=True, null=True)
+    email = models.CharField(max_length=128, blank=True, null=True)
+    average_visiting_time = models.IntegerField()
+    utility_score = models.IntegerField(blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'poi'
+
+
+class PoiOpeningHour(models.Model):
+    poh_id = models.AutoField(primary_key=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'poi_opening_hour'
+
+
+class Province(models.Model):
+    province_id = models.AutoField(primary_key=True)
+    region = models.ForeignKey('Region', models.DO_NOTHING)
+    name = models.CharField(unique=True, max_length=256, blank=True, null=True)
+    lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'province'
+
+
+class Region(models.Model):
+    region_id = models.AutoField(primary_key=True)
+    name = models.CharField(unique=True, max_length=128, blank=True, null=True)
+    min_lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    min_lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    max_lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    max_lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'region'
+
+
+class SocialInteraction(models.Model):
+    si_id = models.AutoField(primary_key=True)
+    url = models.CharField(max_length=1024)
+    source_type = SourceField()  # This field type is a guess.
+    wos = models.ForeignKey('SocialMedia', models.DO_NOTHING, blank=True, null=True)
+    poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'social_interaction'
+
+
+class SocialMedia(models.Model):
+    sm_id = models.AutoField(primary_key=True)
+    url = models.CharField(max_length=1024)
+    source_type = SourceField() # This field type is a guess.
+    city = models.ForeignKey(City, models.DO_NOTHING, blank=True, null=True)
+    poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'social_media'
+
+
+class Tag(models.Model):
+    tag_id = models.AutoField(primary_key=True)
+    tag = models.CharField(max_length=128)
+    si = models.ForeignKey(SocialInteraction, models.DO_NOTHING, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'tag'
+
+
+class UserAccount(models.Model):
+    user_id = models.AutoField(primary_key=True)
+    email = models.CharField(unique=True, max_length=128)
+    password = models.CharField(max_length=32)
+    age = models.IntegerField()
+    gender = GenderField()  # This field type is a guess.
+    disability = models.IntegerField()
+    tag = models.ManyToManyField(Tag)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'user_account'
+
+
+""" class UserTag(models.Model):
+    ut_id = models.AutoField(primary_key=True)
+    user = models.ForeignKey(UserAccount, models.DO_NOTHING)
+    tag = models.ForeignKey(Tag, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'user_tag'
+ """
