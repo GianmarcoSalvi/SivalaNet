@@ -24,9 +24,9 @@ class CitySerializer(serializers.ModelSerializer):
         exclude = ['is_active']
 
 # 4) USER ACCOUNT
-class UserAccountSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = UserAccount
+        model = User
         #fields = '__all__'
         exclude = ['is_active']
 
@@ -44,14 +44,6 @@ class TagSerializer(serializers.ModelSerializer):
         model = Tag
         #fields = '__all__'
         exclude = ['is_active', 'si']
-
-# 7) POI OPENING HOUR
-class PoiOpeningHourSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = PoiOpeningHour
-        #fields = '__all__'
-        exclude = ['is_active']
-        # depth = 2
 
 # 8) IMAGE
 class ImageSerializer(serializers.ModelSerializer):

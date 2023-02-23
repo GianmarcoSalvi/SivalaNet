@@ -9,6 +9,6 @@ from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExampl
 from drf_spectacular.types import OpenApiTypes
 
 # 4) USER ACCOUNT
-class UserAccountViewSet(viewsets.ModelViewSet):
-    queryset = UserAccount.objects.all()
-    serializer_class = UserAccountSerializer
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

@@ -44,7 +44,7 @@ from drf_spectacular.types import OpenApiTypes
     ),
     list = extend_schema(
         # operation_id='getRegions', 
-        summary='Get all regions from the db',
+        # summary='Get all regions from the db',
     )
 )
 class RegionViewSet(viewsets.ModelViewSet):

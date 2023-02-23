@@ -23,7 +23,7 @@ class City(models.Model):
 
 class DayAndHour(models.Model):
     dah_id = models.AutoField(primary_key=True)
-    poh = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
+    poi = models.ForeignKey('Poi', models.DO_NOTHING)
     weekday = WeekDayField() 
     opening_hour = models.TimeField()
     closing_hour = models.TimeField()
@@ -53,25 +53,15 @@ class Poi(models.Model):
     lon = models.DecimalField(max_digits=9, decimal_places=7)
     address = models.CharField(max_length=256, blank=True, null=True)
     type = models.CharField(max_length=128)
-    poh = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING)
     phone = models.CharField(max_length=64, blank=True, null=True)
     email = models.CharField(max_length=128, blank=True, null=True)
     average_visiting_time = models.IntegerField()
-    utility_score = models.IntegerField(blank=True, null=True)
+    # utility_score = models.IntegerField(blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'poi'
-
-
-class PoiOpeningHour(models.Model):
-    poh_id = models.AutoField(primary_key=True)
-    is_active = models.BooleanField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'poi_opening_hour'
 
 
 class Province(models.Model):
@@ -138,14 +128,14 @@ class Tag(models.Model):
         db_table = 'tag'
 
 
-class UserAccount(models.Model):
+class User(models.Model):
     user_id = models.AutoField(primary_key=True)
     email = models.CharField(unique=True, max_length=128)
     password = models.CharField(max_length=32)
     age = models.IntegerField()
-    gender = GenderField()  # This field type is a guess.
+    gender = GenderField() 
     disability = models.IntegerField()
-    tag = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, through='UserTag')
     is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
@@ -153,12 +143,11 @@ class UserAccount(models.Model):
         db_table = 'user_account'
 
 
-""" class UserTag(models.Model):
+class UserTag(models.Model):
     ut_id = models.AutoField(primary_key=True)
-    user = models.ForeignKey(UserAccount, models.DO_NOTHING)
+    user = models.ForeignKey(User, models.DO_NOTHING)
     tag = models.ForeignKey(Tag, models.DO_NOTHING)
 
     class Meta:
         managed = False
         db_table = 'user_tag'
- """
