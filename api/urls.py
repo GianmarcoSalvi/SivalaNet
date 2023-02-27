@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import city, region, poi, province, user, image, tag, social_media, day_and_hour # poi_opening_hour
+from .views import city, region, poi, province, user, image, tag, social_media, day_and_hour, itinerary # poi_opening_hour
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -13,14 +13,16 @@ router.register(r'poi', poi.PoiViewSet, basename='poi') # 7
 #router.register(r'poi_opening_hour', poi_opening_hour.PoiOpeningHourViewSet, basename='poi_opening_hour') # 8
 router.register(r'social_media', social_media.SocialMediaViewSet, basename='social_media') # 9
 router.register(r'day_and_hour', day_and_hour.DayAndHourViewSet, basename='day_and_hour') # 10
+router.register(r'itinerary',itinerary.ItineraryViewSet, basename='itinerary')
 
 
+#urlpatterns = router.urls
 
-urlpatterns = router.urls
-
-
+ 
 urlpatterns = [
+    
     path('', include(router.urls)),
+    #path('itinerary', itinerary.ItineraryView.as_view, name='itinerary'),
     #path('region', views.region),
     #path('region/<str:pk>', views.region_id),
 ]

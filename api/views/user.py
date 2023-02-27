@@ -1,4 +1,4 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, action
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
@@ -12,3 +12,5 @@ from drf_spectacular.types import OpenApiTypes
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    
+

@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'db', # PUT 'db' to work with docker
+        'HOST': 'localhost', # PUT 'db' to work with docker
         'PORT': 5432,
         'NAME': "postgres",
         'USER': "postgres",
@@ -151,4 +151,4 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

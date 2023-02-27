@@ -68,3 +68,22 @@ class DayAndHourSerializer(serializers.ModelSerializer):
         exclude = ['is_active']   
         # depth = 1 
 
+
+
+# 11) DailySchedule
+class DailyScheduleSerializer(serializers.Serializer):
+    # poi_quantity = serializers.IntegerField(
+    poi_list = PoiSerializer(many=True, read_only=True)
+    # hour_schedule = serializers.DictField()
+        
+"""
+
+# 12) Itinerary
+class ItinerarySerializer(serializers.Serializer):
+    daily_schedule_list = DailyScheduleSerializer(many=True, read_only=True)
+    class Meta:
+        model = Itinerary
+        fields = '__all__'
+
+        
+"""
