@@ -12,7 +12,7 @@ from ..models import *
 
 
 class ItineraryViewSet(viewsets.ViewSet):
-    serializer_class = PoiSerializer()
+    serializer_class = ItinerarySerializer
 
     @extend_schema(
     parameters=([
@@ -31,17 +31,12 @@ class ItineraryViewSet(viewsets.ViewSet):
     )
     def list(self, request):
        
-        itinerary = generator.generate_itinerary(0,4)
         
-        print(itinerary)
-        queryset = Poi.objects.all()
-        res = {}
-        for day in range(len(itinerary)):
-            poi_list = []
-            for poi in(itinerary[day]):
-                poi_list.append(queryset.filter(poi_id=poi))
-
-            res[day] = sc.DailySchedule(poi_list=poi_list)
-
-        return Response(PoiSerializer(res, many=True).data)
+        itinerary = generator.generate_itinerary(
+            days=int(request.GET.get('days')), 
+            user_id=request.GET.get('user_id'))
+        
+        serializer = ItinerarySerializer(instance=itinerary)
+        return Response(serializer.data)
+   
 

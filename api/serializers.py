@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import *
-
+from .utils import special_classes as sc
 
 # 1) REGION
 class RegionSerializer(serializers.ModelSerializer):
@@ -36,7 +36,7 @@ class PoiSerializer(serializers.ModelSerializer):
         model = Poi
         #fields = '__all__'
         exclude = ['is_active']
-        # depth = 2
+        # depth = 1
 
 # 6) TAG
 class TagSerializer(serializers.ModelSerializer):
@@ -61,7 +61,7 @@ class SocialMediaSerializer(serializers.ModelSerializer):
 
 
 # 10) DAY AND HOUR
-class DayAndHourSerializer(serializers.ModelSerializer):
+class DayAndHourSerializer(serializers.Serializer):
     class Meta:
         model = DayAndHour
         #fields = '__all__'
@@ -70,20 +70,56 @@ class DayAndHourSerializer(serializers.ModelSerializer):
 
 
 
+class PoiSerializerFake(serializers.Serializer):
+    poi_id = serializers.IntegerField(read_only=True)
+    city = serializers.IntegerField(read_only=True)
+    name = serializers.CharField(max_length=256)
+    lat = serializers.FloatField(read_only=True)
+    lon = serializers.FloatField(read_only=True)
+    address = serializers.CharField(max_length=256)
+    type = serializers.CharField(max_length=128)
+    poh_id = serializers.IntegerField(read_only=True)
+    phone = serializers.CharField(max_length=64)
+    email = serializers.CharField(max_length=128)
+    average_visiting_time = serializers.IntegerField(read_only=True)
+    utility_score = serializers.IntegerField(read_only=True)
+
+    def create(self, validated_data):
+        return sc.PoiFake(**validated_data)
+
+    def update(self, instance, validated_data):
+        for field, value in validated_data.items():
+            setattr(instance, field, value)
+        return instance
+
 # 11) DailySchedule
 class DailyScheduleSerializer(serializers.Serializer):
-    # poi_quantity = serializers.IntegerField(
-    poi_list = PoiSerializer(many=True, read_only=True)
-    # hour_schedule = serializers.DictField()
+    dailyschedule = PoiSerializerFake(many=True)
+    #poi_quantity = serializers.IntegerField(read_only=True)
+
+    def create(self, validated_data):
+        return sc.DailySchedule(**validated_data)
+
+    def update(self, instance, validated_data):
+        for field, value in validated_data.items():
+            setattr(instance, field, value)
+        return instance
+
         
-"""
+
 
 # 12) Itinerary
 class ItinerarySerializer(serializers.Serializer):
-    daily_schedule_list = DailyScheduleSerializer(many=True, read_only=True)
-    class Meta:
-        model = Itinerary
-        fields = '__all__'
+    itinerary = DailyScheduleSerializer(many=True)
+    #days = serializers.IntegerField(read_only=True)
 
-        
-"""
+    def create(self, validated_data):
+        return sc.Itinerary(**validated_data)
+
+    def update(self, instance, validated_data):
+        for field, value in validated_data.items():
+            setattr(instance, field, value)
+        return instance
+
+
+    

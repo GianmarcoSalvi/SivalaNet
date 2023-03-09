@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost', # PUT 'db' to work with docker
+        'HOST': 'db', # PUT 'db' to work with docker
         'PORT': 5432,
         'NAME': "postgres",
         'USER': "postgres",
@@ -129,6 +129,7 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_PATCH': False,
     'TAGS': ['user', 'poi', 'tag', 'region', 'province', 'city', 'social_media'],
     # 'CAMELIZE_NAMES': True,
+    'SORT_OPERATION_PARAMETERS': False
 }
 
 # Internationalization
@@ -151,4 +152,4 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

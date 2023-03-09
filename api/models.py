@@ -23,7 +23,7 @@ class City(models.Model):
 
 class DayAndHour(models.Model):
     dah_id = models.AutoField(primary_key=True)
-    poi = models.ForeignKey('Poi', models.DO_NOTHING)
+    poh = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
     weekday = WeekDayField() 
     opening_hour = models.TimeField()
     closing_hour = models.TimeField()
@@ -56,8 +56,9 @@ class Poi(models.Model):
     phone = models.CharField(max_length=64, blank=True, null=True)
     email = models.CharField(max_length=128, blank=True, null=True)
     average_visiting_time = models.IntegerField()
-    # utility_score = models.IntegerField(blank=True, null=True)
+    utility_score = models.IntegerField(blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
+    poh = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
@@ -151,3 +152,12 @@ class UserTag(models.Model):
     class Meta:
         managed = False
         db_table = 'user_tag'
+
+
+class PoiOpeningHour(models.Model):
+    poh_id = models.AutoField(primary_key=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'poi_opening_hour'

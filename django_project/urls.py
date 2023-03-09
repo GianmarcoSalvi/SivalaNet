@@ -18,7 +18,6 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularRedocView, SpectacularSwaggerView
 from drf_spectacular.views import SpectacularAPIView
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sivalanetapi/v1/', include('api.urls')),
