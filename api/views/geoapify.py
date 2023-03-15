@@ -88,6 +88,9 @@ class AccommodationView(views.APIView):
         accommodations = []
 
         for place in places:
+
+            if place 
+
             request_preview = place_details_request + '&id=' + place
             response = requests.get(request_preview)
 

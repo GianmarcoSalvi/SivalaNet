@@ -30,13 +30,6 @@ class UserSerializer(serializers.ModelSerializer):
         #fields = '__all__'
         exclude = ['is_active']
 
-# 5) POI
-class PoiSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Poi
-        #fields = '__all__'
-        exclude = ['is_active']
-        # depth = 1
 
 # 6) TAG
 class TagSerializer(serializers.ModelSerializer):
@@ -61,12 +54,29 @@ class SocialMediaSerializer(serializers.ModelSerializer):
 
 
 # 10) DAY AND HOUR
-class DayAndHourSerializer(serializers.Serializer):
+class DayAndHourSerializer(serializers.ModelSerializer):
     class Meta:
         model = DayAndHour
         #fields = '__all__'
         exclude = ['is_active']   
         # depth = 1 
+
+class PoiOpeningHourSerializer(serializers.ModelSerializer):
+    opening_hour = DayAndHourSerializer(many=True, read_only=True)
+    class Meta:
+        model = PoiOpeningHour
+        exclude = ['is_active']
+
+
+# 5) POI
+class PoiSerializer(serializers.ModelSerializer):
+    opening = PoiOpeningHourSerializer(read_only=True)
+    cityy = CitySerializer(read_only=True)
+    class Meta:
+        model = Poi
+        #fields = '__all__'
+        exclude = ['is_active']
+        # depth = 1
 
 
 

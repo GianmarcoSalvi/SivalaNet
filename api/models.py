@@ -161,3 +161,11 @@ class PoiOpeningHour(models.Model):
     class Meta:
         managed = False
         db_table = 'poi_opening_hour'
+
+class Place(models.Model):
+    place_id = models.AutoField(primary_key=True)
+    json = models.CharField(max_length=8192)
+
+    class Meta:
+        managed = False
+        db_table = 'place'
