@@ -1089,7 +1089,7 @@ COPY public.image (image_id, poi_id, url, is_active) FROM stdin;
 -- Data for Name: place; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.place (place_id, json, "timestamp") FROM stdin;
+COPY public.place (place_id, json, last_modification) FROM stdin;
 \.
 
 
