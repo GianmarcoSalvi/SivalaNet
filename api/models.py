@@ -165,8 +165,8 @@ class PoiOpeningHour(models.Model):
 class Place(models.Model):
     place_id = models.AutoField(primary_key=True)
     json = models.CharField(max_length=8192)
-    last_modification = models.DateTimeField(auto_now=True, auto_now_add=True) # only updates when is called Model.save(). QuereySet.update() won't work
+    last_modification = models.DateTimeField(auto_now=True) # only updates when is called Model.save(). QuereySet.update() won't work
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'place'
