@@ -168,5 +168,5 @@ class Place(models.Model):
     last_modification = models.DateTimeField(auto_now=True) # only updates when is called Model.save(). QuereySet.update() won't work
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'place'

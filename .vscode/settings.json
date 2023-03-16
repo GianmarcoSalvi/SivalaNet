@@ -1,6 +1,3 @@
 {
-    "python.analysis.typeCheckingMode": "off",
-    "files.exclude": {
-        "venv": true
-    }
+    "python.analysis.typeCheckingMode": "off"
 }
