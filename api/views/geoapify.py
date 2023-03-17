@@ -11,7 +11,10 @@ from drf_spectacular.types import OpenApiTypes
 from ..algorithm import generator
 from ..utils import special_classes as sc
 from ..models import *
+import ast
 
+import json
+from django.http import JsonResponse
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -92,30 +95,28 @@ class AccommodationView(views.APIView):
         # if the place exists inside the db, it is removed from "places" list so that a Geoapify request for
         # that place ID is saved.
 
-        for place in places:
-            try:
-                existing = Place.objects.get(place_id=place)
-                accommodations.append(existing.json)
-                places.remove(place)
-            except ObjectDoesNotExist:
-                pass
-            
         place_details_request = 'https://api.geoapify.com/v2/place-details?'
         place_details_request += 'apiKey=' + API_KEY
 
+        # if the place exists inside the db, it is removed from "places" list so that a Geoapify request for
+        # that place ID is saved.
 
         for place in places:
+            try:
+                existing = Place.objects.get(place_id=place)
+                formatted_json = json.loads(json.dumps(ast.literal_eval(existing.json)))
+                accommodations.append(formatted_json)
 
-            request_preview = place_details_request + '&id=' + place
-            response = requests.get(request_preview)
+            except ObjectDoesNotExist:
+                request_preview = place_details_request + '&id=' + place
+                response = requests.get(request_preview)
             
-            place_entry = Place(place_id=place, json=response.json())
-            place_entry.save()
+                place_entry = Place(place_id=place, json=response.json())
+                place_entry.save()
 
-            accommodations.append(response.json())
+                accommodations.append(response.json())
             
-        #response = requests.get(api_request)
-        
+            
         return Response(accommodations)
 
 
@@ -177,29 +178,26 @@ class CateringView(views.APIView):
         
         caterings = []
 
+        place_details_request = 'https://api.geoapify.com/v2/place-details?'
+        place_details_request += 'apiKey=' + API_KEY
+
         # if the place exists inside the db, it is removed from "places" list so that a Geoapify request for
         # that place ID is saved.
 
         for place in places:
             try:
                 existing = Place.objects.get(place_id=place)
-                caterings.append(existing.json)
-                places.remove(place)
+                formatted_json = json.loads(json.dumps(ast.literal_eval(existing.json)))
+                caterings.append(formatted_json)
+
             except ObjectDoesNotExist:
-                pass
-                
-        place_details_request = 'https://api.geoapify.com/v2/place-details?'
-        place_details_request += 'apiKey=' + API_KEY
-
-
-        for place in places:
-
-            request_preview = place_details_request + '&id=' + place
-            response = requests.get(request_preview)
+                request_preview = place_details_request + '&id=' + place
+                response = requests.get(request_preview)
             
-            place_entry = Place(place_id=place, json=response.json())
-            place_entry.save()
+                place_entry = Place(place_id=place, json=response.json())
+                place_entry.save()
 
-            caterings.append(response.json())
+                caterings.append(response.json())
+            
             
         return Response(caterings)
