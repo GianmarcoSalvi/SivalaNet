@@ -12,6 +12,8 @@ from ..algorithm import generator
 from ..utils import special_classes as sc
 from ..models import *
 
+from django.core.exceptions import ObjectDoesNotExist
+
 
 API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
 
@@ -42,7 +44,8 @@ class AccommodationView(views.APIView):
             OpenApiParameter(name="conditions", type=OpenApiTypes.STR, 
                             description="In addition to categories, there is a possibility to filter results by conditions. For example, only places with internet_access. Check more in externalDocs"),
             OpenApiParameter(name="filter", type=OpenApiTypes.STR,
-                            description="Filter places by bounds, circle, geometry or countries"),
+                            description="Filter places by bounds, circle, geometry or countries",
+                            examples=[OpenApiExample(name='Example value', value='circle:12.1051148,42.4168441,5000')]),
             OpenApiParameter(name="bias", type=OpenApiTypes.STR,
                             description="Search first near the location. Note, the API will search places near the location, but not further tham 50km."),
             OpenApiParameter(name="limit", type=OpenApiTypes.STR,
@@ -81,16 +84,31 @@ class AccommodationView(views.APIView):
         if ('filter' not in query_dict) and ('bias' not in query_dict) and not('lat' in query_dict and 'lon' in query_dict):  
             return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain at least one of [filter, bias, (lat,lon)]")
         places = getPlaceIdList(api_request)
+        
+        accommodations = []
 
+        # if the place exists inside the db, it is removed from "places" list so that a Geoapify request for
+        # that place ID is saved.
+
+        for place in places:
+            try:
+                existing = Place.objects.get(place_id=place)
+                accommodations.append(existing.json)
+            except ObjectDoesNotExist:
+                places.remove(place)
+            
+            
         place_details_request = 'https://api.geoapify.com/v2/place-details?'
         place_details_request += 'apiKey=' + API_KEY
 
-        accommodations = []
 
         for place in places:
 
             request_preview = place_details_request + '&id=' + place
             response = requests.get(request_preview)
+            
+            place_entry = Place(place_id=place, json=response.json())
+            place_entry.save()
 
             accommodations.append(response.json())
             
@@ -114,7 +132,8 @@ class CateringView(views.APIView):
             OpenApiParameter(name="conditions", type=OpenApiTypes.STR, 
                             description="In addition to categories, there is a possibility to filter results by conditions. For example, only places with internet_access. Check more in externalDocs"),
             OpenApiParameter(name="filter", type=OpenApiTypes.STR,
-                            description="Filter places by bounds, circle, geometry or countries"),
+                            description="Filter places by bounds, circle, geometry or countries",
+                            examples=[OpenApiExample(name='Example value', value='circle:12.1051148,42.4168441,5000')]),
             OpenApiParameter(name="bias", type=OpenApiTypes.STR,
                             description="Search first near the location. Note, the API will search places near the location, but not further tham 50km."),
             OpenApiParameter(name="limit", type=OpenApiTypes.STR,
@@ -153,18 +172,32 @@ class CateringView(views.APIView):
         if ('filter' not in query_dict) and ('bias' not in query_dict) and not('lat' in query_dict and 'lon' in query_dict):  
             return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain at least one of [filter, bias, (lat,lon)]")
         places = getPlaceIdList(api_request)
+        
+        caterings = []
 
+        # if the place exists inside the db, it is removed from "places" list so that a Geoapify request for
+        # that place ID is saved.
+
+        for place in places:
+            try:
+                existing = Place.objects.get(place_id=place)
+                caterings.append(existing.json)
+            except ObjectDoesNotExist:
+                places.remove(place)
+            
+            
         place_details_request = 'https://api.geoapify.com/v2/place-details?'
         place_details_request += 'apiKey=' + API_KEY
 
-        caterings = []
 
         for place in places:
+
             request_preview = place_details_request + '&id=' + place
             response = requests.get(request_preview)
+            
+            place_entry = Place(place_id=place, json=response.json())
+            place_entry.save()
 
             caterings.append(response.json())
             
-        #response = requests.get(api_request)
-        
         return Response(caterings)

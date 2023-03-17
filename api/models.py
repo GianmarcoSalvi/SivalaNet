@@ -163,7 +163,7 @@ class PoiOpeningHour(models.Model):
         db_table = 'poi_opening_hour'
 
 class Place(models.Model):
-    place_id = models.AutoField(primary_key=True)
+    place_id = models.CharField(max_length=1024,primary_key=True)
     json = models.CharField(max_length=8192)
     last_modification = models.DateTimeField(auto_now=True) # only updates when is called Model.save(). QuereySet.update() won't work
 
