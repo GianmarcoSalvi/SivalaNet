@@ -83,6 +83,8 @@ class AccommodationView(views.APIView):
 
         if ('filter' not in query_dict) and ('bias' not in query_dict) and not('lat' in query_dict and 'lon' in query_dict):  
             return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain at least one of [filter, bias, (lat,lon)]")
+        
+        
         places = getPlaceIdList(api_request)
         
         accommodations = []
@@ -94,9 +96,9 @@ class AccommodationView(views.APIView):
             try:
                 existing = Place.objects.get(place_id=place)
                 accommodations.append(existing.json)
-            except ObjectDoesNotExist:
                 places.remove(place)
-            
+            except ObjectDoesNotExist:
+                pass
             
         place_details_request = 'https://api.geoapify.com/v2/place-details?'
         place_details_request += 'apiKey=' + API_KEY
@@ -182,10 +184,10 @@ class CateringView(views.APIView):
             try:
                 existing = Place.objects.get(place_id=place)
                 caterings.append(existing.json)
-            except ObjectDoesNotExist:
                 places.remove(place)
-            
-            
+            except ObjectDoesNotExist:
+                pass
+                
         place_details_request = 'https://api.geoapify.com/v2/place-details?'
         place_details_request += 'apiKey=' + API_KEY
 
