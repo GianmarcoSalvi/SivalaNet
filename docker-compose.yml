@@ -19,5 +19,14 @@ services:
     environment:
       POSTGRES_PASSWORD: 'postgres'
       # - "POSTGRES_HOST_AUTH_METHOD=trust"
+    networks:
+      customnetwork:
+        ipv4_address: 172.27.0.2
 volumes:
   postgres_data:
+
+networks:
+  customnetwork:
+    ipam:
+      config:
+        - subnet: 172.27.0.0/16
