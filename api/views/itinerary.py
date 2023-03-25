@@ -26,17 +26,28 @@ class ItineraryViewSet(viewsets.ViewSet):
         OpenApiParameter(name="intensity", type=OpenApiTypes.INT, required=False, enum=(1,2,3,4,5),
                          description="How much relaxed (from 1) or dynimic (up to 5) the journey will be"),
         OpenApiParameter(name="preference", type=OpenApiTypes.INT, required=False, enum=(1,2,3),
-                         description="[1] Highest quantity of Poi. [2] Most popular attractions itinerary. [3] Budget minimizing itinerary")                
+                         description="[1] Highest quantity of Poi. [2] Most popular attractions itinerary. [3] Budget minimizing itinerary"),
+        OpenApiParameter(name='generating_engine', type=OpenApiTypes.STR, enum=('test','geoapify','ortools'), default='test',
+                         description='Choose between different itinerary generators.')
         ])
     )
     def list(self, request):
-       
-        
-        itinerary = generator.generate_itinerary(
-            days=int(request.GET.get('days')), 
-            user_id=request.GET.get('user_id'))
-        
-        serializer = ItinerarySerializer(instance=itinerary)
-        return Response(serializer.data)
-   
 
+        match request.GET.get('generating_engine'):
+
+            case 'test':
+
+
+                itinerary = generator.generate_itinerary(
+                    days=int(request.GET.get('days')), 
+                    user_id=request.GET.get('user_id'))
+                
+                serializer = ItinerarySerializer(instance=itinerary)
+                return Response(serializer.data)
+
+            case 'geoapify':
+                return
+            case 'ortools':
+                return 
+
+        

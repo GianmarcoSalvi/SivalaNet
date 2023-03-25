@@ -83,7 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'db', # PUT 'db' to work with docker
-        'PORT': 5432,
+        'PORT': 5432, # 5455 (?)
         'NAME': "postgres",
         'USER': "postgres",
         'PASSWORD': "postgres",

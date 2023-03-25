@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 15.2 (Homebrew)
--- Dumped by pg_dump version 15.2 (Homebrew)
+-- Dumped from database version 13.10 (Debian 13.10-1.pgdg110+1)
+-- Dumped by pg_dump version 13.10 (Debian 13.10-1.pgdg110+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: postgres; Type: DATABASE; Schema: -; Owner: postgres
 --
 
--- CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C';
+-- CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
 
 
 ALTER DATABASE postgres OWNER TO postgres;
@@ -59,22 +59,6 @@ ALTER SCHEMA pgagent OWNER TO postgres;
 --
 
 COMMENT ON SCHEMA pgagent IS 'pgAgent system tables';
-
-
---
--- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
---
-
--- *not* creating schema, since initdb creates it
-
-
-ALTER SCHEMA public OWNER TO postgres;
-
---
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
---
-
-COMMENT ON SCHEMA public IS '';
 
 
 --
@@ -530,7 +514,8 @@ CREATE TABLE public.poi (
     average_visiting_time integer NOT NULL,
     is_active boolean DEFAULT true,
     poh_id integer,
-    utility_score integer DEFAULT (random() * (100)::double precision)
+    utility_score integer DEFAULT (random() * (100)::double precision),
+    description character varying(4096)
 );
 
 
@@ -885,6 +870,10 @@ COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
 78	Can change poi opening hour	20	change_poiopeninghour
 79	Can delete poi opening hour	20	delete_poiopeninghour
 80	Can view poi opening hour	20	view_poiopeninghour
+81	Can add place	21	add_place
+82	Can change place	21	change_place
+83	Can delete place	21	delete_place
+84	Can view place	21	view_place
 \.
 
 
@@ -1034,6 +1023,7 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 18	api	itinerary
 19	api	dailyschedule
 20	api	poiopeninghour
+21	api	place
 \.
 
 
@@ -1042,30 +1032,31 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 --
 
 COPY public.django_migrations (id, app, name, applied) FROM stdin;
-1	contenttypes	0001_initial	2023-02-24 11:59:57.578137+01
-2	auth	0001_initial	2023-02-24 11:59:57.612977+01
-3	admin	0001_initial	2023-02-24 11:59:57.620108+01
-4	admin	0002_logentry_remove_auto_add	2023-02-24 11:59:57.623595+01
-5	admin	0003_logentry_add_action_flag_choices	2023-02-24 11:59:57.626401+01
-6	api	0001_initial	2023-02-24 11:59:57.630523+01
-7	api	0002_usertag	2023-02-24 11:59:57.63168+01
-8	api	0003_user_delete_useraccount	2023-02-24 11:59:57.63306+01
-9	contenttypes	0002_remove_content_type_name	2023-02-24 11:59:57.64104+01
-10	auth	0002_alter_permission_name_max_length	2023-02-24 11:59:57.644501+01
-11	auth	0003_alter_user_email_max_length	2023-02-24 11:59:57.64787+01
-12	auth	0004_alter_user_username_opts	2023-02-24 11:59:57.651178+01
-13	auth	0005_alter_user_last_login_null	2023-02-24 11:59:57.655439+01
-14	auth	0006_require_contenttypes_0002	2023-02-24 11:59:57.657203+01
-15	auth	0007_alter_validators_add_error_messages	2023-02-24 11:59:57.660365+01
-16	auth	0008_alter_user_username_max_length	2023-02-24 11:59:57.6675+01
-17	auth	0009_alter_user_last_name_max_length	2023-02-24 11:59:57.67156+01
-18	auth	0010_alter_group_name_max_length	2023-02-24 11:59:57.676206+01
-19	auth	0011_update_proxy_permissions	2023-02-24 11:59:57.680886+01
-20	auth	0012_alter_user_first_name_max_length	2023-02-24 11:59:57.68439+01
-21	sessions	0001_initial	2023-02-24 11:59:57.691574+01
-22	api	0004_itinerary_dailyschedule	2023-02-24 17:25:32.062515+01
-23	api	0005_remove_itinerary_user_delete_dailyschedule_and_more	2023-02-26 17:16:31.374792+01
-24	api	0006_poiopeninghour	2023-03-07 23:54:41.203824+01
+1	contenttypes	0001_initial	2023-02-24 10:59:57.578137+00
+2	auth	0001_initial	2023-02-24 10:59:57.612977+00
+3	admin	0001_initial	2023-02-24 10:59:57.620108+00
+4	admin	0002_logentry_remove_auto_add	2023-02-24 10:59:57.623595+00
+5	admin	0003_logentry_add_action_flag_choices	2023-02-24 10:59:57.626401+00
+6	api	0001_initial	2023-02-24 10:59:57.630523+00
+7	api	0002_usertag	2023-02-24 10:59:57.63168+00
+8	api	0003_user_delete_useraccount	2023-02-24 10:59:57.63306+00
+9	contenttypes	0002_remove_content_type_name	2023-02-24 10:59:57.64104+00
+10	auth	0002_alter_permission_name_max_length	2023-02-24 10:59:57.644501+00
+11	auth	0003_alter_user_email_max_length	2023-02-24 10:59:57.64787+00
+12	auth	0004_alter_user_username_opts	2023-02-24 10:59:57.651178+00
+13	auth	0005_alter_user_last_login_null	2023-02-24 10:59:57.655439+00
+14	auth	0006_require_contenttypes_0002	2023-02-24 10:59:57.657203+00
+15	auth	0007_alter_validators_add_error_messages	2023-02-24 10:59:57.660365+00
+16	auth	0008_alter_user_username_max_length	2023-02-24 10:59:57.6675+00
+17	auth	0009_alter_user_last_name_max_length	2023-02-24 10:59:57.67156+00
+18	auth	0010_alter_group_name_max_length	2023-02-24 10:59:57.676206+00
+19	auth	0011_update_proxy_permissions	2023-02-24 10:59:57.680886+00
+20	auth	0012_alter_user_first_name_max_length	2023-02-24 10:59:57.68439+00
+21	sessions	0001_initial	2023-02-24 10:59:57.691574+00
+22	api	0004_itinerary_dailyschedule	2023-02-24 16:25:32.062515+00
+23	api	0005_remove_itinerary_user_delete_dailyschedule_and_more	2023-02-26 16:16:31.374792+00
+24	api	0006_poiopeninghour	2023-03-07 22:54:41.203824+00
+25	api	0007_place	2023-03-23 14:45:30.124513+00
 \.
 
 
@@ -1090,6 +1081,24 @@ COPY public.image (image_id, poi_id, url, is_active) FROM stdin;
 --
 
 COPY public.place (place_id, json, last_modification) FROM stdin;
+5121e1c9416430284059082d7d6ec0364540f00102f9013c0ff6100000000092031a42657374205765737465726e20486f74656c205669746572626f	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'hotelviterbo.com', 'brand': 'Best Western', 'brand_details': {'wikidata': 'Q830334'}, 'name': 'Best Western Hotel Viterbo', 'contact': {'phone': '+39 0761 270100'}, 'accommodation': {'stars': 4}, 'building': {'height': 25}, 'categories': ['accommodation', 'accommodation.hotel', 'building', 'building.accommodation'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Best Western Hotel Viterbo', 'brand': 'Best Western', 'phone': '+39 0761 270100', 'stars': 4, 'height': 25, 'osm_id': 284561212, 'tourism': 'hotel', 'website': 'hotelviterbo.com', 'building': 'yes', 'osm_type': 'w', 'addr:street': 'Via San Camillo de Lellis', 'brand:wikidata': 'Q830334', 'addr:housenumber': 6}}, 'housenumber': '6', 'street': 'Via San Camillo de Lellis', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Best Western Hotel Viterbo, Via San Camillo de Lellis, 6, 01100 Viterbo VT, Italy', 'address_line1': 'Best Western Hotel Viterbo', 'address_line2': 'Via San Camillo de Lellis, 6, 01100 Viterbo VT, Italy', 'lat': 42.42774755, 'lon': 12.0945149, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '5121e1c9416430284059082d7d6ec0364540f00102f9013c0ff6100000000092031a42657374205765737465726e20486f74656c205669746572626f'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[12.0943882, 42.427839801], [12.0944298, 42.427632201], [12.0944813, 42.427637801], [12.0946416, 42.427655301], [12.0946, 42.427862901], [12.0943882, 42.427839801]]]}}]}	2023-03-22 16:30:51.307568
+5163686b9bfb392840591dcd670ab8344540f00102f901cda2e71800000000920311486f74656c204d696e692050616c616365	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'http://www.minipalacehotel.com/', 'name': 'Hotel Mini Palace', 'contact': {'phone': '+39 0761 309742', 'email': 'info@minipalacehotel.com'}, 'facilities': {'internet_access': True}, 'accommodation': {'stars': 4}, 'categories': ['accommodation', 'accommodation.hotel', 'building', 'building.accommodation', 'internet_access', 'internet_access.free'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Hotel Mini Palace', 'email': 'info@minipalacehotel.com', 'phone': '+39 0761 309742', 'stars': 4, 'osm_id': 417833677, 'tourism': 'hotel', 'website': 'http://www.minipalacehotel.com/', 'building': 'yes', 'osm_type': 'w', 'addr:street': 'Via Santa Maria della Grotticella', 'internet_access': 'wlan', 'addr:housenumber': '2/B', 'internet_access:fee': 'no'}}, 'housenumber': '2/B', 'street': 'Via Santa Maria della Grotticella', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Hotel Mini Palace, Via Santa Maria della Grotticella, 2/B, 01100 Viterbo VT, Italy', 'address_line1': 'Hotel Mini Palace', 'address_line2': 'Via Santa Maria della Grotticella, 2/B, 01100 Viterbo VT, Italy', 'lat': 42.4118808, 'lon': 12.113294464791533, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '5163686b9bfb392840591dcd670ab8344540f00102f901cda2e71800000000920311486f74656c204d696e692050616c616365'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[12.1130927, 42.411708401], [12.1133465, 42.411698701], [12.1133814, 42.411728901], [12.1133871, 42.411912901], [12.1133659, 42.411958001], [12.1131853, 42.412089001], [12.113121, 42.412077601], [12.1131068, 42.412003001], [12.1131649, 42.411974801], [12.1131649, 42.411963801], [12.1131502, 42.411964001], [12.1131499, 42.411952001], [12.1131496, 42.411941501], [12.1131648, 42.411941301], [12.1131647, 42.411930101], [12.1132047, 42.411930001], [12.1132016, 42.411848701], [12.1131776, 42.411818801], [12.1131006, 42.411821701], [12.1130927, 42.411708401]]]}}]}	2023-03-22 16:30:52.128602
+51458b7d13543628405965c41da4f1344540f00103f901966e0aad010000009203174f73706974616c652064656c2050656c6c656772696e6f	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'https://www.amicidellaviafrancigenaviterbo.com/', 'opening_hours': 'Mar-Sep 15:30-18:30', 'operator': 'Associazione Amici della Via Francigena Viterbo', 'name': 'Ospitale del Pellegrino', 'contact': {'phone': '+39 334 696 0175', 'email': 'ospitaledelpellegrino@gmail.com;mirvin@virgilio.it;amiciviafrancigenaviterbo@gmail.com'}, 'accommodation': {'beds': 12}, 'categories': ['accommodation', 'accommodation.hostel'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'beds': 12, 'name': 'Ospitale del Pellegrino', 'osm_id': 7198109334, 'tourism': 'hostel', 'operator': 'Associazione Amici della Via Francigena Viterbo', 'osm_type': 'n', 'addr:city': 'Viterbo', 'addr:street': 'Via San Pellegrino', 'addr:postcode': '01100', 'contact:email': 'ospitaledelpellegrino@gmail.com;mirvin@virgilio.it;amiciviafrancigenaviterbo@gmail.com', 'contact:phone': '+39 334 696 0175', 'opening_hours': 'Mar-Sep 15:30-18:30', 'contact:website': 'https://www.amicidellaviafrancigenaviterbo.com/', 'addr:housenumber': 49, 'contact:facebook': 'https://www.facebook.com/ospitaledelpellegrino/'}}, 'housenumber': '49', 'street': 'Via San Pellegrino', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Ospitale del Pellegrino, Via San Pellegrino, 49, 01100 Viterbo VT, Italy', 'address_line1': 'Ospitale del Pellegrino', 'address_line2': 'Via San Pellegrino, 49, 01100 Viterbo VT, Italy', 'lat': 42.4136243, 'lon': 12.1061102, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51458b7d13543628405965c41da4f1344540f00103f901966e0aad010000009203174f73706974616c652064656c2050656c6c656772696e6f'}, 'geometry': {'type': 'Point', 'coordinates': [12.1061102, 42.413624301]}}]}	2023-03-22 16:30:52.840291
+51f98fbdb29e3b284059f3fe41b4ae354540f00101f90152b55e0000000000920320436f6e76656e746f204672617469204d696e6f72692043617070756363696e69	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'Convento Frati Minori Cappuccini', 'contact': {'phone': '+39 0761 321945;+39 347 5900953', 'email': 'edybertolo@libero.it'}, 'building': {'type': 'residential'}, 'categories': ['accommodation', 'accommodation.hostel', 'building', 'building.accommodation', 'building.residential'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Convento Frati Minori Cappuccini', 'osm_id': -6206802, 'tourism': 'hostel', 'building': 'residential', 'osm_type': 'r', 'addr:city': 'Viterbo', 'addr:street': 'Via San Crispino', 'addr:country': 'IT', 'addr:postcode': '01100', 'contact:email': 'edybertolo@libero.it', 'contact:phone': '+39 0761 321945;+39 347 5900953', 'addr:housenumber': 6}}, 'housenumber': '6', 'street': 'Via San Crispino', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Convento Frati Minori Cappuccini, Via San Crispino, 6, 01100 Viterbo VT, Italy', 'address_line1': 'Convento Frati Minori Cappuccini', 'address_line2': 'Via San Crispino, 6, 01100 Viterbo VT, Italy', 'lat': 42.41939685, 'lon': 12.116260990097231, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51f98fbdb29e3b284059f3fe41b4ae354540f00101f90152b55e0000000000920320436f6e76656e746f204672617469204d696e6f72692043617070756363696e69'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[12.1160628, 42.419471401], [12.1162479, 42.419178301], [12.1162911, 42.419109801], [12.1163051, 42.419115201], [12.1163621, 42.419139701], [12.1163973, 42.419189501], [12.1164611, 42.419213201], [12.1164791, 42.419176801], [12.1166691, 42.419240101], [12.116675, 42.419230601], [12.116802, 42.419278401], [12.1166977, 42.419454901], [12.116708, 42.419461801], [12.1166516, 42.419551701], [12.1166391, 42.419547201], [12.1165371, 42.419701501], [12.1164067, 42.419645701], [12.1164768, 42.419534701], [12.1162308, 42.419446401], [12.1161875, 42.419514201], [12.1160628, 42.419471401]], [[12.1162871, 42.419350701], [12.1165371, 42.419443001], [12.1166283, 42.419299501], [12.1163743, 42.419212901], [12.1162871, 42.419350701]]]}}]}	2023-03-22 16:30:54.112509
+51eb11b4136f362840599db6d0ca07354540f00103f9011524bd70000000009203154c61204c6f63616e64612064656c2052696363696f	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'http://www.lalocandadelriccio.it/', 'name': 'La Locanda del Riccio', 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'La Locanda del Riccio', 'osm_id': 1891443733, 'tourism': 'guest_house', 'website': 'http://www.lalocandadelriccio.it/', 'osm_type': 'n'}}, 'street': 'Via del Riccio', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'La Locanda del Riccio, Via del Riccio, 01100 Viterbo VT, Italy', 'address_line1': 'La Locanda del Riccio', 'address_line2': 'Via del Riccio, 01100 Viterbo VT, Italy', 'lat': 42.4143003, 'lon': 12.1063162, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51eb11b4136f362840599db6d0ca07354540f00103f9011524bd70000000009203154c61204c6f63616e64612064656c2052696363696f'}, 'geometry': {'type': 'Point', 'coordinates': [12.1063162, 42.414300301]}}]}	2023-03-22 16:30:54.888216
+51601dc70f95362840590a26e9853b354540f00103f901728cae9a00000000920309536166666920313033	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'Saffi 103', 'contact': {'phone': '+39 339 4926105'}, 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Saffi 103', 'phone': '+39 339 4926105', 'osm_id': 2595130482, 'tourism': 'guest_house', 'osm_type': 'n', 'addr:city': 'Viterbo', 'addr:street': 'Via Aurelio Saffi', 'addr:country': 'IT', 'addr:postcode': '01100', 'addr:housename': 'Saffi 103', 'addr:housenumber': 103}}, 'housenumber': '103', 'street': 'Via Aurelio Saffi', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Saffi 103, Via Aurelio Saffi, 103, 01100 Viterbo VT, Italy', 'address_line1': 'Saffi 103', 'address_line2': 'Via Aurelio Saffi, 103, 01100 Viterbo VT, Italy', 'lat': 42.415879, 'lon': 12.106606, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51601dc70f95362840590a26e9853b354540f00103f901728cae9a00000000920309536166666920313033'}, 'geometry': {'type': 'Point', 'coordinates': [12.106606, 42.415879001]}}]}	2023-03-22 16:30:55.393386
+518f2b3fba22362840590b20507c10354540f00103f9012d7851cf0000000092030c416c2043617264696e616c65	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'http://www.alcardinale.it/', 'name': 'Al Cardinale', 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Al Cardinale', 'osm_id': 3478222893, 'tourism': 'guest_house', 'website': 'http://www.alcardinale.it/', 'osm_type': 'n', 'addr:city': 'Viterbo', 'addr:street': 'Via Ottusa', 'addr:postcode': '01100', 'addr:housenumber': 8}}, 'housenumber': '8', 'street': 'Via Ottusa', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Al Cardinale, Via Ottusa, 8, 01100 Viterbo VT, Italy', 'address_line1': 'Al Cardinale', 'address_line2': 'Via Ottusa, 8, 01100 Viterbo VT, Italy', 'lat': 42.4145656, 'lon': 12.1057337, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '518f2b3fba22362840590b20507c10354540f00103f9012d7851cf0000000092030c416c2043617264696e616c65'}, 'geometry': {'type': 'Point', 'coordinates': [12.1057337, 42.414565601]}}]}	2023-03-22 16:30:56.113615
+5145cfd2bab23428405936829f12c6344540f00103f901535f364901000000920310416c2043617264696e616c6520422642	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'http://www.alcardinale.it/', 'name': 'Al Cardinale B&B', 'contact': {'phone': '+39 0761 228196;', 'email': 'ilcardinalebb@yahoo.it'}, 'facilities': {'wheelchair': False}, 'accommodation': {'rooms': 3}, 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Al Cardinale B&B', 'rooms': 3, 'osm_id': 5523267411, 'tourism': 'guest_house', 'osm_type': 'n', 'addr:city': 'Viterbo', 'wheelchair': 'no', 'addr:street': 'Via San Carlo', 'addr:postcode': '01100', 'contact:email': 'ilcardinalebb@yahoo.it', 'contact:phone': '+39 0761 228196;', 'contact:website': 'http://www.alcardinale.it/', 'addr:housenumber': 6, 'contact:facebook': 'https://www.facebook.com/Al-Cardinale-Bed-and-Breakfast-137098203537/'}}, 'housenumber': '6', 'street': 'Via San Carlo', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Al Cardinale B&B, Via San Carlo, 6, 01100 Viterbo VT, Italy', 'address_line1': 'Al Cardinale B&B', 'address_line2': 'Via San Carlo, 6, 01100 Viterbo VT, Italy', 'lat': 42.4122947, 'lon': 12.1029261, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '5145cfd2bab23428405936829f12c6344540f00103f901535f364901000000920310416c2043617264696e616c6520422642'}, 'geometry': {'type': 'Point', 'coordinates': [12.1029261, 42.412294701]}}]}	2023-03-22 16:30:56.367675
+515e903ef72f3a28405988034bf48d354540f00103f901986e0aad01000000920319436173612070657220666572696520496c2056696c6c696e6f	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'http://ilvillinodiviterbo.it/', 'name': 'Casa per ferie Il Villino', 'contact': {'phone': '+39 0761 341900; +39 388 7307841'}, 'accommodation': {'beds': 26}, 'categories': ['accommodation', 'accommodation.hostel'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'beds': 26, 'name': 'Casa per ferie Il Villino', 'osm_id': 7198109336, 'tourism': 'hostel', 'osm_type': 'n', 'contact:phone': '+39 0761 341900; +39 388 7307841', 'contact:website': 'http://ilvillinodiviterbo.it/'}}, 'street': 'Viale IV novembre', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Casa per ferie Il Villino, Viale IV novembre, 01100 Viterbo VT, Italy', 'address_line1': 'Casa per ferie Il Villino', 'address_line2': 'Viale IV novembre, 01100 Viterbo VT, Italy', 'lat': 42.4183946, 'lon': 12.1136472, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '515e903ef72f3a28405988034bf48d354540f00103f901986e0aad01000000920319436173612070657220666572696520496c2056696c6c696e6f'}, 'geometry': {'type': 'Point', 'coordinates': [12.1136472, 42.418394601]}}]}	2023-03-22 16:30:57.126074
+516ed3e98a6336284059628ec400d3344540f00103f901f1c10cad010000009203214361736120706572206665726965205265736964656e7a61204e617a6172657468	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'website': 'http://www.nazarethresidence.com/', 'operator': 'Enova Sociale Società Cooperativa Sociale ONLUS', 'name': 'Casa per ferie Residenza Nazareth', 'contact': {'phone': '+39 0761 1564612', 'fax': '+39 0761 332077'}, 'accommodation': {'beds': 67}, 'categories': ['accommodation', 'accommodation.hotel'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'beds': 67, 'name': 'Casa per ferie Residenza Nazareth', 'osm_id': 7198261745, 'tourism': 'hotel', 'operator': 'Enova Sociale Società Cooperativa Sociale ONLUS', 'osm_type': 'n', 'addr:city': 'Viterbo', 'addr:street': 'Via San Tommaso', 'contact:fax': '+39 0761 332077', 'addr:postcode': '01100', 'contact:phone': '+39 0761 1564612', 'contact:website': 'http://www.nazarethresidence.com/', 'addr:housenumber': 30}}, 'housenumber': '30', 'street': 'Via San Tommaso', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Casa per ferie Residenza Nazareth, Via San Tommaso, 30, 01100 Viterbo VT, Italy', 'address_line1': 'Casa per ferie Residenza Nazareth', 'address_line2': 'Via San Tommaso, 30, 01100 Viterbo VT, Italy', 'lat': 42.4126893, 'lon': 12.1062282, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '516ed3e98a6336284059628ec400d3344540f00103f901f1c10cad010000009203214361736120706572206665726965205265736964656e7a61204e617a6172657468'}, 'geometry': {'type': 'Point', 'coordinates': [12.1062282, 42.412689301]}}]}	2023-03-22 16:30:57.566923
+51076cbf55cc352840595527d9f887364540f00101f90125b3e4000000000092031542616c6c657474692050616c61636520486f74656c	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'Balletti Palace Hotel', 'building': {'type': 'hotel'}, 'categories': ['accommodation', 'accommodation.hotel', 'building', 'building.accommodation'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Balletti Palace Hotel', 'osm_id': -14988069, 'tourism': 'hotel', 'building': 'hotel', 'osm_type': 'r', 'addr:city': 'Viterbo', 'addr:street': 'Via Fernando Molini', 'addr:postcode': '01100', 'addr:housenumber': 8}}, 'housenumber': '8', 'street': 'Via Fernando Molini', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Balletti Palace Hotel, Via Fernando Molini, 8, 01100 Viterbo VT, Italy', 'address_line1': 'Balletti Palace Hotel', 'address_line2': 'Via Fernando Molini, 8, 01100 Viterbo VT, Italy', 'lat': 42.42603305, 'lon': 12.105067166736859, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51076cbf55cc352840595527d9f887364540f00101f90125b3e4000000000092031542616c6c657474692050616c61636520486f74656c'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[12.1047997, 42.426217101], [12.1051336, 42.425774801], [12.1051844, 42.425756601], [12.105259, 42.425761001], [12.105308, 42.425801501], [12.1053218, 42.425849001], [12.1050123, 42.426300701], [12.1047997, 42.426217101]]]}}]}	2023-03-22 16:30:58.151084
+514e2c2f29ed3728405939aa66446a354540f00102f9014ca6213700000000920317477565737420486f75736520532e204361746572696e61	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'Guest House S. Caterina', 'categories': ['accommodation', 'accommodation.guest_house', 'building', 'building.accommodation'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Guest House S. Caterina', 'osm_id': 924952140, 'tourism': 'guest_house', 'building': 'yes', 'osm_type': 'w', 'guest_house': 'guest_house'}}, 'street': 'Via Niccoló di Tuccia', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Guest House S. Caterina, Via Niccoló di Tuccia, 01100 Viterbo VT, Italy', 'address_line1': 'Guest House S. Caterina', 'address_line2': 'Via Niccoló di Tuccia, 01100 Viterbo VT, Italy', 'lat': 42.4172933, 'lon': 12.109208950836116, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '514e2c2f29ed3728405939aa66446a354540f00102f9014ca6213700000000920317477565737420486f75736520532e204361746572696e61'}, 'geometry': {'type': 'Polygon', 'coordinates': [[[12.1090877, 42.417267401], [12.1091464, 42.417221101], [12.1093779, 42.417340701], [12.1093444, 42.417371901], [12.1093173, 42.417377401], [12.1092664, 42.417370101], [12.1091758, 42.417319201], [12.1090877, 42.417267401]]]}}]}	2023-03-22 16:30:58.66249
+51d9a326b0ef35284059d80139a7ed344540f00103f9011c66600b0100000092030a4c27696e636f6e74726f	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': "L'incontro", 'facilities': {'internet_access': True, 'smoking': False}, 'categories': ['accommodation', 'accommodation.guest_house', 'internet_access', 'internet_access.free'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': "L'incontro", 'osm_id': 4485834268, 'smoking': 'no', 'tourism': 'guest_house', 'osm_type': 'n', 'internet_access': 'yes', 'internet_access:fee': 'no'}}, 'street': 'Via Incontro', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': "L'incontro, Via Incontro, 01100 Viterbo VT, Italy", 'address_line1': "L'incontro", 'address_line2': 'Via Incontro, 01100 Viterbo VT, Italy', 'lat': 42.4135026, 'lon': 12.1053443, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51d9a326b0ef35284059d80139a7ed344540f00103f9011c66600b0100000092030a4c27696e636f6e74726f'}, 'geometry': {'type': 'Point', 'coordinates': [12.1053443, 42.413502601]}}]}	2023-03-22 16:30:59.08534
+518dff4cce9a212840593ce313e7f2344540f00103f9011dddaf9401000000920314486f74656c205465726d65206465692050617069	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'brand': 'Terme dei Papi', 'name': 'Hotel Terme dei Papi', 'facilities': {'internet_access': True}, 'accommodation': {'rooms': 23}, 'categories': ['accommodation', 'accommodation.hotel', 'internet_access'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Hotel Terme dei Papi', 'brand': 'Terme dei Papi', 'rooms': 23, 'osm_id': 6789520669, 'tourism': 'hotel', 'osm_type': 'n', 'addr:city': 'Viterbo', 'addr:street': 'Strada Bagni', 'internet_access': 'yes', 'internet_access:fee': 'yes'}}, 'street': 'Strada Bagni', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Hotel Terme dei Papi, Strada Bagni, 01100 Viterbo VT, Italy', 'address_line1': 'Hotel Terme dei Papi', 'address_line2': 'Strada Bagni, 01100 Viterbo VT, Italy', 'lat': 42.4136628, 'lon': 12.0656342, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '518dff4cce9a212840593ce313e7f2344540f00103f9011dddaf9401000000920314486f74656c205465726d65206465692050617069'}, 'geometry': {'type': 'Point', 'coordinates': [12.0656342, 42.413662801]}}]}	2023-03-22 16:31:00.521374
+51cecfc3bfbe20284059c7111710ff344540f00103f9017d07b1940100000092030e5465726d65206465692050617069	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'brand': 'Terme dei Papi', 'name': 'Terme dei Papi', 'facilities': {'internet_access': True}, 'accommodation': {'rooms': 23}, 'categories': ['accommodation', 'accommodation.hotel', 'internet_access'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Terme dei Papi', 'brand': 'Terme dei Papi', 'rooms': 23, 'osm_id': 6789597053, 'tourism': 'hotel', 'osm_type': 'n', 'addr:city': 'Viterbo', 'addr:street': 'Strada Bagni', 'internet_access': 'yes', 'internet_access:fee': 'yes'}}, 'street': 'Strada Bagni', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Terme dei Papi, Strada Bagni, 01100 Viterbo VT, Italy', 'address_line1': 'Terme dei Papi', 'address_line2': 'Strada Bagni, 01100 Viterbo VT, Italy', 'lat': 42.4140339, 'lon': 12.0639553, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51cecfc3bfbe20284059c7111710ff344540f00103f9017d07b1940100000092030e5465726d65206465692050617069'}, 'geometry': {'type': 'Point', 'coordinates': [12.0639553, 42.414033901]}}]}	2023-03-22 16:31:01.542826
+51d2448e63da352840597729d75af3344540f00103f901151fb29c010000009203124c612073756974652064656c20626f72676f	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'La suite del borgo', 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'La suite del borgo', 'osm_id': 6923886357, 'tourism': 'guest_house', 'osm_type': 'n'}}, 'street': 'Via Scacciaricci', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'La suite del borgo, Via Scacciaricci, 01100 Viterbo VT, Italy', 'address_line1': 'La suite del borgo', 'address_line2': 'Via Scacciaricci, 01100 Viterbo VT, Italy', 'lat': 42.4136766, 'lon': 12.1051818, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51d2448e63da352840597729d75af3344540f00103f901151fb29c010000009203124c612073756974652064656c20626f72676f'}, 'geometry': {'type': 'Point', 'coordinates': [12.1051818, 42.413676601]}}]}	2023-03-22 16:31:03.372024
+51246bc317dc41284059ecf78afe75334540f00103f901c827759f010000009203194220616e642042206c612076696c6c61206469206c75636961	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'B and B la villa di lucia', 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'B and B la villa di lucia', 'osm_id': 6970222536, 'tourism': 'guest_house', 'osm_type': 'n'}}, 'street': 'Strada Roncone', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '02046', 'country': 'Italy', 'country_code': 'it', 'formatted': 'B and B la villa di lucia, Strada Roncone, 02046 Viterbo VT, Italy', 'address_line1': 'B and B la villa di lucia', 'address_line2': 'Strada Roncone, 02046 Viterbo VT, Italy', 'lat': 42.4020384, 'lon': 12.1286323, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51246bc317dc41284059ecf78afe75334540f00103f901c827759f010000009203194220616e642042206c612076696c6c61206469206c75636961'}, 'geometry': {'type': 'Point', 'coordinates': [12.1286323, 42.402038401]}}]}	2023-03-22 16:31:04.104951
+51fb2b75da64362840593ece1304d9344540f00103f90146ea05a00100000092030b496c20436f6e636c617665	{'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'feature_type': 'details', 'name': 'Il Conclave', 'categories': ['accommodation', 'accommodation.guest_house'], 'datasource': {'sourcename': 'openstreetmap', 'attribution': '© OpenStreetMap contributors', 'license': 'Open Database Licence', 'url': 'https://www.openstreetmap.org/copyright', 'raw': {'name': 'Il Conclave', 'osm_id': 6979709510, 'tourism': 'guest_house', 'osm_type': 'n', 'guest_house': 'bed_and_breakfast'}}, 'street': 'Via Borgolungo', 'city': 'Viterbo', 'county': 'Viterbo', 'state': 'Lazio', 'postcode': '01100', 'country': 'Italy', 'country_code': 'it', 'formatted': 'Il Conclave, Via Borgolungo, 01100 Viterbo VT, Italy', 'address_line1': 'Il Conclave', 'address_line2': 'Via Borgolungo, 01100 Viterbo VT, Italy', 'lat': 42.4128728, 'lon': 12.1062382, 'timezone': {'name': 'Europe/Rome', 'offset_STD': '+01:00', 'offset_STD_seconds': 3600, 'offset_DST': '+02:00', 'offset_DST_seconds': 7200, 'abbreviation_STD': 'CET', 'abbreviation_DST': 'CEST'}, 'place_id': '51fb2b75da64362840593ece1304d9344540f00103f90146ea05a00100000092030b496c20436f6e636c617665'}, 'geometry': {'type': 'Point', 'coordinates': [12.1062382, 42.412872801]}}]}	2023-03-22 16:31:04.923739
 \.
 
 
@@ -1097,982 +1106,982 @@ COPY public.place (place_id, json, last_modification) FROM stdin;
 -- Data for Name: poi; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, average_visiting_time, is_active, poh_id, utility_score) FROM stdin;
-1	1	MUSEO DEL FIORE	42.7477229	11.8630202	PREDIO GIARDINO; 37	Museo, galleria e/o raccolta	763733642	info@museodelfiore.it	5	t	1	75
-2	1	Chiesa della Natività della SS.ma Vergine	42.7439961	11.8649880	Trevinano	Chiesa o edificio di culto	NaN	NaN	1	t	1	66
-3	1	Chiesa della Madonna della Quercia	42.7439961	11.8649880	SP51, Trevinano	Chiesa o edificio di culto	NaN	NaN	5	t	1	23
-4	1	Ponte Gregoriano	42.7439961	11.8649880	Via Cassia	Monumento	NaN	NaN	3	t	1	7
-5	1	Mura urbiche di Acquapendente	42.7439961	11.8649880	NaN	Architettura fortificata	NaN	NaN	2	t	1	92
-6	1	Casale Campo del Prete	42.7439961	11.8649880	Campo del Prete	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	89
-7	1	Palazzo Viscontini	42.7439961	11.8649880	Via Cesare Battisti, 28	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	73
-8	1	Casale Putifaro	42.7439961	11.8649880	Putifaro	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	38
-9	1	Chiesa di s. Agostino (ex Maria SS.ma delle Grazie)	42.7439961	11.8649880	Largo S. Agostino	Chiesa o edificio di culto	NaN	NaN	3	t	1	19
-10	1	Chiesa di San Rocco	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	64
-11	1	Chiesa di S. Vittoria	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	32
-12	1	Casale Mulino	42.7439961	11.8649880	Subissone	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	18
-13	1	Casale Poggio Gattuccio	42.7439961	11.8649880	Trevinano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	43
-14	1	Casale Macchione	42.7439961	11.8649880	Macchione	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	97
-15	1	Osservatorio Astronomico "Nuova Pegasus"	42.7439961	11.8649880	Via Postierla, 59	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	37
-16	1	Casale San Giorgio	42.7439961	11.8649880	S. Giorgio	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	12
-17	1	Torre dell' Orologio (o Torre del Barbarossa)	42.7439961	11.8649880	Parco la Pineta, Via Oriolo	Architettura fortificata	NaN	NaN	3	t	1	37
-18	1	Palazzo Boncompagni-Ludovisi	42.7439961	11.8649880	Via Bourbon del Monte, 12, Trevinano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	67
-19	1	Casale San Vittorio	42.7439961	11.8649880	S. Vittorio	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	100
-20	1	Casale Monacaro Vecchio	42.7439961	11.8649880	Monacaro	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	98
-21	1	Casale Rufeno	42.7439961	11.8649880	Monte Rufeno	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	22
-22	1	Casale Tirolle	42.7439961	11.8649880	Tirolle	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	25
-23	1	Monastero di S. Chiara	42.7439961	11.8649880	Via Malintoppa, 12	Chiesa o edificio di culto	NaN	NaN	5	t	1	92
-24	1	MUSEO DELLA CITTA' CIVICO E DIOCESANO DI ACQUAPENDENTE	42.7439961	11.8649880	VIA ROMA, 85	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	10
-25	1	Bosco monumentale del Sasseto e i giardini Cahen d’Anvers di Torre Alfina	42.7439961	11.8649880	piazzale Sant'Angelo - Acquapendente	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	88
-26	1	Biblioteca dell'ex Seminario vescovile	42.7426527	11.8689048	Via Roma, 85	Biblioteca	+39 0761.325584	cedi.do@libero.it	1	t	1	72
-27	1	Convento dei Padri Cappuccini e chiesa di S. Francesco d' Assisi	42.7439961	11.8649880	Via Cesare Battisti	Chiesa o edificio di culto	NaN	NaN	3	t	1	17
-28	1	Palazzo Comunale	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	22
-29	1	Biblioteca comunale	42.4703000	12.1742160	Piazza S. Agnese 16	Biblioteca	NaN	NaN	3	t	1	56
-30	1	Palazzo Vescovile della Diocesi di Acquapendente	42.7439961	11.8649880	Via Roma, 85	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	56
-31	1	Chiesa di S. Antonio Abate e S. Caterina	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	2
-32	1	Palazzo Costantini	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	8
-33	1	Anfiteatro Cordeschi	42.7633912	11.8703856	Strada Onanese	Monumento	NaN	NaN	4	t	1	14
-34	1	Palazzo Piccioni	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	21
-35	1	Teatro Boni	42.7481852	11.8942006	Piazza della Costituente	Architettura civile	NaN	NaN	2	t	1	44
-36	1	Torre Julia de Jacopo	42.7422091	11.8712540	Via Julia De Jacopo, 55	Architettura fortificata	NaN	NaN	3	t	1	41
-37	1	Chiesa di S. Stefano	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	65
-38	1	Chiesa della Madonna del S. Amore	42.7439961	11.8649880	Fraz. Torre Alfina	Chiesa o edificio di culto	NaN	NaN	4	t	1	45
-39	1	Castello Cahen (o Castello di Torre Alfina)	42.7439961	11.8649880	Via Monaldeschi della Cervara, 1, Fraz. Torre Alfina	Architettura fortificata	NaN	NaN	1	t	1	88
-40	1	Palazzo Cozza-Nardelli	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	54
-41	1	Palazzo Caterini	42.7439961	11.8649880	Piazza Girolamo Fabrizio, 8	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	56
-42	1	Museo della città	42.7436932	11.8680157	piazzetta dell'orologio	Museo, galleria e/o raccolta	0761 796914	info@simulabo.it	1	t	1	43
-43	1	museo della città	42.7436932	11.8680157	piazzetta dell'orologio	Museo, galleria e/o raccolta	0761 796914	info@simulabo.it	3	t	1	17
-44	1	Chiesa di S. Maria Assunta	42.7439961	11.8649880	Piazza S. Maria	Chiesa o edificio di culto	NaN	NaN	5	t	1	82
-45	1	Cattedrale del S. Sepolcro	42.7425120	11.8714670	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	60
-46	1	Palazzo Taurelli-Salimbeni	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	12
-47	1	Chiesa di S. Lorenzo Martire e S. Michele Arcangelo	42.7439961	11.8649880	Via G. Marconi, 85	Chiesa o edificio di culto	NaN	NaN	5	t	1	30
-48	2	Palazzo Cellesi	42.6269800	12.0908718	Castel Cellesi	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	44
-49	2	Palazzo Comunale	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	96
-50	2	Porta Albana	42.6268957	12.0909966	Piazza Trento e Trieste, 31	Architettura fortificata	NaN	NaN	3	t	1	0
-51	2	Chiesa di S. Donato	42.6269800	12.0908718	Piazza S. Donato	Chiesa o edificio di culto	NaN	NaN	5	t	1	93
-52	2	Chiesa della Madonna del Carmine	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	63
-53	2	Palazzo Antiseri	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	86
-54	2	Palazzo Cristofori	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	96
-55	2	Chiesa di S. Girolamo	42.6269800	12.0908718	Castel Cellesi	Chiesa o edificio di culto	NaN	NaN	1	t	1	34
-56	2	Chiesa dei SS. Andrea e Bonaventura	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	73
-57	2	Porta di sotto (o Porta di Santa Maria)	42.6269800	12.0908718	Via S. Maria del Cassero, 446-481	Architettura fortificata	NaN	NaN	1	t	1	52
-58	2	Chiesa del S. Sepolcro	42.6269800	12.0908718	Castel Cellesi	Chiesa o edificio di culto	NaN	NaN	2	t	1	51
-59	2	Convento di Sant' Agostino	42.6269800	12.0908718	Piazza Sant'Agostino, 131	Chiesa o edificio di culto	NaN	NaN	5	t	1	83
-60	2	Chiesa di Santa Maria delle Carceri	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	50
-61	2	Teatro Comunale	42.3708512	12.2634142	Piazza della Repubblica	Architettura civile	NaN	NaN	3	t	1	27
-62	2	Biblioteca del Centro studi bonaventuriani	42.6295576	12.0871305	Viale fratelli Agosti	Biblioteca	NaN	NaN	1	t	1	24
-63	2	Biblioteca del Seminario vescovile	42.6257296	12.0996384	Piazza S. Agostino, 10	Biblioteca	+39 0761.792036	cedi.do@libero.it	2	t	1	80
-64	2	Biblioteca della Fondazione Agosti	42.6256397	12.0980438	Piazza L. Cristofori 16	Biblioteca	+39 0761793039	NaN	4	t	1	54
-65	2	ASSOCIAZIONE STORICO CULTURALE 'PIERO TARUFFI'	42.6269490	12.0974162	VIA FIDANZA; 55	Museo, galleria e/o raccolta	761780811	museotaruffi@libero.it	4	t	1	64
-66	2	Palazzo Vescovile	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	99
-67	2	Chiesa di Santa Lucia	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	10
-68	2	MUSEO GEOLOGICO E DELLE FRANE	42.6278153	12.1136284	piazza San Donato	Museo, galleria e/o raccolta	328 6657205	info@museogeologicodellefrane.it	3	t	1	82
-69	2	Cattedrale di San Nicola	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	43
-70	2	ASSOCIAZIONE STORICO CULTURALE 'PIERO TARUFFI'	42.6269490	12.0974162	VIA FIDANZA, 55	Fondazione	761780811	museotaruffi@libero.it	5	t	1	64
-71	2	Chiesa di S. Martino	42.6269800	12.0908718	Piazza Luigi Cristofori, 5	Chiesa o edificio di culto	NaN	NaN	5	t	1	76
-72	2	Chiesa di San Francesco di Paola	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	33
-73	3	MUSEO NATURALISTICO DEL PARCO MARTURANUM FRANCESCO SPALLONE	42.2498341	12.0673735	VIALE QUATTRO NOVEMBRE, 46	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	14
-74	3	MUSEO ARCHEOLOGICO DELLE NECROPOLI RUPESTRI	42.2498341	12.0673735	VIA SANT'ANGELO, 2	Museo, galleria e/o raccolta	NaN	NaN	3	t	1	62
-75	3	Parrocchia di Santa Maria Assunta	42.2498341	12.0673735	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	76
-76	3	Porta Romana	42.2498341	12.0673735	NaN	Architettura fortificata	NaN	NaN	1	t	1	65
-77	3	MUSEO ETRUSCO	42.2511180	12.0663609	PIAZZA SANT'ANGELO; 2	Museo, galleria e/o raccolta	761414531	-	4	t	1	52
-78	3	Necropoli rupestre di San Giuliano	42.2498341	12.0673735	Parco Suburbano di Marturanum (Comune) - Barbarano Romano	Area o parco archeologico	NaN	NaN	2	t	1	91
-79	3	Museo della Tuscia Rupestre Francesco Spallone	42.2498341	12.0673735	NaN	Museo, galleria e/o raccolta	NaN	NaN	1	t	1	66
-80	3	Tomba Margareth	42.2585300	12.0788570	NaN	Area o parco archeologico	NaN	NaN	2	t	1	12
-81	4	Monastero San Vincenzo - Santuario del Santo Volto	42.2183916	12.1930062	Via S. Vincenzo, 88	Chiesa o edificio di culto	NaN	NaN	3	t	1	77
-82	4	Parrocchia Maria S.S. Assunta in Cielo	42.2183916	12.1930062	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	20
-83	4	Villa Giustiniani Odescalchi	42.2182424	12.1925906	Piazza Umberto I	Museo, galleria e/o raccolta	0761 636065	-	1	t	1	50
-84	4	Chiesa di San Gratiliano	42.2183916	12.1930062	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	36
-85	4	Chiesa della Madonna della Pietà	42.2183916	12.1930062	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	12
-86	4	VILLA GIUSTINIANI (o Castello Odescalchi)	42.2183916	12.1930062	PIAZZA UMBERTO PRIMO, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	1
-87	4	Chiesa di Santa Maria dei Monti	42.2183916	12.1930062	Str. Vicinale Fonte Vianello, 2	Chiesa o edificio di culto	NaN	NaN	3	t	1	54
-88	4	Biblioteca Comunale e Archivio Storico Comunale	42.2183916	12.1930062	NaN	Biblioteca	NaN	NaN	3	t	1	27
-89	5	Chiesa dell'Immacolata Concezione	42.4660738	12.3130342	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	76
-90	5	Fontana Vecchia	42.4660738	12.3130342	NaN	Monumento	NaN	NaN	5	t	1	1
-91	5	Chiesa della Madonna della Quercia	42.4660738	12.3130342	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	53
-92	5	Torre dell'Orologio	42.4660738	12.3130342	Via delle Fonti, 2	Architettura fortificata	NaN	NaN	5	t	1	46
-93	5	Chiesa dei Santi Fidenzio e Terenzio	42.4660738	12.3130342	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	71
-94	5	Chiesa di S. Maria dei Lumi	42.4660738	12.3130342	Piazza Nazario Sauro	Chiesa o edificio di culto	NaN	NaN	4	t	1	77
-95	6	Antiquitates	42.2725220	12.0316620	Localita' Le Fornaci	Museo, galleria e/o raccolta	NaN	NaN	3	t	1	48
-96	6	Castello di Civitella Cesi	42.2244252	12.0005892	 Via delle Case Nuove, Civitella Cesi	Architettura fortificata	NaN	NaN	5	t	1	3
-97	6	Palazzo Savini	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	38
-98	6	MUSEO CIVICO GUSTAVO VI ADOLFO DI SVEZIA - SEZIONE IL CAVALLO E L'UOMO	42.2759082	12.0254639	VIA UMBERTO I; SNC	Museo, galleria e/o raccolta	761471057	info_museoblera@yahoo.it	2	t	1	66
-99	6	Palazzo dell'Asino Vecchio (detto)	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	1
-100	6	Ex Chiesa di S. Nicola	42.2725220	12.0316620	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	81
-101	6	Castello di Vico	42.2725220	12.0316620	Vico	Architettura fortificata	NaN	NaN	4	t	1	47
-102	6	Palazzo Municipale	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	63
-103	6	Palazzo Alberti	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	74
-104	6	Biblioteca comunale	42.2725220	12.0316620	Via Roma 61	Biblioteca	NaN	NaN	5	t	1	80
-156	9	Biblioteca Paolo Portoghesi	42.2173359	12.4214867	Via Cadorna 59	Biblioteca	+39 0761596059	paoporto@tin.it	4	t	1	44
-105	6	Necropoli rupestri di San Giovenale e Terrone	42.2725220	12.0316620	S.S. Cassia, bivio Cura di Vetralla, o lungo la S.S. Braccianense Claudia - Blera	Area o parco archeologico	NaN	NaN	5	t	1	81
-106	6	Chiesa di Santa Maria Assunta in Cielo e San Vivenzio	42.2725220	12.0316620	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	16
-107	6	Palazzo Anguillara - Monaci	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	93
-108	6	Palazzo Pretoriale	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	88
-109	7	MUSEO TERRITORIALE DEL LAGO DI BOLSENA	42.6463309	11.9858125	piazza Monaldeschi	Museo, galleria e/o raccolta	761798630	museo@comunebolsena.it	1	t	1	28
-110	7	Chiesa di San Francesco	42.6441069	11.9849554	Via S. Giovanni, 21	Chiesa o edificio di culto	NaN	NaN	1	t	1	83
-111	7	Chiesa di S. Salvatore	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	99
-112	7	Complesso architettonico e paesaggistico: Viale Colesanti	42.6441069	11.9849554	NaN	Area o parco archeologico	NaN	NaN	4	t	1	64
-113	7	Palazzo del Drago (o Palazzo Cozza Spada del Drago)	42.6441069	11.9849554	Via Francesco Cozza	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	67
-114	7	Chiesa Madonna del Giglio	42.6441069	11.9849554	Via Madonna del Giglio, 49	Chiesa o edificio di culto	NaN	NaN	2	t	1	4
-115	7	Porta San Giovanni	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	1	t	1	90
-116	7	Pietre Lanciate	42.6325494	11.9972146	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	93
-117	7	Fontana di San Rocco	42.6441069	11.9849554	Piazza S. Rocco, 61	Monumento	NaN	NaN	2	t	1	58
-118	7	Lago di Bolsena	42.5925074	11.9287501	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	22
-119	7	Porta San Francesco	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	3	t	1	11
-120	7	Casale Gazzetta	42.6441069	11.9849554	Gazzetta	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	9
-121	7	Parco di Turona	42.6441069	11.9849554	Via strada di turona	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	13
-122	7	Palazzo Cozza Caposavi	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	39
-123	7	Chiesa della Madonna dell'Arcale	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	83
-124	7	Palazzo Serafini	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	86
-125	7	Area del Foro e Domus Privatae della Città Romana di Volsinii	42.6474699	11.9980597	Via Orvietana	Museo, galleria e/o raccolta	-	-	1	t	1	61
-126	7	Palazzo Comunale	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	99
-127	7	Acquario di bolsena	42.6433430	11.9848430	Piazza Monaldeschi, 1	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	76
-128	7	Anfiteatro Mercatello	42.6502733	11.9880751	NaN	Monumento	NaN	NaN	1	t	1	20
-129	7	Palazzo Signorile Cardinale Teodorico o Ranieri	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	6
-130	7	Cappella del Miracolo	42.6434006	11.9895659	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	32
-131	7	Teatro in S. Francesco	42.6352769	11.9607883	Piazza Matteotti	Architettura civile	NaN	NaN	2	t	1	36
-132	7	Rocca Monaldeschi della Cervara (o Palazzo Monaldeschi della Cervara)	42.6460800	11.9853970	Piazza Monaldeschi, 61	Architettura fortificata	NaN	NaN	1	t	1	38
-133	7	Convento Chiesa della Madonna dei Cacciatori	42.6441069	11.9849554	Via Madonna del Cacciatore, 141	Chiesa o edificio di culto	NaN	NaN	2	t	1	20
-134	7	Biblioteca comunale Giuseppe Cozza Luzi	42.6060008	11.9576317	Largo S. Giovanni Battista de La Salle 3	Biblioteca	+39 0761795319	biblioteca@comunebolsena.it	1	t	1	74
-135	7	Oratorio di S. Leonardo	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	12
-136	7	AREA DEL FORO E DOMUS PRIVATAE DELLA CITTA' ROMANA DI VOLSINII	42.6441069	11.9849554	VIA ORVIETANA, snc	Area o parco archeologico	NaN	NaN	4	t	1	23
-137	7	Basilica di Santa Cristina e Catacomba del Santuario Eucaristico	42.6441069	11.9849554	Via Giuseppe Mazzini - Bolsena	Chiesa o edificio di culto	NaN	NaN	1	t	1	84
-138	7	Porta Romana	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	1	t	1	96
-139	8	Torre (presso chiesa di S. Vincenzo)	42.4819280	12.2487640	Mugnano in Teverina	Architettura fortificata	NaN	NaN	1	t	1	47
-140	8	Chiesa della Misericordia	42.4819280	12.2487640	Mugnano in Teverina	Chiesa o edificio di culto	NaN	NaN	1	t	1	17
-141	8	Torre del Mugnano	42.4819280	12.2487640	Mugnano in Teverina	Architettura fortificata	NaN	NaN	5	t	1	16
-142	8	Chiesa di S. Maria del Pozzarello	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	96
-143	8	Riserva Naturale Monte Casoli di Bomarzo	42.4954480	12.2318550	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	97
-144	8	Chiesa di S. Maria del Piano	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	3
-145	8	Cattedrale S. Maria Assunta	42.4819280	12.2487640	Piazza Duomo	Chiesa o edificio di culto	NaN	NaN	5	t	1	21
-146	8	Piramide Etrusca Bomarzo o Sasso del Predicatore	42.4813920	12.2641870	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	8
-147	8	PARCO DEI MOSTRI; SACRO BOSCO DI BOMARZO	42.4916599	12.2475933	-	Museo, galleria e/o raccolta	761924029	boscosacro@interfree.it	2	t	1	32
-148	8	Chiesa Madonna della Valle	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	9
-149	8	Chiesa di S. Anselmo	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	91
-150	8	PARCO DEI MOSTRI, SACRO BOSCO DI BOMARZO	42.4920090	12.2451380	LOCALITA' GIARDINO, snc	Monumento o complesso monumentale	NaN	NaN	5	t	1	7
-151	8	Chiesa di S. Vincenzo Liberato	42.4819280	12.2487640	Mugnano in Teverina	Chiesa o edificio di culto	NaN	NaN	3	t	1	54
-152	8	Palazzo Orsini (o Castello Orsini)	42.4819280	12.2487640	Via Borghese, 10	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	62
-153	8	Castello Orsini	42.4197145	12.2352051	NaN	Architettura fortificata	NaN	NaN	5	t	1	15
-154	9	Casa Weller	42.2197263	12.4259417	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	94
-155	9	Giardino Portoghesi-Massobrio	42.2197263	12.4259417	Via Luigi Cadorna, 59	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	70
-318	22	Chiesa di S. Antonio	42.3721886	12.8454886	SP73	Chiesa o edificio di culto	NaN	NaN	1	t	1	49
-157	9	Chiesa dei Santi Cornelio e Cipriano	42.2197263	12.4259417	Piazza Risorgimento	Chiesa o edificio di culto	NaN	NaN	3	t	1	41
-158	9	MUSEO DELLA CIVILTA' CONTADINA	42.2165023	12.4187122	via San Giovanni	Museo, galleria e/o raccolta	761587989	gisa.federici@libero.it	3	t	1	33
-159	9	Palazzo dell' Ente Parco del Treia	42.2197263	12.4259417	Piazza Vittorio Emanuele II	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	81
-160	9	Palazzo del Governo Vecchio	41.8987401	12.4704076	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	29
-161	9	Chiesa del SS. Nome di Gesù	41.8063340	12.4954590	Piazza Umberto I	Chiesa o edificio di culto	NaN	NaN	1	t	1	81
-162	9	Il Borgo di Calcata	42.2164161	12.4188287	NaN	Architettura fortificata	NaN	NaN	3	t	1	82
-163	9	Palazzo baronale Anguillara	42.2165828	12.4190685	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	19
-164	9	OPERA BOSCO' MUSEO DI ARTE NELLA NATURA	42.2165600	12.4211497	LOCALITA' COLLE; SNC	Museo, galleria e/o raccolta	761588048	operabosco@operabosco.eu	2	t	1	67
-165	9	Chiesa della Madonna della Cava	42.2197263	12.4259417	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	54
-166	9	Chiesa di S. Giovanni 	42.2197263	12.4259417	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	62
-167	9	Porta del Borgo	42.2197263	12.4259417	NaN	Architettura fortificata	NaN	NaN	1	t	1	66
-168	10	MUSEO DELLE TRADIZIONI POPOLARI DI CANEPINA	42.3818609	12.2308363	LARGO MARIA DE MATTIAS; 7	Museo, galleria e/o raccolta	761327677	info@cmcimini.it	5	t	1	13
-169	10	Palazzo Farnese	42.3279900	12.2377600	Piazzale Farnese; 1	Villa o Palazzo di interesse storico o artistico	0761 646052	-	5	t	1	86
-170	10	Biblioteca comunale	42.3809608	12.2336522	Via Guido Rossa	Biblioteca	NaN	NaN	1	t	1	44
-171	10	Castello dei Conti Anguillara	42.3809608	12.2336522	Via Soriano	Architettura fortificata	NaN	NaN	1	t	1	76
-172	10	Chiesa parrocchiale cattedrale di santa maria assunta	42.2642760	12.6839720	Via Portapiagge, 51	Chiesa o edificio di culto	NaN	NaN	4	t	1	1
-173	10	Chiesa di San Michele Arcangelo	42.3809608	12.2336522	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	21
-174	11	Ponte Dell'Abbadia	42.4639626	11.7495088	NaN	Monumento	NaN	NaN	4	t	1	73
-175	11	MUSEO ARCHEOLOGICO DI VULCI	42.4409520	11.6840589	-	Museo, galleria e/o raccolta	0761 437787	sba-em@beniculturali.it	3	t	1	18
-176	11	Biblioteca comunale Giosuè Carducci	42.4670321	11.7504805	Via Udine	Biblioteca	+39 0761439030	NaN	1	t	1	12
-177	11	Ex Convento di San Francesco	42.4639626	11.7495088	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	40
-178	11	Castello Ponte Dell'Abbadia (o Castello di Vulci)	42.4639626	11.7495088	NaN	Architettura fortificata	NaN	NaN	5	t	1	75
-179	11	Cascata del Pellico	42.4639626	11.7495088	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	54
-180	11	Chiesa degli Apostoli Giovanni e Andrea	42.4639626	11.7495088	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	30
-181	11	Tomba François	42.4175098	11.6390928	Strada Provinciale 106 - Canino	Area o parco archeologico	NaN	NaN	5	t	1	7
-182	11	Teatro napoleonico	42.4667609	11.6974815	NaN	Architettura civile	NaN	NaN	2	t	1	89
-183	11	Tomba Francois	42.4241163	11.6310953	Parco archeologico di Vulci	Museo, galleria e/o raccolta	0761 437787	sba-em@beniculturali.it	5	t	1	7
-184	11	Terme di Vulci	42.4615398	11.6371173	Via delle Terme	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	12
-185	11	Chiesa di S. Croce	42.4639626	11.7495088	Via Cavour, 45	Chiesa o edificio di culto	NaN	NaN	1	t	1	76
-186	11	Torre Campanaria della Chiesa degli Apostoli Giovanni e Andrea	42.4639626	11.7495088	NaN	Architettura fortificata	NaN	NaN	2	t	1	53
-187	11	PARCO NATURALISTICO ARCHEOLOGICO DI VULCI	42.4107656	11.6555277	STRADA PROVINCIALE 105, SNC	Area o parco archeologico	NaN	NaN	2	t	1	59
-188	11	Castello Torlonia	42.2169001	12.0212749	NaN	Architettura fortificata	NaN	NaN	4	t	1	14
-189	12	Chiesa della Madonna del Soccorso	42.5465270	11.9047550	Corso Amedeo di Savoia Duca D'Aosta	Chiesa o edificio di culto	NaN	NaN	3	t	1	7
-190	12	Rocca Farnese (o Castello Farnese)	42.5509980	11.9128270	Piazza della Rocca, 1	Architettura fortificata	NaN	NaN	1	t	1	14
-191	12	Chiesa S. Maria Assunta in Cielo	42.5465270	11.9047550	Piazza della Rocca	Chiesa o edificio di culto	NaN	NaN	2	t	1	10
-192	12	Chiesa di San Rocco	42.5465270	11.9047550	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	54
-193	12	Centro Storico Di Capodimonte	42.5465270	11.9047550	NaN	Architettura fortificata	NaN	NaN	1	t	1	33
-194	12	Palazzo del Comune	42.5465270	11.9047550	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	10
-195	12	MUSEO DELLA NAVIGAZIONE NELLE ACQUE INTERNE	42.5560915	11.8882363	VIALE REGINA MARGHERITA;SNC	Museo, galleria e/o raccolta	761870043	comunecapodimonte@itpec.it	5	t	1	10
-196	12	Chiesa di San Carlo	42.5465270	11.9047550	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	27
-197	12	Biblioteca comunale Annibal Caro	42.4645280	11.7483661	Via Roma 31	Biblioteca	+39 0761870043	capodimonte@pelagus.it	1	t	1	82
-198	12	Lungolago di Capodimonte	42.5547757	11.8910522	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	15
-199	12	Palazzo Poniatowsky	42.5465270	11.9047550	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	83
-200	13	Santuario della Madonna del Piano	42.2564918	12.1776114	Viale Nardini, 17	Chiesa o edificio di culto	NaN	NaN	1	t	1	16
-201	13	Museo delle confraternite	42.2595445	12.1746311	via Annibal Caro	Museo, galleria e/o raccolta	0761 6679209	capranicasegreteria@hotmail.com	4	t	1	18
-202	13	Area Picnic TRIALART	42.2564918	12.1776114	Antica Str. della Valle dei Santi	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	83
-203	13	Villa Sansoni già Thierry	42.2564918	12.1776114	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	25
-204	13	Chiesa San Francesco	42.2564918	12.1776114	Corso Francesco Petrarca, 42	Chiesa o edificio di culto	NaN	NaN	2	t	1	55
-205	13	Biblioteca comunale Alfredo Signoretti	42.2559600	12.1817900	Piazza Sette Luglio	Biblioteca	+39 0761678040	capranicabiblioteca@thunder.it	3	t	1	48
-206	13	Torri D'Orlando	42.2816490	12.1256527	NaN	Architettura fortificata	NaN	NaN	2	t	1	8
-207	13	Castello degli Anguillara	42.3814501	12.2343732	NaN	Architettura fortificata	NaN	NaN	5	t	1	99
-208	14	PALAZZO FARNESE (o Villa Farnese)	42.3289720	12.2366450	PIAZZALE FARNESE, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	91
-209	14	Parrocchia S. Michele Arcangelo	42.3266250	12.2357660	Via Filippo Nicolai, 371	Chiesa o edificio di culto	NaN	NaN	2	t	1	46
-210	14	Cantine del Palazzo Farnese-Cantinone	42.3266250	12.2357660	PIAZZALE FARNESE, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	7
-211	14	Chiesa Madonna delle Grazie	42.3266250	12.2357660	Palombella	Chiesa o edificio di culto	NaN	NaN	3	t	1	3
-212	14	Chiesa di Santa Teresa	42.3266250	12.2357660	Viale Santa Teresa, 101	Chiesa o edificio di culto	NaN	NaN	2	t	1	54
-213	14	Biblioteca comunale	42.3266250	12.2357660	Viale Regina Margherita 2	Biblioteca	NaN	NaN	3	t	1	41
-214	14	Scuderie Palazzo Farnese	42.3332388	12.2238967	Via Regina Margherita, 2	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	66
-215	14	Museo multimediale di Caprarola	42.3266250	12.2357660	NaN	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	75
-216	14	Biblioteca Teresiana	42.3268830	12.2326870	Viale S. Teresa 11	Biblioteca	+39 0761646013	NaN	3	t	1	87
-217	14	S. Marco - Suore del Divino Amore	42.3266250	12.2357660	Via XX Settembre, 11	Chiesa o edificio di culto	NaN	NaN	2	t	1	27
-218	14	Chiesa della Madonna della Consolazione	42.3266250	12.2357660	Piazza Vittorio Emanuele	Chiesa o edificio di culto	NaN	NaN	3	t	1	93
-219	14	Chiesa Santa Lucia	42.3266250	12.2357660	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	67
-220	14	Pozzo del Diavolo	42.3420478	12.1812291	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	70
-221	14	Palazzo delle Scuderie	42.3266250	12.2357660	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	14
-222	14	Borgo Di Caprarola	42.3251260	12.2363730	NaN	Architettura fortificata	NaN	NaN	4	t	1	94
-223	14	Palazzo Farnese	42.3279900	12.2377600	Piazzale Farnese; 1	Museo, galleria e/o raccolta	0761 646052	-	2	t	1	18
-224	15	Chiesa della Madonna della Valle	42.3316250	12.2643660	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	92
-225	15	Parrocchia di San Pietro Apostolo	42.3316250	12.2643660	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	76
-226	15	Castello di Giulia Farnese (o Rocca Farnese)	42.3316250	12.2643660	Piazza Castello, 131	Architettura fortificata	NaN	NaN	2	t	1	54
-227	15	Ex Chiesa Santa Maria dell’Immacolata Concezione	42.3316250	12.2643660	Piazza Santa Maria - Carbognano	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	75
-228	16	Castel Porciano	42.2215157	12.3582771	NaN	Architettura fortificata	NaN	NaN	1	t	1	50
-229	16	Ipogeo di San Leonardo	42.2517755	12.3717955	NaN	Area o parco archeologico	NaN	NaN	5	t	1	46
-230	16	Basilica di Sant'Elia	42.2496098	12.3730950	Via Sant' Elia	Chiesa o edificio di culto	NaN	NaN	1	t	1	86
-231	16	Parrocchia Sant'Antonio Abate	42.2517755	12.3717955	Via Cancelleria Vecchia, 3	Chiesa o edificio di culto	NaN	NaN	5	t	1	54
-232	16	Castello di Filissano	42.2329720	12.3998550	NaN	Architettura fortificata	NaN	NaN	5	t	1	20
-233	16	Castello di Ischi (o Castel Sant'Elia)	42.2517755	12.3717955	NaN	Architettura fortificata	NaN	NaN	2	t	1	13
-234	16	Biblioteca comunale	42.2517755	12.3717955	Via Umberto I  5	Biblioteca	NaN	NaN	5	t	1	59
-235	16	Pontificio Santuario Maria SS. "ad Rupes"	42.2492040	12.3761274	Piazza Cardinal Gasparri, 2	Chiesa o edificio di culto	NaN	NaN	2	t	1	26
-236	16	Castello di Pizzo Jella	42.2517755	12.3717955	NaN	Architettura fortificata	NaN	NaN	5	t	1	44
-237	17	Chiesa della Madonna della Neve	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	51
-238	17	Borgo Medievale	42.6449715	12.2038975	NaN	Architettura fortificata	NaN	NaN	2	t	1	67
-239	17	Palazzo Cialfi e Chiesa della Natività	42.6449715	12.2038975	Sermugnano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	69
-240	17	Chiesa di S. Rocco	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	82
-241	17	Palazzo Vannicelli	42.6449715	12.2038975	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	24
-242	17	Piazza Maggiore	42.6449715	12.2038975	NaN	Monumento	NaN	NaN	1	t	1	61
-243	17	Chiesa dei santi Giacomo e Filippo	42.6449715	12.2038975	Piazza Maggiore, 21	Chiesa o edificio di culto	NaN	NaN	5	t	1	89
-244	17	Palazzo Comunale	42.6449715	12.2038975	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	9
-245	17	Chiesa di S. Silvestro	42.6449715	12.2038975	Sermugnano	Chiesa o edificio di culto	NaN	NaN	4	t	1	4
-246	17	MUVIS - Museo del Vino	42.6462856	12.2043483	Piazza del Poggetto, 12	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	84
-247	17	Porta S. Giovanni	42.6449715	12.2038975	NaN	Architettura fortificata	NaN	NaN	2	t	1	89
-248	17	Chiesa di S. Maria	42.6449715	12.2038975	Vaiano	Chiesa o edificio di culto	NaN	NaN	2	t	1	75
-249	17	Teatro Tevere	42.6584217	12.1738538	NaN	Architettura civile	NaN	NaN	1	t	1	98
-250	17	Rocca Monaldeschi	42.6362760	12.1136320	Piazza Monaldeschi, 61	Architettura fortificata	NaN	NaN	2	t	1	95
-251	17	Cripta del Paradiso	42.6449715	12.2038975	NaN	Area o parco archeologico	NaN	NaN	1	t	1	69
-252	17	Chiesa della Madonna delle Grazie	42.6449715	12.2038975	Sermugnano	Chiesa o edificio di culto	NaN	NaN	1	t	1	2
-253	17	Ex Chiesa di S. Giovanni	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	65
-254	18	Convento di S. Giovanni Battista	42.5597682	12.1257580	Via Roma, 5	Chiesa o edificio di culto	NaN	NaN	5	t	1	64
-255	18	Biblioteca del Centro comunitario ex Convento S. Giovanni Battista	42.6855509	11.9065690	Via Roma 5	Biblioteca	+39 0761912275	NaN	4	t	1	33
-256	18	Mura Medievali	42.5597682	12.1257580	NaN	Architettura fortificata	NaN	NaN	4	t	1	22
-257	18	Chiesa di S. Egidio	42.5597682	12.1257580	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	57
-258	18	Chiesa di S. Carlo	42.5597682	12.1257580	Piazza S. Rocco, 14	Chiesa o edificio di culto	NaN	NaN	5	t	1	79
-259	18	Biblioteca comunale	42.5597682	12.1257580	Piazza della Repubblica	Biblioteca	NaN	NaN	3	t	1	84
-260	18	Chiesa di S. Rocco	42.5597682	12.1257580	Piazza S. Rocco	Chiesa o edificio di culto	NaN	NaN	1	t	1	24
-261	18	Centro Storico di Celleno Vecchia	42.5597682	12.1257580	NaN	Architettura fortificata	NaN	NaN	2	t	1	40
-262	18	Castello Orsini (o Castello di Celleno)	42.5630230	12.1439980	SP11	Architettura fortificata	NaN	NaN	2	t	1	58
-263	18	Chiesa di S. Donato	42.5597682	12.1257580	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	24
-264	18	Palazzo Caprini	42.5597682	12.1257580	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	49
-265	19	Torre dell'Orologio	42.5104250	11.7716530	Via Camillo Benso Conte di Cavour	Architettura fortificata	NaN	NaN	5	t	1	98
-266	19	Chiesa di Sant'Egidio	42.5104250	11.7716530	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	32
-267	19	Rocca Farnese	42.5509834	11.9128378	NaN	Architettura fortificata	NaN	NaN	3	t	1	34
-268	19	Fontana dei Delfini	42.5104250	11.7716530	Via Napoli	Monumento	NaN	NaN	1	t	1	98
-269	19	Museo del brigantaggio di Cellere	42.5114590	11.7755321	Via Guglielmo Marconi - Cellere	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	24
-270	19	Parrocchia Santa Maria Assunta	42.5104250	11.7716530	Piazza Castelfidardo	Chiesa o edificio di culto	NaN	NaN	3	t	1	30
-271	19	Borgo di Pianiano a Cellere	42.5093370	11.7731670	Pianino	Architettura fortificata	NaN	NaN	1	t	1	16
-272	19	Museo del brigantaggio	42.5111064	11.7732155	via Marconi; 20	Museo, galleria e/o raccolta	0761 451791 - 392 7013553	info@museobrigantaggiocellere.it	2	t	1	26
-273	20	Chiesa Parrocchiale San Francesco	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	98
-274	20	Via Amerina	42.2824888	12.3564351	NaN	Area o parco archeologico	NaN	NaN	5	t	1	5
-275	20	Chiesa dell' Ospedale di S. Maria delle Grazie	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	66
-276	20	Palazzo Privato Trocchi	42.2952260	12.4091700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	24
-277	20	Tempio di Giunone Curite	42.2963220	12.4220905	NaN	Area o parco archeologico	NaN	NaN	1	t	1	41
-278	20	Castel Borghetto	42.2952260	12.4091700	NaN	Architettura fortificata	NaN	NaN	2	t	1	13
-279	20	Ponte Clementino	42.2900920	12.4124479	Viale Repubblica, 4B	Monumento	NaN	NaN	1	t	1	67
-280	20	Chiesa San Lorenzo	42.2952260	12.4091700	Via Attilio Bonanni, 6	Chiesa o edificio di culto	NaN	NaN	2	t	1	69
-281	20	MUSEO ARCHEOLOGICO DELL'AGRO FALISCO E FORTE SANGALLO	42.2880258	12.4085077	Via del Forte; snc	Museo, galleria e/o raccolta	0761 513735	-	4	t	1	62
-282	20	COMUNE DI CIVITA CASTELLANA - MUSEO DELLA CERAMICA 'CASIMIRO MARCANTONI'	42.2883780	12.4153931	VIA A. GRAMSCI 3	Museo, galleria e/o raccolta	7615901	comune.civitacastellana@legalmail.it	1	t	1	21
-283	20	Fontana dei Draghi	42.2889815	12.4117738	Piazza Giacomo Matteotti, 48	Monumento	NaN	NaN	2	t	1	40
-284	20	Biblioteca comunale Enrico Minio	42.2885200	12.4137100	Via U. Midossi 3	Biblioteca	+39 0761590233	bibliotecaminio@thunder.it	1	t	1	98
-285	20	Chiesa di San Benedetto	42.2952260	12.4091700	Via Vincenzo Ferretti, 94/102	Chiesa o edificio di culto	NaN	NaN	4	t	1	65
-286	20	Chiesa Conventuale di Santa Maria del Carmine	42.2952260	12.4091700	Via Vincenzo Ferretti, 157/161	Chiesa o edificio di culto	NaN	NaN	4	t	1	3
-287	20	Biblioteca dell'ISIS Colasanti	42.3457025	12.3503741	Via E. Berlinguer	Biblioteca	NaN	NaN	4	t	1	79
-288	20	Cattedrale di Santa Maria Maggiore	42.2952260	12.4091700	Piazza del Duomo	Chiesa o edificio di culto	NaN	NaN	3	t	1	32
-289	20	Cappella della Madonna delle Rose	42.2952260	12.4091700	Via Madonna delle Rose, 42	Chiesa o edificio di culto	NaN	NaN	4	t	1	41
-290	20	Chiesa Privata S. Antonio Abate	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	20
-291	20	Chiesa della Madonna delle Piagge	42.2952260	12.4091700	Via Fontana Lunga, 1	Chiesa o edificio di culto	NaN	NaN	4	t	1	53
-292	20	Auditorium Santa Chiara	42.2952260	12.4091700	Via Vincenzo Ferretti, 126	Chiesa o edificio di culto	NaN	NaN	3	t	1	45
-293	20	Chiesa parrocchiale di S. Gregorio	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	56
-294	20	Chiesa San Pietro	42.4185731	11.8703089	-	Chiesa o edificio di culto	-	-	2	t	1	16
-295	20	Chiesa Conventuale di Santa Chiara	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	47
-296	20	Palazzo Montalto	42.2952260	12.4091700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	58
-297	20	Oratorio del Sacro Cuore di Maria	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	32
-298	20	Forte Sangallo (o Rocca Borgia)	42.2952260	12.4091700	Via Mazzocchi	Architettura fortificata	NaN	NaN	4	t	1	31
-299	20	Palazzo Privato Della Ex Stazione di Posta	42.2952260	12.4091700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	21
-300	21	Castello di S. Maria	42.6053622	12.1876584	Località Santa Maria	Architettura fortificata	NaN	NaN	3	t	1	39
-301	21	Chiesa dell'Immacolata Concezione	42.6053622	12.1876584	S. Michele in Teverina	Chiesa o edificio di culto	NaN	NaN	5	t	1	27
-302	21	Palazzo Montholon	42.6053622	12.1876584	S. Michele in Teverina	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	69
-303	21	Chiesa di S. Michele Arcangelo	42.6053622	12.1876584	S. Michele in Teverina	Chiesa o edificio di culto	NaN	NaN	4	t	1	34
-304	21	Chiesa della Madonna delle Grazie	42.6053622	12.1876584	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	38
-305	21	Palazzo Mottura	42.6053622	12.1876584	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	29
-306	21	Torre Monaldeschi	42.7555416	11.9443469	Piazza Unità D'Italia, 231	Architettura fortificata	NaN	NaN	1	t	1	2
-307	21	Chiesa dei SS. Pietro e Callisto	42.6053622	12.1876584	Piazza Unità D'Italia, 3	Chiesa o edificio di culto	NaN	NaN	3	t	1	37
-308	22	Palazzo Ridolfi	42.7383559	12.7363345	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	54
-309	22	Chiesa di S. Egidio	42.3449260	12.3556680	la Cannara	Chiesa o edificio di culto	NaN	NaN	5	t	1	89
-310	22	Chiesa della Madonna delle Grazie	42.3449260	12.3556680	Madonna delle Grazie	Chiesa o edificio di culto	NaN	NaN	3	t	1	93
-311	22	Biblioteca comunale S. Valentino	42.3323141	12.2659463	Piazza XX settembre 15	Biblioteca	+39 0761572472	bibliocorchiano@libero.it	1	t	1	34
-312	22	Chiesa di S. Maria del Soccorso	42.3449260	12.3556680	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	31
-313	22	Torre di S. Bruna	42.8351062	12.7056209	Castellaccio /              Santa Bruna	Architettura fortificata	NaN	NaN	2	t	1	10
-314	22	Chiesa di S. Maria del Rosario	42.2185940	12.4158720	Via Vittorio Emanuele, III	Chiesa o edificio di culto	NaN	NaN	1	t	1	95
-315	22	Chiesa di San Biagio	42.3449260	12.3556680	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	47
-316	22	Forre e Borgo di Corchiano	42.3454859	12.3606221	Località Madonna del Soccorso	Architettura fortificata	NaN	NaN	2	t	1	41
-317	22	Casale (ex chiesa) di S. Bruna	42.3449260	12.3556680	Castellaccio /              Santa Bruna	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	27
-319	22	Palazzo Mozzini	42.3449260	12.3556680	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	78
-320	23	Biblioteca comunale Silvano Ricci	42.3344178	12.2959506	Piazza del Duomo, 17	Biblioteca	+39 0761569078	p.sanapo@bibliotecafabricadiroma.it	4	t	1	24
-321	24	Chiesa di S. Maria di Falleri	42.3351260	12.2997670	Via dei Falisci, 40	Chiesa o edificio di culto	NaN	NaN	1	t	1	85
-322	24	Chiesa Collegiata di San Silvestro Papa	42.3351260	12.2997670	Piazza Duomo, 221	Chiesa o edificio di culto	NaN	NaN	1	t	1	40
-323	24	Falerii Novi	42.2995342	12.3591211	(Falerii Novi)	Architettura fortificata	NaN	NaN	5	t	1	60
-324	24	Rocca Farnese (o Castello Farnese)	42.5509980	11.9128270	Via A. Cencelli, 21	Architettura fortificata	NaN	NaN	4	t	1	23
-325	24	Cortile del casale farnesiano	42.3351260	12.2997670	(Falerii Novi)	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	30
-326	24	Casale farnesiano	42.3351260	12.2997670	(Falerii Novi)	Architettura fortificata	NaN	NaN	3	t	1	71
-327	25	Castel Paterno	42.2261788	12.4431811	NaN	Architettura fortificata	NaN	NaN	4	t	1	1
-328	25	Chiesa della Misericordia	42.2261788	12.4431811	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	4
-329	25	Eremo Di San Famiano	42.2464107	12.4304602	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	6
-330	25	Porta del Borgo	42.2261788	12.4431811	NaN	Architettura fortificata	NaN	NaN	1	t	1	53
-331	25	Castel Fogliano (o Foiano)	42.2261788	12.4431811	NaN	Architettura fortificata	NaN	NaN	2	t	1	68
-332	25	Chiesa di S. Giovanni Decollato	42.2261788	12.4431811	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	89
-333	25	Chiesa della Madonna di Pietrafitta	42.2261788	12.4431811	Via Belvedere	Chiesa o edificio di culto	NaN	NaN	4	t	1	57
-334	25	Rocca degli Anguillara (o Palazzo Anguillara, Castello Anguillara, Casale degli Anguillara-casaletto della Carlotta)	42.2261788	12.4431811	Piazza della Collegiata	Architettura fortificata	NaN	NaN	4	t	1	40
-335	25	Chiesa di S. Agostino	42.2261788	12.4431811	Piazza della Collegiata	Chiesa o edificio di culto	NaN	NaN	3	t	1	36
-336	25	Chiesa di S. Giuliano	42.2261788	12.4431811	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	42
-337	26	Riserva Naturale Regionale Selva del Lamone	42.5494260	11.7256520	Loc.tà Bottino s.n.c.	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	61
-338	26	Centro Storico di Farnese	42.5477480	11.7249020	NaN	Architettura fortificata	NaN	NaN	2	t	1	51
-339	26	Chiesa del SS. Salvatore	42.5494260	11.7256520	Via XX Settembre, 273	Chiesa o edificio di culto	NaN	NaN	1	t	1	36
-340	26	Chiesa di S. Maria della Neve	42.5494260	11.7256520	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	99
-341	26	Chiesa rurale di S. Anna	42.5494260	11.7256520	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	49
-342	26	Cascata del Salabrone	42.5494260	11.7256520	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	57
-343	26	Chiesa di S. Francesco	42.5494260	11.7256520	Cappuccini	Chiesa o edificio di culto	NaN	NaN	4	t	1	26
-344	26	Palazzo Comunale	42.5494260	11.7256520	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	32
-345	26	Convento di San Rocco	42.5494260	11.7256520	Via Circonvallazione, 14	Chiesa o edificio di culto	NaN	NaN	1	t	1	3
-346	26	Complesso monastero e chiesa delle Clarisse	42.5494260	11.7256520	Corso Vittorio Emanuele, 68	Chiesa o edificio di culto	NaN	NaN	4	t	1	65
-347	26	MUSEO CIVICO FERRANTE RITTATORE VONWILLER	42.5498000	11.7270600	VIA COLLE SAN MARTINO; 16	Museo, galleria e/o raccolta	761458849	museofarnese@virgilio.it  museofarnese@simulabo.it	5	t	1	16
-348	26	Chiesa di S. Maria delle Grazie	42.5494260	11.7256520	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	50
-349	27	Cinema Teatro	42.3786562	12.4037094	Piazza S.Maria,1	Architettura civile	NaN	NaN	3	t	1	76
-350	27	Castello Di Rocchette	42.3947666	12.4718039	NaN	Architettura fortificata	NaN	NaN	3	t	1	100
-351	27	Complesso monastico di S. Benedetto	42.3732869	12.4028042	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	83
-352	27	Chiesa di S. Maria Assunta	42.3732869	12.4028042	Piazza Duomo, 1	Chiesa o edificio di culto	NaN	NaN	3	t	1	49
-353	27	Castello Palazzo Ducale (o Castello Altemps)	42.4365350	12.7880590	Via degli Altemps, 8	Chiesa o edificio di culto	NaN	NaN	5	t	1	25
-354	27	Centro Storico	42.3732869	12.4028042	NaN	Architettura fortificata	NaN	NaN	4	t	1	61
-355	27	Biblioteca comunale	42.3732869	12.4028042	Via S. Chiara 3	Biblioteca	NaN	NaN	3	t	1	64
-356	27	Chiesa di San Famiano	42.3732869	12.4028042	SP34	Chiesa o edificio di culto	NaN	NaN	3	t	1	21
-357	27	Chiesa di S. Agostino	42.3732869	12.4028042	Via Maria de Mattias, 1	Chiesa o edificio di culto	NaN	NaN	5	t	1	60
-358	27	Palazzo Municipale	42.3732869	12.4028042	Piazza Duomo, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	53
-359	27	Chiesa di San Filippo e Giacomo	42.3732869	12.4028042	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	50
-360	27	MUSEO DI GALLESE E CENTRO CULTURALE 'MARCO SCACCHI'	42.3716913	12.4026010	VIA LORENZO FILIPPINI; SNC - GALLESE	Museo, galleria e/o raccolta	761495503	museo@comune.gallese.vt.it	3	t	1	85
-361	27	Palazzo Massa	42.3732869	12.4028042	Via Filippini 7a	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	60
-362	27	Chiesa di S. Lorenzo Martire	42.3732869	12.4028042	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	56
-363	28	Chiesa di S. Maria Maddalena	42.6436919	11.8548880	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	11
-364	28	Chiesa di S. Magno	42.6436919	11.8548880	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	9
-365	28	Palazzo Farnese	42.6436919	11.8548880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	14
-366	28	Biblioteca comunale	42.6436919	11.8548880	Piazza L. Palombini 2	Biblioteca	NaN	NaN	4	t	1	100
-367	28	MUSEO DEL COSTUME FARNESIANO	42.6440900	11.8561900	PIAZZA LUIGI PALOMBINI; 2	Museo, galleria e/o raccolta	761456082	comunedigradoli@legalmail.it	1	t	1	90
-368	28	Chiesa di S. Michele Arcangelo	42.6436919	11.8548880	Via Camillo Benso Conte di Cavour, 98	Chiesa o edificio di culto	NaN	NaN	2	t	1	22
-369	28	Museo della chiesa di Santa Maria Maddalena	42.6436919	11.8548880	Via Cavour - Gradoli	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	23
-370	29	Parrocchia S. Martino Vescovo	42.5749030	12.2044306	Piazza G. Marconi, 14	Chiesa o edificio di culto	NaN	NaN	1	t	1	95
-371	29	Complesso di S. Leonardo	42.5749030	12.2044306	S. Leonardo	Chiesa o edificio di culto	NaN	NaN	4	t	1	85
-372	29	Chiesa di San Vincenzo	42.5749030	12.2044306	Sipicciano	Chiesa o edificio di culto	NaN	NaN	2	t	1	46
-373	29	Chiesa di San Bernardino	42.5749030	12.2044306	Sipicciano	Chiesa o edificio di culto	NaN	NaN	4	t	1	89
-374	29	Chiesa della Madonna delle Vigne	42.5749030	12.2044306	Località S.Francesco, 20	Chiesa o edificio di culto	NaN	NaN	2	t	1	1
-375	29	Palazzo Baronale	42.5749030	12.2044306	Sipicciano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	70
-376	29	Chiesa di Santa Maria Assunta	42.5749030	12.2044306	Sipicciano	Chiesa o edificio di culto	NaN	NaN	3	t	1	76
-377	29	Santuario della Madonna del Castellonchio	42.5749030	12.2044306	Selve	Chiesa o edificio di culto	NaN	NaN	4	t	1	39
-378	29	Castello di Sipicciano (o Castello Baglioni, Bulgarini)	42.5749030	12.2044306	Sipicciano	Architettura fortificata	NaN	NaN	2	t	1	92
-379	30	Casale Poggio la Camera	42.6745290	11.8722530	Poggio la Camera	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	30
-380	30	Monumento a Paolo di Castro	42.6745290	11.8722530	NaN	Monumento	NaN	NaN	1	t	1	49
-381	30	Palazzo Comunale	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	21
-382	30	Chiesa di Santa Maria di Castelvecchio	42.6745290	11.8722530	Castelvecchio	Chiesa o edificio di culto	NaN	NaN	3	t	1	79
-383	30	Fontana Grande	42.6745290	11.8722530	Piazza Cardinale Carlo Salotti, 13	Monumento	NaN	NaN	2	t	1	92
-384	30	Chiesa di S. Maria delle Colonne	42.6745290	11.8722530	S. Maria delle Colonne	Chiesa o edificio di culto	NaN	NaN	1	t	1	19
-385	30	Palazzo Orzi	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	79
-386	30	Palazzo Presutti	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	33
-387	30	Casale Borgo	42.6745290	11.8722530	Val di Lago	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	82
-388	30	Palazzo Cordelli	42.6751490	11.8741381	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	29
-389	30	Chiesa di San Marco	42.6745290	11.8722530	Piazza Paolo di Castro, 17	Chiesa o edificio di culto	NaN	NaN	1	t	1	39
-390	30	Chiesa di San Pietro Apostolo	42.6745290	11.8722530	Via Unione, 1A	Chiesa o edificio di culto	NaN	NaN	3	t	1	6
-391	30	MUSEO CIVITA	42.6743629	11.8725378	PIAZZA GIACOMO MATTEOTTI, snc	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	4
-392	30	Museo archeologico e delle tradizioni popolari	42.6745290	11.8722530	piazza Giacomo Matteotti	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	30
-393	30	Palazzo Iuzzi	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	40
-394	30	Necropoli di Centocamere	42.6745290	11.8722530	NaN	Area o parco archeologico	NaN	NaN	5	t	1	1
-395	30	museo archeologico e delle tradizioni popolari	42.6852104	11.9022259	piazza Giacomo Matteotti	Museo, galleria e/o raccolta	0763 796983	bibliotecagrotte@libero.it	3	t	1	43
-396	30	Palazzo Tramontana	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	36
-397	30	Biblioteca comunale	42.6745290	11.8722530	Piazza della Rocca 9	Biblioteca	NaN	NaN	5	t	1	15
-398	30	Chiesa di Santa Maria dell' Annunziata	42.6745290	11.8722530	Annunziata	Chiesa o edificio di culto	NaN	NaN	1	t	1	32
-399	30	Cappella del SS. Sacramento	42.6745290	11.8722530	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	82
-400	30	Grotte di Castro	42.6745290	11.8722530	Grotte di Castro - Grotte di Castro	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	94
-401	30	Museo della Basilica - Santuario di Maria Santissima del Suffragio	42.6745290	11.8722530	Piazza San Giovanni - Grotte di Castro	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	93
-402	31	Romitori di Ischia di Castro	42.5442470	11.7530960	NaN	Architettura fortificata	NaN	NaN	2	t	1	10
-403	31	Monastero Dei SS. Filippo e Giacomo	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	84
-404	31	Chiesa della Madonna delle Rose	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	9
-405	31	Biblioteca comunale	42.5446546	11.7540140	Via Roma 5	Biblioteca	NaN	NaN	5	t	1	7
-406	31	Rocca Farnese (o Palazzo Farnese)	42.5509980	11.9128270	Piazza Regina Margherita, 1	Architettura fortificata	NaN	NaN	5	t	1	26
-407	31	Ischia di Castro (o complesso antica Città di Castro)	42.5442470	11.7530960	Ischia di Castro - Ischia di Castro	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	65
-408	31	Chiesa di S. Giuseppe	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	26
-409	31	Rovine di Castro	42.5446546	11.7540140	NaN	Architettura fortificata	NaN	NaN	5	t	1	34
-410	31	Santuario della Madonna del Giglio	42.5446546	11.7540140	(Fosso Cellerano)	Chiesa o edificio di culto	NaN	NaN	4	t	1	0
-411	31	Duomo di S. Ermete	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	18
-412	31	Chiesa della SS. Trinità	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	89
-413	31	Chiesa di S. Rocco	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	43
-414	31	Chiesa di S. Maria Intus Civitatem	42.5446546	11.7540140	Rovine di Castro	Chiesa o edificio di culto	NaN	NaN	4	t	1	72
-415	31	Chiesa della Madonna della Neve	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	26
-416	31	MUSEO CIVICO ARCHEOLOGICO 'PIETRO E TURIDDO LOTTI'	42.5443643	11.7559713	PIAZZA CAVALIERI VITTORIO VENETO	Museo, galleria e/o raccolta	0761-425455	ischia_museocivico@libero.it	4	t	1	83
-417	32	Parco Comunale dei Castagneti	42.6290280	11.8274530	Via Roma, 23	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	91
-418	32	Chiesa  della Madonna della Cava	42.6290280	11.8274530	SP117	Chiesa o edificio di culto	NaN	NaN	4	t	1	79
-419	32	Palazzo Farnese	42.6290280	11.8274530	cd. Rocca	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	12
-420	32	Fontana di Canale	42.6290280	11.8274530	NaN	Monumento	NaN	NaN	1	t	1	39
-421	32	Fontana del Piscero	42.6290280	11.8274530	NaN	Monumento	NaN	NaN	3	t	1	22
-422	32	Fontana Ducale	42.6290280	11.8274530	Via Ripetta, 16	Monumento	NaN	NaN	2	t	1	52
-423	32	I Quattro Archi	42.6290280	11.8274530	NaN	Architettura fortificata	NaN	NaN	4	t	1	74
-424	32	Chiesa  di S. Clemente	42.6290280	11.8274530	Piazza S. Clemente, 11	Chiesa o edificio di culto	NaN	NaN	2	t	1	57
-425	32	Piazza IV Novembre	42.6290280	11.8274530	Corso Vittorio Emanuele III	Monumento	NaN	NaN	3	t	1	78
-589	43	Rocca di Piansano	42.5230610	11.8300000	NaN	Architettura fortificata	NaN	NaN	3	t	1	79
-426	32	Chiesa di S. Giuseppe	42.6290280	11.8274530	Via S. Giuseppe, 1	Chiesa o edificio di culto	NaN	NaN	5	t	1	89
-427	32	Chiesa di S. Rocco	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	5
-428	32	Chiesa di Santi Pietro e Paolo	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	70
-429	32	Biblioteca comunale	42.6290280	11.8274530	Via Piave 3	Biblioteca	NaN	NaN	3	t	1	77
-430	32	MUSEO DELLA TERRA	42.6300003	11.8280678	VIA DELL'OSTERIA; SNC	Museo, galleria e/o raccolta	761459041	museo@comune.latera.vt.it	5	t	1	12
-431	32	Piazza Della Rocca	42.2744493	12.0256516	Piazza della Rocca	Monumento	NaN	NaN	5	t	1	38
-432	32	Chiesa della Madonna del Carmine	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	53
-433	32	Chiesa di S. Sebastiano	42.6290280	11.8274530	Via S. Sebastiano, 660	Chiesa o edificio di culto	NaN	NaN	5	t	1	14
-434	32	Chiesa della Madonna delle Grazie	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	44
-435	33	Castello di Seppie	42.6362310	12.1087590	NaN	Architettura fortificata	NaN	NaN	1	t	1	36
-436	33	Fontana La Pucciotta	42.6362310	12.1087590	Piazza S. Giovanni Battista, 8/1	Monumento	NaN	NaN	5	t	1	28
-437	33	Chiesa di S. Giovanni Battista	42.6362310	12.1087590	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	5
-438	33	Cappella del Castello di Seppie	42.6362310	12.1087590	Seppie	Chiesa o edificio di culto	NaN	NaN	4	t	1	83
-439	33	Ex Palazzo Municipale	42.6362310	12.1087590	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	46
-440	33	Torre del Sole o di Santa Caterina	42.6362310	12.1087590	NaN	Architettura fortificata	NaN	NaN	4	t	1	80
-441	33	Chiesa di S. Caterina	42.6362310	12.1087590	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	95
-442	33	Teatro dei Calanchi	42.6521484	12.1040617	Via Roma 39	Architettura civile	NaN	NaN	1	t	1	79
-443	33	MUSEO NATURALISTICO DI LUBRIANO	42.6364620	12.1108139	piazza Col di Lana; 12	Museo, galleria e/o raccolta	0761 780391 - 327 0289027	info@museolubriano.com	4	t	1	76
-444	33	Grotta di S. Procolo	42.6362310	12.1087590	NaN	Area o parco archeologico	NaN	NaN	2	t	1	95
-445	33	Torre Medievale (o Torre Monaldeschi)	42.6362310	12.1087590	Via della Torre, 171	Architettura fortificata	NaN	NaN	4	t	1	90
-446	33	Chiesa della Madonna del Poggio	42.6362310	12.1087590	Via G. Marconi, 271	Chiesa o edificio di culto	NaN	NaN	2	t	1	32
-447	34	Palazzo Comunale	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	26
-448	34	Palazzo Orsini-Farnese	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	76
-449	34	Palazzo Tarquini	42.5339112	11.9249120	 p.za Umberto I	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	62
-450	34	Palazzo Sforza-Ciotti	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	53
-451	34	Biblioteca comunale Alfredo Tarquini	42.5348010	11.9252188	Via N. Bixio 10	Biblioteca	+39 0761870476	bibmarta@inwind.it	3	t	1	59
-452	34	Grotta delle Apparizioni	42.5354236	11.9235040	Via Verentana, 48	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	90
-453	34	Chiesa del Santissimo Crocifisso	42.5339112	11.9249120	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	37
-454	34	Sito Templare di Castell'Araldo	42.5339112	11.9249120	NaN	Architettura fortificata	NaN	NaN	1	t	1	28
-455	34	Chiesa di S. Marta e S. Biagio	42.5339112	11.9249120	Lg. S. Biagio, 5	Chiesa o edificio di culto	NaN	NaN	4	t	1	32
-456	34	Chiesa Madonna del Monte	42.5339112	11.9249120	Strada Provinciale Verentana	Chiesa o edificio di culto	NaN	NaN	5	t	1	97
-457	34	Torre dell' Orologio	42.5339112	11.9249120	Via del Castello, 25	Architettura fortificata	NaN	NaN	2	t	1	26
-458	34	Lungolago di Marta	42.5350730	11.9269318	Via Laertina, 1181	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	49
-459	34	Chiesa della Madonna del Castagno	42.5339112	11.9249120	Via Capodimonte	Chiesa o edificio di culto	NaN	NaN	4	t	1	33
-460	34	Palazzo Vescovile	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	67
-461	34	Isola Martana	42.5496684	11.9529794	Isola Martana	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	58
-462	35	Madonna dello Speronello	42.3534605	11.6063117	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	46
-463	35	Parco Archeologico Naturalistico di Vulci	42.4107656	11.6555277	NaN	Area o parco archeologico	NaN	NaN	1	t	1	8
-464	35	Chiesa di Santa Maria Assunta	42.3534605	11.6063117	Via S. Paolo della Croce, 3	Chiesa o edificio di culto	NaN	NaN	2	t	1	22
-465	35	Vulci	42.3558920	11.5922396	NaN	Area o parco archeologico	NaN	NaN	5	t	1	89
-466	35	Biblioteca comunale	42.3534605	11.6063117	Via Tirrenia 6	Biblioteca	NaN	NaN	3	t	1	42
-467	35	Castello Guglielmi	42.3534605	11.6063117	Circonvallazione Vulci, 23	Architettura fortificata	NaN	NaN	4	t	1	78
-468	35	Centro Storico	42.3534605	11.6063117	NaN	Architettura fortificata	NaN	NaN	5	t	1	39
-469	35	Fontana del Mascherone	42.3534605	11.6063117	Via del Mascherone, 9	Monumento	NaN	NaN	3	t	1	46
-470	35	Ponte del Diavolo	42.3534605	11.6063117	NaN	Monumento	NaN	NaN	3	t	1	0
-471	35	Chiesa di Santa Croce	42.3534605	11.6063117	Piazza Felice Guglielmi, 19	Chiesa o edificio di culto	NaN	NaN	2	t	1	31
-472	35	Teatro Comunale Lea Padovani	42.3534605	11.6063117	Via Aurelia Tarquinia, 58	Architettura civile	NaN	NaN	3	t	1	61
-473	36	Fontana a largo S. Corona	42.2665210	11.8937590	NaN	Monumento	NaN	NaN	1	t	1	68
-474	36	Chiesa del S. Spirito a largo S. Corona	42.2665210	11.8937590	Via Santo Spirito	Chiesa o edificio di culto	NaN	NaN	4	t	1	47
-475	36	Chiesa dell'Addolorata	42.2665210	11.8937590	Via Vittorio Emanuele, 1091	Chiesa o edificio di culto	NaN	NaN	3	t	1	31
-476	36	Castello di Rocca Respampani	42.2665210	11.8937590	NaN	Architettura fortificata	NaN	NaN	5	t	1	33
-477	36	Palazzo del Cardinale Ludovico Calino	42.2665210	11.8937590	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	25
-478	36	Biblioteca comunale	42.2665210	11.8937590	Via Vittorio Emanuele 41	Biblioteca	NaN	NaN	2	t	1	69
-479	36	Fontana del Mascherone	42.2665210	11.8937590	NaN	Monumento	NaN	NaN	1	t	1	13
-480	36	Teatro Comunale Rotonda	42.2665210	11.8937590	Piazza XXIV maggio	Architettura civile	NaN	NaN	1	t	1	72
-481	37	Teatro Eliseo	42.5599207	12.0297937	Corso Cavour 55	Architettura civile	NaN	NaN	5	t	1	79
-482	37	Palazzo Scoppola Iacopini	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	18
-483	37	Chiesa di San Francesco	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	67
-484	37	Chiesa di Santa Maria di Montedoro	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	9
-485	37	Basilica di San Flaviano	42.5379248	12.0309974	Via San Flaviano	Chiesa o edificio di culto	NaN	NaN	4	t	1	36
-486	37	Biblioteca comunale	42.5379248	12.0309974	Largo S. Pietro 1	Biblioteca	NaN	NaN	1	t	1	73
-487	37	Chiesa di Santa Maria delle Grazie	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	80
-488	37	Palazzo Renzi-Doria	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	6
-489	37	Biblioteca del Seminario vescovile Barbarigo	42.5357331	12.0285281	Via Trento, 57	Biblioteca	+39 0761.826070	cedi.do@libero.it	5	t	1	41
-490	37	Museo dell'architettura di Antonio da Sangallo Il Giovane	42.5379248	12.0309974	Piazza Urbano V - Montefiascone	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	5
-491	37	Chiesa di Santa Maria della Potenza o del Divino Amore	42.5379248	12.0309974	Corso Camillo Benso Conte di Cavour, 64A	Chiesa o edificio di culto	NaN	NaN	3	t	1	95
-492	37	Palazzo Buti-Volpiani	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	81
-493	37	Monumento al Pellegrino	42.5379248	12.0309974	Piazza Urbano V	Monumento	NaN	NaN	5	t	1	29
-494	37	Rocca dei Papi	42.5366122	12.0280798	Piazza Urbano V	Architettura fortificata	NaN	NaN	4	t	1	18
-495	37	Biblioteca dell'Istituto tecnico commerciale e per geometri Carlo Alberto Dalla Chiesa	42.5457646	12.0329183	Via A. Moro 1	Biblioteca	NaN	NaN	1	t	1	58
-496	37	Chiesa di Sant' Andrea in Campo	42.5379248	12.0309974	Piazza Vittorio Emanuele, 9	Chiesa o edificio di culto	NaN	NaN	3	t	1	31
-497	37	Basilica di Santa Margherita	42.5379248	12.0309974	Piazzale Santa Margherita	Chiesa o edificio di culto	NaN	NaN	3	t	1	85
-498	37	Convento di S. Agostino	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	26
-499	37	Chiesa di Santa Maria della Neve	42.5379248	12.0309974	Via XXIV Maggio, 4	Chiesa o edificio di culto	NaN	NaN	4	t	1	26
-500	37	Museo dell'architettura di Antonio da Sangallo il Giovane	42.5368520	12.0276249	piazza della Rocca	Museo, galleria e/o raccolta	0761 832060	museosangallo@comune.montefiascone.vt.it	4	t	1	7
-501	37	Palazzo Codini	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	16
-502	38	Antica Fontana Papa Leone	41.7537880	12.2894570	NaN	Monumento	NaN	NaN	3	t	1	27
-503	38	Lago di Monterosi	42.2062426	12.3013347	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	46
-504	38	Chiesa di San Giuseppe	42.1958230	12.3084690	Via Caduti di tutte le guerre, 2/1	Chiesa o edificio di culto	NaN	NaN	4	t	1	35
-505	38	Palazzo del Cardinale	42.1958230	12.3084690	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	45
-506	38	Parrocchia S. Croce	42.1958230	12.3084690	Via Roma, 2	Chiesa o edificio di culto	NaN	NaN	5	t	1	71
-507	39	Isola Conversina	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	2	t	1	24
-508	39	Chiesa Di San Rocco	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	64
-509	39	Castello di Ponte Nepesino	42.2151905	12.3364733	Via Umilta, 5277	Architettura fortificata	NaN	NaN	3	t	1	9
-510	39	Palazzo comunale	42.2428240	12.3455700	Piazza del Comune, 20	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	90
-511	39	Chiesa di San Vito	42.2428240	12.3455700	Via S. Vito, 21	Chiesa o edificio di culto	NaN	NaN	4	t	1	38
-512	39	Palazzo Celsi	42.2428240	12.3455700	Via Garibaldi, 116	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	54
-513	39	La Via Armerina	42.2428240	12.3455700	NaN	Area o parco archeologico	NaN	NaN	3	t	1	64
-514	39	Convento dell' ordine dei canonici  di S. Agostino	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	2
-515	39	Chiesa di S. Pietro Apostolo	42.2428240	12.3455700	Via di S. Pietro	Chiesa o edificio di culto	NaN	NaN	4	t	1	10
-516	39	Necropoli dei Tre Ponti	42.1295380	12.0331730	NaN	Area o parco archeologico	NaN	NaN	3	t	1	84
-517	39	Porta Porciana	42.2418927	12.3495192	NaN	Architettura fortificata	NaN	NaN	2	t	1	0
-518	39	Palazzo Benincasa	42.2428240	12.3455700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	12
-519	39	Chiesa di San Silvestro	42.2428240	12.3455700	Via Garibaldi, 51	Chiesa o edificio di culto	NaN	NaN	3	t	1	19
-520	39	Palazzo della "Corte o Curia" sede del tribunale	42.2428240	12.3455700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	10
-521	39	Biblioteca dell'Istituto superiore di scienze religiose	42.2486690	12.3440930	Via monsignor G. Gori, 11	Biblioteca	+39 0761.556394	info@issr.eu	2	t	1	39
-522	39	Torre dei Valle	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	2	t	1	72
-523	39	Chiesa di S. Maria di Falleri	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	95
-524	39	Porta Nica	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	5	t	1	9
-525	39	Catacomba di Santa Savinilla	42.2443524	12.3399837	Via del Cimitero, 29	Area o parco archeologico	NaN	NaN	1	t	1	83
-526	39	Chiesa di San Biagio	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	29
-527	39	MUSEO CIVICO ARCHEOLOGICO DI NEPI	42.2429920	12.3478650	VIA XIII SETTEMBRE; 1	Museo, galleria e/o raccolta	761570604	museo@comune.nepi.vt.it	2	t	1	52
-528	39	Chiesa di San Giovanni	42.2428240	12.3455700	Piazza S. Giovanni, 7	Chiesa o edificio di culto	NaN	NaN	5	t	1	56
-529	39	Cascata di Cavaterra	42.2407464	12.3453374	Via Porta Romana	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	45
-530	39	Villa  tenuta "Casale" o tenuta "Pazzielli"	42.2428240	12.3455700	Casale	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	47
-531	39	Acquedotto di Nepi	42.2440210	12.3444280	Piazzale della Bottata, 19	Area o parco archeologico	NaN	NaN	4	t	1	65
-532	39	Rocca dei Borgia (o Castello Borgiano)	42.2417390	12.3456400	Via Enrico Galvaligi	Architettura fortificata	NaN	NaN	4	t	1	83
-533	39	Chiesa di San Tolomeo	42.2421242	12.3533679	Via Garibaldi, 165	Chiesa o edificio di culto	NaN	NaN	1	t	1	63
-534	39	Cascata del Picchio	42.2428240	12.3455700	Via Garibaldi	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	30
-535	39	Duomo di S. Maria Assunta e Anastasia	42.2428240	12.3455700	Via Luigi Cadorna, 6	Chiesa o edificio di culto	NaN	NaN	2	t	1	85
-536	39	Chiesa Parrocchiale di S. Croce	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	87
-537	39	Porta Romana	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	3	t	1	95
-538	40	Chiesa di S. Maria della Concezione	42.6928561	11.8163999	Piazza Papa Pio XII, 2	Chiesa o edificio di culto	NaN	NaN	1	t	1	48
-539	40	Chiesa della Madonna delle Grazie	42.6928561	11.8163999	Madonna delle Grazie	Chiesa o edificio di culto	NaN	NaN	2	t	1	75
-540	40	Chiesa della Madonna del Piano	42.8933120	11.5380150	Madonna del Piano	Chiesa o edificio di culto	NaN	NaN	5	t	1	11
-541	40	Castello di Onano	42.6922190	11.8169410	NaN	Architettura fortificata	NaN	NaN	1	t	1	93
-542	41	Convento di Sant'Antonio da Padova	42.1593028	12.1383489	Via Roma, 28	Chiesa o edificio di culto	NaN	NaN	2	t	1	9
-543	41	Parco della Mola	42.0898778	12.2867656	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	27
-544	41	Chiesa di Sant'Anna	42.1593028	12.1383489	Via Sant Anna, 59	Chiesa o edificio di culto	NaN	NaN	4	t	1	66
-545	41	La Faggeta Di Oriolo Romano	42.1613021	12.1520257	Via delle Cerase, 31	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	78
-546	41	Parrocchia San Giorgio Martire	42.1593028	12.1383489	Piazza Claudia, 10	Chiesa o edificio di culto	NaN	NaN	5	t	1	62
-547	41	PALAZZO ALTIERI	41.8964245	12.4798454	PIAZZA UMBERTO PRIMO, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	4
-548	41	Biblioteca comunale	42.1593028	12.1383489	Piazza Claudia	Biblioteca	NaN	NaN	5	t	1	83
-549	41	Parco di Villa Altieri	42.1593028	12.1383489	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	4
-550	41	Palazzo Altieri	42.1590238	12.1380751	Piazza Umberto I; 1	Museo, galleria e/o raccolta	699837145	-	4	t	1	95
-551	42	Palazzo Alberti	42.4605984	12.3856056	via Regina Margherita	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	31
-552	42	Santuario della Santissima Trinità	42.4605984	12.3856056	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	3
-553	42	Palazzo Roberteschi	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	42
-554	42	Chiesa di S. Agostino	42.4605984	12.3856056	Via Giordano Bruno, 11	Chiesa o edificio di culto	NaN	NaN	4	t	1	68
-555	42	Museo archeologico di Orte	42.4605984	12.3856056	Via Gerolamo Savonarola - Orte	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	1
-556	42	Chiesa di San Pietro	42.4605984	12.3856056	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	84
-557	42	Teatro Alberini	42.4722500	12.3845508	Via del Plebiscito	Architettura civile	NaN	NaN	5	t	1	93
-558	42	Palazzo Manni	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	39
-559	42	Biblioteca comunale	42.4605984	12.3856056	Via Vittorio Emanuele 5	Biblioteca	NaN	NaN	1	t	1	52
-560	42	Biblioteca dell'Ente ottava medievale	42.2690694	11.9005853	Via Vittorio Emanuele 5	Biblioteca	+39 0761494948	NaN	4	t	1	48
-561	42	Biblioteca della Curia vescovile	42.4608660	12.3847945	Via Cavour 14	Biblioteca	NaN	NaN	4	t	1	37
-562	42	MUSEO DELLE CONFRATERNITE	42.4574411	12.3869837	PIAZZA DEL POPOLO; SNC	Museo, galleria e/o raccolta	3206280189	robertorondelli@confraterniteorte.it	1	t	1	77
-563	42	Museo comunale di Orte	42.4605984	12.3856056	Via Pie' di Marmo - Orte	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	3
-564	42	Acquedotto Rinascimentale	42.1335903	12.0793680	NaN	Area o parco archeologico	NaN	NaN	5	t	1	78
-565	42	Palazzo dell'Orologio	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	36
-566	42	Museo diocesano	42.4600180	12.3863150	piazza Colonna; 5	Museo, galleria e/o raccolta	0761 404357	museodartesacraorte@gmail.com	5	t	1	21
-567	42	Palazzo Primavera e Magnaterra	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	55
-568	42	Chiesa di San Bernardino	42.4605984	12.3856056	Colle S. Bernardino	Chiesa o edificio di culto	NaN	NaN	4	t	1	31
-569	42	Palazzo Vescovile 	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	30
-570	42	Chiesa di Santa Maria delle Grazie	42.4605984	12.3856056	Via le Grazie, 111	Chiesa o edificio di culto	NaN	NaN	4	t	1	35
-571	42	Torre S. Masseo	42.4605984	12.3856056	S. Masseo	Architettura fortificata	NaN	NaN	5	t	1	24
-572	42	Chiesa di S. Antonio	42.3721886	12.8454886	Via Giuseppe Garibaldi, 221	Chiesa o edificio di culto	NaN	NaN	1	t	1	91
-573	42	Chiesa di Santa Maria di Loreto	42.4605984	12.3856056	Castel Bagnolo	Chiesa o edificio di culto	NaN	NaN	1	t	1	95
-574	42	Palazzo Squarti	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	28
-575	42	Palazzo della Cassa di Risparmio (Sabatini)	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	48
-576	42	Museo civico	42.4605279	12.3870936	via Pie' di marmo	Museo, galleria e/o raccolta	0761 4041	info@comune.orte.vt.it	1	t	1	81
-577	42	Chiesa di San Francesco	42.4605984	12.3856056	81 Piazza Senatore Manni	Chiesa o edificio di culto	NaN	NaN	3	t	1	44
-578	42	Chiesa Cattedrale di S. Maria Assunta	42.4605984	12.3856056	Via Giulio Roscio, 10	Chiesa o edificio di culto	NaN	NaN	5	t	1	94
-579	42	Seripola Porto Fluviale sul Tevere	42.4605984	12.3856056	NaN	Architettura fortificata	NaN	NaN	5	t	1	99
-580	42	Chiesa di San Biagio	42.4605984	12.3856056	Via Novara, 531	Chiesa o edificio di culto	NaN	NaN	2	t	1	45
-581	42	Torre Zelli	42.4605984	12.3856056	NaN	Architettura fortificata	NaN	NaN	5	t	1	62
-582	42	Orte Sotterranea	42.4603608	12.3860395	Via G. Matteotti, 45	Architettura fortificata	NaN	NaN	3	t	1	38
-583	42	Piazza della Libertà	42.4605984	12.3856056	NaN	Monumento	NaN	NaN	2	t	1	84
-584	42	MUSEO D'ARTE SACRA DI ORTE DI IMPORTANZA DIOCESANA	42.4605984	12.3856056	VIA GIULIO ROSCIO, 10	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	48
-585	42	Chiesa di San Silvestro	42.4605984	12.3856056	Via G. Matteotti, 781	Chiesa o edificio di culto	NaN	NaN	4	t	1	47
-586	42	Centro Storico di Orte	42.4599890	12.3862190	NaN	Architettura fortificata	NaN	NaN	3	t	1	22
-587	42	MUSEO DELLE CONFRATERNITE	42.4574411	12.3869837	PIAZZA DEL POPOLO; SNC	Museo, Galleria e/o raccolta	3206280189	robertorondelli@confraterniteorte.it	2	t	1	78
-588	43	Chiesa di San Bernardino da Siena	42.5179320	11.8282734	Piazza Guglielmo Marconi, 11	Chiesa o edificio di culto	NaN	NaN	1	t	1	43
-590	43	Portico Del Palazzo Comunale	42.5179320	11.8282734	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	74
-591	44	Chiesa di S. Maria del Giglio	42.7571602	11.8302614	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	22
-592	44	Oratorio di S. Antonio	42.7571602	11.8302614	Via S. Cassiano, 15	Chiesa o edificio di culto	NaN	NaN	1	t	1	12
-593	44	Palazzo di Guido Ascanio Sforza	42.7571602	11.8302614	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	54
-594	44	Museo della civiltà contadina di Proceno	42.7571602	11.8302614	Piazza della Libertà - Proceno	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	2
-595	44	Castello di Proceno (o Rocca Medievale-Castello della Contessa Matilde)	42.7571602	11.8302614	Corso Regina Margherita, 155	Architettura fortificata	NaN	NaN	4	t	1	66
-596	44	Chiesa di S. Agnese	42.7571602	11.8302614	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	20
-597	44	Chiesa del SS. Salvatore	42.7571602	11.8302614	Piazza S. Salvatore, 1	Chiesa o edificio di culto	NaN	NaN	4	t	1	68
-598	44	Chiesa di S. Martino	42.7571602	11.8302614	Corso Regina Margherita, 21	Chiesa o edificio di culto	NaN	NaN	1	t	1	9
-599	44	Chiesa di S. Maria della Neve	42.7571602	11.8302614	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	29
-600	45	Complesso Villa Lina (Villa Igliori)	42.2902415	12.2138064	Via Magenta, 65	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	1
-601	45	Chiesa di Santa Maria della Provvidenza	42.2902415	12.2138064	Via Borgo di Sopra, 71	Chiesa o edificio di culto	NaN	NaN	2	t	1	9
-602	45	Fontana degli Unicorni	42.2902415	12.2138064	Piazza Principe di Napoli, 18	Monumento	NaN	NaN	5	t	1	82
-603	45	Chiesa di Santa Maria della Pace e Sant’ Andrea	42.2902415	12.2138064	Via Cassia Cimina, 2	Chiesa o edificio di culto	NaN	NaN	5	t	1	43
-604	45	Biblioteca dell'Istituzione Romolo Bellatreccia	42.2911340	12.2160390	Corso Umberto I 26	Biblioteca	+39 0761627537	bibliotecaronciglione@yahoo.it	5	t	1	98
-605	45	Chiesa di Santa Maria del Popolo	42.2902415	12.2138064	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	17
-606	45	Ponte Ferroviario di Ronciglione	42.2868520	12.2158080	Via Roma	Architettura civile	NaN	NaN	1	t	1	0
-607	45	Chiesa Di Santa Maria Incoronata E Santa Lucia Vergine Martire	42.2902415	12.2138064	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	16
-608	45	Castello Farnese	42.0194358	12.3921506	NaN	Architettura fortificata	NaN	NaN	2	t	1	19
-609	45	Chiesa Sant'Eusebio	42.2902415	12.2138064	Via Sant Eusebio	Chiesa o edificio di culto	NaN	NaN	2	t	1	37
-610	45	Casino di caccia dei Farnese	42.2902415	12.2138064	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	24
-611	45	Castello di Ronciglione	42.3026677	12.1843077	NaN	Architettura fortificata	NaN	NaN	1	t	1	22
-612	45	Castello della Rovere	42.2902415	12.2138064	NaN	Architettura fortificata	NaN	NaN	2	t	1	95
-613	45	Duomo (Santi Pietro e Caterina)	42.2917590	12.2176823	Via del Duomo di Sotto, 1	Chiesa o edificio di culto	NaN	NaN	1	t	1	7
-614	45	MUSEO DELLE FERRIERE VECCHIE	41.8734690	12.5015140	VIA DELLE CARTIERE, 	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	40
-615	45	Lago di Vico	42.3204984	12.1748874	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	59
-616	46	Chiesa San Lorenzo Martire	42.6867300	11.9066530	Piazza Europa, 10	Chiesa o edificio di culto	NaN	NaN	1	t	1	42
-617	46	Piazza Europa	42.6867300	11.9066530	Piazza Europa	Monumento	NaN	NaN	4	t	1	77
-618	46	Chiesa della Madonna di Torano	42.6867300	11.9066530	Torano	Chiesa o edificio di culto	NaN	NaN	4	t	1	26
-619	46	Chiesa di S. Giovanni in Val di Lago	42.6539720	11.9063901	Val di Lago	Chiesa o edificio di culto	NaN	NaN	3	t	1	41
-620	46	Chiesa di S. Maria Assunta	42.6867300	11.9066530	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	89
-621	47	Palazzo Doria Pamphilj	41.8973329	12.4812657	Via Andrea Doria, 20	Architettura fortificata	NaN	NaN	5	t	1	63
-622	47	MUSEO DELL'ABATE	42.3693457	12.1250064	piazza dell'oratorio	Museo, galleria e/o raccolta	0761 379803	NaN	3	t	1	68
-623	47	Abbazia di San Martino al Cimino	42.3676010	12.1282217	Piazza dell'Oratorio, 2/A	Chiesa o edificio di culto	NaN	NaN	3	t	1	58
-624	48	Torre Di Santa Maria Di Luco	42.4187606	12.2343075	Via della Torre	Architettura fortificata	NaN	NaN	5	t	1	41
-625	48	Chiesa di Sant'Agostino	42.4187606	12.2343075	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	87
-626	48	Chiesa della Misericordia	42.4187606	12.2343075	Vicolo della Misericordia, 161	Chiesa o edificio di culto	NaN	NaN	5	t	1	25
-627	48	Chiesa di Sant'Antonio	42.4187606	12.2343075	Via Santa Maria, 151	Chiesa o edificio di culto	NaN	NaN	5	t	1	15
-628	48	Monte Cimino	42.4077999	12.2012234	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	57
-629	48	Chiesa di Sant'Antonio Abate di Chia	42.4187606	12.2343075	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	84
-630	48	Chiesa di Sant'Eutizio	42.4187606	12.2343075	Via Andrea Splendiano Pennazzi	Chiesa o edificio di culto	NaN	NaN	3	t	1	39
-631	48	Chiesa di Santa Maria delle Grazie	42.4187606	12.2343075	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	65
-632	48	Chiesa di San Giorgio	42.4187606	12.2343075	Frazione Terracino	Chiesa o edificio di culto	NaN	NaN	2	t	1	2
-633	48	Monumento naturale Corviano	42.4768241	12.1962075	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	25
-634	48	Castello Orsini	42.4197145	12.2352051	Via della Rocca, 461	Architettura fortificata	NaN	NaN	2	t	1	84
-635	48	Biblioteca dei padri passionisti	42.4235631	12.2766627	Via del Convento	Biblioteca	+39 0761759057	NaN	5	t	1	53
-636	48	Biblioteca comunale	42.4187606	12.2343075	Via Roma 12	Biblioteca	NaN	NaN	1	t	1	66
-637	48	Palazzo Chigi Albani	42.4193483	12.2323973	Via Papacqua, 471	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	84
-638	48	Complesso architettonico e paesaggisticoTorre di Chia	42.4187606	12.2343075	Strada Provinciale 151 Ortana	Area o parco archeologico	NaN	NaN	4	t	1	41
-639	48	Centro Storico Rione Rocca	42.4187606	12.2343075	NaN	Architettura fortificata	NaN	NaN	2	t	1	7
-640	48	Fonte Papacqua	42.4187606	12.2343075	NaN	Monumento	NaN	NaN	3	t	1	48
-641	48	Chiesa di San Nicola di Bari	42.4187606	12.2343075	Piazza Vittorio Emanuele II 26	Chiesa o edificio di culto	NaN	NaN	1	t	1	70
-642	49	Chiesa di San Francesco	42.2470230	12.2150670	Piazza S. Francesco	Chiesa o edificio di culto	NaN	NaN	2	t	1	17
-643	49	Chiesa di Santa Maria del Monte	42.2470230	12.2150670	SR2	Chiesa o edificio di culto	NaN	NaN	1	t	1	37
-644	49	Porta Morone	42.2428103	12.2218014	Via Giuseppe Garibaldi	Architettura fortificata	NaN	NaN	5	t	1	34
-645	49	Chiesa Madonna del Parto	42.2470230	12.2150670	Piazza Sacello, 39	Chiesa o edificio di culto	NaN	NaN	1	t	1	90
-646	49	Chiesa di Santa Croce	42.2470230	12.2150670	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	60
-647	49	Piazza Del Comune	42.2470230	12.2150670	NaN	Monumento	NaN	NaN	1	t	1	51
-648	49	Saturno a Cavallo	42.2470230	12.2150670	NaN	Monumento	NaN	NaN	2	t	1	60
-649	49	Sentiero Natura Il Grande Leccio	42.2470230	12.2150670	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	61
-650	49	Museo del patrimonium	42.2409277	12.2245800	Via di Porta Vecchia - Sutri	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	65
-651	49	Chiesa di San Rocco	42.2470230	12.2150670	Via Tauro Statilio, 11	Chiesa o edificio di culto	NaN	NaN	4	t	1	40
-652	49	Torre San Paolo	42.2470230	12.2150670	SR2	Architettura fortificata	NaN	NaN	5	t	1	97
-653	49	Biblioteca comunale	42.2470230	12.2150670	Piazza S. Rocco 4	Biblioteca	NaN	NaN	4	t	1	96
-654	49	Cappella di Santa Maria del Tempio o Cappella dei Cavalieri di Malta	42.2470230	12.2150670	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	25
-655	49	Chiesa della Santissima Concezione	42.2470230	12.2150670	Via Giuseppe Garibaldi, 1	Chiesa o edificio di culto	NaN	NaN	3	t	1	26
-656	49	Anfiteatro	42.2495074	12.2190389	Via Cassia km 49.600	Architettura civile	NaN	NaN	5	t	1	72
-657	49	Mitreo di Sutri	42.2471680	12.2156030	via Cassia km 50,00 - Sutri	Monumento	NaN	NaN	5	t	1	33
-658	49	Museo Palazzo Doebbing	42.1016550	12.1736760	Piazza Del Duomo	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	42
-659	49	La Torre dell'Orologio	42.2470230	12.2150670	Piazza del Comune	Architettura fortificata	NaN	NaN	1	t	1	16
-660	49	MUSEO DEL PATRIMONIUM	42.2410805	12.2245358	VIA DI PORTAVECCHIA 79	Museo, galleria e/o raccolta	761600867	biblio@comune.sutri.vt.it	5	t	1	32
-661	49	Fontana dei Delfini	41.9133459	12.4782735	NaN	Monumento	NaN	NaN	2	t	1	36
-662	49	ANFITEATRO ROMANO	42.2470230	12.2150670	VIA CASSIA, KM 49,00	Monumento	NaN	NaN	5	t	1	97
-663	49	Area archeologica di Sutri	42.2470230	12.2150670	via Cassia km 50,00 - Sutri	Area o parco archeologico	NaN	NaN	5	t	1	22
-664	49	Atrio Comunale	42.2470230	12.2150670	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	77
-665	49	Porta Franceta	42.2470230	12.2150670	NaN	Architettura fortificata	NaN	NaN	2	t	1	78
-666	49	Villa Savorelli	42.2393174	12.2269327	SR2	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	37
-667	49	Castello detto di Carlo Magno	42.2470230	12.2150670	Colle Savorelli	Architettura fortificata	NaN	NaN	2	t	1	55
-668	49	Antico Lavatoio	42.2470230	12.2150670	Piazza Dell'Assemblea, 9	Monumento	NaN	NaN	1	t	1	31
-669	49	Chiesa di San Silvestro Papa	42.2470230	12.2150670	Piazza della Rocca	Chiesa o edificio di culto	NaN	NaN	5	t	1	30
-670	49	Anfiteatro Romano	42.2439027	12.2185381	Via Cassia; Km 49	Museo, galleria e/o raccolta	-	-	5	t	1	74
-671	49	Concattedrale di S. Maria Assunta in Cielo	42.2470230	12.2150670	Piazza Del Duomo, 1	Chiesa o edificio di culto	NaN	NaN	4	t	1	45
-672	50	Biblioteca comunale Dante Alighieri	42.2524377	11.7557965	Via Umberto I  5	Biblioteca	+39 0766849224	comunetarquinia@tarquinia.net	1	t	1	99
-673	50	Chiesa e Convento di San Francesco	42.2532394	11.7591747	Via di Porta Tarquinia, 24	Chiesa o edificio di culto	NaN	NaN	4	t	1	64
-674	50	Chiesa di San Giacomo	42.2532394	11.7591747	Via S. Giacomo	Chiesa o edificio di culto	NaN	NaN	5	t	1	16
-675	50	Archivio Storico	42.2532394	11.7591747	Via dei Granari	Archivio di Stato	NaN	NaN	1	t	1	21
-676	50	Impianto delle Saline	42.2532394	11.7591747	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	50
-677	50	Porto Clementino	42.2125967	11.7106350	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	89
-678	50	Fontana monumentale	42.2532394	11.7591747	NaN	Monumento	NaN	NaN	1	t	1	100
-679	50	Torre del Seminario e Casa Medievale	42.2532394	11.7591747	via di Porta Castello   1-5	Architettura fortificata	NaN	NaN	5	t	1	58
-680	50	Fontana Nova	42.2532394	11.7591747	Via di Fontana Nuova	Monumento	NaN	NaN	4	t	1	65
-681	50	Torre di S. Spirito	42.2532394	11.7591747	via delle Torri,55	Architettura fortificata	NaN	NaN	3	t	1	17
-682	50	MUSEO DELLA CERAMICA D'USO A CORNETO - SOC.TARQUINIENSE, ARTE E STORIA	42.2532394	11.7591747	VIA DELLE TORRI, 31	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	33
-683	50	Biblioteca della Società tarquiniense di arte e storia	42.2542133	11.7572653	Via delle Torri 29-33	Biblioteca	+39 0766858194	NaN	2	t	1	47
-684	50	MUSEO ARCHEOLOGICO NAZIONALE	42.4214931	11.8705543	Largo Mario Moretti; 1	Museo, galleria e/o raccolta	0761 436209	sba-em@beniculturali.it	1	t	1	74
-685	50	Chiesa di Santa Maria di Castello (o di Valverde)	42.2532394	11.7591747	Via Valverde, 23	Chiesa o edificio di culto	NaN	NaN	3	t	1	10
-686	50	Villa Bruschi Falgari	42.2409784	11.7617258	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	8
-687	50	Duomo dei Santi Margherita e Martino	42.2532394	11.7591747	Piazza del Duomo, 4	Chiesa o edificio di culto	NaN	NaN	5	t	1	44
-688	50	Chiesa del Salvatore	42.2532394	11.7591747	Via S. Giacomo, 57	Chiesa o edificio di culto	NaN	NaN	2	t	1	16
-689	50	Chiesa di S. Maria del Suffragio	42.2532394	11.7591747	Piazza Giacomo Matteotti	Chiesa o edificio di culto	NaN	NaN	4	t	1	41
-690	50	MUSEO DIOCESANO DI CIVITAVECCHIA - TARQUINIA	42.2526729	11.7565463	VIA ROMA; 11	Museo, galleria e/o raccolta	766840843	insolera.giovanni@libero.it	3	t	1	57
-691	50	Ara della Regina. Civita	42.2588160	11.8015510	. - Tarquinia	Area o parco archeologico	NaN	NaN	3	t	1	32
-692	50	Chiesa dell' Annunziata	42.2532394	11.7591747	Via S. Giacomo, 3	Chiesa o edificio di culto	NaN	NaN	1	t	1	99
-693	50	Biblioteca ex Convento S. Marco	42.2555420	11.7545300	Via dei Granari 30 - presso Archivio storico comunale	Biblioteca	+39 0766858073	NaN	1	t	1	12
-694	50	NECROPOLI DI MONTEROZZI	42.2503180	11.7719400	VIA RIPAGRETTA, 68	Area o parco archeologico	NaN	NaN	5	t	1	66
-695	50	Chiesa di S. Martino il Vecchio	42.2532394	11.7591747	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	79
-696	50	Porta Nuova	42.2532394	11.7591747	NaN	Architettura fortificata	NaN	NaN	1	t	1	84
-697	50	Porta Tarquinia	42.2543727	11.7591896	NaN	Architettura fortificata	NaN	NaN	3	t	1	46
-698	50	Torre Barucci	42.2552179	11.7554946	Piazza S. Stefano	Architettura fortificata	NaN	NaN	3	t	1	2
-699	50	Torre Presso S. Maria di Castello	42.2532394	11.7591747	NaN	Architettura fortificata	NaN	NaN	4	t	1	7
-700	50	Palazzo dei Priori	42.2532394	11.7591747	via delle Torri 29-33	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	45
-701	50	Necropoli	42.2541846	11.7575684	Via Ripagretta; snc	Museo, galleria e/o raccolta	0766 856308	-	3	t	1	100
-702	50	Chiesa dei SS. Giovanni Battista e Antonio Abate	42.2532394	11.7591747	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	6
-703	50	Etruscopolis	42.2532394	11.7591747	Vicolo delle Pietrare	Museo, galleria e/o raccolta	NaN	NaN	2	t	1	15
-704	50	Chiesa di S. Antonio	42.2532394	11.7591747	Via XX Settembre, 75	Chiesa o edificio di culto	NaN	NaN	4	t	1	63
-705	50	Torre Draghi	42.2546748	11.7562891	via delle Torri ang. P. Verdi	Architettura fortificata	NaN	NaN	5	t	1	23
-706	50	Chiesa di S. Giovanni Gerosolimitano	42.2532394	11.7591747	Via Roma, 2	Chiesa o edificio di culto	NaN	NaN	2	t	1	45
-707	50	Palazzo Comunale	42.2532394	11.7591747	Piazza Giacomo Matteotti, 13	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	21
-708	50	Centro Storico Di Tarquinia	42.2521745	11.7583816	NaN	Architettura fortificata	NaN	NaN	5	t	1	93
-709	50	Palazzo Vitelleschi	42.2538184	11.7557250	Corso Vittorio Emanuele	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	24
-710	50	Porta di città, o Torrione della Contessa Matilde	42.2532394	11.7591747	Via Porta Castello, 52	Architettura fortificata	NaN	NaN	5	t	1	78
-711	50	Chiesa di San Giovanni	42.2532394	11.7591747	Via Roma, 2	Chiesa o edificio di culto	NaN	NaN	1	t	1	44
-712	50	Chiesa di San Leonardo	42.2532394	11.7591747	P.za Trento e Trieste, 7	Chiesa o edificio di culto	NaN	NaN	2	t	1	15
-713	50	COLLEZIONE GIUSEPPE CULTRERA - MUSEO DELLA CERAMICA; DELLA SOCIETA' TARQUINIENSE; D'ARTE E STORIA	42.2542133	11.7572653	VIA DELLE TORRI; 31	Museo, galleria e/o raccolta	766858194	tarquiniense@gmail.com	3	t	1	98
-714	50	Chiesa della Santissima Trinità	42.2532394	11.7591747	Via Alberata Dante Alighieri, 27	Chiesa o edificio di culto	NaN	NaN	3	t	1	83
-715	50	Palazzo Castelleschi	42.2544485	11.7574653	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	43
-716	50	Torre Cialdi	42.2532394	11.7591747	via della Ripa 	Architettura fortificata	NaN	NaN	5	t	1	11
-717	50	Torre Mozza	42.2532394	11.7591747	via delle Torri,45	Architettura fortificata	NaN	NaN	4	t	1	52
-718	50	Palazzo Sacchetti	42.2532394	11.7591747	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	22
-719	50	Torre del Magistrato	42.2543779	11.7575030	Via S. Pancrazio, 9	Architettura fortificata	NaN	NaN	2	t	1	13
-720	50	Chiesa di San Pancrazio	42.2532394	11.7591747	Via delle Torri, 15	Chiesa o edificio di culto	NaN	NaN	5	t	1	97
-721	50	Cencelle	42.1952998	11.8580819	NaN	Architettura fortificata	NaN	NaN	2	t	1	29
-722	50	Necropoli di Tarquinia	42.1948646	11.8578725	Via Ripagretta	Area o parco archeologico	NaN	NaN	1	t	1	28
-723	51	Ruderi Castello Del Rivellino	42.4202141	11.8702611	NaN	Architettura fortificata	NaN	NaN	3	t	1	57
-724	51	Arco Di Poggio Fiorentino	42.4202141	11.8702611	NaN	Architettura fortificata	NaN	NaN	1	t	1	50
-725	51	Cattedrale di San Giacomo	42.4202141	11.8702611	Piazza Domenico Bastianini	Chiesa o edificio di culto	NaN	NaN	1	t	1	72
-726	51	Chiesa Di San Giuseppe	42.4202141	11.8702611	Largo Cavour	Chiesa o edificio di culto	NaN	NaN	2	t	1	10
-727	51	Palazzo Fani	42.4202141	11.8702611	Via Pozzo Bianco, 131	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	72
-728	51	Area Archeologica Colle Di San Pietro	42.4202141	11.8702611	Str. S. Pietro	Area o parco archeologico	NaN	NaN	4	t	1	92
-729	51	Teatro Comunale Il Rivellino	42.4364920	11.8571108	Largo del Teatro	Architettura civile	NaN	NaN	1	t	1	94
-730	51	MUSEO ARCHEOLOGICO NAZIONALE	42.4202141	11.8702611	LARGO MARIO MORETTI, 1	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	78
-731	51	Necropoli Pian di Mola	42.4243520	11.8862820	Necropoli_di_Pian_di_Mola	Area o parco archeologico	NaN	NaN	1	t	1	79
-732	51	Casa Museo Pietro Moschini	42.4202141	11.8702611	Via della Scrofa, 8	Museo, galleria e/o raccolta	NaN	NaN	3	t	1	14
-733	51	Biblioteca comunale	42.4202141	11.8702611	Piazza F. Basile 6	Biblioteca	NaN	NaN	5	t	1	24
-734	51	Fontana delle sette cannelle	42.6341662	11.6681677	NaN	Monumento	NaN	NaN	2	t	1	5
-735	51	Chiesa Di San Giovanni Decollato	42.4202141	11.8702611	Piazza Giacomo Matteotti	Chiesa o edificio di culto	NaN	NaN	2	t	1	42
-736	51	Chiesa di San Marco	42.4202141	11.8702611	Largo Bixio	Chiesa o edificio di culto	NaN	NaN	1	t	1	28
-737	51	Antica Via Clodia	42.4202141	11.8702611	Via del Comune, 41	Area o parco archeologico	NaN	NaN	2	t	1	40
-738	51	Palazzo Quaglia	42.4202141	11.8702611	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	57
-739	51	CHIESA SAN PIETRO	42.4202141	11.8702611	STRADA SAN PIETRO, 1	Chiesa o edificio di culto	NaN	NaN	5	t	1	85
-740	51	Chiesa di Sant'Agostino	42.4202141	11.8702611	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	89
-741	51	Chiesa di Santa Maria del Riposo	42.4202141	11.8702611	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	19
-742	51	"Necropoli ""Madonna dell'Olivo"""	42.4185731	11.8703089	-	Museo, galleria e/o raccolta	-	sba-em@beniculturali.it	3	t	1	7
-743	51	Ruderi  dell'ex Abbazia di S. Giusto	42.4202141	11.8702611	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	84
-744	51	Mura Castellane	42.4202141	11.8702611	NaN	Architettura fortificata	NaN	NaN	2	t	1	26
-745	51	RACCOLTA DI MONTEBELLO DEL MAESTRO GIUSEPPE CESETTI	42.3550533	11.8011922	CENTRO STRADA MONTEBELLO; 3	Museo, galleria e/o raccolta	761442695	-	5	t	1	93
-746	51	Terme Romane della Regina (Bagni della Regina)	42.4202141	11.8702611	SP12	Area o parco archeologico	NaN	NaN	1	t	1	90
-747	51	CHIESA DI SANTA MARIA MAGGIORE	42.4202141	11.8702611	STRADA SANTA MARIA, 	Chiesa o edificio di culto	NaN	NaN	4	t	1	83
-748	51	Chiesa San Pietro	42.4185731	11.8703089	-	Museo, galleria e/o raccolta	-	-	1	t	1	68
-749	51	Raccolta di Montebello del Maestro Giuseppe Cesetti	42.4202141	11.8702611	Centro strada Montebello - Tuscania	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	72
-750	51	NECROPOLI MADONNA DELL'OLIVO	42.4065088	11.8744394	VIA MADONNA DELL'OLIVO SNC, 1	Area o parco archeologico	NaN	NaN	5	t	1	77
-751	51	Necropoli della Peschiera e Tomba a Dado	42.4202141	11.8702611	Str. Le Carceri	Area o parco archeologico	NaN	NaN	1	t	1	6
-752	51	Parco Torre di Lavello	42.4161568	11.8729145	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	65
-753	51	Chiesa Santa Maria della Rosa	42.4202141	11.8702611	Via XII Settembre	Chiesa o edificio di culto	NaN	NaN	5	t	1	20
-754	51	Fontana di Montascide	42.4202141	11.8702611	Piazza Giuseppe Mazzini, 71	Monumento	NaN	NaN	2	t	1	9
-755	51	Spazio teatrale Supercinema	42.4384570	11.8875923	Via Garibaldi 1	Architettura civile	NaN	NaN	4	t	1	57
-756	52	Chiesa di Santa Croce	42.5684597	11.8187556	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	44
-757	52	MUSEO DELLA PREISTORIA DELLA TUSCIA E DELLA ROCCA FARNESE	42.5685644	11.8192069	piazza della Vittoria; 11	Museo, galleria e/o raccolta	761420018	museo.valentano@alice.it	4	t	1	64
-758	52	Lago di Mezzano	42.6117155	11.7697165	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	26
-759	52	Palazzo Vitozzi	42.5686870	11.8184229	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	53
-760	52	Chiesa di Santa Maria dell' Eschio	42.5684597	11.8187556	Eschio	Chiesa o edificio di culto	NaN	NaN	5	t	1	48
-761	52	Chiesa della Madonna del Monte	42.5684597	11.8187556	Madonna del Monte	Chiesa o edificio di culto	NaN	NaN	2	t	1	19
-762	52	Centro Storico di Valentano	42.5664350	11.8192040	NaN	Architettura fortificata	NaN	NaN	5	t	1	3
-763	52	Porta di S. Martino	42.5684597	11.8187556	NaN	Architettura fortificata	NaN	NaN	4	t	1	78
-764	52	Chiesa di S. Maria	42.5684597	11.8187556	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	11
-765	52	Porta Urbana-Porta Magenta	42.5684597	11.8187556	Piazza Cavour, 11	Architettura fortificata	NaN	NaN	1	t	1	15
-766	52	Rocca Farnese	42.5509834	11.9128378	NaN	Architettura fortificata	NaN	NaN	3	t	1	71
-767	52	Biblioteca comunale	42.5684597	11.8187556	Piazza della Vittoria 9	Biblioteca	NaN	NaN	3	t	1	65
-768	52	Palazzo Comunale	42.5684597	11.8187556	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	22
-769	52	Chiesa di San Giovanni Apostolo ed Evangelista 	42.5684597	11.8187556	Piazza della Vittoria, 61	Chiesa o edificio di culto	NaN	NaN	2	t	1	31
-770	52	Santuario della Madonna della Salute	42.5684597	11.8187556	VIa del Ritiro	Chiesa o edificio di culto	NaN	NaN	2	t	1	42
-771	53	Chiesa SS. Crocefisso	41.7907359	12.4696439	Strada Provinciale Valleranese	Chiesa o edificio di culto	NaN	NaN	1	t	1	31
-772	53	Grotte dei Quadratini e dei Finestroni	41.7907359	12.4696439	NaN	Area o parco archeologico	NaN	NaN	5	t	1	59
-773	53	Eremo di San Salvatore	41.7907359	12.4696439	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	96
-774	53	Santuario Mariano: Madonna della Pieve	41.7907359	12.4696439	Via della Pieve, 421	Chiesa o edificio di culto	NaN	NaN	5	t	1	69
-775	53	Santuario Mariano: Chiesa della Madonna del Ruscello	41.7907359	12.4696439	Via Salita	Chiesa o edificio di culto	NaN	NaN	1	t	1	9
-776	53	Grotte di San Lorenzo	42.2022300	12.6721370	NaN	Area o parco archeologico	NaN	NaN	2	t	1	86
-777	53	Biblioteca comunale Corrado Alvaro	42.3813915	12.2339467	via del Torrione	Biblioteca	+39 0761753764	biblioteca.vallerano@yahoo.it	5	t	1	7
-778	53	Teatro Comunale	41.7907359	12.4696439	Piazza della Repubblica	Architettura civile	NaN	NaN	1	t	1	92
-779	53	Grotte di San Leonardo	41.7907359	12.4696439	NaN	Area o parco archeologico	NaN	NaN	1	t	1	16
-780	53	Chiesa San Vittore	41.7907359	12.4696439	Piazza San Vittore	Chiesa o edificio di culto	NaN	NaN	3	t	1	97
-781	54	Lago Vadimone	42.4841106	12.3232080	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	0
-782	54	Chiesa di San Silvestro	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	65
-783	54	Cunicolo Tra i Fossi Canale e Tre Fontane	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	1	t	1	37
-784	54	Zona Archeologica di Palazzolo	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	4	t	1	49
-785	54	Diga Poligonale	42.0392830	12.7979650	NaN	Area o parco archeologico	NaN	NaN	4	t	1	5
-786	54	Palazzo Celestini (Municipale)	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	42
-787	54	Castello Orsini (o Castello di Vasanello)	42.4177370	12.3466190	Piazza della Repubblica	Architettura fortificata	NaN	NaN	1	t	1	13
-788	54	Chiesa di San Salvatore	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	47
-789	54	Cella di Santa Rosa	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	5	t	1	7
-790	54	Chiesa della Madonna del Rifugio	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	44
-791	54	Necropoli dei Morticelli	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	1	t	1	42
-792	54	Chiesa di S. Maria della Stella	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	52
-793	54	La Torricella	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	3	t	1	98
-794	54	Ex chiesa di S. Michele Arcangelo	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	26
-795	54	Palazzo Mercuri Pozzaglia	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	80
-796	54	Cappella di San Lanno	42.4157452	12.3478512	Via S. Lanno, 851	Chiesa o edificio di culto	NaN	NaN	2	t	1	61
-797	54	Museo della ceramica di Vasanello	42.4144251	12.3464168	San Salvatore - Vasanello	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	96
-798	54	MUSEO DELLA CERAMICA DI VASANELLO	42.4183899	12.3469114	VIA S. SALVATORE; 19	Museo, galleria e/o raccolta	7614089302	tamarapatilli@libero.it	2	t	1	100
-799	54	Cappella della Madonna delle Grazie	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	81
-800	54	Biblioteca comunale Elisabetta e Francesco Froio	42.4183899	12.3469114	Via San Salvatore 19	Biblioteca	+39 0761409055	biblioteca@vasanellovt.info	1	t	1	88
-801	54	Palazzo Ancellotti	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	47
-802	54	Palazzo Del Modio - Mariani	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	57
-803	54	Palazzo dell'Orologio	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	2
-804	54	Cattedrale di S. Maria Assunta	42.4144251	12.3464168	Piazza della Repubblica, 291	Chiesa o edificio di culto	NaN	NaN	3	t	1	100
-805	54	Fornace Aretina	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	3	t	1	0
-806	54	Ex chiesa di S. Sebastiano	42.4144251	12.3464168	"Arghetto"	Chiesa o edificio di culto	NaN	NaN	4	t	1	33
-807	55	Chiesa Santa Maria Assunta	41.8823764	12.5636788	Piazza S. Maria, 12	Chiesa o edificio di culto	NaN	NaN	3	t	1	86
-808	55	 "La Rocca dei Santacroce" 	42.2167570	12.0952017	NaN	Architettura fortificata	NaN	NaN	4	t	1	66
-809	55	Biblioteca comunale	42.2167570	12.0952017	Via XXV Aprile, 10	Biblioteca	NaN	NaN	2	t	1	48
-810	55	Rocca di Vejano (o Castello di Vejano, Rocca Altieri)	42.2167570	12.0952017	Piazza Santa Maria	Architettura fortificata	NaN	NaN	5	t	1	9
-811	56	Chiesa di San Francesco	42.3205336	12.0575000	L.go S. Francesco, 11	Chiesa o edificio di culto	NaN	NaN	1	t	1	79
-812	56	Necropoli rupestre di Norchia	42.3386900	11.9454300	S.S. 1 Aurelia bis, tra Vetralla e Monte Romano - Vetralla	Area o parco archeologico	NaN	NaN	1	t	1	47
-813	56	Biblioteca comunale Alessandro Pistella	42.3183968	12.0586296	Via Brugiotti 1	Biblioteca	+39 0761461272	biblioteca.comunale@comune.vetralla.vt.it	5	t	1	99
-814	56	Museo Della Città e Del Territorio	42.3226187	12.0506456	Via di Porta Marchetta, 2	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	38
-815	56	Chiesa Parrocchiale di S. Maria del Soccorso	42.3205336	12.0575000	Piazza S. Maria del Soccorso, 1	Chiesa o edificio di culto	NaN	NaN	2	t	1	12
-816	56	Palazzo Comunale di Vetralla	42.3205336	12.0575000	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	11
-817	56	Tempio di Demetra	42.3205336	12.0575000	NaN	Area o parco archeologico	NaN	NaN	1	t	1	29
-818	56	Castello di Norchia	42.3205336	12.0575000	Norchia	Architettura fortificata	NaN	NaN	4	t	1	36
-819	56	Chiesa di S. Maria in foro Cassio	42.3205336	12.0575000	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	68
-820	56	Biblioteca Beato Lorenzo Salvi	42.3208563	12.0532440	Convento S. Angelo	Biblioteca	+39 0761471285	NaN	5	t	1	52
-821	56	Grotta Porcina	42.2944985	12.0025033	S.S. Cassia bivio Vetralla - Vetralla	Area o parco archeologico	NaN	NaN	2	t	1	79
-822	56	Complesso Santa Maria di Foro Cassio	42.3297460	12.0662080	Strada Foro Cassio - Vetralla	Monumento	NaN	NaN	4	t	1	66
-823	56	Palazzo Franciosoni	42.3205336	12.0575000	Via Porfirio Fantozzini, 181	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	58
-824	56	Castello della Rocca (o Castello Vinci)	42.3205336	12.0575000	Via Castello Vinci, 11/13	Architettura fortificata	NaN	NaN	3	t	1	6
-825	56	Santuario di Demetra a Macchia delle Valli	42.3205336	12.0575000	Strada Provinciale - Vetralla	Area o parco archeologico	NaN	NaN	3	t	1	7
-826	56	Duomo di Vetralla	42.3205336	12.0575000	Via Cassia, 175	Chiesa o edificio di culto	NaN	NaN	4	t	1	99
-827	57	Biblioteca comunale	42.3838260	12.2767660	Piazza della Repubblica, 4	Biblioteca	NaN	NaN	1	t	1	8
-828	57	I Connutti	42.3838260	12.2767660	Piazza della Repubblica	Area o parco archeologico	NaN	NaN	3	t	1	74
-829	57	Chiesa di San Sebastiano Martire di Vignanello	42.3838260	12.2767660	Via della Mola, 5	Chiesa o edificio di culto	NaN	NaN	2	t	1	81
-830	57	Chiesa della Madonna del Pianto	42.3851892	12.2804540	Via Valle Maggiore, 91	Chiesa o edificio di culto	NaN	NaN	4	t	1	87
-831	57	Porta del Vignola	42.3838260	12.2767660	NaN	Architettura fortificata	NaN	NaN	4	t	1	97
-832	57	Castello Ruspoli (o Palazzo Rispoli)	42.3838260	12.2767660	Via dell'Uliveto, 200	Architettura fortificata	NaN	NaN	2	t	1	98
-833	57	Chiesa di San Giovanni Decollato	42.3838260	12.2767660	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	97
-834	57	Chiesa Collegiata Santa Maria della Presentazione	42.5685120	11.8188300	Corso Giacomo Matteotti	Chiesa o edificio di culto	NaN	NaN	5	t	1	82
-835	57	Fontana Barocca	42.3838260	12.2767660	Corso Giuseppe Garibaldi, 41	Monumento	NaN	NaN	2	t	1	43
-836	58	Sala capitolare Ven. Confraternita del SS. Sacramento e S. Rosario	42.4168441	12.1051148	Piazza Duomo - Viterbo	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	7
-837	58	Necropoli rupestre di Castel d’Asso	42.3963770	12.0208830	Indicazioni dalla S.P. Tuscanese - Viterbo	Area o parco archeologico	NaN	NaN	3	t	1	25
-838	58	Fontana al Paracadutista d’Italia	42.4168441	12.1051148	Via Filippo Ascenzi	Monumento	NaN	NaN	2	t	1	79
-839	58	Chiesa Di S.pellegrino	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	65
-840	58	Giardino di Prato Giardino	42.6474589	12.2774983	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	29
-841	58	Torre del Borgognone	42.4156807	12.1041350	NaN	Architettura fortificata	NaN	NaN	3	t	1	70
-842	58	Mura medievali	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	5	t	1	94
-843	58	Fontana Grande	42.4168441	12.1051148	Piazza Fontana Grande, 6	Monumento	NaN	NaN	3	t	1	53
-844	58	Chiesa della Santissima Trinità	42.4168441	12.1051148	Piazza Trinità, 8	Chiesa o edificio di culto	NaN	NaN	2	t	1	65
-845	58	Piazza della Morte	42.4150907	12.1034242	NaN	Monumento	NaN	NaN	5	t	1	38
-846	58	Castello Costaguti	42.5659059	12.1626622	Piazza Umberto I, 19	Architettura fortificata	NaN	NaN	1	t	1	60
-847	58	Piazza del Gesu	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	3	t	1	5
-848	58	Castello di Montecalvello (o Castello di Balthus)	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	4	t	1	14
-849	58	Porta San Marco	42.4168441	12.1051148	Via Teatro Nuovo, 48	Architettura fortificata	NaN	NaN	2	t	1	93
-850	58	Chiesa di Santa Maria della Verità	42.4168441	12.1051148	Viale Raniero Capocci - Piazza Crispi	Chiesa o edificio di culto	NaN	NaN	3	t	1	87
-851	58	Chiesa di San Silvestro	42.4168441	12.1051148	Via dei Pellegrini, 23	Chiesa o edificio di culto	NaN	NaN	2	t	1	25
-852	58	Mura Etrusche	42.4168441	12.1051148	NaN	Area o parco archeologico	NaN	NaN	3	t	1	34
-853	58	Piazza dell'Erbe	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	53
-854	58	Cascate Dell'Acquarossa	42.4168441	12.1051148	Str. Pian del Cerro	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	32
-855	58	Casa Poscia	42.4159612	12.1065463	Via Aurelio Saffi	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	83
-856	58	Porta della Verità	42.4171083	12.1099826	Via della Verità	Architettura fortificata	NaN	NaN	5	t	1	52
-857	58	Chiesa di Sant Angelo in Spatha	42.4168441	12.1051148	via, Roma, Piazza del Plebiscito	Chiesa o edificio di culto	NaN	NaN	3	t	1	76
-858	58	MUSEO NATURALISTICO SAN PIETRO	42.4168441	12.1051148	VIALE GENERALE ARMANDO DIAZ, 25	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	47
-859	58	Via Francigena della Tuscia	42.4168441	12.1051148	NaN	Area o parco archeologico	NaN	NaN	1	t	1	25
-860	58	Museo Roberto Joppolo	42.4168441	12.1051148	NaN	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	7
-861	58	Piazza del Plebiscito	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	34
-862	58	Chiesa di Sant'Andrea	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	42
-863	58	Cascate della Mola	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	51
-864	58	SANTUARIO MADONNA DELLA QUERCIA	42.4296095	12.1302239	PIAZZA DEL SANTUARIO, 	Chiesa o edificio di culto	NaN	NaN	2	t	1	89
-865	58	Chiesa di Santa Maria della Salute	42.4168441	12.1051148	Via della Pescheria	Chiesa o edificio di culto	NaN	NaN	3	t	1	95
-866	58	Piazza S. Pellegrino	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	33
-867	58	AREA ARCHEOLOGICA ANTICA CITTA' DI FERENTO	42.4168441	12.1051148	STRADA FERENTO, snc	Area o parco archeologico	NaN	NaN	1	t	1	47
-868	58	Chiesa di Santa Maria del Paradiso	42.4168441	12.1051148	Via del Paradiso, 22	Chiesa o edificio di culto	NaN	NaN	2	t	1	24
-869	58	Chiesa San Giovanni Battista degli Almadiani	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	13
-870	58	Biblioteca S. Giuseppe	42.4103600	12.1081500	Via A. Diaz, 25	Biblioteca	+39 0761.343134	biblioteca.sangiuseppe@teologicoviterbese.it	1	t	1	49
-871	58	Chiesa di Santa Giacinta Marescotti	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	70
-872	58	Piazza XX Settembre	42.4168441	12.1051148	Piazza XX Settembre	Monumento	NaN	NaN	3	t	1	30
-873	58	Palazzo di Donna Olimpia	42.4168441	12.1051148	Via S. Pietro, 103	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	99
-874	58	Palazzo Gatti	42.4143336	12.1069160	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	97
-875	58	Convento dei Cappuccini	42.4168441	12.1051148	Via S. Crispino, 6	Chiesa o edificio di culto	NaN	NaN	5	t	1	48
-876	58	Area Archeologica Antica Città di Ferento	42.4206766	12.1076690	Strada Provinciale Teverina; Km 8;000	Museo, galleria e/o raccolta	-	-	4	t	1	73
-877	58	Palazzo di Valentino della Pagnotta	42.4168441	12.1051148	Piazza S. Lorenzo, 2	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	18
-878	58	Fontana del Piano	42.4126328	12.1035635	Via di Pianoscarano	Monumento	NaN	NaN	2	t	1	76
-879	58	Museo Erbario della Tuscia (UTV)	42.4168441	12.1051148	Via S. Camillo De Lellis - Viterbo	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	30
-880	58	Museo Padre Felice Rossetti di arte moderna	42.4168441	12.1051148	Piazza S. Francesco Alla Rocca - Viterbo	Chiesa o edificio di culto	NaN	NaN	5	t	1	90
-881	58	Cattedrale di San Lorenzo	42.4168441	12.1051148	Piazza S. Lorenzo	Chiesa o edificio di culto	NaN	NaN	5	t	1	20
-882	58	Biblioteca dell'Istituto S. Giuseppe artigiano	42.4172789	12.1180318	Via Murialdo 51	Biblioteca	+39 0761340893	NaN	2	t	1	79
-883	58	Chiesa di Santa Maria della Porta	42.4168441	12.1051148	Piazza Castello	Chiesa o edificio di culto	NaN	NaN	3	t	1	68
-884	58	Anfiteatro di Ferento	42.4693425	12.1065484	strada per Ferento-8km ca. da Viterbo	Monumento	NaN	NaN	5	t	1	18
-885	58	Biblioteca privata Carosi	42.4070193	12.1169792	Strada Roncone 1/A	Biblioteca	+39 0761307945	NaN	5	t	1	37
-886	58	Torre dell'Orologio	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	5	t	1	38
-887	58	Chiesa della Madonna del Rosario	42.4168441	12.1051148	Piazza Castello	Chiesa o edificio di culto	NaN	NaN	1	t	1	50
-888	58	Fontana Dei Fiumi	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	4	t	1	94
-889	58	Teatro Archimimus	42.4427167	12.1279641	Via S.Pietro, 26	Architettura civile	NaN	NaN	1	t	1	85
-890	58	Fontana del Pegaso	42.4168441	12.1051148	Parco Villa Lante	Monumento	NaN	NaN	3	t	1	96
-891	58	Chiesa di S. Giovanni Battista del Gonfalone	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	85
-892	58	MUSEO DEL SODALIZIO DEI FACCHINI DI SANTA ROSA	42.4138600	12.1059000	VIA S. PELLEGRINO 60-62	Museo, galleria e/o raccolta	761345157	-	4	t	1	3
-893	58	Tenuta La Pazzaglia	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	78
-894	58	Archivio di Stato di Viterbo	42.4168441	12.1051148	Via Vincenzo Cardarelli - Viterbo	Archivio di Stato	NaN	NaN	3	t	1	20
-895	58	Biblioteca dell'ISIS Tarquinia	42.2333766	11.7269238	Via Porto Clementino	Biblioteca	NaN	NaN	2	t	1	56
-896	58	Museo della Casa di Santa Rosa	42.4168441	12.1051148	Via Casa di Santa Rosa - Viterbo	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	71
-897	58	Palazzo dei Priori	42.4168441	12.1051148	Piazza del Plebiscito, 14	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	21
-898	58	Teatro dell'Unione	42.4404397	12.0856281	Piazza Giuseppe Verdi	Architettura civile	NaN	NaN	1	t	1	99
-899	58	Fontana dei Mori	42.4260726	12.1553664	Parco Di Villa Lante	Monumento	NaN	NaN	4	t	1	41
-900	58	Cascata dell'Infernaccio	42.5273469	12.1310402	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	6
-901	58	Porta Romana	42.4168441	12.1051148	Via della Sapienza, 11	Architettura fortificata	NaN	NaN	4	t	1	22
-902	58	Museo Storico Didattico Cavalieri Templari di Viterbo	42.4168441	12.1051148	Via Chigi, 14	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	6
-903	58	Biblioteca diocesana	42.4153500	12.1014600	Piazza S. Lorenzo, 6/A	Biblioteca	+39 0761.222539	cedi.do@libero.it	1	t	1	14
-904	58	Chiesa Parrocchiale di Santo Stefano	42.4168441	12.1051148	Piazza dell'Unità	Chiesa o edificio di culto	NaN	NaN	1	t	1	48
-905	58	Villa Rossi Danielli	42.4168441	12.1051148	Str. Sammartinese, 10	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	9
-906	58	Centro Storico di Viterbo	42.2521745	11.7583816	NaN	Architettura fortificata	NaN	NaN	4	t	1	38
-907	58	Palazzo Chigi	42.4168441	12.1051148	Via Chigi, 15	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	56
-908	58	Torre della Branca o Torre della Galliana	42.4168441	12.1051148	Castel d'Asso	Architettura fortificata	NaN	NaN	2	t	1	55
-909	58	MUSEO NAZIONALE ETRUSCO DI ROCCA ALBORNOZ	42.4216431	12.1044907	Piazza della Rocca; 21/b	Museo, galleria e/o raccolta	0761 325929	sba-em.roccaalbornoz@beniculturali.it	5	t	1	99
-910	58	Biblioteca convento della SS. Trinità dell'Ordine eremitano di S. Agostino	42.4189839	12.0992913	p.zza SS. Trinit?, 8	Biblioteca	+39 0761.342808	marmat47@hotmail.com	3	t	1	62
-911	58	MUSEO CIVICO	42.4176727	12.1105913	PIAZZA FRANCESCO CRISPI; 2	Museo, galleria e/o raccolta	761348276	museocivico@comune.viterbo.it	4	t	1	38
-912	58	MUSEO DEL COLLE DEL DUOMO	42.4156470	12.1016440	PIAZZA S. LORENZO; 8A	Museo, galleria e/o raccolta	3477010187	museocolledelduomo@libero.it	2	t	1	25
-913	58	MUSEO DELLA CERAMICA DELLA TUSCIA	42.4157087	12.1064460	VIA CAVOUR; 67	Museo, galleria e/o raccolta	761346136	laboratorioceramica@libero.it	1	t	1	74
-914	58	VILLA LANTE BAGNAIA	42.4240622	12.1539991	VIA JACOPO BAROZZI, 71	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	15
-915	58	Scuderia di Palazzo Nini	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	52
-916	58	Teatro S.Leonardo	42.4180272	12.0651056	Via Cavour,9	Architettura civile	NaN	NaN	5	t	1	44
-917	58	MUSEO DEL BRIGANTAGGIO	42.4168441	12.1051148	VIA GUGLIELMO MARCONI, 19	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	57
-918	58	Biblioteca della Facoltà di Scienze Politiche dell'Università degli studi della Tuscia	42.4130769	12.1024294	Via San Carlo, 32	Biblioteca	NaN	bibliosp@unitus.it	1	t	1	74
-919	58	BIBLIOTECA S. GIUSEPPE	42.4110788	12.1090121	VIALE A. DIAZ; 25	Museo, galleria e/o raccolta	761343134	biblioteca.sangiuseppe@teologicoviterbese.it	3	t	1	63
-920	58	Palazzo Pagliacci	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	10
-921	58	Palazzo Mazzatosta	42.4172780	12.1072507	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	26
-922	58	Palazzo degli Uffici	42.4168441	12.1051148	Piazza Plebiscito 19	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	85
-923	58	ex chiesa di S. Biagio	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	73
-924	58	Palazzo dei Lunensi	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	30
-925	58	Orto Botanico dell'Università della Tuscia	42.4168441	12.1051148	NaN	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	3
-926	58	"Casa del Barbiere di Paolo III"	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	6
-927	58	Palazzo Sacchi	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	13
-928	58	Rocca Albornoz	42.4220064	12.1047309	NaN	Architettura fortificata	NaN	NaN	3	t	1	9
-929	58	Palazzo Ducale	42.4168441	12.1051148	Bagnaia	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	38
-930	58	Palazzo Nini	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	38
-931	58	ex chiesa di S. Rocco	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	38
-932	58	MUSEO ERBARIO DELLA TUSCIA (UTV)	42.4265711	12.0896074	VIA S. CAMILLO DE LELLIS; SNC	Museo, galleria e/o raccolta	761357490	erbario@unitus.it	4	t	1	0
-933	58	Terme Libere Piscine Carletti	42.4168441	12.1051148	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	62
-934	58	Palazzo Tedeschi 	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	65
-935	58	Villa Lante della Rovere	42.4267541	12.1548165	Via Jacopo Barozzi; 71	Museo, galleria e/o raccolta	-	-	3	t	1	93
-936	58	Chiesa di Santa Maria del Suffragio	42.4168441	12.1051148	Via Fontanella del Suffragio, 10	Chiesa o edificio di culto	NaN	NaN	5	t	1	95
-937	58	Chiesa dei Santi Faustino e Giovita	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	1
-938	58	Chiesa di San Giovanni in Zoccoli	42.4168441	12.1051148	Via Giuseppe Mazzini, 123	Chiesa o edificio di culto	NaN	NaN	4	t	1	53
-939	58	Chiesa di Santa Maria in Gradi	42.4168441	12.1051148	S. Maria in Gradi, Via Santa Maria in Gradi	Chiesa o edificio di culto	NaN	NaN	4	t	1	54
-940	58	Porta Fiorentina	42.4224084	12.1049532	NaN	Architettura fortificata	NaN	NaN	5	t	1	70
-941	58	Chiesa di Santa Maria Nuova	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	34
-942	58	Chiesa di San Sisto	42.4168441	12.1051148	Piazza S. Sisto, 6	Chiesa o edificio di culto	NaN	NaN	3	t	1	65
-943	58	Biblioteca comunale degli Ardenti	42.4206915	12.1077763	Piazza Verdi 3	Biblioteca	+39 0761340695	NaN	1	t	1	15
-944	58	Fontana del Borgo Dentro	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	14
-945	58	Biblioteca padre Lorenzo Cozza	42.4099600	12.1178040	Via S. Maria del paradiso	Biblioteca	+39 0761343182	NaN	1	t	1	38
-946	58	Chiesa Della Visitazione (o Della Duchessa)	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	56
-947	58	Domus Dei	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	97
-948	58	Palazzo dei Papi	42.4156137	12.1007084	Piazza S. Lorenzo, 1-8	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	99
-949	58	CONFRATERNITA SS.SACRAMENTO E S.ROSARIO	42.4157698	12.1133540	PIAZZA ORATORIO 5	Museo, galleria e/o raccolta	761379301	confraternitasanmartino@gmail.com	1	t	1	42
-950	58	Viterbo Sotterranea	42.4603608	12.3860395	NaN	Area o parco archeologico	NaN	NaN	1	t	1	43
-951	58	Biblioteca dell'Archivio di Stato di Viterbo	42.4109210	12.1102563	Via M. Romiti	Biblioteca	+39 0761342960	NaN	4	t	1	34
-952	58	Biblioteca della Provincia romana presso il Convento di S. Francesco alla Rocca	42.4218866	12.1064028	Piazza S. Francesco alla Rocca, 6	Biblioteca	+39 0761.341696	mallucci@ofmconv.org	2	t	1	13
-953	58	Palazzo Tignosini	42.4168441	12.1051148	Via S. Lorenzo, 34	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	2
-954	58	Biblioteca del Liceo classico statale Mariano Buratti	42.4135803	12.1083063	Via T. Carletti 8	Biblioteca	+39 0761322420	NaN	5	t	1	73
-955	58	Biblioteca Pio XII	42.4292485	12.1280568	Via del Popolo 2	Biblioteca	+39 0761236965	NaN	4	t	1	51
-956	58	Centro per la biblioteca delle Facoltà di agraria e scienze matematiche, fisiche e naturali dell'Università degli studi della Tuscia - CEBAS	42.4271062	12.0909921	Via S. Camillo De Lellis, snc	Biblioteca	+39 0761357512	agbib@unitus.it	2	t	1	33
-957	58	Biblioteca dell'Accademia di belle arti Lorenzo da Viterbo	42.4172455	12.1071295	Via orologio vecchio	Biblioteca	+39 0761221842	NaN	4	t	1	11
-958	58	Biblioteca San Paolo dei frati minori cappuccini della Provincia Romana	42.4190200	12.1154100	Via S. Crispino 6	Biblioteca	NaN	roma.bibliotecaprovinciale@fraticappuccini.it	4	t	1	4
-959	58	Biblioteca provinciale Anselmo Anselmi	42.4249650	12.1058200	Viale Trento, presso Palazzo Garbini	Biblioteca	+39 0761228162	biblioteca-ardenti@libero.it	2	t	1	48
-960	58	Biblioteca della Camera di commercio, industria, artigianato e agricoltura - CCIAA	42.4211132	12.1083127	Via Fratelli Rosselli 4	Biblioteca	+39 0761341151	NaN	4	t	1	18
-961	58	Biblioteca dell'Istituto tecnico industriale e per geometri Leonardo da Vinci	42.4236529	12.0965347	Via A. Volta 26	Biblioteca	NaN	luigi.graziotti@poste.it	5	t	1	94
-962	58	Biblioteca della Facoltà di economia dell'Università degli studi della Tuscia	42.4239971	12.1100455	Via del Paradiso 47	Biblioteca	+39 0761357725	ecobib@unitus.it	2	t	1	15
-963	58	Quartiere San Pellegrino	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	4	t	1	42
-964	58	Biblioteca della Facoltà di conservazione dei beni culturali dell'Università degli studi della Tuscia	42.4271712	12.0861119	Largo dell'Universit?	Biblioteca	+39 0761357183	bcbib@unitus.it	5	t	1	17
-965	58	Biblioteca della Facoltà di lingue e letterature straniere dell'Università degli studi della Tuscia	42.4271712	12.0861119	Largo dell'Universit?	Biblioteca	+39 0761357655	marling@unitus.it	1	t	1	13
-966	58	BASILICA DI S. FRANCESCO	42.4168441	12.1051148	PIAZZA SAN FRANCESCO, 4	Chiesa o edificio di culto	NaN	NaN	4	t	1	4
-967	59	Biblioteca comunale	42.4654270	12.1724620	Piazza S. Agnese 16	Biblioteca	NaN	NaN	4	t	1	26
-968	59	Borgo di Vitorchiano	42.4667750	12.1715910	NaN	Architettura fortificata	NaN	NaN	3	t	1	4
-969	59	Palazzo Comunale di Vitorchiano	42.4654270	12.1724620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	36
-970	59	Chiesa Santa Maria Assunta in Cielo	42.4654270	12.1724620	Via S. Maria, 11	Chiesa o edificio di culto	NaN	NaN	3	t	1	84
-971	59	Statua Moai	42.4654270	12.1724620	Strada Provinciale 23 della Vezza, 19	Monumento	NaN	NaN	4	t	1	43
-972	59	Chiesa della Santissima Trinità	42.4654270	12.1724620	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	63
-973	59	Fontana a Fuso	42.4654270	12.1724620	Piazza Roma, 18	Monumento	NaN	NaN	1	t	1	49
-974	59	Piazzale Umberto I	42.4654270	12.1724620	Piazzale Umberto I	Monumento	NaN	NaN	5	t	1	15
-975	59	Centro Botanico Moutan	42.4654270	12.1724620	S.S, Str. Ortana, 46	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	4
+COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, average_visiting_time, is_active, poh_id, utility_score, description) FROM stdin;
+2	1	Chiesa della Natività della SS.ma Vergine	42.7439961	11.8649880	Trevinano	Chiesa o edificio di culto	NaN	NaN	1	t	1	66	\N
+3	1	Chiesa della Madonna della Quercia	42.7439961	11.8649880	SP51, Trevinano	Chiesa o edificio di culto	NaN	NaN	5	t	1	23	\N
+4	1	Ponte Gregoriano	42.7439961	11.8649880	Via Cassia	Monumento	NaN	NaN	3	t	1	7	\N
+5	1	Mura urbiche di Acquapendente	42.7439961	11.8649880	NaN	Architettura fortificata	NaN	NaN	2	t	1	92	\N
+6	1	Casale Campo del Prete	42.7439961	11.8649880	Campo del Prete	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	89	\N
+7	1	Palazzo Viscontini	42.7439961	11.8649880	Via Cesare Battisti, 28	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	73	\N
+8	1	Casale Putifaro	42.7439961	11.8649880	Putifaro	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	38	\N
+9	1	Chiesa di s. Agostino (ex Maria SS.ma delle Grazie)	42.7439961	11.8649880	Largo S. Agostino	Chiesa o edificio di culto	NaN	NaN	3	t	1	19	\N
+10	1	Chiesa di San Rocco	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	64	\N
+11	1	Chiesa di S. Vittoria	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	32	\N
+12	1	Casale Mulino	42.7439961	11.8649880	Subissone	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	18	\N
+13	1	Casale Poggio Gattuccio	42.7439961	11.8649880	Trevinano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	43	\N
+14	1	Casale Macchione	42.7439961	11.8649880	Macchione	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	97	\N
+15	1	Osservatorio Astronomico "Nuova Pegasus"	42.7439961	11.8649880	Via Postierla, 59	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	37	\N
+16	1	Casale San Giorgio	42.7439961	11.8649880	S. Giorgio	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	12	\N
+17	1	Torre dell' Orologio (o Torre del Barbarossa)	42.7439961	11.8649880	Parco la Pineta, Via Oriolo	Architettura fortificata	NaN	NaN	3	t	1	37	\N
+18	1	Palazzo Boncompagni-Ludovisi	42.7439961	11.8649880	Via Bourbon del Monte, 12, Trevinano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	67	\N
+19	1	Casale San Vittorio	42.7439961	11.8649880	S. Vittorio	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	100	\N
+20	1	Casale Monacaro Vecchio	42.7439961	11.8649880	Monacaro	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	98	\N
+21	1	Casale Rufeno	42.7439961	11.8649880	Monte Rufeno	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	22	\N
+22	1	Casale Tirolle	42.7439961	11.8649880	Tirolle	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	25	\N
+23	1	Monastero di S. Chiara	42.7439961	11.8649880	Via Malintoppa, 12	Chiesa o edificio di culto	NaN	NaN	5	t	1	92	\N
+24	1	MUSEO DELLA CITTA' CIVICO E DIOCESANO DI ACQUAPENDENTE	42.7439961	11.8649880	VIA ROMA, 85	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	10	\N
+25	1	Bosco monumentale del Sasseto e i giardini Cahen d’Anvers di Torre Alfina	42.7439961	11.8649880	piazzale Sant'Angelo - Acquapendente	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	88	\N
+26	1	Biblioteca dell'ex Seminario vescovile	42.7426527	11.8689048	Via Roma, 85	Biblioteca	+39 0761.325584	cedi.do@libero.it	1	t	1	72	\N
+27	1	Convento dei Padri Cappuccini e chiesa di S. Francesco d' Assisi	42.7439961	11.8649880	Via Cesare Battisti	Chiesa o edificio di culto	NaN	NaN	3	t	1	17	\N
+28	1	Palazzo Comunale	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	22	\N
+29	1	Biblioteca comunale	42.4703000	12.1742160	Piazza S. Agnese 16	Biblioteca	NaN	NaN	3	t	1	56	\N
+30	1	Palazzo Vescovile della Diocesi di Acquapendente	42.7439961	11.8649880	Via Roma, 85	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	56	\N
+31	1	Chiesa di S. Antonio Abate e S. Caterina	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	2	\N
+32	1	Palazzo Costantini	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	8	\N
+33	1	Anfiteatro Cordeschi	42.7633912	11.8703856	Strada Onanese	Monumento	NaN	NaN	4	t	1	14	\N
+34	1	Palazzo Piccioni	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	21	\N
+35	1	Teatro Boni	42.7481852	11.8942006	Piazza della Costituente	Architettura civile	NaN	NaN	2	t	1	44	\N
+36	1	Torre Julia de Jacopo	42.7422091	11.8712540	Via Julia De Jacopo, 55	Architettura fortificata	NaN	NaN	3	t	1	41	\N
+37	1	Chiesa di S. Stefano	42.7439961	11.8649880	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	65	\N
+38	1	Chiesa della Madonna del S. Amore	42.7439961	11.8649880	Fraz. Torre Alfina	Chiesa o edificio di culto	NaN	NaN	4	t	1	45	\N
+39	1	Castello Cahen (o Castello di Torre Alfina)	42.7439961	11.8649880	Via Monaldeschi della Cervara, 1, Fraz. Torre Alfina	Architettura fortificata	NaN	NaN	1	t	1	88	\N
+40	1	Palazzo Cozza-Nardelli	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	54	\N
+41	1	Palazzo Caterini	42.7439961	11.8649880	Piazza Girolamo Fabrizio, 8	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	56	\N
+42	1	Museo della città	42.7436932	11.8680157	piazzetta dell'orologio	Museo, galleria e/o raccolta	0761 796914	info@simulabo.it	1	t	1	43	\N
+43	1	museo della città	42.7436932	11.8680157	piazzetta dell'orologio	Museo, galleria e/o raccolta	0761 796914	info@simulabo.it	3	t	1	17	\N
+44	1	Chiesa di S. Maria Assunta	42.7439961	11.8649880	Piazza S. Maria	Chiesa o edificio di culto	NaN	NaN	5	t	1	82	\N
+45	1	Cattedrale del S. Sepolcro	42.7425120	11.8714670	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	60	\N
+46	1	Palazzo Taurelli-Salimbeni	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	12	\N
+47	1	Chiesa di S. Lorenzo Martire e S. Michele Arcangelo	42.7439961	11.8649880	Via G. Marconi, 85	Chiesa o edificio di culto	NaN	NaN	5	t	1	30	\N
+48	2	Palazzo Cellesi	42.6269800	12.0908718	Castel Cellesi	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	44	\N
+49	2	Palazzo Comunale	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	96	\N
+50	2	Porta Albana	42.6268957	12.0909966	Piazza Trento e Trieste, 31	Architettura fortificata	NaN	NaN	3	t	1	0	\N
+51	2	Chiesa di S. Donato	42.6269800	12.0908718	Piazza S. Donato	Chiesa o edificio di culto	NaN	NaN	5	t	1	93	\N
+52	2	Chiesa della Madonna del Carmine	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	63	\N
+53	2	Palazzo Antiseri	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	86	\N
+54	2	Palazzo Cristofori	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	96	\N
+55	2	Chiesa di S. Girolamo	42.6269800	12.0908718	Castel Cellesi	Chiesa o edificio di culto	NaN	NaN	1	t	1	34	\N
+56	2	Chiesa dei SS. Andrea e Bonaventura	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	73	\N
+57	2	Porta di sotto (o Porta di Santa Maria)	42.6269800	12.0908718	Via S. Maria del Cassero, 446-481	Architettura fortificata	NaN	NaN	1	t	1	52	\N
+58	2	Chiesa del S. Sepolcro	42.6269800	12.0908718	Castel Cellesi	Chiesa o edificio di culto	NaN	NaN	2	t	1	51	\N
+60	2	Chiesa di Santa Maria delle Carceri	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	50	\N
+61	2	Teatro Comunale	42.3708512	12.2634142	Piazza della Repubblica	Architettura civile	NaN	NaN	3	t	1	27	\N
+62	2	Biblioteca del Centro studi bonaventuriani	42.6295576	12.0871305	Viale fratelli Agosti	Biblioteca	NaN	NaN	1	t	1	24	\N
+63	2	Biblioteca del Seminario vescovile	42.6257296	12.0996384	Piazza S. Agostino, 10	Biblioteca	+39 0761.792036	cedi.do@libero.it	2	t	1	80	\N
+64	2	Biblioteca della Fondazione Agosti	42.6256397	12.0980438	Piazza L. Cristofori 16	Biblioteca	+39 0761793039	NaN	4	t	1	54	\N
+65	2	ASSOCIAZIONE STORICO CULTURALE 'PIERO TARUFFI'	42.6269490	12.0974162	VIA FIDANZA; 55	Museo, galleria e/o raccolta	761780811	museotaruffi@libero.it	4	t	1	64	\N
+66	2	Palazzo Vescovile	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	99	\N
+67	2	Chiesa di Santa Lucia	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	10	\N
+68	2	MUSEO GEOLOGICO E DELLE FRANE	42.6278153	12.1136284	piazza San Donato	Museo, galleria e/o raccolta	328 6657205	info@museogeologicodellefrane.it	3	t	1	82	\N
+69	2	Cattedrale di San Nicola	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	43	\N
+70	2	ASSOCIAZIONE STORICO CULTURALE 'PIERO TARUFFI'	42.6269490	12.0974162	VIA FIDANZA, 55	Fondazione	761780811	museotaruffi@libero.it	5	t	1	64	\N
+71	2	Chiesa di S. Martino	42.6269800	12.0908718	Piazza Luigi Cristofori, 5	Chiesa o edificio di culto	NaN	NaN	5	t	1	76	\N
+72	2	Chiesa di San Francesco di Paola	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	33	\N
+74	3	MUSEO ARCHEOLOGICO DELLE NECROPOLI RUPESTRI	42.2498341	12.0673735	VIA SANT'ANGELO, 2	Museo, galleria e/o raccolta	NaN	NaN	3	t	1	62	\N
+75	3	Parrocchia di Santa Maria Assunta	42.2498341	12.0673735	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	76	\N
+76	3	Porta Romana	42.2498341	12.0673735	NaN	Architettura fortificata	NaN	NaN	1	t	1	65	\N
+77	3	MUSEO ETRUSCO	42.2511180	12.0663609	PIAZZA SANT'ANGELO; 2	Museo, galleria e/o raccolta	761414531	-	4	t	1	52	\N
+78	3	Necropoli rupestre di San Giuliano	42.2498341	12.0673735	Parco Suburbano di Marturanum (Comune) - Barbarano Romano	Area o parco archeologico	NaN	NaN	2	t	1	91	\N
+79	3	Museo della Tuscia Rupestre Francesco Spallone	42.2498341	12.0673735	NaN	Museo, galleria e/o raccolta	NaN	NaN	1	t	1	66	\N
+80	3	Tomba Margareth	42.2585300	12.0788570	NaN	Area o parco archeologico	NaN	NaN	2	t	1	12	\N
+81	4	Monastero San Vincenzo - Santuario del Santo Volto	42.2183916	12.1930062	Via S. Vincenzo, 88	Chiesa o edificio di culto	NaN	NaN	3	t	1	77	\N
+82	4	Parrocchia Maria S.S. Assunta in Cielo	42.2183916	12.1930062	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	20	\N
+84	4	Chiesa di San Gratiliano	42.2183916	12.1930062	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	36	\N
+85	4	Chiesa della Madonna della Pietà	42.2183916	12.1930062	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	12	\N
+86	4	VILLA GIUSTINIANI (o Castello Odescalchi)	42.2183916	12.1930062	PIAZZA UMBERTO PRIMO, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	1	\N
+87	4	Chiesa di Santa Maria dei Monti	42.2183916	12.1930062	Str. Vicinale Fonte Vianello, 2	Chiesa o edificio di culto	NaN	NaN	3	t	1	54	\N
+88	4	Biblioteca Comunale e Archivio Storico Comunale	42.2183916	12.1930062	NaN	Biblioteca	NaN	NaN	3	t	1	27	\N
+89	5	Chiesa dell'Immacolata Concezione	42.4660738	12.3130342	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	76	\N
+90	5	Fontana Vecchia	42.4660738	12.3130342	NaN	Monumento	NaN	NaN	5	t	1	1	\N
+91	5	Chiesa della Madonna della Quercia	42.4660738	12.3130342	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	53	\N
+93	5	Chiesa dei Santi Fidenzio e Terenzio	42.4660738	12.3130342	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	71	\N
+94	5	Chiesa di S. Maria dei Lumi	42.4660738	12.3130342	Piazza Nazario Sauro	Chiesa o edificio di culto	NaN	NaN	4	t	1	77	\N
+95	6	Antiquitates	42.2725220	12.0316620	Localita' Le Fornaci	Museo, galleria e/o raccolta	NaN	NaN	3	t	1	48	\N
+96	6	Castello di Civitella Cesi	42.2244252	12.0005892	 Via delle Case Nuove, Civitella Cesi	Architettura fortificata	NaN	NaN	5	t	1	3	\N
+97	6	Palazzo Savini	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	38	\N
+98	6	MUSEO CIVICO GUSTAVO VI ADOLFO DI SVEZIA - SEZIONE IL CAVALLO E L'UOMO	42.2759082	12.0254639	VIA UMBERTO I; SNC	Museo, galleria e/o raccolta	761471057	info_museoblera@yahoo.it	2	t	1	66	\N
+99	6	Palazzo dell'Asino Vecchio (detto)	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	1	\N
+100	6	Ex Chiesa di S. Nicola	42.2725220	12.0316620	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	81	\N
+92	5	Torre dell'Orologio	42.4660738	12.3130342	Via delle Fonti, 2	Architettura fortificata	NaN	NaN	5	t	1	46	La torre dell'Orologio di Bassano in Teverina è una costruzione rinascimentale realizzata con l'intento di fortificare l'antico campanile dell'adiacente chiesa di Santa Maria dei Lumi, inglobandolo nella torre stessa.
+102	6	Palazzo Municipale	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	63	\N
+103	6	Palazzo Alberti	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	74	\N
+104	6	Biblioteca comunale	42.2725220	12.0316620	Via Roma 61	Biblioteca	NaN	NaN	5	t	1	80	\N
+156	9	Biblioteca Paolo Portoghesi	42.2173359	12.4214867	Via Cadorna 59	Biblioteca	+39 0761596059	paoporto@tin.it	4	t	1	44	\N
+105	6	Necropoli rupestri di San Giovenale e Terrone	42.2725220	12.0316620	S.S. Cassia, bivio Cura di Vetralla, o lungo la S.S. Braccianense Claudia - Blera	Area o parco archeologico	NaN	NaN	5	t	1	81	\N
+106	6	Chiesa di Santa Maria Assunta in Cielo e San Vivenzio	42.2725220	12.0316620	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	16	\N
+107	6	Palazzo Anguillara - Monaci	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	93	\N
+108	6	Palazzo Pretoriale	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	88	\N
+109	7	MUSEO TERRITORIALE DEL LAGO DI BOLSENA	42.6463309	11.9858125	piazza Monaldeschi	Museo, galleria e/o raccolta	761798630	museo@comunebolsena.it	1	t	1	28	\N
+110	7	Chiesa di San Francesco	42.6441069	11.9849554	Via S. Giovanni, 21	Chiesa o edificio di culto	NaN	NaN	1	t	1	83	\N
+111	7	Chiesa di S. Salvatore	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	99	\N
+112	7	Complesso architettonico e paesaggistico: Viale Colesanti	42.6441069	11.9849554	NaN	Area o parco archeologico	NaN	NaN	4	t	1	64	\N
+113	7	Palazzo del Drago (o Palazzo Cozza Spada del Drago)	42.6441069	11.9849554	Via Francesco Cozza	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	67	\N
+114	7	Chiesa Madonna del Giglio	42.6441069	11.9849554	Via Madonna del Giglio, 49	Chiesa o edificio di culto	NaN	NaN	2	t	1	4	\N
+115	7	Porta San Giovanni	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	1	t	1	90	\N
+116	7	Pietre Lanciate	42.6325494	11.9972146	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	93	\N
+119	7	Porta San Francesco	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	3	t	1	11	\N
+120	7	Casale Gazzetta	42.6441069	11.9849554	Gazzetta	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	9	\N
+121	7	Parco di Turona	42.6441069	11.9849554	Via strada di turona	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	13	\N
+122	7	Palazzo Cozza Caposavi	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	39	\N
+123	7	Chiesa della Madonna dell'Arcale	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	83	\N
+124	7	Palazzo Serafini	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	86	\N
+125	7	Area del Foro e Domus Privatae della Città Romana di Volsinii	42.6474699	11.9980597	Via Orvietana	Museo, galleria e/o raccolta	-	-	1	t	1	61	\N
+126	7	Palazzo Comunale	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	99	\N
+127	7	Acquario di bolsena	42.6433430	11.9848430	Piazza Monaldeschi, 1	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	76	\N
+128	7	Anfiteatro Mercatello	42.6502733	11.9880751	NaN	Monumento	NaN	NaN	1	t	1	20	\N
+129	7	Palazzo Signorile Cardinale Teodorico o Ranieri	42.6441069	11.9849554	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	6	\N
+130	7	Cappella del Miracolo	42.6434006	11.9895659	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	32	\N
+131	7	Teatro in S. Francesco	42.6352769	11.9607883	Piazza Matteotti	Architettura civile	NaN	NaN	2	t	1	36	\N
+132	7	Rocca Monaldeschi della Cervara (o Palazzo Monaldeschi della Cervara)	42.6460800	11.9853970	Piazza Monaldeschi, 61	Architettura fortificata	NaN	NaN	1	t	1	38	\N
+133	7	Convento Chiesa della Madonna dei Cacciatori	42.6441069	11.9849554	Via Madonna del Cacciatore, 141	Chiesa o edificio di culto	NaN	NaN	2	t	1	20	\N
+134	7	Biblioteca comunale Giuseppe Cozza Luzi	42.6060008	11.9576317	Largo S. Giovanni Battista de La Salle 3	Biblioteca	+39 0761795319	biblioteca@comunebolsena.it	1	t	1	74	\N
+135	7	Oratorio di S. Leonardo	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	12	\N
+136	7	AREA DEL FORO E DOMUS PRIVATAE DELLA CITTA' ROMANA DI VOLSINII	42.6441069	11.9849554	VIA ORVIETANA, snc	Area o parco archeologico	NaN	NaN	4	t	1	23	\N
+137	7	Basilica di Santa Cristina e Catacomba del Santuario Eucaristico	42.6441069	11.9849554	Via Giuseppe Mazzini - Bolsena	Chiesa o edificio di culto	NaN	NaN	1	t	1	84	\N
+138	7	Porta Romana	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	1	t	1	96	\N
+139	8	Torre (presso chiesa di S. Vincenzo)	42.4819280	12.2487640	Mugnano in Teverina	Architettura fortificata	NaN	NaN	1	t	1	47	\N
+140	8	Chiesa della Misericordia	42.4819280	12.2487640	Mugnano in Teverina	Chiesa o edificio di culto	NaN	NaN	1	t	1	17	\N
+141	8	Torre del Mugnano	42.4819280	12.2487640	Mugnano in Teverina	Architettura fortificata	NaN	NaN	5	t	1	16	\N
+142	8	Chiesa di S. Maria del Pozzarello	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	96	\N
+143	8	Riserva Naturale Monte Casoli di Bomarzo	42.4954480	12.2318550	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	97	\N
+144	8	Chiesa di S. Maria del Piano	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	3	\N
+145	8	Cattedrale S. Maria Assunta	42.4819280	12.2487640	Piazza Duomo	Chiesa o edificio di culto	NaN	NaN	5	t	1	21	\N
+146	8	Piramide Etrusca Bomarzo o Sasso del Predicatore	42.4813920	12.2641870	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	8	\N
+148	8	Chiesa Madonna della Valle	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	9	\N
+149	8	Chiesa di S. Anselmo	42.4819280	12.2487640	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	91	\N
+150	8	PARCO DEI MOSTRI, SACRO BOSCO DI BOMARZO	42.4920090	12.2451380	LOCALITA' GIARDINO, snc	Monumento o complesso monumentale	NaN	NaN	5	t	1	7	\N
+151	8	Chiesa di S. Vincenzo Liberato	42.4819280	12.2487640	Mugnano in Teverina	Chiesa o edificio di culto	NaN	NaN	3	t	1	54	\N
+152	8	Palazzo Orsini (o Castello Orsini)	42.4819280	12.2487640	Via Borghese, 10	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	62	\N
+153	8	Castello Orsini	42.4197145	12.2352051	NaN	Architettura fortificata	NaN	NaN	5	t	1	15	\N
+154	9	Casa Weller	42.2197263	12.4259417	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	94	\N
+318	22	Chiesa di S. Antonio	42.3721886	12.8454886	SP73	Chiesa o edificio di culto	NaN	NaN	1	t	1	49	\N
+157	9	Chiesa dei Santi Cornelio e Cipriano	42.2197263	12.4259417	Piazza Risorgimento	Chiesa o edificio di culto	NaN	NaN	3	t	1	41	\N
+158	9	MUSEO DELLA CIVILTA' CONTADINA	42.2165023	12.4187122	via San Giovanni	Museo, galleria e/o raccolta	761587989	gisa.federici@libero.it	3	t	1	33	\N
+159	9	Palazzo dell' Ente Parco del Treia	42.2197263	12.4259417	Piazza Vittorio Emanuele II	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	81	\N
+160	9	Palazzo del Governo Vecchio	41.8987401	12.4704076	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	29	\N
+161	9	Chiesa del SS. Nome di Gesù	41.8063340	12.4954590	Piazza Umberto I	Chiesa o edificio di culto	NaN	NaN	1	t	1	81	\N
+162	9	Il Borgo di Calcata	42.2164161	12.4188287	NaN	Architettura fortificata	NaN	NaN	3	t	1	82	\N
+163	9	Palazzo baronale Anguillara	42.2165828	12.4190685	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	19	\N
+164	9	OPERA BOSCO' MUSEO DI ARTE NELLA NATURA	42.2165600	12.4211497	LOCALITA' COLLE; SNC	Museo, galleria e/o raccolta	761588048	operabosco@operabosco.eu	2	t	1	67	\N
+165	9	Chiesa della Madonna della Cava	42.2197263	12.4259417	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	54	\N
+166	9	Chiesa di S. Giovanni 	42.2197263	12.4259417	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	62	\N
+167	9	Porta del Borgo	42.2197263	12.4259417	NaN	Architettura fortificata	NaN	NaN	1	t	1	66	\N
+168	10	MUSEO DELLE TRADIZIONI POPOLARI DI CANEPINA	42.3818609	12.2308363	LARGO MARIA DE MATTIAS; 7	Museo, galleria e/o raccolta	761327677	info@cmcimini.it	5	t	1	13	\N
+170	10	Biblioteca comunale	42.3809608	12.2336522	Via Guido Rossa	Biblioteca	NaN	NaN	1	t	1	44	\N
+171	10	Castello dei Conti Anguillara	42.3809608	12.2336522	Via Soriano	Architettura fortificata	NaN	NaN	1	t	1	76	\N
+172	10	Chiesa parrocchiale cattedrale di santa maria assunta	42.2642760	12.6839720	Via Portapiagge, 51	Chiesa o edificio di culto	NaN	NaN	4	t	1	1	\N
+173	10	Chiesa di San Michele Arcangelo	42.3809608	12.2336522	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	21	\N
+174	11	Ponte Dell'Abbadia	42.4639626	11.7495088	NaN	Monumento	NaN	NaN	4	t	1	73	\N
+175	11	MUSEO ARCHEOLOGICO DI VULCI	42.4409520	11.6840589	-	Museo, galleria e/o raccolta	0761 437787	sba-em@beniculturali.it	3	t	1	18	\N
+176	11	Biblioteca comunale Giosuè Carducci	42.4670321	11.7504805	Via Udine	Biblioteca	+39 0761439030	NaN	1	t	1	12	\N
+177	11	Ex Convento di San Francesco	42.4639626	11.7495088	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	40	\N
+178	11	Castello Ponte Dell'Abbadia (o Castello di Vulci)	42.4639626	11.7495088	NaN	Architettura fortificata	NaN	NaN	5	t	1	75	\N
+179	11	Cascata del Pellico	42.4639626	11.7495088	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	54	\N
+180	11	Chiesa degli Apostoli Giovanni e Andrea	42.4639626	11.7495088	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	30	\N
+181	11	Tomba François	42.4175098	11.6390928	Strada Provinciale 106 - Canino	Area o parco archeologico	NaN	NaN	5	t	1	7	\N
+182	11	Teatro napoleonico	42.4667609	11.6974815	NaN	Architettura civile	NaN	NaN	2	t	1	89	\N
+184	11	Terme di Vulci	42.4615398	11.6371173	Via delle Terme	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	12	\N
+185	11	Chiesa di S. Croce	42.4639626	11.7495088	Via Cavour, 45	Chiesa o edificio di culto	NaN	NaN	1	t	1	76	\N
+186	11	Torre Campanaria della Chiesa degli Apostoli Giovanni e Andrea	42.4639626	11.7495088	NaN	Architettura fortificata	NaN	NaN	2	t	1	53	\N
+187	11	PARCO NATURALISTICO ARCHEOLOGICO DI VULCI	42.4107656	11.6555277	STRADA PROVINCIALE 105, SNC	Area o parco archeologico	NaN	NaN	2	t	1	59	\N
+188	11	Castello Torlonia	42.2169001	12.0212749	NaN	Architettura fortificata	NaN	NaN	4	t	1	14	\N
+189	12	Chiesa della Madonna del Soccorso	42.5465270	11.9047550	Corso Amedeo di Savoia Duca D'Aosta	Chiesa o edificio di culto	NaN	NaN	3	t	1	7	\N
+190	12	Rocca Farnese (o Castello Farnese)	42.5509980	11.9128270	Piazza della Rocca, 1	Architettura fortificata	NaN	NaN	1	t	1	14	\N
+191	12	Chiesa S. Maria Assunta in Cielo	42.5465270	11.9047550	Piazza della Rocca	Chiesa o edificio di culto	NaN	NaN	2	t	1	10	\N
+192	12	Chiesa di San Rocco	42.5465270	11.9047550	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	54	\N
+193	12	Centro Storico Di Capodimonte	42.5465270	11.9047550	NaN	Architettura fortificata	NaN	NaN	1	t	1	33	\N
+194	12	Palazzo del Comune	42.5465270	11.9047550	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	10	\N
+196	12	Chiesa di San Carlo	42.5465270	11.9047550	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	27	\N
+197	12	Biblioteca comunale Annibal Caro	42.4645280	11.7483661	Via Roma 31	Biblioteca	+39 0761870043	capodimonte@pelagus.it	1	t	1	82	\N
+198	12	Lungolago di Capodimonte	42.5547757	11.8910522	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	15	\N
+199	12	Palazzo Poniatowsky	42.5465270	11.9047550	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	83	\N
+201	13	Museo delle confraternite	42.2595445	12.1746311	via Annibal Caro	Museo, galleria e/o raccolta	0761 6679209	capranicasegreteria@hotmail.com	4	t	1	18	\N
+202	13	Area Picnic TRIALART	42.2564918	12.1776114	Antica Str. della Valle dei Santi	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	83	\N
+203	13	Villa Sansoni già Thierry	42.2564918	12.1776114	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	25	\N
+204	13	Chiesa San Francesco	42.2564918	12.1776114	Corso Francesco Petrarca, 42	Chiesa o edificio di culto	NaN	NaN	2	t	1	55	\N
+205	13	Biblioteca comunale Alfredo Signoretti	42.2559600	12.1817900	Piazza Sette Luglio	Biblioteca	+39 0761678040	capranicabiblioteca@thunder.it	3	t	1	48	\N
+206	13	Torri D'Orlando	42.2816490	12.1256527	NaN	Architettura fortificata	NaN	NaN	2	t	1	8	\N
+207	13	Castello degli Anguillara	42.3814501	12.2343732	NaN	Architettura fortificata	NaN	NaN	5	t	1	99	\N
+208	14	PALAZZO FARNESE (o Villa Farnese)	42.3289720	12.2366450	PIAZZALE FARNESE, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	91	\N
+209	14	Parrocchia S. Michele Arcangelo	42.3266250	12.2357660	Via Filippo Nicolai, 371	Chiesa o edificio di culto	NaN	NaN	2	t	1	46	\N
+210	14	Cantine del Palazzo Farnese-Cantinone	42.3266250	12.2357660	PIAZZALE FARNESE, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	7	\N
+211	14	Chiesa Madonna delle Grazie	42.3266250	12.2357660	Palombella	Chiesa o edificio di culto	NaN	NaN	3	t	1	3	\N
+212	14	Chiesa di Santa Teresa	42.3266250	12.2357660	Viale Santa Teresa, 101	Chiesa o edificio di culto	NaN	NaN	2	t	1	54	\N
+213	14	Biblioteca comunale	42.3266250	12.2357660	Viale Regina Margherita 2	Biblioteca	NaN	NaN	3	t	1	41	\N
+214	14	Scuderie Palazzo Farnese	42.3332388	12.2238967	Via Regina Margherita, 2	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	66	\N
+215	14	Museo multimediale di Caprarola	42.3266250	12.2357660	NaN	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	75	\N
+216	14	Biblioteca Teresiana	42.3268830	12.2326870	Viale S. Teresa 11	Biblioteca	+39 0761646013	NaN	3	t	1	87	\N
+217	14	S. Marco - Suore del Divino Amore	42.3266250	12.2357660	Via XX Settembre, 11	Chiesa o edificio di culto	NaN	NaN	2	t	1	27	\N
+218	14	Chiesa della Madonna della Consolazione	42.3266250	12.2357660	Piazza Vittorio Emanuele	Chiesa o edificio di culto	NaN	NaN	3	t	1	93	\N
+219	14	Chiesa Santa Lucia	42.3266250	12.2357660	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	67	\N
+220	14	Pozzo del Diavolo	42.3420478	12.1812291	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	70	\N
+221	14	Palazzo delle Scuderie	42.3266250	12.2357660	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	14	\N
+223	14	Palazzo Farnese	42.3279900	12.2377600	Piazzale Farnese; 1	Museo, galleria e/o raccolta	0761 646052	-	2	t	1	18	\N
+224	15	Chiesa della Madonna della Valle	42.3316250	12.2643660	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	92	\N
+225	15	Parrocchia di San Pietro Apostolo	42.3316250	12.2643660	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	76	\N
+227	15	Ex Chiesa Santa Maria dell’Immacolata Concezione	42.3316250	12.2643660	Piazza Santa Maria - Carbognano	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	75	\N
+228	16	Castel Porciano	42.2215157	12.3582771	NaN	Architettura fortificata	NaN	NaN	1	t	1	50	\N
+229	16	Ipogeo di San Leonardo	42.2517755	12.3717955	NaN	Area o parco archeologico	NaN	NaN	5	t	1	46	\N
+231	16	Parrocchia Sant'Antonio Abate	42.2517755	12.3717955	Via Cancelleria Vecchia, 3	Chiesa o edificio di culto	NaN	NaN	5	t	1	54	\N
+232	16	Castello di Filissano	42.2329720	12.3998550	NaN	Architettura fortificata	NaN	NaN	5	t	1	20	\N
+233	16	Castello di Ischi (o Castel Sant'Elia)	42.2517755	12.3717955	NaN	Architettura fortificata	NaN	NaN	2	t	1	13	\N
+234	16	Biblioteca comunale	42.2517755	12.3717955	Via Umberto I  5	Biblioteca	NaN	NaN	5	t	1	59	\N
+235	16	Pontificio Santuario Maria SS. "ad Rupes"	42.2492040	12.3761274	Piazza Cardinal Gasparri, 2	Chiesa o edificio di culto	NaN	NaN	2	t	1	26	\N
+236	16	Castello di Pizzo Jella	42.2517755	12.3717955	NaN	Architettura fortificata	NaN	NaN	5	t	1	44	\N
+237	17	Chiesa della Madonna della Neve	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	51	\N
+238	17	Borgo Medievale	42.6449715	12.2038975	NaN	Architettura fortificata	NaN	NaN	2	t	1	67	\N
+239	17	Palazzo Cialfi e Chiesa della Natività	42.6449715	12.2038975	Sermugnano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	69	\N
+240	17	Chiesa di S. Rocco	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	82	\N
+241	17	Palazzo Vannicelli	42.6449715	12.2038975	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	24	\N
+242	17	Piazza Maggiore	42.6449715	12.2038975	NaN	Monumento	NaN	NaN	1	t	1	61	\N
+243	17	Chiesa dei santi Giacomo e Filippo	42.6449715	12.2038975	Piazza Maggiore, 21	Chiesa o edificio di culto	NaN	NaN	5	t	1	89	\N
+244	17	Palazzo Comunale	42.6449715	12.2038975	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	9	\N
+245	17	Chiesa di S. Silvestro	42.6449715	12.2038975	Sermugnano	Chiesa o edificio di culto	NaN	NaN	4	t	1	4	\N
+247	17	Porta S. Giovanni	42.6449715	12.2038975	NaN	Architettura fortificata	NaN	NaN	2	t	1	89	\N
+248	17	Chiesa di S. Maria	42.6449715	12.2038975	Vaiano	Chiesa o edificio di culto	NaN	NaN	2	t	1	75	\N
+249	17	Teatro Tevere	42.6584217	12.1738538	NaN	Architettura civile	NaN	NaN	1	t	1	98	\N
+250	17	Rocca Monaldeschi	42.6362760	12.1136320	Piazza Monaldeschi, 61	Architettura fortificata	NaN	NaN	2	t	1	95	\N
+251	17	Cripta del Paradiso	42.6449715	12.2038975	NaN	Area o parco archeologico	NaN	NaN	1	t	1	69	\N
+252	17	Chiesa della Madonna delle Grazie	42.6449715	12.2038975	Sermugnano	Chiesa o edificio di culto	NaN	NaN	1	t	1	2	\N
+253	17	Ex Chiesa di S. Giovanni	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	65	\N
+254	18	Convento di S. Giovanni Battista	42.5597682	12.1257580	Via Roma, 5	Chiesa o edificio di culto	NaN	NaN	5	t	1	64	\N
+308	22	Palazzo Ridolfi	42.7383559	12.7363345	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	54	\N
+255	18	Biblioteca del Centro comunitario ex Convento S. Giovanni Battista	42.6855509	11.9065690	Via Roma 5	Biblioteca	+39 0761912275	NaN	4	t	1	33	\N
+256	18	Mura Medievali	42.5597682	12.1257580	NaN	Architettura fortificata	NaN	NaN	4	t	1	22	\N
+258	18	Chiesa di S. Carlo	42.5597682	12.1257580	Piazza S. Rocco, 14	Chiesa o edificio di culto	NaN	NaN	5	t	1	79	\N
+259	18	Biblioteca comunale	42.5597682	12.1257580	Piazza della Repubblica	Biblioteca	NaN	NaN	3	t	1	84	\N
+260	18	Chiesa di S. Rocco	42.5597682	12.1257580	Piazza S. Rocco	Chiesa o edificio di culto	NaN	NaN	1	t	1	24	\N
+261	18	Centro Storico di Celleno Vecchia	42.5597682	12.1257580	NaN	Architettura fortificata	NaN	NaN	2	t	1	40	\N
+262	18	Castello Orsini (o Castello di Celleno)	42.5630230	12.1439980	SP11	Architettura fortificata	NaN	NaN	2	t	1	58	\N
+263	18	Chiesa di S. Donato	42.5597682	12.1257580	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	24	\N
+264	18	Palazzo Caprini	42.5597682	12.1257580	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	49	\N
+265	19	Torre dell'Orologio	42.5104250	11.7716530	Via Camillo Benso Conte di Cavour	Architettura fortificata	NaN	NaN	5	t	1	98	\N
+266	19	Chiesa di Sant'Egidio	42.5104250	11.7716530	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	32	\N
+267	19	Rocca Farnese	42.5509834	11.9128378	NaN	Architettura fortificata	NaN	NaN	3	t	1	34	\N
+268	19	Fontana dei Delfini	42.5104250	11.7716530	Via Napoli	Monumento	NaN	NaN	1	t	1	98	\N
+269	19	Museo del brigantaggio di Cellere	42.5114590	11.7755321	Via Guglielmo Marconi - Cellere	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	24	\N
+270	19	Parrocchia Santa Maria Assunta	42.5104250	11.7716530	Piazza Castelfidardo	Chiesa o edificio di culto	NaN	NaN	3	t	1	30	\N
+271	19	Borgo di Pianiano a Cellere	42.5093370	11.7731670	Pianino	Architettura fortificata	NaN	NaN	1	t	1	16	\N
+272	19	Museo del brigantaggio	42.5111064	11.7732155	via Marconi; 20	Museo, galleria e/o raccolta	0761 451791 - 392 7013553	info@museobrigantaggiocellere.it	2	t	1	26	\N
+273	20	Chiesa Parrocchiale San Francesco	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	98	\N
+274	20	Via Amerina	42.2824888	12.3564351	NaN	Area o parco archeologico	NaN	NaN	5	t	1	5	\N
+275	20	Chiesa dell' Ospedale di S. Maria delle Grazie	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	66	\N
+276	20	Palazzo Privato Trocchi	42.2952260	12.4091700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	24	\N
+278	20	Castel Borghetto	42.2952260	12.4091700	NaN	Architettura fortificata	NaN	NaN	2	t	1	13	\N
+279	20	Ponte Clementino	42.2900920	12.4124479	Viale Repubblica, 4B	Monumento	NaN	NaN	1	t	1	67	\N
+280	20	Chiesa San Lorenzo	42.2952260	12.4091700	Via Attilio Bonanni, 6	Chiesa o edificio di culto	NaN	NaN	2	t	1	69	\N
+281	20	MUSEO ARCHEOLOGICO DELL'AGRO FALISCO E FORTE SANGALLO	42.2880258	12.4085077	Via del Forte; snc	Museo, galleria e/o raccolta	0761 513735	-	4	t	1	62	\N
+282	20	COMUNE DI CIVITA CASTELLANA - MUSEO DELLA CERAMICA 'CASIMIRO MARCANTONI'	42.2883780	12.4153931	VIA A. GRAMSCI 3	Museo, galleria e/o raccolta	7615901	comune.civitacastellana@legalmail.it	1	t	1	21	\N
+283	20	Fontana dei Draghi	42.2889815	12.4117738	Piazza Giacomo Matteotti, 48	Monumento	NaN	NaN	2	t	1	40	\N
+284	20	Biblioteca comunale Enrico Minio	42.2885200	12.4137100	Via U. Midossi 3	Biblioteca	+39 0761590233	bibliotecaminio@thunder.it	1	t	1	98	\N
+285	20	Chiesa di San Benedetto	42.2952260	12.4091700	Via Vincenzo Ferretti, 94/102	Chiesa o edificio di culto	NaN	NaN	4	t	1	65	\N
+286	20	Chiesa Conventuale di Santa Maria del Carmine	42.2952260	12.4091700	Via Vincenzo Ferretti, 157/161	Chiesa o edificio di culto	NaN	NaN	4	t	1	3	\N
+287	20	Biblioteca dell'ISIS Colasanti	42.3457025	12.3503741	Via E. Berlinguer	Biblioteca	NaN	NaN	4	t	1	79	\N
+288	20	Cattedrale di Santa Maria Maggiore	42.2952260	12.4091700	Piazza del Duomo	Chiesa o edificio di culto	NaN	NaN	3	t	1	32	\N
+289	20	Cappella della Madonna delle Rose	42.2952260	12.4091700	Via Madonna delle Rose, 42	Chiesa o edificio di culto	NaN	NaN	4	t	1	41	\N
+290	20	Chiesa Privata S. Antonio Abate	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	20	\N
+291	20	Chiesa della Madonna delle Piagge	42.2952260	12.4091700	Via Fontana Lunga, 1	Chiesa o edificio di culto	NaN	NaN	4	t	1	53	\N
+292	20	Auditorium Santa Chiara	42.2952260	12.4091700	Via Vincenzo Ferretti, 126	Chiesa o edificio di culto	NaN	NaN	3	t	1	45	\N
+293	20	Chiesa parrocchiale di S. Gregorio	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	56	\N
+294	20	Chiesa San Pietro	42.4185731	11.8703089	-	Chiesa o edificio di culto	-	-	2	t	1	16	\N
+295	20	Chiesa Conventuale di Santa Chiara	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	47	\N
+296	20	Palazzo Montalto	42.2952260	12.4091700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	58	\N
+297	20	Oratorio del Sacro Cuore di Maria	42.2952260	12.4091700	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	32	\N
+299	20	Palazzo Privato Della Ex Stazione di Posta	42.2952260	12.4091700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	21	\N
+300	21	Castello di S. Maria	42.6053622	12.1876584	Località Santa Maria	Architettura fortificata	NaN	NaN	3	t	1	39	\N
+301	21	Chiesa dell'Immacolata Concezione	42.6053622	12.1876584	S. Michele in Teverina	Chiesa o edificio di culto	NaN	NaN	5	t	1	27	\N
+302	21	Palazzo Montholon	42.6053622	12.1876584	S. Michele in Teverina	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	69	\N
+303	21	Chiesa di S. Michele Arcangelo	42.6053622	12.1876584	S. Michele in Teverina	Chiesa o edificio di culto	NaN	NaN	4	t	1	34	\N
+305	21	Palazzo Mottura	42.6053622	12.1876584	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	29	\N
+306	21	Torre Monaldeschi	42.7555416	11.9443469	Piazza Unità D'Italia, 231	Architettura fortificata	NaN	NaN	1	t	1	2	\N
+307	21	Chiesa dei SS. Pietro e Callisto	42.6053622	12.1876584	Piazza Unità D'Italia, 3	Chiesa o edificio di culto	NaN	NaN	3	t	1	37	\N
+309	22	Chiesa di S. Egidio	42.3449260	12.3556680	la Cannara	Chiesa o edificio di culto	NaN	NaN	5	t	1	89	\N
+310	22	Chiesa della Madonna delle Grazie	42.3449260	12.3556680	Madonna delle Grazie	Chiesa o edificio di culto	NaN	NaN	3	t	1	93	\N
+311	22	Biblioteca comunale S. Valentino	42.3323141	12.2659463	Piazza XX settembre 15	Biblioteca	+39 0761572472	bibliocorchiano@libero.it	1	t	1	34	\N
+312	22	Chiesa di S. Maria del Soccorso	42.3449260	12.3556680	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	31	\N
+313	22	Torre di S. Bruna	42.8351062	12.7056209	Castellaccio /              Santa Bruna	Architettura fortificata	NaN	NaN	2	t	1	10	\N
+314	22	Chiesa di S. Maria del Rosario	42.2185940	12.4158720	Via Vittorio Emanuele, III	Chiesa o edificio di culto	NaN	NaN	1	t	1	95	\N
+315	22	Chiesa di San Biagio	42.3449260	12.3556680	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	47	\N
+316	22	Forre e Borgo di Corchiano	42.3454859	12.3606221	Località Madonna del Soccorso	Architettura fortificata	NaN	NaN	2	t	1	41	\N
+317	22	Casale (ex chiesa) di S. Bruna	42.3449260	12.3556680	Castellaccio /              Santa Bruna	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	27	\N
+319	22	Palazzo Mozzini	42.3449260	12.3556680	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	78	\N
+320	23	Biblioteca comunale Silvano Ricci	42.3344178	12.2959506	Piazza del Duomo, 17	Biblioteca	+39 0761569078	p.sanapo@bibliotecafabricadiroma.it	4	t	1	24	\N
+321	24	Chiesa di S. Maria di Falleri	42.3351260	12.2997670	Via dei Falisci, 40	Chiesa o edificio di culto	NaN	NaN	1	t	1	85	\N
+322	24	Chiesa Collegiata di San Silvestro Papa	42.3351260	12.2997670	Piazza Duomo, 221	Chiesa o edificio di culto	NaN	NaN	1	t	1	40	\N
+323	24	Falerii Novi	42.2995342	12.3591211	(Falerii Novi)	Architettura fortificata	NaN	NaN	5	t	1	60	\N
+324	24	Rocca Farnese (o Castello Farnese)	42.5509980	11.9128270	Via A. Cencelli, 21	Architettura fortificata	NaN	NaN	4	t	1	23	\N
+325	24	Cortile del casale farnesiano	42.3351260	12.2997670	(Falerii Novi)	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	30	\N
+326	24	Casale farnesiano	42.3351260	12.2997670	(Falerii Novi)	Architettura fortificata	NaN	NaN	3	t	1	71	\N
+327	25	Castel Paterno	42.2261788	12.4431811	NaN	Architettura fortificata	NaN	NaN	4	t	1	1	\N
+328	25	Chiesa della Misericordia	42.2261788	12.4431811	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	4	\N
+329	25	Eremo Di San Famiano	42.2464107	12.4304602	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	6	\N
+330	25	Porta del Borgo	42.2261788	12.4431811	NaN	Architettura fortificata	NaN	NaN	1	t	1	53	\N
+331	25	Castel Fogliano (o Foiano)	42.2261788	12.4431811	NaN	Architettura fortificata	NaN	NaN	2	t	1	68	\N
+332	25	Chiesa di S. Giovanni Decollato	42.2261788	12.4431811	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	89	\N
+333	25	Chiesa della Madonna di Pietrafitta	42.2261788	12.4431811	Via Belvedere	Chiesa o edificio di culto	NaN	NaN	4	t	1	57	\N
+334	25	Rocca degli Anguillara (o Palazzo Anguillara, Castello Anguillara, Casale degli Anguillara-casaletto della Carlotta)	42.2261788	12.4431811	Piazza della Collegiata	Architettura fortificata	NaN	NaN	4	t	1	40	\N
+335	25	Chiesa di S. Agostino	42.2261788	12.4431811	Piazza della Collegiata	Chiesa o edificio di culto	NaN	NaN	3	t	1	36	\N
+336	25	Chiesa di S. Giuliano	42.2261788	12.4431811	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	42	\N
+337	26	Riserva Naturale Regionale Selva del Lamone	42.5494260	11.7256520	Loc.tà Bottino s.n.c.	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	61	\N
+338	26	Centro Storico di Farnese	42.5477480	11.7249020	NaN	Architettura fortificata	NaN	NaN	2	t	1	51	\N
+339	26	Chiesa del SS. Salvatore	42.5494260	11.7256520	Via XX Settembre, 273	Chiesa o edificio di culto	NaN	NaN	1	t	1	36	\N
+340	26	Chiesa di S. Maria della Neve	42.5494260	11.7256520	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	99	\N
+341	26	Chiesa rurale di S. Anna	42.5494260	11.7256520	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	49	\N
+342	26	Cascata del Salabrone	42.5494260	11.7256520	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	57	\N
+343	26	Chiesa di S. Francesco	42.5494260	11.7256520	Cappuccini	Chiesa o edificio di culto	NaN	NaN	4	t	1	26	\N
+344	26	Palazzo Comunale	42.5494260	11.7256520	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	32	\N
+345	26	Convento di San Rocco	42.5494260	11.7256520	Via Circonvallazione, 14	Chiesa o edificio di culto	NaN	NaN	1	t	1	3	\N
+346	26	Complesso monastero e chiesa delle Clarisse	42.5494260	11.7256520	Corso Vittorio Emanuele, 68	Chiesa o edificio di culto	NaN	NaN	4	t	1	65	\N
+347	26	MUSEO CIVICO FERRANTE RITTATORE VONWILLER	42.5498000	11.7270600	VIA COLLE SAN MARTINO; 16	Museo, galleria e/o raccolta	761458849	museofarnese@virgilio.it  museofarnese@simulabo.it	5	t	1	16	\N
+348	26	Chiesa di S. Maria delle Grazie	42.5494260	11.7256520	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	50	\N
+349	27	Cinema Teatro	42.3786562	12.4037094	Piazza S.Maria,1	Architettura civile	NaN	NaN	3	t	1	76	\N
+350	27	Castello Di Rocchette	42.3947666	12.4718039	NaN	Architettura fortificata	NaN	NaN	3	t	1	100	\N
+351	27	Complesso monastico di S. Benedetto	42.3732869	12.4028042	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	83	\N
+352	27	Chiesa di S. Maria Assunta	42.3732869	12.4028042	Piazza Duomo, 1	Chiesa o edificio di culto	NaN	NaN	3	t	1	49	\N
+353	27	Castello Palazzo Ducale (o Castello Altemps)	42.4365350	12.7880590	Via degli Altemps, 8	Chiesa o edificio di culto	NaN	NaN	5	t	1	25	\N
+354	27	Centro Storico	42.3732869	12.4028042	NaN	Architettura fortificata	NaN	NaN	4	t	1	61	\N
+355	27	Biblioteca comunale	42.3732869	12.4028042	Via S. Chiara 3	Biblioteca	NaN	NaN	3	t	1	64	\N
+356	27	Chiesa di San Famiano	42.3732869	12.4028042	SP34	Chiesa o edificio di culto	NaN	NaN	3	t	1	21	\N
+357	27	Chiesa di S. Agostino	42.3732869	12.4028042	Via Maria de Mattias, 1	Chiesa o edificio di culto	NaN	NaN	5	t	1	60	\N
+358	27	Palazzo Municipale	42.3732869	12.4028042	Piazza Duomo, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	53	\N
+359	27	Chiesa di San Filippo e Giacomo	42.3732869	12.4028042	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	50	\N
+360	27	MUSEO DI GALLESE E CENTRO CULTURALE 'MARCO SCACCHI'	42.3716913	12.4026010	VIA LORENZO FILIPPINI; SNC - GALLESE	Museo, galleria e/o raccolta	761495503	museo@comune.gallese.vt.it	3	t	1	85	\N
+361	27	Palazzo Massa	42.3732869	12.4028042	Via Filippini 7a	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	60	\N
+362	27	Chiesa di S. Lorenzo Martire	42.3732869	12.4028042	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	56	\N
+363	28	Chiesa di S. Maria Maddalena	42.6436919	11.8548880	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	11	\N
+364	28	Chiesa di S. Magno	42.6436919	11.8548880	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	9	\N
+365	28	Palazzo Farnese	42.6436919	11.8548880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	14	\N
+366	28	Biblioteca comunale	42.6436919	11.8548880	Piazza L. Palombini 2	Biblioteca	NaN	NaN	4	t	1	100	\N
+367	28	MUSEO DEL COSTUME FARNESIANO	42.6440900	11.8561900	PIAZZA LUIGI PALOMBINI; 2	Museo, galleria e/o raccolta	761456082	comunedigradoli@legalmail.it	1	t	1	90	\N
+368	28	Chiesa di S. Michele Arcangelo	42.6436919	11.8548880	Via Camillo Benso Conte di Cavour, 98	Chiesa o edificio di culto	NaN	NaN	2	t	1	22	\N
+369	28	Museo della chiesa di Santa Maria Maddalena	42.6436919	11.8548880	Via Cavour - Gradoli	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	23	\N
+370	29	Parrocchia S. Martino Vescovo	42.5749030	12.2044306	Piazza G. Marconi, 14	Chiesa o edificio di culto	NaN	NaN	1	t	1	95	\N
+371	29	Complesso di S. Leonardo	42.5749030	12.2044306	S. Leonardo	Chiesa o edificio di culto	NaN	NaN	4	t	1	85	\N
+372	29	Chiesa di San Vincenzo	42.5749030	12.2044306	Sipicciano	Chiesa o edificio di culto	NaN	NaN	2	t	1	46	\N
+373	29	Chiesa di San Bernardino	42.5749030	12.2044306	Sipicciano	Chiesa o edificio di culto	NaN	NaN	4	t	1	89	\N
+374	29	Chiesa della Madonna delle Vigne	42.5749030	12.2044306	Località S.Francesco, 20	Chiesa o edificio di culto	NaN	NaN	2	t	1	1	\N
+375	29	Palazzo Baronale	42.5749030	12.2044306	Sipicciano	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	70	\N
+376	29	Chiesa di Santa Maria Assunta	42.5749030	12.2044306	Sipicciano	Chiesa o edificio di culto	NaN	NaN	3	t	1	76	\N
+377	29	Santuario della Madonna del Castellonchio	42.5749030	12.2044306	Selve	Chiesa o edificio di culto	NaN	NaN	4	t	1	39	\N
+378	29	Castello di Sipicciano (o Castello Baglioni, Bulgarini)	42.5749030	12.2044306	Sipicciano	Architettura fortificata	NaN	NaN	2	t	1	92	\N
+379	30	Casale Poggio la Camera	42.6745290	11.8722530	Poggio la Camera	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	30	\N
+380	30	Monumento a Paolo di Castro	42.6745290	11.8722530	NaN	Monumento	NaN	NaN	1	t	1	49	\N
+381	30	Palazzo Comunale	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	21	\N
+382	30	Chiesa di Santa Maria di Castelvecchio	42.6745290	11.8722530	Castelvecchio	Chiesa o edificio di culto	NaN	NaN	3	t	1	79	\N
+383	30	Fontana Grande	42.6745290	11.8722530	Piazza Cardinale Carlo Salotti, 13	Monumento	NaN	NaN	2	t	1	92	\N
+384	30	Chiesa di S. Maria delle Colonne	42.6745290	11.8722530	S. Maria delle Colonne	Chiesa o edificio di culto	NaN	NaN	1	t	1	19	\N
+385	30	Palazzo Orzi	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	79	\N
+386	30	Palazzo Presutti	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	33	\N
+387	30	Casale Borgo	42.6745290	11.8722530	Val di Lago	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	82	\N
+388	30	Palazzo Cordelli	42.6751490	11.8741381	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	29	\N
+389	30	Chiesa di San Marco	42.6745290	11.8722530	Piazza Paolo di Castro, 17	Chiesa o edificio di culto	NaN	NaN	1	t	1	39	\N
+390	30	Chiesa di San Pietro Apostolo	42.6745290	11.8722530	Via Unione, 1A	Chiesa o edificio di culto	NaN	NaN	3	t	1	6	\N
+391	30	MUSEO CIVITA	42.6743629	11.8725378	PIAZZA GIACOMO MATTEOTTI, snc	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	4	\N
+392	30	Museo archeologico e delle tradizioni popolari	42.6745290	11.8722530	piazza Giacomo Matteotti	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	30	\N
+393	30	Palazzo Iuzzi	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	40	\N
+394	30	Necropoli di Centocamere	42.6745290	11.8722530	NaN	Area o parco archeologico	NaN	NaN	5	t	1	1	\N
+395	30	museo archeologico e delle tradizioni popolari	42.6852104	11.9022259	piazza Giacomo Matteotti	Museo, galleria e/o raccolta	0763 796983	bibliotecagrotte@libero.it	3	t	1	43	\N
+396	30	Palazzo Tramontana	42.6745290	11.8722530	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	36	\N
+397	30	Biblioteca comunale	42.6745290	11.8722530	Piazza della Rocca 9	Biblioteca	NaN	NaN	5	t	1	15	\N
+398	30	Chiesa di Santa Maria dell' Annunziata	42.6745290	11.8722530	Annunziata	Chiesa o edificio di culto	NaN	NaN	1	t	1	32	\N
+399	30	Cappella del SS. Sacramento	42.6745290	11.8722530	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	82	\N
+400	30	Grotte di Castro	42.6745290	11.8722530	Grotte di Castro - Grotte di Castro	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	94	\N
+401	30	Museo della Basilica - Santuario di Maria Santissima del Suffragio	42.6745290	11.8722530	Piazza San Giovanni - Grotte di Castro	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	93	\N
+402	31	Romitori di Ischia di Castro	42.5442470	11.7530960	NaN	Architettura fortificata	NaN	NaN	2	t	1	10	\N
+403	31	Monastero Dei SS. Filippo e Giacomo	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	84	\N
+404	31	Chiesa della Madonna delle Rose	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	9	\N
+405	31	Biblioteca comunale	42.5446546	11.7540140	Via Roma 5	Biblioteca	NaN	NaN	5	t	1	7	\N
+406	31	Rocca Farnese (o Palazzo Farnese)	42.5509980	11.9128270	Piazza Regina Margherita, 1	Architettura fortificata	NaN	NaN	5	t	1	26	\N
+407	31	Ischia di Castro (o complesso antica Città di Castro)	42.5442470	11.7530960	Ischia di Castro - Ischia di Castro	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	65	\N
+408	31	Chiesa di S. Giuseppe	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	26	\N
+409	31	Rovine di Castro	42.5446546	11.7540140	NaN	Architettura fortificata	NaN	NaN	5	t	1	34	\N
+410	31	Santuario della Madonna del Giglio	42.5446546	11.7540140	(Fosso Cellerano)	Chiesa o edificio di culto	NaN	NaN	4	t	1	0	\N
+411	31	Duomo di S. Ermete	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	18	\N
+412	31	Chiesa della SS. Trinità	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	89	\N
+413	31	Chiesa di S. Rocco	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	43	\N
+888	58	Fontana Dei Fiumi	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	4	t	1	94	\N
+414	31	Chiesa di S. Maria Intus Civitatem	42.5446546	11.7540140	Rovine di Castro	Chiesa o edificio di culto	NaN	NaN	4	t	1	72	\N
+415	31	Chiesa della Madonna della Neve	42.5446546	11.7540140	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	26	\N
+416	31	MUSEO CIVICO ARCHEOLOGICO 'PIETRO E TURIDDO LOTTI'	42.5443643	11.7559713	PIAZZA CAVALIERI VITTORIO VENETO	Museo, galleria e/o raccolta	0761-425455	ischia_museocivico@libero.it	4	t	1	83	\N
+418	32	Chiesa  della Madonna della Cava	42.6290280	11.8274530	SP117	Chiesa o edificio di culto	NaN	NaN	4	t	1	79	\N
+419	32	Palazzo Farnese	42.6290280	11.8274530	cd. Rocca	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	12	\N
+420	32	Fontana di Canale	42.6290280	11.8274530	NaN	Monumento	NaN	NaN	1	t	1	39	\N
+421	32	Fontana del Piscero	42.6290280	11.8274530	NaN	Monumento	NaN	NaN	3	t	1	22	\N
+422	32	Fontana Ducale	42.6290280	11.8274530	Via Ripetta, 16	Monumento	NaN	NaN	2	t	1	52	\N
+423	32	I Quattro Archi	42.6290280	11.8274530	NaN	Architettura fortificata	NaN	NaN	4	t	1	74	\N
+424	32	Chiesa  di S. Clemente	42.6290280	11.8274530	Piazza S. Clemente, 11	Chiesa o edificio di culto	NaN	NaN	2	t	1	57	\N
+425	32	Piazza IV Novembre	42.6290280	11.8274530	Corso Vittorio Emanuele III	Monumento	NaN	NaN	3	t	1	78	\N
+589	43	Rocca di Piansano	42.5230610	11.8300000	NaN	Architettura fortificata	NaN	NaN	3	t	1	79	\N
+426	32	Chiesa di S. Giuseppe	42.6290280	11.8274530	Via S. Giuseppe, 1	Chiesa o edificio di culto	NaN	NaN	5	t	1	89	\N
+427	32	Chiesa di S. Rocco	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	5	\N
+428	32	Chiesa di Santi Pietro e Paolo	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	70	\N
+429	32	Biblioteca comunale	42.6290280	11.8274530	Via Piave 3	Biblioteca	NaN	NaN	3	t	1	77	\N
+430	32	MUSEO DELLA TERRA	42.6300003	11.8280678	VIA DELL'OSTERIA; SNC	Museo, galleria e/o raccolta	761459041	museo@comune.latera.vt.it	5	t	1	12	\N
+431	32	Piazza Della Rocca	42.2744493	12.0256516	Piazza della Rocca	Monumento	NaN	NaN	5	t	1	38	\N
+432	32	Chiesa della Madonna del Carmine	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	53	\N
+433	32	Chiesa di S. Sebastiano	42.6290280	11.8274530	Via S. Sebastiano, 660	Chiesa o edificio di culto	NaN	NaN	5	t	1	14	\N
+434	32	Chiesa della Madonna delle Grazie	42.6290280	11.8274530	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	44	\N
+435	33	Castello di Seppie	42.6362310	12.1087590	NaN	Architettura fortificata	NaN	NaN	1	t	1	36	\N
+436	33	Fontana La Pucciotta	42.6362310	12.1087590	Piazza S. Giovanni Battista, 8/1	Monumento	NaN	NaN	5	t	1	28	\N
+437	33	Chiesa di S. Giovanni Battista	42.6362310	12.1087590	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	5	\N
+438	33	Cappella del Castello di Seppie	42.6362310	12.1087590	Seppie	Chiesa o edificio di culto	NaN	NaN	4	t	1	83	\N
+439	33	Ex Palazzo Municipale	42.6362310	12.1087590	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	46	\N
+440	33	Torre del Sole o di Santa Caterina	42.6362310	12.1087590	NaN	Architettura fortificata	NaN	NaN	4	t	1	80	\N
+441	33	Chiesa di S. Caterina	42.6362310	12.1087590	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	95	\N
+442	33	Teatro dei Calanchi	42.6521484	12.1040617	Via Roma 39	Architettura civile	NaN	NaN	1	t	1	79	\N
+443	33	MUSEO NATURALISTICO DI LUBRIANO	42.6364620	12.1108139	piazza Col di Lana; 12	Museo, galleria e/o raccolta	0761 780391 - 327 0289027	info@museolubriano.com	4	t	1	76	\N
+444	33	Grotta di S. Procolo	42.6362310	12.1087590	NaN	Area o parco archeologico	NaN	NaN	2	t	1	95	\N
+445	33	Torre Medievale (o Torre Monaldeschi)	42.6362310	12.1087590	Via della Torre, 171	Architettura fortificata	NaN	NaN	4	t	1	90	\N
+446	33	Chiesa della Madonna del Poggio	42.6362310	12.1087590	Via G. Marconi, 271	Chiesa o edificio di culto	NaN	NaN	2	t	1	32	\N
+447	34	Palazzo Comunale	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	26	\N
+448	34	Palazzo Orsini-Farnese	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	76	\N
+449	34	Palazzo Tarquini	42.5339112	11.9249120	 p.za Umberto I	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	62	\N
+450	34	Palazzo Sforza-Ciotti	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	53	\N
+451	34	Biblioteca comunale Alfredo Tarquini	42.5348010	11.9252188	Via N. Bixio 10	Biblioteca	+39 0761870476	bibmarta@inwind.it	3	t	1	59	\N
+453	34	Chiesa del Santissimo Crocifisso	42.5339112	11.9249120	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	37	\N
+454	34	Sito Templare di Castell'Araldo	42.5339112	11.9249120	NaN	Architettura fortificata	NaN	NaN	1	t	1	28	\N
+455	34	Chiesa di S. Marta e S. Biagio	42.5339112	11.9249120	Lg. S. Biagio, 5	Chiesa o edificio di culto	NaN	NaN	4	t	1	32	\N
+456	34	Chiesa Madonna del Monte	42.5339112	11.9249120	Strada Provinciale Verentana	Chiesa o edificio di culto	NaN	NaN	5	t	1	97	\N
+457	34	Torre dell' Orologio	42.5339112	11.9249120	Via del Castello, 25	Architettura fortificata	NaN	NaN	2	t	1	26	\N
+458	34	Lungolago di Marta	42.5350730	11.9269318	Via Laertina, 1181	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	49	\N
+459	34	Chiesa della Madonna del Castagno	42.5339112	11.9249120	Via Capodimonte	Chiesa o edificio di culto	NaN	NaN	4	t	1	33	\N
+460	34	Palazzo Vescovile	42.5339112	11.9249120	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	67	\N
+461	34	Isola Martana	42.5496684	11.9529794	Isola Martana	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	58	\N
+462	35	Madonna dello Speronello	42.3534605	11.6063117	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	46	\N
+463	35	Parco Archeologico Naturalistico di Vulci	42.4107656	11.6555277	NaN	Area o parco archeologico	NaN	NaN	1	t	1	8	\N
+464	35	Chiesa di Santa Maria Assunta	42.3534605	11.6063117	Via S. Paolo della Croce, 3	Chiesa o edificio di culto	NaN	NaN	2	t	1	22	\N
+465	35	Vulci	42.3558920	11.5922396	NaN	Area o parco archeologico	NaN	NaN	5	t	1	89	\N
+466	35	Biblioteca comunale	42.3534605	11.6063117	Via Tirrenia 6	Biblioteca	NaN	NaN	3	t	1	42	\N
+467	35	Castello Guglielmi	42.3534605	11.6063117	Circonvallazione Vulci, 23	Architettura fortificata	NaN	NaN	4	t	1	78	\N
+468	35	Centro Storico	42.3534605	11.6063117	NaN	Architettura fortificata	NaN	NaN	5	t	1	39	\N
+469	35	Fontana del Mascherone	42.3534605	11.6063117	Via del Mascherone, 9	Monumento	NaN	NaN	3	t	1	46	\N
+470	35	Ponte del Diavolo	42.3534605	11.6063117	NaN	Monumento	NaN	NaN	3	t	1	0	\N
+471	35	Chiesa di Santa Croce	42.3534605	11.6063117	Piazza Felice Guglielmi, 19	Chiesa o edificio di culto	NaN	NaN	2	t	1	31	\N
+472	35	Teatro Comunale Lea Padovani	42.3534605	11.6063117	Via Aurelia Tarquinia, 58	Architettura civile	NaN	NaN	3	t	1	61	\N
+473	36	Fontana a largo S. Corona	42.2665210	11.8937590	NaN	Monumento	NaN	NaN	1	t	1	68	\N
+474	36	Chiesa del S. Spirito a largo S. Corona	42.2665210	11.8937590	Via Santo Spirito	Chiesa o edificio di culto	NaN	NaN	4	t	1	47	\N
+475	36	Chiesa dell'Addolorata	42.2665210	11.8937590	Via Vittorio Emanuele, 1091	Chiesa o edificio di culto	NaN	NaN	3	t	1	31	\N
+476	36	Castello di Rocca Respampani	42.2665210	11.8937590	NaN	Architettura fortificata	NaN	NaN	5	t	1	33	\N
+477	36	Palazzo del Cardinale Ludovico Calino	42.2665210	11.8937590	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	25	\N
+478	36	Biblioteca comunale	42.2665210	11.8937590	Via Vittorio Emanuele 41	Biblioteca	NaN	NaN	2	t	1	69	\N
+479	36	Fontana del Mascherone	42.2665210	11.8937590	NaN	Monumento	NaN	NaN	1	t	1	13	\N
+480	36	Teatro Comunale Rotonda	42.2665210	11.8937590	Piazza XXIV maggio	Architettura civile	NaN	NaN	1	t	1	72	\N
+481	37	Teatro Eliseo	42.5599207	12.0297937	Corso Cavour 55	Architettura civile	NaN	NaN	5	t	1	79	\N
+482	37	Palazzo Scoppola Iacopini	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	18	\N
+483	37	Chiesa di San Francesco	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	67	\N
+484	37	Chiesa di Santa Maria di Montedoro	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	9	\N
+485	37	Basilica di San Flaviano	42.5379248	12.0309974	Via San Flaviano	Chiesa o edificio di culto	NaN	NaN	4	t	1	36	\N
+486	37	Biblioteca comunale	42.5379248	12.0309974	Largo S. Pietro 1	Biblioteca	NaN	NaN	1	t	1	73	\N
+487	37	Chiesa di Santa Maria delle Grazie	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	80	\N
+488	37	Palazzo Renzi-Doria	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	6	\N
+489	37	Biblioteca del Seminario vescovile Barbarigo	42.5357331	12.0285281	Via Trento, 57	Biblioteca	+39 0761.826070	cedi.do@libero.it	5	t	1	41	\N
+490	37	Museo dell'architettura di Antonio da Sangallo Il Giovane	42.5379248	12.0309974	Piazza Urbano V - Montefiascone	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	5	\N
+491	37	Chiesa di Santa Maria della Potenza o del Divino Amore	42.5379248	12.0309974	Corso Camillo Benso Conte di Cavour, 64A	Chiesa o edificio di culto	NaN	NaN	3	t	1	95	\N
+492	37	Palazzo Buti-Volpiani	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	81	\N
+493	37	Monumento al Pellegrino	42.5379248	12.0309974	Piazza Urbano V	Monumento	NaN	NaN	5	t	1	29	\N
+494	37	Rocca dei Papi	42.5366122	12.0280798	Piazza Urbano V	Architettura fortificata	NaN	NaN	4	t	1	18	\N
+495	37	Biblioteca dell'Istituto tecnico commerciale e per geometri Carlo Alberto Dalla Chiesa	42.5457646	12.0329183	Via A. Moro 1	Biblioteca	NaN	NaN	1	t	1	58	\N
+496	37	Chiesa di Sant' Andrea in Campo	42.5379248	12.0309974	Piazza Vittorio Emanuele, 9	Chiesa o edificio di culto	NaN	NaN	3	t	1	31	\N
+497	37	Basilica di Santa Margherita	42.5379248	12.0309974	Piazzale Santa Margherita	Chiesa o edificio di culto	NaN	NaN	3	t	1	85	\N
+498	37	Convento di S. Agostino	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	26	\N
+499	37	Chiesa di Santa Maria della Neve	42.5379248	12.0309974	Via XXIV Maggio, 4	Chiesa o edificio di culto	NaN	NaN	4	t	1	26	\N
+500	37	Museo dell'architettura di Antonio da Sangallo il Giovane	42.5368520	12.0276249	piazza della Rocca	Museo, galleria e/o raccolta	0761 832060	museosangallo@comune.montefiascone.vt.it	4	t	1	7	\N
+501	37	Palazzo Codini	42.5379248	12.0309974	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	16	\N
+502	38	Antica Fontana Papa Leone	41.7537880	12.2894570	NaN	Monumento	NaN	NaN	3	t	1	27	\N
+503	38	Lago di Monterosi	42.2062426	12.3013347	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	46	\N
+504	38	Chiesa di San Giuseppe	42.1958230	12.3084690	Via Caduti di tutte le guerre, 2/1	Chiesa o edificio di culto	NaN	NaN	4	t	1	35	\N
+505	38	Palazzo del Cardinale	42.1958230	12.3084690	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	45	\N
+506	38	Parrocchia S. Croce	42.1958230	12.3084690	Via Roma, 2	Chiesa o edificio di culto	NaN	NaN	5	t	1	71	\N
+507	39	Isola Conversina	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	2	t	1	24	\N
+508	39	Chiesa Di San Rocco	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	64	\N
+509	39	Castello di Ponte Nepesino	42.2151905	12.3364733	Via Umilta, 5277	Architettura fortificata	NaN	NaN	3	t	1	9	\N
+510	39	Palazzo comunale	42.2428240	12.3455700	Piazza del Comune, 20	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	90	\N
+511	39	Chiesa di San Vito	42.2428240	12.3455700	Via S. Vito, 21	Chiesa o edificio di culto	NaN	NaN	4	t	1	38	\N
+512	39	Palazzo Celsi	42.2428240	12.3455700	Via Garibaldi, 116	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	54	\N
+513	39	La Via Armerina	42.2428240	12.3455700	NaN	Area o parco archeologico	NaN	NaN	3	t	1	64	\N
+514	39	Convento dell' ordine dei canonici  di S. Agostino	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	2	\N
+515	39	Chiesa di S. Pietro Apostolo	42.2428240	12.3455700	Via di S. Pietro	Chiesa o edificio di culto	NaN	NaN	4	t	1	10	\N
+516	39	Necropoli dei Tre Ponti	42.1295380	12.0331730	NaN	Area o parco archeologico	NaN	NaN	3	t	1	84	\N
+517	39	Porta Porciana	42.2418927	12.3495192	NaN	Architettura fortificata	NaN	NaN	2	t	1	0	\N
+518	39	Palazzo Benincasa	42.2428240	12.3455700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	12	\N
+519	39	Chiesa di San Silvestro	42.2428240	12.3455700	Via Garibaldi, 51	Chiesa o edificio di culto	NaN	NaN	3	t	1	19	\N
+520	39	Palazzo della "Corte o Curia" sede del tribunale	42.2428240	12.3455700	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	10	\N
+521	39	Biblioteca dell'Istituto superiore di scienze religiose	42.2486690	12.3440930	Via monsignor G. Gori, 11	Biblioteca	+39 0761.556394	info@issr.eu	2	t	1	39	\N
+522	39	Torre dei Valle	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	2	t	1	72	\N
+523	39	Chiesa di S. Maria di Falleri	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	95	\N
+524	39	Porta Nica	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	5	t	1	9	\N
+525	39	Catacomba di Santa Savinilla	42.2443524	12.3399837	Via del Cimitero, 29	Area o parco archeologico	NaN	NaN	1	t	1	83	\N
+526	39	Chiesa di San Biagio	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	29	\N
+527	39	MUSEO CIVICO ARCHEOLOGICO DI NEPI	42.2429920	12.3478650	VIA XIII SETTEMBRE; 1	Museo, galleria e/o raccolta	761570604	museo@comune.nepi.vt.it	2	t	1	52	\N
+528	39	Chiesa di San Giovanni	42.2428240	12.3455700	Piazza S. Giovanni, 7	Chiesa o edificio di culto	NaN	NaN	5	t	1	56	\N
+529	39	Cascata di Cavaterra	42.2407464	12.3453374	Via Porta Romana	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	45	\N
+530	39	Villa  tenuta "Casale" o tenuta "Pazzielli"	42.2428240	12.3455700	Casale	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	47	\N
+531	39	Acquedotto di Nepi	42.2440210	12.3444280	Piazzale della Bottata, 19	Area o parco archeologico	NaN	NaN	4	t	1	65	\N
+532	39	Rocca dei Borgia (o Castello Borgiano)	42.2417390	12.3456400	Via Enrico Galvaligi	Architettura fortificata	NaN	NaN	4	t	1	83	\N
+533	39	Chiesa di San Tolomeo	42.2421242	12.3533679	Via Garibaldi, 165	Chiesa o edificio di culto	NaN	NaN	1	t	1	63	\N
+534	39	Cascata del Picchio	42.2428240	12.3455700	Via Garibaldi	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	30	\N
+535	39	Duomo di S. Maria Assunta e Anastasia	42.2428240	12.3455700	Via Luigi Cadorna, 6	Chiesa o edificio di culto	NaN	NaN	2	t	1	85	\N
+536	39	Chiesa Parrocchiale di S. Croce	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	87	\N
+537	39	Porta Romana	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	3	t	1	95	\N
+538	40	Chiesa di S. Maria della Concezione	42.6928561	11.8163999	Piazza Papa Pio XII, 2	Chiesa o edificio di culto	NaN	NaN	1	t	1	48	\N
+539	40	Chiesa della Madonna delle Grazie	42.6928561	11.8163999	Madonna delle Grazie	Chiesa o edificio di culto	NaN	NaN	2	t	1	75	\N
+540	40	Chiesa della Madonna del Piano	42.8933120	11.5380150	Madonna del Piano	Chiesa o edificio di culto	NaN	NaN	5	t	1	11	\N
+541	40	Castello di Onano	42.6922190	11.8169410	NaN	Architettura fortificata	NaN	NaN	1	t	1	93	\N
+542	41	Convento di Sant'Antonio da Padova	42.1593028	12.1383489	Via Roma, 28	Chiesa o edificio di culto	NaN	NaN	2	t	1	9	\N
+543	41	Parco della Mola	42.0898778	12.2867656	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	27	\N
+544	41	Chiesa di Sant'Anna	42.1593028	12.1383489	Via Sant Anna, 59	Chiesa o edificio di culto	NaN	NaN	4	t	1	66	\N
+545	41	La Faggeta Di Oriolo Romano	42.1613021	12.1520257	Via delle Cerase, 31	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	78	\N
+546	41	Parrocchia San Giorgio Martire	42.1593028	12.1383489	Piazza Claudia, 10	Chiesa o edificio di culto	NaN	NaN	5	t	1	62	\N
+547	41	PALAZZO ALTIERI	41.8964245	12.4798454	PIAZZA UMBERTO PRIMO, 1	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	4	\N
+548	41	Biblioteca comunale	42.1593028	12.1383489	Piazza Claudia	Biblioteca	NaN	NaN	5	t	1	83	\N
+549	41	Parco di Villa Altieri	42.1593028	12.1383489	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	4	\N
+550	41	Palazzo Altieri	42.1590238	12.1380751	Piazza Umberto I; 1	Museo, galleria e/o raccolta	699837145	-	4	t	1	95	\N
+551	42	Palazzo Alberti	42.4605984	12.3856056	via Regina Margherita	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	31	\N
+552	42	Santuario della Santissima Trinità	42.4605984	12.3856056	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	3	\N
+553	42	Palazzo Roberteschi	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	42	\N
+554	42	Chiesa di S. Agostino	42.4605984	12.3856056	Via Giordano Bruno, 11	Chiesa o edificio di culto	NaN	NaN	4	t	1	68	\N
+555	42	Museo archeologico di Orte	42.4605984	12.3856056	Via Gerolamo Savonarola - Orte	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	1	\N
+556	42	Chiesa di San Pietro	42.4605984	12.3856056	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	84	\N
+557	42	Teatro Alberini	42.4722500	12.3845508	Via del Plebiscito	Architettura civile	NaN	NaN	5	t	1	93	\N
+558	42	Palazzo Manni	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	39	\N
+559	42	Biblioteca comunale	42.4605984	12.3856056	Via Vittorio Emanuele 5	Biblioteca	NaN	NaN	1	t	1	52	\N
+560	42	Biblioteca dell'Ente ottava medievale	42.2690694	11.9005853	Via Vittorio Emanuele 5	Biblioteca	+39 0761494948	NaN	4	t	1	48	\N
+561	42	Biblioteca della Curia vescovile	42.4608660	12.3847945	Via Cavour 14	Biblioteca	NaN	NaN	4	t	1	37	\N
+562	42	MUSEO DELLE CONFRATERNITE	42.4574411	12.3869837	PIAZZA DEL POPOLO; SNC	Museo, galleria e/o raccolta	3206280189	robertorondelli@confraterniteorte.it	1	t	1	77	\N
+563	42	Museo comunale di Orte	42.4605984	12.3856056	Via Pie' di Marmo - Orte	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	3	\N
+564	42	Acquedotto Rinascimentale	42.1335903	12.0793680	NaN	Area o parco archeologico	NaN	NaN	5	t	1	78	\N
+565	42	Palazzo dell'Orologio	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	36	\N
+566	42	Museo diocesano	42.4600180	12.3863150	piazza Colonna; 5	Museo, galleria e/o raccolta	0761 404357	museodartesacraorte@gmail.com	5	t	1	21	\N
+567	42	Palazzo Primavera e Magnaterra	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	55	\N
+568	42	Chiesa di San Bernardino	42.4605984	12.3856056	Colle S. Bernardino	Chiesa o edificio di culto	NaN	NaN	4	t	1	31	\N
+569	42	Palazzo Vescovile 	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	30	\N
+570	42	Chiesa di Santa Maria delle Grazie	42.4605984	12.3856056	Via le Grazie, 111	Chiesa o edificio di culto	NaN	NaN	4	t	1	35	\N
+571	42	Torre S. Masseo	42.4605984	12.3856056	S. Masseo	Architettura fortificata	NaN	NaN	5	t	1	24	\N
+572	42	Chiesa di S. Antonio	42.3721886	12.8454886	Via Giuseppe Garibaldi, 221	Chiesa o edificio di culto	NaN	NaN	1	t	1	91	\N
+573	42	Chiesa di Santa Maria di Loreto	42.4605984	12.3856056	Castel Bagnolo	Chiesa o edificio di culto	NaN	NaN	1	t	1	95	\N
+574	42	Palazzo Squarti	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	28	\N
+575	42	Palazzo della Cassa di Risparmio (Sabatini)	42.4605984	12.3856056	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	48	\N
+576	42	Museo civico	42.4605279	12.3870936	via Pie' di marmo	Museo, galleria e/o raccolta	0761 4041	info@comune.orte.vt.it	1	t	1	81	\N
+577	42	Chiesa di San Francesco	42.4605984	12.3856056	81 Piazza Senatore Manni	Chiesa o edificio di culto	NaN	NaN	3	t	1	44	\N
+578	42	Chiesa Cattedrale di S. Maria Assunta	42.4605984	12.3856056	Via Giulio Roscio, 10	Chiesa o edificio di culto	NaN	NaN	5	t	1	94	\N
+579	42	Seripola Porto Fluviale sul Tevere	42.4605984	12.3856056	NaN	Architettura fortificata	NaN	NaN	5	t	1	99	\N
+580	42	Chiesa di San Biagio	42.4605984	12.3856056	Via Novara, 531	Chiesa o edificio di culto	NaN	NaN	2	t	1	45	\N
+581	42	Torre Zelli	42.4605984	12.3856056	NaN	Architettura fortificata	NaN	NaN	5	t	1	62	\N
+582	42	Orte Sotterranea	42.4603608	12.3860395	Via G. Matteotti, 45	Architettura fortificata	NaN	NaN	3	t	1	38	\N
+583	42	Piazza della Libertà	42.4605984	12.3856056	NaN	Monumento	NaN	NaN	2	t	1	84	\N
+584	42	MUSEO D'ARTE SACRA DI ORTE DI IMPORTANZA DIOCESANA	42.4605984	12.3856056	VIA GIULIO ROSCIO, 10	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	48	\N
+585	42	Chiesa di San Silvestro	42.4605984	12.3856056	Via G. Matteotti, 781	Chiesa o edificio di culto	NaN	NaN	4	t	1	47	\N
+586	42	Centro Storico di Orte	42.4599890	12.3862190	NaN	Architettura fortificata	NaN	NaN	3	t	1	22	\N
+587	42	MUSEO DELLE CONFRATERNITE	42.4574411	12.3869837	PIAZZA DEL POPOLO; SNC	Museo, Galleria e/o raccolta	3206280189	robertorondelli@confraterniteorte.it	2	t	1	78	\N
+588	43	Chiesa di San Bernardino da Siena	42.5179320	11.8282734	Piazza Guglielmo Marconi, 11	Chiesa o edificio di culto	NaN	NaN	1	t	1	43	\N
+590	43	Portico Del Palazzo Comunale	42.5179320	11.8282734	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	74	\N
+591	44	Chiesa di S. Maria del Giglio	42.7571602	11.8302614	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	22	\N
+592	44	Oratorio di S. Antonio	42.7571602	11.8302614	Via S. Cassiano, 15	Chiesa o edificio di culto	NaN	NaN	1	t	1	12	\N
+593	44	Palazzo di Guido Ascanio Sforza	42.7571602	11.8302614	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	54	\N
+594	44	Museo della civiltà contadina di Proceno	42.7571602	11.8302614	Piazza della Libertà - Proceno	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	2	\N
+595	44	Castello di Proceno (o Rocca Medievale-Castello della Contessa Matilde)	42.7571602	11.8302614	Corso Regina Margherita, 155	Architettura fortificata	NaN	NaN	4	t	1	66	\N
+596	44	Chiesa di S. Agnese	42.7571602	11.8302614	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	20	\N
+597	44	Chiesa del SS. Salvatore	42.7571602	11.8302614	Piazza S. Salvatore, 1	Chiesa o edificio di culto	NaN	NaN	4	t	1	68	\N
+598	44	Chiesa di S. Martino	42.7571602	11.8302614	Corso Regina Margherita, 21	Chiesa o edificio di culto	NaN	NaN	1	t	1	9	\N
+599	44	Chiesa di S. Maria della Neve	42.7571602	11.8302614	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	29	\N
+600	45	Complesso Villa Lina (Villa Igliori)	42.2902415	12.2138064	Via Magenta, 65	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	1	\N
+601	45	Chiesa di Santa Maria della Provvidenza	42.2902415	12.2138064	Via Borgo di Sopra, 71	Chiesa o edificio di culto	NaN	NaN	2	t	1	9	\N
+602	45	Fontana degli Unicorni	42.2902415	12.2138064	Piazza Principe di Napoli, 18	Monumento	NaN	NaN	5	t	1	82	\N
+603	45	Chiesa di Santa Maria della Pace e Sant’ Andrea	42.2902415	12.2138064	Via Cassia Cimina, 2	Chiesa o edificio di culto	NaN	NaN	5	t	1	43	\N
+604	45	Biblioteca dell'Istituzione Romolo Bellatreccia	42.2911340	12.2160390	Corso Umberto I 26	Biblioteca	+39 0761627537	bibliotecaronciglione@yahoo.it	5	t	1	98	\N
+605	45	Chiesa di Santa Maria del Popolo	42.2902415	12.2138064	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	17	\N
+606	45	Ponte Ferroviario di Ronciglione	42.2868520	12.2158080	Via Roma	Architettura civile	NaN	NaN	1	t	1	0	\N
+607	45	Chiesa Di Santa Maria Incoronata E Santa Lucia Vergine Martire	42.2902415	12.2138064	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	16	\N
+608	45	Castello Farnese	42.0194358	12.3921506	NaN	Architettura fortificata	NaN	NaN	2	t	1	19	\N
+609	45	Chiesa Sant'Eusebio	42.2902415	12.2138064	Via Sant Eusebio	Chiesa o edificio di culto	NaN	NaN	2	t	1	37	\N
+610	45	Casino di caccia dei Farnese	42.2902415	12.2138064	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	24	\N
+611	45	Castello di Ronciglione	42.3026677	12.1843077	NaN	Architettura fortificata	NaN	NaN	1	t	1	22	\N
+612	45	Castello della Rovere	42.2902415	12.2138064	NaN	Architettura fortificata	NaN	NaN	2	t	1	95	\N
+613	45	Duomo (Santi Pietro e Caterina)	42.2917590	12.2176823	Via del Duomo di Sotto, 1	Chiesa o edificio di culto	NaN	NaN	1	t	1	7	\N
+614	45	MUSEO DELLE FERRIERE VECCHIE	41.8734690	12.5015140	VIA DELLE CARTIERE, 	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	40	\N
+615	45	Lago di Vico	42.3204984	12.1748874	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	59	\N
+616	46	Chiesa San Lorenzo Martire	42.6867300	11.9066530	Piazza Europa, 10	Chiesa o edificio di culto	NaN	NaN	1	t	1	42	\N
+617	46	Piazza Europa	42.6867300	11.9066530	Piazza Europa	Monumento	NaN	NaN	4	t	1	77	\N
+618	46	Chiesa della Madonna di Torano	42.6867300	11.9066530	Torano	Chiesa o edificio di culto	NaN	NaN	4	t	1	26	\N
+619	46	Chiesa di S. Giovanni in Val di Lago	42.6539720	11.9063901	Val di Lago	Chiesa o edificio di culto	NaN	NaN	3	t	1	41	\N
+620	46	Chiesa di S. Maria Assunta	42.6867300	11.9066530	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	89	\N
+621	47	Palazzo Doria Pamphilj	41.8973329	12.4812657	Via Andrea Doria, 20	Architettura fortificata	NaN	NaN	5	t	1	63	\N
+622	47	MUSEO DELL'ABATE	42.3693457	12.1250064	piazza dell'oratorio	Museo, galleria e/o raccolta	0761 379803	NaN	3	t	1	68	\N
+623	47	Abbazia di San Martino al Cimino	42.3676010	12.1282217	Piazza dell'Oratorio, 2/A	Chiesa o edificio di culto	NaN	NaN	3	t	1	58	\N
+624	48	Torre Di Santa Maria Di Luco	42.4187606	12.2343075	Via della Torre	Architettura fortificata	NaN	NaN	5	t	1	41	\N
+625	48	Chiesa di Sant'Agostino	42.4187606	12.2343075	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	87	\N
+626	48	Chiesa della Misericordia	42.4187606	12.2343075	Vicolo della Misericordia, 161	Chiesa o edificio di culto	NaN	NaN	5	t	1	25	\N
+627	48	Chiesa di Sant'Antonio	42.4187606	12.2343075	Via Santa Maria, 151	Chiesa o edificio di culto	NaN	NaN	5	t	1	15	\N
+628	48	Monte Cimino	42.4077999	12.2012234	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	57	\N
+629	48	Chiesa di Sant'Antonio Abate di Chia	42.4187606	12.2343075	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	84	\N
+630	48	Chiesa di Sant'Eutizio	42.4187606	12.2343075	Via Andrea Splendiano Pennazzi	Chiesa o edificio di culto	NaN	NaN	3	t	1	39	\N
+631	48	Chiesa di Santa Maria delle Grazie	42.4187606	12.2343075	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	65	\N
+632	48	Chiesa di San Giorgio	42.4187606	12.2343075	Frazione Terracino	Chiesa o edificio di culto	NaN	NaN	2	t	1	2	\N
+633	48	Monumento naturale Corviano	42.4768241	12.1962075	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	25	\N
+634	48	Castello Orsini	42.4197145	12.2352051	Via della Rocca, 461	Architettura fortificata	NaN	NaN	2	t	1	84	\N
+635	48	Biblioteca dei padri passionisti	42.4235631	12.2766627	Via del Convento	Biblioteca	+39 0761759057	NaN	5	t	1	53	\N
+636	48	Biblioteca comunale	42.4187606	12.2343075	Via Roma 12	Biblioteca	NaN	NaN	1	t	1	66	\N
+637	48	Palazzo Chigi Albani	42.4193483	12.2323973	Via Papacqua, 471	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	84	\N
+638	48	Complesso architettonico e paesaggisticoTorre di Chia	42.4187606	12.2343075	Strada Provinciale 151 Ortana	Area o parco archeologico	NaN	NaN	4	t	1	41	\N
+639	48	Centro Storico Rione Rocca	42.4187606	12.2343075	NaN	Architettura fortificata	NaN	NaN	2	t	1	7	\N
+640	48	Fonte Papacqua	42.4187606	12.2343075	NaN	Monumento	NaN	NaN	3	t	1	48	\N
+641	48	Chiesa di San Nicola di Bari	42.4187606	12.2343075	Piazza Vittorio Emanuele II 26	Chiesa o edificio di culto	NaN	NaN	1	t	1	70	\N
+642	49	Chiesa di San Francesco	42.2470230	12.2150670	Piazza S. Francesco	Chiesa o edificio di culto	NaN	NaN	2	t	1	17	\N
+643	49	Chiesa di Santa Maria del Monte	42.2470230	12.2150670	SR2	Chiesa o edificio di culto	NaN	NaN	1	t	1	37	\N
+644	49	Porta Morone	42.2428103	12.2218014	Via Giuseppe Garibaldi	Architettura fortificata	NaN	NaN	5	t	1	34	\N
+645	49	Chiesa Madonna del Parto	42.2470230	12.2150670	Piazza Sacello, 39	Chiesa o edificio di culto	NaN	NaN	1	t	1	90	\N
+646	49	Chiesa di Santa Croce	42.2470230	12.2150670	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	60	\N
+647	49	Piazza Del Comune	42.2470230	12.2150670	NaN	Monumento	NaN	NaN	1	t	1	51	\N
+648	49	Saturno a Cavallo	42.2470230	12.2150670	NaN	Monumento	NaN	NaN	2	t	1	60	\N
+649	49	Sentiero Natura Il Grande Leccio	42.2470230	12.2150670	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	61	\N
+650	49	Museo del patrimonium	42.2409277	12.2245800	Via di Porta Vecchia - Sutri	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	65	\N
+651	49	Chiesa di San Rocco	42.2470230	12.2150670	Via Tauro Statilio, 11	Chiesa o edificio di culto	NaN	NaN	4	t	1	40	\N
+652	49	Torre San Paolo	42.2470230	12.2150670	SR2	Architettura fortificata	NaN	NaN	5	t	1	97	\N
+653	49	Biblioteca comunale	42.2470230	12.2150670	Piazza S. Rocco 4	Biblioteca	NaN	NaN	4	t	1	96	\N
+654	49	Cappella di Santa Maria del Tempio o Cappella dei Cavalieri di Malta	42.2470230	12.2150670	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	25	\N
+655	49	Chiesa della Santissima Concezione	42.2470230	12.2150670	Via Giuseppe Garibaldi, 1	Chiesa o edificio di culto	NaN	NaN	3	t	1	26	\N
+656	49	Anfiteatro	42.2495074	12.2190389	Via Cassia km 49.600	Architettura civile	NaN	NaN	5	t	1	72	\N
+657	49	Mitreo di Sutri	42.2471680	12.2156030	via Cassia km 50,00 - Sutri	Monumento	NaN	NaN	5	t	1	33	\N
+658	49	Museo Palazzo Doebbing	42.1016550	12.1736760	Piazza Del Duomo	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	42	\N
+659	49	La Torre dell'Orologio	42.2470230	12.2150670	Piazza del Comune	Architettura fortificata	NaN	NaN	1	t	1	16	\N
+660	49	MUSEO DEL PATRIMONIUM	42.2410805	12.2245358	VIA DI PORTAVECCHIA 79	Museo, galleria e/o raccolta	761600867	biblio@comune.sutri.vt.it	5	t	1	32	\N
+661	49	Fontana dei Delfini	41.9133459	12.4782735	NaN	Monumento	NaN	NaN	2	t	1	36	\N
+662	49	ANFITEATRO ROMANO	42.2470230	12.2150670	VIA CASSIA, KM 49,00	Monumento	NaN	NaN	5	t	1	97	\N
+663	49	Area archeologica di Sutri	42.2470230	12.2150670	via Cassia km 50,00 - Sutri	Area o parco archeologico	NaN	NaN	5	t	1	22	\N
+664	49	Atrio Comunale	42.2470230	12.2150670	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	77	\N
+665	49	Porta Franceta	42.2470230	12.2150670	NaN	Architettura fortificata	NaN	NaN	2	t	1	78	\N
+666	49	Villa Savorelli	42.2393174	12.2269327	SR2	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	37	\N
+667	49	Castello detto di Carlo Magno	42.2470230	12.2150670	Colle Savorelli	Architettura fortificata	NaN	NaN	2	t	1	55	\N
+668	49	Antico Lavatoio	42.2470230	12.2150670	Piazza Dell'Assemblea, 9	Monumento	NaN	NaN	1	t	1	31	\N
+669	49	Chiesa di San Silvestro Papa	42.2470230	12.2150670	Piazza della Rocca	Chiesa o edificio di culto	NaN	NaN	5	t	1	30	\N
+670	49	Anfiteatro Romano	42.2439027	12.2185381	Via Cassia; Km 49	Museo, galleria e/o raccolta	-	-	5	t	1	74	\N
+671	49	Concattedrale di S. Maria Assunta in Cielo	42.2470230	12.2150670	Piazza Del Duomo, 1	Chiesa o edificio di culto	NaN	NaN	4	t	1	45	\N
+672	50	Biblioteca comunale Dante Alighieri	42.2524377	11.7557965	Via Umberto I  5	Biblioteca	+39 0766849224	comunetarquinia@tarquinia.net	1	t	1	99	\N
+673	50	Chiesa e Convento di San Francesco	42.2532394	11.7591747	Via di Porta Tarquinia, 24	Chiesa o edificio di culto	NaN	NaN	4	t	1	64	\N
+674	50	Chiesa di San Giacomo	42.2532394	11.7591747	Via S. Giacomo	Chiesa o edificio di culto	NaN	NaN	5	t	1	16	\N
+675	50	Archivio Storico	42.2532394	11.7591747	Via dei Granari	Archivio di Stato	NaN	NaN	1	t	1	21	\N
+676	50	Impianto delle Saline	42.2532394	11.7591747	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	50	\N
+677	50	Porto Clementino	42.2125967	11.7106350	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	89	\N
+678	50	Fontana monumentale	42.2532394	11.7591747	NaN	Monumento	NaN	NaN	1	t	1	100	\N
+679	50	Torre del Seminario e Casa Medievale	42.2532394	11.7591747	via di Porta Castello   1-5	Architettura fortificata	NaN	NaN	5	t	1	58	\N
+680	50	Fontana Nova	42.2532394	11.7591747	Via di Fontana Nuova	Monumento	NaN	NaN	4	t	1	65	\N
+681	50	Torre di S. Spirito	42.2532394	11.7591747	via delle Torri,55	Architettura fortificata	NaN	NaN	3	t	1	17	\N
+682	50	MUSEO DELLA CERAMICA D'USO A CORNETO - SOC.TARQUINIENSE, ARTE E STORIA	42.2532394	11.7591747	VIA DELLE TORRI, 31	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	33	\N
+683	50	Biblioteca della Società tarquiniense di arte e storia	42.2542133	11.7572653	Via delle Torri 29-33	Biblioteca	+39 0766858194	NaN	2	t	1	47	\N
+684	50	MUSEO ARCHEOLOGICO NAZIONALE	42.4214931	11.8705543	Largo Mario Moretti; 1	Museo, galleria e/o raccolta	0761 436209	sba-em@beniculturali.it	1	t	1	74	\N
+685	50	Chiesa di Santa Maria di Castello (o di Valverde)	42.2532394	11.7591747	Via Valverde, 23	Chiesa o edificio di culto	NaN	NaN	3	t	1	10	\N
+686	50	Villa Bruschi Falgari	42.2409784	11.7617258	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	8	\N
+687	50	Duomo dei Santi Margherita e Martino	42.2532394	11.7591747	Piazza del Duomo, 4	Chiesa o edificio di culto	NaN	NaN	5	t	1	44	\N
+688	50	Chiesa del Salvatore	42.2532394	11.7591747	Via S. Giacomo, 57	Chiesa o edificio di culto	NaN	NaN	2	t	1	16	\N
+689	50	Chiesa di S. Maria del Suffragio	42.2532394	11.7591747	Piazza Giacomo Matteotti	Chiesa o edificio di culto	NaN	NaN	4	t	1	41	\N
+690	50	MUSEO DIOCESANO DI CIVITAVECCHIA - TARQUINIA	42.2526729	11.7565463	VIA ROMA; 11	Museo, galleria e/o raccolta	766840843	insolera.giovanni@libero.it	3	t	1	57	\N
+691	50	Ara della Regina. Civita	42.2588160	11.8015510	. - Tarquinia	Area o parco archeologico	NaN	NaN	3	t	1	32	\N
+692	50	Chiesa dell' Annunziata	42.2532394	11.7591747	Via S. Giacomo, 3	Chiesa o edificio di culto	NaN	NaN	1	t	1	99	\N
+693	50	Biblioteca ex Convento S. Marco	42.2555420	11.7545300	Via dei Granari 30 - presso Archivio storico comunale	Biblioteca	+39 0766858073	NaN	1	t	1	12	\N
+694	50	NECROPOLI DI MONTEROZZI	42.2503180	11.7719400	VIA RIPAGRETTA, 68	Area o parco archeologico	NaN	NaN	5	t	1	66	\N
+695	50	Chiesa di S. Martino il Vecchio	42.2532394	11.7591747	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	79	\N
+696	50	Porta Nuova	42.2532394	11.7591747	NaN	Architettura fortificata	NaN	NaN	1	t	1	84	\N
+697	50	Porta Tarquinia	42.2543727	11.7591896	NaN	Architettura fortificata	NaN	NaN	3	t	1	46	\N
+698	50	Torre Barucci	42.2552179	11.7554946	Piazza S. Stefano	Architettura fortificata	NaN	NaN	3	t	1	2	\N
+699	50	Torre Presso S. Maria di Castello	42.2532394	11.7591747	NaN	Architettura fortificata	NaN	NaN	4	t	1	7	\N
+700	50	Palazzo dei Priori	42.2532394	11.7591747	via delle Torri 29-33	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	45	\N
+701	50	Necropoli	42.2541846	11.7575684	Via Ripagretta; snc	Museo, galleria e/o raccolta	0766 856308	-	3	t	1	100	\N
+702	50	Chiesa dei SS. Giovanni Battista e Antonio Abate	42.2532394	11.7591747	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	6	\N
+703	50	Etruscopolis	42.2532394	11.7591747	Vicolo delle Pietrare	Museo, galleria e/o raccolta	NaN	NaN	2	t	1	15	\N
+704	50	Chiesa di S. Antonio	42.2532394	11.7591747	Via XX Settembre, 75	Chiesa o edificio di culto	NaN	NaN	4	t	1	63	\N
+705	50	Torre Draghi	42.2546748	11.7562891	via delle Torri ang. P. Verdi	Architettura fortificata	NaN	NaN	5	t	1	23	\N
+706	50	Chiesa di S. Giovanni Gerosolimitano	42.2532394	11.7591747	Via Roma, 2	Chiesa o edificio di culto	NaN	NaN	2	t	1	45	\N
+707	50	Palazzo Comunale	42.2532394	11.7591747	Piazza Giacomo Matteotti, 13	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	21	\N
+708	50	Centro Storico Di Tarquinia	42.2521745	11.7583816	NaN	Architettura fortificata	NaN	NaN	5	t	1	93	\N
+709	50	Palazzo Vitelleschi	42.2538184	11.7557250	Corso Vittorio Emanuele	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	24	\N
+710	50	Porta di città, o Torrione della Contessa Matilde	42.2532394	11.7591747	Via Porta Castello, 52	Architettura fortificata	NaN	NaN	5	t	1	78	\N
+711	50	Chiesa di San Giovanni	42.2532394	11.7591747	Via Roma, 2	Chiesa o edificio di culto	NaN	NaN	1	t	1	44	\N
+712	50	Chiesa di San Leonardo	42.2532394	11.7591747	P.za Trento e Trieste, 7	Chiesa o edificio di culto	NaN	NaN	2	t	1	15	\N
+713	50	COLLEZIONE GIUSEPPE CULTRERA - MUSEO DELLA CERAMICA; DELLA SOCIETA' TARQUINIENSE; D'ARTE E STORIA	42.2542133	11.7572653	VIA DELLE TORRI; 31	Museo, galleria e/o raccolta	766858194	tarquiniense@gmail.com	3	t	1	98	\N
+714	50	Chiesa della Santissima Trinità	42.2532394	11.7591747	Via Alberata Dante Alighieri, 27	Chiesa o edificio di culto	NaN	NaN	3	t	1	83	\N
+715	50	Palazzo Castelleschi	42.2544485	11.7574653	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	43	\N
+716	50	Torre Cialdi	42.2532394	11.7591747	via della Ripa 	Architettura fortificata	NaN	NaN	5	t	1	11	\N
+717	50	Torre Mozza	42.2532394	11.7591747	via delle Torri,45	Architettura fortificata	NaN	NaN	4	t	1	52	\N
+718	50	Palazzo Sacchetti	42.2532394	11.7591747	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	22	\N
+719	50	Torre del Magistrato	42.2543779	11.7575030	Via S. Pancrazio, 9	Architettura fortificata	NaN	NaN	2	t	1	13	\N
+720	50	Chiesa di San Pancrazio	42.2532394	11.7591747	Via delle Torri, 15	Chiesa o edificio di culto	NaN	NaN	5	t	1	97	\N
+721	50	Cencelle	42.1952998	11.8580819	NaN	Architettura fortificata	NaN	NaN	2	t	1	29	\N
+722	50	Necropoli di Tarquinia	42.1948646	11.8578725	Via Ripagretta	Area o parco archeologico	NaN	NaN	1	t	1	28	\N
+723	51	Ruderi Castello Del Rivellino	42.4202141	11.8702611	NaN	Architettura fortificata	NaN	NaN	3	t	1	57	\N
+724	51	Arco Di Poggio Fiorentino	42.4202141	11.8702611	NaN	Architettura fortificata	NaN	NaN	1	t	1	50	\N
+725	51	Cattedrale di San Giacomo	42.4202141	11.8702611	Piazza Domenico Bastianini	Chiesa o edificio di culto	NaN	NaN	1	t	1	72	\N
+726	51	Chiesa Di San Giuseppe	42.4202141	11.8702611	Largo Cavour	Chiesa o edificio di culto	NaN	NaN	2	t	1	10	\N
+727	51	Palazzo Fani	42.4202141	11.8702611	Via Pozzo Bianco, 131	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	72	\N
+728	51	Area Archeologica Colle Di San Pietro	42.4202141	11.8702611	Str. S. Pietro	Area o parco archeologico	NaN	NaN	4	t	1	92	\N
+729	51	Teatro Comunale Il Rivellino	42.4364920	11.8571108	Largo del Teatro	Architettura civile	NaN	NaN	1	t	1	94	\N
+730	51	MUSEO ARCHEOLOGICO NAZIONALE	42.4202141	11.8702611	LARGO MARIO MORETTI, 1	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	78	\N
+731	51	Necropoli Pian di Mola	42.4243520	11.8862820	Necropoli_di_Pian_di_Mola	Area o parco archeologico	NaN	NaN	1	t	1	79	\N
+732	51	Casa Museo Pietro Moschini	42.4202141	11.8702611	Via della Scrofa, 8	Museo, galleria e/o raccolta	NaN	NaN	3	t	1	14	\N
+733	51	Biblioteca comunale	42.4202141	11.8702611	Piazza F. Basile 6	Biblioteca	NaN	NaN	5	t	1	24	\N
+734	51	Fontana delle sette cannelle	42.6341662	11.6681677	NaN	Monumento	NaN	NaN	2	t	1	5	\N
+735	51	Chiesa Di San Giovanni Decollato	42.4202141	11.8702611	Piazza Giacomo Matteotti	Chiesa o edificio di culto	NaN	NaN	2	t	1	42	\N
+736	51	Chiesa di San Marco	42.4202141	11.8702611	Largo Bixio	Chiesa o edificio di culto	NaN	NaN	1	t	1	28	\N
+737	51	Antica Via Clodia	42.4202141	11.8702611	Via del Comune, 41	Area o parco archeologico	NaN	NaN	2	t	1	40	\N
+738	51	Palazzo Quaglia	42.4202141	11.8702611	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	57	\N
+739	51	CHIESA SAN PIETRO	42.4202141	11.8702611	STRADA SAN PIETRO, 1	Chiesa o edificio di culto	NaN	NaN	5	t	1	85	\N
+740	51	Chiesa di Sant'Agostino	42.4202141	11.8702611	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	89	\N
+741	51	Chiesa di Santa Maria del Riposo	42.4202141	11.8702611	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	19	\N
+742	51	"Necropoli ""Madonna dell'Olivo"""	42.4185731	11.8703089	-	Museo, galleria e/o raccolta	-	sba-em@beniculturali.it	3	t	1	7	\N
+743	51	Ruderi  dell'ex Abbazia di S. Giusto	42.4202141	11.8702611	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	84	\N
+744	51	Mura Castellane	42.4202141	11.8702611	NaN	Architettura fortificata	NaN	NaN	2	t	1	26	\N
+745	51	RACCOLTA DI MONTEBELLO DEL MAESTRO GIUSEPPE CESETTI	42.3550533	11.8011922	CENTRO STRADA MONTEBELLO; 3	Museo, galleria e/o raccolta	761442695	-	5	t	1	93	\N
+746	51	Terme Romane della Regina (Bagni della Regina)	42.4202141	11.8702611	SP12	Area o parco archeologico	NaN	NaN	1	t	1	90	\N
+747	51	CHIESA DI SANTA MARIA MAGGIORE	42.4202141	11.8702611	STRADA SANTA MARIA, 	Chiesa o edificio di culto	NaN	NaN	4	t	1	83	\N
+748	51	Chiesa San Pietro	42.4185731	11.8703089	-	Museo, galleria e/o raccolta	-	-	1	t	1	68	\N
+749	51	Raccolta di Montebello del Maestro Giuseppe Cesetti	42.4202141	11.8702611	Centro strada Montebello - Tuscania	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	72	\N
+750	51	NECROPOLI MADONNA DELL'OLIVO	42.4065088	11.8744394	VIA MADONNA DELL'OLIVO SNC, 1	Area o parco archeologico	NaN	NaN	5	t	1	77	\N
+751	51	Necropoli della Peschiera e Tomba a Dado	42.4202141	11.8702611	Str. Le Carceri	Area o parco archeologico	NaN	NaN	1	t	1	6	\N
+752	51	Parco Torre di Lavello	42.4161568	11.8729145	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	4	t	1	65	\N
+753	51	Chiesa Santa Maria della Rosa	42.4202141	11.8702611	Via XII Settembre	Chiesa o edificio di culto	NaN	NaN	5	t	1	20	\N
+754	51	Fontana di Montascide	42.4202141	11.8702611	Piazza Giuseppe Mazzini, 71	Monumento	NaN	NaN	2	t	1	9	\N
+755	51	Spazio teatrale Supercinema	42.4384570	11.8875923	Via Garibaldi 1	Architettura civile	NaN	NaN	4	t	1	57	\N
+756	52	Chiesa di Santa Croce	42.5684597	11.8187556	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	44	\N
+757	52	MUSEO DELLA PREISTORIA DELLA TUSCIA E DELLA ROCCA FARNESE	42.5685644	11.8192069	piazza della Vittoria; 11	Museo, galleria e/o raccolta	761420018	museo.valentano@alice.it	4	t	1	64	\N
+758	52	Lago di Mezzano	42.6117155	11.7697165	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	26	\N
+759	52	Palazzo Vitozzi	42.5686870	11.8184229	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	53	\N
+760	52	Chiesa di Santa Maria dell' Eschio	42.5684597	11.8187556	Eschio	Chiesa o edificio di culto	NaN	NaN	5	t	1	48	\N
+761	52	Chiesa della Madonna del Monte	42.5684597	11.8187556	Madonna del Monte	Chiesa o edificio di culto	NaN	NaN	2	t	1	19	\N
+762	52	Centro Storico di Valentano	42.5664350	11.8192040	NaN	Architettura fortificata	NaN	NaN	5	t	1	3	\N
+763	52	Porta di S. Martino	42.5684597	11.8187556	NaN	Architettura fortificata	NaN	NaN	4	t	1	78	\N
+764	52	Chiesa di S. Maria	42.5684597	11.8187556	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	11	\N
+765	52	Porta Urbana-Porta Magenta	42.5684597	11.8187556	Piazza Cavour, 11	Architettura fortificata	NaN	NaN	1	t	1	15	\N
+766	52	Rocca Farnese	42.5509834	11.9128378	NaN	Architettura fortificata	NaN	NaN	3	t	1	71	\N
+767	52	Biblioteca comunale	42.5684597	11.8187556	Piazza della Vittoria 9	Biblioteca	NaN	NaN	3	t	1	65	\N
+768	52	Palazzo Comunale	42.5684597	11.8187556	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	22	\N
+769	52	Chiesa di San Giovanni Apostolo ed Evangelista 	42.5684597	11.8187556	Piazza della Vittoria, 61	Chiesa o edificio di culto	NaN	NaN	2	t	1	31	\N
+770	52	Santuario della Madonna della Salute	42.5684597	11.8187556	VIa del Ritiro	Chiesa o edificio di culto	NaN	NaN	2	t	1	42	\N
+771	53	Chiesa SS. Crocefisso	41.7907359	12.4696439	Strada Provinciale Valleranese	Chiesa o edificio di culto	NaN	NaN	1	t	1	31	\N
+772	53	Grotte dei Quadratini e dei Finestroni	41.7907359	12.4696439	NaN	Area o parco archeologico	NaN	NaN	5	t	1	59	\N
+773	53	Eremo di San Salvatore	41.7907359	12.4696439	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	96	\N
+774	53	Santuario Mariano: Madonna della Pieve	41.7907359	12.4696439	Via della Pieve, 421	Chiesa o edificio di culto	NaN	NaN	5	t	1	69	\N
+775	53	Santuario Mariano: Chiesa della Madonna del Ruscello	41.7907359	12.4696439	Via Salita	Chiesa o edificio di culto	NaN	NaN	1	t	1	9	\N
+776	53	Grotte di San Lorenzo	42.2022300	12.6721370	NaN	Area o parco archeologico	NaN	NaN	2	t	1	86	\N
+777	53	Biblioteca comunale Corrado Alvaro	42.3813915	12.2339467	via del Torrione	Biblioteca	+39 0761753764	biblioteca.vallerano@yahoo.it	5	t	1	7	\N
+778	53	Teatro Comunale	41.7907359	12.4696439	Piazza della Repubblica	Architettura civile	NaN	NaN	1	t	1	92	\N
+779	53	Grotte di San Leonardo	41.7907359	12.4696439	NaN	Area o parco archeologico	NaN	NaN	1	t	1	16	\N
+780	53	Chiesa San Vittore	41.7907359	12.4696439	Piazza San Vittore	Chiesa o edificio di culto	NaN	NaN	3	t	1	97	\N
+781	54	Lago Vadimone	42.4841106	12.3232080	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	0	\N
+782	54	Chiesa di San Silvestro	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	65	\N
+783	54	Cunicolo Tra i Fossi Canale e Tre Fontane	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	1	t	1	37	\N
+784	54	Zona Archeologica di Palazzolo	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	4	t	1	49	\N
+785	54	Diga Poligonale	42.0392830	12.7979650	NaN	Area o parco archeologico	NaN	NaN	4	t	1	5	\N
+786	54	Palazzo Celestini (Municipale)	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	42	\N
+787	54	Castello Orsini (o Castello di Vasanello)	42.4177370	12.3466190	Piazza della Repubblica	Architettura fortificata	NaN	NaN	1	t	1	13	\N
+788	54	Chiesa di San Salvatore	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	47	\N
+789	54	Cella di Santa Rosa	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	5	t	1	7	\N
+790	54	Chiesa della Madonna del Rifugio	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	44	\N
+791	54	Necropoli dei Morticelli	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	1	t	1	42	\N
+792	54	Chiesa di S. Maria della Stella	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	52	\N
+793	54	La Torricella	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	3	t	1	98	\N
+794	54	Ex chiesa di S. Michele Arcangelo	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	26	\N
+795	54	Palazzo Mercuri Pozzaglia	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	80	\N
+796	54	Cappella di San Lanno	42.4157452	12.3478512	Via S. Lanno, 851	Chiesa o edificio di culto	NaN	NaN	2	t	1	61	\N
+797	54	Museo della ceramica di Vasanello	42.4144251	12.3464168	San Salvatore - Vasanello	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	96	\N
+798	54	MUSEO DELLA CERAMICA DI VASANELLO	42.4183899	12.3469114	VIA S. SALVATORE; 19	Museo, galleria e/o raccolta	7614089302	tamarapatilli@libero.it	2	t	1	100	\N
+799	54	Cappella della Madonna delle Grazie	42.4144251	12.3464168	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	81	\N
+800	54	Biblioteca comunale Elisabetta e Francesco Froio	42.4183899	12.3469114	Via San Salvatore 19	Biblioteca	+39 0761409055	biblioteca@vasanellovt.info	1	t	1	88	\N
+801	54	Palazzo Ancellotti	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	47	\N
+802	54	Palazzo Del Modio - Mariani	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	57	\N
+803	54	Palazzo dell'Orologio	42.4144251	12.3464168	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	2	\N
+804	54	Cattedrale di S. Maria Assunta	42.4144251	12.3464168	Piazza della Repubblica, 291	Chiesa o edificio di culto	NaN	NaN	3	t	1	100	\N
+805	54	Fornace Aretina	42.4144251	12.3464168	NaN	Area o parco archeologico	NaN	NaN	3	t	1	0	\N
+806	54	Ex chiesa di S. Sebastiano	42.4144251	12.3464168	"Arghetto"	Chiesa o edificio di culto	NaN	NaN	4	t	1	33	\N
+807	55	Chiesa Santa Maria Assunta	41.8823764	12.5636788	Piazza S. Maria, 12	Chiesa o edificio di culto	NaN	NaN	3	t	1	86	\N
+808	55	 "La Rocca dei Santacroce" 	42.2167570	12.0952017	NaN	Architettura fortificata	NaN	NaN	4	t	1	66	\N
+809	55	Biblioteca comunale	42.2167570	12.0952017	Via XXV Aprile, 10	Biblioteca	NaN	NaN	2	t	1	48	\N
+810	55	Rocca di Vejano (o Castello di Vejano, Rocca Altieri)	42.2167570	12.0952017	Piazza Santa Maria	Architettura fortificata	NaN	NaN	5	t	1	9	\N
+811	56	Chiesa di San Francesco	42.3205336	12.0575000	L.go S. Francesco, 11	Chiesa o edificio di culto	NaN	NaN	1	t	1	79	\N
+812	56	Necropoli rupestre di Norchia	42.3386900	11.9454300	S.S. 1 Aurelia bis, tra Vetralla e Monte Romano - Vetralla	Area o parco archeologico	NaN	NaN	1	t	1	47	\N
+813	56	Biblioteca comunale Alessandro Pistella	42.3183968	12.0586296	Via Brugiotti 1	Biblioteca	+39 0761461272	biblioteca.comunale@comune.vetralla.vt.it	5	t	1	99	\N
+814	56	Museo Della Città e Del Territorio	42.3226187	12.0506456	Via di Porta Marchetta, 2	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	38	\N
+815	56	Chiesa Parrocchiale di S. Maria del Soccorso	42.3205336	12.0575000	Piazza S. Maria del Soccorso, 1	Chiesa o edificio di culto	NaN	NaN	2	t	1	12	\N
+816	56	Palazzo Comunale di Vetralla	42.3205336	12.0575000	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	11	\N
+817	56	Tempio di Demetra	42.3205336	12.0575000	NaN	Area o parco archeologico	NaN	NaN	1	t	1	29	\N
+818	56	Castello di Norchia	42.3205336	12.0575000	Norchia	Architettura fortificata	NaN	NaN	4	t	1	36	\N
+819	56	Chiesa di S. Maria in foro Cassio	42.3205336	12.0575000	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	68	\N
+820	56	Biblioteca Beato Lorenzo Salvi	42.3208563	12.0532440	Convento S. Angelo	Biblioteca	+39 0761471285	NaN	5	t	1	52	\N
+821	56	Grotta Porcina	42.2944985	12.0025033	S.S. Cassia bivio Vetralla - Vetralla	Area o parco archeologico	NaN	NaN	2	t	1	79	\N
+822	56	Complesso Santa Maria di Foro Cassio	42.3297460	12.0662080	Strada Foro Cassio - Vetralla	Monumento	NaN	NaN	4	t	1	66	\N
+823	56	Palazzo Franciosoni	42.3205336	12.0575000	Via Porfirio Fantozzini, 181	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	58	\N
+824	56	Castello della Rocca (o Castello Vinci)	42.3205336	12.0575000	Via Castello Vinci, 11/13	Architettura fortificata	NaN	NaN	3	t	1	6	\N
+825	56	Santuario di Demetra a Macchia delle Valli	42.3205336	12.0575000	Strada Provinciale - Vetralla	Area o parco archeologico	NaN	NaN	3	t	1	7	\N
+826	56	Duomo di Vetralla	42.3205336	12.0575000	Via Cassia, 175	Chiesa o edificio di culto	NaN	NaN	4	t	1	99	\N
+827	57	Biblioteca comunale	42.3838260	12.2767660	Piazza della Repubblica, 4	Biblioteca	NaN	NaN	1	t	1	8	\N
+828	57	I Connutti	42.3838260	12.2767660	Piazza della Repubblica	Area o parco archeologico	NaN	NaN	3	t	1	74	\N
+829	57	Chiesa di San Sebastiano Martire di Vignanello	42.3838260	12.2767660	Via della Mola, 5	Chiesa o edificio di culto	NaN	NaN	2	t	1	81	\N
+830	57	Chiesa della Madonna del Pianto	42.3851892	12.2804540	Via Valle Maggiore, 91	Chiesa o edificio di culto	NaN	NaN	4	t	1	87	\N
+831	57	Porta del Vignola	42.3838260	12.2767660	NaN	Architettura fortificata	NaN	NaN	4	t	1	97	\N
+832	57	Castello Ruspoli (o Palazzo Rispoli)	42.3838260	12.2767660	Via dell'Uliveto, 200	Architettura fortificata	NaN	NaN	2	t	1	98	\N
+833	57	Chiesa di San Giovanni Decollato	42.3838260	12.2767660	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	97	\N
+834	57	Chiesa Collegiata Santa Maria della Presentazione	42.5685120	11.8188300	Corso Giacomo Matteotti	Chiesa o edificio di culto	NaN	NaN	5	t	1	82	\N
+835	57	Fontana Barocca	42.3838260	12.2767660	Corso Giuseppe Garibaldi, 41	Monumento	NaN	NaN	2	t	1	43	\N
+836	58	Sala capitolare Ven. Confraternita del SS. Sacramento e S. Rosario	42.4168441	12.1051148	Piazza Duomo - Viterbo	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	7	\N
+837	58	Necropoli rupestre di Castel d’Asso	42.3963770	12.0208830	Indicazioni dalla S.P. Tuscanese - Viterbo	Area o parco archeologico	NaN	NaN	3	t	1	25	\N
+838	58	Fontana al Paracadutista d’Italia	42.4168441	12.1051148	Via Filippo Ascenzi	Monumento	NaN	NaN	2	t	1	79	\N
+839	58	Chiesa Di S.pellegrino	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	65	\N
+840	58	Giardino di Prato Giardino	42.6474589	12.2774983	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	29	\N
+841	58	Torre del Borgognone	42.4156807	12.1041350	NaN	Architettura fortificata	NaN	NaN	3	t	1	70	\N
+842	58	Mura medievali	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	5	t	1	94	\N
+843	58	Fontana Grande	42.4168441	12.1051148	Piazza Fontana Grande, 6	Monumento	NaN	NaN	3	t	1	53	\N
+844	58	Chiesa della Santissima Trinità	42.4168441	12.1051148	Piazza Trinità, 8	Chiesa o edificio di culto	NaN	NaN	2	t	1	65	\N
+845	58	Piazza della Morte	42.4150907	12.1034242	NaN	Monumento	NaN	NaN	5	t	1	38	\N
+846	58	Castello Costaguti	42.5659059	12.1626622	Piazza Umberto I, 19	Architettura fortificata	NaN	NaN	1	t	1	60	\N
+847	58	Piazza del Gesu	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	3	t	1	5	\N
+848	58	Castello di Montecalvello (o Castello di Balthus)	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	4	t	1	14	\N
+849	58	Porta San Marco	42.4168441	12.1051148	Via Teatro Nuovo, 48	Architettura fortificata	NaN	NaN	2	t	1	93	\N
+850	58	Chiesa di Santa Maria della Verità	42.4168441	12.1051148	Viale Raniero Capocci - Piazza Crispi	Chiesa o edificio di culto	NaN	NaN	3	t	1	87	\N
+851	58	Chiesa di San Silvestro	42.4168441	12.1051148	Via dei Pellegrini, 23	Chiesa o edificio di culto	NaN	NaN	2	t	1	25	\N
+852	58	Mura Etrusche	42.4168441	12.1051148	NaN	Area o parco archeologico	NaN	NaN	3	t	1	34	\N
+853	58	Piazza dell'Erbe	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	53	\N
+854	58	Cascate Dell'Acquarossa	42.4168441	12.1051148	Str. Pian del Cerro	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	32	\N
+855	58	Casa Poscia	42.4159612	12.1065463	Via Aurelio Saffi	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	83	\N
+856	58	Porta della Verità	42.4171083	12.1099826	Via della Verità	Architettura fortificata	NaN	NaN	5	t	1	52	\N
+857	58	Chiesa di Sant Angelo in Spatha	42.4168441	12.1051148	via, Roma, Piazza del Plebiscito	Chiesa o edificio di culto	NaN	NaN	3	t	1	76	\N
+858	58	MUSEO NATURALISTICO SAN PIETRO	42.4168441	12.1051148	VIALE GENERALE ARMANDO DIAZ, 25	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	47	\N
+859	58	Via Francigena della Tuscia	42.4168441	12.1051148	NaN	Area o parco archeologico	NaN	NaN	1	t	1	25	\N
+860	58	Museo Roberto Joppolo	42.4168441	12.1051148	NaN	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	7	\N
+861	58	Piazza del Plebiscito	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	34	\N
+862	58	Chiesa di Sant'Andrea	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	4	t	1	42	\N
+863	58	Cascate della Mola	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	51	\N
+864	58	SANTUARIO MADONNA DELLA QUERCIA	42.4296095	12.1302239	PIAZZA DEL SANTUARIO, 	Chiesa o edificio di culto	NaN	NaN	2	t	1	89	\N
+865	58	Chiesa di Santa Maria della Salute	42.4168441	12.1051148	Via della Pescheria	Chiesa o edificio di culto	NaN	NaN	3	t	1	95	\N
+866	58	Piazza S. Pellegrino	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	33	\N
+867	58	AREA ARCHEOLOGICA ANTICA CITTA' DI FERENTO	42.4168441	12.1051148	STRADA FERENTO, snc	Area o parco archeologico	NaN	NaN	1	t	1	47	\N
+868	58	Chiesa di Santa Maria del Paradiso	42.4168441	12.1051148	Via del Paradiso, 22	Chiesa o edificio di culto	NaN	NaN	2	t	1	24	\N
+869	58	Chiesa San Giovanni Battista degli Almadiani	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	13	\N
+870	58	Biblioteca S. Giuseppe	42.4103600	12.1081500	Via A. Diaz, 25	Biblioteca	+39 0761.343134	biblioteca.sangiuseppe@teologicoviterbese.it	1	t	1	49	\N
+871	58	Chiesa di Santa Giacinta Marescotti	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	70	\N
+872	58	Piazza XX Settembre	42.4168441	12.1051148	Piazza XX Settembre	Monumento	NaN	NaN	3	t	1	30	\N
+873	58	Palazzo di Donna Olimpia	42.4168441	12.1051148	Via S. Pietro, 103	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	99	\N
+874	58	Palazzo Gatti	42.4143336	12.1069160	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	97	\N
+875	58	Convento dei Cappuccini	42.4168441	12.1051148	Via S. Crispino, 6	Chiesa o edificio di culto	NaN	NaN	5	t	1	48	\N
+876	58	Area Archeologica Antica Città di Ferento	42.4206766	12.1076690	Strada Provinciale Teverina; Km 8;000	Museo, galleria e/o raccolta	-	-	4	t	1	73	\N
+877	58	Palazzo di Valentino della Pagnotta	42.4168441	12.1051148	Piazza S. Lorenzo, 2	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	18	\N
+878	58	Fontana del Piano	42.4126328	12.1035635	Via di Pianoscarano	Monumento	NaN	NaN	2	t	1	76	\N
+879	58	Museo Erbario della Tuscia (UTV)	42.4168441	12.1051148	Via S. Camillo De Lellis - Viterbo	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	30	\N
+880	58	Museo Padre Felice Rossetti di arte moderna	42.4168441	12.1051148	Piazza S. Francesco Alla Rocca - Viterbo	Chiesa o edificio di culto	NaN	NaN	5	t	1	90	\N
+881	58	Cattedrale di San Lorenzo	42.4168441	12.1051148	Piazza S. Lorenzo	Chiesa o edificio di culto	NaN	NaN	5	t	1	20	\N
+882	58	Biblioteca dell'Istituto S. Giuseppe artigiano	42.4172789	12.1180318	Via Murialdo 51	Biblioteca	+39 0761340893	NaN	2	t	1	79	\N
+883	58	Chiesa di Santa Maria della Porta	42.4168441	12.1051148	Piazza Castello	Chiesa o edificio di culto	NaN	NaN	3	t	1	68	\N
+884	58	Anfiteatro di Ferento	42.4693425	12.1065484	strada per Ferento-8km ca. da Viterbo	Monumento	NaN	NaN	5	t	1	18	\N
+885	58	Biblioteca privata Carosi	42.4070193	12.1169792	Strada Roncone 1/A	Biblioteca	+39 0761307945	NaN	5	t	1	37	\N
+886	58	Torre dell'Orologio	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	5	t	1	38	\N
+887	58	Chiesa della Madonna del Rosario	42.4168441	12.1051148	Piazza Castello	Chiesa o edificio di culto	NaN	NaN	1	t	1	50	\N
+889	58	Teatro Archimimus	42.4427167	12.1279641	Via S.Pietro, 26	Architettura civile	NaN	NaN	1	t	1	85	\N
+890	58	Fontana del Pegaso	42.4168441	12.1051148	Parco Villa Lante	Monumento	NaN	NaN	3	t	1	96	\N
+891	58	Chiesa di S. Giovanni Battista del Gonfalone	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	85	\N
+892	58	MUSEO DEL SODALIZIO DEI FACCHINI DI SANTA ROSA	42.4138600	12.1059000	VIA S. PELLEGRINO 60-62	Museo, galleria e/o raccolta	761345157	-	4	t	1	3	\N
+893	58	Tenuta La Pazzaglia	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	78	\N
+894	58	Archivio di Stato di Viterbo	42.4168441	12.1051148	Via Vincenzo Cardarelli - Viterbo	Archivio di Stato	NaN	NaN	3	t	1	20	\N
+895	58	Biblioteca dell'ISIS Tarquinia	42.2333766	11.7269238	Via Porto Clementino	Biblioteca	NaN	NaN	2	t	1	56	\N
+896	58	Museo della Casa di Santa Rosa	42.4168441	12.1051148	Via Casa di Santa Rosa - Viterbo	Museo, Galleria e/o raccolta	NaN	NaN	2	t	1	71	\N
+897	58	Palazzo dei Priori	42.4168441	12.1051148	Piazza del Plebiscito, 14	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	21	\N
+898	58	Teatro dell'Unione	42.4404397	12.0856281	Piazza Giuseppe Verdi	Architettura civile	NaN	NaN	1	t	1	99	\N
+899	58	Fontana dei Mori	42.4260726	12.1553664	Parco Di Villa Lante	Monumento	NaN	NaN	4	t	1	41	\N
+900	58	Cascata dell'Infernaccio	42.5273469	12.1310402	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	5	t	1	6	\N
+901	58	Porta Romana	42.4168441	12.1051148	Via della Sapienza, 11	Architettura fortificata	NaN	NaN	4	t	1	22	\N
+902	58	Museo Storico Didattico Cavalieri Templari di Viterbo	42.4168441	12.1051148	Via Chigi, 14	Museo, Galleria e/o raccolta	NaN	NaN	1	t	1	6	\N
+903	58	Biblioteca diocesana	42.4153500	12.1014600	Piazza S. Lorenzo, 6/A	Biblioteca	+39 0761.222539	cedi.do@libero.it	1	t	1	14	\N
+904	58	Chiesa Parrocchiale di Santo Stefano	42.4168441	12.1051148	Piazza dell'Unità	Chiesa o edificio di culto	NaN	NaN	1	t	1	48	\N
+905	58	Villa Rossi Danielli	42.4168441	12.1051148	Str. Sammartinese, 10	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	9	\N
+906	58	Centro Storico di Viterbo	42.2521745	11.7583816	NaN	Architettura fortificata	NaN	NaN	4	t	1	38	\N
+907	58	Palazzo Chigi	42.4168441	12.1051148	Via Chigi, 15	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	56	\N
+908	58	Torre della Branca o Torre della Galliana	42.4168441	12.1051148	Castel d'Asso	Architettura fortificata	NaN	NaN	2	t	1	55	\N
+909	58	MUSEO NAZIONALE ETRUSCO DI ROCCA ALBORNOZ	42.4216431	12.1044907	Piazza della Rocca; 21/b	Museo, galleria e/o raccolta	0761 325929	sba-em.roccaalbornoz@beniculturali.it	5	t	1	99	\N
+910	58	Biblioteca convento della SS. Trinità dell'Ordine eremitano di S. Agostino	42.4189839	12.0992913	p.zza SS. Trinit?, 8	Biblioteca	+39 0761.342808	marmat47@hotmail.com	3	t	1	62	\N
+911	58	MUSEO CIVICO	42.4176727	12.1105913	PIAZZA FRANCESCO CRISPI; 2	Museo, galleria e/o raccolta	761348276	museocivico@comune.viterbo.it	4	t	1	38	\N
+912	58	MUSEO DEL COLLE DEL DUOMO	42.4156470	12.1016440	PIAZZA S. LORENZO; 8A	Museo, galleria e/o raccolta	3477010187	museocolledelduomo@libero.it	2	t	1	25	\N
+913	58	MUSEO DELLA CERAMICA DELLA TUSCIA	42.4157087	12.1064460	VIA CAVOUR; 67	Museo, galleria e/o raccolta	761346136	laboratorioceramica@libero.it	1	t	1	74	\N
+914	58	VILLA LANTE BAGNAIA	42.4240622	12.1539991	VIA JACOPO BAROZZI, 71	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	15	\N
+915	58	Scuderia di Palazzo Nini	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	52	\N
+916	58	Teatro S.Leonardo	42.4180272	12.0651056	Via Cavour,9	Architettura civile	NaN	NaN	5	t	1	44	\N
+917	58	MUSEO DEL BRIGANTAGGIO	42.4168441	12.1051148	VIA GUGLIELMO MARCONI, 19	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	57	\N
+918	58	Biblioteca della Facoltà di Scienze Politiche dell'Università degli studi della Tuscia	42.4130769	12.1024294	Via San Carlo, 32	Biblioteca	NaN	bibliosp@unitus.it	1	t	1	74	\N
+919	58	BIBLIOTECA S. GIUSEPPE	42.4110788	12.1090121	VIALE A. DIAZ; 25	Museo, galleria e/o raccolta	761343134	biblioteca.sangiuseppe@teologicoviterbese.it	3	t	1	63	\N
+920	58	Palazzo Pagliacci	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	10	\N
+921	58	Palazzo Mazzatosta	42.4172780	12.1072507	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	26	\N
+922	58	Palazzo degli Uffici	42.4168441	12.1051148	Piazza Plebiscito 19	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	85	\N
+923	58	ex chiesa di S. Biagio	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	73	\N
+924	58	Palazzo dei Lunensi	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	30	\N
+925	58	Orto Botanico dell'Università della Tuscia	42.4168441	12.1051148	NaN	Museo, Galleria e/o raccolta	NaN	NaN	3	t	1	3	\N
+926	58	"Casa del Barbiere di Paolo III"	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	6	\N
+927	58	Palazzo Sacchi	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	13	\N
+928	58	Rocca Albornoz	42.4220064	12.1047309	NaN	Architettura fortificata	NaN	NaN	3	t	1	9	\N
+929	58	Palazzo Ducale	42.4168441	12.1051148	Bagnaia	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	38	\N
+930	58	Palazzo Nini	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	1	t	1	38	\N
+931	58	ex chiesa di S. Rocco	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	38	\N
+932	58	MUSEO ERBARIO DELLA TUSCIA (UTV)	42.4265711	12.0896074	VIA S. CAMILLO DE LELLIS; SNC	Museo, galleria e/o raccolta	761357490	erbario@unitus.it	4	t	1	0	\N
+933	58	Terme Libere Piscine Carletti	42.4168441	12.1051148	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	62	\N
+934	58	Palazzo Tedeschi 	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5	t	1	65	\N
+935	58	Villa Lante della Rovere	42.4267541	12.1548165	Via Jacopo Barozzi; 71	Museo, galleria e/o raccolta	-	-	3	t	1	93	\N
+936	58	Chiesa di Santa Maria del Suffragio	42.4168441	12.1051148	Via Fontanella del Suffragio, 10	Chiesa o edificio di culto	NaN	NaN	5	t	1	95	\N
+937	58	Chiesa dei Santi Faustino e Giovita	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	1	\N
+938	58	Chiesa di San Giovanni in Zoccoli	42.4168441	12.1051148	Via Giuseppe Mazzini, 123	Chiesa o edificio di culto	NaN	NaN	4	t	1	53	\N
+939	58	Chiesa di Santa Maria in Gradi	42.4168441	12.1051148	S. Maria in Gradi, Via Santa Maria in Gradi	Chiesa o edificio di culto	NaN	NaN	4	t	1	54	\N
+940	58	Porta Fiorentina	42.4224084	12.1049532	NaN	Architettura fortificata	NaN	NaN	5	t	1	70	\N
+941	58	Chiesa di Santa Maria Nuova	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	5	t	1	34	\N
+942	58	Chiesa di San Sisto	42.4168441	12.1051148	Piazza S. Sisto, 6	Chiesa o edificio di culto	NaN	NaN	3	t	1	65	\N
+943	58	Biblioteca comunale degli Ardenti	42.4206915	12.1077763	Piazza Verdi 3	Biblioteca	+39 0761340695	NaN	1	t	1	15	\N
+944	58	Fontana del Borgo Dentro	42.4168441	12.1051148	NaN	Monumento	NaN	NaN	1	t	1	14	\N
+945	58	Biblioteca padre Lorenzo Cozza	42.4099600	12.1178040	Via S. Maria del paradiso	Biblioteca	+39 0761343182	NaN	1	t	1	38	\N
+946	58	Chiesa Della Visitazione (o Della Duchessa)	42.4168441	12.1051148	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	56	\N
+947	58	Domus Dei	42.4168441	12.1051148	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	4	t	1	97	\N
+948	58	Palazzo dei Papi	42.4156137	12.1007084	Piazza S. Lorenzo, 1-8	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	99	\N
+949	58	CONFRATERNITA SS.SACRAMENTO E S.ROSARIO	42.4157698	12.1133540	PIAZZA ORATORIO 5	Museo, galleria e/o raccolta	761379301	confraternitasanmartino@gmail.com	1	t	1	42	\N
+950	58	Viterbo Sotterranea	42.4603608	12.3860395	NaN	Area o parco archeologico	NaN	NaN	1	t	1	43	\N
+951	58	Biblioteca dell'Archivio di Stato di Viterbo	42.4109210	12.1102563	Via M. Romiti	Biblioteca	+39 0761342960	NaN	4	t	1	34	\N
+952	58	Biblioteca della Provincia romana presso il Convento di S. Francesco alla Rocca	42.4218866	12.1064028	Piazza S. Francesco alla Rocca, 6	Biblioteca	+39 0761.341696	mallucci@ofmconv.org	2	t	1	13	\N
+953	58	Palazzo Tignosini	42.4168441	12.1051148	Via S. Lorenzo, 34	Villa o Palazzo di interesse storico o artistico	NaN	NaN	2	t	1	2	\N
+954	58	Biblioteca del Liceo classico statale Mariano Buratti	42.4135803	12.1083063	Via T. Carletti 8	Biblioteca	+39 0761322420	NaN	5	t	1	73	\N
+955	58	Biblioteca Pio XII	42.4292485	12.1280568	Via del Popolo 2	Biblioteca	+39 0761236965	NaN	4	t	1	51	\N
+956	58	Centro per la biblioteca delle Facoltà di agraria e scienze matematiche, fisiche e naturali dell'Università degli studi della Tuscia - CEBAS	42.4271062	12.0909921	Via S. Camillo De Lellis, snc	Biblioteca	+39 0761357512	agbib@unitus.it	2	t	1	33	\N
+957	58	Biblioteca dell'Accademia di belle arti Lorenzo da Viterbo	42.4172455	12.1071295	Via orologio vecchio	Biblioteca	+39 0761221842	NaN	4	t	1	11	\N
+958	58	Biblioteca San Paolo dei frati minori cappuccini della Provincia Romana	42.4190200	12.1154100	Via S. Crispino 6	Biblioteca	NaN	roma.bibliotecaprovinciale@fraticappuccini.it	4	t	1	4	\N
+959	58	Biblioteca provinciale Anselmo Anselmi	42.4249650	12.1058200	Viale Trento, presso Palazzo Garbini	Biblioteca	+39 0761228162	biblioteca-ardenti@libero.it	2	t	1	48	\N
+960	58	Biblioteca della Camera di commercio, industria, artigianato e agricoltura - CCIAA	42.4211132	12.1083127	Via Fratelli Rosselli 4	Biblioteca	+39 0761341151	NaN	4	t	1	18	\N
+961	58	Biblioteca dell'Istituto tecnico industriale e per geometri Leonardo da Vinci	42.4236529	12.0965347	Via A. Volta 26	Biblioteca	NaN	luigi.graziotti@poste.it	5	t	1	94	\N
+962	58	Biblioteca della Facoltà di economia dell'Università degli studi della Tuscia	42.4239971	12.1100455	Via del Paradiso 47	Biblioteca	+39 0761357725	ecobib@unitus.it	2	t	1	15	\N
+963	58	Quartiere San Pellegrino	42.4168441	12.1051148	NaN	Architettura fortificata	NaN	NaN	4	t	1	42	\N
+964	58	Biblioteca della Facoltà di conservazione dei beni culturali dell'Università degli studi della Tuscia	42.4271712	12.0861119	Largo dell'Universit?	Biblioteca	+39 0761357183	bcbib@unitus.it	5	t	1	17	\N
+965	58	Biblioteca della Facoltà di lingue e letterature straniere dell'Università degli studi della Tuscia	42.4271712	12.0861119	Largo dell'Universit?	Biblioteca	+39 0761357655	marling@unitus.it	1	t	1	13	\N
+966	58	BASILICA DI S. FRANCESCO	42.4168441	12.1051148	PIAZZA SAN FRANCESCO, 4	Chiesa o edificio di culto	NaN	NaN	4	t	1	4	\N
+967	59	Biblioteca comunale	42.4654270	12.1724620	Piazza S. Agnese 16	Biblioteca	NaN	NaN	4	t	1	26	\N
+968	59	Borgo di Vitorchiano	42.4667750	12.1715910	NaN	Architettura fortificata	NaN	NaN	3	t	1	4	\N
+969	59	Palazzo Comunale di Vitorchiano	42.4654270	12.1724620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3	t	1	36	\N
+970	59	Chiesa Santa Maria Assunta in Cielo	42.4654270	12.1724620	Via S. Maria, 11	Chiesa o edificio di culto	NaN	NaN	3	t	1	84	\N
+971	59	Statua Moai	42.4654270	12.1724620	Strada Provinciale 23 della Vezza, 19	Monumento	NaN	NaN	4	t	1	43	\N
+972	59	Chiesa della Santissima Trinità	42.4654270	12.1724620	NaN	Chiesa o edificio di culto	NaN	NaN	1	t	1	63	\N
+973	59	Fontana a Fuso	42.4654270	12.1724620	Piazza Roma, 18	Monumento	NaN	NaN	1	t	1	49	\N
+974	59	Piazzale Umberto I	42.4654270	12.1724620	Piazzale Umberto I	Monumento	NaN	NaN	5	t	1	15	\N
+975	59	Centro Botanico Moutan	42.4654270	12.1724620	S.S, Str. Ortana, 46	Museo, Galleria e/o raccolta	NaN	NaN	5	t	1	4	\N
+1	1	MUSEO DEL FIORE	42.7477229	11.8630202	PREDIO GIARDINO; 37	Museo, galleria e/o raccolta	763733642	info@museodelfiore.it	5	t	1	75	Il Museo del Fiore è un piccolo museo interattivo e multimediale immerso nei boschi della Riserva naturale Monte Rufeno, si trova a 10 km dal centro abitato di Acquapendente e a 2 km dal borgo medievale di Torre Alfina. È stato realizzato all'interno del casale Giardino, un vecchio edificio rurale. Con oltre 1.000[1] specie di piante riconosciute nel suo territorio e animali rari, la Riserva naturale di Monte Rufeno, al confine con l'Umbria e la Toscana, è un'area a elevatissima varietà floristica e faunistica. La nascita del museo è da attribuire alle numerose fioriture della Riserva e dal profondo legame che i fiori e le piante hanno con la cultura locale, che si concretizza con i Pugnaloni, grandi mosaici di petali e foglie ispirati al desiderio di libertà dall'oppressione. C'è, inoltre, la possibilità di visitare, proprio dietro il castello di Torre Alfina, il Bosco del Sasseto. Il museo è impostato come un racconto che permette di apprezzare la biodiversità della riserva, i meccanismi che l'hanno determinata, e di condurre nel mondo del fiore, i rapporti con il mondo animale e con il mondo dell'uomo e fa parte del Sistema Regionale Museale del Lago di Bolsena che comprende vari musei archeologici, storici e demo-antropologici.
+59	2	Convento di Sant' Agostino	42.6269800	12.0908718	Piazza Sant'Agostino, 131	Chiesa o edificio di culto	NaN	NaN	5	t	1	83	La chiesa dell'Annunziata, detta anche erroneamente di Sant'Agostino, è una chiesa di Bagnoregio, nella diocesi di Viterbo.\n\nTrasformata, nel XIV secolo, dalle originarie forme romaniche in gotiche, conserva all'interno dei pregevoli affreschi cinquecenteschi (alcuni attribuiti a Taddeo di Bartolo e a Giovanni di Paolo) e un crocefisso ligneo dell'XI secolo.\n\nIl campanile risale al 1735.\n\nAdiacente all'edificio è presente un chiostro, realizzato interamente in cotto da Ippolito Scalza su progetto di Michele Sanmicheli.\n\nLa chiesa è dedicata a Maria Santissima Annunziata, benché sia comunemente ed erroneamente chiamata di sant'Agostino, per la presenza, nelle adiacenze, dell'antico convento degli agostiniani.\n\nSul lato destro della controfacciata si trova il sepolcro di Vincenzo Bonaventura Medori, vescovo di Calvi e Teano.
+73	3	MUSEO NATURALISTICO DEL PARCO MARTURANUM FRANCESCO SPALLONE	42.2498341	12.0673735	VIALE QUATTRO NOVEMBRE, 46	Museo, galleria e/o raccolta	NaN	NaN	4	t	1	14	Il Museo presenta animali, piante e ambienti naturali caratteristici della Tuscia Viterbese in cui è immerso, senza tralasciare accenni agli aspetti geologici e storico-archeologici. Ricostruzioni ambientali, modelli a grandezza naturale e animali preparati, pannelli informativi e materiale divulgativo arricchiscono la vetrina del Parco Marturanum. Il centro visita, associato al museo, mette a disposizione pubblicazioni e depliant sulla fauna e la flora del Parco, su Barbarano Romano e le sue Necropoli etrusche, le cartine dei sentieri turistici ed escursionistici.\nÈ il luogo giusto da visitare per preparare l'escursione al Parco Regionale Marturanum o in attesa che smetta una pioggia improvvisa!
+83	4	Villa Giustiniani Odescalchi	42.2182424	12.1925906	Piazza Umberto I	Museo, galleria e/o raccolta	0761 636065	-	1	t	1	50	Il palazzo Giustiniani Odescalchi, ceduto allo Stato italiano dalla famiglia Odescalchi di Bracciano nel 2003, è il risultato delle trasformazioni applicate sull'antico castello degli Anguillara nei primi anni del '600. Risale al tempo degli Anguillara il piano interrato e il piano terra mentre il portale d'ingresso è simile al portale del palazzo Farnese a Roma. Nel 1595 il palazzo divenne di proprietà della famiglia Giustiniani che avvia i lavori di ristrutturazione e trasformazione, aggiungendo il piano nobile (collegandolo con il giardino all'italiana) e finanziando un ampliamento del giardino con fontane, viali e giochi d'acqua.\n\nA loro si debbono anche le decorazioni tardo cinquecentesche e gli affreschi di Antonio Tempesta (1555-1630). Al piano terra è collocato un pregevole teatrino, unico nel suo genere. Al piano nobile, si possono ammirare gli straordinari esempi di pittura Barocca: notevole la sala dipinta da Francesco Albani (1578-1660) con la "Caduta di Fetonte dal carro", la sala del Domenichino (1581-1641) e gli affreschi di Bernardo Castello (1557-1629).
+101	6	Castello di Vico	42.2725220	12.0316620	Vico	Architettura fortificata	NaN	NaN	4	t	1	47	Castello medievale del XII secolo, attualmente divorato dalla vegetazione e parzialmente crollato. Fondato dai Di Vico, probabilmente è rappresentato in una sezione dell'abside di Santa Maria in Trastevere, da un mosaico del Cavallini. E' situato nei pressi di una necropoli e di resti di abitato etrusco, in una zona di campagna della Tuscia di particolare bellezza.
+200	13	Santuario della Madonna del Piano	42.2564918	12.1776114	Viale Nardini, 17	Chiesa o edificio di culto	NaN	NaN	1	t	1	16	Il tempio sorge appena fuori il centro abitato di Capranica, in località detta “il Piano” con evidente allusione alla caratteristica morfologica del sito. La chiesa primitiva, la cui presenza è già documentata nel  XIV secolo, ospitava il miracoloso affresco della Vergine che oggi si scorge sulla parete di fondo dell’altare maggiore.
+147	8	PARCO DEI MOSTRI; SACRO BOSCO DI BOMARZO	42.4916599	12.2475933	-	Museo, galleria e/o raccolta	761924029	boscosacro@interfree.it	2	t	1	32	Il Parco dei Mostri, denominato anche Sacro Bosco o Villa delle Meraviglie di Bomarzo, in provincia di Viterbo, è un complesso monumentale italiano. Si tratta di un parco naturale ornato da numerose sculture in basalto risalenti al XVI secolo e ritraenti animali mitologici, divinità e mostri.
+169	10	Palazzo Farnese	42.3279900	12.2377600	Piazzale Farnese; 1	Villa o Palazzo di interesse storico o artistico	0761 646052	-	5	t	1	86	Il Palazzo fu fatto costruire da papa Paolo III, al secolo Alessandro Farnese, per il figlio Pierluigi, come sede di amministrazione dei beni nel vasto territorio canepinese.\n\nAmpliata successivamente nel lato sinistro, la struttura ha nella parte destra un enorme muro di sostegno abbellito da simboli e da una fontana quasi semicircolare.\n\nL’immobile è solido, espressione di quell’architettura del XVI secolo che supera il linguaggio decorativo e si limita alla pura funzione delle forme. È composto da 3 piani fuori terra e da una torre campanaria posta alla sommità del nucleo originario.\nSono pregevoli i soffitti lignei decorati con formelle in ceramica rappresentanti il giglio farnesiano, presenti nella sala consiliare e al piano terra. Il giglio è riproposto sulla chiave dell’arco del Portone principale in blocchi di peperino bugnato e negli edifici circostanti la piazza.
+183	11	Tomba Francois	42.4241163	11.6310953	Parco archeologico di Vulci	Museo, galleria e/o raccolta	0761 437787	sba-em@beniculturali.it	5	t	1	7	La tomba François è uno dei più importanti monumenti etruschi (340-330 a.C.[1]), soprattutto per la sua ricchissima decorazione ad affresco che ne fa una delle più straordinarie manifestazioni della pittura etrusca. Si trova nella necropoli di Ponte Rotto a Vulci, provincia di Viterbo, e fu scoperta nell'aprile 1857 dall'archeologo e Commissario regio di Guerra e Marina del Granducato di Toscana Alessandro François a cui fu intitolata. Il ciclo di affreschi, staccato dalle pareti e suddiviso in pannelli su ordine del Principe Alessandro Torlonia, fu trasportato nel 1863 a Roma, presso Villa Albani.[2] Il sepolcro appartenne alla famiglia etrusca dei Saties di Vulci, una delle più grandi famiglie aristocratiche della città. La tomba François, con i suoi affreschi, contrappone temi troiani a temi di storia eroica vulcente all'interno di un contesto volutamente antiromano.[3] Attualmente è visitabile rivolgendosi presso la biglietteria del Parco Naturalistico ed Archeologico di Vulci. Il ciclo pittorico resta invece privato e visibile solo in rarissime occasioni di mostre temporanee.
+155	9	Giardino Portoghesi-Massobrio	42.2197263	12.4259417	Via Luigi Cadorna, 59	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	70	Il Giardino Portoghesi si trova a Calcata (VT), affacciato sul vallone del Treja e sull’omonimo borgo. È stato creato nel 1990 dall’architetto e storico dell’architettura, e in particolare grande studioso del barocco, Paolo Portoghesi assieme alla moglie Giovanna Massobrio.\n\nNominato “il parco più bello” del 2017, si estende per tre ettari. Portoghesi l’ha ideato come un luogo dei ricordi, lasciando che fosse la natura ha suggerire l’architettura. Dopo un grande uovo all’ingresso, simbolo della vita e del suo rinnovamento cosmico, si apre il giardino, ricco di alberi, fra cui ulivi centenari e antichi alberi da frutto, arbusti, perenni da fiore. Un centinaio di leggii distribuiti nei diversi punti, riportano testi letterari e filosofici. Al centro, un tempietto circolare, circondato da un canale e da un piccolo bosco di lecci. Fra i vari elementi architettonici presenti, anche la Biblioteca dell’Angelo, all’interno di una piccola casa caratteristica di Calcata, dove sono custoditi preziosi volumi e souvenir raccolti in giro per il mondo.\n\nPresenza importante del luogo sono gli animali, alcuni salvati da morte certa dai proprietari: moltissimi uccelli acquatici, rare anatre, oche delle Hawaii e persino due pellicani nei pressi del laghetto; fenicotteri, ibis, cicogne, pappagalli e varie specie di gru, ospitati in ampie gabbie, un gufo addomesticato e molti altri uccelli (n totale sono 700) che vivono liberi nel parco; e poi capre, lama ed asini, fra cui gli amiatini e quelli bianchi dell’Asinara: la signora Giovanna ha messo su un allevamento di varie razze in via di estinzione.
+118	7	Lago di Bolsena	42.5925074	11.9287501	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	3	t	1	22	Il lago di Bolsena o Volsinio (in latino: Lacus Volsiniensis / Lacus Volsinii) è un lago dell'Italia centrale, posto nell'alto Lazio, nella parte settentrionale della provincia di Viterbo (Alta Tuscia). Formatosi oltre 300 000 anni fa in seguito al collasso calderico di alcuni vulcani del complesso dei monti Volsini che ha accompagnato lo sprofondamento vulcano-tettonico dell'area, è lambito per una parte considerevole dalla strada consolare Cassia, a pochi chilometri dal monte Amiata, ed è il lago di origine vulcanica più grande d'Europa.
+117	7	Fontana di San Rocco	42.6441069	11.9849554	Piazza S. Rocco, 61	Monumento	NaN	NaN	2	t	1	58	La fontana è collocata lungo il cammino della Via Francigena tra le porte San Giovanni (ristrutturata nel 1559) e quella di San Francesco, in quello che era il centro nevralgico della città dove si affacciavano sia il palazzo del Comune (dal 1377) che la residenza di Giovanni de’ Medici che la fece restaurare dotandola di un prospetto rinascimentale nel 1510.\n\nLa leggenda narra che la sua acqua avrebbe guarito una piaga che tormentava San Rocco, in cammino lungo la via Francigena. Conosciamo il suo aspetto rinascimentale grazie a un bassorilievo scolpito sopra una porta lungo via Cavour: era probabilmente composta da una vasca quadrangolare con pilastro centrale a sostegno di una coppa da cui zampillava l’acqua. Dell’epoca rimangono lo stemma del comune di Bolsena e della famiglia Medici.\n\nNei pressi della fontana sorgeva l’Ospizio della Corona, luogo di sosta e di pernottamento per i pellegrini della Via Francigena, inglobato nel XVIII nell’attuale palazzo Cozza Caposavi.
+195	12	MUSEO DELLA NAVIGAZIONE NELLE ACQUE INTERNE	42.5560915	11.8882363	VIALE REGINA MARGHERITA;SNC	Museo, galleria e/o raccolta	761870043	comunecapodimonte@itpec.it	5	t	1	10	Capodimonte, per la sua posizione e la sua struttura urbanistica che si protende sul lago come un grande nave, per la sua storia, per le sue tradizioni e per la sua “vita sulla riva”, è il luogo ideale per ospitare il Museo della navigazione nelle Acque Interne. Il museo permette al visitatore di capire le forme, gli ambienti e le necessità specifiche della navigazione sui laghi e sui fiumi. Un “tuffo”, è proprio il caso di dire, tra galee, galeotte, tartane, feluche, lenunculi, caudicarie, navicelli, scafe, battane... Inoltre, nel museo, si conserva una piroga preistorica ritrovata nei pressi dell’Isola Bisentina. Grazie a questo ritrovamento l’imbarcazione di un nostro antenato è approdata a Capodimonte per raccontarci la sua incredibile storia.
+222	14	Borgo Di Caprarola	42.3251260	12.2363730	NaN	Architettura fortificata	NaN	NaN	4	t	1	94	Caprarola, posto tra le vie consolari Cassia e Flaminia, rappresenta uno degli esempi urbanistici più significativi del '500. Durante il medioevo il paese fu conteso da diverse famiglie feudatarie e nel XVI secolo raggiunse il suo massimo splendore, quando la famiglia Farnese estese notevolmente il proprio dominio costruendo fastose ville e castelli. Tra questi fu costruita la residenza più rappresentativa sia a livello di ricchezza che di potenza, il Palazzo Farnese
+226	15	Castello di Giulia Farnese (o Rocca Farnese)	42.3316250	12.2643660	Piazza Castello, 131	Architettura fortificata	NaN	NaN	2	t	1	54	A differenza di altre rocche edificate o ristrutturate dai Farnese, il palazzo di Carbognano, nonostante la sua imponenza, non domina il borgo da una posizione sopraelevata, come avviene invece nella vicina Caprarola.\nLa Rocca risale ai primi decenni del ‘200. Ristrutturata intorno al ‘500, costituisce il perno intorno a cui il borgo è nato e si è sviluppato a livello urbanistico e storico.\n\nA partire dal XIV secolo, il Castello divenne insediamento dei Prefetti Di Vico e fu poi ceduto a Everso II di Anguillara, nel 1432. Nel 1454 subentrò la Camera Apostolica che lo conservò fino al 1494, quando papa Alessandro VI Borgia lo affidò a Orsino Orsini, marito di Giulia Farnese.\nDi notevole importanza storica sono gli affreschi, gli stucchi e i fregi architettonici che si possono ammirare nel salone nobile della Rocca di Carbognano.
+230	16	Basilica di Sant'Elia	42.2496098	12.3730950	Via Sant' Elia	Chiesa o edificio di culto	NaN	NaN	1	t	1	86	Innalzata per la prima volta nell’VIII secolo, la Basilica di Sant’Elia è un esempio di stile architettonico di stampo romanico-lombardo. Collocata al centro dell’incantevole Valle Suppontonia, ai piedi dell’antico Borgo di Castel Sant’Elia da una parte, e del complesso del Santuario pontiﬁcio di Santa Maria Ad Rupes dall’altra, la splendida basilica si trova dove un tempo sorgeva la dimora di monaci Benedettini e Anacoreti.
+246	17	MUVIS - Museo del Vino	42.6462856	12.2043483	Piazza del Poggetto, 12	Museo, galleria e/o raccolta	NaN	NaN	5	t	1	84	Il MUVIS “Museo del Vino e delle Scienze Agroalimentari” è il più grande museo nel suo genere d’Europa con 2000 m² di spazi espositivi, è situato nel cuore del borgo di Castiglione in Teverina. Che fa parte della Associazione Nazionale “Città del Vino”\n\nIl museo è inserito all’interno del vasto ed articolato complesso produttivo dei Conti Vaselli ovvero nella grande cantina distribuita su 5 piani (1° piano, piano terra e 4 piani sotterranei), non più in uso da quasi 20 anni. Il percorso è una discesa nella collina alla scoperta della produzione vinicola “di ieri”.\nSi scende per 27 metri sino a raggiungere la “Cattedrale” (al -4) in cui è possibile ammirare gigantesche botti del diametro di tre metri.\n\nL’allestimento è mirato al pieno coinvolgimento ed “all’immersione”  del visitatore attraverso le foto, video, racconti, strumenti, macchinari e gigantografie nel mondo di vino, dell’agroalimentare, di produzione vinicola e storia locale.\n\nAccanto alle tracce materiali ed immateriali del mondo contadino  e delle vicende storiche ed umane delle Cantine Vaselli  sono stati “messi in scena” con installazioni scenografiche, gli aspetti della produzione e della tradizione vinaria nel territorio della Teverina, accanto ai grandi temi di più ampio respiro culturale che il vino suggerisce.
+277	20	Tempio di Giunone Curite	42.2963220	12.4220905	NaN	Area o parco archeologico	NaN	NaN	1	t	1	41	A Civita Castellana, lungo il torrente Rio Maggiore, tra l’altopiano di Celle e quello del Vignale sorge quello che è considerato da molti come il più noto dei santuari falisci, ovvero quello dedicato al culto di Giunone Curite. Divinità celeste  e lunare, Dea del calendario, della donna, della vita femminile e della fecondità, Divinità del matrimonio e in quanto Regina, Divinità poliade di alcune città del Lazio e d’Italia. Giunone era la Divinità corrispondente alla Dea greca Era e dunque concepita come sposa di Giove.
+304	21	Chiesa della Madonna delle Grazie	42.6053622	12.1876584	NaN	Chiesa o edificio di culto	NaN	NaN	3	t	1	38	Il santuario della Madonna delle Grazie sorge alle spalle della chiesa parrocchiale dei SS. Pietro e Callisto e in aderenza alle antiche Mura cittadine.\nProspetta con il suo lato sud su di un piccolo vicolo, realizzato a seguito dell’edificazione della chiesa e collegato con piazza dell’Unità d’Italia; a nord confina con via di Porta Vecchia, che corre ad una quota molto più bassa, ad ovest, tramite la sacrestia e un ambiente di servizio, con le Mura, mentre ad est in parte con la chiesa parrocchiale.\nL’impianto, disposto in direzione da sud a nord, è ad aula rettangolare con angoli smussati. Le pareti, inoltre, sono articolate da rincassi poco profondi e di pari ampiezza, sia sull’asse longitudinale, sia su quello trasversale: all’ estremità sud vi è ospitato l’antico ingresso principale, oggi non più agibile, preceduto da tre gradini e sormontato dalla cantoria lignea; a nord è invece collocato l’altare maggiore; mentre ai due lati si ergono simmetricamente due altari minori.\nL’attuale accesso alla chiesa avviene sul lato est tramite una porta preceduta da una breve rampa inclinata, posta al lato del vicolo.\nInternamente l’aula è scandita da un ordine architettonico su paraste tuscaniche, la cui trabeazione s’interrompe nei quattro rincassi, in corrispondenza dei quali s’innalzano archi a tutto sesto. La volta a padiglione a copertura dell’ambiente è articolata pertanto dalle unghie delle lunette lungo i due assi.\nIl presbiterio è separato dall’aula tramite una balaustra in legno; l’altare si erge contro la parete di fondo, rialzato di un gradino e formato da un frontespizio con colonne corinzie binate su piedistalli, che sorreggono un timpano curvo spezzato, al centro del quale si apre una finestra ovale circondata da cherubini.\nAi lati ricurvi del presbiterio si aprono due porte: quella di sinistra conduce alla sagrestia, mentre quella di destra è murata e coperta da una tenda.\nGli altari secondari, aggettanti nell’aula e rialzati di un gradino, sono arricchiti anch’essi da frontespizi su colonne corinzie.\nLa cantoria è sorretta da due pilastri quadrati, ed è accessibile tramite una scala situata nell’ambiente di servizio ad ovest della chiesa, al quale si accede tramite una porta posta nel tratto curvo dell’aula.\nLa chiesa è illuminata da una finestra rettangolare posta in controfacciata, dalla finestra ovale del presbiterio e da una grande finestra rettangolare posta al di sopra dell’altare secondario di sinistra, mentre la corrispondente è dipinta.\nLe superfici interne si presentano riccamente decorate con marmi, finti marmi e pitture; l’intera volta è affrescata con una finta architettura.\nIl tetto dell’aula è a padiglione, mentre gli ambienti collaterali ad ovest hanno coperture più basse ad unico spiovente.\nLa facciata è priva di articolazioni, semplicemente intonacata e si conclude orizzontalmente con lo sporto del tetto; perpendicolarmente ad essa si erge un campaniletto a vela, in linea con il lato ovest dell’aula. In asse al prospetto si trova l’antico ingresso alla chiesa (oggi obliterato e soprelevato rispetto alla quota del vicolo), di forma rettangolare, con cornice in peperino. Più in alto si apre la finestra rettangolare priva d’incorniciatura.\nIl breve tratto di prospetto laterale sulla destra, anch’esso intonacato, ospita l’attuale ingresso con portale analogo a quello originario.
+298	20	Forte Sangallo (o Rocca Borgia)	42.2952260	12.4091700	Via Mazzocchi	Architettura fortificata	NaN	NaN	4	t	1	31	Benvenuti al Forte Sangallo, l’imponente rocca fortificata di Civita Castellana che è certamente da considerare tra le più importanti e meglio conservate opere militari realizzate dallo Stato pontificio tra la fine del 1400 e l’inizio del 1500.\n\nEdificata sui resti di una preesistente rocca medievale, già strategicamente posta a difesa della parte dell’abitato più vulnerabile date le sue caratteristiche morfologiche, per secoli ha difeso e reso inespugnabile la citta di Civita Castellana e, al tempo stesso, ha testimoniato vistosamente la presenza del potere pontificio sul territorio.\n\nLa sua costruzione prese avvio per volontà di Alessandro VI Borgia nel 1495, qualche anno dopo la sua ascesa al soglio di San Pietro, e rientrava nel più vasto progetto di miglioramento e potenziamento delle rocche difensive che perimetravano lo Stato pontificio, all’epoca in grande espansione.\n\nA progettare e ad avviare la costruzione dell’ambiziosa opera fu il celebre architetto e ingegnere militare Antonio Giamberti da Sangallo, detto il Vecchio (1455-1535).\nLa rocca resterà alla storia come uno dei suoi massimi capolavori.\n\nAlla morte di Alessandro VI il cantiere passò nelle mani del suo successore, Giuliano Della Rovere, divenuto papa il 5 ottobre 1503 col nome di Giulio II, che completò la fabbrica affidandosi ad un altro direttore dei lavori, l’architetto Antonio da Sangallo il Giovane (1484-1546).\n\nDue caratteristiche di fondo fanno della rocca borgiana un modello emblematico del primissimo Rinascimento italiano e la consacrano come un monumento ‘moderno’: i sistemi difensivi innovativi, adeguati alle mutate tecniche di guerra che prevedevano oramai l’uso delle armi da fuoco; la sua contemporanea funzione di solenne residenza papale, poiché ingloba al piano nobile ambienti ad uso abitativo residenziale destinati al papa ed alla sua corte.\n\nResterà dimora papale fino agli inizi del 1800, dopo di che sarà usata come carcere politico e dal 1846 al 1861 come carcere militare; a partire dal 1905 casa circondariale del Regno d’Italia.\nIl lungo periodo di decadenza seguito alla dismissione del carcere (1961) terminerà alla fine degli anni Sessanta del Novecento con il restauro conservativo dell’edificio e la destinazione a sede del Museo Archeologico dell’Agro Falisco (1985).
+257	19	Chiesa di S. Egidio	42.5597682	12.1257580	NaN	Chiesa o edificio di culto	NaN	NaN	2	t	1	57	Dedicata al Santo Patrono del borgo, la Chiesa di Sant'Egidio rappresenta una magnifica espressione del Rinascimento, dalle linee armoniose. Un vero e proprio "piccolo gioiello d'arte".\n\nFu edificata tra 1512 e 1520, e a commissionarla fu il cardinale Alessandro Farnese (futuro Papa Paolo III), che per la sua progettazione si rivolse al celebre architetto fiorentino Antonio da Sangallo il Giovane.\n\nAl suo interno presenta un impianto a croce greca, e conserva un incantevole pavimento esagonale, in ottimo stato. Le pareti dell'edificio sono adornate da pregevoli affreschi del Cinquecento, di rilevanza storica e artistica.
+417	32	Parco Comunale dei Castagneti	42.6290280	11.8274530	Via Roma, 23	Parco o Giardino di interesse storico o artistico	NaN	NaN	1	t	1	91	I primi impianti del parco si fanno risalire ai tempi di Matilde di Canossa. Oggi presenta esemplari che portano su di sé il peso del trascorrere dei decenni.\n\nTronchi contorti, cortecce scavate, quasi come volti umani segnati dal passare del tempo e dalle avversità della natura. Si è creato un ambiente di grande serenità e pace, al punto da essere annoverato come uno degli spazi verdi più belli e suggestivi dell’Appennino. Chiuso sullo sfondo da una quinta naturale rappresentata dal Monte Caprile, il Parco racchiude in sé tutta l’essenza antica di Montecreto: il lavoro, la fatica, il trascorrere quasi immutabile dei secoli, ma anche la bellezza e la capacità dell’uomo di forgiare la natura assecondandone le tendenze e migliorandone la qualità.\n\nUn lavoro che oggi si può riscoprire visitando l’antico metato, l’essiccatoio per le castagne e il mulino delle Belle addormentate, riportati a nuova vita, resi di nuovo funzionanti e spesso utilizzati per momenti di incontro e di festa, che contribuiscono a mantenere viva la tradizione e a tramandarla alle nuove generazioni.\n\nE il Parco dei Castagni, testimone del trascorrere del tempo, oggi è anche uno dei migliori amici dei bambini.\nSpazi verdi, giochi, aree attrezzate, sono a disposizione dei più piccoli in un ambiente salubre e suggestivo, guardato a vista dall’imponenza e dalla saggezza antica dei castagni secolari.\nIn autunno inoltre il parco è uno dei luoghi in cui si sviluppa la Festa della Castagna di Montecreto. Nelle settimane autunnali inoltre vedrete molte persone andare a raccogliere le castagne nel parco. È infatti concessa la raccolta a chiunque, con il solo limite del rispetto degli alberi e delle ordinanze comunali.
+452	34	Grotta delle Apparizioni	42.5354236	11.9235040	Via Verentana, 48	Parco o Giardino di interesse storico o artistico	NaN	NaN	2	t	1	90	La grotta delle apparizioni è uno dei luoghi più particolari e suggestivi che si trovano a Marta. Questa grotta è passata alla storia per essere stato il luogo in cui sarebbe apparsa a più persone la Santa Vergine Maria, la prima apparizione risale al 19 maggio 1948 e da allora sono tantissime le persone che ogni anno vengono in pellegrinaggio in questo posto. Secondo i racconti locali le prime ad aver visto la Madonna in questo luogo furono tre bambine di nome Maria Antonietta, Ivana e Brunilde; ma l’epiteto più famoso legato a questo mistero della fede è quello inerente alla storia di Mario Prugnoli anche noto con il soprannome di “zio Mario” e riportato sul libro “Apparizioni di Marta”. Dopo la prima apparizione iniziarono numerose indagini per stabilire o meno l’autenticità dell’apparizione finché poco dopo non avvenne il miracolo ed una bambina con il braccio affetto da un male incurabile, dopo la visita alla grotta guarì inspiegabilmente. Ma il frate cappuccino che era stato messo a capo della commissione di controllo, che fino a quel momento non aveva creduto a nessuna delle varie apparizioni, mentre era su un balcone a smentire alla folla il miracolo assistette a una scena che cambiò totalmente la sua visione. Secondo i racconti il frate vide il sole roteare e il cielo divenne di mille colori e così l’uomo grido “Viva Maria”. Secondo i giornali dell’epoca erano circa 40.000 le persone ad aver assistito al miracolo e da lì in poi la Vergine non finì di elargire grazie di ogni specie. Per quanto sia complessa e misteriosa la storia legata a questa grotta dell’apparizione, questo resta uno dei luoghi più curiosi e interessanti da visitare per chi si reca in questo bellissimo paese
 \.
 
 
@@ -3086,7 +3095,7 @@ SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_permission_id_seq', 80, true);
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 84, true);
 
 
 --
@@ -3135,14 +3144,14 @@ SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_content_type_id_seq', 20, true);
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 21, true);
 
 
 --
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 24, true);
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 25, true);
 
 
 --
@@ -3744,14 +3753,6 @@ ALTER TABLE ONLY public.user_tag
 
 ALTER TABLE ONLY public.social_interaction
     ADD CONSTRAINT fk_wos FOREIGN KEY (wos_id) REFERENCES public.social_media(sm_id);
-
-
---
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE USAGE ON SCHEMA public FROM PUBLIC;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --

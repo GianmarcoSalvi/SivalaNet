@@ -64,6 +64,7 @@ class AccommodationView(views.APIView):
         
             ]),
             external_docs={'url':'https://apidocs.geoapify.com/docs/places/#about', 'description':'Geoapify Places API'},
+            # responses=JsonResponse,
         description='Retrieve Accommodations (Hotel, Motel, Hostal, Guest House, Chalet) by using two Geoapify calls.' +
         'In a first step, it is performed a Geoapify Place request in order to obtain the ID of places of interest. Later, the retrieved IDs are given as input to a Geoapify Place Details request.'
     )
@@ -151,6 +152,7 @@ class CateringView(views.APIView):
             OpenApiParameter(name="lon", type=OpenApiTypes.DOUBLE),  
         
             ]),
+            # responses=JsonResponse,
             external_docs={'url':'https://apidocs.geoapify.com/docs/places/#about', 'description':'Geoapify Places API'},
         description='Retrieve Caterings (Restaurant, Bar, Fast food, Pub) by using two Geoapify calls.' +
         'In a first step, it is performed a Geoapify Place request in order to obtain the ID of places of interest. Later, the retrieved IDs are given as input to a Geoapify Place Details request.'

@@ -33,4 +33,19 @@ def generate_itinerary(user_id, days, must_see_poi=None, budget=None, intensity=
 
     return sc.Itinerary(itinerary=ds_list)
 
-    
+
+
+
+
+def random_poi_selection(poi_quantity):
+   poi_list = list(Poi.objects.all())
+   utility_score_list = Poi.objects.values_list('utility_score', flat=True)
+   return random.choices(poi_list, utility_score_list, poi_quantity)
+   
+
+def geoapify_routing_planner():
+   API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
+
+
+   pass
+   
