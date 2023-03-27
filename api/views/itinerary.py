@@ -16,18 +16,24 @@ class ItineraryViewSet(viewsets.ViewSet):
 
     @extend_schema(
     parameters=([
-        OpenApiParameter(name="user_id", type=OpenApiTypes.INT, required=True),
-        OpenApiParameter(name="days", type=OpenApiTypes.INT, required=True, 
+        OpenApiParameter(name="user_id", type=OpenApiTypes.INT, required=True, default=1),
+        OpenApiParameter(name="start_location_lat", type=OpenApiTypes.DOUBLE, required=True),
+        OpenApiParameter(name="start_location_lon", type=OpenApiTypes.DOUBLE, required=True),
+
+        OpenApiParameter(name="end_location_lat", type=OpenApiTypes.DOUBLE, required=True),
+        OpenApiParameter(name="end_location_lon", type=OpenApiTypes.DOUBLE, required=True),
+        
+        OpenApiParameter(name="days", type=OpenApiTypes.INT, required=True, default=5, 
                          description="How many days lasts the journey"),
         OpenApiParameter(name="must_see_poi", type=OpenApiTypes.INT, required=False, many=True,
                          description="List of poi_id (int) chosen by the user"),
         OpenApiParameter(name="budget", type=OpenApiTypes.INT, required=False,
-                         description="Budget in euros for the entire journey"),
+                         description="User-defined budget in euros for the entire journey"),
         OpenApiParameter(name="intensity", type=OpenApiTypes.INT, required=False, enum=(1,2,3,4,5),
                          description="How much relaxed (from 1) or dynimic (up to 5) the journey will be"),
         OpenApiParameter(name="preference", type=OpenApiTypes.INT, required=False, enum=(1,2,3),
                          description="[1] Highest quantity of Poi. [2] Most popular attractions itinerary. [3] Budget minimizing itinerary"),
-        OpenApiParameter(name='generating_engine', type=OpenApiTypes.STR, enum=('test','geoapify','ortools'), default='test',
+        OpenApiParameter(name='generating_engine', type=OpenApiTypes.STR, enum=('test','geoapify','ortools'), default='test', required=True,
                          description='Choose between different itinerary generators.')
         ])
     )
@@ -51,6 +57,6 @@ class ItineraryViewSet(viewsets.ViewSet):
             
             case 'ortools':
 
-                return 
+                return
 
         

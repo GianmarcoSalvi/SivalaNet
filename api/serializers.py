@@ -70,8 +70,6 @@ class PoiOpeningHourSerializer(serializers.ModelSerializer):
 
 # 5) POI
 class PoiSerializer(serializers.ModelSerializer):
-    opening = PoiOpeningHourSerializer(read_only=True)
-    cityy = CitySerializer(read_only=True)
     class Meta:
         model = Poi
         #fields = '__all__'
@@ -104,7 +102,7 @@ class PoiSerializerFake(serializers.Serializer):
 
 # 11) DailySchedule
 class DailyScheduleSerializer(serializers.Serializer):
-    dailyschedule = PoiSerializerFake(many=True)
+    dailyschedule = PoiSerializer(many=True, read_only=True)
     #poi_quantity = serializers.IntegerField(read_only=True)
 
     def create(self, validated_data):
