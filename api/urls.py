@@ -13,7 +13,7 @@ router.register(r'poi', poi.PoiViewSet, basename='poi') # 7
 #router.register(r'poi_opening_hour', poi_opening_hour.PoiOpeningHourViewSet, basename='poi_opening_hour') # 8
 router.register(r'social_media', social_media.SocialMediaViewSet, basename='social_media') # 9
 router.register(r'day_and_hour', day_and_hour.DayAndHourViewSet, basename='day_and_hour') # 10
-router.register(r'itinerary',itinerary.ItineraryViewSet, basename='itinerary')
+#router.register(r'itinerary',itinerary.ItineraryViewSet, basename='itinerary')
 #router.register(r'accommodation',geoapify.AccommodationViewSet, basename='accommodation')
 
 
@@ -24,6 +24,7 @@ router.register(r'itinerary',itinerary.ItineraryViewSet, basename='itinerary')
 urlpatterns = [
     path(r'accommodation/', geoapify.AccommodationView.as_view(), name='accommodation'),
     path(r'catering/', geoapify.CateringView.as_view(), name='catering'),
+    path(r'itinerary/', itinerary.ItineraryView.as_view(), name='itinerary')
     #path('', include(router.urls)),
     #path('itinerary', itinerary.ItineraryView.as_view, name='itinerary'),
     #path('region', views.region),
