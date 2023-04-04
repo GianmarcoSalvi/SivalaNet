@@ -14,7 +14,7 @@ def random_itinerary(user_id, days, must_see_poi=None, budget=None, intensity=No
 
     for day in range(days):
         poi_list = []
-        poi_per_day = randint(1,4)
+        poi_per_day = randint(2,4)
         for n in range(poi_per_day):
             length = len(Poi.objects.all())
             poi = Poi.objects.get(pk=randint(1,length))
@@ -80,8 +80,9 @@ def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, en
     api_request = 'https://api.geoapify.com/v1/routeplanner?'
     api_request += 'apiKey=' + API_KEY
     
-    poi_per_day = 5
-    poi_list = probabilistic_poi_selection(days * poi_per_day)
+    POI_PER_DAY = 5
+    
+    poi_list = probabilistic_poi_selection(days * POI_PER_DAY)
 
     # BODY ELEMENTS FOR REQUEST
 
@@ -121,7 +122,7 @@ def geoapify_response_to_model(routing_planner_response):
 
     rpr = routing_planner_response
     actions = rpr["features"][0]["properties"]["actions"]
-    jobs = rpr["properties"]["params"]["jobs"]
+    # jobs = rpr["properties"]["params"]["jobs"]
 
     breaks_count = 0
     poi_list = []
@@ -148,7 +149,7 @@ def geoapify_response_to_model(routing_planner_response):
 
             case "end":
                 ds_list.append(sc.DailySchedule(dailyschedule=poi_list))
-                
+
             case other:
                 pass
 

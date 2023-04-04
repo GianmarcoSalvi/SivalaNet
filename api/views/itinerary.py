@@ -17,6 +17,8 @@ class ItineraryView(views.APIView):
     @extend_schema(
     parameters=([
         OpenApiParameter(name="user_id", type=OpenApiTypes.INT, required=True, default=1),
+        OpenApiParameter(name="user_preferences", type=OpenApiTypes.STR, many=True, 
+                         description="Array of strings representing user preferences: 'Museo', 'Biblioteca', 'Medioevo', 'Pittura', 'Natura', 'Parco' ecc"),
         OpenApiParameter(name="start_location_lat", type=OpenApiTypes.DOUBLE, required=True, 
                          examples=[OpenApiExample(name='Viterbo', value="42.4193700")]),
         OpenApiParameter(name="start_location_lon", type=OpenApiTypes.DOUBLE, required=True,
