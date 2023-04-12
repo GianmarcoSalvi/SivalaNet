@@ -5,7 +5,9 @@
 #   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
-from django.db import models
+from django.contrib.gis.db import models
+from django.contrib.gis.geos import Point
+
 from .utils.db_types import *
 
 class City(models.Model):
@@ -49,6 +51,7 @@ class Poi(models.Model):
     poi_id = models.AutoField(primary_key=True)
     city = models.ForeignKey(City, models.DO_NOTHING)
     name = models.CharField(max_length=256)
+    location = models.PointField(geography=True)
     lat = models.DecimalField(max_digits=9, decimal_places=7)
     lon = models.DecimalField(max_digits=9, decimal_places=7)
     address = models.CharField(max_length=256, blank=True, null=True)

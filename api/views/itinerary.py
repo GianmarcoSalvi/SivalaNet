@@ -73,7 +73,7 @@ class ItineraryView(views.APIView):
                 #return Response(gen.geoapify_routing_planner(sl_lat, sl_lon, el_lat, el_lon, days))
                 
             case 'ortools':
-                
+                Response(status=status.HTTP_501_NOT_IMPLEMENTED)
                 return
 
         

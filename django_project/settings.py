@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'drf_spectacular',
+    'django.contrib.gis',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis', # 'django.db.backends.postgresql'
         'HOST': 'db', # PUT 'db' to work with docker
         'PORT': 5432, # 5455 (?)
         'NAME': "postgres",
@@ -114,7 +115,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'SivalaNet API - OpenAPI 3.0',
+    'TITLE': 'SiVaLaNet API',
     'DESCRIPTION': 'Our project goal is to help turists in planning a perfect itinerary based on their preferences and, more in general, to improve tourism in the region of Viterbo at this step. We hope one day the project will be expanded nationwide.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,

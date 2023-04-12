@@ -16,7 +16,8 @@ services:
     networks:
       - customnetwork
   db:
-    image: postgres:13
+    image: postgis/postgis:13-3.3 #postgres:13
+    platform: linux/amd64
     # restart: always
     volumes:
       - postgres_data:/var/lib/postgresql/data/
