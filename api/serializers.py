@@ -73,7 +73,7 @@ class PoiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Poi
         #fields = '__all__'
-        exclude = ['is_active']
+        exclude = ['is_active','location']
         # depth = 1
 
 

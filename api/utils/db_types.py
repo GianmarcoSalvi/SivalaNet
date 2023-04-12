@@ -1,4 +1,5 @@
-from django.db import models
+from django.contrib.gis.db import models
+
 
 class SourceField(models.Field):
     def db_type(self, connection):
