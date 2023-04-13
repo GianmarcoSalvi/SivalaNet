@@ -1,5 +1,5 @@
 from rest_framework.decorators import api_view, action
-from rest_framework import views
+from rest_framework import views, viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from ..serializers import *
@@ -10,15 +10,21 @@ from ..algorithm import generator as gen
 from ..models import *
 
 
-class ItineraryView(views.APIView):
+class ItineraryViewSet(viewsets.ViewSet):
     
     serializer_class = ItinerarySerializer
 
     @extend_schema(
     parameters=([
-        OpenApiParameter(name="user_id", type=OpenApiTypes.INT, required=True, default=1),
+        OpenApiParameter(name="user_id", type=OpenApiTypes.INT, default=1, 
+                         description="Only for registered users. Otherwise, 'user_age', 'user_disability', 'user_gender' are required."),
+
+        OpenApiParameter(name="user_age", type=OpenApiTypes.INT),
+        OpenApiParameter(name="user_disability", type=OpenApiTypes.BOOL),
+        OpenApiParameter(name="user_gender", type=OpenApiTypes.STR, enum=('M','F')),
+        
         OpenApiParameter(name="user_preferences", type=OpenApiTypes.STR, many=True, 
-                         description="Array of strings representing user preferences: 'Museo', 'Biblioteca', 'Medioevo', 'Pittura', 'Natura', 'Parco' ecc"),
+                         description="Array of strings representing user preferences: 'Museo', 'Biblioteca', 'Medioevo', 'Pittura', 'Natura', 'Parco', etc"),
         OpenApiParameter(name="start_location_lat", type=OpenApiTypes.DOUBLE, required=True, 
                          examples=[OpenApiExample(name='Viterbo', value="42.4193700")]),
         OpenApiParameter(name="start_location_lon", type=OpenApiTypes.DOUBLE, required=True,
@@ -41,11 +47,19 @@ class ItineraryView(views.APIView):
                          description="[1] Highest quantity of Poi. [2] Most popular attractions itinerary. [3] Budget minimizing itinerary"),
         OpenApiParameter(name='generating_engine', type=OpenApiTypes.STR, enum=('test','geoapify','ortools'), default='test', required=True,
                          description='Choose between different itinerary generators.')
-        ])
+        ]),
+        methods=["GET"],
     )
     def get(self, request):
 
-        match request.GET.get('generating_engine'):
+        params = request.GET
+        if ('user_id' not in params) and not ('user_age' in params and 'user_disability' in params and 'user_gender' in params):
+            return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain user_id XOR all the user information (age, gender, disability)")
+        elif ('user_id' in params) and ('user_age' in params and 'user_disability' in params and 'user_gender' in params):
+            return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain user_id XOR all the user information (age, gender, disability)")
+
+
+        match params.get('generating_engine'):
 
             case 'test':
                 itinerary = gen.random_itinerary(
@@ -53,7 +67,7 @@ class ItineraryView(views.APIView):
                     user_id=request.GET.get('user_id'))
                 
                 serializer = ItinerarySerializer(instance=itinerary)
-                return Response(serializer.data)
+                return Response(data=serializer.data, status=status.HTTP_200_OK)
 
             case 'geoapify':
                 sl_lon = request.GET.get('start_location_lon')
@@ -68,12 +82,16 @@ class ItineraryView(views.APIView):
                 
                 serializer = ItinerarySerializer(instance=itinerary)
 
-                return Response(serializer.data)
+                return Response(data=serializer.data, status=status.HTTP_200_OK)
 
                 #return Response(gen.geoapify_routing_planner(sl_lat, sl_lon, el_lat, el_lon, days))
                 
             case 'ortools':
-                Response(status=status.HTTP_501_NOT_IMPLEMENTED)
-                return
+                return Response(status=status.HTTP_501_NOT_IMPLEMENTED)
+            
 
-        
+    
+
+    @action(methods=['GET'], detail=False)
+    def get_precompiled(self, request):
+        pass

@@ -24,7 +24,7 @@ class nearbyPoi(views.APIView):
             OpenApiParameter(name="lat", type=OpenApiTypes.DOUBLE),
             OpenApiParameter(name="lon", type=OpenApiTypes.DOUBLE),
             OpenApiParameter(name="poi_id", type=OpenApiTypes.INT),
-            OpenApiParameter(name="limit", type=OpenApiTypes.INT, default=3, required=True),
+            OpenApiParameter(name="limit", type=OpenApiTypes.INT, default=3, required=True, description="Limit number of retrieved POI"),
             OpenApiParameter(name="radius", type=OpenApiTypes.INT, default=500, required=True,
                             description="Radius in meters")
         ]),
@@ -42,9 +42,10 @@ class nearbyPoi(views.APIView):
             return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain exactly one between poi_id and (lat,lon)")
 
         if('poi_id' in query_dict):
-            poi = Poi.objects.get(pk=int(query_dict.get('poi_id')))
+            poi_id = int(query_dict.get('poi_id'))
+            poi = Poi.objects.get(pk=poi_id)
             point = Point(float(poi.lon), float(poi.lat), srid=4326)
-            queryset = Poi.objects.filter(location__distance_lte=(point, D(m=radius)))
+            queryset = Poi.objects.filter(location__distance_lte=(point, D(m=radius))).exclude(pk=poi_id)
             #queryset = Poi.objects.annotate(distance=Distance(fromstr('location', srid=4326), point)
             #).order_by('distance')[0:query_dict.get('quantity')]
 

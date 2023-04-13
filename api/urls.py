@@ -24,7 +24,8 @@ router.register(r'day_and_hour', day_and_hour.DayAndHourViewSet, basename='day_a
 urlpatterns = [
     path(r'accommodation/', geoapify.AccommodationView.as_view(), name='accommodation'),
     path(r'catering/', geoapify.CateringView.as_view(), name='catering'),
-    path(r'itinerary/', itinerary.ItineraryView.as_view(), name='itinerary'),
+    path(r'itinerary/generated/', itinerary.ItineraryViewSet.as_view({'get':'get'}), name='itinerary'),
+    path(r'itinerary/precompiled/', itinerary.ItineraryViewSet.as_view({'get':'get_precompiled'}), name='itinerary_precompiled'),
     path(r'nearby_poi/', poi.nearbyPoi.as_view(), name='nearby_poi'),
     #path('', include(router.urls)),
     #path('itinerary', itinerary.ItineraryView.as_view, name='itinerary'),

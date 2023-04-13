@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: postgres; Type: DATABASE; Schema: -; Owner: postgres
 --
 
--- CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
+CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
 
 
 ALTER DATABASE postgres OWNER TO postgres;
@@ -46,6 +46,26 @@ COMMENT ON DATABASE postgres IS 'default administrative connection database';
 
 
 --
+-- Name: postgres; Type: DATABASE PROPERTIES; Schema: -; Owner: postgres
+--
+
+ALTER DATABASE postgres SET search_path TO '$user', 'public', 'topology', 'tiger';
+
+
+\connect postgres
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
 -- Name: pgagent; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
@@ -59,6 +79,40 @@ ALTER SCHEMA pgagent OWNER TO postgres;
 --
 
 COMMENT ON SCHEMA pgagent IS 'pgAgent system tables';
+
+
+--
+-- Name: tiger; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA tiger;
+
+
+ALTER SCHEMA tiger OWNER TO postgres;
+
+--
+-- Name: tiger_data; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA tiger_data;
+
+
+ALTER SCHEMA tiger_data OWNER TO postgres;
+
+--
+-- Name: topology; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA topology;
+
+
+ALTER SCHEMA topology OWNER TO postgres;
+
+--
+-- Name: SCHEMA topology; Type: COMMENT; Schema: -; Owner: postgres
+--
+
+COMMENT ON SCHEMA topology IS 'PostGIS Topology schema';
 
 
 --
@@ -76,6 +130,20 @@ COMMENT ON EXTENSION adminpack IS 'administrative functions for PostgreSQL';
 
 
 --
+-- Name: fuzzystrmatch; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS fuzzystrmatch WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION fuzzystrmatch; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION fuzzystrmatch IS 'determine similarities and distance between strings';
+
+
+--
 -- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
 --
 
@@ -87,6 +155,34 @@ CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 --
 
 COMMENT ON EXTENSION postgis IS 'PostGIS geometry and geography spatial types and functions';
+
+
+--
+-- Name: postgis_tiger_geocoder; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis_tiger_geocoder WITH SCHEMA tiger;
+
+
+--
+-- Name: EXTENSION postgis_tiger_geocoder; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION postgis_tiger_geocoder IS 'PostGIS tiger geocoder and reverse geocoder';
+
+
+--
+-- Name: postgis_topology; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis_topology WITH SCHEMA topology;
+
+
+--
+-- Name: EXTENSION postgis_topology; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION postgis_topology IS 'PostGIS topology spatial types and functions';
 
 
 --
@@ -134,6 +230,23 @@ CREATE TYPE public.weekday AS ENUM (
 
 
 ALTER TYPE public.weekday OWNER TO postgres;
+
+--
+-- Name: location_trigger(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.location_trigger() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+begin
+    new.location :=
+        ST_SetSRID(ST_MakePoint(new.lat, new.lon), 4326);
+    return new;
+end;
+$$;
+
+
+ALTER FUNCTION public.location_trigger() OWNER TO postgres;
 
 --
 -- Name: poi_tsvector_trigger(); Type: FUNCTION; Schema: public; Owner: postgres
@@ -543,7 +656,7 @@ CREATE TABLE public.poi (
     type character varying(128) NOT NULL,
     phone character varying(64),
     email character varying(128),
-    average_visiting_time integer NOT NULL,
+    average_visiting_time integer,
     is_active boolean DEFAULT true,
     poh_id integer,
     utility_score integer DEFAULT (random() * (100)::double precision),
@@ -1015,13 +1128,6 @@ COPY public.day_and_hour (dah_id, poh_id, weekday, opening_hour, closing_hour, i
 5	1	fri	08:00:00	20:00:00	t
 6	1	sat	08:00:00	20:00:00	t
 7	1	sun	08:00:00	20:00:00	t
-8	1	mon	08:00:00	20:00:00	t
-9	1	tue	08:00:00	20:00:00	t
-10	1	wed	08:00:00	20:00:00	t
-11	1	thu	08:00:00	20:00:00	t
-12	1	fri	08:00:00	20:00:00	t
-13	1	sat	08:00:00	20:00:00	t
-14	1	sun	08:00:00	20:00:00	t
 \.
 
 
@@ -1416,6 +1522,7 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 511	39	Chiesa di San Vito	42.2428240	12.3455700	Via S. Vito, 21	Chiesa o edificio di culto	NaN	NaN	5400	t	1	38	\N	'chies':1 'san':3 'vit':4	'chies':1B 'san':3B 'vit':4B	0101000020E61000001BF5108DEEB028408A5759DB141F4540
 535	39	Duomo di S. Maria Assunta e Anastasia	42.2428240	12.3455700	Via Luigi Cadorna, 6	Chiesa o edificio di culto	NaN	NaN	3600	t	1	85	\N	'anastas':7 'assunt':5 'duom':1 'mar':4 's':3	'anastas':7B 'assunt':5B 'duom':1B 'mar':4B 's':3B	0101000020E61000001BF5108DEEB028408A5759DB141F4540
 80	3	Tomba Margareth	42.2585300	12.0788570	NaN	Area o parco archeologico	NaN	NaN	7200	t	1	12	\N	'margareth':2 'tomb':1	'margareth':2B 'tomb':1B	0101000020E6100000101FD8F15F2828407784D38217214540
+120	7	Casale Gazzetta	42.6441069	11.9849554	Gazzetta	Villa o Palazzo di interesse storico o artistico	NaN	NaN	10800	t	1	9	\N	'casal':1 'gazzett':2	'casal':1B 'gazzett':2B	0101000020E61000008609FE124CF8274060504B1872524540
 536	39	Chiesa Parrocchiale di S. Croce	42.2428240	12.3455700	NaN	Chiesa o edificio di culto	NaN	NaN	3600	t	1	87	\N	'chies':1 'croc':5 'parrocchial':2 's':4	'chies':1B 'croc':5B 'parrocchial':2B 's':4B	0101000020E61000001BF5108DEEB028408A5759DB141F4540
 538	40	Chiesa di S. Maria della Concezione	42.6928561	11.8163999	Piazza Papa Pio XII, 2	Chiesa o edificio di culto	NaN	NaN	5400	t	1	48	\N	'chies':1 'concezion':6 'mar':4 's':3	'chies':1B 'concezion':6B 'mar':4B 's':3B	0101000020E610000054EAED2AFFA12740C42A3982AF584540
 539	40	Chiesa della Madonna delle Grazie	42.6928561	11.8163999	Madonna delle Grazie	Chiesa o edificio di culto	NaN	NaN	10800	t	1	75	\N	'chies':1 'graz':5 'madonn':3	'chies':1B 'graz':5B 'madonn':3B	0101000020E610000054EAED2AFFA12740C42A3982AF584540
@@ -1497,6 +1604,7 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 531	39	Acquedotto di Nepi	42.2440210	12.3444280	Piazzale della Bottata, 19	Area o parco archeologico	NaN	NaN	7200	t	1	65	\N	'acquedott':1 'nep':3	'acquedott':1B 'nep':3B	0101000020E610000044A7E7DD58B02840C34483143C1F4540
 45	1	Cattedrale del S. Sepolcro	42.7425120	11.8714670	NaN	Chiesa o edificio di culto	NaN	NaN	10800	t	1	60	\N	'cattedral':1 's':3 'sepolcr':4	'cattedral':1B 's':3B 'sepolcr':4B	0101000020E6100000231631EC30BE27409B711AA20A5F4540
 46	1	Palazzo Taurelli-Salimbeni	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3600	t	1	12	\N	'palazz':1 'salimben':4 'taurell':3 'taurelli-salimben':2	'palazz':1B 'salimben':4B 'taurell':3B 'taurelli-salimben':2B	0101000020E61000006ADD06B5DFBA2740FFECA2433B5F4540
+242	17	Piazza Maggiore	42.6449715	12.2038975	NaN	Monumento	NaN	NaN	5400	t	1	61	\N	'maggior':2 'piazz':1	'maggior':2B 'piazz':1B	0101000020E6100000EA78CC406568284010AD156D8E524540
 40	1	Palazzo Cozza-Nardelli	42.7439961	11.8649880	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	7200	t	1	54	\N	'cozz':3 'cozza-nardell':2 'nardell':4 'palazz':1	'cozz':3B 'cozza-nardell':2B 'nardell':4B 'palazz':1B	0101000020E61000006ADD06B5DFBA2740FFECA2433B5F4540
 654	49	Cappella di Santa Maria del Tempio o Cappella dei Cavalieri di Malta	42.2470230	12.2150670	NaN	Chiesa o edificio di culto	NaN	NaN	9000	t	1	25	\N	'cappell':1,8 'cavalier':10 'malt':12 'mar':4 'sant':3 'temp':6	'cappell':1B,8B 'cavalier':10B 'malt':12B 'mar':4B 'sant':3B 'temp':6B	0101000020E6100000CDE506431D6E28400E2E1D739E1F4540
 655	49	Chiesa della Santissima Concezione	42.2470230	12.2150670	Via Giuseppe Garibaldi, 1	Chiesa o edificio di culto	NaN	NaN	9000	t	1	26	\N	'chies':1 'concezion':4 'santissim':3	'chies':1B 'concezion':4B 'santissim':3B	0101000020E6100000CDE506431D6E28400E2E1D739E1F4540
@@ -1524,6 +1632,7 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 52	2	Chiesa della Madonna del Carmine	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	5400	t	1	63	\N	'carmin':5 'chies':1 'madonn':3	'carmin':5B 'chies':1B 'madonn':3B	0101000020E6100000DF41A2BF862E2840809F71E140504540
 49	2	Palazzo Comunale	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	9000	t	1	96	\N	'comunal':2 'palazz':1	'comunal':2B 'palazz':1B	0101000020E6100000DF41A2BF862E2840809F71E140504540
 53	2	Palazzo Antiseri	42.6269800	12.0908718	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5400	t	1	86	\N	'antiser':2 'palazz':1	'antiser':2B 'palazz':1B	0101000020E6100000DF41A2BF862E2840809F71E140504540
+533	39	Chiesa di San Tolomeo	42.2421242	12.3533679	Via Garibaldi, 165	Chiesa o edificio di culto	NaN	NaN	10800	t	1	63	\N	'chies':1 'san':3 'tolome':4	'chies':1B 'san':3B 'tolome':4B	0101000020E610000093E92BA3ECB42840FB4800EDFD1E4540
 679	50	Torre del Seminario e Casa Medievale	42.2532394	11.7591747	via di Porta Castello   1-5	Architettura fortificata	NaN	NaN	3600	t	1	58	\N	'cas':5 'medieval':6 'seminar':3 'torr':1	'cas':5B 'medieval':6B 'seminar':3B 'torr':1B	0101000020E6100000B7E6D88BB284274082870E266A204540
 681	50	Torre di S. Spirito	42.2532394	11.7591747	via delle Torri,55	Architettura fortificata	NaN	NaN	7200	t	1	17	\N	's':3 'spir':4 'torr':1	's':3B 'spir':4B 'torr':1B	0101000020E6100000B7E6D88BB284274082870E266A204540
 682	50	MUSEO DELLA CERAMICA D'USO A CORNETO - SOC.TARQUINIENSE, ARTE E STORIA	42.2532394	11.7591747	VIA DELLE TORRI, 31	Museo, galleria e/o raccolta	NaN	NaN	5400	t	1	33	\N	'arte':9 'ceram':3 'cornet':7 'd':4 'muse':1 'soc.tarquiniense':8 'stor':11 'uso':5	'arte':9B 'ceram':3B 'cornet':7B 'd':4B 'muse':1B 'soc.tarquiniense':8B 'stor':11B 'uso':5B	0101000020E6100000B7E6D88BB284274082870E266A204540
@@ -1578,9 +1687,6 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 727	51	Palazzo Fani	42.4202141	11.8702611	Via Pozzo Bianco, 131	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5400	t	1	72	\N	'fan':2 'palazz':1	'fan':2B 'palazz':1B	0101000020E610000044F6E6DC92BD2740B7685C93C9354540
 756	52	Chiesa di Santa Croce	42.5684597	11.8187556	NaN	Chiesa o edificio di culto	NaN	NaN	10800	t	1	44	\N	'chies':1 'croc':4 'sant':3	'chies':1B 'croc':4B 'sant':3B	0101000020E61000006ED51AEF33A32740074C9649C3484540
 728	51	Area Archeologica Colle Di San Pietro	42.4202141	11.8702611	Str. S. Pietro	Area o parco archeologico	NaN	NaN	5400	t	1	92	\N	'archeolog':2 'are':1 'coll':3 'pietr':6 'san':5	'archeolog':2B 'are':1B 'coll':3B 'pietr':6B 'san':5B	0101000020E610000044F6E6DC92BD2740B7685C93C9354540
-533	39	Chiesa di San Tolomeo	42.2421242	12.3533679	Via Garibaldi, 165	Chiesa o edificio di culto	NaN	NaN	10800	t	1	63	\N	'chies':1 'san':3 'tolome':4	'chies':1B 'san':3B 'tolome':4B	0101000020E610000093E92BA3ECB42840FB4800EDFD1E4540
-120	7	Casale Gazzetta	42.6441069	11.9849554	Gazzetta	Villa o Palazzo di interesse storico o artistico	NaN	NaN	10800	t	1	9	\N	'casal':1 'gazzett':2	'casal':1B 'gazzett':2B	0101000020E61000008609FE124CF8274060504B1872524540
-242	17	Piazza Maggiore	42.6449715	12.2038975	NaN	Monumento	NaN	NaN	5400	t	1	61	\N	'maggior':2 'piazz':1	'maggior':2B 'piazz':1B	0101000020E6100000EA78CC406568284010AD156D8E524540
 135	7	Oratorio di S. Leonardo	42.6441069	11.9849554	NaN	Chiesa o edificio di culto	NaN	NaN	3600	t	1	12	\N	'leonard':4 'orator':1 's':3	'leonard':4B 'orator':1B 's':3B	0101000020E61000008609FE124CF8274060504B1872524540
 729	51	Teatro Comunale Il Rivellino	42.4364920	11.8571108	Largo del Teatro	Architettura civile	NaN	NaN	9000	t	1	94	\N	'comunal':2 'rivellin':4 'teatr':1	'comunal':2B 'rivellin':4B 'teatr':1B	0101000020E6100000C7180E3AD7B627409A7B48F8DE374540
 730	51	MUSEO ARCHEOLOGICO NAZIONALE	42.4202141	11.8702611	LARGO MARIO MORETTI, 1	Museo, galleria e/o raccolta	NaN	NaN	3600	t	1	78	\N	'archeolog':2 'muse':1 'nazional':3	'archeolog':2B 'muse':1B 'nazional':3B	0101000020E610000044F6E6DC92BD2740B7685C93C9354540
@@ -1823,6 +1929,7 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 98	6	MUSEO CIVICO GUSTAVO VI ADOLFO DI SVEZIA - SEZIONE IL CAVALLO E L'UOMO	42.2759082	12.0254639	VIA UMBERTO I; SNC	Museo, galleria e/o raccolta	761471057	info_museoblera@yahoo.it	5400	t	1	66	\N	'adolf':5 'cavall':10 'civic':2 'gust':3 'muse':1 'sezion':8 'svez':7 'uom':13	'adolf':5B 'cavall':10B 'civic':2B 'gust':3B 'muse':1B 'sezion':8B 'svez':7B 'uom':13B	0101000020E61000000D75B39A090D284060D9BBF550234540
 99	6	Palazzo dell'Asino Vecchio (detto)	42.2725220	12.0316620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	7200	t	1	1	\N	'asin':3 'dett':5 'palazz':1 'vecc':4	'asin':3B 'dett':5B 'palazz':1B 'vecc':4B	0101000020E61000004A0D6D003610284063B83A00E2224540
 964	58	Biblioteca della Facoltà di conservazione dei beni culturali dell'Università degli studi della Tuscia	42.4271712	12.0861119	Largo dell'Universit?	Biblioteca	+39 0761357183	bcbib@unitus.it	3600	t	1	17	\N	'ben':7 'bibliotec':1 'conserv':5 'cultural':8 'facolt':3 'stud':12 'tusc':14 'univers':10	'ben':7B 'bibliotec':1B 'conserv':5B 'cultural':8B 'facolt':3B 'stud':12B 'tusc':14B 'univers':10B	0101000020E6100000C597E4DB162C284083E5BE8BAD364540
+8	1	Casale Putifaro	42.7439961	11.8649880	Putifaro	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5400	t	1	38	\N	'casal':1 'putifar':2	'casal':1B 'putifar':2B	0101000020E61000006ADD06B5DFBA2740FFECA2433B5F4540
 965	58	Biblioteca della Facoltà di lingue e letterature straniere dell'Università degli studi della Tuscia	42.4271712	12.0861119	Largo dell'Universit?	Biblioteca	+39 0761357655	marling@unitus.it	7200	t	1	13	\N	'bibliotec':1 'facolt':3 'letteratur':7 'lingu':5 'stran':8 'stud':12 'tusc':14 'univers':10	'bibliotec':1B 'facolt':3B 'letteratur':7B 'lingu':5B 'stran':8B 'stud':12B 'tusc':14B 'univers':10B	0101000020E6100000C597E4DB162C284083E5BE8BAD364540
 969	59	Palazzo Comunale di Vitorchiano	42.4654270	12.1724620	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	7200	t	1	36	\N	'comunal':2 'palazz':1 'vitorc':4	'comunal':2B 'palazz':1B 'vitorc':4B	0101000020E6100000029B73F04C58284073D6A71C933B4540
 970	59	Chiesa Santa Maria Assunta in Cielo	42.4654270	12.1724620	Via S. Maria, 11	Chiesa o edificio di culto	NaN	NaN	10800	t	1	84	\N	'assunt':4 'chies':1 'ciel':6 'mar':3 'sant':2	'assunt':4B 'chies':1B 'ciel':6B 'mar':3B 'sant':2B	0101000020E6100000029B73F04C58284073D6A71C933B4540
@@ -1879,7 +1986,6 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 524	39	Porta Nica	42.2428240	12.3455700	NaN	Architettura fortificata	NaN	NaN	3600	t	1	9	\N	'nic':2 'port':1	'nic':2B 'port':1B	0101000020E61000001BF5108DEEB028408A5759DB141F4540
 6	1	Casale Campo del Prete	42.7439961	11.8649880	Campo del Prete	Villa o Palazzo di interesse storico o artistico	NaN	NaN	10800	t	1	89	\N	'camp':2 'casal':1 'pret':4	'camp':2B 'casal':1B 'pret':4B	0101000020E61000006ADD06B5DFBA2740FFECA2433B5F4540
 7	1	Palazzo Viscontini	42.7439961	11.8649880	Via Cesare Battisti, 28	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5400	t	1	73	\N	'palazz':1 'viscontin':2	'palazz':1B 'viscontin':2B	0101000020E61000006ADD06B5DFBA2740FFECA2433B5F4540
-8	1	Casale Putifaro	42.7439961	11.8649880	Putifaro	Villa o Palazzo di interesse storico o artistico	NaN	NaN	5400	t	1	38	\N	'casal':1 'putifar':2	'casal':1B 'putifar':2B	0101000020E61000006ADD06B5DFBA2740FFECA2433B5F4540
 237	17	Chiesa della Madonna della Neve	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	10800	t	1	51	\N	'chies':1 'madonn':3 'nev':5	'chies':1B 'madonn':3B 'nev':5B	0101000020E6100000EA78CC406568284010AD156D8E524540
 238	17	Borgo Medievale	42.6449715	12.2038975	NaN	Architettura fortificata	NaN	NaN	9000	t	1	67	\N	'borg':1 'medieval':2	'borg':1B 'medieval':2B	0101000020E6100000EA78CC406568284010AD156D8E524540
 60	2	Chiesa di Santa Maria delle Carceri	42.6269800	12.0908718	NaN	Chiesa o edificio di culto	NaN	NaN	3600	t	1	50	\N	'carcer':6 'chies':1 'mar':4 'sant':3	'carcer':6B 'chies':1B 'mar':4B 'sant':3B	0101000020E6100000DF41A2BF862E2840809F71E140504540
@@ -1907,6 +2013,7 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 180	11	Chiesa degli Apostoli Giovanni e Andrea	42.4639626	11.7495088	NaN	Chiesa o edificio di culto	NaN	NaN	9000	t	1	30	\N	'andre':6 'apostol':3 'chies':1 'giovann':4	'andre':6B 'apostol':3B 'chies':1B 'giovann':4B	0101000020E6100000DF20109EBF7F274098C86020633B4540
 181	11	Tomba François	42.4175098	11.6390928	Strada Provinciale 106 - Canino	Area o parco archeologico	NaN	NaN	9000	t	1	7	\N	'françois':2 'tomb':1	'françois':2B 'tomb':1B	0101000020E6100000D837E62B3747274037610CF670354540
 198	12	Lungolago di Capodimonte	42.5547757	11.8910522	NaN	Parco o Giardino di interesse storico o artistico	NaN	NaN	7200	t	1	15	\N	'capodimont':3 'lungolag':1	'capodimont':3B 'lungolag':1B	0101000020E6100000C60E74FE37C82740C90EE0E302474540
+405	31	Biblioteca comunale	42.5446546	11.7540140	Via Roma 5	Biblioteca	NaN	NaN	9000	t	1	7	\N	'bibliotec':1 'comunal':2	'bibliotec':1B 'comunal':2B	0101000020E6100000C9737D1F0E822740D84EEF3DB7454540
 199	12	Palazzo Poniatowsky	42.5465270	11.9047550	NaN	Villa o Palazzo di interesse storico o artistico	NaN	NaN	3600	t	1	83	\N	'palazz':1 'poniatowsky':2	'palazz':1B 'poniatowsky':2B	0101000020E6100000F3C81F0C3CCF2740C4B0C398F4454540
 115	7	Porta San Giovanni	42.6441069	11.9849554	NaN	Architettura fortificata	NaN	NaN	7200	t	1	90	\N	'giovann':3 'port':1 'san':2	'giovann':3B 'port':1B 'san':2B	0101000020E61000008609FE124CF8274060504B1872524540
 253	17	Ex Chiesa di S. Giovanni	42.6449715	12.2038975	NaN	Chiesa o edificio di culto	NaN	NaN	10800	t	1	65	\N	'chies':2 'ex':1 'giovann':5 's':4	'chies':2B 'ex':1B 'giovann':5B 's':4B	0101000020E6100000EA78CC406568284010AD156D8E524540
@@ -2020,7 +2127,6 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 184	11	Terme di Vulci	42.4615398	11.6371173	Via delle Terme	Parco o Giardino di interesse storico o artistico	NaN	NaN	3600	t	1	12	\N	'term':1 'vulc':3	'term':1B 'vulc':3B	0101000020E6100000806E1E3D34462740B46675BC133B4540
 338	26	Centro Storico di Farnese	42.5477480	11.7249020	NaN	Architettura fortificata	NaN	NaN	7200	t	1	51	\N	'centr':1 'farnes':4 'storic':2	'centr':1B 'farnes':4B 'storic':2B	0101000020E6100000289CDD5A267327408639419B1C464540
 394	30	Necropoli di Centocamere	42.6745290	11.8722530	NaN	Area o parco archeologico	NaN	NaN	7200	t	1	1	\N	'centocam':3 'necropol':1	'centocam':3B 'necropol':1B	0101000020E610000000ADF9F197BE27400F9A5DF756564540
-405	31	Biblioteca comunale	42.5446546	11.7540140	Via Roma 5	Biblioteca	NaN	NaN	9000	t	1	7	\N	'bibliotec':1 'comunal':2	'bibliotec':1B 'comunal':2B	0101000020E6100000C9737D1F0E822740D84EEF3DB7454540
 423	32	I Quattro Archi	42.6290280	11.8274530	NaN	Architettura fortificata	NaN	NaN	3600	t	1	74	\N	'archi':3 'quattr':2	'archi':3B 'quattr':2B	0101000020E610000045F46BEBA7A72740572250FD83504540
 457	34	Torre dell' Orologio	42.5339112	11.9249120	Via del Castello, 25	Architettura fortificata	NaN	NaN	9000	t	1	26	\N	'orolog':3 'torr':1	'orolog':3B 'torr':1B	0101000020E61000001D5BCF108ED92740EB7BC33357444540
 484	37	Chiesa di Santa Maria di Montedoro	42.5379248	12.0309974	NaN	Chiesa o edificio di culto	NaN	NaN	7200	t	1	9	\N	'chies':1 'mar':4 'montedor':6 'sant':3	'chies':1B 'mar':4B 'montedor':6B 'sant':3B	0101000020E6100000A68526E4DE0F28408ADA47B8DA444540
@@ -2117,6 +2223,67 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 895	58	Biblioteca dell'ISIS Tarquinia	42.2333766	11.7269238	Via Porto Clementino	Biblioteca	NaN	NaN	10800	t	1	56	\N	'bibliotec':1 'isis':3 'tarquin':4	'bibliotec':1B 'isis':3B 'tarquin':4B	0101000020E61000003B5E375B2F7427406A53D048DF1D4540
 975	59	Centro Botanico Moutan	42.4654270	12.1724620	S.S, Str. Ortana, 46	Museo, Galleria e/o raccolta	NaN	NaN	5400	t	1	4	\N	'botan':2 'centr':1 'moutan':3	'botan':2B 'centr':1B 'moutan':3B	0101000020E6100000029B73F04C58284073D6A71C933B4540
 452	34	Grotta delle Apparizioni	42.5354236	11.9235040	Via Verentana, 48	Parco o Giardino di interesse storico o artistico	NaN	NaN	5400	t	1	90	La grotta delle apparizioni è uno dei luoghi più particolari e suggestivi che si trovano a Marta. Questa grotta è passata alla storia per essere stato il luogo in cui sarebbe apparsa a più persone la Santa Vergine Maria, la prima apparizione risale al 19 maggio 1948 e da allora sono tantissime le persone che ogni anno vengono in pellegrinaggio in questo posto. Secondo i racconti locali le prime ad aver visto la Madonna in questo luogo furono tre bambine di nome Maria Antonietta, Ivana e Brunilde; ma l’epiteto più famoso legato a questo mistero della fede è quello inerente alla storia di Mario Prugnoli anche noto con il soprannome di “zio Mario” e riportato sul libro “Apparizioni di Marta”. Dopo la prima apparizione iniziarono numerose indagini per stabilire o meno l’autenticità dell’apparizione finché poco dopo non avvenne il miracolo ed una bambina con il braccio affetto da un male incurabile, dopo la visita alla grotta guarì inspiegabilmente. Ma il frate cappuccino che era stato messo a capo della commissione di controllo, che fino a quel momento non aveva creduto a nessuna delle varie apparizioni, mentre era su un balcone a smentire alla folla il miracolo assistette a una scena che cambiò totalmente la sua visione. Secondo i racconti il frate vide il sole roteare e il cielo divenne di mille colori e così l’uomo grido “Viva Maria”. Secondo i giornali dell’epoca erano circa 40.000 le persone ad aver assistito al miracolo e da lì in poi la Vergine non finì di elargire grazie di ogni specie. Per quanto sia complessa e misteriosa la storia legata a questa grotta dell’apparizione, questo resta uno dei luoghi più curiosi e interessanti da visitare per chi si reca in questo bellissimo paese	'19':47 '1948':49 '40.000':242 'affett':152 'allor':52 'anno':59 'antoniett':86 'apparizion':6,44,121,127,138,190,278 'apparizionil':3 'appars':34 'assist':247 'assistett':202 'autent':136 'aver':73,246 'avvenn':143 'balcon':195 'bambin':82,148 'bellissim':296 'bracc':151 'brunild':89 'camb':207 'cap':173 'cappuccin':167 'ciel':223 'circ':241 'color':227 'commission':175 'compless':268 'controll':177 'cos':229 'cred':185 'curios':285 'divenn':224 'dop':124,141,157 'elarg':260 'epitet':92 'epoc':239 'esser':27 'famos':94 'fed':100 'fin':179,258 'finc':139 'foll':199 'frat':166,216 'giornal':237 'graz':261 'grid':232 'grott':1,4,21,161,276 'guar':162 'incur':156 'indagin':130 'inerent':103 'iniz':128 'inspiegabil':163 'interess':287 'ivan':87 'leg':95,273 'libr':120 'local':69 'luog':10,30,79,283 'lì':252 'madonn':76 'magg':48 'mal':155 'mar':41,85,107,116,234 'mart':19,123 'men':134 'mentr':191 'mess':171 'mill':226 'miracol':145,201,249 'mister':98,270 'moment':182 'nessun':187 'nom':84 'not':110 'numer':129 'ogni':58,263 'paes':297 'particolar':12 'pass':23 'pellegrinagg':62 'person':37,56,244 'poc':140 'poi':254 'post':65 'prim':43,71,126 'prugnol':108 'quel':181 'raccont':68,214 'rec':293 'rest':280 'riport':118 'risal':45 'rot':220 'sant':39 'scen':205 'second':66,212,235 'sment':197 'sol':219 'soprannom':113 'spec':264 'stabil':132 'stat':28,170 'stor':25,105,272 'suggest':14 'tantissim':54 'total':208 'tre':81 'trov':17 'uom':231 'var':189 'veng':60 'vergin':40,256 'vid':217 'vis':159 'vision':211 'visit':289 'vist':74 'viv':233 'zio':115	'19':48A '1948':50A '40.000':243A 'affett':153A 'allor':53A 'anno':60A 'antoniett':87A 'apparizion':3B,7A,45A,122A,128A,139A,191A,279A 'appars':35A 'assist':248A 'assistett':203A 'autent':137A 'aver':74A,247A 'avvenn':144A 'balcon':196A 'bambin':83A,149A 'bellissim':297A 'bracc':152A 'brunild':90A 'camb':208A 'cap':174A 'cappuccin':168A 'ciel':224A 'circ':242A 'color':228A 'commission':176A 'compless':269A 'controll':178A 'cos':230A 'cred':186A 'curios':286A 'divenn':225A 'dop':125A,142A,158A 'elarg':261A 'epitet':93A 'epoc':240A 'esser':28A 'famos':95A 'fed':101A 'fin':180A,259A 'finc':140A 'foll':200A 'frat':167A,217A 'giornal':238A 'graz':262A 'grid':233A 'grott':1B,5A,22A,162A,277A 'guar':163A 'incur':157A 'indagin':131A 'inerent':104A 'iniz':129A 'inspiegabil':164A 'interess':288A 'ivan':88A 'leg':96A,274A 'libr':121A 'local':70A 'luog':11A,31A,80A,284A 'lì':253A 'madonn':77A 'magg':49A 'mal':156A 'mar':42A,86A,108A,117A,235A 'mart':20A,124A 'men':135A 'mentr':192A 'mess':172A 'mill':227A 'miracol':146A,202A,250A 'mister':99A,271A 'moment':183A 'nessun':188A 'nom':85A 'not':111A 'numer':130A 'ogni':59A,264A 'paes':298A 'particolar':13A 'pass':24A 'pellegrinagg':63A 'person':38A,57A,245A 'poc':141A 'poi':255A 'post':66A 'prim':44A,72A,127A 'prugnol':109A 'quel':182A 'raccont':69A,215A 'rec':294A 'rest':281A 'riport':119A 'risal':46A 'rot':221A 'sant':40A 'scen':206A 'second':67A,213A,236A 'sment':198A 'sol':220A 'soprannom':114A 'spec':265A 'stabil':133A 'stat':29A,171A 'stor':26A,106A,273A 'suggest':15A 'tantissim':55A 'total':209A 'tre':82A 'trov':18A 'uom':232A 'var':190A 'veng':61A 'vergin':41A,257A 'vid':218A 'vis':160A 'vision':212A 'visit':290A 'vist':75A 'viv':234A 'zio':116A	0101000020E61000004B732B84D5D82740D8C0B1C288444540
+977	1	Ferento	42.4887019	12.1313950	Strada Ferento	Area o parco archeologico	\N	\N	7200	t	1	54	\N	\N	'ferent':1B	0101000020E61000001DFFAAC88D3E454041B7973446432840
+978	58	Sito archeologico Acquarossa	42.4833330	12.1333330	NaN	Area o parco archeologico	\N	\N	5400	t	1	41	\N	\N	'acquaross':3B 'archeolog':2B 'sit':1B	0101000020E6100000EE0912DBDD3D454084F4143944442840
+997	18	Celleno	42.5597682	12.1257580	\N	Comune	\N	\N	\N	t	\N	81	\N	\N	'cellen':1B	0101000020E61000009F2B007CA6474540B56B425A63402840
+1036	57	Vignanello	42.3838260	12.2767660	\N	Comune	\N	\N	\N	t	\N	32	\N	\N	'vignanell':1B	0101000020E610000060ADDA35213145401B4AED45B48D2840
+989	10	Canepina	42.3809608	12.2336522	\N	Comune	\N	\N	\N	t	\N	81	\N	\N	'canepin':1B	0101000020E61000006C87D052C3304540E346DB42A1772840
+1029	50	Tarquinia	42.2532394	11.7591747	\N	Comune	\N	\N	\N	t	\N	96	\N	\N	'tarquin':1B	0101000020E610000082870E266A204540B7E6D88BB2842740
+1037	58	Viterbo	42.4168441	12.1051148	\N	Comune	\N	\N	\N	t	\N	70	\N	\N	'viterb':1B	0101000020E6100000E983C0255B354540B3A6689BD1352840
+1035	56	Vetralla	42.3205336	12.0575000	\N	Comune	\N	\N	\N	t	\N	64	\N	\N	'vetrall':1B	0101000020E610000073A2B83E072945403D0AD7A3701D2840
+998	19	Cellere	42.5104250	11.7716530	\N	Comune	\N	\N	\N	t	\N	47	\N	\N	'cell':1B	0101000020E6100000C8073D9B5541454078B81D1A168B2740
+1022	43	Piansano	42.5179320	11.8282734	\N	Comune	\N	\N	\N	t	\N	16	\N	\N	'pians':1B	0101000020E6100000A4C684984B424540204B7A7313A82740
+1023	44	Proceno	42.7571602	11.8302614	\N	Comune	\N	\N	\N	t	\N	62	\N	\N	'procen':1B	0101000020E61000009A6A1CA0EA6045402943B00518A92740
+1004	25	Faleria	42.2261788	12.4431811	\N	Comune	\N	\N	\N	t	\N	98	\N	\N	'faler':1B	0101000020E610000036864A6DF31C45401E6915A2E8E22840
+982	3	Barbarano Romano	42.2498341	12.0673735	\N	Comune	\N	\N	\N	t	\N	22	\N	\N	'barbar':1B 'rom':2B	0101000020E61000007A765490FA1F4540EF3B86C77E222840
+981	2	Bagnoregio	42.6269800	12.0908718	\N	Comune	\N	\N	\N	t	\N	71	\N	\N	'bagnoreg':1B	0101000020E6100000809F71E140504540DF41A2BF862E2840
+980	1	Acquapendente	42.7439961	11.8649880	\N	Comune	\N	\N	\N	t	\N	91	\N	\N	'acquapendent':1B	0101000020E6100000FFECA2433B5F45406ADD06B5DFBA2740
+996	17	Castiglione in Teverina	42.6449715	12.2038975	\N	Comune	\N	\N	\N	t	\N	72	\N	\N	'castiglion':1B 'teverin':3B	0101000020E610000010AD156D8E524540EA78CC4065682840
+1005	26	Farnese	42.5494260	11.7256520	\N	Comune	\N	\N	\N	t	\N	29	\N	\N	'farnes':1B	0101000020E61000003AC9569753464540D28DB0A888732740
+1010	31	Ischia di Castro	42.5446546	11.7540140	\N	Comune	\N	\N	\N	t	\N	66	\N	\N	'castr':3B 'ischi':1B	0101000020E6100000D84EEF3DB7454540C9737D1F0E822740
+988	9	Calcata	42.2197263	12.4259417	\N	Comune	\N	\N	\N	t	\N	51	\N	\N	'calc':1B	0101000020E61000001949CCFD1F1C45405A01CF0715DA2840
+1013	34	Marta	42.5339112	11.9249120	\N	Comune	\N	\N	\N	t	\N	69	\N	\N	'mart':1B	0101000020E6100000EB7BC333574445401D5BCF108ED92740
+1011	32	Latera	42.6290280	11.8274530	\N	Comune	\N	\N	\N	t	\N	62	\N	\N	'later':1B	0101000020E6100000572250FD8350454045F46BEBA7A72740
+994	15	Carbognano	42.3316250	12.2643660	\N	Comune	\N	\N	\N	t	\N	98	\N	\N	'carbogn':1B	0101000020E61000009CC420B0722A45404359F8FA5A872840
+1018	39	Nepi	42.2428240	12.3455700	\N	Comune	\N	\N	\N	t	\N	2	\N	\N	'nep':1B	0101000020E61000008A5759DB141F45401BF5108DEEB02840
+1019	40	Onano	42.6928561	11.8163999	\N	Comune	\N	\N	\N	t	\N	7	\N	\N	'onan':1B	0101000020E6100000C42A3982AF58454054EAED2AFFA12740
+1020	41	Oriolo Romano	42.1593028	12.1383489	\N	Comune	\N	\N	\N	t	\N	96	\N	\N	'oriol':1B 'rom':2B	0101000020E6100000A314BE08641445400AE0C1AAD5462840
+1021	42	Orte	42.4605984	12.3856056	\N	Comune	\N	\N	\N	t	\N	96	\N	\N	'orte':1B	0101000020E6100000834B6CE3F43A4540154FE2186EC52840
+1028	49	Sutri	42.2470230	12.2150670	\N	Comune	\N	\N	\N	t	\N	51	\N	\N	'sutr':1B	0101000020E61000000E2E1D739E1F4540CDE506431D6E2840
+1031	52	Valentano	42.5684597	11.8187556	\N	Comune	\N	\N	\N	t	\N	51	\N	\N	'valent':1B	0101000020E6100000074C9649C34845406ED51AEF33A32740
+1038	59	Vitorchiano	42.4654270	12.1724620	\N	Comune	\N	\N	\N	t	\N	96	\N	\N	'vitorc':1B	0101000020E610000073D6A71C933B4540029B73F04C582840
+1016	37	Montefiascone	42.5379248	12.0309974	\N	Comune	\N	\N	\N	t	\N	50	\N	\N	'montefiascon':1B	0101000020E61000008ADA47B8DA444540A68526E4DE0F2840
+1034	55	Vejano	42.2167570	12.0952017	\N	Comune	\N	\N	\N	t	\N	90	\N	\N	'vej':1B	0101000020E6100000EC1681B1BE1B4540160CF846BE302840
+1012	33	Lubriano	42.6362310	12.1087590	\N	Comune	\N	\N	\N	t	\N	89	\N	\N	'lubr':1B	0101000020E6100000C7D9740470514540944A7842AF372840
+1008	29	Graffignano	42.5749030	12.2044306	\N	Comune	\N	\N	\N	t	\N	13	\N	\N	'graffign':1B	0101000020E6100000A7AFE76B96494540739AAA20AB682840
+1009	30	Grotte di Castro	42.6745290	11.8722530	\N	Comune	\N	\N	\N	t	\N	74	\N	\N	'castr':3B 'grott':1B	0101000020E61000000F9A5DF75656454000ADF9F197BE2740
+1014	35	Montalto di Castro	42.3534605	11.6063117	\N	Comune	\N	\N	\N	t	\N	42	\N	\N	'castr':3B 'montalt':1B	0101000020E6100000C2F693313E2D4540445DB57C6E362740
+985	6	Blera	42.2725220	12.0316620	\N	Comune	\N	\N	\N	t	\N	24	\N	\N	'bler':1B	0101000020E610000063B83A00E22245404A0D6D0036102840
+1024	45	Ronciglione	42.2902415	12.2138064	\N	Comune	\N	\N	\N	t	\N	50	\N	\N	'ronciglion':1B	0101000020E610000093382BA226254540DA594F08786D2840
+1025	46	San Lorenzo Nuovo	42.6867300	11.9066530	\N	Comune	\N	\N	\N	t	\N	10	\N	\N	'lorenz':2B 'nuov':3B 'san':1B	0101000020E61000004E97C5C4E6574540FDA36FD234D02740
+1001	22	Corchiano	42.3449260	12.3556680	\N	Comune	\N	\N	\N	t	\N	60	\N	\N	'corc':1B	0101000020E610000022C50089262C4540AB77B81D1AB62840
+1017	38	Monterosi	42.1958230	12.3084690	\N	Comune	\N	\N	\N	t	\N	29	\N	\N	'monter':1B	0101000020E6100000FD6662BA10194540DFA815A6EF9D2840
+1015	36	Monte Romano	42.2678823	11.8986478	\N	Comune	\N	\N	\N	t	\N	87	\N	\N	'mont':1B 'rom':2B	0101000020E6100000B0D69AF749224540A53E7F901BCC2740
+1027	48	Soriano nel Cimino	42.4187606	12.2343075	\N	Comune	\N	\N	\N	t	\N	95	\N	\N	'cimin':3B 'sor':1B	0101000020E61000003AED84F299354540406A1327F7772840
+1032	53	Vallerano	41.7907359	12.4696439	\N	Comune	\N	\N	\N	t	\N	53	\N	\N	'valler':1B	0101000020E6100000F6227FD536E5444023884E2A75F02840
+992	13	Capranica	42.2564918	12.1776114	\N	Comune	\N	\N	\N	t	\N	62	\N	\N	'capran':1B	0101000020E610000099582AB9D420454026CBA4E1EF5A2840
+1030	51	Tuscania	42.4202141	11.8702611	\N	Comune	\N	\N	\N	t	\N	19	\N	\N	'tuscan':1B	0101000020E6100000B7685C93C935454044F6E6DC92BD2740
+993	14	Caprarola	42.3266250	12.2357660	\N	Comune	\N	\N	\N	t	\N	66	\N	\N	'caprarol':1B	0101000020E61000002B8716D9CE29454079043752B6782840
+1033	54	Vasanello	42.4144251	12.3464168	\N	Comune	\N	\N	\N	t	\N	38	\N	\N	'vasanell':1B	0101000020E61000001E92B5E10B354540E891F58A5DB12840
+1003	24	Fabrica di Roma 	42.3351260	12.2997670	\N	Comune	\N	\N	\N	t	\N	94	\N	\N	'fabric':1B 'rom':3B	0101000020E61000000805A568E52A45400ED76A0F7B992840
+999	20	Civita Castellana	42.2952260	12.4091700	\N	Comune	\N	\N	\N	t	\N	33	\N	\N	'castellan':2B 'civ':1B	0101000020E6100000E6762FF7C92545403602F1BA7ED12840
+995	16	Castel Sant'Elia	42.2517755	12.3717955	\N	Comune	\N	\N	\N	t	\N	73	\N	\N	'castel':1B 'eli':3B 'sant':2B	0101000020E61000008F37F92D3A2045409599D2FA5BBE2840
+1026	47	San Martino al Cimino	42.3679225	12.1275715	\N	Comune	\N	\N	\N	t	\N	60	\N	\N	'cimin':4B 'martin':2B 'san':1B	0101000020E6100000357BA015182F4540A7CD380D51412840
+1007	28	Gradoli	42.6436919	11.8548880	\N	Comune	\N	\N	\N	t	\N	79	\N	\N	'gradol':1B	0101000020E61000009D99057F64524540577C43E1B3B52740
+987	8	Bomarzo	42.4819280	12.2487640	\N	Comune	\N	\N	\N	t	\N	65	\N	\N	'bomarz':1B	0101000020E61000006B8313D1AF3D454023D8B8FE5D7F2840
+990	11	Canino	42.4639626	11.7495088	\N	Comune	\N	\N	\N	t	\N	3	\N	\N	'canin':1B	0101000020E610000098C86020633B4540DF20109EBF7F2740
+986	7	Bolsena	42.6441069	11.9849554	\N	Comune	\N	\N	\N	t	\N	37	\N	\N	'bolsen':1B	0101000020E610000060504B18725245408609FE124CF82740
+1000	21	Civitella d'Agliano	42.6053622	12.1876584	\N	Comune	\N	\N	\N	t	\N	57	\N	\N	'agli':3B 'civitell':1B 'd':2B	0101000020E6100000089E31827C4D4540AEA305C314602840
+991	12	Capodimonte	42.5465270	11.9047550	\N	Comune	\N	\N	\N	t	\N	3	\N	\N	'capodimont':1B	0101000020E6100000C4B0C398F4454540F3C81F0C3CCF2740
+1002	23	Fabrica di Roma	42.3351260	12.2997670	\N	Comune	\N	\N	\N	t	\N	49	\N	\N	'fabric':1B 'rom':3B	0101000020E61000000805A568E52A45400ED76A0F7B992840
+984	5	Bassano in Teverina	42.4660738	12.3130342	\N	Comune	\N	\N	\N	t	\N	66	\N	\N	'bass':1B 'teverin':3B	0101000020E6100000DF42684EA83B45401E0FC70446A02840
+1006	27	Gallese	42.3732869	12.4028042	\N	Comune	\N	\N	\N	t	\N	68	\N	\N	'galles':1B	0101000020E61000003AC379DDC72F45400562235A3CCE2840
+983	4	Bassano Romano	42.2183916	12.1930062	\N	Comune	\N	\N	\N	t	\N	14	\N	\N	'bass':1B 'rom':2B	0101000020E61000004DDC8541F41B4540B8D969B5D1622840
 \.
 
 
@@ -3121,6 +3288,54 @@ COPY public.user_tag (ut_id, user_id, tag_id, is_active) FROM stdin;
 
 
 --
+-- Data for Name: geocode_settings; Type: TABLE DATA; Schema: tiger; Owner: postgres
+--
+
+COPY tiger.geocode_settings (name, setting, unit, category, short_desc) FROM stdin;
+\.
+
+
+--
+-- Data for Name: pagc_gaz; Type: TABLE DATA; Schema: tiger; Owner: postgres
+--
+
+COPY tiger.pagc_gaz (id, seq, word, stdword, token, is_custom) FROM stdin;
+\.
+
+
+--
+-- Data for Name: pagc_lex; Type: TABLE DATA; Schema: tiger; Owner: postgres
+--
+
+COPY tiger.pagc_lex (id, seq, word, stdword, token, is_custom) FROM stdin;
+\.
+
+
+--
+-- Data for Name: pagc_rules; Type: TABLE DATA; Schema: tiger; Owner: postgres
+--
+
+COPY tiger.pagc_rules (id, rule, is_custom) FROM stdin;
+\.
+
+
+--
+-- Data for Name: topology; Type: TABLE DATA; Schema: topology; Owner: postgres
+--
+
+COPY topology.topology (id, name, srid, "precision", hasz) FROM stdin;
+\.
+
+
+--
+-- Data for Name: layer; Type: TABLE DATA; Schema: topology; Owner: postgres
+--
+
+COPY topology.layer (topology_id, layer_id, schema_name, table_name, feature_column, feature_type, level, child_id) FROM stdin;
+\.
+
+
+--
 -- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -3173,7 +3388,7 @@ SELECT pg_catalog.setval('public.cities_city_id_seq', 59, true);
 -- Name: day_and_hours_dan_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.day_and_hours_dan_id_seq', 14, true);
+SELECT pg_catalog.setval('public.day_and_hours_dan_id_seq', 7, true);
 
 
 --
@@ -3215,7 +3430,7 @@ SELECT pg_catalog.setval('public.poi_opening_hour_poh_id_seq', 1, false);
 -- Name: poi_poi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.poi_poi_id_seq', 975, true);
+SELECT pg_catalog.setval('public.poi_poi_id_seq', 1038, true);
 
 
 --
@@ -3500,6 +3715,14 @@ ALTER TABLE ONLY public.tag
 
 
 --
+-- Name: day_and_hour uniqueness; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.day_and_hour
+    ADD CONSTRAINT uniqueness UNIQUE (poh_id, weekday, opening_hour, closing_hour);
+
+
+--
 -- Name: user_tag user_tags_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3634,6 +3857,13 @@ CREATE INDEX document_idx ON public.poi USING gin (document_with_idx);
 --
 
 CREATE INDEX document_weights_idx ON public.poi USING gin (document_with_weights);
+
+
+--
+-- Name: poi locationupdate; Type: TRIGGER; Schema: public; Owner: postgres
+--
+
+CREATE TRIGGER locationupdate BEFORE INSERT OR UPDATE ON public.poi FOR EACH ROW EXECUTE FUNCTION public.location_trigger();
 
 
 --
