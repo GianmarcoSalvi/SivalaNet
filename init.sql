@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: postgres; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
+-- CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
 
 
 ALTER DATABASE postgres OWNER TO postgres;
