@@ -2284,6 +2284,8 @@ COPY public.poi (poi_id, city_id, name, lat, lon, address, type, phone, email, a
 984	5	Bassano in Teverina	42.4660738	12.3130342	\N	Comune	\N	\N	\N	t	\N	66	\N	\N	'bass':1B 'teverin':3B	0101000020E6100000DF42684EA83B45401E0FC70446A02840
 1006	27	Gallese	42.3732869	12.4028042	\N	Comune	\N	\N	\N	t	\N	68	\N	\N	'galles':1B	0101000020E61000003AC379DDC72F45400562235A3CCE2840
 983	4	Bassano Romano	42.2183916	12.1930062	\N	Comune	\N	\N	\N	t	\N	14	\N	\N	'bass':1B 'rom':2B	0101000020E61000004DDC8541F41B4540B8D969B5D1622840
+1039	1	Ferento Teatro	42.4887019	12.1313950	Strada Ferento	Area o parco archeologico	\N	\N	7200	t	1	54	\N	\N	'ferent':1B 'teatr':2B	0101000020E61000001DFFAAC88D3E454041B7973446432840
+1040	1	Ferento Terme	42.4887019	12.1313950	Strada Ferento	Area o parco archeologico	\N	\N	7200	t	1	54	\N	\N	'ferent':1B 'term':2B	0101000020E61000001DFFAAC88D3E454041B7973446432840
 \.
 
 
@@ -3430,7 +3432,7 @@ SELECT pg_catalog.setval('public.poi_opening_hour_poh_id_seq', 1, false);
 -- Name: poi_poi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.poi_poi_id_seq', 1038, true);
+SELECT pg_catalog.setval('public.poi_poi_id_seq', 1040, true);
 
 
 --

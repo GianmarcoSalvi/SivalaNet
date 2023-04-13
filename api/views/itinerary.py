@@ -94,4 +94,17 @@ class ItineraryViewSet(viewsets.ViewSet):
 
     @action(methods=['GET'], detail=False)
     def get_precompiled(self, request):
-        pass
+        poi_list = [] # acquarossa, ferento, ferento teatro, ferento terme, celleno, graffignano, soriano nel cimino, castiglione in teverina
+        poi_ids = [978, 977, 1039, 1040, 997, 1008, 1027, 996]
+        
+        for id in poi_ids:
+            poi_list.append(Poi.objects.get(pk=id))
+
+        ds1 = sc.DailySchedule(dailyschedule=poi_list[0:4])
+        ds2 = sc.DailySchedule(dailyschedule=poi_list[4:6])
+        ds3 = sc.DailySchedule(dailyschedule=poi_list[6:])
+        ds_list = [ds1, ds2, ds3]
+
+        serializer = ItinerarySerializer(instance=sc.Itinerary(itinerary=ds_list))
+
+        return Response(data=serializer.data, status=status.HTTP_200_OK)
