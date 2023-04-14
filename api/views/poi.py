@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from ..serializers import *
 from ..models import *
-
+import random
 from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample, extend_schema_view
 from drf_spectacular.types import OpenApiTypes
 from django.contrib.gis.geos import Point, fromstr
@@ -50,7 +50,8 @@ class nearbyPoi(views.APIView):
             #).order_by('distance')[0:query_dict.get('quantity')]
 
             if len(queryset) > limit:
-                queryset = queryset[0:limit]
+
+                queryset = random.sample(list(queryset), limit)
 
             serializer = PoiSerializer(instance=queryset, many=True)
             return Response(serializer.data)
@@ -64,7 +65,7 @@ class nearbyPoi(views.APIView):
                 location__distance_lte=(point, D(m=radius)))
             
             if len(queryset) > limit:
-                queryset = queryset[0:limit]
+                queryset = random.sample(list(queryset), limit)
 
         serializer = PoiSerializer(instance=queryset, many=True)
         return Response(serializer.data)
