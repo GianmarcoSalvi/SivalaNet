@@ -24,7 +24,7 @@ class ItineraryViewSet(viewsets.ViewSet):
         OpenApiParameter(name="user_gender", type=OpenApiTypes.STR, enum=('M','F')),
         
         OpenApiParameter(name="user_preferences", type=OpenApiTypes.STR, many=True, 
-                         description="Array of strings representing user preferences: 'Museo', 'Biblioteca', 'Medioevo', 'Pittura', 'Natura', 'Parco', etc"),
+                         description="Array of keywords (strings) representing user preferences: 'Museo', 'Biblioteca', 'Medioevo', 'Pittura', 'Natura', 'Parco', etc"),
         OpenApiParameter(name="start_location_lat", type=OpenApiTypes.DOUBLE, required=True, 
                          examples=[OpenApiExample(name='Viterbo', value="42.4193700")]),
         OpenApiParameter(name="start_location_lon", type=OpenApiTypes.DOUBLE, required=True,
