@@ -40,6 +40,10 @@ def probabilistic_poi_selection(poi_quantity):
     
     return chosen_poi
    
+def rank_text_search_poi_selection(poi_quantity):
+    pass
+
+
 
 def jobs_dict(poi_list):
     jobs = []

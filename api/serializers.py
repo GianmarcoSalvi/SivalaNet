@@ -70,6 +70,7 @@ class PoiOpeningHourSerializer(serializers.ModelSerializer):
 
 # 5) POI
 class PoiSerializer(serializers.ModelSerializer):
+    utility_score = serializers.FloatField(read_only=True)
     class Meta:
         model = Poi
         #fields = '__all__'
