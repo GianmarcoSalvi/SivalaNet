@@ -60,7 +60,7 @@ class Poi(models.Model):
     phone = models.CharField(max_length=64, blank=True, null=True)
     email = models.CharField(max_length=128, blank=True, null=True)
     average_visiting_time = models.IntegerField()
-    utility_score = models.IntegerField(blank=True, null=True)
+    # utility_score = models.IntegerField(blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
     poh = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING, blank=True, null=True)
 

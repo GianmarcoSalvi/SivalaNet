@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: postgres; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
+-- CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'en_US.utf8';
 
 
 ALTER DATABASE postgres OWNER TO postgres;
@@ -69,7 +69,7 @@ SET row_security = off;
 -- Name: pgagent; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA pgagent;
+CREATE SCHEMA IF NOT EXISTS pgagent;
 
 
 ALTER SCHEMA pgagent OWNER TO postgres;
@@ -85,7 +85,7 @@ COMMENT ON SCHEMA pgagent IS 'pgAgent system tables';
 -- Name: tiger; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA tiger;
+CREATE SCHEMA IF NOT EXISTS tiger;
 
 
 ALTER SCHEMA tiger OWNER TO postgres;
@@ -94,7 +94,7 @@ ALTER SCHEMA tiger OWNER TO postgres;
 -- Name: tiger_data; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA tiger_data;
+CREATE SCHEMA IF NOT EXISTS tiger_data;
 
 
 ALTER SCHEMA tiger_data OWNER TO postgres;
@@ -103,7 +103,7 @@ ALTER SCHEMA tiger_data OWNER TO postgres;
 -- Name: topology; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA topology;
+CREATE SCHEMA IF NOT EXISTS topology;
 
 
 ALTER SCHEMA topology OWNER TO postgres;
