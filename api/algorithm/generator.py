@@ -3,6 +3,11 @@ from ..models import *
 from ..utils import special_classes as sc
 import requests
 import simplejson as json
+from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+from django.db.models import Value, IntegerField
+from django.db.models import Q
+from django.db.models.functions import Coalesce
+import time
 
 # *************************************************
 # TEST FUNCTION: POI RANDOMLY TAKEN FROM DB
@@ -21,7 +26,6 @@ def random_itinerary(user_id, days, must_see_poi=None, budget=None, intensity=No
             poi_list.append(poi)
         ds_list.append(sc.DailySchedule(dailyschedule=poi_list))
 
-
     return sc.Itinerary(itinerary=ds_list)
 
 
@@ -29,19 +33,99 @@ def random_itinerary(user_id, days, must_see_poi=None, budget=None, intensity=No
 # GEOAPIFY GENERATOR
 # *************************************************
 
-def probabilistic_poi_selection(poi_quantity):
-    poi_list = list(Poi.objects.all())
-    utility_score_list = Poi.objects.values_list('utility_score', flat=True)
+def random_poi_selection(poi_quantity):
+
+    qs = Poi.objects.all()
+    pks = list(qs.values_list('poi_id', flat=True))
+
+    poi_id_list = sample(pks, k=poi_quantity)
+
+    query_set = Poi.objects.filter(poi_id__in=poi_id_list)
+    chosen_poi = set(list(query_set))
+
     
+    return chosen_poi, query_set
+
+    """
+    query_set = Poi.objects.annotate(
+        utility_score = Value(randint(1,100), output_field=IntegerField())
+    )
+    poi_list = list(query_set)
+    utility_score_list = query_set.values_list('utility_score', flat=True)
+    
+
     chosen_poi = set(choices(population=poi_list, weights=utility_score_list, k=poi_quantity))
     while(len(chosen_poi) != poi_quantity):
         left_poi = poi_quantity - len(chosen_poi)
         chosen_poi.update(set(choices(population=poi_list, weights=utility_score_list, k=left_poi)))
     
-    return chosen_poi
+    return chosen_poi, query_set
+    """
+    
    
-def rank_text_search_poi_selection(poi_quantity):
-    pass
+def rank_text_search_poi_selection(poi_quantity, user_preferences):
+
+    search_vector = SearchVector("name", weight="A", config='italian')
+    search_vector += SearchVector("description", weight="B", config='italian')
+    search_vector += SearchVector( "type", weight="B", config='italian') 
+
+    #weights_vector = [0.4, 0.6, 0.8, 1.0] # D,C,B,A
+    
+    query_string = user_preferences.lower().strip().replace(',', ' or ')
+   
+    query = SearchQuery(query_string, config='italian', search_type='websearch') 
+    
+    
+    query_set_ranked_poi = Poi.objects.annotate(
+        utility_score = SearchRank(
+            search_vector,
+            query,
+            #cover_density=True
+            #weights = weights_vector
+        )
+    ).order_by('-utility_score').filter(~Q(utility_score = 0))
+
+    #return query_set_ranked_poi
+
+    
+    if query_set_ranked_poi.count() >= poi_quantity:
+
+
+        poi_list = list(query_set_ranked_poi)
+        utility_score_list = query_set_ranked_poi.values_list('utility_score', flat=True)
+
+        chosen_poi = set(choices(population=poi_list, weights=utility_score_list, k=poi_quantity))
+        while(len(chosen_poi) != poi_quantity):
+            left_poi = poi_quantity - len(chosen_poi)
+            chosen_poi.update(set(choices(population=poi_list, weights=utility_score_list, k=left_poi)))
+    
+        return chosen_poi, query_set_ranked_poi
+
+    # poi found with utility_score > 0 are not enough
+    elif query_set_ranked_poi.count() != 0:
+        poi_list = list(query_set_ranked_poi)
+
+        utility_score_list = query_set_ranked_poi.values_list('utility_score', flat=True)
+
+        chosen_poi = set(choices(population=poi_list, weights=utility_score_list, k=poi_quantity))
+
+        while(len(chosen_poi) != len(poi_list)):
+            left_poi = len(poi_list) - len(chosen_poi)
+            chosen_poi.update(set(choices(population=poi_list, weights=utility_score_list, k=left_poi)))
+
+
+        
+        if len(chosen_poi) != poi_quantity:
+            left_poi = poi_quantity - len(chosen_poi)
+            k_random_poi, query_set = random_poi_selection(left_poi)
+            
+            chosen_poi.update(k_random_poi)
+            query_set_ranked_poi.union(query_set)
+    else:
+        return random_poi_selection(poi_quantity)
+        
+    
+
 
 
 
@@ -79,14 +163,15 @@ def time_windows(days):
     return time_windows
 
 # Consumes geoapify credits
-def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, end_point_lon, days):
+def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, end_point_lon, days, user_preferences):
     API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
     api_request = 'https://api.geoapify.com/v1/routeplanner?'
     api_request += 'apiKey=' + API_KEY
     
     POI_PER_DAY = 5
     
-    poi_list = probabilistic_poi_selection(days * POI_PER_DAY)
+    poi_list, query_set_ranked_poi = rank_text_search_poi_selection(days * POI_PER_DAY, user_preferences) # rank_text_search_poi_selection
+    #poi_list = random_poi_selection(days * POI_PER_DAY) # rank_text_search_poi_selection
 
     # BODY ELEMENTS FOR REQUEST
 
@@ -115,16 +200,22 @@ def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, en
     
     response = requests.post(api_request,headers=headers, json=body)
 
+    # SOMETIMES RESPONSE ISN'T OK
+
+    while not response.ok:
+        time.sleep(0.5)
     # with open('geoapify_rp_log.json', 'w') as outfile:
     # 	outfile.write(response.json())
 
-    return response.json()
+    return response.json(), query_set_ranked_poi
+        
 
 
+def geoapify_response_to_model(routing_planner_response, query_set_ranked_poi):
 
-def geoapify_response_to_model(routing_planner_response):
 
     rpr = routing_planner_response
+
     actions = rpr["features"][0]["properties"]["actions"]
     # jobs = rpr["properties"]["params"]["jobs"]
 
@@ -140,7 +231,7 @@ def geoapify_response_to_model(routing_planner_response):
 
             case "job":
                 poi_id = int(actions[idx]["job_id"])
-                poi = Poi.objects.get(pk=poi_id)
+                poi = query_set_ranked_poi.get(pk=poi_id)
                 poi_list.append(poi)
                 
             case "break":

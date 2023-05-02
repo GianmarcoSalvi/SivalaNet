@@ -5,16 +5,19 @@ from rest_framework import status
 from ..serializers import *
 from ..models import *
 import random
-from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample, extend_schema_view
+from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample, extend_schema_view, extend_schema_serializer
 from drf_spectacular.types import OpenApiTypes
 from django.contrib.gis.geos import Point, fromstr
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.measure import D
 
 # 6) POI
+
+
 class PoiViewSet(viewsets.ModelViewSet):
     queryset = Poi.objects.all()
     serializer_class = PoiSerializer
+    
 
 
 class nearbyPoi(views.APIView):

@@ -12,11 +12,20 @@ services:
     ports:
       - 3888:8000
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - customnetwork
+    restart: always
   db:
     image: postgis/postgis:13-3.3 #postgres:13
+
+    healthcheck:
+      test: "exit 0"
+      interval: 1s
+      timeout: 1s
+      retries: 30
+
     platform: linux/amd64
     # restart: always
     volumes:
@@ -31,6 +40,7 @@ services:
       customnetwork:
         ipv4_address: 172.27.0.2
       
+    restart: always
 volumes:
   postgres_data:
 

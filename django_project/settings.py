@@ -128,7 +128,7 @@ SPECTACULAR_SETTINGS = {
         # "url": "localhost:8000/sivalanet/api/v1/"
     },
     'COMPONENT_SPLIT_PATCH': False,
-    'TAGS': ['user', 'poi', 'tag', 'region', 'province', 'city', 'social_media'],
+    # 'TAGS': ['user', 'poi', 'tag', 'region', 'province', 'city', 'social_media'],
     # 'CAMELIZE_NAMES': True,
     'SORT_OPERATION_PARAMETERS': False
 }

@@ -62,7 +62,7 @@ class DayAndHourSerializer(serializers.ModelSerializer):
         # depth = 1 
 
 class PoiOpeningHourSerializer(serializers.ModelSerializer):
-    opening_hour = DayAndHourSerializer(many=True, read_only=True)
+    #opening_hour = DayAndHourSerializer(many=True, read_only=True)
     class Meta:
         model = PoiOpeningHour
         exclude = ['is_active']
@@ -70,13 +70,13 @@ class PoiOpeningHourSerializer(serializers.ModelSerializer):
 
 # 5) POI
 class PoiSerializer(serializers.ModelSerializer):
-    utility_score = serializers.FloatField(read_only=True)
+    utility_score = serializers.FloatField(required=False, default=None)
+    # extra_kwargs = {'utility_score': {}}
     class Meta:
         model = Poi
         #fields = '__all__'
         exclude = ['is_active','location']
         # depth = 1
-
 
 
 class PoiSerializerFake(serializers.Serializer):
