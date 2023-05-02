@@ -172,7 +172,7 @@ def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, en
     
     poi_list, query_set_ranked_poi = rank_text_search_poi_selection(days * POI_PER_DAY, user_preferences) # rank_text_search_poi_selection
     #poi_list = random_poi_selection(days * POI_PER_DAY) # rank_text_search_poi_selection
-
+    
     # BODY ELEMENTS FOR REQUEST
 
     mode = "drive"
@@ -202,10 +202,8 @@ def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, en
 
     # SOMETIMES RESPONSE ISN'T OK
 
-    while not response.ok:
-        time.sleep(0.5)
-    # with open('geoapify_rp_log.json', 'w') as outfile:
-    # 	outfile.write(response.json())
+    with open('geoapify_rp_log.json', 'w') as outfile:
+        outfile.write(str("Ciao fesso\n\n\n") + str(response.json())) #
 
     return response.json(), query_set_ranked_poi
         
