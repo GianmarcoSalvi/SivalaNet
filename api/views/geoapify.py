@@ -86,7 +86,7 @@ class AccommodationView(views.APIView):
             api_request += '&name=' + request.GET.get('name')"""
 
         if ('filter' not in query_dict) and ('bias' not in query_dict) and not('lat' in query_dict and 'lon' in query_dict):  
-            return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain at least one of [filter, bias, (lat,lon)]")
+            return Response(status=status.HTTP_400_BAD_REQUEST, data="Request parameters must contain at least one of filter, bias, (lat,lon)")
         
         
         places = getPlaceIdList(api_request)

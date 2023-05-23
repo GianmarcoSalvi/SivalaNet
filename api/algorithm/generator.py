@@ -3,11 +3,12 @@ from ..models import *
 from ..utils import special_classes as sc
 import requests
 import simplejson as json
+
 from django.contrib.postgres.search import SearchQuery, SearchRank, SearchVector
+
 from django.db.models import Value, IntegerField
 from django.db.models import Q
 from django.db.models.functions import Coalesce
-import time
 
 # *************************************************
 # TEST FUNCTION: POI RANDOMLY TAKEN FROM DB
@@ -75,7 +76,6 @@ def rank_text_search_poi_selection(poi_quantity, user_preferences):
    
     query = SearchQuery(query_string, config='italian', search_type='websearch') 
     
-    
     query_set_ranked_poi = Poi.objects.annotate(
         utility_score = SearchRank(
             search_vector,
@@ -103,6 +103,7 @@ def rank_text_search_poi_selection(poi_quantity, user_preferences):
 
     # poi found with utility_score > 0 are not enough
     elif query_set_ranked_poi.count() != 0:
+        
         poi_list = list(query_set_ranked_poi)
 
         utility_score_list = query_set_ranked_poi.values_list('utility_score', flat=True)

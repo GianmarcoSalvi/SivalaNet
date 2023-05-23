@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # 'django.db.backends.postgresql'
-        'HOST': 'db', # PUT 'db' to work with docker
+        'HOST': 'localhost', # PUT 'db' to work with docker localhost otherwise
         'PORT': 5432, # 5455 (?)
         'NAME': "postgres",
         'USER': "postgres",
@@ -154,3 +154,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
