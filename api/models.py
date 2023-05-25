@@ -27,7 +27,7 @@ class City(models.Model):
 class DayAndHour(models.Model):
     dah_id = models.AutoField(primary_key=True)
     poh = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
-    weekday = WeekDayField() 
+    weekday = models.CharField(max_length=3) 
     opening_hour = models.TimeField()
     closing_hour = models.TimeField()
     is_active = models.BooleanField(blank=True, null=True)
@@ -100,7 +100,7 @@ class Region(models.Model):
 class SocialInteraction(models.Model):
     si_id = models.AutoField(primary_key=True)
     url = models.CharField(max_length=1024)
-    source_type = SourceField()  # This field type is a guess.
+    source_type = models.CharField(max_length=1024)  # This field type is a guess.
     wos = models.ForeignKey('SocialMedia', models.DO_NOTHING, blank=True, null=True)
     poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
@@ -113,7 +113,7 @@ class SocialInteraction(models.Model):
 class SocialMedia(models.Model):
     sm_id = models.AutoField(primary_key=True)
     url = models.CharField(max_length=1024)
-    source_type = SourceField() # This field type is a guess.
+    source_type = models.CharField(max_length=1024) # This field type is a guess.
     city = models.ForeignKey(City, models.DO_NOTHING, blank=True, null=True)
     poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
@@ -139,7 +139,7 @@ class User(models.Model):
     email = models.CharField(unique=True, max_length=128)
     password = models.CharField(max_length=32)
     age = models.IntegerField()
-    gender = GenderField() 
+    gender = models.CharField(max_length=1)
     disability = models.IntegerField()
     tags = models.ManyToManyField(Tag, through='UserTag')
     is_active = models.BooleanField(blank=True, null=True)

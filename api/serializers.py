@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import *
 from .utils import special_classes as sc
 
+
 # 1) REGION
 class RegionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -131,4 +132,3 @@ class ItinerarySerializer(serializers.Serializer):
         return instance
 
 
-    

@@ -32,7 +32,7 @@ class nearbyPoi(views.APIView):
                             description="Radius in meters")
         ]),
         description="Retrieve POI nearby a given poi_id or a generic (lat,lon) point.",
-        #responses=PoiSerializer(many=True)
+        request=None
     )
     def get(self, request):
         query_dict = request.GET

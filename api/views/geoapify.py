@@ -16,7 +16,7 @@ import ast
 import json
 from django.http import JsonResponse
 from django.core.exceptions import ObjectDoesNotExist
-
+from django.core import serializers
 
 API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
 
@@ -34,7 +34,7 @@ def getPlaceIdList(geoapify_request):
 
 class AccommodationView(views.APIView):
 
-    #serializer_class = fakeSerializer
+    #serializer_class = serializers.get_serializer("json")
 
     #http_method_names = ['get']
 
@@ -64,7 +64,7 @@ class AccommodationView(views.APIView):
         
             ]),
             external_docs={'url':'https://apidocs.geoapify.com/docs/places/#about', 'description':'Geoapify Places API'},
-            # responses=JsonResponse,
+            request=None,
         description='Retrieve Accommodations (Hotel, Motel, Hostal, Guest House, Chalet) by using two Geoapify calls.' +
         'In a first step, it is performed a Geoapify Place request in order to obtain the ID of places of interest. Later, the retrieved IDs are given as input to a Geoapify Place Details request.'
     )
@@ -118,12 +118,12 @@ class AccommodationView(views.APIView):
                 accommodations.append(response.json())
             
             
-        return Response(accommodations)
+        return JsonResponse(accommodations)
 
 
 class CateringView(views.APIView):
 
-    #serializer_class = fakeSerializer
+    #serializer_class = serializers.get_serializer("json")
 
     #http_method_names = ['get']
 
@@ -152,7 +152,7 @@ class CateringView(views.APIView):
             OpenApiParameter(name="lon", type=OpenApiTypes.DOUBLE),  
         
             ]),
-            # responses=JsonResponse,
+            request=None,
             external_docs={'url':'https://apidocs.geoapify.com/docs/places/#about', 'description':'Geoapify Places API'},
         description='Retrieve Caterings (Restaurant, Bar, Fast food, Pub) by using two Geoapify calls.' +
         'In a first step, it is performed a Geoapify Place request in order to obtain the ID of places of interest. Later, the retrieved IDs are given as input to a Geoapify Place Details request.'
@@ -202,4 +202,4 @@ class CateringView(views.APIView):
                 caterings.append(response.json())
             
             
-        return Response(caterings)
+        return JsonResponse(caterings)

@@ -14,6 +14,7 @@ class Itinerary(object):
             setattr(self, field, kwargs.get(field, None))
 
 
+
 class PoiFake(object):
     def __init__(self, **kwargs):
         for field in ('poi_id', 'city', 'name', 'lat', 'lon', 'address', 'type', 'poh_id', 'phone', 'email', 'average_visiting_time', 'utility_score'):
