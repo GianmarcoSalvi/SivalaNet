@@ -6,11 +6,12 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 
-#from django.db import models
+# from django.db import models
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
 
 from .utils.db_types import *
+
 
 class City(models.Model):
     city_id = models.AutoField(primary_key=True)
@@ -19,6 +20,7 @@ class City(models.Model):
     lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
     lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
+
     class Meta:
         managed = False
         db_table = 'city'
@@ -26,8 +28,8 @@ class City(models.Model):
 
 class DayAndHour(models.Model):
     dah_id = models.AutoField(primary_key=True)
-    poh = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
-    weekday = models.CharField(max_length=3) 
+    poi_opening_hour = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
+    weekday = models.CharField(max_length=3)
     opening_hour = models.TimeField()
     closing_hour = models.TimeField()
     is_active = models.BooleanField(blank=True, null=True)
@@ -60,10 +62,11 @@ class Poi(models.Model):
     phone = models.CharField(max_length=64, blank=True, null=True)
     email = models.CharField(max_length=128, blank=True, null=True)
     average_visiting_time = models.IntegerField()
-    #utility_score = models.FloatField(blank=True, null=True)
+    # utility_score = models.FloatField(blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
-    poh = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING, blank=True, null=True)
+    poi_opening_hour = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING, blank=True, null=True)
     description = models.TextField()
+    suitable_for_disabled = models.BooleanField()
 
     class Meta:
         managed = False
@@ -113,7 +116,7 @@ class SocialInteraction(models.Model):
 class SocialMedia(models.Model):
     sm_id = models.AutoField(primary_key=True)
     url = models.CharField(max_length=1024)
-    source_type = models.CharField(max_length=1024) # This field type is a guess.
+    source_type = models.CharField(max_length=1024)  # This field type is a guess.
     city = models.ForeignKey(City, models.DO_NOTHING, blank=True, null=True)
     poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
@@ -160,17 +163,19 @@ class UserTag(models.Model):
 
 
 class PoiOpeningHour(models.Model):
-    poh_id = models.AutoField(primary_key=True)
+    poi_opening_hour_id = models.AutoField(primary_key=True)
     is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'poi_opening_hour'
 
+
 class Place(models.Model):
-    place_id = models.CharField(max_length=1024,primary_key=True)
+    place_id = models.CharField(max_length=1024, primary_key=True)
     json = models.CharField(max_length=8192)
-    last_modification = models.DateTimeField(auto_now=True) # only updates when is called Model.save(). QuereySet.update() won't work
+    last_modification = models.DateTimeField(
+        auto_now=True)  # only updates when is called Model.save(). QuereySet.update() won't work
 
     class Meta:
         managed = False

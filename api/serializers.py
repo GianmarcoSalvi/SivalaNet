@@ -12,13 +12,15 @@ class RegionSerializer(serializers.ModelSerializer):
 
 # 2) PROVINCE
 class ProvinceSerializer(serializers.ModelSerializer):
+    region = serializers.SlugRelatedField(many=False, read_only=True, slug_field='name')
     class Meta:
         model = Province
-        #fields = '__all__'
+        #fields = ['__all__', 'region']
         exclude = ['is_active']
 
 # 3) CITY
 class CitySerializer(serializers.ModelSerializer):
+    province = serializers.SlugRelatedField(many=False, read_only=True, slug_field='name')
     class Meta:
         model = City
         #fields = '__all__'
@@ -60,10 +62,10 @@ class DayAndHourSerializer(serializers.ModelSerializer):
         model = DayAndHour
         #fields = '__all__'
         exclude = ['is_active']   
-        # depth = 1 
+        # depth = 1
 
 class PoiOpeningHourSerializer(serializers.ModelSerializer):
-    #opening_hour = DayAndHourSerializer(many=True, read_only=True)
+    day_and_hour = DayAndHourSerializer(source='dayandhour_set', many=True)
     class Meta:
         model = PoiOpeningHour
         exclude = ['is_active']
@@ -72,6 +74,7 @@ class PoiOpeningHourSerializer(serializers.ModelSerializer):
 # 5) POI
 class PoiSerializer(serializers.ModelSerializer):
     utility_score = serializers.FloatField(required=False, default=None)
+    poi_opening_hour = PoiOpeningHourSerializer(read_only=True)
     # extra_kwargs = {'utility_score': {}}
     class Meta:
         model = Poi
