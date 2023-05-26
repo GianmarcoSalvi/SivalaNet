@@ -1,5 +1,7 @@
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import api_view, action
 from rest_framework import views, viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status
 from ..serializers import *
@@ -13,9 +15,13 @@ from ..algorithm import generator as gen
 from ..models import *
 
 class ItineraryViewSet(viewsets.ViewSet):
-    
-    #serializer_class = ItinerarySerializer
-    serializer_class = PoiSerializer(many=True)
+
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
+
+    serializer_class = ItinerarySerializer
+    # serializer_class = PoiSerializer(many=True)
 
     @extend_schema(
     parameters=([

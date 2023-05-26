@@ -17,8 +17,10 @@ import json
 from django.http import JsonResponse
 from django.core.exceptions import ObjectDoesNotExist
 from django.core import serializers
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
+API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'  # Geoapify Auth token
 
 
 def getPlaceIdList(geoapify_request):
@@ -33,6 +35,9 @@ def getPlaceIdList(geoapify_request):
             
 
 class AccommodationView(views.APIView):
+
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     #serializer_class = serializers.get_serializer("json")
 
@@ -122,6 +127,9 @@ class AccommodationView(views.APIView):
 
 
 class CateringView(views.APIView):
+
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     #serializer_class = serializers.get_serializer("json")
 

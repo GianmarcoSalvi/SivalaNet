@@ -1,5 +1,7 @@
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.decorators import api_view
 from rest_framework import viewsets, views
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework import status
 from ..serializers import *
@@ -17,7 +19,9 @@ from django.contrib.gis.measure import D
 class PoiViewSet(viewsets.ModelViewSet):
     queryset = Poi.objects.all()
     serializer_class = PoiSerializer
-    
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
 
 
 class nearbyPoi(views.APIView):

@@ -1,14 +1,15 @@
-from rest_framework.decorators import api_view
+
 from rest_framework import viewsets
-from rest_framework.response import Response
-from rest_framework import status
 from ..serializers import *
 from ..models import *
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample, extend_schema_view
-from drf_spectacular.types import OpenApiTypes
 
 # 3) CITY
 class CityViewSet(viewsets.ModelViewSet):
     queryset = City.objects.all()
     serializer_class = CitySerializer
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
