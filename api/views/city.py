@@ -10,6 +10,6 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class CityViewSet(viewsets.ModelViewSet):
     queryset = City.objects.all()
     serializer_class = CitySerializer
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 

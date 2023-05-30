@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+import rest_framework.authentication
+import rest_framework.permissions
 
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -114,8 +117,12 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 5
+    'PAGE_SIZE': 5,
+
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication', ),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',),
 }
+
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'SiVaLaNet API',
@@ -133,7 +140,8 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_PATCH': False,
     # 'TAGS': ['user', 'poi', 'tag', 'region', 'province', 'city', 'social_media'],
     # 'CAMELIZE_NAMES': True,
-    'SORT_OPERATION_PARAMETERS': False
+    'SORT_OPERATION_PARAMETERS': False,
+    'COMPONENT_SPLIT_REQUEST': True,
 }
 
 # Internationalization

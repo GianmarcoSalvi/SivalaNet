@@ -19,12 +19,12 @@ from django.contrib.gis.measure import D
 class PoiViewSet(viewsets.ModelViewSet):
     queryset = Poi.objects.all()
     serializer_class = PoiSerializer
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 
-class nearbyPoi(views.APIView):
+class nearbyPoi(viewsets.ViewSet):
 
     @extend_schema(
         parameters=([
@@ -38,7 +38,7 @@ class nearbyPoi(views.APIView):
         description="Retrieve POI nearby a given poi_id or a generic (lat,lon) point.",
         request=None
     )
-    def get(self, request):
+    def list(self, request):
         query_dict = request.GET
         limit = int(query_dict.get('limit'))
         radius = int(query_dict.get('radius'))

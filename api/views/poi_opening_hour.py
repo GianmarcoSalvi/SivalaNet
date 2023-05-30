@@ -15,5 +15,5 @@ from drf_spectacular.types import OpenApiTypes
 class PoiOpeningHourViewSet(viewsets.ModelViewSet):
     queryset = PoiOpeningHour.objects.all()
     serializer_class = PoiOpeningHourSerializer
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticatedOrReadOnly]

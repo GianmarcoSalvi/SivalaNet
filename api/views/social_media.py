@@ -15,5 +15,5 @@ from drf_spectacular.types import OpenApiTypes
 class SocialMediaViewSet(viewsets.ModelViewSet):
     queryset = SocialMedia.objects.all()
     serializer_class = SocialMediaSerializer
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticatedOrReadOnly]
+    # authentication_classes = [TokenAuthentication]
+    # permission_classes = [IsAuthenticatedOrReadOnly]

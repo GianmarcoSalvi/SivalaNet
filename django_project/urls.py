@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularRedocView, SpectacularSwaggerView
 from drf_spectacular.views import SpectacularAPIView
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
+    path('auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
+    path('api_auth_token/', obtain_auth_token),
     path('sivalanetapi/v1/', include('api.urls')),
      # other url patterns
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
