@@ -6,3 +6,5 @@ requests
 simplejson
 djangorestframework-simplejwt
 httpie
+pillow
+django-extensions

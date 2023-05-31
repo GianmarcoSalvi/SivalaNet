@@ -7,7 +7,7 @@ from .models import *
 # Register your models here.
 admin.site.register(City)
 admin.site.register(DayAndHour)
-admin.site.register(Media)
+admin.site.register(Image)
 admin.site.register(Poi)
 admin.site.register(Province)
 admin.site.register(Region)

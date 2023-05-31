@@ -39,15 +39,15 @@ class DayAndHour(models.Model):
         db_table = 'day_and_hour'
 
 
-class Media(models.Model):
-    media_id = models.AutoField(primary_key=True)
+class Image(models.Model):
+    image_id = models.AutoField(primary_key=True)
+    file = models.ImageField(upload_to='images/')
     poi = models.ForeignKey('Poi', models.DO_NOTHING)
-    url = models.CharField(max_length=1024, blank=True, null=True)
+    # url = models.CharField(max_length=1024, blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'media'
+        managed = True
 
 
 class Poi(models.Model):

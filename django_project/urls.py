@@ -24,10 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api_auth_token/', obtain_auth_token),
     path('sivalanetapi/v1/', include('api.urls')),
-     # other url patterns
+    # other url patterns
     path('schema/', SpectacularAPIView.as_view(), name='schema'),
-     # Swagger UI:
+    # Swagger UI:
     path('swagger/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     # Redoc UI:
-    path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),    
+    path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]

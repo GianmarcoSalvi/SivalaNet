@@ -23,7 +23,6 @@ class PoiViewSet(viewsets.ModelViewSet):
     # permission_classes = [IsAuthenticatedOrReadOnly]
 
 
-
 class nearbyPoi(viewsets.ViewSet):
 
     @extend_schema(
@@ -64,7 +63,7 @@ class nearbyPoi(viewsets.ViewSet):
             return Response(serializer.data)
 
         elif('lat' in query_dict and 'lon' in query_dict):
-            point(float(query_dict.get('lon')),
+            point = Point(float(query_dict.get('lon')),
                   float(query_dict.get('lat')),
                   srid=4326)
             # distance_lte means "less than equal"

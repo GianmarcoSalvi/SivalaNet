@@ -3,18 +3,6 @@ from .models import *
 from .utils import special_classes as sc
 from django.contrib.auth.models import User as BackUser
 
-
-class BackUserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = BackUser
-        fields = ['username','password']
-
-    def create(self, validated_data):
-        backuser = BackUser.objects.create(username=validated_data['username'])
-        backuser.set_password(validated_data['password'])
-        backuser.save()
-        return backuser
-
 # 1) REGION
 class RegionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -54,9 +42,9 @@ class TagSerializer(serializers.ModelSerializer):
         exclude = ['is_active', 'si']
 
 # 8) IMAGE
-class MediaSerializer(serializers.ModelSerializer):
+class ImageSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Media
+        model = Image
         #fields = '__all__'
         exclude = ['is_active']
 

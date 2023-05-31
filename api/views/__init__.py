@@ -1,7 +1,7 @@
 __all__ = [
     "city",
     "day_and_hour",
-    "media.py",
+    "image.py",
     'poi_opening_hour',
     'poi','province',
     'region',

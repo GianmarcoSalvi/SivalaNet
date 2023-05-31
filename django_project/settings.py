@@ -18,9 +18,10 @@ import rest_framework.permissions
 
 from datetime import timedelta
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -47,8 +48,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'django.contrib.gis',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'django_extensions'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,9 +89,9 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis', # 'django.db.backends.postgresql'
-        'HOST': 'localhost', # PUT 'db' to work with docker localhost otherwise
-        'PORT': 5432, # 5455 (?)
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',  # 'django.db.backends.postgresql'
+        'HOST': 'localhost',  # PUT 'db' to work with docker localhost otherwise
+        'PORT': 5432,  # 5455 (?)
         'NAME': "postgres",
         'USER': "postgres",
         'PASSWORD': "postgres",
