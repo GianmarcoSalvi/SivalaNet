@@ -13,9 +13,36 @@ from django.contrib.gis.geos import Point
 from .utils.db_types import *
 
 
+class Region(models.Model):
+    region_id = models.AutoField(primary_key=True)
+    name = models.CharField(unique=True, max_length=128, blank=True, null=True)
+    min_lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    min_lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    max_lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    max_lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'region'
+
+
+class Province(models.Model):
+    province_id = models.AutoField(primary_key=True)
+    region = models.ForeignKey(Region, models.DO_NOTHING)
+    name = models.CharField(unique=True, max_length=256, blank=True, null=True)
+    lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'province'
+
+
 class City(models.Model):
     city_id = models.AutoField(primary_key=True)
-    province = models.ForeignKey('Province', models.DO_NOTHING)
+    province = models.ForeignKey(Province, models.DO_NOTHING)
     name = models.CharField(max_length=256, blank=True, null=True)
     lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
     lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
@@ -26,9 +53,18 @@ class City(models.Model):
         db_table = 'city'
 
 
+class PoiOpeningHour(models.Model):
+    poi_opening_hour_id = models.AutoField(primary_key=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'poi_opening_hour'
+
+
 class DayAndHour(models.Model):
     dah_id = models.AutoField(primary_key=True)
-    poi_opening_hour = models.ForeignKey('PoiOpeningHour', models.DO_NOTHING)
+    poi_opening_hour = models.ForeignKey(PoiOpeningHour, models.DO_NOTHING)
     weekday = models.CharField(max_length=3)
     opening_hour = models.TimeField()
     closing_hour = models.TimeField()
@@ -37,17 +73,6 @@ class DayAndHour(models.Model):
     class Meta:
         managed = False
         db_table = 'day_and_hour'
-
-
-class Image(models.Model):
-    image_id = models.AutoField(primary_key=True)
-    file = models.ImageField(upload_to='images/')
-    poi = models.ForeignKey('Poi', models.DO_NOTHING)
-    # url = models.CharField(max_length=1024, blank=True, null=True)
-    is_active = models.BooleanField(blank=True, null=True)
-
-    class Meta:
-        managed = True
 
 
 class Poi(models.Model):
@@ -64,7 +89,7 @@ class Poi(models.Model):
     average_visiting_time = models.IntegerField()
     # utility_score = models.FloatField(blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
-    poi_opening_hour = models.OneToOneField('PoiOpeningHour', models.DO_NOTHING, blank=True, null=True)
+    poi_opening_hour = models.OneToOneField(PoiOpeningHour, models.DO_NOTHING, blank=True, null=True)
     description = models.TextField()
     suitable_for_disabled = models.BooleanField()
 
@@ -73,44 +98,18 @@ class Poi(models.Model):
         db_table = 'poi'
 
 
-class Province(models.Model):
-    province_id = models.AutoField(primary_key=True)
-    region = models.ForeignKey('Region', models.DO_NOTHING)
-    name = models.CharField(unique=True, max_length=256, blank=True, null=True)
-    lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
-    lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
+class Image(models.Model):
+    image_id = models.AutoField(primary_key=True)
+    file = models.ImageField(upload_to='images/')
+    # poi = models.ForeignKey(Poi, models.DO_NOTHING, related_name='images', null=True, blank=True)  # OneToOneField is more correct
+    poi = models.ManyToManyField(Poi, related_name='images', blank=True)
+    # url = models.CharField(max_length=1024, blank=True, null=True)
     is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
-        managed = False
-        db_table = 'province'
+        managed = True
+        db_table = 'image'
 
-
-class Region(models.Model):
-    region_id = models.AutoField(primary_key=True)
-    name = models.CharField(unique=True, max_length=128, blank=True, null=True)
-    min_lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
-    min_lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
-    max_lat = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
-    max_lon = models.DecimalField(max_digits=9, decimal_places=7, blank=True, null=True)
-    is_active = models.BooleanField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'region'
-
-
-class SocialInteraction(models.Model):
-    si_id = models.AutoField(primary_key=True)
-    url = models.CharField(max_length=1024)
-    source_type = models.CharField(max_length=1024)  # This field type is a guess.
-    wos = models.ForeignKey('SocialMedia', models.DO_NOTHING, blank=True, null=True)
-    poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
-    is_active = models.BooleanField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'social_interaction'
 
 
 class SocialMedia(models.Model):
@@ -124,6 +123,19 @@ class SocialMedia(models.Model):
     class Meta:
         managed = False
         db_table = 'social_media'
+
+
+class SocialInteraction(models.Model):
+    si_id = models.AutoField(primary_key=True)
+    url = models.CharField(max_length=1024)
+    source_type = models.CharField(max_length=1024)  # This field type is a guess.
+    wos = models.ForeignKey(SocialMedia, models.DO_NOTHING, blank=True, null=True)
+    poi = models.ForeignKey(Poi, models.DO_NOTHING, blank=True, null=True)
+    is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'social_interaction'
 
 
 class Tag(models.Model):
@@ -160,15 +172,6 @@ class UserTag(models.Model):
     class Meta:
         managed = False
         db_table = 'user_tag'
-
-
-class PoiOpeningHour(models.Model):
-    poi_opening_hour_id = models.AutoField(primary_key=True)
-    is_active = models.BooleanField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'poi_opening_hour'
 
 
 class Place(models.Model):

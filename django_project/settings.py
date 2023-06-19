@@ -17,7 +17,7 @@ import rest_framework.authentication
 import rest_framework.permissions
 
 from datetime import timedelta
-
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'django.contrib.gis',
     'rest_framework.authtoken',
-    'django_extensions'
+    'django_extensions',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 
@@ -164,10 +165,22 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
+# GDAL_LIBRARY_PATH = "/opt/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib"
+# GEOS_LIBRARY_PATH = "/opt/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib"
+
+# GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
+
+# GDAL_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib'
+
+GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'

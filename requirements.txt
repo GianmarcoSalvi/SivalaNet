@@ -8,3 +8,5 @@ djangorestframework-simplejwt
 httpie
 pillow
 django-extensions
+django-cleanup
+pandas

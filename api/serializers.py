@@ -48,6 +48,12 @@ class ImageSerializer(serializers.ModelSerializer):
         #fields = '__all__'
         exclude = ['is_active']
 
+# 9) IMAGE READ ONLY
+class ImageReadOnlySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ['file']
+
 # 9) SOCIAL MEDIA
 class SocialMediaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -64,8 +70,13 @@ class DayAndHourSerializer(serializers.ModelSerializer):
         exclude = ['is_active']   
         # depth = 1
 
+class DayAndHourReadOnlySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DayAndHour
+        fields = ['weekday','opening_hour','closing_hour'
+                                           '']
 class PoiOpeningHourSerializer(serializers.ModelSerializer):
-    day_and_hour = DayAndHourSerializer(source='dayandhour_set', many=True)
+    day_and_hour = DayAndHourReadOnlySerializer(source='dayandhour_set', many=True, read_only=True)
     class Meta:
         model = PoiOpeningHour
         exclude = ['is_active']
@@ -73,9 +84,19 @@ class PoiOpeningHourSerializer(serializers.ModelSerializer):
 
 # 5) POI
 class PoiSerializer(serializers.ModelSerializer):
-    utility_score = serializers.FloatField(required=False, default=None)
+    utility_score = serializers.FloatField(required=False, default=None, allow_null=True)
     poi_opening_hour = PoiOpeningHourSerializer(read_only=True)
-    # extra_kwargs = {'utility_score': {}}
+    images = ImageReadOnlySerializer(many=True, read_only=True)
+    class Meta:
+        model = Poi
+        #fields = '__all__'
+        exclude = ['is_active','location']
+        # depth = 1
+
+class PoiReadOnlySerializer(serializers.ModelSerializer):
+    # utility_score = serializers.FloatField(required=False, default=None, allow_null=True)
+    poi_opening_hour = PoiOpeningHourSerializer(read_only=True)
+    images = ImageReadOnlySerializer(many=True, read_only=True)
     class Meta:
         model = Poi
         #fields = '__all__'
