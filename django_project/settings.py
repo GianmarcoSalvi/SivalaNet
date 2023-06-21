@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
-import rest_framework.authentication
-import rest_framework.permissions
+# import rest_framework.authentication
+# import rest_framework.permissions
 
 from datetime import timedelta
 import os
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',  # 'django.db.backends.postgresql'
-        'HOST': 'localhost',  # PUT 'db' to work with docker localhost otherwise
+        'HOST': 'db',  # PUT 'db' to work with docker localhost otherwise
         'PORT': 5432,  # 5455 (?)
         'NAME': "postgres",
         'USER': "postgres",
@@ -173,6 +173,8 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # GDAL_LIBRARY_PATH = "/opt/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib"
 # GEOS_LIBRARY_PATH = "/opt/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib"
 
@@ -182,5 +184,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # GDAL_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib'
 # GEOS_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib'
 
-GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+# GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'

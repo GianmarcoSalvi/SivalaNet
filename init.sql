@@ -20,7 +20,7 @@ SET row_security = off;
 -- Name: postgres; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C';
+-- CREATE DATABASE postgres WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'C';
 
 
 ALTER DATABASE postgres OWNER TO postgres;
@@ -88,13 +88,13 @@ COMMENT ON SCHEMA pgagent IS 'pgAgent system tables';
 -- *not* creating schema, since initdb creates it
 
 
-ALTER SCHEMA public OWNER TO gianmarco;
+-- ALTER SCHEMA public OWNER TO gianmarco;
 
 --
 -- Name: tiger; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA tiger;
+-- CREATE SCHEMA tiger;
 
 
 ALTER SCHEMA tiger OWNER TO postgres;
@@ -103,7 +103,7 @@ ALTER SCHEMA tiger OWNER TO postgres;
 -- Name: tiger_data; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA tiger_data;
+-- CREATE SCHEMA tiger_data;
 
 
 ALTER SCHEMA tiger_data OWNER TO postgres;
@@ -112,7 +112,7 @@ ALTER SCHEMA tiger_data OWNER TO postgres;
 -- Name: topology; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA topology;
+-- CREATE SCHEMA topology;
 
 
 ALTER SCHEMA topology OWNER TO postgres;
