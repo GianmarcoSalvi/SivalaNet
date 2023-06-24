@@ -10,9 +10,8 @@ class DailySchedule(object):
     
 class Itinerary(object):
     def __init__(self, **kwargs):
-        for field in ['itinerary']:
+        for field in ('itinerary', 'midpoint_lat','midpoint_lon'):
             setattr(self, field, kwargs.get(field, None))
-
 
 
 class PoiFake(object):

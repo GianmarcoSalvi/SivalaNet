@@ -27,7 +27,7 @@ def getPlaceIdList(geoapify_request):
     response = (requests.get(geoapify_request)).json()
     features = response.get('features')
     placeIdList = []
-    if features != None and features != []:
+    if features is not None and features:
         for feature in features:
             placeIdList.append(feature['properties']['place_id'])
 
@@ -38,8 +38,6 @@ class AccommodationView(viewsets.ViewSet):
 
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]
-
-    # serializer_class = serializers.get_serializer("json")
 
     # http_method_names = ['get']
 
@@ -123,7 +121,7 @@ class AccommodationView(viewsets.ViewSet):
 
                 accommodations.append(response.json())
 
-        return JsonResponse(accommodations)
+        return JsonResponse(accommodations, safe=False)
 
 
 class CateringView(viewsets.ViewSet):
@@ -209,4 +207,4 @@ class CateringView(viewsets.ViewSet):
 
                 caterings.append(response.json())
 
-        return JsonResponse(caterings)
+        return JsonResponse(caterings, safe=False)

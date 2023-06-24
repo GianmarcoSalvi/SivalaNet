@@ -10,3 +10,4 @@ pillow
 django-extensions
 django-cleanup
 pandas
+gdal

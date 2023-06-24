@@ -139,11 +139,13 @@ class DailyScheduleSerializer(serializers.Serializer):
             setattr(instance, field, value)
         return instance
 
-        
+
 
 
 # 12) Itinerary
 class ItinerarySerializer(serializers.Serializer):
+    midpoint_lat = serializers.DecimalField(max_digits=9, decimal_places=7)
+    midpoint_lon = serializers.DecimalField(max_digits=9, decimal_places=7)
     itinerary = DailyScheduleSerializer(many=True)
     #days = serializers.IntegerField(read_only=True)
 
