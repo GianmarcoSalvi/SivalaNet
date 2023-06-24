@@ -111,7 +111,6 @@ class Image(models.Model):
         db_table = 'image'
 
 
-
 class SocialMedia(models.Model):
     sm_id = models.AutoField(primary_key=True)
     url = models.CharField(max_length=1024)
@@ -176,10 +175,21 @@ class UserTag(models.Model):
 
 class Place(models.Model):
     place_id = models.CharField(max_length=1024, primary_key=True)
-    json = models.CharField(max_length=8192)
+    json = models.JSONField(max_length=8192)
     last_modification = models.DateTimeField(
         auto_now=True)  # only updates when is called Model.save(). QuereySet.update() won't work
 
     class Meta:
         managed = False
         db_table = 'place'
+
+
+class PrecompiledItinerary(models.Model):
+    itinerary_id = models.AutoField(primary_key=True)
+    description = models.CharField(null=True, blank=True)
+    poi = models.ManyToManyField(Poi, blank=True)
+    # is_active = models.BooleanField(blank=True, null=True)
+
+    class Meta:
+        managed = True
+        db_table = 'precompiled_itinerary'

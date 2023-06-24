@@ -15,12 +15,13 @@ from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.measure import D
 from django_project.settings import *
 
+
 # 6) POI
 
 
 class PoiViewSet(viewsets.ModelViewSet):
     queryset = Poi.objects.all().order_by('poi_id')
-    serializer_class = PoiReadOnlySerializer
+    serializer_class = PoiReadOnlySerializer  # PoiReadOnlySerializer
 
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]
@@ -62,17 +63,21 @@ class nearbyPoi(viewsets.ViewSet):
     )
     def list(self, request):
         query_dict = request.GET
-        limit = int(query_dict.get('limit'))
-        radius = int(query_dict.get('radius'))
+        if not query_dict.get('limit') or not query_dict.get('radius'):
+            return Response(status=status.HTTP_400_BAD_REQUEST,
+                            data="Request parameters 'limit' and/or 'radius' were not provided. Need to specify them.")
 
         if ('poi_id' not in query_dict) and not ('lat' in query_dict and 'lon' in query_dict):
             return Response(status=status.HTTP_400_BAD_REQUEST,
-                            data="Request parameters must contain exactly one between poi_id and (lat,lon)")
-        elif ('poi_id' in query_dict and 'lat' in query_dict and 'lon' in query_dict):
+                            data="Request parameters must contain either poi_id or (lat,lon)")
+        elif 'poi_id' in query_dict and 'lat' in query_dict and 'lon' in query_dict:
             return Response(status=status.HTTP_400_BAD_REQUEST,
-                            data="Request parameters must contain exactly one between poi_id and (lat,lon)")
+                            data="Request parameters must contain either poi_id or (lat,lon)")
 
-        if ('poi_id' in query_dict):
+        limit = int(query_dict.get('limit'))
+        radius = int(query_dict.get('radius'))
+
+        if 'poi_id' in query_dict:
             poi_id = int(query_dict.get('poi_id'))
             poi = Poi.objects.get(pk=poi_id)
             point = Point(float(poi.lon), float(poi.lat), srid=4326)
@@ -86,7 +91,7 @@ class nearbyPoi(viewsets.ViewSet):
             serializer = PoiSerializer(instance=queryset, many=True)
             return Response(serializer.data)
 
-        elif ('lat' in query_dict and 'lon' in query_dict):
+        elif 'lat' in query_dict and 'lon' in query_dict:
             point = Point(float(query_dict.get('lon')),
                           float(query_dict.get('lat')),
                           srid=4326)
