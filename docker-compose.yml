@@ -15,12 +15,12 @@ services:
       db:
         condition: service_healthy
     networks:
-      - customnetwork
+      - sivalanet_network
     restart: always
     container_name: sivalanet_django_server
   db:
-    image: postgis/postgis:13-3.3 #postgres:13
     container_name: sivalanet_postgres_db
+    image: postgis/postgis:13-3.3 #postgres:13
 
     healthcheck:
       test: "exit 0"
@@ -47,7 +47,7 @@ volumes:
   postgres_data:
 
 networks:
-  customnetwork:
+  sivalanet_network:
     ipam:
       config:
         - subnet: 172.27.0.0/16
