@@ -4,3 +4,10 @@ djangorestframework
 drf-spectacular
 requests
 simplejson
+djangorestframework-simplejwt
+httpie
+pillow
+django-extensions
+django-cleanup
+pandas
+gdal

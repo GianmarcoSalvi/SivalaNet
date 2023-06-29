@@ -13,11 +13,15 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+import rest_framework.authentication
+import rest_framework.permissions
+
+from datetime import timedelta
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -44,7 +48,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'django.contrib.gis',
+    'rest_framework.authtoken',
+    'django_extensions',
+    'django_cleanup.apps.CleanupConfig',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -82,9 +90,9 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis', # 'django.db.backends.postgresql'
-        'HOST': 'db', # PUT 'db' to work with docker
-        'PORT': 5432, # 5455 (?)
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',  # 'django.db.backends.postgresql'
+        'HOST': 'localhost',  # PUT 'db' to work with docker localhost otherwise
+        'PORT': 5432,  # 5455 (?)
         'NAME': "postgres",
         'USER': "postgres",
         'PASSWORD': "postgres",
@@ -111,8 +119,14 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS' : 'drf_spectacular.openapi.AutoSchema'
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5,
+
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication', ),
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticatedOrReadOnly',),
 }
+
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'SiVaLaNet API',
@@ -130,7 +144,8 @@ SPECTACULAR_SETTINGS = {
     'COMPONENT_SPLIT_PATCH': False,
     # 'TAGS': ['user', 'poi', 'tag', 'region', 'province', 'city', 'social_media'],
     # 'CAMELIZE_NAMES': True,
-    'SORT_OPERATION_PARAMETERS': False
+    'SORT_OPERATION_PARAMETERS': False,
+    'COMPONENT_SPLIT_REQUEST': True,
 }
 
 # Internationalization
@@ -150,7 +165,22 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# GDAL_LIBRARY_PATH = "/opt/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib"
+# GEOS_LIBRARY_PATH = "/opt/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib"
+
+# GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
+
+# GDAL_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib'
+
+GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'

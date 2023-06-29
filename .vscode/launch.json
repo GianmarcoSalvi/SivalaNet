@@ -4,32 +4,19 @@
     // Per altre informazioni, visitare: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Python: Django",
             "type": "python",
+            "python": "${command:python.interpreterPath}",
             "request": "launch",
             "program": "${workspaceFolder}/manage.py",
             "args": [
-                "runserver"
+                "runserver", "3888"
             ],
             "django": true,
-            "justMyCode": true
-        },
-        {
-            "name": "Python: Remote Attach",
-            "type": "python",
-            "request": "attach",
-            "connect": {
-                "host": "localhost",
-                "port": 3888
-            },
-            "pathMappings": [
-                {
-                    "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "."
-                }
-            ],
-            "justMyCode": true
+            "justMyCode": true,
+            "console": "internalConsole"
         }
     ]
 }
