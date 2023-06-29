@@ -10,8 +10,6 @@ from ..models import *
 from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExample, extend_schema_view
 from drf_spectacular.types import OpenApiTypes
 
-
-
 """ @extend_schema(
     # operation_id='getRegions',
     tags=['region'],
@@ -28,12 +26,10 @@ from drf_spectacular.types import OpenApiTypes
     ]
 ) """
 
-# 1) REGION
 
+# 1) REGION
 class RegionViewSet(viewsets.ModelViewSet):
-    queryset = Region.objects.all()
+    queryset = Region.objects.all().order_by('region_id')
     serializer_class = RegionSerializer
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]
-
-    

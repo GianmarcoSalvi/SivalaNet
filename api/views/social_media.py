@@ -13,7 +13,7 @@ from drf_spectacular.types import OpenApiTypes
 
 # 10) SOCIAL MEDIA
 class SocialMediaViewSet(viewsets.ModelViewSet):
-    queryset = SocialMedia.objects.all()
+    queryset = SocialMedia.objects.all().order_by('sm_id')
     serializer_class = SocialMediaSerializer
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]

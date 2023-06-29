@@ -8,7 +8,7 @@ from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiExampl
 
 # 8) DAY AND HOUR
 class DayAndHourViewSet(viewsets.ModelViewSet):
-    queryset = DayAndHour.objects.all()
+    queryset = DayAndHour.objects.all().order_by('dah_id')
     serializer_class = DayAndHourSerializer
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]

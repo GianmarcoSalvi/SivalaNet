@@ -2,6 +2,7 @@ from rest_framework import serializers
 from .models import *
 from .utils import special_classes as sc
 from django.contrib.auth.models import User as BackUser
+from django.contrib.gis.measure import Distance
 
 # 1) REGION
 class RegionSerializer(serializers.ModelSerializer):
@@ -82,19 +83,34 @@ class PoiOpeningHourSerializer(serializers.ModelSerializer):
         exclude = ['is_active']
 
 
+class DistanceField(serializers.Field):
+    def to_representation(self, value):
+        if isinstance(value, Distance):
+            return int(value.m)  # Return distance in meters
+        return None
+
 # 5) POI
 class PoiSerializer(serializers.ModelSerializer):
-    utility_score = serializers.FloatField(required=False, default=None, allow_null=True)
+    utility_score = serializers.FloatField(required=False, default=None, allow_null=True, read_only=True)
+    distance = DistanceField(allow_null=True)
     poi_opening_hour = PoiOpeningHourSerializer(read_only=True)
     images = ImageReadOnlySerializer(many=True, read_only=True)
+    city = serializers.SlugRelatedField(many=False, read_only=True, slug_field='name')
     class Meta:
         model = Poi
         #fields = '__all__'
         exclude = ['is_active','location']
         # depth = 1
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        if data['utility_score'] is None:
+            data.pop('utility_score')
+        if data['distance'] is None:
+            data.pop('distance')
+        return data
 class PoiReadOnlySerializer(serializers.ModelSerializer):
-    # utility_score = serializers.FloatField(required=False, default=None, allow_null=True)
+    utility_score = serializers.SerializerMethodField()
     poi_opening_hour = PoiOpeningHourSerializer(read_only=True)
     images = ImageReadOnlySerializer(many=True, read_only=True)
     class Meta:
@@ -102,7 +118,6 @@ class PoiReadOnlySerializer(serializers.ModelSerializer):
         #fields = '__all__'
         exclude = ['is_active','location']
         # depth = 1
-
 
 class PoiSerializerFake(serializers.Serializer):
     poi_id = serializers.IntegerField(read_only=True)
@@ -140,7 +155,31 @@ class DailyScheduleSerializer(serializers.Serializer):
         return instance
 
 
+class PrecompiledItinerarySerializer(serializers.ModelSerializer):
+    poi = PoiSerializer(many=True, read_only=True)
+    midpoint_lat = serializers.SerializerMethodField()
+    midpoint_lon = serializers.SerializerMethodField()
+    class Meta:
+        model = PrecompiledItinerary
+        fields = '__all__'     # ['itinerary_id','description', 'poi','midpoint_lat','midpoint_lon']
 
+    def get_midpoint_lat(self, obj):
+        lat = 0
+        for p in obj.poi.all():
+            lat += float(p.lat)
+        return lat / obj.poi.count()
+
+    def get_midpoint_lon(self, obj):
+        lon = 0
+        for p in obj.poi.all():
+            lon += float(p.lon)
+        return lon / obj.poi.count()
+
+
+class PlaceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Place
+        fields = ['json']
 
 # 12) Itinerary
 class ItinerarySerializer(serializers.Serializer):

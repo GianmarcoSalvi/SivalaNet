@@ -13,7 +13,7 @@ from drf_spectacular.types import OpenApiTypes
 
 # 9) IMAGE
 class PoiOpeningHourViewSet(viewsets.ModelViewSet):
-    queryset = PoiOpeningHour.objects.all()
+    queryset = PoiOpeningHour.objects.all().order_by('poi_opening_hour_id')
     serializer_class = PoiOpeningHourSerializer
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]

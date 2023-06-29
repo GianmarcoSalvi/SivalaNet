@@ -12,7 +12,7 @@ from drf_spectacular.types import OpenApiTypes
 
 # 5) TAG
 class TagViewSet(viewsets.ModelViewSet):
-    queryset = Tag.objects.all()
+    queryset = Tag.objects.all().order_by('tag_id')
     serializer_class = TagSerializer
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]

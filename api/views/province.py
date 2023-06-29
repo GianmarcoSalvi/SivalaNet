@@ -13,7 +13,7 @@ from drf_spectacular.types import OpenApiTypes
 
 # 2) PROVINCE   
 class ProvinceViewSet(viewsets.ModelViewSet):
-    queryset = Province.objects.all()
+    queryset = Province.objects.all().order_by('province_id')
     serializer_class = ProvinceSerializer
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]

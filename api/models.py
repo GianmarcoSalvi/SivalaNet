@@ -11,7 +11,7 @@ from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
 
 from .utils.db_types import *
-
+from django.contrib.postgres.fields import JSONField
 
 class Region(models.Model):
     region_id = models.AutoField(primary_key=True)
@@ -62,6 +62,7 @@ class PoiOpeningHour(models.Model):
         db_table = 'poi_opening_hour'
 
 
+
 class DayAndHour(models.Model):
     dah_id = models.AutoField(primary_key=True)
     poi_opening_hour = models.ForeignKey(PoiOpeningHour, models.DO_NOTHING)
@@ -73,6 +74,7 @@ class DayAndHour(models.Model):
     class Meta:
         managed = False
         db_table = 'day_and_hour'
+
 
 
 class Poi(models.Model):
@@ -98,6 +100,7 @@ class Poi(models.Model):
         db_table = 'poi'
 
 
+
 class Image(models.Model):
     image_id = models.AutoField(primary_key=True)
     file = models.ImageField(upload_to='images/')
@@ -109,6 +112,7 @@ class Image(models.Model):
     class Meta:
         managed = True
         db_table = 'image'
+
 
 
 class SocialMedia(models.Model):
@@ -124,6 +128,7 @@ class SocialMedia(models.Model):
         db_table = 'social_media'
 
 
+
 class SocialInteraction(models.Model):
     si_id = models.AutoField(primary_key=True)
     url = models.CharField(max_length=1024)
@@ -137,6 +142,7 @@ class SocialInteraction(models.Model):
         db_table = 'social_interaction'
 
 
+
 class Tag(models.Model):
     tag_id = models.AutoField(primary_key=True)
     tag = models.CharField(max_length=128)
@@ -146,6 +152,7 @@ class Tag(models.Model):
     class Meta:
         managed = False
         db_table = 'tag'
+
 
 
 class User(models.Model):
@@ -163,6 +170,7 @@ class User(models.Model):
         db_table = 'user_account'
 
 
+
 class UserTag(models.Model):
     ut_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, models.DO_NOTHING)
@@ -173,23 +181,26 @@ class UserTag(models.Model):
         db_table = 'user_tag'
 
 
+
 class Place(models.Model):
     place_id = models.CharField(max_length=1024, primary_key=True)
-    json = models.JSONField(max_length=8192)
+    json = models.JSONField()
     last_modification = models.DateTimeField(
         auto_now=True)  # only updates when is called Model.save(). QuereySet.update() won't work
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'place'
 
 
 class PrecompiledItinerary(models.Model):
     itinerary_id = models.AutoField(primary_key=True)
     description = models.CharField(null=True, blank=True)
-    poi = models.ManyToManyField(Poi, blank=True)
+    poi = models.ManyToManyField(Poi, blank=True, related_name='poi')
+
     # is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
         managed = True
         db_table = 'precompiled_itinerary'
+

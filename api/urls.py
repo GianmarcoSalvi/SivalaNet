@@ -1,6 +1,6 @@
 from django.urls import path, include
-from .views import city, region, poi, province, user, image, tag, social_media, day_and_hour, itinerary, geoapify, \
-    poi_opening_hour
+from .views import city, region, poi, province, user, image, tag, social_media, day_and_hour, precompiled_itinerary, geoapify, \
+    poi_opening_hour, generated_itinerary
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -18,7 +18,8 @@ router.register(r'day_and_hour', day_and_hour.DayAndHourViewSet, basename='day_a
 router.register(r'accommodations', geoapify.AccommodationView, basename='accommodations')  # 10
 router.register(r'caterings', geoapify.CateringView, basename='caterings')  # 10
 router.register(r'nearby_poi', poi.nearbyPoi, basename='nearby_poi')  # 10
-# router.register(r'itinerary', itinerary.ItineraryViewSet, basename='itinerary')  # 10
+router.register(r'precompiled_itinerary', precompiled_itinerary.PrecompiledItineraryViewSet, basename='precompiled_itinerary')  # 10
+router.register(r'generated_itinerary', generated_itinerary.GeneratedItineraryViewSet, basename='generated_itinerary')  # 10
 
 # router.register(r'itinerary',itinerary.ItineraryViewSet, basename='itinerary')
 # router.register(r'accommodation',geoapify.AccommodationViewSet, basename='accommodation')
@@ -30,8 +31,8 @@ router.register(r'nearby_poi', poi.nearbyPoi, basename='nearby_poi')  # 10
 urlpatterns = [
     #path(r'accommodation/', geoapify.AccommodationView.as_view(), name='accommodation'),
     # path(r'catering/', geoapify.CateringView.as_view(), name='catering'),
-    path(r'itinerary/generated/', itinerary.ItineraryViewSet.as_view({'get': 'get'}), name='itinerary'),
-    path(r'itinerary/precompiled/', itinerary.ItineraryViewSet.as_view({'get': 'get_precompiled'}), name='itinerary_precompiled'),
+    # path(r'itinerary/generated/', itinerary.ItineraryViewSet.as_view({'get': 'get'}), name='itinerary'),
+    # path(r'itinerary/precompiled/', itinerary.ItineraryViewSet.as_view({'get': 'get_precompiled'}), name='itinerary_precompiled'),
     # path(r'nearby_poi/', poi.nearbyPoi.as_view(), name='nearby_poi'),
     # path(r'register_backuser/', backuser.RegisterBackUser.as_view(), name='register_backuser'),
 

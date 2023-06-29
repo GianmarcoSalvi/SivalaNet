@@ -21,7 +21,7 @@ from django_project.settings import *
 
 class PoiViewSet(viewsets.ModelViewSet):
     queryset = Poi.objects.all().order_by('poi_id')
-    serializer_class = PoiReadOnlySerializer  # PoiReadOnlySerializer
+    serializer_class = PoiSerializer  # PoiReadOnlySerializer
 
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]
@@ -65,7 +65,7 @@ class nearbyPoi(viewsets.ViewSet):
         query_dict = request.GET
         if not query_dict.get('limit') or not query_dict.get('radius'):
             return Response(status=status.HTTP_400_BAD_REQUEST,
-                            data="Request parameters 'limit' and/or 'radius' were not provided. Need to specify them.")
+                            data="Request parameters 'limit' and/or 'radius' not inserted.")
 
         if ('poi_id' not in query_dict) and not ('lat' in query_dict and 'lon' in query_dict):
             return Response(status=status.HTTP_400_BAD_REQUEST,
@@ -80,26 +80,33 @@ class nearbyPoi(viewsets.ViewSet):
         if 'poi_id' in query_dict:
             poi_id = int(query_dict.get('poi_id'))
             poi = Poi.objects.get(pk=poi_id)
-            point = Point(float(poi.lon), float(poi.lat), srid=4326)
-            queryset = Poi.objects.filter(location__distance_lte=(point, D(m=radius))).exclude(pk=poi_id)
+            current_location = poi.location
+            # queryset = Poi.objects.filter(location__distance_lte=(point, D(m=radius))).exclude(pk=poi_id)
+            queryset = Poi.objects.annotate(
+                distance=Distance(current_location, 'location')
+            ).exclude(pk=poi_id).filter(distance__lte=radius).order_by('distance')
             # queryset = Poi.objects.annotate(distance=Distance(fromstr('location', srid=4326), point)
             # ).order_by('distance')[0:query_dict.get('quantity')]
 
-            if len(queryset) > limit:
+            if queryset.count() > limit:
                 queryset = random.sample(list(queryset), limit)
 
             serializer = PoiSerializer(instance=queryset, many=True)
             return Response(serializer.data)
 
         elif 'lat' in query_dict and 'lon' in query_dict:
-            point = Point(float(query_dict.get('lon')),
-                          float(query_dict.get('lat')),
+            point = Point(float(query_dict.get('lat')),
+                          float(query_dict.get('lon')),
                           srid=4326)
             # distance_lte means "less than equal"
-            queryset = Poi.objects.filter(
-                location__distance_lte=(point, D(m=radius)))
+            """queryset = Poi.objects.filter(
+                location__distance_lte=(point, D(m=radius)))"""
 
-            if len(queryset) > limit:
+            queryset = Poi.objects.annotate(
+                distance=Distance(point, 'location')
+            ).filter(distance__lte=radius).order_by('distance')
+
+            if queryset.count() > limit:
                 queryset = random.sample(list(queryset), limit)
 
         serializer = PoiSerializer(instance=queryset, many=True)

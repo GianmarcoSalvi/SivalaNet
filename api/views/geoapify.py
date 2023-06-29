@@ -36,6 +36,8 @@ def getPlaceIdList(geoapify_request):
 
 class AccommodationView(viewsets.ViewSet):
 
+    serializer_class = PlaceSerializer(many=True)
+
     # authentication_classes = [TokenAuthentication]
     # permission_classes = [IsAuthenticatedOrReadOnly]
 
@@ -108,9 +110,9 @@ class AccommodationView(viewsets.ViewSet):
 
         for place in places:
             try:
-                existing = Place.objects.get(place_id=place)
-                formatted_json = json.loads(json.dumps(ast.literal_eval(existing.json)))
-                accommodations.append(formatted_json)
+                existing = Place.objects.get(pk=place)
+                #formatted_json = json.loads(json.dumps(ast.literal_eval(existing.json)))
+                accommodations.append(existing)
 
             except ObjectDoesNotExist:
                 request_preview = place_details_request + '&id=' + place
@@ -119,16 +121,17 @@ class AccommodationView(viewsets.ViewSet):
                 place_entry = Place(place_id=place, json=response.json())
                 place_entry.save()
 
-                accommodations.append(response.json())
+                accommodations.append(place_entry)
 
-        return JsonResponse(accommodations, safe=False)
+        serializer = PlaceSerializer(instance=accommodations, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class CateringView(viewsets.ViewSet):
     # authentication_classes = [TokenAuthentication]
     #permission_classes = [IsAuthenticatedOrReadOnly]
 
-    # serializer_class = serializers.get_serializer("json")
+    serializer_class = PlaceSerializer(many=True)
 
     # http_method_names = ['get']
 
@@ -195,8 +198,8 @@ class CateringView(viewsets.ViewSet):
         for place in places:
             try:
                 existing = Place.objects.get(place_id=place)
-                formatted_json = json.loads(json.dumps(ast.literal_eval(existing.json)))
-                caterings.append(formatted_json)
+                # formatted_json = json.loads(json.dumps(ast.literal_eval(existing.json)))
+                caterings.append(existing)
 
             except ObjectDoesNotExist:
                 request_preview = place_details_request + '&id=' + place
@@ -205,6 +208,7 @@ class CateringView(viewsets.ViewSet):
                 place_entry = Place(place_id=place, json=response.json())
                 place_entry.save()
 
-                caterings.append(response.json())
+                caterings.append(place_entry)
 
-        return JsonResponse(caterings, safe=False)
+        serializer = PlaceSerializer(instance=caterings, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
