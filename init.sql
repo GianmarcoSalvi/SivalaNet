@@ -88,7 +88,7 @@ COMMENT ON SCHEMA pgagent IS 'pgAgent system tables';
 -- *not* creating schema, since initdb creates it
 
 
-ALTER SCHEMA public OWNER TO gianmarco;
+-- ALTER SCHEMA public OWNER TO gianmarco;
 
 --
 -- Name: tiger; Type: SCHEMA; Schema: -; Owner: postgres
