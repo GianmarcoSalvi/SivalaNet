@@ -47,6 +47,8 @@ class PoiViewSet(viewsets.ModelViewSet):
 
 
 class nearbyPoi(viewsets.ViewSet):
+    queryset = Poi.objects.all().order_by('poi_id')
+    serializer_class = PoiSerializer(many=True)
 
     @extend_schema(
         parameters=([
@@ -62,52 +64,28 @@ class nearbyPoi(viewsets.ViewSet):
         request=None
     )
     def list(self, request):
-        query_dict = request.GET
-        if not query_dict.get('limit') or not query_dict.get('radius'):
-            return Response(status=status.HTTP_400_BAD_REQUEST,
-                            data="Request parameters 'limit' and/or 'radius' not inserted.")
+        lat = request.GET.get('lat')
+        lon = request.GET.get('lon')
+        poi_id = request.GET.get('poi_id')
+        limit = int(request.GET.get('limit', 3))
+        radius = int(request.GET.get('radius', 500))
 
-        if ('poi_id' not in query_dict) and not ('lat' in query_dict and 'lon' in query_dict):
-            return Response(status=status.HTTP_400_BAD_REQUEST,
-                            data="Request parameters must contain either poi_id or (lat,lon)")
-        elif 'poi_id' in query_dict and 'lat' in query_dict and 'lon' in query_dict:
+        if (poi_id and (lat or lon)) or (not poi_id and not (lat and lon)):
             return Response(status=status.HTTP_400_BAD_REQUEST,
                             data="Request parameters must contain either poi_id or (lat,lon)")
 
-        limit = int(query_dict.get('limit'))
-        radius = int(query_dict.get('radius'))
+        if poi_id:
+            poi = Poi.objects.filter(pk=poi_id).first()
+            if not poi:
+                return Response(status=status.HTTP_404_NOT_FOUND,
+                                data="POI with the specified poi_id does not exist.")
+            lat = poi.lat
+            lon = poi.lon
 
-        if 'poi_id' in query_dict:
-            poi_id = int(query_dict.get('poi_id'))
-            poi = Poi.objects.get(pk=poi_id)
-            current_location = poi.location
-            # queryset = Poi.objects.filter(location__distance_lte=(point, D(m=radius))).exclude(pk=poi_id)
-            queryset = Poi.objects.annotate(
-                distance=Distance(current_location, 'location')
-            ).exclude(pk=poi_id).filter(distance__lte=radius).order_by('distance')
-            # queryset = Poi.objects.annotate(distance=Distance(fromstr('location', srid=4326), point)
-            # ).order_by('distance')[0:query_dict.get('quantity')]
+        point = Point(float(lat), float(lon), srid=4326)
+        queryset = Poi.objects.annotate(
+            distance=Distance('location', point)
+        ).exclude(pk=poi_id).filter(distance__lte=radius).order_by('distance')[:limit]
 
-            if queryset.count() > limit:
-                queryset = random.sample(list(queryset), limit)
-
-            serializer = PoiSerializer(instance=queryset, many=True)
-            return Response(serializer.data)
-
-        elif 'lat' in query_dict and 'lon' in query_dict:
-            point = Point(float(query_dict.get('lat')),
-                          float(query_dict.get('lon')),
-                          srid=4326)
-            # distance_lte means "less than equal"
-            """queryset = Poi.objects.filter(
-                location__distance_lte=(point, D(m=radius)))"""
-
-            queryset = Poi.objects.annotate(
-                distance=Distance(point, 'location')
-            ).filter(distance__lte=radius).order_by('distance')
-
-            if queryset.count() > limit:
-                queryset = random.sample(list(queryset), limit)
-
-        serializer = PoiSerializer(instance=queryset, many=True)
+        serializer = PoiSerializer(instance=queryset, many=True, context={'request':request})
         return Response(serializer.data)

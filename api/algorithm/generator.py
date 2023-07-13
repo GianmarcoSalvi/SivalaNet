@@ -67,9 +67,10 @@ def rank_text_search_poi_selection(poi_quantity, user_preferences):
     search_vector += SearchVector("description", weight="B", config='italian')
     search_vector += SearchVector("type", weight="B", config='italian')
 
+    query_string = ''
     # weights_vector = [0.4, 0.6, 0.8, 1.0] # D,C,B,A
-
-    query_string = user_preferences.lower().strip().replace(',', ' or ')
+    if user_preferences is not None:
+        query_string = user_preferences.lower().strip().replace(',', ' or ')
 
     query = SearchQuery(query_string, config='italian', search_type='websearch')
 
@@ -154,12 +155,18 @@ def time_windows(days):
 
 
 # Consumes geoapify credits
-def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, end_point_lon, days, user_preferences):
+def geoapify_routing_planner(days, user_preferences,
+                             end_point_lat=None,
+                             end_point_lon=None,
+                             start_point_lat=None,
+                             start_point_lon=None):
     API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
     api_request = 'https://api.geoapify.com/v1/routeplanner?'
     api_request += 'apiKey=' + API_KEY
 
     POI_PER_DAY = 5
+
+    days = int(days)
 
     poi_list, query_set_ranked_poi = rank_text_search_poi_selection(days * POI_PER_DAY,
                                                                     user_preferences)  # rank_text_search_poi_selection
@@ -171,12 +178,25 @@ def geoapify_routing_planner(start_point_lat, start_point_lon, end_point_lat, en
     traffic = "approximated"  # 'free_flow'
     type = "balanced"  # 'short', 'less_maneuvers'
     tw = time_windows(days)
-    ags = [{
-        "start_location": [start_point_lon, start_point_lat],
-        "end_location": [end_point_lon, end_point_lat],
-        "time_windows": tw,
-        "id": "TOURIST_AGENT"
-    }]
+
+    if start_point_lat is None and start_point_lon is None:
+        start_point_lat = query_set_ranked_poi[0].lat
+        start_point_lon = query_set_ranked_poi[0].lon
+
+    if end_point_lon is not None and end_point_lat is not None:
+        ags = [{
+            "start_location": [start_point_lon, start_point_lat],
+            "end_location": [end_point_lon, end_point_lat],
+            "time_windows": tw,
+            "id": "TOURIST_AGENT"
+        }]
+    else:
+        ags = [{
+            "start_location": [start_point_lon, start_point_lat],
+            # "end_location": [end_point_lon, end_point_lat],
+            "time_windows": tw,
+            "id": "TOURIST_AGENT"
+        }]
 
     jobs = jobs_dict(poi_list)
 
