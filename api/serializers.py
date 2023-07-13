@@ -3,6 +3,7 @@ from .models import *
 from .utils import special_classes as sc
 from django.contrib.auth.models import User as BackUser
 from django.contrib.gis.measure import Distance
+from django.core.serializers.json import DjangoJSONEncoder
 
 # 1) REGION
 class RegionSerializer(serializers.ModelSerializer):
@@ -51,9 +52,17 @@ class ImageSerializer(serializers.ModelSerializer):
 
 # 9) IMAGE READ ONLY
 class ImageReadOnlySerializer(serializers.ModelSerializer):
+    file = serializers.SerializerMethodField()
+
     class Meta:
         model = Image
         fields = ['file']
+
+    def get_file(self, obj):
+        request = self.context.get('request')
+        if request and obj.file:
+            return request.build_absolute_uri(obj.file.url)
+        return None
 
 # 9) SOCIAL MEDIA
 class SocialMediaSerializer(serializers.ModelSerializer):
@@ -180,6 +189,11 @@ class PlaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Place
         fields = ['json']
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        return representation['json']
+
 
 # 12) Itinerary
 class ItinerarySerializer(serializers.Serializer):

@@ -120,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS': 'api.pagination.CustomPagination',
     'PAGE_SIZE': 5,
 
     'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication', ),
@@ -146,6 +146,7 @@ SPECTACULAR_SETTINGS = {
     # 'CAMELIZE_NAMES': True,
     'SORT_OPERATION_PARAMETERS': False,
     'COMPONENT_SPLIT_REQUEST': True,
+
 }
 
 # Internationalization
