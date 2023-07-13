@@ -17,7 +17,7 @@ from rest_framework import mixins
 
 
 class GeneratedItineraryViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
-    serializer_class = ItinerarySerializer()
+    serializer_class = ItinerarySerializer
 
     @extend_schema(
         parameters=([
