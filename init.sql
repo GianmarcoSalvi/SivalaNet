@@ -69,7 +69,7 @@ SET row_security = off;
 -- Name: pgagent; Type: SCHEMA; Schema: -; Owner: postgres
 --
 
-CREATE SCHEMA pgagent;
+-- CREATE SCHEMA pgagent;
 
 
 ALTER SCHEMA pgagent OWNER TO postgres;
