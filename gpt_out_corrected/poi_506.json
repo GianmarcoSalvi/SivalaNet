@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmA90PSR5RwICC9kK2B3LgfzH0kw",
+    "object": "chat.completion",
+    "created": 1690190941,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Parrocchia San Croce si trova nel comune di Monterosi, in Italia. È una chiesa di culto cattolico che sorge nel centro storico del paese, in una posizione prominente e facilmente accessibile.\n\nLa chiesa è dedicata a San Croce, il cui nome deriva dalla presenza di una reliquia della Santa Croce, che è conservata all'interno dell'edificio. La sua costruzione risale al XVII secolo, anche se nel corso dei secoli ha subito diverse modifiche e restauri.\n\nL'architettura della Parrocchia San Croce è di stile barocco, con una facciata imponente e decorata. La facciata è caratterizzata da un portale centrale sormontato da un timpano curvilineo, mentre ai lati si trovano due nicchie con statue di santi. Al di sopra del portale, si apre una finestra circolare che illumina l'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con una volta a botte decorata con affreschi e stucchi. Le pareti laterali sono arricchite da cappelle laterali, ognuna delle quali ospita un altare dedicato a un santo o a una santa. Al centro dell'abside si trova l'altare maggiore, sormontato da un crocifisso ligneo.\n\nLa Parrocchia San Croce è un luogo di culto molto frequentato dalla comunità locale, che vi si riunisce per le celebrazioni religiose e per le festività. Oltre alle funzioni religiose, la chiesa ospita anche eventi culturali e musicali, come concerti e mostre d'arte.\n\nLa Parrocchia San Croce rappresenta un importante punto di riferimento per la comunità di Monterosi, sia dal punto di vista religioso che culturale. La sua bellezza architettonica e la sua storia la rendono una meta di interesse per i visitatori che desiderano conoscere il patrimonio artistico e religioso della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 489,
+        "total_tokens": 522
+    }
+}

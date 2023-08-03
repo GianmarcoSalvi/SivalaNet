@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpv0nyxpLT9o2HmSHvTDAh7jnDnh",
+    "object": "chat.completion",
+    "created": 1690205378,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre del Borgognone è un'imponente torre medievale situata nel comune di Viterbo, nella regione del Lazio, in Italia. Si trova all'interno del centro storico della città, precisamente in Piazza del Plebiscito.\n\nLa torre risale al XIII secolo ed è considerata uno dei simboli più importanti di Viterbo. La sua struttura è caratterizzata da una base quadrata, con una pianta di circa 10 metri per lato, e si sviluppa su cinque piani. La sua altezza totale raggiunge i 30 metri, rendendola una delle torri più alte della città.\n\nLa Torre del Borgognone presenta una facciata in mattoni, con finestre ad arco e una serie di beccatelli che decorano la sommità. La sua architettura è tipica del periodo medievale, con elementi di stile romanico e gotico. La torre era originariamente parte di un complesso fortificato, che comprendeva anche un palazzo signorile.\n\nAll'interno della torre si trovano diverse stanze, che in passato erano utilizzate come abitazioni o come depositi. Oggi, la torre ospita un museo che racconta la storia di Viterbo e della sua architettura medievale. I visitatori possono salire fino alla cima della torre, da dove si può godere di una vista panoramica mozzafiato sulla città e sui suoi dintorni.\n\nLa Torre del Borgognone è un importante punto di riferimento per i residenti di Viterbo e un'attrazione turistica molto popolare. La sua maestosità e la sua storia affascinante la rendono un luogo imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 415,
+        "total_tokens": 449
+    }
+}

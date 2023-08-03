@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnSyHNtQIpIVyhBg3LtCG6t7gwyV",
+    "object": "chat.completion",
+    "created": 1690195952,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Sutri è un importante punto di riferimento culturale per la comunità locale. Situata nel centro storico del comune, la biblioteca si trova in un edificio storico restaurato che conserva ancora le caratteristiche architettoniche originali.\n\nLa struttura della biblioteca è organizzata su più livelli, con diverse sale dedicate a diverse tipologie di materiale. Al piano terra si trova la sala principale, dove sono collocati gli scaffali con i libri a disposizione dei lettori. Qui è possibile trovare una vasta selezione di libri di vario genere, tra cui romanzi, saggi, manuali, libri per ragazzi e molto altro ancora. Gli scaffali sono organizzati in modo ordinato e ben indicizzati, facilitando la ricerca dei libri desiderati.\n\nAl piano superiore si trova una sala dedicata alle riviste e ai giornali, dove è possibile consultare le ultime edizioni e rimanere aggiornati su temi di attualità. Questa sala è dotata di comode poltrone e tavoli, creando un ambiente accogliente e tranquillo per la lettura e lo studio.\n\nLa biblioteca comunale di Sutri offre anche un'ampia selezione di materiali multimediali, come CD, DVD e audiolibri. Questi materiali sono disponibili per il prestito e possono essere consultati anche all'interno della biblioteca, grazie a delle postazioni dedicate.\n\nLa biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e laboratori per bambini. Questi eventi sono aperti a tutti e offrono l'opportunità di approfondire la conoscenza e l'amore per la lettura e la cultura.\n\nIl personale della biblioteca è sempre disponibile ad aiutare i visitatori nella ricerca di libri specifici o nell'utilizzo dei servizi offerti. Sono inoltre disponibili computer con accesso a internet per la consultazione di risorse online e per la ricerca bibliografica.\n\nLa biblioteca comunale di Sutri è un luogo accogliente e stimolante, dove i cittadini possono immergersi nella lettura, approfondire le proprie conoscenze e partecipare ad attività culturali. È un punto di incontro per gli amanti dei libri e un importante strumento per la diffusione della cultura all'interno della comunità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 565,
+        "total_tokens": 598
+    }
+}

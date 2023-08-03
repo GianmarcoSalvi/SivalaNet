@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpeJlsCYGsy2tapbu9qQnJ1XiJUK",
+    "object": "chat.completion",
+    "created": 1690204343,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex chiesa di San Michele Arcangelo si trova nel comune di Vasanello, in provincia di Viterbo, nella regione del Lazio, Italia. Questo edificio religioso è un importante esempio di architettura romanica e rappresenta uno dei principali punti di interesse storico e culturale della zona.\n\nLa chiesa è situata nel centro storico di Vasanello, circondata da stradine acciottolate e antiche case in pietra. Costruita nel XII secolo, presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra con un arco a tutto sesto e una lunetta decorata con bassorilievi.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti in pietra. Le pareti sono decorate con affreschi risalenti al XIII secolo, che rappresentano scene della vita di San Michele Arcangelo e altri santi. Questi affreschi sono un importante esempio dell'arte medievale e sono stati restaurati per preservarne la bellezza e l'integrità.\n\nLa chiesa di San Michele Arcangelo è stata utilizzata come luogo di culto fino al XIX secolo, quando è stata abbandonata e successivamente trasformata in un edificio adibito ad altri scopi. Oggi, l'ex chiesa è utilizzata come spazio espositivo e per eventi culturali, come mostre d'arte e concerti.\n\nLa sua posizione centrale nel comune di Vasanello la rende facilmente accessibile ai visitatori, che possono ammirare l'architettura romanica e gli affreschi medievali che adornano l'interno. La chiesa di San Michele Arcangelo è un luogo di grande importanza storica e artistica, che testimonia la ricca tradizione culturale della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 446,
+        "total_tokens": 483
+    }
+}

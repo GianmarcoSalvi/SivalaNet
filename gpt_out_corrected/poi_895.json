@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqBjS9Vch3ZzsTwf6tsE9erWqCVc",
+    "object": "chat.completion",
+    "created": 1690206415,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'ISIS Tarquinia è situata nel comune di Viterbo, in Italia. È una biblioteca moderna e ben attrezzata che offre una vasta gamma di servizi e risorse per gli studenti e la comunità locale.\n\nLa biblioteca è ospitata all'interno dell'Istituto di Istruzione Superiore (ISIS) Tarquinia, un istituto scolastico che offre programmi di istruzione secondaria superiore. La sua posizione all'interno di un istituto scolastico la rende facilmente accessibile agli studenti e al personale, ma è aperta anche al pubblico esterno.\n\nLa biblioteca dispone di una vasta collezione di libri, riviste, giornali e altre risorse di lettura. La sua collezione è costantemente aggiornata per fornire materiali educativi e di ricerca di alta qualità. Gli utenti possono trovare libri su una vasta gamma di argomenti, tra cui letteratura, storia, scienze, matematica, arte e molto altro ancora.\n\nOltre ai materiali di lettura tradizionali, la biblioteca offre anche accesso a risorse digitali come e-book, database online, riviste e giornali digitali. Gli utenti possono accedere a queste risorse utilizzando i computer della biblioteca o i propri dispositivi mobili tramite la connessione Wi-Fi gratuita.\n\nLa biblioteca fornisce anche servizi di prestito, consentendo agli utenti di prendere in prestito libri e altri materiali per un determinato periodo di tempo. Ciò consente agli studenti di utilizzare i materiali per i loro studi e ai membri della comunità di godere di letture piacevoli a casa.\n\nInoltre, la biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, mostre e laboratori. Questi eventi offrono opportunità di apprendimento e di arricchimento culturale per gli utenti della biblioteca e per la comunità in generale.\n\nLa Biblioteca dell'ISIS Tarquinia è gestita da personale qualificato e cordiale che è disponibile ad assistere gli utenti nella ricerca di materiali, nell'utilizzo delle risorse digitali e nella risoluzione di eventuali domande o problemi. L'ambiente della biblioteca è accogliente e tranquillo, offrendo uno spazio ideale per lo studio e la lettura.\n\nIn conclusione, la Biblioteca dell'ISIS Tarquinia è un'importante risorsa educativa e culturale nel comune di Viterbo. Con la sua vasta collezione di materiali, servizi di prestito, risorse digitali e eventi culturali, la biblioteca si impegna a promuovere l'istruzione, la ricerca e la diffusione della cultura nella comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 658,
+        "total_tokens": 695
+    }
+}

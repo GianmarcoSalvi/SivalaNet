@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqK6o7XKypHiozu8wz1ncdraMviJ",
+    "object": "chat.completion",
+    "created": 1690206934,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Orto Botanico dell'Università della Tuscia si trova nel comune di Viterbo, in Italia. Fondato nel 1985, l'orto botanico è situato all'interno del campus universitario e si estende su una superficie di circa 2 ettari.\n\nL'obiettivo principale dell'Orto Botanico è quello di promuovere la ricerca scientifica, la conservazione della biodiversità e l'educazione ambientale. L'orto botanico ospita una vasta collezione di piante provenienti da diverse parti del mondo, con un'enfasi particolare sulla flora mediterranea.\n\nAll'interno dell'orto botanico, i visitatori possono ammirare una grande varietà di piante, tra cui alberi, arbusti, fiori e piante acquatiche. Le piante sono organizzate in diverse sezioni tematiche, come la sezione delle piante medicinali, la sezione delle piante aromatiche e la sezione delle piante succulente.\n\nL'orto botanico offre anche una serie di servizi educativi, come visite guidate, laboratori didattici e corsi di formazione. Questi servizi sono rivolti sia agli studenti universitari che al pubblico in generale, con l'obiettivo di sensibilizzare sulle tematiche ambientali e promuovere la conservazione della natura.\n\nInoltre, l'Orto Botanico dell'Università della Tuscia è coinvolto in progetti di ricerca scientifica, collaborando con altre istituzioni e organizzazioni nazionali e internazionali. Questi progetti riguardano la conservazione delle specie vegetali, lo studio dell'ecologia delle piante e la valutazione dell'impatto dei cambiamenti climatici sulla flora.\n\nComplessivamente, l'Orto Botanico dell'Università della Tuscia è un luogo affascinante e ricco di conoscenza, dove è possibile immergersi nella bellezza della natura e apprendere di più sulla flora mediterranea e sulla sua conservazione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 485,
+        "total_tokens": 525
+    }
+}

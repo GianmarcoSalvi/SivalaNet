@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fouK31BwEMAng6HgeXD9XdQhzXex",
+    "object": "chat.completion",
+    "created": 1690201492,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'area archeologica di Sutri si trova nel comune di Sutri, nella regione del Lazio, Italia. Questo sito archeologico è di grande importanza storica e culturale, in quanto conserva numerosi reperti che testimoniano l'antica storia della città.\n\nL'area archeologica di Sutri si estende su una vasta area e comprende diversi siti di interesse. Uno dei principali è l'anfiteatro romano, che risale al I secolo d.C. Questo anfiteatro è uno dei meglio conservati dell'intera regione e può ospitare fino a 8.000 spettatori. Ancora oggi, vengono organizzati spettacoli e rappresentazioni teatrali all'interno dell'anfiteatro, che offre un'atmosfera unica e suggestiva.\n\nUn altro sito di grande interesse è la necropoli etrusca, che risale al VII secolo a.C. Questa necropoli è composta da numerose tombe a tumulo, alcune delle quali sono ancora intatte. Le tombe sono decorate con affreschi e contengono oggetti funerari, come gioielli e ceramiche, che offrono un'importante testimonianza della vita quotidiana degli antichi Etruschi.\n\nNell'area archeologica è anche possibile visitare le grotte di Sutri, che sono state utilizzate come rifugi durante la Seconda guerra mondiale. Queste grotte sono state abitate sin dai tempi preistorici e contengono incisioni rupestri risalenti a diverse epoche.\n\nInoltre, l'area archeologica di Sutri comprende anche un antico teatro romano, risalente al I secolo a.C., e una cinta muraria medievale, che circonda il centro storico della città. Queste strutture testimoniano l'importanza strategica di Sutri nel corso dei secoli.\n\nLa visita all'area archeologica di Sutri offre un'opportunità unica per immergersi nella storia antica e scoprire le diverse culture che hanno abitato questa regione nel corso dei secoli. I visitatori possono ammirare i reperti archeologici, passeggiare tra le antiche rovine e godere di una vista panoramica sulla campagna circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 545,
+        "total_tokens": 582
+    }
+}

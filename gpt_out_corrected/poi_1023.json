@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqu5X0oD7twVKS3wNMiP0noPlhI2",
+    "object": "chat.completion",
+    "created": 1690209165,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Proceno è un piccolo comune situato nella provincia di Viterbo, nella regione del Lazio, in Italia. Si trova a circa 100 chilometri a nord di Roma e a pochi chilometri dal confine con la Toscana.\n\nIl paese di Proceno è caratterizzato da un'atmosfera tranquilla e rurale, con stradine strette e case in pietra che si arrampicano sulle colline circostanti. La sua posizione privilegiata offre una vista panoramica sulla campagna circostante, con dolci colline, campi coltivati e boschi.\n\nIl centro storico di Proceno è dominato dal Castello di Proceno, un'imponente fortezza medievale che risale al XII secolo. Il castello è stato costruito per difendere il territorio e ha subito diverse modifiche nel corso dei secoli. Oggi è aperto al pubblico e ospita un museo che racconta la storia del castello e del paese.\n\nLe strade del centro storico sono caratterizzate da antiche case in pietra, portici e piccole piazze. Ci sono anche diverse chiese da visitare, tra cui la Chiesa di San Tommaso, che risale al XIII secolo, e la Chiesa di San Giovanni Battista, che presenta affreschi del XV secolo.\n\nProceno è circondata da una natura incontaminata e offre numerose opportunità per escursioni e attività all'aria aperta. Nei dintorni si trovano il Parco Naturale del Monte Rufeno e il Lago di Bolsena, che offrono splendidi paesaggi e possibilità di fare passeggiate, trekking e gite in bicicletta.\n\nIl paese è anche famoso per la sua produzione di olio d'oliva e vino. Ci sono diverse aziende agricole e cantine nella zona che offrono degustazioni e visite guidate.\n\nProceno è un luogo ideale per chi cerca tranquillità e autenticità, lontano dal turismo di massa. Con la sua storia ricca, la bellezza naturale e l'atmosfera rilassata, è un luogo che merita sicuramente una visita."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 517,
+        "total_tokens": 546
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en1iCbUwnsAv5c9PQqEeZSdt78Zq",
+    "object": "chat.completion",
+    "created": 1689955934,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Cellesi è un edificio storico situato nel comune di Bagnoregio, in Italia. Si trova nel centro storico del paese, vicino alla famosa Civita di Bagnoregio.\n\nIl palazzo risale al XV secolo ed è stato costruito dalla famiglia Cellesi, una delle famiglie nobili più importanti della zona. L'edificio presenta uno stile architettonico tipico del periodo rinascimentale, con una facciata imponente e una struttura solida.\n\nIl palazzo si sviluppa su più piani e presenta numerose stanze e saloni, ognuno arredato con mobili d'epoca e opere d'arte. Le stanze sono decorate con affreschi e dipinti che rappresentano scene storiche e mitologiche.\n\nUno dei punti salienti del palazzo è il cortile interno, che è circondato da colonne e archi eleganti. Il cortile è un luogo ideale per rilassarsi e godersi la tranquillità dell'ambiente circostante.\n\nOltre alle sue caratteristiche architettoniche, il Palazzo Cellesi è anche famoso per il suo giardino all'italiana. Il giardino è un'oasi di pace e bellezza, con aiuole fiorite, fontane e statue. È un luogo ideale per fare una passeggiata e ammirare la vista panoramica sulla valle circostante.\n\nOggi, il Palazzo Cellesi è aperto al pubblico e ospita eventi culturali e mostre d'arte. È anche possibile prenotare il palazzo per matrimoni e altre occasioni speciali.\n\nIn sintesi, il Palazzo Cellesi è un gioiello architettonico nel comune di Bagnoregio. Con la sua storia affascinante, le sue opere d'arte e il suo incantevole giardino, è un luogo da non perdere per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 465,
+        "total_tokens": 499
+    }
+}

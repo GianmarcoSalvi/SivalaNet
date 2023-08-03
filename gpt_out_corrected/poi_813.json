@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpjjyJN3PPeGF84tKQzV2DDkPmXr",
+    "object": "chat.completion",
+    "created": 1690204679,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca comunale Alessandro Pistella si trova nel comune di Vetralla, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è intitolata ad Alessandro Pistella, un noto scrittore e poeta vetrallense del XX secolo. Questo rende la biblioteca un luogo di grande importanza culturale per la città.\n\nLa struttura della biblioteca è moderna e accogliente, con spazi luminosi e ben organizzati. Dispone di una vasta collezione di libri, riviste, giornali e materiale audiovisivo, che copre una vasta gamma di argomenti e interessi. Gli utenti possono accedere a questa collezione e prendere in prestito i materiali per un determinato periodo di tempo.\n\nLa biblioteca offre anche servizi di consultazione e ricerca, con personale qualificato disponibile per assistere gli utenti nella ricerca di informazioni specifiche o nella scelta di libri adatti alle loro esigenze. Inoltre, organizza regolarmente eventi culturali, come presentazioni di libri, conferenze e mostre, per promuovere la lettura e la cultura nella comunità.\n\nUn altro servizio offerto dalla biblioteca è l'accesso a Internet e ai computer, consentendo agli utenti di navigare in rete, fare ricerche online o utilizzare programmi di produttività. Questo è particolarmente utile per gli studenti o per coloro che non hanno accesso a Internet a casa.\n\nLa Biblioteca comunale Alessandro Pistella è un luogo di incontro e di apprendimento per la comunità di Vetralla. È un punto di riferimento per gli amanti dei libri e per coloro che desiderano approfondire le proprie conoscenze. Grazie alla sua vasta gamma di servizi e risorse, la biblioteca svolge un ruolo importante nella promozione della cultura e dell'istruzione nella città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 462,
+        "total_tokens": 499
+    }
+}

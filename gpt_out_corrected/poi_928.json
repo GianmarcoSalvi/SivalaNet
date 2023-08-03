@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqMHPQkWsL2xcxILCix4eipJFzoz",
+    "object": "chat.completion",
+    "created": 1690207069,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Rocca Albornoz è un'imponente fortezza situata nel comune di Viterbo, nella regione del Lazio, Italia. Costruita nel XIV secolo per volere del cardinale spagnolo Albornoz, rappresenta uno dei principali simboli della città e un importante esempio di architettura militare medievale.\n\nLa Rocca Albornoz si erge su un colle, dominando il centro storico di Viterbo. La sua struttura massiccia e imponente è caratterizzata da mura merlate, torri di avvistamento e un grande fossato che la circonda. L'accesso alla fortezza avviene attraverso un ponte levatoio, che in passato veniva sollevato per difendere la Rocca dagli attacchi esterni.\n\nAll'interno della Rocca Albornoz si trovano diversi edifici, tra cui la residenza del cardinale Albornoz, la cappella di San Giovanni Battista e la prigione. La residenza del cardinale è un edificio di tre piani, con ampie sale decorate con affreschi e arredi d'epoca. La cappella di San Giovanni Battista è un piccolo luogo di culto, caratterizzato da un soffitto a cassettoni e da un altare in marmo.\n\nLa Rocca Albornoz è stata utilizzata come prigione per diversi secoli, ospitando prigionieri illustri come il condottiero Bartolomeo Colleoni e il poeta Jacopone da Todi. Oggi, la fortezza ospita il Museo Nazionale di Viterbo, che espone una vasta collezione di reperti archeologici e opere d'arte legate alla storia della città.\n\nLa Rocca Albornoz è anche sede di eventi culturali e mostre temporanee, che permettono ai visitatori di immergersi nella storia e nell'arte di Viterbo. Dalla sommità della Rocca si può godere di una vista panoramica mozzafiato sulla città e sui dintorni.\n\nIn conclusione, la Rocca Albornoz è un'imponente fortezza medievale che rappresenta uno dei principali punti di interesse di Viterbo. La sua maestosità architettonica, la sua storia ricca di avvenimenti e la sua posizione privilegiata la rendono una meta imperdibile per i visitatori che desiderano scoprire la bellezza e la cultura di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 581,
+        "total_tokens": 615
+    }
+}

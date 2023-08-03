@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoJVVpyhfbDTxSzQKgszMnLRCnql",
+    "object": "chat.completion",
+    "created": 1689960881,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Porta San Giovanni è una delle porte d'accesso al centro storico del comune di Castiglione in Teverina, situato nella regione dell'Umbria, in Italia. Questa porta è una delle quattro principali porte che permettono l'ingresso nella città murata.\n\nLa Porta San Giovanni è situata sul lato orientale del centro storico e prende il nome dalla vicina chiesa di San Giovanni Battista. È una porta di forma rettangolare, con un arco a tutto sesto che funge da ingresso principale. La porta è realizzata in pietra locale, con una struttura solida e imponente che testimonia la sua importanza storica.\n\nLa porta è dotata di un ponte levatoio, che in passato veniva sollevato per impedire l'accesso a potenziali nemici o invasori. Oggi il ponte levatoio non è più in funzione, ma la sua presenza aggiunge un tocco di autenticità e storia al luogo.\n\nAttraversando la Porta San Giovanni, si entra nel centro storico di Castiglione in Teverina, caratterizzato da strette stradine lastricate e affascinanti edifici medievali. La porta è circondata da mura antiche, che offrono una vista panoramica sulla campagna circostante e sul fiume Tevere.\n\nLa Porta San Giovanni è un importante punto di riferimento per i residenti e i visitatori di Castiglione in Teverina. È un luogo che evoca un senso di storia e tradizione, e rappresenta un'entrata suggestiva nel cuore del centro storico."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 388,
+        "total_tokens": 425
+    }
+}

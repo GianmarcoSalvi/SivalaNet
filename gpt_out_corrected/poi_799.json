@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpfgEySjhLY04IoT0JROI6XnLItW",
+    "object": "chat.completion",
+    "created": 1690204428,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella della Madonna delle Grazie si trova nel comune di Vasanello, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa cappella è situata in una posizione panoramica, su una collina che domina il paese. È circondata da un ampio giardino e da alberi secolari, che contribuiscono a creare un'atmosfera di grande tranquillità e spiritualità.\n\nL'edificio risale al XV secolo ed è stato costruito in stile romanico. La facciata è caratterizzata da un portale in pietra, sormontato da un rosone decorato con motivi floreali. Sopra il portale si trova una piccola finestra a bifora, che permette l'ingresso di luce all'interno della cappella.\n\nL'interno della cappella è molto suggestivo. Le pareti sono affrescate con scene della vita di Maria e di Gesù, realizzate da artisti locali nel corso dei secoli. Gli affreschi sono di grande valore artistico e rappresentano un importante patrimonio culturale per la comunità locale.\n\nAl centro della cappella si trova l'altare, dedicato alla Madonna delle Grazie. L'altare è decorato con statue e dipinti raffiguranti la Vergine Maria e i santi. Durante le festività religiose, l'altare viene adornato con fiori e candele, creando un'atmosfera di grande devozione e spiritualità.\n\nLa Cappella della Madonna delle Grazie è un luogo di culto molto frequentato dai fedeli, che vi si recano per pregare e chiedere grazie alla Vergine Maria. Oltre alle celebrazioni religiose, la cappella ospita anche eventi culturali e musicali, che contribuiscono a valorizzare il patrimonio artistico e storico del luogo.\n\nIn conclusione, la Cappella della Madonna delle Grazie nel comune di Vasanello è un luogo di grande bellezza e spiritualità. Con i suoi affreschi, l'altare dedicato alla Madonna e la sua posizione panoramica, rappresenta un importante punto di riferimento per la comunità locale e per i visitatori che desiderano immergersi nella storia e nella spiritualità del luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 550,
+        "total_tokens": 586
+    }
+}

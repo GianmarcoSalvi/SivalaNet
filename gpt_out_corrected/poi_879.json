@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq6dyDNQo2WIYQ6RMXj82Nrw5ArX",
+    "object": "chat.completion",
+    "created": 1690206099,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo Erbario della Tuscia si trova nel comune di Viterbo, in Italia. È situato all'interno del complesso dell'Università degli Studi della Tuscia, precisamente nel Dipartimento di Scienze Ecologiche e Biologiche.\n\nIl museo è dedicato alla conservazione e alla divulgazione della flora della Tuscia, una regione storico-geografica dell'Italia centrale che comprende parti delle province di Viterbo, Rieti e Roma. L'obiettivo principale del museo è quello di promuovere la conoscenza e la valorizzazione della flora locale, attraverso la raccolta, la conservazione e l'esposizione di campioni di piante.\n\nAll'interno del museo è possibile ammirare una vasta collezione di erbari, ovvero campioni di piante essiccate e pressate, che vengono conservati in apposite cartelle. Ogni campione è accompagnato da una scheda descrittiva che fornisce informazioni sulla specie, sulla sua distribuzione geografica e sulle sue caratteristiche morfologiche.\n\nIl Museo Erbario della Tuscia offre anche la possibilità di consultare una biblioteca specializzata in botanica, che contiene numerosi testi e pubblicazioni scientifiche sull'argomento. Inoltre, organizza regolarmente mostre, conferenze e attività didattiche per coinvolgere il pubblico e diffondere la conoscenza della flora della Tuscia.\n\nIl museo è aperto al pubblico e l'ingresso è gratuito. È un luogo ideale per gli appassionati di botanica, gli studenti e tutti coloro che desiderano approfondire la conoscenza della flora locale. La sua posizione all'interno dell'Università degli Studi della Tuscia lo rende facilmente accessibile per gli studenti e i ricercatori che desiderano studiare la flora della regione.\n\nIn conclusione, il Museo Erbario della Tuscia è un luogo di grande importanza per la conservazione e la divulgazione della flora della Tuscia. Grazie alla sua vasta collezione di erbari e alla sua biblioteca specializzata, offre un'opportunità unica per approfondire la conoscenza delle piante della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 524,
+        "total_tokens": 561
+    }
+}

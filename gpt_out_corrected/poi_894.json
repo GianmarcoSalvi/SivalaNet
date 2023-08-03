@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqBQQcuJbEI2tIDcAeBAXri9Im4S",
+    "object": "chat.completion",
+    "created": 1690206396,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Archivio di Stato di Viterbo è un istituto culturale situato nel comune di Viterbo, in Italia. È una delle sedi dell'Archivio di Stato, che è l'ente pubblico italiano responsabile della conservazione e della gestione degli archivi storici.\n\nL'edificio che ospita l'Archivio di Stato di Viterbo è un antico palazzo situato nel centro storico della città. La struttura è di grande importanza storica e architettonica, risalendo al XIII secolo e presentando elementi di stile romanico e gotico.\n\nL'Archivio di Stato di Viterbo conserva una vasta collezione di documenti storici che risalgono al Medioevo e all'età moderna. Tra i documenti più importanti vi sono registri parrocchiali, atti notarili, documenti amministrativi e giudiziari, mappe e disegni storici, corrispondenza e molto altro ancora. Questi documenti sono di grande valore per gli studiosi e i ricercatori che desiderano approfondire la storia di Viterbo e della regione circostante.\n\nL'Archivio di Stato di Viterbo svolge anche un ruolo importante nella promozione della cultura e della storia locale. Organizza mostre, conferenze e altre attività culturali per coinvolgere il pubblico e diffondere la conoscenza degli archivi storici. Inoltre, fornisce servizi di consulenza e assistenza per coloro che desiderano accedere ai documenti conservati nell'archivio.\n\nLa struttura dell'Archivio di Stato di Viterbo è dotata di moderne attrezzature per la conservazione dei documenti, come sistemi di climatizzazione e di sicurezza. Inoltre, dispone di spazi dedicati alla consultazione dei documenti, dove i ricercatori possono accedere ai materiali e svolgere le loro ricerche.\n\nIn conclusione, l'Archivio di Stato di Viterbo è un importante istituto culturale che conserva e promuove la storia della città e della regione circostante. Grazie alla sua vasta collezione di documenti storici e alle sue attività culturali, l'archivio svolge un ruolo fondamentale nella preservazione e nella diffusione della memoria storica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 551,
+        "total_tokens": 589
+    }
+}

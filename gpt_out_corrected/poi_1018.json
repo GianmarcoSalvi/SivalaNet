@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqsLDV7VbXCYaceX6Ho4rFJRd0HE",
+    "object": "chat.completion",
+    "created": 1690209057,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Nepi è un comune italiano situato nella regione del Lazio, nella provincia di Viterbo. Si trova a circa 50 chilometri a nord di Roma, nella Valle del Tevere, e conta una popolazione di circa 8.000 abitanti.\n\nIl centro storico di Nepi è caratterizzato da un'atmosfera medievale, con stradine strette e tortuose, case in pietra e un castello imponente che domina la città. Il Castello di Nepi, noto anche come Castello Borgia, è uno dei principali punti di interesse della città. Costruito nel XII secolo, è stato residenza di importanti famiglie nobiliari, tra cui i Borgia. Oggi è possibile visitare il castello e ammirare le sue torri, le mura e gli affreschi medievali.\n\nUn'altra attrazione di Nepi è la Cattedrale di Santa Maria Assunta, situata nella piazza principale del centro storico. La cattedrale risale al XII secolo ed è caratterizzata da un bellissimo portale romanico e da un campanile gotico. All'interno si possono ammirare affreschi e opere d'arte di grande valore storico e artistico.\n\nNepi è anche famosa per le sue acque minerali, che sgorgano da diverse sorgenti naturali presenti nel territorio. L'acqua di Nepi è considerata tra le migliori d'Italia e viene imbottigliata e venduta in tutto il paese. È possibile visitare le sorgenti e fare degustazioni dell'acqua direttamente dalla fonte.\n\nIl territorio circostante Nepi è caratterizzato da una natura rigogliosa e da paesaggi suggestivi. Ci sono numerosi sentieri escursionistici che permettono di esplorare la campagna circostante, con boschi, colline e panorami mozzafiato. Inoltre, Nepi si trova vicino al Lago di Vico, un lago vulcanico di origine antica, dove è possibile fare escursioni in barca, nuotare o semplicemente rilassarsi sulla spiaggia.\n\nNepi è anche conosciuta per le sue tradizioni culinarie. La cucina locale offre piatti tipici della tradizione laziale, come la pasta all'amatriciana, la porchetta e i dolci fatti in casa. Inoltre, la città ospita diverse sagre e festival durante l'anno, dove è possibile assaggiare e acquistare prodotti locali.\n\nIn conclusione, Nepi è un affascinante comune nel cuore del Lazio, ricco di storia, cultura e bellezze naturali. Con il suo centro storico medievale, il castello imponente, le acque minerali e la natura circostante, Nepi offre un'esperienza unica ai suoi visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 664,
+        "total_tokens": 694
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flt9bDMsJTZdfmmivELplUhvoVmL",
+    "object": "chat.completion",
+    "created": 1690189887,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca comunale Alfredo Tarquini si trova nel comune di Marta, in Italia. È situata in una posizione centrale, facilmente accessibile a piedi o in auto.\n\nLa biblioteca prende il nome da Alfredo Tarquini, un illustre cittadino di Marta che ha contribuito in modo significativo alla promozione della cultura e dell'istruzione nella comunità locale.\n\nL'edificio che ospita la biblioteca è moderno e accogliente, con ampie finestre che permettono l'ingresso di luce naturale. All'interno, gli spazi sono organizzati in modo funzionale e ben strutturato.\n\nLa biblioteca offre una vasta gamma di servizi e risorse per soddisfare le esigenze di tutti i suoi utenti. Dispone di una vasta collezione di libri, riviste, giornali e materiale audiovisivo, che copre una vasta gamma di argomenti e interessi. Gli utenti possono accedere a questi materiali gratuitamente e prendere in prestito ciò che desiderano.\n\nLa biblioteca offre anche servizi di consultazione e ricerca, con personale qualificato che è disponibile per fornire assistenza e supporto agli utenti nella ricerca di informazioni specifiche. Inoltre, sono disponibili computer con accesso a Internet per consentire agli utenti di navigare in rete e svolgere ricerche online.\n\nLa biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, mostre d'arte e laboratori per bambini. Questi eventi sono aperti al pubblico e offrono un'opportunità per la comunità di incontrarsi, condividere interessi comuni e approfondire la conoscenza.\n\nLa Biblioteca comunale Alfredo Tarquini svolge un ruolo importante nella promozione della cultura e dell'istruzione nella comunità di Marta. È un luogo di incontro e di apprendimento, che offre risorse e servizi di alta qualità per tutti i suoi utenti."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 476,
+        "total_tokens": 513
+    }
+}

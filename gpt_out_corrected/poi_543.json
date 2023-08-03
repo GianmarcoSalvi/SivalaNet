@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmNV9jaeatF7ryt8Geh5PPqQUewp",
+    "object": "chat.completion",
+    "created": 1690191769,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Parco della Mola si trova nel comune di Oriolo Romano, nella regione del Lazio, in Italia. Si estende su una superficie di circa 20 ettari e rappresenta una delle principali attrazioni naturalistiche della zona.\n\nIl parco è caratterizzato da una grande varietà di flora e fauna, con una ricca vegetazione composta da alberi secolari, prati verdi e fiori colorati. È attraversato da sentieri ben segnalati che permettono ai visitatori di esplorare l'area in modo sicuro e piacevole.\n\nUno dei punti di interesse principali del parco è la Mola di Oriolo, un antico mulino ad acqua risalente al XVIII secolo. Questo mulino, ancora funzionante, è stato restaurato e rappresenta un esempio di archeologia industriale. È possibile visitare l'interno del mulino e osservare da vicino il funzionamento delle macine e degli ingranaggi.\n\nIl Parco della Mola offre anche diverse attività ricreative per i visitatori. Ci sono aree attrezzate per picnic e barbecue, ideali per trascorrere una giornata all'aperto con la famiglia o gli amici. Inoltre, ci sono anche campi da calcio e da tennis, così come un parco giochi per i più piccoli.\n\nIl parco è un luogo ideale per gli amanti della natura e per coloro che desiderano trascorrere del tempo all'aria aperta. È possibile fare lunghe passeggiate immersi nella natura, godendo della tranquillità e della bellezza del paesaggio circostante. Inoltre, il parco offre anche la possibilità di praticare attività sportive come il trekking e il ciclismo.\n\nIl Parco della Mola è aperto tutto l'anno e l'ingresso è gratuito. È consigliabile indossare abbigliamento comodo e scarpe adatte per camminare sui sentieri. Inoltre, è possibile trovare informazioni aggiornate sulle attività e gli eventi organizzati nel parco presso il centro visitatori.\n\nIn conclusione, il Parco della Mola nel comune di Oriolo Romano è un luogo incantevole che offre una combinazione unica di natura, storia e attività ricreative. È un luogo ideale per trascorrere del tempo all'aperto, immergersi nella bellezza della natura e scoprire la storia e la cultura della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 579,
+        "total_tokens": 613
+    }
+}

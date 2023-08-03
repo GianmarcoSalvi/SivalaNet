@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpIZShxKmwW3n5nsuCLQXC7h7CTh",
+    "object": "chat.completion",
+    "created": 1690202995,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "I ruderi dell'ex Abbazia di Santo Giusto si trovano nel comune di Tuscania, in provincia di Viterbo, nella regione del Lazio, Italia. L'abbazia si trova su una collina panoramica, circondata da un paesaggio suggestivo e immersa nella natura.\n\nL'abbazia fu fondata nel XII secolo e appartenne all'ordine benedettino. Durante il suo periodo di massimo splendore, l'abbazia era un importante centro religioso e culturale, con una comunità monastica attiva e una grande influenza sulla vita della zona circostante.\n\nI ruderi dell'abbazia sono ciò che rimane di questo antico complesso religioso. Le rovine sono composte da diverse strutture, tra cui la chiesa principale, il chiostro, il refettorio e alcune celle monastiche. Nonostante il passare dei secoli e i danni subiti nel corso del tempo, i ruderi conservano ancora una certa maestosità e bellezza.\n\nLa chiesa principale dell'abbazia era un edificio imponente, con una facciata decorata e un campanile. All'interno, si possono ancora ammirare alcune tracce degli affreschi originali e delle decorazioni che adornavano le pareti. Il chiostro, invece, era un luogo di pace e tranquillità, con un giardino interno circondato da colonne e archi.\n\nI ruderi dell'abbazia di Santo Giusto sono un luogo di grande interesse storico e artistico. Oltre alla loro bellezza intrinseca, rappresentano un importante patrimonio culturale per la comunità locale e per l'intera regione. Oggi, i ruderi sono aperti al pubblico e visitabili, offrendo ai visitatori l'opportunità di immergersi nella storia e nell'atmosfera di questo antico luogo di culto."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 462,
+        "total_tokens": 502
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoMuhqMeHFdPKDRe2nQJ15D8Ndux",
+    "object": "chat.completion",
+    "created": 1689961092,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Celleno, situata nel comune omonimo in Italia, è un importante punto di riferimento per gli abitanti della zona e per gli appassionati di lettura. \n\nLa struttura si trova in una posizione centrale, facilmente accessibile a piedi o in auto, e dispone di un ampio parcheggio nelle vicinanze. L'edificio è moderno e accogliente, con spazi luminosi e ben organizzati.\n\nAll'interno della biblioteca, i visitatori troveranno una vasta selezione di libri, riviste, giornali e altri materiali di lettura. La collezione comprende opere di narrativa, saggistica, poesia, romanzi gialli, fantasy e molto altro ancora. Sono disponibili anche libri per bambini e ragazzi, con una sezione dedicata interamente a loro.\n\nLa biblioteca offre anche servizi di prestito, permettendo ai lettori di portare a casa i libri per un determinato periodo di tempo. È possibile consultare il catalogo online per verificare la disponibilità dei titoli e prenotare i libri desiderati.\n\nOltre alla vasta selezione di libri, la biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e laboratori per bambini. Queste attività sono un'opportunità per la comunità di incontrarsi, condividere interessi comuni e promuovere la cultura locale.\n\nLa biblioteca comunale di Celleno è gestita da un team di bibliotecari esperti e appassionati, pronti ad assistere i visitatori nella ricerca di libri e a fornire informazioni sulle attività in corso. L'atmosfera è accogliente e tranquilla, ideale per trascorrere del tempo immersi nella lettura o nello studio.\n\nIn conclusione, la biblioteca comunale di Celleno è un luogo di grande valore per la comunità locale, offrendo una vasta selezione di libri e servizi di prestito, oltre a organizzare eventi culturali che promuovono la lettura e la condivisione di conoscenze. È un luogo ideale per gli amanti dei libri di tutte le età e un punto di riferimento per la cultura nella zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 541,
+        "total_tokens": 573
+    }
+}

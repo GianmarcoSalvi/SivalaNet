@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enPGqFwkfVzUmpE1cGcXqX55bAMI",
+    "object": "chat.completion",
+    "created": 1689957394,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Cozza Caposavi è un edificio storico situato nel comune di Bolsena, in Italia. Si trova nel centro storico della città, a pochi passi dal lago di Bolsena.\n\nIl palazzo risale al XVIII secolo ed è stato costruito in stile neoclassico. È caratterizzato da una facciata imponente e regolare, con un portale d'ingresso decorato e finestre eleganti. La struttura si sviluppa su tre piani ed è circondata da un ampio giardino.\n\nAll'interno, il palazzo conserva ancora molti degli elementi originali, come pavimenti in marmo, soffitti affrescati e dettagli architettonici raffinati. Le stanze sono ampie e luminose, con arredi d'epoca che conferiscono un'atmosfera di grande eleganza.\n\nIl Palazzo Cozza Caposavi è stato utilizzato nel corso degli anni per diverse funzioni, tra cui residenza privata e sede di istituzioni locali. Oggi è aperto al pubblico e ospita eventi culturali e mostre temporanee.\n\nLa posizione del palazzo, nel cuore di Bolsena, lo rende un punto di riferimento importante per i visitatori della città. La sua architettura maestosa e la sua storia affascinante lo rendono una tappa imperdibile per gli amanti dell'arte e della cultura.\n\nInoltre, la vicinanza al lago di Bolsena offre la possibilità di godere di una vista panoramica mozzafiato e di fare piacevoli passeggiate lungo le rive. Il palazzo è circondato da numerosi ristoranti, caffè e negozi, che lo rendono un luogo ideale per trascorrere del tempo dopo la visita.\n\nIn conclusione, il Palazzo Cozza Caposavi è un gioiello architettonico nel comune di Bolsena. La sua bellezza e la sua storia lo rendono un luogo di grande interesse per i visitatori che desiderano immergersi nella cultura e nell'arte italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 490,
+        "total_tokens": 524
+    }
+}

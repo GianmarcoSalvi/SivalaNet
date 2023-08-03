@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enVvBLAsexvgUtgpssdWo1RR3k5v",
+    "object": "chat.completion",
+    "created": 1689957807,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cattedrale di Santa Maria Assunta si trova nel comune di Bomarzo, in provincia di Viterbo, nella regione del Lazio, Italia. È una delle principali attrazioni turistiche della zona e rappresenta un importante esempio di architettura religiosa.\n\nLa cattedrale è stata costruita nel XII secolo e presenta uno stile romanico con influenze gotiche. La facciata è caratterizzata da un portale centrale sormontato da un rosone, entrambi decorati con sculture e rilievi che rappresentano scene bibliche e simboli religiosi. La facciata è inoltre arricchita da una serie di archi ciechi e da una torre campanaria.\n\nL'interno della cattedrale è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali. L'altare maggiore è ornato da un prezioso paliotto in marmo intarsiato, mentre il coro è caratterizzato da un magnifico leggio in legno intagliato.\n\nUno dei punti salienti della cattedrale è la Cappella del Santissimo Sacramento, situata sul lato destro dell'altare maggiore. Questa cappella è decorata con affreschi del XVI secolo che raffigurano scene della vita di Cristo e della Vergine Maria.\n\nLa cattedrale di Santa Maria Assunta è anche famosa per ospitare una serie di opere d'arte di grande valore. Tra queste spiccano un crocifisso ligneo del XV secolo, una statua della Madonna con Bambino del XVI secolo e una pala d'altare raffigurante l'Assunzione di Maria, realizzata da un artista locale nel XVII secolo.\n\nOltre alla sua importanza religiosa e artistica, la cattedrale di Santa Maria Assunta offre anche una vista panoramica sulla città di Bomarzo e sulla campagna circostante. La sua posizione elevata la rende un punto di riferimento visibile da diverse parti del comune.\n\nIn conclusione, la cattedrale di Santa Maria Assunta a Bomarzo è un gioiello architettonico e artistico che merita sicuramente una visita. La sua bellezza e la sua storia la rendono un luogo di grande interesse per i visitatori che desiderano immergersi nella cultura e nella spiritualità dell'Italia medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 569,
+        "total_tokens": 604
+    }
+}

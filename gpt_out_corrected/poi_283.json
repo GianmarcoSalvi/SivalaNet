@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoTY5DqV0XwqTn3FrPDXIk031Wak",
+    "object": "chat.completion",
+    "created": 1689961504,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana dei Draghi è una delle attrazioni principali nel comune di Civita Castellana, situato nella regione del Lazio, in Italia. Questa fontana è un esempio straordinario di arte rinascimentale e rappresenta uno dei simboli più importanti della città.\n\nLa fontana si trova nella piazza principale di Civita Castellana, chiamata Piazza Matteotti, ed è stata costruita nel XVI secolo. È stata progettata da Jacopo Barozzi da Vignola, uno dei più famosi architetti dell'epoca, che ha lavorato anche a Roma per il Papa.\n\nLa Fontana dei Draghi è caratterizzata da una grande vasca circolare in marmo bianco, al centro della quale si erge una colonna decorata con quattro draghi. Questi draghi sono scolpiti in pietra e rappresentano creature mitologiche con ali, zampe artigliate e code serpentiformi. Ogni drago ha una posa diversa, creando un effetto dinamico e vivace.\n\nLa colonna centrale è sormontata da una statua di San Giovanni Battista, il patrono di Civita Castellana. La statua è realizzata in bronzo ed è opera dello scultore fiorentino Pietro Tacca.\n\nIntorno alla vasca della fontana ci sono quattro piccole vasche più piccole, ognuna delle quali è decorata con una testa di leone che getta acqua. Questi dettagli aggiungono ulteriore bellezza e fascino alla fontana.\n\nLa Fontana dei Draghi è un luogo molto amato dai cittadini di Civita Castellana e dai visitatori. È un punto di ritrovo popolare e un luogo ideale per rilassarsi e godersi l'atmosfera della piazza. Durante le calde giornate estive, molte persone si siedono sui gradini della fontana per rinfrescarsi e ammirare la sua bellezza.\n\nLa fontana è anche il punto di partenza per molte delle visite guidate della città, in quanto rappresenta uno dei suoi principali punti di riferimento. Durante il periodo natalizio, la fontana viene illuminata e decorata con luci colorate, creando un'atmosfera magica e festosa.\n\nIn conclusione, la Fontana dei Draghi è un'opera d'arte straordinaria che rappresenta l'orgoglio e la bellezza di Civita Castellana. La sua maestosità e la sua storia la rendono una tappa imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 607,
+        "total_tokens": 642
+    }
+}

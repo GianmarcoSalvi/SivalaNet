@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqhOXWbbJLsApHZqBpeDETzQvHW2",
+    "object": "chat.completion",
+    "created": 1690208378,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Blera è un comune situato nella regione del Lazio, nel centro Italia. Si trova nella provincia di Viterbo, a circa 80 chilometri a nord-ovest di Roma. Il paese è situato su una collina, a un'altitudine di circa 300 metri, e offre una vista panoramica sulla valle del fiume Marta.\n\nBlera è un antico insediamento etrusco, le cui origini risalgono almeno al VII secolo a.C. La città ha mantenuto molti dei suoi caratteristici elementi architettonici e storici, che la rendono un luogo affascinante da visitare. Le strade strette e tortuose del centro storico sono fiancheggiate da case in pietra e da antiche mura, che raccontano la storia millenaria del paese.\n\nUno dei principali punti di interesse di Blera è il suo anfiteatro romano, che risale al I secolo d.C. Questo antico teatro all'aperto è stato scavato nella roccia e può ospitare fino a 3.000 spettatori. Ancora oggi, l'anfiteatro viene utilizzato per spettacoli teatrali e concerti durante l'estate.\n\nUn'altra attrazione di Blera è la Chiesa di San Pietro, un edificio religioso risalente al XII secolo. La chiesa presenta un bellissimo portale romanico e affreschi medievali all'interno. Nei pressi della chiesa si trova anche un antico ponte romano, che attraversa il fiume Marta.\n\nBlera è circondata da una campagna verde e rigogliosa, che offre molte opportunità per escursioni e passeggiate. Nelle vicinanze si trova anche il Parco Archeologico di Vulci, un'importante area archeologica che ospita i resti di un'antica città etrusca.\n\nIl paese è famoso anche per la sua produzione di olio d'oliva e vino, che possono essere degustati presso le cantine locali. Inoltre, Blera ospita diverse sagre e festival durante l'anno, dove è possibile assaggiare la cucina tradizionale locale e partecipare a eventi culturali.\n\nIn sintesi, Blera è un affascinante comune nel cuore dell'Italia, ricco di storia, cultura e bellezze naturali. È un luogo ideale per coloro che desiderano immergersi nella tradizione e scoprire l'autentica bellezza del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 604,
+        "total_tokens": 635
+    }
+}

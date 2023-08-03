@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enENveQjI9uutYpCnfiVvoSK8ZpU",
+    "object": "chat.completion",
+    "created": 1689956719,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria dei Lumi si trova nel comune di Bassano in Teverina, nella regione dell'Umbria, in Italia. Questo edificio religioso è uno dei principali punti di riferimento storici e culturali della zona.\n\nLa chiesa risale al XIII secolo e presenta uno stile architettonico romanico-gotico. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture e bassorilievi che raffigurano scene religiose. Sopra il portale si trova una finestra circolare, tipica dell'architettura romanica.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XIV secolo e raffigurano scene della vita di Gesù e dei santi. Sono presenti anche dipinti più recenti, risalenti al XVII secolo, che decorano le cappelle laterali.\n\nUno degli elementi più interessanti della Chiesa di Santa Maria dei Lumi è il suo campanile. Questa torre, alta circa 30 metri, è stata costruita nel XIV secolo e presenta una base quadrata che si restringe verso l'alto. Il campanile è decorato con bifore e trifore, tipiche dell'architettura gotica, e culmina con una cuspide a forma di piramide.\n\nLa chiesa è circondata da un piccolo sagrato e da un giardino, che offrono un'atmosfera tranquilla e suggestiva. La sua posizione panoramica permette di ammirare il paesaggio circostante, caratterizzato da colline verdi e campi coltivati.\n\nLa Chiesa di Santa Maria dei Lumi è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche aperta ai visitatori che desiderano ammirare l'architettura e gli affreschi storici, immergendosi nella storia e nella spiritualità di questa antica chiesa umbra."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 516,
+        "total_tokens": 556
+    }
+}

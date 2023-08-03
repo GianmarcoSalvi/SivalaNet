@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp9CtdQh88cbnaDixB8OpGr3ZTQg",
+    "object": "chat.completion",
+    "created": 1690202414,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Torre Mozza è una località balneare situata nel comune di Tarquinia, nella regione del Lazio, in Italia. Si trova lungo la costa tirrenica, a circa 90 chilometri a nord-ovest di Roma.\n\nLa caratteristica principale di Torre Mozza è la sua bellissima spiaggia di sabbia dorata, che si estende per diversi chilometri. La spiaggia è molto ampia e ben attrezzata, con stabilimenti balneari che offrono servizi come ombrelloni, lettini, bar e ristoranti. La sabbia è fine e l'acqua cristallina, rendendo la spiaggia ideale per rilassarsi, prendere il sole e fare lunghe passeggiate lungo la riva.\n\nLa località prende il nome dalla torre di avvistamento che si erge sulla spiaggia. La Torre Mozza, costruita nel XVI secolo come difesa costiera contro le incursioni dei pirati, è un'imponente struttura di forma cilindrica, alta circa 15 metri. Oggi è possibile visitare la torre e ammirare la vista panoramica sulla costa e sul mare.\n\nIntorno alla spiaggia e alla torre si estende una pineta, che offre un'ombra piacevole durante le giornate calde estive. La pineta è un luogo ideale per fare picnic, organizzare giochi all'aperto o semplicemente godersi la natura circostante.\n\nTorre Mozza è una meta turistica molto popolare, soprattutto durante i mesi estivi, quando molti turisti italiani e stranieri affollano la spiaggia. Tuttavia, grazie alla sua vastità, la spiaggia non risulta mai troppo affollata e si può sempre trovare un posto tranquillo dove rilassarsi.\n\nNelle vicinanze di Torre Mozza si trovano anche altre attrazioni turistiche interessanti. A pochi chilometri di distanza si trova il centro storico di Tarquinia, famoso per i suoi siti archeologici etruschi, tra cui le tombe dipinte dell'antica città etrusca di Tarquinia, che sono state dichiarate Patrimonio dell'Umanità dall'UNESCO.\n\nIn conclusione, Torre Mozza è una località balneare affascinante e ben attrezzata, ideale per trascorrere una vacanza al mare in un ambiente naturale e storico di grande bellezza."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 580,
+        "total_tokens": 612
+    }
+}

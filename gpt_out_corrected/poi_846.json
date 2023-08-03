@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpwSwkNTcHy0WGFmzcZ8rLNqJpZI",
+    "object": "chat.completion",
+    "created": 1690205468,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello Costaguti si trova nel comune di Viterbo, nella regione del Lazio, in Italia. Si tratta di un imponente edificio storico situato nel centro storico della città, precisamente nella zona di San Pellegrino.\n\nIl castello risale al XIII secolo ed è stato costruito dalla famiglia Costaguti, una delle famiglie nobili più importanti di Viterbo. L'edificio è stato costruito in stile medievale e presenta una struttura imponente e maestosa, con torri, mura fortificate e un cortile interno.\n\nL'ingresso principale del castello è caratterizzato da un grande portale in pietra, decorato con stemmi e motivi ornamentali. Una volta all'interno, si può ammirare il cortile interno, circondato da portici e colonne, che conferiscono all'edificio un'atmosfera elegante e suggestiva.\n\nIl castello è stato oggetto di numerosi interventi di restauro nel corso dei secoli, ma ha mantenuto intatta gran parte della sua struttura originale. Al suo interno, è possibile visitare diverse sale, tra cui la sala dei ricevimenti, la sala del trono e la cappella privata della famiglia Costaguti.\n\nLe sale sono arredate con mobili d'epoca, dipinti e affreschi, che testimoniano la ricchezza e il prestigio della famiglia proprietaria. Inoltre, il castello ospita anche una collezione di armi antiche e una biblioteca con una vasta selezione di libri antichi.\n\nOltre alla sua bellezza architettonica e storica, il Castello Costaguti offre anche una vista panoramica sulla città di Viterbo e sui suoi dintorni. Dalla sommità delle torri, è possibile ammirare un panorama mozzafiato, che spazia dalle colline circostanti fino al centro storico della città.\n\nIl Castello Costaguti è aperto al pubblico e offre visite guidate per permettere ai visitatori di scoprire la sua storia e ammirare la sua bellezza. È un luogo ideale per gli amanti dell'arte e della storia, ma anche per chi desidera immergersi nell'atmosfera medievale di Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 533,
+        "total_tokens": 566
+    }
+}

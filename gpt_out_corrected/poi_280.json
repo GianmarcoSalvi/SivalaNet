@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoSkiAEsAxEwWtWrNYav5beZxPPk",
+    "object": "chat.completion",
+    "created": 1689961454,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Lorenzo si trova nel comune di Civita Castellana, in provincia di Viterbo, nella regione del Lazio, Italia. È una delle principali attrazioni storiche e culturali della città.\n\nLa chiesa risale al XII secolo ed è un esempio di architettura romanica. È situata nel centro storico di Civita Castellana, in una posizione dominante che offre una vista panoramica sulla città e sulla valle circostante.\n\nL'edificio è caratterizzato da una facciata semplice ma imponente, con un portale in pietra decorato con sculture e un rosone centrale. L'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate.\n\nGli affreschi all'interno della chiesa sono uno dei suoi principali punti di interesse. Risalgono al XIII secolo e rappresentano scene della vita di San Lorenzo, il santo patrono della chiesa. Gli affreschi sono ben conservati e offrono un'importante testimonianza dell'arte medievale.\n\nLa chiesa di San Lorenzo è anche famosa per il suo campanile, che risale al XIV secolo. È una torre alta e slanciata, con una serie di finestre ad arco che si aprono lungo la sua altezza. Il campanile è visibile da diverse parti della città e contribuisce al carattere distintivo della chiesa.\n\nOltre alla sua importanza storica e artistica, la Chiesa di San Lorenzo è ancora oggi un luogo di culto attivo. Vengono regolarmente celebrate messe e altre cerimonie religiose al suo interno.\n\nLa chiesa è aperta al pubblico e può essere visitata gratuitamente. È un luogo ideale per gli amanti dell'arte e della storia, ma anche per coloro che desiderano immergersi nella spiritualità e nella tranquillità di un luogo di culto antico e suggestivo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 470,
+        "total_tokens": 505
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flTCH9bLpCEeqQBrGMYEsSeFesyI",
+    "object": "chat.completion",
+    "created": 1690188278,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli di Centocamere è un sito archeologico situato nel comune di Grotte di Castro, nella provincia di Viterbo, Italia. Questa necropoli è uno dei più importanti e meglio conservati esempi di necropoli etrusca nella regione del Lazio.\n\nLa necropoli si estende su una vasta area di circa 10 ettari e risale al periodo etrusco, tra il VII e il IV secolo a.C. Prende il nome da una delle tombe più grandi e meglio conservate, chiamata \"Tomba delle Cento Camere\", che è stata scoperta nel 1828.\n\nLa necropoli è composta da numerose tombe a camera, scavate nella roccia tufacea. Le tombe sono disposte in modo regolare lungo strade e vicoli, creando un vero e proprio labirinto sotterraneo. Alcune delle tombe sono decorate con affreschi e rilievi, che rappresentano scene di vita quotidiana, divinità e simboli religiosi.\n\nLa Tomba delle Cento Camere è la tomba più grande e imponente della necropoli. È composta da una serie di camere funerarie disposte su due livelli, con un totale di circa 100 stanze. Le camere sono decorate con affreschi che raffigurano scene di banchetti, danze e rituali funerari.\n\nOltre alla Tomba delle Cento Camere, ci sono molte altre tombe di interesse nella necropoli. Alcune di esse sono accessibili al pubblico e possono essere visitate con l'accompagnamento di una guida. Durante la visita, è possibile ammirare gli affreschi e i rilievi, nonché apprendere di più sulla cultura etrusca e sulle pratiche funerarie dell'epoca.\n\nLa Necropoli di Centocamere è un importante sito archeologico che offre una preziosa testimonianza della civiltà etrusca. La sua posizione panoramica, con vista sul lago di Bolsena, rende la visita ancora più suggestiva. È un luogo ideale per gli amanti della storia e dell'archeologia, ma anche per chi desidera immergersi nella bellezza e nella tranquillità della campagna italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 531,
+        "total_tokens": 570
+    }
+}

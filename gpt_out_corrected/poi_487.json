@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm4WS1rYHAx7AHuYYuZU3ExJOxVd",
+    "object": "chat.completion",
+    "created": 1690190592,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria delle Grazie si trova nel comune di Montefiascone, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La facciata è in stile romanico-gotico e presenta un portale decorato con sculture e un rosone centrale. Sopra il portale si trova un affresco raffigurante la Madonna con il Bambino.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV e XV secolo, tra cui una Madonna con il Bambino e i Santi. Sull'altare maggiore si trova un dipinto del XVII secolo raffigurante la Madonna delle Grazie.\n\nUno dei punti di interesse principali della chiesa è la Cappella del Miracolo, situata sul lato destro dell'edificio. Questa cappella ospita un affresco del XIV secolo raffigurante la Madonna delle Grazie, che secondo la tradizione avrebbe operato un miracolo nel 1486. L'affresco è considerato molto prezioso e viene venerato dai fedeli.\n\nLa Chiesa di Santa Maria delle Grazie è un luogo di culto molto frequentato dai residenti di Montefiascone e dai visitatori. Oltre alla sua importanza religiosa, è anche un importante esempio di architettura e arte medievale nella regione. La sua posizione panoramica sulla collina di Montefiascone offre anche una vista spettacolare sulla città e sulla campagna circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 413,
+        "total_tokens": 451
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqVr647oEXdst9P2gzexuMb2BLJe",
+    "object": "chat.completion",
+    "created": 1690207663,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Centro per la biblioteca delle Facoltà di agraria e scienze matematiche, fisiche e naturali dell'Università degli studi della Tuscia (CEBAS) si trova nel comune di Viterbo, in Italia. Questo centro è un importante punto di riferimento per gli studenti e i ricercatori che si occupano di agraria e scienze matematiche, fisiche e naturali.\n\nLa biblioteca offre una vasta gamma di risorse e servizi per supportare gli studi e la ricerca in questi settori. Dispone di una vasta collezione di libri, riviste scientifiche, tesi di laurea e dottorato, pubblicazioni accademiche e altro materiale di studio. La biblioteca è costantemente aggiornata con le ultime pubblicazioni nel campo dell'agricoltura, delle scienze matematiche, fisiche e naturali.\n\nIl CEBAS offre anche accesso a numerosi database e risorse online, che consentono agli utenti di accedere a informazioni scientifiche e accademiche di alta qualità. Gli studenti e i ricercatori possono utilizzare i computer e le postazioni di lavoro presenti in biblioteca per consultare questi materiali e svolgere ricerche.\n\nLa biblioteca è dotata di spazi di studio tranquilli e confortevoli, che consentono agli utenti di concentrarsi e lavorare in un ambiente adatto. Ci sono anche sale studio di gruppo disponibili per coloro che desiderano lavorare insieme ad altri studenti o ricercatori.\n\nIl personale della biblioteca è altamente qualificato e disponibile ad assistere gli utenti nella ricerca di informazioni, nell'utilizzo dei servizi online e nella gestione delle risorse bibliografiche. Sono inoltre organizzati corsi di formazione e workshop per aiutare gli utenti a sviluppare le competenze necessarie per utilizzare al meglio le risorse della biblioteca.\n\nIl CEBAS è un luogo di incontro e scambio di conoscenze per gli studenti e i ricercatori delle Facoltà di agraria e scienze matematiche, fisiche e naturali dell'Università degli studi della Tuscia. La biblioteca svolge un ruolo fondamentale nel supportare l'apprendimento e la ricerca in questi settori e contribuisce alla formazione di professionisti altamente qualificati nel campo dell'agricoltura e delle scienze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 68,
+        "completion_tokens": 551,
+        "total_tokens": 619
+    }
+}

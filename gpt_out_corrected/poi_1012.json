@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqqLb1Mr3xDPlWibzahqHAFDHN40",
+    "object": "chat.completion",
+    "created": 1690208933,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Lubriano è un piccolo comune situato nella regione del Lazio, nel centro Italia. Si trova nella provincia di Viterbo, a circa 100 chilometri a nord di Roma. Lubriano è un tipico borgo medievale, con stradine strette e tortuose, case in pietra e una vista panoramica mozzafiato sulla valle del fiume Tevere.\n\nIl centro storico di Lubriano è dominato dalla Chiesa di San Pietro, che risale al XII secolo. La chiesa presenta un bellissimo campanile e un interno affascinante, con affreschi e opere d'arte antiche. Accanto alla chiesa si trova il Palazzo Comunale, un edificio storico che ospita l'amministrazione comunale.\n\nUna delle principali attrazioni di Lubriano è il Belvedere della Terrazza, un punto panoramico che offre una vista spettacolare sulla valle del Tevere e sulla campagna circostante. Da qui è possibile ammirare il paesaggio collinare, i vigneti e gli uliveti che caratterizzano la zona. Il Belvedere della Terrazza è un luogo ideale per scattare fotografie e godersi il tramonto.\n\nLubriano è anche famosa per le sue grotte, tra cui la Grotta di San Donato e la Grotta di San Francesco. Queste grotte sono state utilizzate come rifugi durante la Seconda Guerra Mondiale e sono ora aperte al pubblico per visite guidate. All'interno delle grotte si possono ammirare stalattiti e stalagmiti, creando un'atmosfera suggestiva e misteriosa.\n\nIl paese è circondato da una natura incontaminata, con colline verdi e rigogliose, ideali per escursioni a piedi o in bicicletta. Nelle vicinanze si trova anche il Parco Naturale del Lago di Bolsena, il più grande lago vulcanico d'Europa, dove è possibile praticare sport acquatici come la vela e il windsurf.\n\nLubriano è un luogo tranquillo e pittoresco, ideale per chi cerca una fuga dalla frenesia della città. Con la sua architettura medievale, le viste panoramiche e la natura circostante, Lubriano offre un'esperienza autentica e suggestiva del Lazio rurale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 571,
+        "total_tokens": 603
+    }
+}

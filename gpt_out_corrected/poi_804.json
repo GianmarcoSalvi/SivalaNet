@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fphAmkLtzGZFa7yu6OtIbr2NdW4s",
+    "object": "chat.completion",
+    "created": 1690204520,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cattedrale di Santa Maria Assunta si trova nel comune di Vasanello, nella regione del Lazio, in Italia. È una delle principali attrazioni turistiche della zona e rappresenta un importante esempio di architettura religiosa.\n\nLa cattedrale è stata costruita nel XII secolo e presenta uno stile romanico con influenze gotiche. La facciata è caratterizzata da un portale centrale sormontato da un rosone, entrambi decorati con sculture e rilievi che rappresentano scene bibliche e simboli religiosi. La facciata è inoltre arricchita da una serie di archi ciechi e da una torre campanaria.\n\nL'interno della cattedrale è a pianta basilicale, con tre navate separate da colonne e archi. Le navate sono decorate con affreschi e dipinti che rappresentano scene religiose e santi. La navata centrale termina con un coro, dove si trova l'altare maggiore, decorato con sculture e dipinti raffiguranti la Vergine Maria.\n\nUno degli elementi più interessanti della cattedrale è la cripta, situata sotto l'altare maggiore. La cripta è un ambiente suggestivo, con volte a crociera e colonne in pietra. Al suo interno sono conservate alcune reliquie e sono presenti affreschi che risalgono al XIII secolo.\n\nLa Cattedrale di Santa Maria Assunta è un luogo di culto ancora attivo, dove vengono celebrati regolarmente matrimoni, battesimi e altre cerimonie religiose. È anche aperta ai visitatori che desiderano ammirare l'architettura e l'arte sacra che ospita.\n\nLa cattedrale si trova nel centro storico di Vasanello, circondata da stradine acciottolate e antiche case in pietra. La sua posizione elevata offre una vista panoramica sulla campagna circostante, aggiungendo ulteriore fascino al luogo.\n\nIn conclusione, la Cattedrale di Santa Maria Assunta a Vasanello è un gioiello architettonico e artistico che merita una visita per chiunque sia interessato alla storia e alla cultura religiosa dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 536,
+        "total_tokens": 572
+    }
+}

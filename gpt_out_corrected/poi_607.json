@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmze8xvQIABgSwdGEmEeSefkDWqR",
+    "object": "chat.completion",
+    "created": 1690194134,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Incoronata e Santa Lucia Vergine Martire si trova nel comune di Ronciglione, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La facciata principale è caratterizzata da un portale in stile romanico, sormontato da un rosone circolare. Sopra il portale si trova una lunetta affrescata raffigurante la Madonna con il Bambino.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate lignee. Le pareti sono decorate con affreschi risalenti al XIV e XV secolo, raffiguranti scene della vita di Cristo e dei santi. Tra gli affreschi più importanti si possono ammirare la Crocifissione, l'Ultima Cena e la Natività.\n\nNella navata sinistra si trova la cappella dedicata a Santa Lucia Vergine Martire, con un altare in marmo e una statua della santa. Nella navata destra si trova invece la cappella dedicata a Santa Maria Incoronata, con un altare barocco e una statua della Vergine.\n\nLa chiesa conserva anche diverse opere d'arte di grande valore, tra cui una Madonna con Bambino del XV secolo e una pala d'altare raffigurante la Madonna con i Santi Lucia e Caterina d'Alessandria.\n\nLa Chiesa di Santa Maria Incoronata e Santa Lucia Vergine Martire è un luogo di culto molto frequentato dai fedeli, ma è anche meta di numerosi turisti e appassionati d'arte che desiderano ammirare le sue bellezze architettoniche e artistiche."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 442,
+        "total_tokens": 488
+    }
+}

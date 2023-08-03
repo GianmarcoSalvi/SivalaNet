@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqHaLmB4FMPeFiJETlWghqgwq73x",
+    "object": "chat.completion",
+    "created": 1690206778,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro S.Leonardo è un importante teatro situato nel comune di Viterbo, in Italia. Si trova nel centro storico della città, precisamente in Piazza San Leonardo, ed è considerato uno dei principali luoghi culturali della zona.\n\nIl teatro è stato inaugurato nel 1871 e da allora ha svolto un ruolo fondamentale nella vita culturale di Viterbo. La sua architettura è di stile neoclassico, con una facciata imponente e una struttura elegante. All'interno, il teatro dispone di una sala principale con una capienza di circa 500 posti a sedere, che offre una vista perfetta del palco da ogni angolazione.\n\nLa sala è caratterizzata da una decorazione ricca e dettagliata, con affreschi sul soffitto e decorazioni dorate lungo le pareti. L'acustica è eccellente, il che rende il Teatro S.Leonardo un luogo ideale per spettacoli teatrali, concerti e altre performance dal vivo.\n\nOltre alla sala principale, il teatro dispone anche di una sala più piccola, chiamata Sala Borsellino, che può ospitare circa 100 persone. Questa sala è utilizzata per eventi più intimi, come conferenze, presentazioni e proiezioni cinematografiche.\n\nIl Teatro S.Leonardo ospita regolarmente una varietà di spettacoli, tra cui opere teatrali, balletti, concerti, recital e molto altro ancora. La programmazione è molto variegata e offre qualcosa per tutti i gusti, dai classici alle produzioni contemporanee.\n\nIl teatro è gestito da una società culturale locale, che si impegna a promuovere la cultura e le arti nella regione. Oltre agli spettacoli, il Teatro S.Leonardo organizza anche workshop, corsi e altre attività culturali per coinvolgere la comunità locale.\n\nIn conclusione, il Teatro S.Leonardo è un gioiello culturale nel cuore di Viterbo. Con la sua splendida architettura, la sua programmazione variegata e la sua atmosfera accogliente, è un luogo imperdibile per gli amanti delle arti performative e per chiunque voglia vivere un'esperienza culturale unica nella città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 552,
+        "total_tokens": 586
+    }
+}

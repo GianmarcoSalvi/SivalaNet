@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enV3NpBm58wkg7w2nioOEDEWBGAu",
+    "object": "chat.completion",
+    "created": 1689957753,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria del Pozzarello si trova nel comune di Bomarzo, in provincia di Viterbo, nella regione del Lazio, Italia. Questa chiesa è un importante luogo di culto per la comunità locale e rappresenta un esempio significativo di architettura religiosa nella zona.\n\nLa chiesa è situata in una posizione panoramica, su una collina che domina il paesaggio circostante. La sua costruzione risale al XIII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti. L'edificio è realizzato in pietra locale e presenta uno stile architettonico romanico, con influenze gotiche.\n\nL'esterno della chiesa è caratterizzato da una facciata semplice ma elegante, con un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce naturale all'interno dell'edificio. La facciata è decorata con alcuni elementi scolpiti, come archetti pensili e motivi geometrici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XV secolo, che raffigurano scene religiose e figure di santi. L'altare maggiore è ornato da un prezioso paliotto in marmo, mentre ai lati della navata si trovano diverse cappelle laterali, ognuna dedicata a un santo o a una devozione particolare.\n\nUno degli elementi più interessanti della Chiesa di Santa Maria del Pozzarello è la presenza di una cripta sotterranea, accessibile tramite una scala situata all'interno dell'edificio. La cripta è un ambiente suggestivo, con pareti in pietra e volte a crociera, e ospita alcune tombe di personaggi importanti della storia locale.\n\nLa chiesa è ancora oggi utilizzata per le celebrazioni religiose e rappresenta un punto di riferimento per la comunità di Bomarzo. La sua posizione panoramica e la sua architettura affascinante la rendono anche una meta turistica molto apprezzata, visitata da persone interessate alla storia e all'arte religiosa."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 566,
+        "total_tokens": 605
+    }
+}

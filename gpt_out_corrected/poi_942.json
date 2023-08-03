@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqRrj6PGGhQagf14Pp7aUeT2Tqvc",
+    "object": "chat.completion",
+    "created": 1690207415,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Sisto si trova nel comune di Viterbo, in Italia. È una delle chiese più antiche della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa fu costruita nel XII secolo e presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra con un arco a tutto sesto. Sopra il portale si trova una finestra circolare, tipica dell'architettura romanica, che permetteva l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Lungo le pareti si trovano affreschi risalenti al XIII secolo, che rappresentano scene della vita di San Sisto e di altri santi.\n\nUno degli elementi più interessanti della chiesa è il presbiterio, che ospita un altare in marmo decorato con sculture e bassorilievi. Dietro l'altare si trova un coro ligneo intagliato, risalente al XV secolo, che aggiunge un tocco di bellezza e maestosità all'ambiente.\n\nLa Chiesa di San Sisto è anche famosa per il suo campanile, che si erge maestoso accanto all'edificio principale. Il campanile è alto e slanciato, con una serie di finestre ad arco che permettono la vista panoramica sulla città di Viterbo.\n\nOltre alla sua bellezza architettonica, la Chiesa di San Sisto ha anche un significato storico e religioso importante. È stata il luogo di incoronazione di diversi papi nel corso dei secoli e ha ospitato importanti cerimonie religiose.\n\nOggi, la chiesa è ancora utilizzata per le celebrazioni liturgiche e attira numerosi visitatori che desiderano ammirare la sua bellezza e scoprire la sua storia. La Chiesa di San Sisto rappresenta un vero gioiello dell'architettura romanica e un importante punto di riferimento per la città di Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 531,
+        "total_tokens": 566
+    }
+}

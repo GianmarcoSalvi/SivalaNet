@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp7QdcQrKtb309FWJAPcSaHcNouf",
+    "object": "chat.completion",
+    "created": 1690202304,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Porta di città, conosciuta anche come Torrione della Contessa Matilde, è un'imponente struttura situata nel comune di Tarquinia, in Italia. Si tratta di una delle principali porte d'accesso alla città, che risale al XIII secolo e rappresenta un importante esempio di architettura medievale.\n\nLa porta è costituita da un imponente torrione a pianta quadrata, realizzato in pietra locale. La sua altezza raggiunge i 15 metri, mentre le mura che la circondano si estendono per circa 30 metri. La struttura è caratterizzata da una serie di merlature e feritoie, che testimoniano la sua funzione difensiva.\n\nLa Porta di città presenta un grande arco a tutto sesto, che costituisce l'ingresso principale. Sopra l'arco si trova una loggia con una serie di archi a sesto acuto, che conferiscono un aspetto elegante e raffinato alla struttura. Questa loggia era utilizzata come punto di osservazione e controllo del territorio circostante.\n\nAll'interno della porta si trova una sala, che in passato era utilizzata come abitazione per il custode della porta. Oggi, la sala ospita una mostra permanente sulla storia e l'architettura di Tarquinia, che permette ai visitatori di approfondire la conoscenza della città e della sua evoluzione nel corso dei secoli.\n\nLa Porta di città, o Torrione della Contessa Matilde, rappresenta un importante punto di riferimento per la città di Tarquinia. La sua imponenza e la sua bellezza architettonica la rendono una meta turistica molto apprezzata, attirando visitatori da tutto il mondo. Inoltre, la sua posizione strategica all'ingresso della città la rende un simbolo di accoglienza e di apertura verso il territorio circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 468,
+        "total_tokens": 510
+    }
+}

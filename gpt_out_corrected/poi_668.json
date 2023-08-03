@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fovs3JKvPp0e1WniXite6B8q2t8Z",
+    "object": "chat.completion",
+    "created": 1690201588,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Antico Lavatoio è un affascinante sito storico situato nel comune di Sutri, in Italia. Si trova nel centro storico del paese, vicino alla piazza principale.\n\nQuesto lavatoio pubblico risale al XVIII secolo ed è stato utilizzato per secoli come punto di incontro e di socializzazione per le donne del paese. Era un luogo dove le donne si riunivano per lavare i panni, scambiare notizie e chiacchierare.\n\nL'Antico Lavatoio è costruito in pietra locale e presenta un design tradizionale. È composto da una serie di vasche rettangolari, alimentate da una sorgente d'acqua naturale. Le vasche sono disposte su più livelli, creando un'atmosfera pittoresca e suggestiva.\n\nLe donne del paese si riunivano qui per lavare i panni a mano, utilizzando sapone e spazzole. L'acqua scorreva attraverso le vasche, pulendo i tessuti e portando via lo sporco. Era un lavoro faticoso, ma anche un momento di socializzazione e condivisione.\n\nOggi, l'Antico Lavatoio è diventato un luogo di interesse storico e culturale. È stato restaurato e preservato nel corso degli anni, mantenendo intatta la sua autenticità e il suo fascino. È possibile visitare il lavatoio e ammirare l'architettura tradizionale, le vasche in pietra e l'atmosfera suggestiva.\n\nL'Antico Lavatoio rappresenta una parte importante della storia e della cultura di Sutri. È un luogo che testimonia le tradizioni e le attività quotidiane delle donne del paese nel corso dei secoli. La sua bellezza e il suo significato storico lo rendono una tappa imperdibile per i visitatori che desiderano immergersi nella storia e nella cultura di Sutri."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 464,
+        "total_tokens": 497
+    }
+}

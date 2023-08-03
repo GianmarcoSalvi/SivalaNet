@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqDvPR5nLsgGYl46jBC7SQJ82RKc",
+    "object": "chat.completion",
+    "created": 1690206551,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca Diocesana di Viterbo è un'importante istituzione culturale situata nel comune di Viterbo, in Italia. Fondata nel 1962, la biblioteca è gestita dalla Diocesi di Viterbo ed è situata all'interno del Palazzo Vescovile, nel centro storico della città.\n\nLa biblioteca si trova in un edificio storico di grande valore architettonico, che risale al XIII secolo. È composta da diverse sale, ognuna dedicata a una specifica tematica o periodo storico. Le sale sono arredate con mobili antichi e offrono un'atmosfera accogliente e suggestiva.\n\nLa collezione della biblioteca è molto ricca e variegata. Comprende oltre 50.000 volumi, tra cui libri antichi, manoscritti, incunaboli, periodici e opere rare. La biblioteca è specializzata in storia della Chiesa, teologia, filosofia, letteratura religiosa e storia locale. Inoltre, possiede una vasta sezione dedicata alla storia dell'arte e all'archeologia.\n\nLa Biblioteca Diocesana di Viterbo è aperta al pubblico e offre servizi di consultazione e prestito. Gli utenti possono accedere alle opere presenti in biblioteca, consultare i cataloghi e richiedere il prestito dei libri. Inoltre, la biblioteca organizza regolarmente mostre, conferenze e incontri culturali per promuovere la conoscenza e la diffusione della cultura religiosa e storica.\n\nLa biblioteca è un importante punto di riferimento per gli studiosi, i ricercatori e gli appassionati di storia e cultura religiosa. Grazie alla sua vasta collezione e alla sua posizione strategica nel centro storico di Viterbo, la Biblioteca Diocesana rappresenta un luogo di studio e di approfondimento per chiunque sia interessato a esplorare la storia e la cultura della città e della diocesi."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 470,
+        "total_tokens": 505
+    }
+}

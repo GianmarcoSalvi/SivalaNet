@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en0foLhUEZErlCaYSZRjEk9CVegz",
+    "object": "chat.completion",
+    "created": 1689955869,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Assunta si trova nel comune di Acquapendente, nella provincia di Viterbo, nella regione del Lazio, in Italia. È una delle principali attrazioni turistiche della città e rappresenta un importante esempio di architettura religiosa.\n\nLa chiesa risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è caratterizzata da un portale romanico con un arco a tutto sesto e da una serie di archi ciechi decorati con motivi geometrici. Sopra il portale si trova una finestra a bifora, tipica dell'architettura romanica.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. Tra le opere d'arte più importanti presenti all'interno della chiesa, vi è un crocifisso ligneo del XV secolo e una Madonna con Bambino del XVI secolo.\n\nUno degli elementi più suggestivi della Chiesa di Santa Maria Assunta è il suo campanile, alto circa 40 metri. Costruito in stile romanico, presenta una base quadrata che si restringe man mano che si sale verso la cima. Il campanile è decorato con una serie di archi ciechi e finestre bifore, che conferiscono un'aria elegante e maestosa alla struttura.\n\nLa Chiesa di Santa Maria Assunta è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per i visitatori che desiderano conoscere la storia e l'arte della città di Acquapendente."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 421,
+        "total_tokens": 459
+    }
+}

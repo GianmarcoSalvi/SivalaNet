@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmm2nBppq6yskPRG6XhwNmxLfMmZ",
+    "object": "chat.completion",
+    "created": 1690193290,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Bernardino si trova nel comune di Orte, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa fu costruita nel XV secolo in stile gotico, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti. La facciata è semplice ma elegante, con un portale in pietra e una grande finestra rotonda al centro. Sopra il portale è presente un affresco raffigurante San Bernardino da Siena, il santo a cui la chiesa è dedicata.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. Tra le opere d'arte più importanti presenti all'interno della chiesa, si possono ammirare un crocifisso ligneo del XV secolo e una Madonna con Bambino attribuita a Antoniazzo Romano.\n\nUno degli elementi più suggestivi della chiesa è la cappella di San Bernardino, situata sul lato destro dell'altare maggiore. Questa cappella è decorata con affreschi del XV secolo che raffigurano scene della vita del santo. Al centro della cappella si trova un altare in marmo con una statua di San Bernardino.\n\nLa Chiesa di San Bernardino è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per gli abitanti di Orte, che la considerano un simbolo della loro comunità.\n\nLa chiesa si trova in una posizione panoramica, affacciata sulla città di Orte e circondata da un ampio spazio verde. Questo la rende un luogo ideale per momenti di riflessione e tranquillità, oltre che per ammirare il panorama circostante.\n\nIn conclusione, la Chiesa di San Bernardino nel comune di Orte è un edificio religioso di grande bellezza e importanza storica. Con la sua architettura gotica, gli affreschi e le opere d'arte al suo interno, rappresenta un luogo di culto e di interesse artistico per i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 539,
+        "total_tokens": 572
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnGTvOjjTOKVEKDI643hz6krFiZH",
+    "object": "chat.completion",
+    "created": 1690195177,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Soriano nel Cimino si trova nel cuore del centro storico del comune, in una posizione facilmente accessibile a tutti i residenti e visitatori. È un luogo accogliente e tranquillo, ideale per gli amanti dei libri e della cultura.\n\nLa biblioteca dispone di un vasto assortimento di libri, riviste, giornali e altri materiali di lettura, che coprono una vasta gamma di argomenti e interessi. Gli scaffali sono organizzati in modo ordinato e ben etichettati, facilitando la ricerca e la consultazione dei testi desiderati.\n\nOltre alla vasta collezione di libri, la biblioteca offre anche servizi aggiuntivi come l'accesso a internet, la consultazione di e-book e la possibilità di prendere in prestito DVD e CD musicali. Ci sono anche postazioni di lettura e studio, dotate di tavoli e sedie confortevoli, dove gli utenti possono dedicarsi alla lettura o allo studio in un ambiente tranquillo.\n\nLa biblioteca comunale di Soriano nel Cimino organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, letture pubbliche e mostre d'arte. Questi eventi sono aperti al pubblico e offrono un'opportunità per gli amanti della cultura di incontrarsi, condividere idee e approfondire le proprie conoscenze.\n\nIl personale della biblioteca è cordiale e disponibile, pronto ad assistere gli utenti nella ricerca di libri specifici o nell'utilizzo dei servizi offerti. Sono inoltre disponibili servizi di consulenza e orientamento per coloro che desiderano approfondire un determinato argomento o cercare informazioni specifiche.\n\nLa biblioteca comunale di Soriano nel Cimino è un luogo di incontro e di arricchimento culturale per la comunità locale. È un punto di riferimento per gli amanti dei libri e della cultura, offrendo un ambiente accogliente e risorse di alta qualità per soddisfare le esigenze di tutti i suoi utenti."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 492,
+        "total_tokens": 528
+    }
+}

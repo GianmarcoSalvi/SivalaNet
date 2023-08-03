@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqQzLRk4r0B0019cId3JaYswkDtd",
+    "object": "chat.completion",
+    "created": 1690207361,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria in Gradi si trova nel comune di Viterbo, in Italia. Questo edificio religioso è uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa risale al XII secolo ed è situata in una posizione panoramica, sulla sommità di una collina che domina la città. La sua facciata è caratterizzata da un portale in stile romanico, decorato con sculture e motivi geometrici. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di Gesù e dei santi. Al centro dell'abside si trova un altare in marmo, sormontato da un crocifisso ligneo.\n\nUno degli elementi più interessanti della Chiesa di Santa Maria in Gradi è il campanile, che si erge accanto all'edificio principale. Questa torre è di forma quadrata e presenta una serie di finestre ad arco lungo le sue pareti. La sommità del campanile è decorata con una guglia a forma di piramide, che conferisce all'intero complesso un aspetto imponente.\n\nLa chiesa è circondata da un piccolo cortile, dove si trovano alcune tombe medievali. Questo cortile offre anche una vista panoramica sulla città di Viterbo e sulle colline circostanti, rendendo la visita alla Chiesa di Santa Maria in Gradi un'esperienza suggestiva.\n\nLa Chiesa di Santa Maria in Gradi è un importante punto di riferimento per la comunità locale e un luogo di culto per i fedeli. La sua architettura romanica e gli affreschi medievali la rendono una meta ambita per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 494,
+        "total_tokens": 531
+    }
+}

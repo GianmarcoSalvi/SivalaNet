@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpG4QH4JtS2zMsJShimH0L3kc0fw",
+    "object": "chat.completion",
+    "created": 1690202840,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Decollato si trova nel comune di Tuscania, in Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è dedicata a San Giovanni Battista, ma è conosciuta principalmente come Chiesa di San Giovanni Decollato, in riferimento alla decapitazione del santo. L'edificio è situato nel centro storico di Tuscania, in una posizione dominante che permette di ammirare un panorama mozzafiato sulla campagna circostante.\n\nL'esterno della chiesa è caratterizzato da una facciata semplice ma elegante, con un portale in stile romanico decorato con sculture e un rosone centrale. La facciata è realizzata in pietra locale, conferendo all'edificio un aspetto solido e imponente.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XIII secolo e rappresentano scene della vita di San Giovanni Battista, tra cui il suo battesimo da parte di Gesù e la sua decapitazione. Gli affreschi sono di grande valore artistico e sono stati restaurati per preservarne la bellezza nel corso dei secoli.\n\nAll'interno della chiesa si trovano anche diverse opere d'arte, tra cui una statua lignea di San Giovanni Decollato e un altare in marmo intarsiato. L'atmosfera all'interno della chiesa è suggestiva e tranquilla, invitando alla preghiera e alla contemplazione.\n\nLa Chiesa di San Giovanni Decollato è un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche una meta turistica molto apprezzata, sia per la sua bellezza architettonica che per la sua importanza storica. La chiesa rappresenta un importante esempio di architettura romanica nella regione e testimonia la ricchezza culturale e artistica di Tuscania.\n\nIn conclusione, la Chiesa di San Giovanni Decollato a Tuscania è un gioiello architettonico e artistico che merita sicuramente una visita. La sua bellezza e la sua storia affascinante la rendono un luogo di grande interesse per i visitatori e un punto di riferimento per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 576,
+        "total_tokens": 613
+    }
+}

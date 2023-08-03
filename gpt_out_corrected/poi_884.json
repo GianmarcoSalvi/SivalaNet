@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq7zeh7NWF2RjoCzXNGPo6zNEbuO",
+    "object": "chat.completion",
+    "created": 1690206183,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'anfiteatro di Ferento si trova nel comune di Viterbo, nella regione del Lazio, in Italia. Questo antico anfiteatro romano è situato a circa 5 chilometri a nord-ovest di Viterbo, nella valle del fiume Vicano.\n\nL'anfiteatro è stato costruito nel I secolo d.C. ed è uno dei migliori esempi di architettura romana nella zona. È stato utilizzato per ospitare spettacoli di gladiatori, combattimenti di animali e altre forme di intrattenimento pubblico.\n\nL'anfiteatro di Ferento è di forma ellittica e misura circa 80 metri di lunghezza e 60 metri di larghezza. La sua struttura è composta da tre ordini di gradinate, che potevano ospitare fino a 10.000 spettatori. Le gradinate erano divise in settori, riservati a diverse classi sociali, con i posti migliori riservati all'élite romana.\n\nLa struttura dell'anfiteatro è stata realizzata in pietra locale, con una facciata esterna decorata con lesene e archi. L'arena centrale era circondata da un muro di contenimento, chiamato \"podium\", che separava gli spettatori dagli eventi che si svolgevano nell'arena.\n\nL'anfiteatro di Ferento è stato abbandonato nel corso dei secoli e ha subito danni a causa di terremoti e saccheggi. Tuttavia, negli ultimi decenni sono stati effettuati lavori di restauro e conservazione per preservare questa importante testimonianza del passato romano.\n\nOggi, l'anfiteatro di Ferento è aperto al pubblico e può essere visitato. Durante l'estate, vengono organizzati spettacoli teatrali e concerti all'interno dell'anfiteatro, che permettono ai visitatori di immergersi nell'atmosfera dell'antica Roma.\n\nLa visita all'anfiteatro di Ferento offre un'opportunità unica per esplorare la storia e l'architettura dell'antica Roma. La maestosità della struttura e la sua posizione panoramica nella valle rendono l'esperienza ancora più suggestiva."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 554,
+        "total_tokens": 589
+    }
+}

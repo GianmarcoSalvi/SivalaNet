@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flPQpSbpEysWEUnpGTPM57n3XEdL",
+    "object": "chat.completion",
+    "created": 1690188044,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Comunale di Grotte di Castro è un edificio storico situato nel centro del comune, nella regione del Lazio, in Italia. Si trova in Piazza della Repubblica, di fronte alla Chiesa di San Giovanni Battista.\n\nIl palazzo è un esempio di architettura rinascimentale e risale al XVI secolo. È stato costruito con pietra locale e presenta una facciata imponente e ben conservata. L'edificio si sviluppa su due piani e ha un cortile interno.\n\nLa facciata del palazzo è caratterizzata da una serie di finestre con cornici in pietra e un portale d'ingresso centrale, sormontato da un balcone con ringhiera in ferro battuto. Sopra il portale è presente lo stemma del comune di Grotte di Castro.\n\nAll'interno del palazzo si trovano diverse sale che conservano ancora gli arredi originali. Tra queste, la Sala del Consiglio è la più importante. Questa sala è decorata con affreschi e dipinti che raffigurano scene storiche e simboli del potere comunale. Alcuni dei dipinti sono attribuiti ad artisti locali del XVI secolo.\n\nOltre alla Sala del Consiglio, il palazzo ospita anche uffici comunali e spazi espositivi. Inoltre, alcune parti dell'edificio sono aperte al pubblico durante eventi culturali e mostre temporanee.\n\nIl Palazzo Comunale di Grotte di Castro rappresenta un importante punto di riferimento per la comunità locale e testimonia la storia e l'importanza del comune nel corso dei secoli. La sua architettura affascinante e la sua posizione centrale lo rendono una meta turistica molto apprezzata dai visitatori che desiderano conoscere la storia e la cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 447,
+        "total_tokens": 482
+    }
+}

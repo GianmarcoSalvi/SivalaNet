@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpnEOLq8WTFn4IiIKANJCZvN7dVs",
+    "object": "chat.completion",
+    "created": 1690204896,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca Beato Lorenzo Salvi si trova nel comune di Vetralla, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è situata in un edificio moderno e accogliente, con spazi luminosi e ben organizzati. Dispone di una vasta collezione di libri, riviste, giornali e materiale audiovisivo, che copre una vasta gamma di argomenti e interessi. La biblioteca offre anche accesso a Internet e computer per la ricerca e lo studio.\n\nLa Biblioteca Beato Lorenzo Salvi è particolarmente attenta alle esigenze dei giovani lettori e offre una sezione dedicata ai libri per bambini e ragazzi. Ci sono anche spazi per la lettura e lo studio, con tavoli e sedie confortevoli.\n\nOltre alla sua collezione di libri, la biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, mostre d'arte e laboratori per bambini. Questi eventi sono aperti al pubblico e offrono opportunità di apprendimento e di incontro per la comunità.\n\nLa biblioteca è gestita da personale qualificato e cordiale, che è disponibile ad assistere i visitatori nella ricerca di libri e risorse, nonché a fornire informazioni e consigli sulla lettura e lo studio.\n\nLa Biblioteca Beato Lorenzo Salvi è un importante punto di riferimento per la comunità di Vetralla, offrendo un luogo di apprendimento, cultura e svago per i suoi abitanti. È un luogo ideale per gli amanti dei libri di tutte le età, che possono trovare ispirazione, conoscenza e intrattenimento all'interno delle sue mura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 413,
+        "total_tokens": 449
+    }
+}

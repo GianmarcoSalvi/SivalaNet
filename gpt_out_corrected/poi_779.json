@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpZBuDWRU7609Qrv3EbNopiPoQIC",
+    "object": "chat.completion",
+    "created": 1690204025,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le Grotte di San Leonardo sono un complesso di grotte situato nel comune di Vallerano, nella regione del Lazio, in Italia. Queste grotte sono una delle attrazioni naturali più affascinanti della zona e sono state formate da un processo di erosione nel corso di migliaia di anni.\n\nLe grotte si estendono per circa 1,5 chilometri e sono composte da una serie di camere e corridoi sotterranei. L'ingresso principale si trova all'interno di una grande cavità, che si apre su un vasto spazio sotterraneo. Qui è possibile ammirare stalattiti e stalagmiti di varie forme e dimensioni, che si sono formate grazie al gocciolamento di acqua ricca di minerali nel corso del tempo.\n\nLe Grotte di San Leonardo sono famose per la loro bellezza e per la varietà di formazioni rocciose che si possono osservare al loro interno. Ci sono stalattiti che pendono dal soffitto come icone di cristallo, colonne di pietra che si ergono dal pavimento e stalagmiti che si sono unite alle stalattiti per formare strutture uniche.\n\nAll'interno delle grotte, è possibile seguire un percorso ben segnalato che permette ai visitatori di esplorare le diverse camere e ammirare le meraviglie naturali che si trovano lungo il tragitto. Durante la visita, è possibile anche apprendere informazioni sulla formazione delle grotte e sulla loro importanza dal punto di vista geologico.\n\nLe Grotte di San Leonardo offrono un'esperienza unica e suggestiva, grazie alla loro atmosfera misteriosa e alla bellezza delle formazioni rocciose. Sono un luogo ideale per gli amanti della natura e per coloro che desiderano scoprire le meraviglie nascoste del sottosuolo italiano."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 458,
+        "total_tokens": 492
+    }
+}

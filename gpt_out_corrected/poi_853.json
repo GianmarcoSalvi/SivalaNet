@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpyhHcUDcWjcsE6nejAcyDwnfAYq",
+    "object": "chat.completion",
+    "created": 1690205607,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Piazza dell'Erbe è una delle piazze più importanti e affascinanti del comune di Viterbo, situata nel centro storico della città. La piazza è circondata da edifici storici e rappresenta il cuore pulsante della vita sociale e commerciale di Viterbo.\n\nLa piazza è caratterizzata da un'atmosfera medievale, con pavimentazione in ciottoli e una serie di edifici storici che la circondano. Al centro della piazza si trova una fontana, chiamata Fontana Grande, risalente al XIII secolo, che rappresenta uno dei simboli della città.\n\nGli edifici che si affacciano sulla piazza sono di grande interesse storico e architettonico. Tra questi spicca il Palazzo dei Priori, un imponente edificio medievale che ospita il municipio di Viterbo. Il palazzo è caratterizzato da una facciata in stile gotico e al suo interno si possono ammirare affreschi e opere d'arte di grande valore.\n\nUn altro edificio di grande rilievo è il Palazzo del Podestà, che risale al XIII secolo. Questo edificio presenta una facciata in stile romanico e al suo interno si trova il Museo Civico di Viterbo, che ospita una collezione di reperti archeologici e opere d'arte.\n\nLa Piazza dell'Erbe è anche un luogo ideale per fare shopping e gustare la cucina locale. Lungo i portici che circondano la piazza si trovano numerosi negozi, botteghe artigiane e ristoranti, dove è possibile acquistare prodotti tipici e assaporare le specialità gastronomiche della zona.\n\nLa piazza è anche il luogo in cui si svolgono numerosi eventi e manifestazioni culturali durante tutto l'anno. Tra questi spiccano il mercato settimanale, che si tiene ogni mercoledì e sabato, e la Festa di Santa Rosa, una tradizionale processione che si svolge il 3 settembre e che coinvolge l'intera città.\n\nIn conclusione, la Piazza dell'Erbe è un luogo di grande fascino e importanza storica nel comune di Viterbo. Con i suoi edifici storici, la sua atmosfera medievale e la sua vivace vita sociale, rappresenta una tappa imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 569,
+        "total_tokens": 603
+    }
+}

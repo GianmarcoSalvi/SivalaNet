@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flyfUNPOd3tyR3xvds3qbwuje5W2",
+    "object": "chat.completion",
+    "created": 1690190229,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana del Mascherone si trova nel comune di Montalto di Castro, nella regione del Lazio, in Italia. Si tratta di una fontana storica che risale al XVII secolo e rappresenta uno dei principali punti di interesse della città.\n\nLa fontana è situata nella piazza principale di Montalto di Castro, Piazza Vittorio Emanuele II, ed è caratterizzata da una struttura imponente e maestosa. È composta da una grande vasca circolare in pietra, al centro della quale si erge una statua di un mascherone.\n\nIl mascherone è scolpito in pietra e rappresenta un volto umano con una bocca spalancata da cui sgorga l'acqua. La sua espressione è molto vivace e sembra quasi che stia sorridendo. La statua è circondata da una serie di colonne e decorazioni in stile barocco, che conferiscono alla fontana un aspetto elegante e raffinato.\n\nLa Fontana del Mascherone è alimentata da una sorgente d'acqua naturale, che proviene dalle colline circostanti. L'acqua sgorga dalla bocca del mascherone e riempie la vasca sottostante, creando un piacevole suono di scroscio che contribuisce a rendere l'atmosfera della piazza ancora più suggestiva.\n\nLa fontana è circondata da un'ampia area pedonale, che invita i visitatori a passeggiare e godere della bellezza del luogo. È un luogo molto frequentato dai turisti e dagli abitanti del posto, soprattutto durante i mesi estivi, quando la piazza diventa un punto di ritrovo per eventi e manifestazioni.\n\nLa Fontana del Mascherone rappresenta un importante simbolo di Montalto di Castro e della sua storia. È un luogo che incarna l'arte e l'architettura del periodo barocco, e allo stesso tempo offre un'oasi di frescura e tranquillità nel cuore della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 490,
+        "total_tokens": 525
+    }
+}

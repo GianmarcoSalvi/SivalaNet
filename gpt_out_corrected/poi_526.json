@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmHfbiiuHhg4rluH6kd1K8rjLvNT",
+    "object": "chat.completion",
+    "created": 1690191407,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Biagio si trova nel comune di Nepi, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale decorato e una grande finestra centrale. Sopra il portale si trova un rosone circolare, che aggiunge un tocco di bellezza all'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di San Biagio e altri santi. Questi affreschi sono di grande valore artistico e sono stati restaurati per preservarne la bellezza.\n\nNella chiesa si trova anche un altare in marmo, decorato con sculture e intagli dettagliati. Sopra l'altare si trova una pala d'altare, che raffigura San Biagio e altri santi. Questa pala d'altare è un'opera d'arte di grande valore e rappresenta uno dei punti salienti della chiesa.\n\nLa Chiesa di San Biagio è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari. È anche aperta ai visitatori che desiderano ammirare l'architettura e l'arte all'interno della chiesa.\n\nLa chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante. È circondata da un piccolo cortile e da un giardino, che aggiungono un tocco di tranquillità e serenità all'ambiente circostante.\n\nIn sintesi, la Chiesa di San Biagio nel comune di Nepi è un gioiello architettonico e artistico. Con la sua storia antica, le sue opere d'arte e la sua posizione suggestiva, è un luogo che merita sicuramente una visita per chiunque si trovi nella zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 523,
+        "total_tokens": 558
+    }
+}

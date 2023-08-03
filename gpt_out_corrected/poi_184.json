@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enm0XyR7UwhCmjczJnTnjVdhs1t4",
+    "object": "chat.completion",
+    "created": 1689958804,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le Terme di Vulci sono un complesso termale situato nel comune di Canino, nella regione italiana del Lazio. Queste terme sono famose per le loro acque termali ricche di proprietà curative e benefiche per il corpo.\n\nIl complesso termale si trova in una posizione suggestiva, immerso nella natura incontaminata della Maremma laziale. Le Terme di Vulci sono circondate da un paesaggio mozzafiato, caratterizzato da colline verdi, fiumi e boschi.\n\nLe acque termali delle Terme di Vulci sono di origine vulcanica e sgorgano da diverse sorgenti naturali. Queste acque sono ricche di minerali come zolfo, calcio, magnesio e potassio, che conferiscono loro proprietà terapeutiche. Le acque termali sono utilizzate per trattamenti di balneoterapia, fangoterapia e idroterapia.\n\nIl complesso termale offre una vasta gamma di servizi e strutture per il benessere e il relax. Ci sono diverse piscine termali, sia interne che esterne, dove gli ospiti possono immergersi nelle acque calde e beneficiare dei loro effetti curativi. Le piscine sono dotate di idromassaggi, cascate d'acqua e percorsi di nuoto.\n\nLe Terme di Vulci offrono anche trattamenti termali personalizzati, come massaggi, bagni termali, impacchi di fango e cure estetiche. Gli ospiti possono scegliere tra una vasta gamma di trattamenti per rilassarsi, rigenerarsi e migliorare la propria salute e bellezza.\n\nOltre alle strutture termali, il complesso offre anche servizi di ristorazione, con ristoranti che offrono piatti tipici della cucina locale e internazionale. Ci sono anche aree relax all'aperto, dove gli ospiti possono godersi il sole e la tranquillità del paesaggio circostante.\n\nLe Terme di Vulci sono un luogo ideale per una vacanza di benessere e relax. Offrono un'esperienza unica di immersione nella natura, combinata con trattamenti termali rigeneranti. Sono un'oasi di pace e tranquillità, dove gli ospiti possono prendersi cura del proprio corpo e della propria mente."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 541,
+        "total_tokens": 573
+    }
+}

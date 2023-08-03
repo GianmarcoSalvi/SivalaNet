@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fot7LNRdE3FKw52bwgvAEAJiFKVD",
+    "object": "chat.completion",
+    "created": 1690201417,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre dell'Orologio è un'imponente struttura situata nel comune di Sutri, in Italia. Si trova nel centro storico della città, vicino alla Piazza del Comune, e rappresenta uno dei simboli più iconici di Sutri.\n\nLa torre risale al XIII secolo ed è stata costruita in stile romanico. È alta circa 30 metri e si erge maestosa sopra gli edifici circostanti. La sua forma slanciata e la sua posizione dominante la rendono visibile da diverse parti della città.\n\nLa Torre dell'Orologio è caratterizzata da una facciata in pietra, con una serie di finestre ad arco che si aprono lungo la sua altezza. Al centro della facciata si trova un grande orologio, che è stato aggiunto nel corso dei secoli successivi alla costruzione originale della torre. L'orologio è ancora funzionante e segna le ore con il suo caratteristico rintocco.\n\nAll'interno della torre si trova una scala a chiocciola che conduce alla cima, da dove si può godere di una vista panoramica mozzafiato sulla città e sui dintorni. La salita può essere impegnativa, ma la ricompensa è sicuramente degna di nota.\n\nLa Torre dell'Orologio è un importante punto di riferimento per i residenti di Sutri e un'attrazione turistica molto apprezzata dai visitatori. Oltre alla sua bellezza architettonica, la torre rappresenta anche una testimonianza storica del passato medievale della città.\n\nNelle vicinanze della torre si trovano anche altri luoghi di interesse, come il Duomo di Sutri e il Teatro Romano, che rendono la zona un vero e proprio tesoro di storia e cultura.\n\nIn conclusione, la Torre dell'Orologio di Sutri è un'imponente struttura medievale che domina il centro storico della città. Con la sua bellezza architettonica e la vista panoramica che offre, rappresenta una tappa imperdibile per chi visita Sutri."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 505,
+        "total_tokens": 541
+    }
+}

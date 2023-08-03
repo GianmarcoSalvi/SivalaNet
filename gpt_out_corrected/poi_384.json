@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flQQWZhneU4k1UkE9EsIik5cw6sO",
+    "object": "chat.completion",
+    "created": 1690188106,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria delle Colonne si trova nel comune di Grotte di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. Questo edificio religioso è uno dei principali punti di riferimento storici e culturali della zona.\n\nLa chiesa risale al XIII secolo ed è stata costruita in stile romanico. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi floreali e geometrici. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di Gesù e dei santi. Sull'altare maggiore si trova una statua di Santa Maria delle Colonne, patrona della chiesa.\n\nUno degli elementi più interessanti della chiesa è il campanile, che si erge maestoso accanto all'edificio. Questa torre campanaria è stata costruita in pietra e presenta una serie di finestre ad arco, che permettono la vista panoramica sulla campagna circostante.\n\nLa Chiesa di Santa Maria delle Colonne è un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per i visitatori che desiderano conoscere la storia e l'arte della zona.\n\nLa sua posizione nel comune di Grotte di Castro, circondata da un paesaggio collinare e verde, rende la chiesa ancora più suggestiva e affascinante. È un luogo ideale per una visita tranquilla e riflessiva, per ammirare l'architettura medievale e per immergersi nella spiritualità e nella storia della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 482,
+        "total_tokens": 521
+    }
+}

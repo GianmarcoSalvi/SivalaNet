@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqq4hpvrfsP3hgY3cVOW17HRkFx5",
+    "object": "chat.completion",
+    "created": 1690208916,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Latera è un piccolo comune situato nella provincia di Viterbo, nella regione del Lazio, in Italia. Si trova a circa 100 chilometri a nord di Roma e a pochi chilometri dal lago di Bolsena.\n\nIl paese di Latera è caratterizzato da un'atmosfera tranquilla e suggestiva, con stradine strette e tortuose che si snodano tra le antiche case di pietra. Il centro storico è dominato dalla maestosa Rocca dei Papi, un imponente castello medievale che si erge su una collina e offre una vista panoramica mozzafiato sulla campagna circostante.\n\nLa chiesa parrocchiale di San Clemente è un altro punto di interesse di Latera. Costruita nel XV secolo, presenta un bellissimo portale in stile gotico e un interno riccamente decorato con affreschi e opere d'arte.\n\nIl territorio intorno a Latera è caratterizzato da una natura incontaminata e da paesaggi suggestivi. La campagna circostante è punteggiata da uliveti, vigneti e boschi, che offrono numerose opportunità per escursioni a piedi o in bicicletta.\n\nIl comune di Latera è anche famoso per le sue terme, che sono state sfruttate sin dai tempi antichi per le loro proprietà curative. Le acque termali di Latera sono ricche di minerali e sono considerate benefiche per la salute e il benessere.\n\nNel corso dell'anno, Latera ospita diverse manifestazioni culturali e tradizionali, come la Sagra del Fagiolo, una festa dedicata al legume tipico della zona, e la Festa di San Clemente, che celebra il patrono del paese.\n\nIn sintesi, Latera è un incantevole comune nel cuore dell'Italia, che offre una combinazione unica di storia, natura e tradizioni locali. È un luogo ideale per chi cerca tranquillità e autenticità, lontano dalle mete turistiche più affollate."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 492,
+        "total_tokens": 521
+    }
+}

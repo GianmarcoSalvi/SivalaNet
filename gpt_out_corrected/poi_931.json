@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqNErbokNyU3UNKQQd49XvYshcV0",
+    "object": "chat.completion",
+    "created": 1690207128,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex chiesa di Santo Rocco si trova nel comune di Viterbo, in Italia. Questo edificio religioso è situato nel centro storico della città, precisamente in via San Pellegrino.\n\nLa chiesa di Santo Rocco è stata costruita nel XVII secolo e inizialmente era dedicata a San Rocco, un santo molto venerato per la sua intercessione contro la peste. L'edificio presenta uno stile architettonico barocco, con una facciata semplice ma elegante.\n\nLa facciata della chiesa è caratterizzata da un portale in pietra, sormontato da un timpano triangolare. Sopra il portale è presente una finestra rettangolare, che permette l'ingresso di luce naturale all'interno dell'edificio. La facciata è decorata con alcuni elementi ornamentali, come cornici e lesene, che conferiscono un tocco di eleganza all'intero edificio.\n\nAll'interno della chiesa, si possono ammirare diverse opere d'arte. Tra queste, spicca un affresco raffigurante San Rocco, che si trova sull'altare maggiore. L'affresco è stato realizzato da un artista locale nel XVII secolo e rappresenta il santo in piedi, con il suo cane accanto a lui. L'opera è caratterizzata da colori vivaci e dettagli finemente eseguiti.\n\nOltre all'affresco di San Rocco, la chiesa ospita anche altre opere d'arte, come dipinti e sculture. Tra queste, si possono ammirare diverse immagini sacre, raffiguranti santi e scene della vita di Cristo.\n\nNonostante sia stata deconsecrata, l'ex chiesa di Santo Rocco è ancora utilizzata per eventi culturali e mostre d'arte. La sua architettura e le opere d'arte al suo interno la rendono un luogo affascinante da visitare per gli amanti dell'arte e della storia.\n\nIn conclusione, l'ex chiesa di Santo Rocco nel comune di Viterbo è un edificio religioso di grande valore artistico e storico. La sua architettura barocca e le opere d'arte al suo interno la rendono un luogo affascinante da visitare per immergersi nella storia e nell'arte della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 566,
+        "total_tokens": 602
+    }
+}

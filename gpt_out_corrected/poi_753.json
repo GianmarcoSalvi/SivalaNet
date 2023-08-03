@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpPqA4qm3ePNL44usnPGYtuzn95F",
+    "object": "chat.completion",
+    "created": 1690203446,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria della Rosa si trova nel comune di Tuscania, in provincia di Viterbo, nella regione del Lazio, Italia. È uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa fu costruita nel XII secolo e presenta una facciata semplice ma elegante, caratterizzata da un portale in stile romanico con un arco a tutto sesto e una lunetta decorata con un bassorilievo raffigurante la Madonna con il Bambino. Sopra il portale si trova una finestra a bifora, tipica dell'architettura romanica.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi risalenti al XIII secolo. Gli affreschi raffigurano scene della vita di Cristo, dei santi e degli apostoli. Uno degli affreschi più noti è quello raffigurante la Madonna della Rosa, da cui la chiesa prende il nome. Questo dipinto è attribuito a un artista locale del XIII secolo e rappresenta la Madonna con il Bambino circondata da rose.\n\nLa chiesa di Santa Maria della Rosa è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua struttura originale e gran parte degli affreschi medievali. È considerata un importante esempio di architettura romanica nel Lazio e attira numerosi visitatori e pellegrini che desiderano ammirare la sua bellezza e spiritualità.\n\nOltre alla sua importanza artistica e storica, la chiesa di Santa Maria della Rosa è anche un luogo di culto attivo, con regolari celebrazioni liturgiche. Durante l'anno, vengono organizzati anche concerti e eventi culturali all'interno della chiesa, che contribuiscono a valorizzare il suo patrimonio artistico e a renderla un punto di riferimento per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 496,
+        "total_tokens": 531
+    }
+}

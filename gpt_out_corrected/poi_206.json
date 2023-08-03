@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7entsJgSOXf5XPhTx0q7nVPF4c76Z",
+    "object": "chat.completion",
+    "created": 1689959292,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Torri D'Orlando è una frazione del comune di Capranica, situata nella regione del Lazio, in Italia. Si trova a circa 60 chilometri a nord di Roma, nella provincia di Viterbo.\n\nLa frazione prende il nome dalle due torri medievali che si ergono nel suo centro storico, risalenti al XIII secolo. Queste torri sono un simbolo distintivo del paese e rappresentano un importante patrimonio storico e culturale.\n\nTorri D'Orlando è caratterizzata da un'atmosfera tranquilla e pittoresca, con stradine strette e tortuose, case in pietra e un'architettura tradizionale. Il centro storico è ben conservato e offre una vista panoramica sulla campagna circostante.\n\nNel cuore del paese si trova la chiesa di San Giovanni Battista, un edificio religioso di origine medievale che presenta un bellissimo campanile. La chiesa è un luogo di culto importante per la comunità locale e ospita anche eventi culturali e religiosi durante tutto l'anno.\n\nTorri D'Orlando è circondata da una natura incontaminata e offre molte opportunità per escursioni e attività all'aperto. Nei dintorni si trovano numerosi sentieri che conducono a panorami mozzafiato, come il Monte Cimino e il Lago di Vico.\n\nIl paese è anche famoso per la sua produzione di olio d'oliva di alta qualità. Le colline circostanti sono ricoperte da uliveti secolari, che contribuiscono alla produzione di un olio pregiato e aromatico.\n\nTorri D'Orlando è un luogo ideale per chi cerca tranquillità e autenticità, lontano dal caos delle grandi città. Offre la possibilità di immergersi nella storia e nella cultura locale, godendo allo stesso tempo della bellezza della natura circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 463,
+        "total_tokens": 497
+    }
+}

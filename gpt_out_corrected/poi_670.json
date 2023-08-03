@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fowQgJqnX3DQKUC5GmWonG9CAlse",
+    "object": "chat.completion",
+    "created": 1690201622,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'anfiteatro romano nel comune di Sutri, Italia, è un importante sito archeologico che risale all'epoca romana. Si trova nella regione del Lazio, a circa 50 chilometri a nord di Roma.\n\nL'anfiteatro è stato costruito nel I secolo d.C. ed è uno dei più antichi anfiteatri romani ancora in piedi. È stato costruito utilizzando la tecnica dell'opus caementicium, che consiste nell'utilizzo di malta di calce e pietra per la costruzione delle mura.\n\nL'anfiteatro ha una forma ellittica e misura circa 70 metri di lunghezza e 50 metri di larghezza. Può ospitare fino a 5.000 spettatori e presenta una serie di gradinate che si sviluppano intorno all'arena centrale. Le gradinate erano divise in settori, riservati a diverse classi sociali, con i posti migliori riservati all'élite romana.\n\nL'arena centrale era utilizzata per gli spettacoli e gli eventi pubblici, come i combattimenti tra gladiatori, le cacce di animali selvatici e le rappresentazioni teatrali. L'anfiteatro era anche utilizzato per le esecuzioni capitali, come le crocifissioni.\n\nL'anfiteatro romano di Sutri è stato scoperto nel 1832 e da allora sono stati effettuati numerosi scavi archeologici per riportarlo alla luce. Durante gli scavi sono stati rinvenuti numerosi reperti, tra cui armi, monete e oggetti di uso quotidiano, che sono esposti nel museo archeologico di Sutri.\n\nOggi, l'anfiteatro romano è aperto al pubblico e rappresenta una delle principali attrazioni turistiche di Sutri. I visitatori possono esplorare le gradinate, l'arena centrale e ammirare l'architettura romana ben conservata. L'anfiteatro è anche utilizzato per eventi culturali e spettacoli teatrali durante l'estate.\n\nIn conclusione, l'anfiteatro romano nel comune di Sutri, Italia, è un importante sito archeologico che offre una preziosa testimonianza dell'antica Roma. La sua architettura ben conservata e la sua storia affascinante lo rendono una meta imperdibile per gli appassionati di storia e archeologia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 590,
+        "total_tokens": 624
+    }
+}

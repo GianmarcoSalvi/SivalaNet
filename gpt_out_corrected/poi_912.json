@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqGSwOnNlXTDNmDP00oiHjfIdC5P",
+    "object": "chat.completion",
+    "created": 1690206708,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo del Colle del Duomo si trova nel comune di Viterbo, in Italia. Si trova all'interno del complesso del Duomo di Viterbo, uno dei principali luoghi di culto della città.\n\nIl museo è ospitato in un edificio storico che risale al XIII secolo e si estende su diverse sale espositive. La sua collezione è incentrata principalmente sull'arte sacra e comprende opere di grande valore storico e artistico.\n\nUna delle principali attrazioni del museo è la Cappella del Crocifisso, che ospita un crocifisso ligneo del XIII secolo, considerato uno dei capolavori dell'arte medievale. La cappella è decorata con affreschi e presenta un'atmosfera suggestiva e spirituale.\n\nAltre opere importanti presenti nel museo includono dipinti, sculture e oggetti liturgici provenienti dalla cattedrale e da altre chiese di Viterbo. Tra questi spiccano una Madonna con Bambino del XV secolo, una statua di San Pietro del XIV secolo e una collezione di reliquiari.\n\nIl museo offre anche una sezione dedicata alla storia del Duomo di Viterbo e alla sua architettura. Qui è possibile ammirare modelli in scala, disegni e fotografie che illustrano l'evoluzione del complesso nel corso dei secoli.\n\nIl Museo del Colle del Duomo è un luogo di grande interesse per gli amanti dell'arte e della storia, ma anche per i visitatori che desiderano approfondire la conoscenza della cultura e delle tradizioni religiose di Viterbo. La sua posizione all'interno del complesso del Duomo lo rende facilmente accessibile e consente ai visitatori di combinare la visita al museo con una visita alla cattedrale e ad altri luoghi di interesse della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 442,
+        "total_tokens": 480
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpA5chygNS7CIzqbsQGqmiGroBTF",
+    "object": "chat.completion",
+    "created": 1690202469,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Pancrazio si trova nel comune di Tarquinia, in Italia. È un edificio religioso di grande importanza storica e artistica, risalente al XII secolo.\n\nLa chiesa è situata nel centro storico di Tarquinia, in una posizione dominante che offre una vista panoramica sulla città e sulla campagna circostante. La sua facciata è semplice ed elegante, con un portale in stile romanico e una serie di archi ciechi decorati con motivi geometrici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XIII secolo e raffigurano scene della vita di San Pancrazio, il santo patrono della chiesa. Le opere d'arte presenti all'interno includono anche una statua lignea di San Pancrazio, risalente al XV secolo, e un altare in marmo intarsiato.\n\nUno degli elementi più interessanti della chiesa è la cripta, situata sotto l'altare maggiore. La cripta è un ambiente suggestivo, con volte a crociera e affreschi medievali che raffigurano scene della Passione di Cristo. È un luogo di grande spiritualità e devozione, frequentato dai fedeli che desiderano pregare e riflettere.\n\nLa Chiesa di San Pancrazio è un importante punto di riferimento per la comunità locale e un luogo di culto molto amato. Oltre ad essere un importante sito religioso, la chiesa è anche un'attrazione turistica, visitata da persone provenienti da tutto il mondo che desiderano ammirare la sua bellezza e scoprire la storia e la cultura di Tarquinia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 424,
+        "total_tokens": 460
+    }
+}

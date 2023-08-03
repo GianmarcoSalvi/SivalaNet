@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eodESFWw5AjCzrr4wC5ftLcnek90",
+    "object": "chat.completion",
+    "created": 1689962104,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Casale di Santa Bruna è una struttura situata nel comune di Corchiano, in provincia di Viterbo, nella regione del Lazio, Italia. Questo casale storico è immerso nella campagna viterbese, circondato da un paesaggio mozzafiato e da una natura incontaminata.\n\nIl casale è stato completamente ristrutturato e offre una combinazione perfetta tra tradizione e modernità. Le sue origini risalgono al XVIII secolo e la sua architettura è tipica delle antiche dimore di campagna della zona. La struttura è stata restaurata con grande cura per preservare il suo fascino originale, mantenendo intatti gli elementi architettonici tradizionali come le travi in legno, i pavimenti in cotto e le pareti in pietra.\n\nIl Casale di Santa Bruna dispone di diverse camere, arredate con gusto e dotate di tutti i comfort moderni. Ogni camera è unica nel suo genere, con dettagli e arredi che richiamano lo stile rustico e tradizionale della zona. Alcune camere offrono anche una vista panoramica sulla campagna circostante.\n\nLa struttura è circondata da un ampio giardino, dove gli ospiti possono rilassarsi e godersi la tranquillità della campagna. Il giardino è dotato di una piscina, ideale per rinfrescarsi durante le calde giornate estive, e di un'area solarium con lettini e ombrelloni.\n\nIl Casale di Santa Bruna offre anche un ristorante interno, dove gli ospiti possono gustare piatti tradizionali della cucina locale, preparati con ingredienti freschi e di alta qualità. Il ristorante è famoso per la sua cucina casalinga e per l'atmosfera accogliente e familiare.\n\nLa posizione del Casale di Santa Bruna è ideale per esplorare la regione circostante. Nelle vicinanze si trovano numerosi siti di interesse storico e culturale, come il Parco dei Mostri di Bomarzo, il borgo medievale di Viterbo e le terme di Viterbo. Inoltre, la struttura organizza escursioni e attività all'aperto, come passeggiate a cavallo e trekking, per permettere agli ospiti di scoprire appieno la bellezza del territorio.\n\nIn conclusione, il Casale di Santa Bruna è un luogo incantevole dove trascorrere una vacanza rilassante immersi nella natura e nella storia. La sua atmosfera accogliente, la sua cucina deliziosa e la sua posizione strategica lo rendono la scelta ideale per chi desidera vivere un'esperienza autentica nel cuore del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 663,
+        "total_tokens": 697
+    }
+}

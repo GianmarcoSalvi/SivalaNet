@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqJItRCqZFCz7CruTleN49DXVSC7",
+    "object": "chat.completion",
+    "created": 1690206884,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo degli Uffici si trova nel comune di Viterbo, in Italia. Si tratta di un edificio storico di grande importanza per la città, sia dal punto di vista architettonico che culturale.\n\nIl palazzo è situato nel centro storico di Viterbo, in Piazza del Plebiscito, ed è circondato da altre importanti strutture come il Palazzo dei Priori e la Cattedrale di San Lorenzo. La sua posizione centrale lo rende facilmente accessibile e visibile a tutti i visitatori.\n\nL'edificio risale al XIII secolo ed è stato costruito in stile gotico. La sua facciata è caratterizzata da un portale d'ingresso imponente, sormontato da una serie di archi e finestre. La struttura è realizzata in pietra locale, conferendo al palazzo un aspetto solido e maestoso.\n\nAll'interno del Palazzo degli Uffici si trovano diverse sale e stanze, ognuna con una sua funzione specifica. Tra le più importanti vi sono la Sala del Consiglio, dove si svolgono le riunioni del consiglio comunale, e la Sala del Sindaco, dove il sindaco riceve gli ospiti e svolge le sue funzioni istituzionali.\n\nLe sale sono arredate con mobili d'epoca e opere d'arte, che testimoniano la ricchezza e la storia della città di Viterbo. I soffitti sono decorati con affreschi e stucchi, mentre le pareti sono adornate da dipinti e specchi antichi.\n\nIl Palazzo degli Uffici è anche sede di importanti eventi culturali e mostre temporanee. Le sue sale vengono spesso utilizzate per esposizioni di opere d'arte, conferenze e concerti. Inoltre, il palazzo ospita anche uffici amministrativi e burocratici del comune di Viterbo.\n\nLa visita al Palazzo degli Uffici è un'esperienza unica per immergersi nella storia e nella cultura di Viterbo. Gli interni riccamente decorati e l'atmosfera solenne dell'edificio offrono un'idea della grandezza e dell'importanza della città nel corso dei secoli."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 532,
+        "total_tokens": 566
+    }
+}

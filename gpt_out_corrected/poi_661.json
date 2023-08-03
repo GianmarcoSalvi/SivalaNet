@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fotjbQXApZtjaopYmcjkg4JQ2x80",
+    "object": "chat.completion",
+    "created": 1690201455,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana dei Delfini si trova nel comune di Sutri, una piccola città situata nella regione del Lazio, in Italia. Questa fontana è uno dei principali punti di interesse della città e rappresenta un importante esempio di architettura rinascimentale.\n\nLa fontana è situata nella piazza principale di Sutri, Piazza del Comune, di fronte al Palazzo Comunale. È stata costruita nel XVI secolo e presenta un design elegante e raffinato. La fontana è composta da una vasca circolare in pietra, decorata con sculture di delfini che emergono dall'acqua.\n\nI delfini sono realizzati in marmo bianco e sono posizionati in modo da spruzzare acqua dalla bocca. Questo crea un effetto suggestivo e rinfrescante, soprattutto durante le calde giornate estive. I delfini sono scolpiti con grande dettaglio e realismo, rendendo la fontana un'opera d'arte in sé.\n\nLa Fontana dei Delfini è circondata da un'area pavimentata, che offre uno spazio piacevole per sedersi e godersi la vista. La piazza è anche circondata da edifici storici, tra cui il Palazzo Comunale e la Chiesa di Santa Maria del Parto, che aggiungono ulteriore fascino al luogo.\n\nLa fontana è diventata un simbolo di Sutri e un punto di riferimento per i residenti e i visitatori. È un luogo popolare per fare una pausa durante una passeggiata per la città o per ammirare l'architettura e l'arte rinascimentale. La sua posizione centrale la rende facilmente accessibile e visibile a tutti coloro che visitano Sutri.\n\nIn sintesi, la Fontana dei Delfini a Sutri è una bellissima fontana rinascimentale che rappresenta un importante punto di riferimento per la città. Con i suoi delfini scolpiti in marmo bianco e l'effetto rinfrescante dell'acqua che spruzza, la fontana è un luogo affascinante e suggestivo da visitare."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 531,
+        "total_tokens": 565
+    }
+}

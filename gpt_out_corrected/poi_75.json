@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en9IaWas9EDNnEoS8B7iOW8ZokZL",
+    "object": "chat.completion",
+    "created": 1689956404,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Parrocchia di Santa Maria Assunta si trova nel comune di Barbarano Romano, in Italia. È una chiesa di origine medievale che risale al XII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata nel centro storico del paese e si distingue per la sua imponente facciata in pietra, caratterizzata da un portale gotico con un arco a tutto sesto e una lunetta decorata con bassorilievi. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce naturale all'interno della chiesa.\n\nL'interno della Parrocchia di Santa Maria Assunta è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XV secolo e raffigurano scene della vita di Maria, degli apostoli e dei santi. Sono presenti anche dipinti più recenti, risalenti al XVIII e XIX secolo, che decorano le cappelle laterali.\n\nL'altare maggiore è ornato da un pregevole paliotto in marmo, mentre il coro è caratterizzato da un organo a canne del XVIII secolo. La chiesa conserva anche diverse opere d'arte, tra cui una statua lignea della Madonna con il Bambino e una croce processionale in argento.\n\nLa Parrocchia di Santa Maria Assunta è un importante punto di riferimento per la comunità di Barbarano Romano, che vi si riunisce per le celebrazioni religiose e per le festività locali. La chiesa è aperta al pubblico e merita una visita per ammirare la sua architettura storica e le opere d'arte che custodisce."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 442,
+        "total_tokens": 479
+    }
+}

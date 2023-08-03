@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flneUphHvvxu1NmIMyjKYt4fm952",
+    "object": "chat.completion",
+    "created": 1690189546,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella del Castello di Seppie si trova nel comune di Lubriano, in Italia. Questa cappella è un gioiello architettonico che risale al XVII secolo e si trova all'interno del complesso del Castello di Seppie.\n\nLa cappella è stata costruita in stile barocco e presenta una facciata imponente e decorata. La sua struttura è caratterizzata da linee eleganti e proporzioni armoniose. La facciata è arricchita da un portale in pietra finemente scolpito e da una finestra centrale con una cornice decorata.\n\nAll'interno, la cappella presenta un'unica navata con un soffitto a volta affrescato. Gli affreschi raffigurano scene religiose e sono stati realizzati da artisti locali dell'epoca. Le pareti sono decorate con dipinti e statue che rappresentano santi e angeli.\n\nL'altare maggiore è un capolavoro di scultura barocca, con dettagli intricati e dorature. Sopra l'altare si trova un dipinto raffigurante la Madonna con il Bambino, circondata da angeli. L'atmosfera all'interno della cappella è solenne e suggestiva, con una luce soffusa che filtra attraverso le finestre colorate.\n\nLa Cappella del Castello di Seppie è un luogo di culto ancora utilizzato per le celebrazioni religiose, ma è anche aperta al pubblico per visite turistiche. La sua bellezza e la sua importanza storica la rendono una meta ambita per gli amanti dell'arte e della storia.\n\nInoltre, la cappella si trova all'interno del Castello di Seppie, che offre una vista panoramica mozzafiato sulla campagna circostante. Il castello è stato costruito nel XIII secolo e rappresenta un esempio di architettura medievale. La sua posizione elevata offre una vista spettacolare sulla valle del fiume Tevere e sulle colline circostanti.\n\nIn conclusione, la Cappella del Castello di Seppie è un tesoro nascosto nel comune di Lubriano, Italia. La sua architettura barocca, gli affreschi e le opere d'arte al suo interno la rendono un luogo di grande bellezza e spiritualità. Una visita a questa cappella è un'esperienza indimenticabile per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 606,
+        "total_tokens": 644
+    }
+}

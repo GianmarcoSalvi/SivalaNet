@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmn6nsWolfSWRZUcedAa1ObMhy4I",
+    "object": "chat.completion",
+    "created": 1690193356,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Antonio si trova nel comune di Orte, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica per la città.\n\nLa chiesa è situata nel centro storico di Orte, in una posizione dominante che permette di ammirare un panorama mozzafiato sulla valle del Tevere. La sua costruzione risale al XIII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti.\n\nL'edificio presenta uno stile architettonico romanico-gotico, con una facciata a capanna caratterizzata da un portale in pietra finemente decorato. Sopra il portale si apre una grande finestra ad arco, che permette l'ingresso di luce naturale all'interno della chiesa.\n\nL'interno della Chiesa di Santo Antonio è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le decorazioni risalgono al XV secolo e raffigurano scene della vita di Santo Antonio, patrono della chiesa. Gli affreschi sono di grande valore artistico e testimoniano la maestria degli artisti dell'epoca.\n\nNella chiesa sono conservate anche diverse opere d'arte, tra cui una statua lignea di Santo Antonio risalente al XV secolo e un crocifisso ligneo del XIV secolo. Queste opere sono esempi di grande valore artistico e religioso.\n\nLa Chiesa di Santo Antonio è ancora oggi un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. Inoltre, è aperta al pubblico per visite turistiche, permettendo ai visitatori di ammirare l'architettura e le opere d'arte che custodisce.\n\nLa chiesa rappresenta un importante punto di riferimento per la comunità di Orte, sia dal punto di vista religioso che culturale. La sua bellezza e la sua storia la rendono una meta ambita per i turisti che visitano la città, offrendo loro la possibilità di immergersi nella tradizione e nell'arte locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 512,
+        "total_tokens": 545
+    }
+}

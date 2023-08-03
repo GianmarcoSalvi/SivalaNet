@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnQfcZyAudU9Ewl4uJ4Ljonur9ax",
+    "object": "chat.completion",
+    "created": 1690195809,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Croce si trova nel comune di Sutri, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica, situato nel centro storico del paese.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è caratterizzata da un portale decorato con sculture e da una serie di archi ciechi. Sopra il portale principale si trova un rosone, che illumina l'interno della chiesa con la luce del sole.\n\nL'interno della Chiesa di Santa Croce è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di Cristo e dei santi. Tra gli affreschi più importanti vi è una rappresentazione della Crocifissione, che dà il nome alla chiesa.\n\nNella navata laterale si trova una cappella dedicata alla Madonna, con un altare in marmo e una statua della Vergine Maria. Questa cappella è un luogo di devozione per i fedeli e viene spesso utilizzata per le celebrazioni religiose.\n\nLa Chiesa di Santa Croce è anche famosa per il suo campanile, che risale al XIV secolo. È una torre alta e slanciata, con una serie di finestre ad arco che permettono la vista panoramica sulla città e sulla campagna circostante.\n\nOltre alla sua bellezza architettonica, la Chiesa di Santa Croce ha anche un grande valore storico. È stata testimone di numerosi eventi nel corso dei secoli e ha subito diverse modifiche e restauri. Oggi è un importante luogo di culto per la comunità locale e un'attrazione turistica per i visitatori che desiderano ammirare l'arte e l'architettura romanica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 472,
+        "total_tokens": 507
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqwUfVK4T28IDlMPzfmUq2RGmt7M",
+    "object": "chat.completion",
+    "created": 1690209314,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Tuscania è un comune situato nella regione del Lazio, nel centro Italia. Si trova nella provincia di Viterbo, a circa 90 chilometri a nord-ovest di Roma. La città è situata su una collina, a un'altitudine di circa 150 metri, e offre una vista panoramica sulla campagna circostante.\n\nTuscania è una città ricca di storia e cultura. Fondata dagli Etruschi nel VII secolo a.C., è una delle città etrusche meglio conservate d'Italia. Le sue origini risalgono addirittura al periodo pre-romano, e molti dei suoi monumenti e siti archeologici testimoniano questa ricca eredità storica.\n\nUno dei principali punti di interesse di Tuscania è la Basilica di San Pietro, un importante esempio di architettura romanica. Costruita nel XII secolo, la basilica presenta una facciata decorata con sculture e un campanile a torre. All'interno, si possono ammirare affreschi medievali e un altare in marmo.\n\nUn altro luogo di interesse è la Chiesa di Santa Maria Maggiore, anch'essa risalente al XII secolo. Questa chiesa presenta una facciata in stile romanico-gotico e un interno decorato con affreschi e opere d'arte.\n\nTuscania è anche famosa per le sue necropoli etrusche, che si trovano nelle vicinanze della città. Queste necropoli sono costituite da tombe a tumulo, alcune delle quali risalenti al VII secolo a.C. Alcune delle tombe sono state scavate e restaurate, e oggi è possibile visitarle per ammirare gli affreschi e le decorazioni che adornano le pareti interne.\n\nLa città offre anche una varietà di eventi culturali e festival durante tutto l'anno. Uno dei più importanti è il \"Tuscania Festival\", un festival di musica classica che si tiene ogni estate e attira artisti e musicisti da tutto il mondo.\n\nInoltre, Tuscania è circondata da una splendida campagna, che offre opportunità per escursioni e passeggiate panoramiche. La regione circostante è caratterizzata da colline, campi coltivati e vigneti, che producono alcuni dei migliori vini della zona.\n\nIn conclusione, Tuscania è una città affascinante e ricca di storia, con una ricca eredità etrusca e una bellezza naturale mozzafiato. È un luogo ideale per gli amanti della storia, dell'arte e della cultura, nonché per coloro che desiderano immergersi nella tranquillità della campagna italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 635,
+        "total_tokens": 667
+    }
+}

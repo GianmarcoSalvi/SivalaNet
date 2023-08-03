@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flRncQiB6zAcvarMfCedhPHZRnum",
+    "object": "chat.completion",
+    "created": 1690188191,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Marco si trova nel comune di Grotte di Castro, in provincia di Viterbo, nella regione del Lazio, Italia. Questa chiesa è un importante edificio religioso che risale al XIII secolo e rappresenta uno dei principali luoghi di culto della zona.\n\nLa chiesa è situata nel centro storico di Grotte di Castro, in una posizione panoramica che offre una vista mozzafiato sul lago di Bolsena. L'edificio è costruito in stile romanico e presenta una facciata semplice ma elegante, caratterizzata da un portale d'ingresso sormontato da un rosone.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi e dipinti sacri. L'altare maggiore è ornato da un prezioso tabernacolo in marmo, mentre ai lati dell'altare sono presenti due cappelle laterali dedicate a San Marco e alla Madonna del Rosario.\n\nUno degli elementi più interessanti della Chiesa di San Marco è il suo campanile, che si erge maestoso accanto all'edificio principale. Questa torre campanaria è alta e slanciata, con una serie di finestre ad arco che permettono alla luce di filtrare all'interno. Il campanile è un punto di riferimento visivo per il paese e offre una vista panoramica sulla campagna circostante.\n\nLa Chiesa di San Marco è un luogo di culto attivo e viene utilizzata per celebrare messe e cerimonie religiose. Inoltre, è aperta ai visitatori che desiderano ammirare l'architettura e l'arte sacra presenti all'interno. La chiesa rappresenta un importante patrimonio storico e culturale per la comunità locale e attira numerosi turisti interessati all'arte e all'architettura religiosa.\n\nIn conclusione, la Chiesa di San Marco a Grotte di Castro è un edificio religioso di grande importanza storica e artistica. La sua architettura romanica, gli affreschi e i dipinti sacri al suo interno, insieme alla vista panoramica offerta dal campanile, la rendono una meta imperdibile per i visitatori che desiderano immergersi nella storia e nella cultura della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 570,
+        "total_tokens": 606
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enztVh2DOxQ1QSwWVsq4RixDO6cZ",
+    "object": "chat.completion",
+    "created": 1689959665,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex Chiesa di Santa Maria dell'Immacolata Concezione si trova nel comune di Carbognano, in provincia di Viterbo, Italia. Questo edificio religioso è situato nel centro storico del paese e rappresenta un importante punto di riferimento per la comunità locale.\n\nLa chiesa è stata costruita nel XVII secolo e presenta uno stile architettonico barocco. La facciata è caratterizzata da un portale d'ingresso in pietra, decorato con motivi floreali e sculture religiose. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a volta decorato con affreschi raffiguranti scene religiose. Lungo le pareti laterali si trovano diverse cappelle, ognuna dedicata a un santo o a una santa. Le cappelle sono decorate con altari in marmo, dipinti e statue religiose.\n\nUno degli elementi più interessanti della chiesa è l'altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi. Sopra l'altare si trova un grande dipinto raffigurante l'Immacolata Concezione, che dà il nome alla chiesa.\n\nPurtroppo, l'ex Chiesa di Santa Maria dell'Immacolata Concezione è attualmente chiusa al culto e versa in uno stato di abbandono. Tuttavia, nonostante le condizioni di degrado, l'edificio conserva ancora il suo fascino e la sua bellezza architettonica, attirando l'attenzione dei visitatori che desiderano ammirare il suo patrimonio storico e artistico.\n\nSituata in una posizione panoramica, l'ex Chiesa di Santa Maria dell'Immacolata Concezione rappresenta un importante elemento del patrimonio culturale di Carbognano e testimonia la ricca storia religiosa e artistica della zona. Speriamo che in futuro vengano intrapresi sforzi per il restauro e la valorizzazione di questo prezioso edificio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 534,
+        "total_tokens": 576
+    }
+}

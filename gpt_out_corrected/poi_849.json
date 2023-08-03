@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpxSdqhKha0nZBqRVGk7LKy1o6X6",
+    "object": "chat.completion",
+    "created": 1690205530,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Porta San Marco è una delle porte medievali che si trovano nel comune di Viterbo, in Italia. Si trova lungo le mura cittadine, che circondano il centro storico della città.\n\nLa porta è stata costruita nel XIII secolo ed è uno dei principali accessi alla città. È situata lungo la strada che conduce a Roma, ed è quindi un punto di passaggio molto importante per i viaggiatori che si dirigono verso la capitale.\n\nLa Porta San Marco è caratterizzata da una struttura imponente e maestosa. È composta da un arco a tutto sesto, sormontato da una torre quadrangolare. La torre è dotata di merlature e di feritoie, che testimoniano la funzione difensiva della porta durante il periodo medievale.\n\nSulla facciata della porta è presente uno stemma, che rappresenta il leone rampante, simbolo della città di Viterbo. Questo stemma è stato aggiunto in epoca rinascimentale, quando la porta è stata restaurata e ristrutturata.\n\nAttraversando la Porta San Marco, si accede al centro storico di Viterbo, con le sue strade medievali e i suoi palazzi storici. La porta è circondata da un'atmosfera suggestiva e affascinante, che ricorda il passato glorioso della città.\n\nOggi la Porta San Marco è un importante punto di interesse turistico, che attira visitatori da tutto il mondo. È possibile passeggiare lungo le mura cittadine e ammirare la vista panoramica sulla città e sulla campagna circostante.\n\nInoltre, la porta è spesso utilizzata come location per eventi culturali e mostre temporanee. Durante l'anno, vengono organizzate diverse manifestazioni che coinvolgono la porta e le sue vicinanze, rendendo questo luogo ancora più vivace e animato.\n\nIn conclusione, la Porta San Marco è un'importante testimonianza storica e architettonica nel comune di Viterbo. Con la sua imponenza e la sua bellezza, rappresenta un punto di riferimento per la città e un luogo da visitare assolutamente per chiunque si trovi a Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 530,
+        "total_tokens": 562
+    }
+}

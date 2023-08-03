@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enEv37pNj7n0YSXNoHAAKkr3cCgR",
+    "object": "chat.completion",
+    "created": 1689956753,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Civitella Cesi si trova nel comune di Blera, nella regione del Lazio, in Italia. Si tratta di un antico castello medievale che sorge su una collina, offrendo una vista panoramica sulla valle circostante.\n\nIl castello è stato costruito nel XII secolo e ha subito diverse modifiche e ampliamenti nel corso dei secoli. La sua struttura è caratterizzata da una pianta quadrangolare, con quattro torri angolari e un cortile interno. Le mura esterne sono realizzate in pietra e sono ancora ben conservate.\n\nL'ingresso principale del castello è sormontato da un arco a tutto sesto, che conduce a un cortile interno. Qui si trovano le rovine di un antico pozzo e alcuni resti di edifici che un tempo ospitavano le abitazioni dei signori del castello.\n\nAll'interno del castello si possono ammirare diverse sale, alcune delle quali sono state restaurate e adibite a spazi espositivi. Queste sale ospitano mostre temporanee e permanenti che raccontano la storia del castello e della zona circostante.\n\nUna delle caratteristiche più interessanti del Castello di Civitella Cesi è la sua posizione strategica. Grazie alla sua posizione elevata, il castello era in grado di controllare e difendere l'intera valle sottostante. Questo lo rendeva un importante punto di avvistamento e difesa durante il periodo medievale.\n\nOggi, il Castello di Civitella Cesi è aperto al pubblico e può essere visitato. Durante la visita, è possibile esplorare le varie sale e ammirare la vista panoramica dalla sommità delle torri. Inoltre, il castello ospita eventi culturali e manifestazioni durante tutto l'anno, rendendolo un luogo vivace e dinamico.\n\nIn conclusione, il Castello di Civitella Cesi è un affascinante esempio di architettura medievale situato nel comune di Blera, in Italia. La sua posizione panoramica, la sua storia e la sua bellezza architettonica lo rendono una meta ideale per gli amanti della storia e dell'arte."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 539,
+        "total_tokens": 575
+    }
+}

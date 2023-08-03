@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fllyhjssY8NRSerzIX2hwbOqRkZg",
+    "object": "chat.completion",
+    "created": 1690189442,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Sebastiano si trova nel comune di Latera, in provincia di Viterbo, Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XV secolo e presenta uno stile architettonico gotico. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, sormontato da una finestra ad arco ogivale. Sopra la finestra si trova un rosone decorato con motivi geometrici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate lignee. Le pareti sono decorate con affreschi risalenti al XV secolo, raffiguranti scene della vita di Santo Sebastiano, il santo patrono della chiesa. Gli affreschi sono realizzati con colori vivaci e dettagliati, e sono considerati un importante esempio di pittura rinascimentale.\n\nNella chiesa si trovano anche diverse opere d'arte, tra cui una statua lignea di Santo Sebastiano, risalente al XV secolo, e un altare in marmo intarsiato, realizzato nel XVII secolo. Sull'altare si trova un dipinto raffigurante il martirio di Santo Sebastiano.\n\nLa Chiesa di Santo Sebastiano è un luogo di culto attivo, dove si svolgono regolarmente messe e cerimonie religiose. È anche una meta turistica molto apprezzata, grazie alla sua bellezza artistica e alla sua posizione panoramica, che offre una vista mozzafiato sulla campagna circostante.\n\nIn conclusione, la Chiesa di Santo Sebastiano a Latera è un gioiello architettonico e artistico, che testimonia la ricca storia e la tradizione religiosa della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 439,
+        "total_tokens": 473
+    }
+}

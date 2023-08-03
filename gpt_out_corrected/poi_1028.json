@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqviAdCU2Ng5CTOzdh6FQpCKbo1B",
+    "object": "chat.completion",
+    "created": 1690209266,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Sutri è un comune italiano situato nella regione del Lazio, nella provincia di Viterbo. Si trova a circa 50 chilometri a nord di Roma, in una posizione collinare che offre una vista panoramica sulla valle del Tevere.\n\nIl centro storico di Sutri è caratterizzato da un'atmosfera medievale, con stradine strette e tortuose, case in pietra e antiche chiese. Uno dei principali punti di interesse è l'anfiteatro romano, uno dei più antichi d'Italia, risalente al I secolo a.C. Questo anfiteatro è scavato nella roccia vulcanica e può ospitare fino a 8.000 spettatori. Ancora oggi viene utilizzato per spettacoli teatrali e concerti durante l'estate.\n\nUn'altra attrazione di Sutri è la Necropoli Etrusca, un'area archeologica che risale al VII secolo a.C. Qui si possono ammirare tombe a camera scavate nella roccia, decorate con affreschi e oggetti funerari. La necropoli è un importante sito per lo studio della civiltà etrusca e offre una visione unica sulla vita e la morte di questa antica civiltà.\n\nNel centro storico si trovano anche la Chiesa di Santa Maria del Parto, un edificio romanico del XII secolo, e la Chiesa di San Francesco, che ospita un museo con una collezione di opere d'arte sacra.\n\nSutri è circondata da una natura rigogliosa e offre molte opportunità per escursioni e attività all'aperto. Nei dintorni si trovano il Parco Naturale Regionale di Bracciano-Martignano e il Lago di Vico, dove è possibile fare passeggiate, escursioni in bicicletta e praticare sport acquatici.\n\nLa gastronomia di Sutri è tipica della cucina laziale, con piatti a base di pasta fresca, carne e verdure di stagione. Tra i piatti tradizionali ci sono la pasta alla carbonara, la porchetta e la pizza romana.\n\nSutri è un luogo affascinante che offre una combinazione unica di storia, cultura e natura. È un'ottima destinazione per chi desidera scoprire l'autentico spirito dell'Italia e immergersi nella sua ricca storia e tradizione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 569,
+        "total_tokens": 600
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpwoFrbiSxw5QQCxDsmmtYin7KpS",
+    "object": "chat.completion",
+    "created": 1690205490,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Piazza del Gesù si trova nel centro storico di Viterbo, una città situata nella regione del Lazio, in Italia. È una delle piazze più importanti e caratteristiche della città, ricca di storia e di bellezze architettoniche.\n\nLa piazza prende il nome dalla Chiesa del Gesù, un edificio religioso di grande importanza storica e artistica. La chiesa fu costruita nel XVI secolo e presenta uno stile architettonico rinascimentale. La facciata è imponente e decorata con statue e bassorilievi, mentre l'interno è ricco di opere d'arte, tra cui affreschi e dipinti.\n\nLa Piazza del Gesù è circondata da edifici storici e palazzi nobiliari. Uno dei più importanti è il Palazzo dei Papi, che fu la residenza dei papi durante il periodo in cui Viterbo fu sede del Papato. Il palazzo è un esempio di architettura medievale e ospita oggi il Museo Civico, dove è possibile ammirare una vasta collezione di opere d'arte e reperti archeologici.\n\nLa piazza è anche caratterizzata da una fontana monumentale, chiamata Fontana del Pellegrino, che risale al XIII secolo. La fontana è decorata con statue e raffigura un pellegrino che si disseta alla fonte. È un luogo di incontro e di ritrovo per i cittadini e i turisti, che possono godere della bellezza del luogo e rilassarsi seduti sui suoi gradini.\n\nLa Piazza del Gesù è animata da numerosi eventi e manifestazioni culturali durante tutto l'anno. Durante il periodo natalizio, ad esempio, la piazza si trasforma in un suggestivo mercatino di Natale, con bancarelle che vendono prodotti artigianali e gastronomici tipici della tradizione locale.\n\nInoltre, la piazza è circondata da negozi, caffè e ristoranti, dove è possibile gustare la cucina tradizionale viterbese e fare shopping di prodotti locali.\n\nIn conclusione, la Piazza del Gesù è un luogo di grande fascino e importanza storica nel comune di Viterbo. Con la sua chiesa rinascimentale, il Palazzo dei Papi e la Fontana del Pellegrino, rappresenta un punto di riferimento per la vita sociale e culturale della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 585,
+        "total_tokens": 618
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmCyV0ejDZmqTfI47Xu3bHEpmyCW",
+    "object": "chat.completion",
+    "created": 1690191116,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Pietro Apostolo si trova nel comune di Nepi, in provincia di Viterbo, Italia. È una chiesa di origine medievale che risale al XII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata nel centro storico di Nepi, in una posizione dominante che offre una vista panoramica sulla città e sulla campagna circostante. È costruita in stile romanico, con una facciata semplice ma imponente, caratterizzata da un portale in pietra e da una grande finestra centrale.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. Tra le opere d'arte più importanti presenti all'interno della chiesa, si possono ammirare un crocifisso ligneo del XV secolo e una Madonna con Bambino del XVI secolo.\n\nLa chiesa è dedicata a Santo Pietro Apostolo, il primo Papa della Chiesa cattolica. La sua festa viene celebrata il 29 giugno di ogni anno, con una solenne processione che attraversa le vie del centro storico di Nepi.\n\nLa Chiesa di Santo Pietro Apostolo è un importante luogo di culto per la comunità di Nepi e un punto di riferimento per i visitatori che desiderano conoscere la storia e l'arte della città. La sua architettura suggestiva e le opere d'arte al suo interno la rendono una tappa imperdibile per gli amanti dell'arte e della spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 391,
+        "total_tokens": 427
+    }
+}

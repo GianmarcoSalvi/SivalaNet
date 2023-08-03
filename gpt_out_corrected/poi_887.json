@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq8vHpBfcnqkPAXD130HN4jD0HPV",
+    "object": "chat.completion",
+    "created": 1690206241,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna del Rosario si trova nel comune di Viterbo, in Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nel centro storico di Viterbo, in Piazza del Plebiscito, e risale al XIII secolo. È stata costruita in stile romanico-gotico e presenta una facciata imponente e decorata con un portale in marmo bianco. La facciata è caratterizzata da una serie di archi ciechi e da una grande finestra centrale.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le pareti sono decorate con affreschi raffiguranti scene della vita di Maria e del Rosario. Al centro dell'altare maggiore si trova una statua della Madonna del Rosario, risalente al XV secolo, che è oggetto di grande devozione da parte dei fedeli.\n\nLa chiesa ospita anche una serie di cappelle laterali, ognuna delle quali è dedicata a un santo o a un evento religioso. Le cappelle sono decorate con affreschi e statue di grande valore artistico.\n\nLa Chiesa della Madonna del Rosario è un luogo di culto molto frequentato dai fedeli e ospita regolarmente celebrazioni religiose e liturgiche. È anche un importante punto di riferimento per i turisti che visitano Viterbo, grazie alla sua bellezza architettonica e artistica.\n\nInoltre, la chiesa si trova in una posizione strategica nel centro storico di Viterbo, vicino ad altri importanti monumenti e attrazioni turistiche, come il Palazzo dei Papi e la Fontana Grande. La sua posizione centrale la rende facilmente accessibile e visibile a tutti coloro che visitano la città.\n\nIn conclusione, la Chiesa della Madonna del Rosario a Viterbo è un gioiello architettonico e artistico, che rappresenta un importante punto di riferimento per la comunità religiosa e per i visitatori della città. La sua bellezza e la sua storia la rendono un luogo di grande interesse culturale e spirituale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 526,
+        "total_tokens": 562
+    }
+}

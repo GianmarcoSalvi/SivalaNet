@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnEgonJp2MSG7c4CUidsLEKqjxnE",
+    "object": "chat.completion",
+    "created": 1690195066,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Eutizio si trova nel comune di Soriano nel Cimino, nella regione del Lazio, in Italia. È una chiesa di origine medievale che risale al XII secolo e rappresenta uno dei principali luoghi di culto della zona.\n\nLa chiesa è dedicata a Sant'Eutizio, un santo eremita che visse nel IV secolo e che è venerato come patrono di Soriano nel Cimino. La sua figura è rappresentata all'interno della chiesa in diverse opere d'arte.\n\nL'edificio presenta uno stile architettonico romanico, con una facciata semplice ma elegante. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi geometrici e sculture raffiguranti figure religiose. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce all'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali. Gli affreschi raffigurano scene della vita di Sant'Eutizio e di altri santi, e sono un importante esempio dell'arte medievale nella regione.\n\nNella chiesa si trovano anche diverse opere d'arte, tra cui una statua di Sant'Eutizio risalente al XV secolo e un altare in marmo intarsiato. Sono presenti anche alcune cappelle laterali, decorate con dipinti e sculture.\n\nLa Chiesa di Sant'Eutizio è un luogo di culto molto importante per la comunità locale, che vi si riunisce per le celebrazioni religiose e per pregare. È anche una meta turistica per gli amanti dell'arte e della storia, che possono ammirare l'architettura romanica e gli affreschi medievali.\n\nLa chiesa si trova in una posizione panoramica, su una collina che domina il paesaggio circostante. Questo permette ai visitatori di godere di una vista spettacolare sulla campagna circostante e sul borgo medievale di Soriano nel Cimino.\n\nIn conclusione, la Chiesa di Sant'Eutizio a Soriano nel Cimino è un gioiello architettonico e artistico che rappresenta una testimonianza importante della storia e della cultura della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 585,
+        "total_tokens": 624
+    }
+}

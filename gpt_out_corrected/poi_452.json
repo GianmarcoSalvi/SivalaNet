@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fltRF7v3IrYi2rImMV5RVacCXyRl",
+    "object": "chat.completion",
+    "created": 1690189905,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Grotta delle Apparizioni si trova nel comune di Marta, in Italia, ed è un luogo di grande importanza religiosa. La grotta è situata sulla riva del Lago di Bolsena, uno dei laghi vulcanici più grandi d'Europa.\n\nLa grotta è stata scoperta nel 1943 da un pescatore locale di nome Bruno Cornacchiola, che affermava di aver avuto delle visioni della Vergine Maria all'interno della grotta. Queste apparizioni sono state riconosciute dalla Chiesa Cattolica come autentiche nel 1947.\n\nLa Grotta delle Apparizioni è diventata un luogo di pellegrinaggio per i fedeli cattolici, che vengono qui per pregare e cercare conforto spirituale. La grotta è stata trasformata in un santuario, con un altare e una statua della Vergine Maria al suo interno.\n\nL'accesso alla grotta è attraverso una scala che porta giù nella caverna sotterranea. Una volta all'interno, si può sentire un'atmosfera di pace e spiritualità. Le pareti della grotta sono ricoperte di ex voto e immagini sacre lasciate dai pellegrini nel corso degli anni.\n\nLa Grotta delle Apparizioni è anche circondata da un parco, dove i visitatori possono passeggiare e godere della bellezza del paesaggio circostante. Il lago offre una vista mozzafiato e un'atmosfera tranquilla, che contribuisce alla spiritualità del luogo.\n\nOgni anno, il 2 febbraio, si celebra una messa speciale nella grotta per commemorare l'apparizione della Vergine Maria. Durante questa celebrazione, la grotta è affollata di fedeli che si riuniscono per pregare e partecipare alla messa.\n\nLa Grotta delle Apparizioni è un luogo di grande significato religioso e storico per la comunità locale e per i pellegrini che viaggiano da lontano per visitarla. È un luogo di pace e riflessione, dove i visitatori possono trovare conforto spirituale e connessione con la loro fede."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 522,
+        "total_tokens": 556
+    }
+}

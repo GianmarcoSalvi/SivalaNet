@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7frQsDgZVHik9Eut16fE21VnQMDTD",
+    "object": "chat.completion",
+    "created": 1690211198,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Oasi WWF del Lago di Alviano si trova nel comune di Gallese, nella regione del Lazio, in Italia. Questa riserva naturale è stata istituita nel 1978 e si estende su una superficie di circa 900 ettari.\n\nL'Oasi del Lago di Alviano è caratterizzata da un paesaggio unico e suggestivo, con una grande varietà di habitat naturali. Al suo interno si trovano il lago di Alviano, le paludi, le zone umide, le praterie e le colline circostanti. Questa diversità di ambienti crea un'ampia gamma di condizioni ecologiche, che favoriscono la presenza di una ricca biodiversità.\n\nLa riserva ospita numerose specie di uccelli, sia migratori che stanziali. È un importante punto di sosta per molte specie di uccelli migratori durante le loro rotte migratorie, come ad esempio l'airone cenerino, il tarabuso, il falco di palude e il falco pellegrino. Inoltre, l'oasi è anche un importante sito di nidificazione per molte specie di uccelli acquatici, come il germano reale, il moriglione e il cavaliere d'Italia.\n\nOltre agli uccelli, l'Oasi del Lago di Alviano ospita anche una varietà di mammiferi, rettili, anfibi e insetti. Tra i mammiferi presenti vi sono il cinghiale, la volpe, il tasso e la donnola. Tra i rettili e gli anfibi, si possono trovare la testuggine d'acqua, la rana verde e la raganella. Inoltre, la riserva è anche un importante habitat per diverse specie di farfalle e libellule.\n\nL'Oasi WWF del Lago di Alviano offre diverse attività per i visitatori. È possibile fare escursioni a piedi o in bicicletta lungo i sentieri ben segnalati, che permettono di esplorare l'area e ammirare la sua bellezza naturale. Inoltre, sono disponibili anche visite guidate in barca sul lago, che offrono un'opportunità unica per osservare da vicino la fauna e la flora dell'oasi.\n\nLa riserva è dotata di un centro visitatori, dove è possibile ottenere informazioni dettagliate sulla fauna e la flora presenti nell'area. Il centro organizza anche attività educative e didattiche per le scuole e per i visitatori interessati a conoscere meglio l'ecosistema dell'oasi.\n\nL'Oasi WWF del Lago di Alviano è un luogo ideale per gli amanti della natura e per coloro che desiderano trascorrere del tempo immersi nella tranquillità e nella bellezza del paesaggio. La sua importanza ecologica e la sua varietà di specie la rendono un luogo unico nel suo genere, che merita sicuramente una visita."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 706,
+        "total_tokens": 746
+    }
+}

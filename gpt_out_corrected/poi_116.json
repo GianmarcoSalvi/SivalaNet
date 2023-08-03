@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enNSLnpcyvwMxq74GtbSjAHUTk2t",
+    "object": "chat.completion",
+    "created": 1689957282,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le \"Pietre Lanciate\" nel comune di Bolsena, Italia, sono un fenomeno geologico unico che ha affascinato visitatori e scienziati per secoli. Situate sulle rive del lago di Bolsena, queste pietre sono state oggetto di leggende e misteri.\n\nLe Pietre Lanciate sono grandi massi di origine vulcanica che si trovano sulle spiagge del lago. Sono composte principalmente da tufo, una roccia vulcanica porosa e leggera che si è formata durante l'eruzione del vulcano Vulsini, avvenuta circa 300.000 anni fa. Questi massi sono stati erosi e levigati dall'azione delle onde del lago nel corso dei millenni, assumendo forme arrotondate e lisce.\n\nCiò che rende le Pietre Lanciate così speciali è la loro capacità di galleggiare sull'acqua. Nonostante il loro peso e la loro densità, queste pietre sembrano sfidare la gravità quando vengono lanciate nel lago. Questo fenomeno è stato oggetto di numerose teorie e spiegazioni scientifiche, ma non è ancora stato completamente compreso.\n\nLe Pietre Lanciate sono diventate una delle attrazioni principali di Bolsena, attirando turisti da tutto il mondo. Molti visitatori cercano di lanciare le pietre nel lago per vedere se possono galleggiare, mentre altri si limitano a osservare e ammirare questo straordinario fenomeno naturale.\n\nOltre alla loro peculiarità geologica, le Pietre Lanciate sono anche associate a diverse leggende e storie locali. Una delle leggende più famose racconta di un pescatore che, durante una tempesta sul lago, si aggrappò a una di queste pietre per salvarsi la vita. Da allora, si dice che le Pietre Lanciate portino fortuna e protezione a chi le tocca.\n\nLe Pietre Lanciate sono un vero tesoro naturale nel comune di Bolsena, offrendo una combinazione unica di bellezza paesaggistica, storia geologica e fascino misterioso. Sono un luogo da visitare assolutamente per chiunque si trovi in questa parte dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 531,
+        "total_tokens": 563
+    }
+}

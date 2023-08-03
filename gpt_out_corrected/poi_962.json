@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqar6xVmhvknssE7wqfTsGbXIf3k",
+    "object": "chat.completion",
+    "created": 1690207973,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Facoltà di economia dell'Università degli studi della Tuscia si trova nel comune di Viterbo, Italia. È situata all'interno del campus universitario, offrendo un ambiente accogliente e tranquillo per lo studio e la ricerca.\n\nLa biblioteca dispone di una vasta collezione di risorse bibliografiche, compresi libri, riviste, periodici, tesi di laurea e documenti di ricerca. La sua collezione si concentra principalmente sulle discipline economiche, come l'economia aziendale, l'economia politica, la finanza e la statistica. Tuttavia, sono disponibili anche risorse su argomenti correlati, come il diritto commerciale e la gestione delle risorse umane.\n\nLa biblioteca offre un servizio di prestito, consentendo agli studenti e al personale accademico di prendere in prestito libri e altri materiali per un determinato periodo di tempo. È possibile consultare il catalogo online per verificare la disponibilità dei materiali e prenotarli in anticipo.\n\nInoltre, la biblioteca fornisce accesso a una vasta gamma di risorse digitali, tra cui banche dati, riviste e libri elettronici. Gli utenti possono accedere a queste risorse sia all'interno della biblioteca che da remoto, utilizzando le credenziali di accesso fornite dall'università.\n\nLa struttura della biblioteca è dotata di spazi di studio individuali e di gruppo, consentendo agli utenti di lavorare in modo collaborativo o concentrarsi sul proprio lavoro. Ci sono anche postazioni computer con accesso a Internet e stampanti disponibili per gli utenti.\n\nIl personale della biblioteca è disponibile per fornire assistenza e supporto nella ricerca di informazioni, nell'utilizzo delle risorse digitali e nella ricerca bibliografica. Sono inoltre organizzati corsi di formazione per aiutare gli utenti a sviluppare le competenze necessarie per utilizzare al meglio le risorse disponibili.\n\nIn conclusione, la Biblioteca della Facoltà di economia dell'Università degli studi della Tuscia è un'importante risorsa per gli studenti e il personale accademico che studiano o lavorano nel campo dell'economia. Offre una vasta collezione di risorse, servizi di prestito e accesso a risorse digitali, creando un ambiente ideale per lo studio e la ricerca."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 567,
+        "total_tokens": 615
+    }
+}

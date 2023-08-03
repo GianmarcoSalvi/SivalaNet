@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flo2wxjaUbuMW6IekU2EseNaaw41",
+    "object": "chat.completion",
+    "created": 1690189570,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex Palazzo Municipale di Lubriano è un edificio storico situato nel comune di Lubriano, in Italia. Si trova nel centro storico del paese, in una posizione panoramica che offre una vista mozzafiato sulla valle del fiume Tevere.\n\nL'edificio risale al XV secolo ed è stato utilizzato come municipio fino agli anni '70, quando è stato trasferito in una nuova sede. Oggi, l'ex Palazzo Municipale è stato restaurato e adibito a scopi culturali e turistici.\n\nL'architettura dell'edificio è tipica del periodo rinascimentale, con una facciata in pietra e un portale d'ingresso decorato. L'interno presenta affreschi e decorazioni originali, che testimoniano la ricchezza e l'importanza storica del palazzo.\n\nAll'interno dell'ex Palazzo Municipale è possibile visitare diverse sale, tra cui la sala del consiglio comunale, che conserva ancora gli arredi originali. Alcune sale sono utilizzate per mostre temporanee e eventi culturali, mentre altre ospitano una collezione permanente di opere d'arte locali.\n\nIl palazzo è circondato da un cortile interno, che offre un'atmosfera tranquilla e suggestiva. Qui è possibile ammirare un pozzo antico e una fontana, che contribuiscono a creare un'atmosfera autentica e suggestiva.\n\nL'ex Palazzo Municipale è un luogo di grande interesse storico e artistico, che rappresenta una testimonianza del passato glorioso di Lubriano. La sua posizione panoramica e la bellezza architettonica lo rendono una meta ideale per i visitatori che desiderano immergersi nella storia e nella cultura del luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 419,
+        "total_tokens": 452
+    }
+}

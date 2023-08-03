@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en9yTjeG11IolOycLdbEJXVF9AYi",
+    "object": "chat.completion",
+    "created": 1689956446,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La necropoli rupestre di San Giuliano si trova nel comune di Barbarano Romano, nella regione del Lazio, in Italia. Questo sito archeologico è una delle necropoli più importanti e meglio conservate della regione.\n\nLa necropoli rupestre di San Giuliano è situata su una collina rocciosa, circondata da una fitta vegetazione. È composta da numerose tombe scavate nella roccia, risalenti all'epoca etrusca, che si estendono per diversi ettari. Le tombe sono disposte in modo irregolare e sono caratterizzate da diverse forme e dimensioni.\n\nLe tombe sono accessibili attraverso una serie di scalinate e corridoi scavati nella roccia. Alcune di esse sono decorate con affreschi e rilievi, che rappresentano scene di vita quotidiana, divinità e simboli religiosi. Questi affreschi sono un importante testimonianza dell'arte etrusca e forniscono preziose informazioni sulla cultura e la società di quell'epoca.\n\nAll'interno delle tombe sono stati rinvenuti numerosi oggetti funerari, come vasi di ceramica, gioielli, armi e utensili, che sono stati conservati e sono esposti in alcuni musei della zona. Questi reperti archeologici sono di grande valore storico e permettono di approfondire la conoscenza dell'antica civiltà etrusca.\n\nLa necropoli rupestre di San Giuliano è stata scoperta nel XIX secolo e da allora è stata oggetto di numerosi studi e ricerche archeologiche. Il sito è aperto al pubblico e offre la possibilità di visitare le tombe e ammirare gli affreschi e i reperti archeologici. La necropoli rappresenta un'importante attrazione turistica per gli amanti dell'archeologia e della storia antica.\n\nInoltre, la necropoli rupestre di San Giuliano si trova in una posizione panoramica, che offre una vista mozzafiato sulla campagna circostante. Questo rende la visita ancora più suggestiva e affascinante, permettendo ai visitatori di immergersi completamente nell'atmosfera dell'antica civiltà etrusca.\n\nIn conclusione, la necropoli rupestre di San Giuliano è un sito archeologico di grande importanza storica e culturale. Le tombe scavate nella roccia, gli affreschi e i reperti archeologici offrono una preziosa testimonianza dell'antica civiltà etrusca e permettono di approfondire la conoscenza di questa affascinante cultura. La visita a questo sito offre un'esperienza unica e suggestiva, che permette di immergersi nel passato e di apprezzare la bellezza e la ricchezza dell'arte etrusca."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 677,
+        "total_tokens": 717
+    }
+}

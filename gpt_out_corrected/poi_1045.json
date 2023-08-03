@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fr10kilO4q64UmsX5xBfhHBQxhEL",
+    "object": "chat.completion",
+    "created": 1690209594,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cattedrale di Sutri è un importante edificio religioso situato nel comune di Sutri, nella regione del Lazio, in Italia. La cattedrale è dedicata a Santa Maria Assunta ed è considerata uno dei principali luoghi di culto della zona.\n\nL'edificio attuale risale al XII secolo, ma è stato costruito su un sito che ha una storia molto più antica. Infatti, la cattedrale sorge su un'area che era già occupata da un tempio romano dedicato a Mitra, il dio del sole. Questo tempio è ancora visibile all'interno della cattedrale, con le sue colonne e il suo pavimento in marmo.\n\nLa facciata della cattedrale è di stile romanico e presenta un portale decorato con sculture e bassorilievi. L'interno è a navata unica, con un soffitto a capriate e pareti decorate con affreschi medievali. La cattedrale ospita anche una serie di cappelle laterali, alcune delle quali sono decorate con affreschi e opere d'arte di grande valore.\n\nUno dei punti salienti della cattedrale è la cripta, che si trova sotto l'altare maggiore. La cripta è un ambiente suggestivo, con volte a crociera e colonne in pietra. Al suo interno sono conservate alcune reliquie e si possono ammirare affreschi risalenti al XII secolo.\n\nLa Cattedrale di Sutri è un importante centro di culto e spiritualità per la comunità locale. Oltre alle funzioni religiose regolari, la cattedrale ospita anche concerti e eventi culturali. Inoltre, è una meta turistica molto apprezzata per la sua bellezza architettonica e storica.\n\nLa cattedrale si trova nel centro storico di Sutri, che è un affascinante borgo medievale. La sua posizione elevata offre una vista panoramica sulla campagna circostante. La cattedrale è facilmente accessibile e si trova a breve distanza da altre attrazioni turistiche di Sutri, come l'anfiteatro romano e la necropoli etrusca.\n\nIn conclusione, la Cattedrale di Sutri è un gioiello architettonico e storico che merita una visita. La sua storia millenaria, la sua bellezza artistica e la sua atmosfera spirituale la rendono un luogo di grande interesse per i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 578,
+        "total_tokens": 614
+    }
+}

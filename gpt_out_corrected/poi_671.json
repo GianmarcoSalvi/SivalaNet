@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fowk7ASmVPSH8wHyJR652Yhdw7GQ",
+    "object": "chat.completion",
+    "created": 1690201642,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Concattedrale di Santa Maria Assunta in Cielo si trova nel comune di Sutri, nella regione del Lazio, in Italia. È uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura religiosa.\n\nLa concattedrale è stata costruita nel XII secolo e presenta uno stile romanico, con influenze gotiche. La facciata è caratterizzata da un portale centrale sormontato da un rosone, entrambi decorati con sculture e rilievi che rappresentano scene bibliche e simboli religiosi. Sopra il portale si trova un loggiato con archi a tutto sesto, che conferisce un aspetto elegante ed imponente alla struttura.\n\nL'interno della concattedrale è a pianta basilicale, con tre navate separate da colonne e archi. Le navate laterali sono decorate con affreschi e dipinti che raffigurano episodi della vita di Gesù e dei santi. Il soffitto a capriate in legno è particolarmente suggestivo e conferisce un'atmosfera calda e accogliente all'ambiente.\n\nUno degli elementi più interessanti della concattedrale è il presbiterio, che ospita l'altare maggiore. Quest'ultimo è decorato con mosaici dorati e affreschi che rappresentano scene della vita di Maria. Dietro l'altare si trova un coro ligneo intagliato, risalente al XVIII secolo, che aggiunge un tocco di eleganza e raffinatezza all'ambiente.\n\nLa concattedrale di Santa Maria Assunta in Cielo è un luogo di grande importanza religiosa per la comunità di Sutri, ma è anche una meta turistica molto apprezzata. La sua architettura affascinante e i suoi tesori artistici la rendono una tappa imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 460,
+        "total_tokens": 501
+    }
+}

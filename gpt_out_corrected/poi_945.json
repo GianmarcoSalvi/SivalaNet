@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqSfYMnjUwOFDTLxPSv56DB6HRnw",
+    "object": "chat.completion",
+    "created": 1690207465,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca padre Lorenzo Cozza si trova nel comune di Viterbo, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca prende il nome da padre Lorenzo Cozza, un frate francescano che ha dedicato la sua vita all'istruzione e alla promozione della cultura. La struttura è stata inaugurata nel 1998 e si trova in un edificio moderno e accogliente.\n\nLa biblioteca dispone di una vasta collezione di libri, riviste, giornali e materiale audiovisivo. Gli utenti possono accedere a una varietà di generi letterari, tra cui narrativa, saggistica, poesia, storia, arte e molto altro ancora. La biblioteca offre anche una sezione dedicata ai bambini, con libri e giochi adatti alle diverse fasce d'età.\n\nOltre alla collezione di libri, la biblioteca offre anche servizi come il prestito interbibliotecario, che consente agli utenti di richiedere libri da altre biblioteche, e il servizio di consulenza bibliografica, dove gli utenti possono ottenere assistenza nella ricerca di informazioni specifiche.\n\nLa biblioteca padre Lorenzo Cozza organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, mostre d'arte e incontri con autori. Questi eventi offrono agli utenti l'opportunità di incontrare e interagire con esperti del settore e di approfondire le proprie conoscenze.\n\nLa struttura della biblioteca è moderna e accogliente, con spazi dedicati alla lettura e alla consultazione dei materiali. Gli utenti possono utilizzare i computer e l'accesso a Internet per la ricerca e lo studio. La biblioteca dispone anche di una sala studio silenziosa, dove gli utenti possono concentrarsi e studiare in tranquillità.\n\nLa Biblioteca padre Lorenzo Cozza è un importante punto di riferimento per la comunità di Viterbo, offrendo un luogo di incontro e di apprendimento per persone di tutte le età. Con la sua vasta collezione di risorse e i suoi servizi di alta qualità, la biblioteca si impegna a promuovere la cultura e l'istruzione nella città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 534,
+        "total_tokens": 569
+    }
+}

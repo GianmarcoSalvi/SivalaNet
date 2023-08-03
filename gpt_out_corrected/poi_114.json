@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enMtNbSk9QLYVV7P6hGRg3fb6qq4",
+    "object": "chat.completion",
+    "created": 1689957247,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Madonna del Giglio si trova nel comune di Bolsena, in Italia. È una chiesa di origine medievale che risale al XIII secolo, anche se è stata oggetto di diverse modifiche e restauri nel corso dei secoli.\n\nLa chiesa è situata nel centro storico di Bolsena, vicino al lago omonimo. È costruita in stile romanico e presenta una facciata semplice ma elegante, con un portale d'ingresso sormontato da un rosone. La facciata è realizzata in pietra locale, conferendo un aspetto rustico ed affascinante alla struttura.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. Uno degli elementi più notevoli è l'altare maggiore, realizzato in marmo bianco e decorato con sculture e intagli dettagliati. L'altare ospita una statua della Madonna del Giglio, da cui la chiesa prende il nome.\n\nLa chiesa è anche famosa per ospitare un pregevole organo a canne, risalente al XVIII secolo. L'organo è stato restaurato nel corso degli anni ed è ancora funzionante, aggiungendo un elemento musicale alla bellezza architettonica della chiesa.\n\nLa Chiesa Madonna del Giglio è un importante luogo di culto per la comunità di Bolsena e attira anche numerosi visitatori e turisti. Oltre alla sua importanza religiosa, la chiesa è anche un punto di riferimento storico e culturale per la città, testimoniando la sua ricca storia e tradizione.\n\nInoltre, la chiesa è situata in una posizione panoramica, con una vista mozzafiato sul lago di Bolsena e sui dintorni. Questo la rende un luogo ideale per una visita tranquilla e per godere della bellezza naturale della zona.\n\nIn sintesi, la Chiesa Madonna del Giglio a Bolsena è un gioiello architettonico e spirituale che merita una visita. Con la sua storia millenaria, l'arte e la bellezza che la caratterizzano, rappresenta un importante punto di riferimento per la comunità locale e un luogo di interesse per i visitatori che desiderano immergersi nella storia e nella cultura di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 573,
+        "total_tokens": 607
+    }
+}

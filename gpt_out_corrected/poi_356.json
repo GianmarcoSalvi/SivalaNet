@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flCWk0NyPvvNBPVvRFVYhuq5Y3dC",
+    "object": "chat.completion",
+    "created": 1690187244,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Famiano si trova nel comune di Gallese, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è dedicata a San Famiano, un santo eremita che visse nel IV secolo. L'edificio è stato costruito in stile romanico e presenta una facciata semplice ma elegante, caratterizzata da un portale d'ingresso sormontato da un rosone circolare. La facciata è realizzata in pietra locale, conferendo all'edificio un aspetto solido e resistente.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di San Famiano e altri santi. Questi affreschi sono un esempio significativo dell'arte medievale e sono stati restaurati per preservarne la bellezza e l'integrità nel corso degli anni.\n\nNella chiesa si trova anche un altare in marmo, decorato con intarsi e sculture dettagliate. Sopra l'altare è collocata una pala d'altare raffigurante San Famiano, realizzata da un artista locale nel XVII secolo. Questa pala d'altare è considerata un'opera d'arte di grande valore e rappresenta uno dei punti focali della chiesa.\n\nLa Chiesa di San Famiano è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari. È anche aperta ai visitatori che desiderano ammirare l'architettura e l'arte all'interno. La chiesa è un importante punto di riferimento per la comunità locale e rappresenta una testimonianza della storia e della cultura di Gallese."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 484,
+        "total_tokens": 519
+    }
+}

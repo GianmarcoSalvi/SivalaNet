@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp2RC5MZoKdN5bAvI5XLShfzaGwp",
+    "object": "chat.completion",
+    "created": 1690201995,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca ex Convento Santo Marco si trova nel comune di Tarquinia, in Italia. Questa biblioteca è situata all'interno di un antico convento, che risale al XV secolo e che è stato successivamente trasformato in una struttura culturale.\n\nL'edificio che ospita la biblioteca è di grande valore storico e architettonico. La sua facciata è caratterizzata da un portale in pietra, decorato con motivi rinascimentali, che si apre su un cortile interno. All'interno, si possono ammirare affreschi e decorazioni originali che testimoniano la ricchezza artistica dell'epoca.\n\nLa biblioteca offre un ambiente accogliente e silenzioso, ideale per lo studio e la lettura. Dispone di una vasta collezione di libri, riviste e materiali multimediali, che coprono una vasta gamma di argomenti. La biblioteca è specializzata in storia locale, arte e cultura, ma offre anche una varietà di opere letterarie, scientifiche e di altro genere.\n\nGli utenti possono accedere ai materiali presenti in biblioteca, consultare libri e riviste in loco o prendere in prestito i materiali per un periodo di tempo determinato. La biblioteca offre anche servizi di ricerca e consulenza, per aiutare gli utenti a trovare le informazioni di cui hanno bisogno.\n\nOltre alla sua funzione principale come biblioteca, l'ex Convento Santo Marco ospita anche mostre, conferenze e altri eventi culturali. Questi eventi offrono un'opportunità per la comunità di Tarquinia di incontrarsi, condividere interessi comuni e approfondire la conoscenza della storia e della cultura locale.\n\nIn sintesi, la Biblioteca ex Convento Santo Marco è un luogo di grande valore storico e culturale nel comune di Tarquinia. Oltre a offrire una vasta collezione di libri e materiali multimediali, la biblioteca ospita anche eventi culturali che arricchiscono la vita della comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 489,
+        "total_tokens": 526
+    }
+}

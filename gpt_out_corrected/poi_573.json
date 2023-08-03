@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmnNPorpq8NqVxwhfAn5XpOQUUTP",
+    "object": "chat.completion",
+    "created": 1690193373,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria di Loreto si trova nel comune di Orte, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nella parte alta del centro storico di Orte, in una posizione panoramica che offre una vista mozzafiato sulla valle del Tevere. La sua costruzione risale al XVII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra e da una finestra centrale. L'interno della chiesa è a navata unica, con una serie di cappelle laterali che ospitano altari e opere d'arte.\n\nTra le opere più significative conservate all'interno della Chiesa di Santa Maria di Loreto vi è un affresco del XV secolo raffigurante la Madonna con il Bambino, attribuito a Antoniazzo Romano, uno dei più importanti pittori del Rinascimento italiano. Questo affresco è considerato uno dei tesori artistici di Orte.\n\nAltre opere d'arte degne di nota sono un dipinto del XVII secolo raffigurante la Madonna del Rosario, una statua lignea della Madonna di Loreto e una serie di affreschi che decorano le cappelle laterali.\n\nLa chiesa è anche famosa per la sua cripta, situata sotto l'altare maggiore. Questa cripta è stata utilizzata come luogo di sepoltura per i membri della nobiltà locale e presenta una serie di tombe e sarcofagi.\n\nLa Chiesa di Santa Maria di Loreto è un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche una meta turistica molto apprezzata, grazie alla sua bellezza architettonica e alle opere d'arte che ospita.\n\nIn conclusione, la Chiesa di Santa Maria di Loreto nel comune di Orte, Italia, è un edificio religioso di grande valore storico e artistico. La sua architettura semplice ma elegante, le opere d'arte che ospita e la sua posizione panoramica la rendono una meta imperdibile per i visitatori della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 550,
+        "total_tokens": 586
+    }
+}

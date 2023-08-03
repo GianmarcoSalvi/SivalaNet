@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enG1fmrh7uPGIThucWyNO5lGSXWZ",
+    "object": "chat.completion",
+    "created": 1689956821,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex Chiesa di Santa Nicola si trova nel comune di Blera, nella regione del Lazio, in Italia. Questo edificio religioso è un importante esempio di architettura romanica e rappresenta uno dei principali punti di riferimento storico e culturale della zona.\n\nLa chiesa risale al XII secolo ed è stata costruita in pietra locale, con una facciata semplice ma elegante. La sua struttura è a pianta rettangolare, con un'unica navata e un'abside semicircolare. L'interno è caratterizzato da un soffitto a capriate in legno e da pareti affrescate, che testimoniano l'importanza artistica e religiosa dell'edificio.\n\nUno degli elementi più interessanti della chiesa è il portale d'ingresso, decorato con sculture e bassorilievi che raffigurano scene bibliche e simboli religiosi. Questo portale è un esempio di maestria artistica e testimonia l'abilità dei maestri scalpellini dell'epoca.\n\nNel corso dei secoli, la chiesa ha subito diverse modifiche e ampliamenti, ma ha mantenuto intatta la sua bellezza e il suo fascino. Tuttavia, a causa di problemi strutturali, è stata chiusa al culto e trasformata in un centro culturale e museo.\n\nOggi, l'ex Chiesa di Santa Nicola ospita mostre d'arte, eventi culturali e concerti, offrendo un'atmosfera unica e suggestiva. I visitatori possono ammirare gli affreschi originali, le sculture e gli elementi architettonici che testimoniano la storia e la tradizione religiosa della zona.\n\nInoltre, la chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante. Questo la rende un luogo ideale per godersi momenti di tranquillità e contemplazione.\n\nIn conclusione, l'ex Chiesa di Santa Nicola a Blera è un gioiello architettonico e artistico che rappresenta una testimonianza importante della storia e della cultura della regione. La sua bellezza e il suo fascino attirano visitatori da tutto il mondo, offrendo loro un'esperienza unica e indimenticabile."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 558,
+        "total_tokens": 593
+    }
+}

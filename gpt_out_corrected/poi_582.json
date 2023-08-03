@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmrKTAhVT340wUIgwzZnsOt09MlY",
+    "object": "chat.completion",
+    "created": 1690193618,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Orte Sotterranea è un complesso di gallerie sotterranee situato nel comune di Orte, in Italia. Questo sistema di tunnel sotterranei è stato scoperto casualmente nel 1978 durante i lavori di ristrutturazione di un edificio nel centro storico di Orte.\n\nLe gallerie sotterranee di Orte Sotterranea si estendono per circa 2 chilometri sotto il centro storico della città. Questo labirinto sotterraneo è composto da una serie di cunicoli, camere, pozzi e cisterne che risalgono a diverse epoche storiche.\n\nLe origini di queste gallerie risalgono all'epoca etrusca, con alcune parti che risalgono addirittura al IV secolo a.C. Durante il periodo romano, le gallerie furono ampliate e utilizzate come cisterne per raccogliere e conservare l'acqua piovana. Nel corso dei secoli successivi, le gallerie furono utilizzate anche come rifugi durante le guerre e come depositi per le merci.\n\nOggi, Orte Sotterranea è aperta al pubblico e offre la possibilità di esplorare questo affascinante labirinto sotterraneo. Durante la visita guidata, i visitatori possono ammirare le antiche cisterne, i pozzi, i resti di mura e altri reperti storici che testimoniano la ricca storia di Orte.\n\nLe gallerie sono illuminate e dotate di passerelle e scale per agevolare la visita. Durante il percorso, le guide esperte forniscono spiegazioni dettagliate sulla storia e sull'utilizzo delle gallerie nel corso dei secoli.\n\nOrte Sotterranea è un'attrazione unica che offre ai visitatori l'opportunità di immergersi nella storia e di scoprire un lato nascosto di Orte. La visita alle gallerie sotterranee è un'esperienza affascinante e suggestiva che consente di apprezzare l'ingegnosità e la maestria degli antichi abitanti di questa città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 514,
+        "total_tokens": 548
+    }
+}

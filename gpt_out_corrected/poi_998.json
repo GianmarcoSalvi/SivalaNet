@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqliR0UxOFTQs0eRSPnI0DtE7nfM",
+    "object": "chat.completion",
+    "created": 1690208646,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Cellere è un comune italiano situato nella regione del Lazio, nella provincia di Viterbo. Si trova a circa 100 chilometri a nord-ovest di Roma e a pochi chilometri dal confine con la Toscana.\n\nIl paese di Cellere è situato su una collina, a un'altitudine di circa 400 metri sul livello del mare, e offre una vista panoramica mozzafiato sulla campagna circostante. Il territorio comunale è caratterizzato da una natura incontaminata, con colline verdi, boschi e campi coltivati.\n\nIl centro storico di Cellere è ricco di fascino e storia. Le sue strade strette e tortuose sono fiancheggiate da antiche case in pietra, con balconi fioriti e portoni di legno. Il cuore del paese è rappresentato dalla piazza principale, Piazza Vittorio Emanuele II, dove si trova la chiesa parrocchiale di San Giovanni Battista. Questa chiesa risale al XIII secolo ed è un esempio di architettura romanica, con un campanile a vela e un interno semplice ma suggestivo.\n\nOltre al centro storico, Cellere offre anche diverse attrazioni naturali. Nelle vicinanze si trova il lago di Mezzano, un lago artificiale circondato da boschi e sentieri che offrono la possibilità di fare escursioni e passeggiate nella natura. Il lago è anche un luogo ideale per la pesca e per praticare sport acquatici come il kayak e la vela.\n\nCellere è anche famosa per la sua produzione di olio d'oliva e vino. La zona circostante è ricca di vigneti e uliveti, e molti agriturismi offrono la possibilità di degustare i prodotti locali e di partecipare a visite guidate delle cantine e degli oliveti.\n\nIl comune di Cellere è anche sede di diverse manifestazioni culturali e tradizionali durante l'anno, come la festa patronale di San Giovanni Battista a giugno e la sagra dell'olio d'oliva a novembre.\n\nIn sintesi, Cellere è un affascinante comune nel cuore del Lazio, che offre una combinazione unica di storia, natura e tradizioni locali. È un luogo ideale per chi cerca una vacanza rilassante e autentica, lontano dal trambusto della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 583,
+        "total_tokens": 612
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmPqM31OBTOJBxD8a4NbIKeE6pdS",
+    "object": "chat.completion",
+    "created": 1690191914,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Parrocchia San Giorgio Martire si trova nel comune di Oriolo Romano, in Italia. È una chiesa di culto cattolico dedicata a San Giorgio Martire, uno dei santi più venerati nella tradizione cristiana.\n\nLa chiesa è situata nel centro storico del paese e rappresenta uno dei principali punti di riferimento per la comunità locale. La sua costruzione risale al XV secolo, anche se nel corso dei secoli ha subito diverse modifiche e restauri.\n\nL'edificio presenta uno stile architettonico tipico delle chiese italiane, con una facciata semplice ma elegante. La facciata è caratterizzata da un portale d'ingresso in pietra, sormontato da un rosone circolare. Sopra il portale è presente una statua di San Giorgio a cavallo, che rappresenta il santo patrono della chiesa.\n\nAll'interno, la chiesa presenta una navata unica con un soffitto a volta. Le pareti sono decorate con affreschi e dipinti raffiguranti scene della vita di San Giorgio e altri episodi della tradizione cristiana. L'altare maggiore è ornato con sculture e dipinti sacri, mentre ai lati della navata sono presenti cappelle laterali dedicate ad altri santi.\n\nLa Parrocchia San Giorgio Martire è un luogo di culto molto frequentato dalla comunità locale, che vi si riunisce per partecipare alle messe e alle celebrazioni religiose. Oltre alle funzioni religiose, la chiesa ospita anche eventi culturali e musicali, contribuendo così alla vita sociale del paese.\n\nLa Parrocchia San Giorgio Martire rappresenta un importante patrimonio storico e artistico per il comune di Oriolo Romano, testimoniando la ricca tradizione religiosa e culturale della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 458,
+        "total_tokens": 496
+    }
+}

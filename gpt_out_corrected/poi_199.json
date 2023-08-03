@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enqU6RZDwaEaCSzLhZiQHcnq1OjL",
+    "object": "chat.completion",
+    "created": 1689959082,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Poniatowsky è un edificio storico situato nel comune di Capodimonte, in Italia. Si trova lungo la riva del Lago di Bolsena, offrendo una vista panoramica mozzafiato sulle acque del lago e sulle colline circostanti.\n\nIl palazzo è stato costruito nel XVIII secolo e prende il nome dalla famiglia Poniatowsky, una nobile famiglia polacca che possedeva la tenuta di Capodimonte. L'edificio è stato progettato in stile neoclassico, con una facciata imponente e elegante.\n\nIl palazzo si sviluppa su tre piani ed è circondato da un ampio parco con giardini ben curati. All'interno, le stanze sono arredate con mobili d'epoca e opere d'arte, che testimoniano la ricchezza e il prestigio della famiglia Poniatowsky.\n\nUna delle caratteristiche più affascinanti del palazzo è la sua cappella privata, decorata con affreschi e dipinti religiosi. La cappella è ancora utilizzata per cerimonie e celebrazioni religiose.\n\nOltre alla bellezza architettonica, il Palazzo Poniatowsky è anche famoso per i suoi giardini. Il parco circostante è un'oasi di tranquillità, con alberi secolari, fontane e aiuole fiorite. È il luogo ideale per una passeggiata rilassante o per godersi la vista sul lago.\n\nOggi, il Palazzo Poniatowsky è aperto al pubblico e ospita eventi culturali, mostre d'arte e concerti. È anche possibile prenotare il palazzo per matrimoni e altre cerimonie private.\n\nIn sintesi, il Palazzo Poniatowsky è un gioiello architettonico nel comune di Capodimonte. Con la sua storia affascinante, la sua bellezza artistica e la sua posizione privilegiata sul Lago di Bolsena, è una meta imperdibile per gli amanti dell'arte e della cultura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 500,
+        "total_tokens": 535
+    }
+}

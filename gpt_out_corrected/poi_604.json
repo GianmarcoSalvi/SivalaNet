@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmyrWK79NCsb47m4EbWDRMYUoUGc",
+    "object": "chat.completion",
+    "created": 1690194085,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'Istituzione Romolo Bellatreccia si trova nel comune di Ronciglione, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è situata in un edificio storico, che aggiunge un fascino unico all'ambiente. L'interno è spazioso e accogliente, con ampie finestre che permettono l'ingresso di luce naturale. L'arredamento è moderno e confortevole, con scaffali ben organizzati che ospitano una vasta collezione di libri, riviste e giornali.\n\nLa biblioteca offre una vasta selezione di libri per tutte le età e interessi. Ci sono sezioni dedicate alla narrativa, alla saggistica, alla letteratura per ragazzi e ai libri di testo. Gli utenti possono trovare sia i classici della letteratura che le ultime novità editoriali.\n\nOltre ai libri, la biblioteca offre anche una vasta gamma di risorse digitali. Ci sono computer con accesso a Internet, che consentono agli utenti di navigare online, fare ricerche e utilizzare programmi di produttività. Inoltre, la biblioteca offre anche l'accesso a e-book, audiolibri e riviste digitali, che possono essere scaricati e letti su dispositivi personali.\n\nLa Biblioteca dell'Istituzione Romolo Bellatreccia organizza regolarmente eventi culturali e attività per la comunità. Ci sono incontri con autori, presentazioni di libri, letture ad alta voce per bambini e workshop tematici. Questi eventi offrono un'opportunità per gli utenti di incontrarsi, condividere interessi e scoprire nuovi libri e autori.\n\nLa biblioteca offre anche servizi di prestito, che consentono agli utenti di prendere in prestito libri e altri materiali per un determinato periodo di tempo. Ci sono anche servizi di prestito interbibliotecario, che permettono agli utenti di richiedere libri da altre biblioteche se non sono disponibili nella collezione locale.\n\nIn conclusione, la Biblioteca dell'Istituzione Romolo Bellatreccia è un luogo accogliente e ricco di risorse per la comunità di Ronciglione. Offre una vasta selezione di libri, risorse digitali e servizi che soddisfano le esigenze di lettori di tutte le età e interessi."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 581,
+        "total_tokens": 624
+    }
+}

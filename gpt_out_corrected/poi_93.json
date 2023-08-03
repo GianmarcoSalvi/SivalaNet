@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enE7x8slkYQPRPXnW3GPbSUXhkTL",
+    "object": "chat.completion",
+    "created": 1689956703,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa dei Santi Fidenzio e Terenzio si trova nel comune di Bassano in Teverina, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La facciata è semplice e sobria, con un portale d'ingresso sormontato da un rosone circolare. Sopra il portale è presente un affresco raffigurante i due santi patroni della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di Cristo e dei santi. Tra gli affreschi più importanti vi è una Madonna con Bambino, attribuita a Pietro Cavallini, uno dei più importanti pittori del periodo.\n\nNella chiesa sono presenti anche diverse opere d'arte, tra cui una statua lignea policroma raffigurante San Fidenzio, un altare in marmo intarsiato e un crocifisso ligneo del XV secolo.\n\nLa Chiesa dei Santi Fidenzio e Terenzio è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per gli amanti dell'arte e della storia, che possono ammirare gli affreschi e le opere d'arte presenti all'interno.\n\nLa chiesa si trova in una posizione panoramica, affacciata sulla valle del Tevere, e offre una vista mozzafiato sulla campagna circostante. È circondata da un piccolo cimitero e da un giardino, che contribuiscono a creare un'atmosfera di tranquillità e spiritualità.\n\nLa Chiesa dei Santi Fidenzio e Terenzio è un luogo di grande fascino e bellezza, che merita sicuramente una visita per chi si trova a Bassano in Teverina o nelle vicinanze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 516,
+        "total_tokens": 561
+    }
+}

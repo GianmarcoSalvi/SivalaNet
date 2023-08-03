@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enwbUJL2cVuwNqoQsB7h7y9PpFED",
+    "object": "chat.completion",
+    "created": 1689959461,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca Teresiana si trova nel comune di Caprarola, in Italia. È situata all'interno del Palazzo Farnese, un maestoso edificio rinascimentale che domina la città.\n\nLa biblioteca prende il nome da Maria Teresa d'Austria, che fu la fondatrice della biblioteca nel XVIII secolo. È considerata una delle biblioteche più importanti e antiche della regione del Lazio.\n\nLa struttura della biblioteca è imponente e affascinante. Le sale sono decorate con affreschi e stucchi, che creano un'atmosfera elegante e raffinata. Le pareti sono rivestite da scaffali di legno scuro, che ospitano migliaia di libri antichi e preziosi.\n\nLa collezione della Biblioteca Teresiana è vasta e variegata. Comprende libri di storia, filosofia, letteratura, scienze e molti altri argomenti. Molti dei libri sono rari e unici, con edizioni antiche e illustrazioni originali.\n\nLa biblioteca è aperta al pubblico, ma è necessario prenotare in anticipo per visitarla. Gli appassionati di storia, cultura e letteratura troveranno sicuramente molto da apprezzare in questa biblioteca. È un luogo ideale per gli studiosi e gli amanti dei libri che desiderano immergersi nella conoscenza e nella bellezza dei testi antichi.\n\nLa Biblioteca Teresiana è un vero gioiello culturale nel comune di Caprarola. La sua bellezza architettonica e la ricchezza della sua collezione la rendono una tappa imperdibile per chiunque visiti la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 397,
+        "total_tokens": 431
+    }
+}

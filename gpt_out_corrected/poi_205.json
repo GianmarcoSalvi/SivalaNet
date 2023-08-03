@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7entX0NHmWdwrJgaxR3sm8HD6sKMb",
+    "object": "chat.completion",
+    "created": 1689959271,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca comunale Alfredo Signoretti si trova nel comune di Capranica, in Italia. È situata in una posizione centrale, facilmente accessibile a piedi o in auto.\n\nLa biblioteca prende il nome da Alfredo Signoretti, un illustre scrittore e poeta italiano nato a Capranica. È un luogo di grande importanza per la comunità locale, offrendo una vasta gamma di servizi e risorse per soddisfare le esigenze di lettori di tutte le età.\n\nL'edificio che ospita la biblioteca è moderno e accogliente, con ampie finestre che permettono l'ingresso di luce naturale. All'interno, gli spazi sono organizzati in modo funzionale e ben strutturato. Ci sono diverse aree dedicate a diverse categorie di libri, come narrativa, saggistica, poesia, storia e molto altro ancora.\n\nLa biblioteca offre un vasto catalogo di libri, che vanno dai classici della letteratura ai titoli più recenti. Ci sono anche sezioni dedicate ai libri per bambini e ragazzi, con una vasta selezione di libri illustrati, romanzi per ragazzi e libri didattici.\n\nOltre ai libri, la biblioteca offre anche una vasta gamma di altri materiali, come riviste, giornali, DVD e CD musicali. È possibile prendere in prestito questi materiali per un determinato periodo di tempo, consentendo ai visitatori di godere di una varietà di contenuti culturali.\n\nLa biblioteca comunale Alfredo Signoretti organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, letture pubbliche e mostre d'arte. Questi eventi sono aperti al pubblico e offrono un'opportunità per gli autori locali di condividere il loro lavoro e per la comunità di incontrarsi e discutere di temi culturali.\n\nIl personale della biblioteca è cordiale e disponibile, pronto ad assistere i visitatori nella ricerca di libri o nell'utilizzo dei servizi offerti. Inoltre, la biblioteca dispone di un'area dedicata allo studio e alla consultazione di libri in loco, con posti a sedere e tavoli per consentire agli studenti e ai ricercatori di lavorare in un ambiente tranquillo e stimolante.\n\nIn conclusione, la Biblioteca comunale Alfredo Signoretti è un luogo di grande valore per la comunità di Capranica. Offre una vasta gamma di risorse culturali, promuove la lettura e l'accesso alla conoscenza e organizza eventi che arricchiscono la vita culturale della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 622,
+        "total_tokens": 660
+    }
+}

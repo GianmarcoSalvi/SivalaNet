@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpc9IigzZebQb5bC8aM3VsTyqAgy",
+    "object": "chat.completion",
+    "created": 1690204209,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Salvatore si trova nel comune di Vasanello, in provincia di Viterbo, nella regione del Lazio, Italia. Questo edificio religioso è uno dei principali punti di riferimento storici e culturali della zona.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture e motivi ornamentali. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di Cristo e dei santi. Sull'altare maggiore si trova un dipinto del XVII secolo raffigurante la Madonna con il Bambino.\n\nLa Chiesa di San Salvatore è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua struttura originale. Durante i lavori di restauro sono stati scoperti affreschi nascosti sotto strati di intonaco, che sono stati successivamente restaurati e resi visibili al pubblico.\n\nOltre al suo valore artistico e storico, la chiesa è anche un luogo di culto attivo, dove vengono celebrate messe e cerimonie religiose regolarmente. Durante le festività religiose, la chiesa diventa un punto di incontro per la comunità locale, che partecipa alle celebrazioni e alle processioni.\n\nLa Chiesa di San Salvatore si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante. È circondata da un piccolo cortile e da un giardino, che aggiungono ulteriore fascino all'edificio.\n\nIn conclusione, la Chiesa di San Salvatore nel comune di Vasanello è un gioiello architettonico e artistico, che rappresenta una testimonianza importante della storia e della cultura della zona. La sua bellezza e la sua atmosfera spirituale la rendono un luogo di grande interesse per i visitatori e un punto di riferimento per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 570,
+        "total_tokens": 605
+    }
+}

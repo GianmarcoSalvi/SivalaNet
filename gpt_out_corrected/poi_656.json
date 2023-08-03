@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnTxqP04laboy072tM5du7PX8FaN",
+    "object": "chat.completion",
+    "created": 1690196013,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'anfiteatro di Sutri è un antico edificio romano situato nel comune di Sutri, nella regione del Lazio, in Italia. Si trova nella parte nord-ovest della città, vicino al centro storico.\n\nL'anfiteatro è stato costruito nel I secolo d.C. ed è uno dei migliori esempi di anfiteatro romano nella regione. È stato scavato e restaurato negli anni '30 del XX secolo, rendendolo uno dei siti archeologici più importanti della zona.\n\nL'anfiteatro ha una forma ellittica e misura circa 70 metri di lunghezza e 50 metri di larghezza. Era in grado di ospitare fino a 5.000 spettatori e veniva utilizzato per gli spettacoli di gladiatori, le cacce di animali selvatici e altri eventi pubblici.\n\nL'edificio è costruito principalmente in pietra locale, con gradinate in pietra che circondano l'arena centrale. Le gradinate erano divise in settori, riservati a diverse classi sociali, con i posti migliori riservati all'élite locale.\n\nL'anfiteatro di Sutri è noto anche per i suoi sotterranei, che erano utilizzati per ospitare gli animali e i gladiatori prima degli spettacoli. Questi sotterranei sono ancora visibili e possono essere visitati durante le visite guidate.\n\nOltre alla sua importanza storica e archeologica, l'anfiteatro di Sutri è anche un luogo di interesse turistico. Ogni anno, attira numerosi visitatori che desiderano ammirare l'architettura romana e immergersi nella storia dell'antica Roma.\n\nInoltre, l'anfiteatro è anche utilizzato per eventi culturali e spettacoli teatrali durante l'estate, offrendo un'esperienza unica di intrattenimento all'aperto in un ambiente storico suggestivo.\n\nIn conclusione, l'anfiteatro di Sutri è un importante sito archeologico romano situato nel comune di Sutri, Italia. Con la sua architettura ben conservata e la sua storia affascinante, rappresenta una tappa imperdibile per gli appassionati di storia e cultura che visitano la regione del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 555,
+        "total_tokens": 587
+    }
+}

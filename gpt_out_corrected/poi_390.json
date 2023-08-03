@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flS0WcUYM8qJ3HxxLDgvw4g5unmf",
+    "object": "chat.completion",
+    "created": 1690188204,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Pietro Apostolo si trova nel comune di Grotte di Castro, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di origine medievale che risale al XII secolo, anche se è stata oggetto di modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata nel centro storico del paese, in una posizione panoramica che offre una vista mozzafiato sul lago di Bolsena, uno dei laghi vulcanici più grandi d'Europa. La sua posizione strategica e suggestiva la rende un importante punto di riferimento per i visitatori e i fedeli.\n\nL'edificio presenta uno stile architettonico romanico, con una facciata semplice e austera. La facciata è caratterizzata da un portale d'ingresso in pietra, sormontato da un rosone circolare. Sopra il portale, si trova una finestra a bifora che illumina l'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XV secolo, che raffigurano scene della vita di San Pietro e altri santi. L'altare maggiore è ornato da un prezioso paliotto in marmo intarsiato.\n\nUno degli elementi più interessanti della chiesa è la presenza di una cripta sotterranea, accessibile tramite una scala situata nella navata laterale. La cripta è un ambiente suggestivo, con volte a crociera e affreschi medievali ben conservati. È considerata un luogo di grande spiritualità e devozione.\n\nLa Chiesa di San Pietro Apostolo è un importante luogo di culto per la comunità locale, che vi celebra regolarmente le funzioni religiose. Inoltre, è aperta ai visitatori che desiderano ammirare l'arte e l'architettura storica della chiesa, nonché godere della vista panoramica sul lago di Bolsena.\n\nIn conclusione, la Chiesa di San Pietro Apostolo a Grotte di Castro è un gioiello architettonico e artistico che rappresenta una testimonianza della storia e della cultura della zona. La sua bellezza e la sua posizione panoramica la rendono un luogo di grande fascino e spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 577,
+        "total_tokens": 616
+    }
+}

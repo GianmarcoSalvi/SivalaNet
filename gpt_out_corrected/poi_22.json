@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emuOf5ThbmPmTLI0AAX4JqFLhYUh",
+    "object": "chat.completion",
+    "created": 1689955480,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale Tirolle è una struttura situata nel comune di Acquapendente, in Italia. Si tratta di un antico casale rurale che è stato ristrutturato e trasformato in una struttura ricettiva di charme.\n\nIl casale si trova in una posizione panoramica, immerso nella campagna toscana e circondato da un ampio giardino. La struttura è caratterizzata da un'architettura tradizionale, con muri in pietra e tetto in tegole, che si fonde perfettamente con l'ambiente circostante.\n\nAll'interno del casale, gli ospiti possono trovare camere eleganti e confortevoli, arredate con gusto e attenzione ai dettagli. Ogni camera è dotata di tutti i comfort moderni, come aria condizionata, TV a schermo piatto, connessione Wi-Fi gratuita e bagno privato con doccia o vasca.\n\nLa struttura offre anche una serie di servizi e spazi comuni per rendere il soggiorno degli ospiti il più piacevole possibile. Ci sono ampie sale comuni, arredate con mobili d'epoca e camini, dove gli ospiti possono rilassarsi e socializzare. Inoltre, c'è una sala da pranzo dove viene servita la colazione ogni mattina, con una selezione di prodotti locali e fatti in casa.\n\nAll'esterno, il casale offre una piscina con vista panoramica sulla campagna circostante, ideale per rinfrescarsi durante le calde giornate estive. Ci sono anche ampi spazi verdi, con tavoli e sedie, dove gli ospiti possono godersi il sole o organizzare un picnic.\n\nCasale Tirolle è il luogo ideale per coloro che cercano una vacanza rilassante e immersa nella natura. La sua posizione tranquilla e la bellezza del paesaggio circostante offrono un'atmosfera unica e suggestiva. Inoltre, la struttura si trova in una posizione strategica per visitare le principali attrazioni della zona, come il lago di Bolsena, le terme di Saturnia e le città medievali di Orvieto e Pitigliano.\n\nIn conclusione, Casale Tirolle è una struttura ricettiva di charme che offre un'esperienza autentica e rilassante nella campagna toscana. Con camere eleganti, servizi di qualità e una posizione panoramica, è il luogo ideale per una vacanza indimenticabile."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 601,
+        "total_tokens": 636
+    }
+}

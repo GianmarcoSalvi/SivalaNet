@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flOUYsr2RXE6bIGSVERnKgH9UI27",
+    "object": "chat.completion",
+    "created": 1690187986,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Sipicciano si trova nel comune di Graffignano, nella regione del Lazio, in Italia. Si tratta di un antico castello medievale che risale al XIII secolo e che si erge maestoso su una collina, offrendo una vista panoramica mozzafiato sulla campagna circostante.\n\nIl castello è stato costruito come una fortezza difensiva e presenta una struttura imponente, con mura spesse e torri di avvistamento. La sua posizione strategica gli ha permesso di controllare le vie di comunicazione della zona e di difendersi dagli attacchi esterni.\n\nL'edificio è stato oggetto di diverse modifiche e ampliamenti nel corso dei secoli, ma conserva ancora molti elementi originali. All'interno, si possono ammirare affreschi, volte a crociera e camini antichi, che testimoniano la sua storia e il suo passato nobile.\n\nAttualmente, il Castello di Sipicciano è di proprietà privata e non è aperto al pubblico. Tuttavia, è possibile ammirarne la bellezza esterna e godere della vista panoramica dalla collina su cui sorge. Il castello è circondato da un ampio parco verde, che offre un'atmosfera tranquilla e rilassante.\n\nIl Castello di Sipicciano rappresenta un importante patrimonio storico e architettonico della zona e contribuisce a preservare la memoria del passato medievale di Graffignano e dei suoi dintorni. La sua imponenza e la sua bellezza lo rendono un luogo affascinante da visitare, anche solo per ammirarlo dall'esterno e per godere della vista panoramica sulla campagna circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 418,
+        "total_tokens": 454
+    }
+}

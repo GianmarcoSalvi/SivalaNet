@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpnUJmkf2AVT0ts9MR3JDAsI1yot",
+    "object": "chat.completion",
+    "created": 1690204912,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Grotta Porcina è una grotta situata nel comune di Vetralla, nella regione del Lazio, in Italia. Si trova all'interno del Parco Naturale Regionale di Vico, un'area protetta che si estende per oltre 8.000 ettari.\n\nLa grotta è accessibile attraverso un sentiero che parte dal centro abitato di Vetralla e si snoda attraverso un paesaggio collinare caratterizzato da boschi e prati. Il percorso è di media difficoltà e richiede una buona preparazione fisica.\n\nLa Grotta Porcina è una delle più grandi grotte della zona e si estende per circa 1.500 metri. È composta da una serie di cunicoli e sale sotterranee, alcune delle quali sono ancora inesplorate. L'ingresso principale è caratterizzato da una grande apertura che permette l'accesso alla grotta.\n\nAll'interno, la grotta presenta una varietà di formazioni calcaree, come stalattiti e stalagmiti, che si sono formate nel corso di migliaia di anni. Le pareti sono ricoperte da uno strato di calcite, che conferisce loro un aspetto bianco e lucente.\n\nLa Grotta Porcina è stata utilizzata fin dall'antichità come rifugio naturale dagli abitanti della zona. Sono stati rinvenuti reperti archeologici che testimoniano la presenza umana sin dal periodo neolitico. Durante la Seconda Guerra Mondiale, la grotta è stata utilizzata come nascondiglio dai partigiani.\n\nOggi, la Grotta Porcina è aperta al pubblico e può essere visitata con l'accompagnamento di una guida esperta. Durante la visita, è possibile ammirare le meraviglie naturali della grotta e apprendere informazioni sulla sua storia e sulla sua importanza dal punto di vista geologico e archeologico.\n\nLa Grotta Porcina rappresenta una meta ideale per gli amanti della natura e per coloro che desiderano esplorare le bellezze nascoste del territorio di Vetralla. La sua bellezza suggestiva e la sua storia millenaria la rendono un luogo affascinante da visitare."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 541,
+        "total_tokens": 575
+    }
+}

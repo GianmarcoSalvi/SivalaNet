@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqw3LLRTIMwtXnih7QuppfhfxEFw",
+    "object": "chat.completion",
+    "created": 1690209287,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Tarquinia è una città situata nella regione del Lazio, nel centro Italia. Si trova sulla costa tirrenica, a circa 90 chilometri a nord-ovest di Roma. La città è famosa per il suo ricco patrimonio storico e artistico, che risale all'epoca etrusca.\n\nTarquinia è stata una delle principali città dell'antica civiltà etrusca, che fiorì tra il IX e il I secolo a.C. La città era conosciuta come Tarchuna dagli etruschi e fu una delle dodici città principali della Lega etrusca. Durante questo periodo, Tarquinia era un importante centro politico, economico e culturale, con una popolazione che poteva raggiungere i 40.000 abitanti.\n\nOggi, Tarquinia conserva molti resti dell'epoca etrusca, che sono stati dichiarati Patrimonio dell'Umanità dall'UNESCO nel 2004. Uno dei principali siti archeologici è la Necropoli di Monterozzi, che ospita oltre 6.000 tombe etrusche, alcune delle quali sono decorate con affreschi ben conservati. Questi affreschi raffigurano scene di vita quotidiana, mitologia e rituali funerari, offrendo un'importante testimonianza dell'arte etrusca.\n\nOltre alla necropoli, Tarquinia ha anche un centro storico affascinante, con strade strette e tortuose, palazzi medievali e chiese antiche. La Cattedrale di Santa Maria Assunta è uno dei principali luoghi di culto della città, con una facciata romanica e un interno gotico. Altri punti di interesse includono il Palazzo Vitelleschi, un imponente edificio rinascimentale che ospita il Museo Nazionale Tarquiniense, e la Chiesa di San Pancrazio, con i suoi affreschi medievali.\n\nTarquinia è anche una meta turistica per le sue belle spiagge sabbiose e il mare cristallino. La città è situata sulla Costa dei Tarquini, che offre una varietà di spiagge libere e stabilimenti balneari attrezzati. Le spiagge sono ampie e ben tenute, ideali per rilassarsi e godersi il sole.\n\nInoltre, Tarquinia è famosa per la sua tradizione culinaria, che include piatti a base di pesce fresco, come spaghetti alle vongole e fritto misto di mare. La città ospita anche numerosi festival e eventi culturali durante tutto l'anno, tra cui la Festa di San Pancrazio a maggio e il Festival Internazionale del Folklore a luglio.\n\nIn sintesi, Tarquinia è una città affascinante e ricca di storia, con un patrimonio etrusco unico al mondo. Offre ai visitatori la possibilità di immergersi nell'antica civiltà etrusca, di godere delle bellezze naturali della costa tirrenica e di assaporare la cucina tradizionale italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 716,
+        "total_tokens": 747
+    }
+}

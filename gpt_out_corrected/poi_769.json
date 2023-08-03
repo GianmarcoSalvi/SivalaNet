@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpUgQOloGS5gO8LdecV9OYjYPZh1",
+    "object": "chat.completion",
+    "created": 1690203746,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Apostolo ed Evangelista si trova nel comune di Valentano, in provincia di Viterbo, Italia. Questo edificio religioso è uno dei principali punti di riferimento della città e rappresenta un importante esempio di architettura religiosa nel territorio.\n\nLa chiesa risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, sormontato da una finestra ad arco. Sopra la finestra, si trova un rosone circolare che illumina l'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Lungo le pareti laterali si trovano diverse cappelle, ognuna delle quali ospita un altare dedicato a un santo o a una figura religiosa.\n\nUno degli elementi più significativi della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con sculture e rilievi. L'altare è sormontato da un grande crocifisso ligneo, che rappresenta la figura di Gesù Cristo crocifisso.\n\nLa Chiesa di San Giovanni Apostolo ed Evangelista è anche nota per le sue opere d'arte, tra cui dipinti e affreschi che adornano le pareti. Queste opere d'arte rappresentano scene bibliche e figure religiose, e sono un importante esempio di arte sacra nel territorio.\n\nLa chiesa è aperta al pubblico e viene utilizzata per le celebrazioni religiose regolari, come messe e matrimoni. La sua posizione centrale nel comune di Valentano la rende facilmente accessibile a residenti e visitatori, che possono ammirare la sua bellezza architettonica e spirituale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 478,
+        "total_tokens": 516
+    }
+}

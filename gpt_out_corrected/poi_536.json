@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmLBdty8bchxPDrNOxMu77wKTNL1",
+    "object": "chat.completion",
+    "created": 1690191625,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Parrocchiale di San Croce si trova nel comune di Nepi, in provincia di Viterbo, Italia. È uno dei principali luoghi di culto della città e rappresenta un importante punto di riferimento per la comunità locale.\n\nLa chiesa è situata nel centro storico di Nepi, in una posizione dominante che permette di ammirare un panorama mozzafiato sulla campagna circostante. La sua costruzione risale al XIII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti.\n\nL'edificio presenta uno stile architettonico romanico-gotico, con una facciata a capanna caratterizzata da un portale in pietra e un rosone centrale. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi e dipinti sacri.\n\nUno degli elementi più suggestivi della chiesa è il suo campanile, alto e slanciato, che si erge maestoso accanto all'edificio principale. La torre campanaria è stata costruita nel XV secolo e presenta una serie di bifore e trifore che conferiscono un'aria elegante e raffinata all'intera struttura.\n\nAll'interno della Chiesa Parrocchiale di San Croce si trovano diverse opere d'arte di grande valore storico e artistico. Tra queste spicca il polittico di San Croce, un dipinto su tavola realizzato nel XV secolo dal pittore viterbese Bartolomeo di Tommaso. Il polittico raffigura la Crocifissione al centro, circondata da santi e scene della Passione di Cristo.\n\nAltre opere degne di nota sono un crocifisso ligneo del XIV secolo, una statua della Madonna con Bambino del XV secolo e una serie di affreschi raffiguranti episodi della vita di San Croce.\n\nLa Chiesa Parrocchiale di San Croce è un luogo di culto molto frequentato dai fedeli, che vi si recano per partecipare alle messe e alle celebrazioni religiose. Inoltre, la chiesa è aperta al pubblico e rappresenta una meta turistica per gli amanti dell'arte e della storia.\n\nLa sua posizione panoramica, l'architettura suggestiva e le opere d'arte che custodisce la rendono un luogo di grande fascino e bellezza, che merita sicuramente una visita durante un soggiorno a Nepi."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 610,
+        "total_tokens": 648
+    }
+}

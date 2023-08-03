@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpHlwcqUE8ZUd76KWaSce3GVvmS4",
+    "object": "chat.completion",
+    "created": 1690202945,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Agostino si trova nel comune di Tuscania, in Italia. È un edificio religioso di grande importanza storica e artistica, risalente al XIII secolo.\n\nLa chiesa è situata nel centro storico di Tuscania, circondata da strette strade medievali e affiancata da un campanile imponente. La facciata della chiesa è semplice ma elegante, con un portale in stile romanico decorato con sculture e un rosone centrale.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XIII secolo e sono considerati tra i migliori esempi di arte medievale in Italia. Raffigurano scene della vita di Sant'Agostino e di altri santi, con colori vivaci e dettagli finemente dipinti.\n\nUno degli elementi più notevoli della chiesa è il coro ligneo intagliato, risalente al XV secolo. Questo coro è un capolavoro di intaglio, con dettagli intricati e sculture raffiguranti scene bibliche e simboli religiosi.\n\nLa Chiesa di Sant'Agostino è anche famosa per ospitare il Museo Diocesano di Tuscania, che espone una collezione di opere d'arte sacra provenienti dalla chiesa stessa e da altre chiese della zona. Tra le opere esposte ci sono dipinti, sculture e oggetti liturgici di grande valore artistico e storico.\n\nLa chiesa è aperta al pubblico e viene utilizzata regolarmente per celebrazioni religiose. È un luogo di grande spiritualità e bellezza, che attira visitatori da tutto il mondo per ammirare le sue opere d'arte e per immergersi nella storia e nella cultura di Tuscania."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 459,
+        "total_tokens": 496
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnGD9MNj5RB9qcnPful1Wsnm0iIJ",
+    "object": "chat.completion",
+    "created": 1690195161,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dei padri passionisti si trova nel comune di Soriano nel Cimino, in Italia. È una biblioteca specializzata che fa parte del complesso del Santuario della Madonna del Sorbo, gestito dai padri passionisti.\n\nLa biblioteca è situata all'interno di un edificio storico, che risale al XVIII secolo. È un luogo di grande importanza culturale e religiosa, poiché conserva una vasta collezione di libri, manoscritti e documenti che riguardano la storia della congregazione dei padri passionisti e la spiritualità cristiana.\n\nLa collezione della biblioteca conta oltre 10.000 volumi, tra cui libri antichi, edizioni rare e testi specializzati sulla teologia, la spiritualità, la storia della Chiesa e la filosofia. Inoltre, la biblioteca possiede una ricca raccolta di manoscritti originali, alcuni dei quali risalenti al XVII secolo.\n\nLa biblioteca è aperta al pubblico e offre servizi di consultazione e prestito dei libri. Gli utenti possono accedere alle sale di lettura, dove possono consultare i libri e prendere appunti. Inoltre, la biblioteca organizza regolarmente mostre, conferenze e incontri culturali per promuovere la conoscenza e la diffusione della cultura religiosa e spirituale.\n\nLa Biblioteca dei padri passionisti è un luogo di grande valore per gli studiosi, i ricercatori e gli appassionati di storia religiosa. Grazie alla sua vasta collezione di libri e documenti, offre una preziosa risorsa per lo studio e la ricerca nel campo della teologia e della spiritualità cristiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 395,
+        "total_tokens": 434
+    }
+}

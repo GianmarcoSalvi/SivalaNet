@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoOYAmex27WqcnTS74wCoQ1pAxQY",
+    "object": "chat.completion",
+    "created": 1689961194,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Caprini è un edificio storico situato nel comune di Celleno, in provincia di Viterbo, Italia. Si trova nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle circostante.\n\nIl palazzo risale al XV secolo ed è stato costruito in stile rinascimentale. È caratterizzato da una facciata imponente e ben conservata, con un portale d'ingresso decorato e finestre eleganti. La struttura è composta da tre piani, con un cortile interno al centro.\n\nAll'interno, il palazzo presenta affreschi e decorazioni originali, che testimoniano la sua antica grandezza. Le stanze sono ampie e luminose, con soffitti alti e pavimenti in marmo. Alcune delle stanze sono state restaurate e adibite a museo, dove è possibile ammirare opere d'arte e oggetti d'epoca.\n\nIl Palazzo Caprini è stato la residenza di importanti famiglie nobiliari nel corso dei secoli, tra cui i Caprini, da cui prende il nome. Durante il periodo rinascimentale, il palazzo era un centro culturale e artistico, frequentato da intellettuali e artisti dell'epoca.\n\nOggi, il Palazzo Caprini è aperto al pubblico e ospita eventi culturali e mostre temporanee. È anche possibile prenotare visite guidate per scoprire la storia e l'arte che si nascondono dietro le sue mura. Il palazzo rappresenta un importante patrimonio storico e artistico per il comune di Celleno e attira visitatori da tutto il mondo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 400,
+        "total_tokens": 432
+    }
+}

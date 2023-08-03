@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqjzqdUavEeZJCgnvjKJaSdRMRfp",
+    "object": "chat.completion",
+    "created": 1690208539,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Caprarola è un comune italiano situato nella provincia di Viterbo, nella regione del Lazio, nel centro Italia. Si trova a circa 50 chilometri a nord-ovest di Roma.\n\nIl comune di Caprarola è famoso per il suo imponente Palazzo Farnese, una delle più importanti residenze rinascimentali italiane. Il palazzo fu costruito nel XVI secolo per volere di Alessandro Farnese, nipote di papa Paolo III, e fu progettato dall'architetto Vignola. È considerato uno dei migliori esempi di architettura rinascimentale in Italia.\n\nIl Palazzo Farnese si trova sulla sommità di una collina e domina il paesaggio circostante. La sua facciata è caratterizzata da una serie di logge sovrapposte, con colonne e archi che creano un effetto di grande eleganza. All'interno del palazzo si trovano numerose stanze decorate con affreschi, tra cui la famosa Sala dei Fasti, che raffigura le gesta degli antichi imperatori romani.\n\nOltre al Palazzo Farnese, Caprarola offre anche altre attrazioni turistiche. Il centro storico del paese è caratterizzato da strette stradine lastricate e da antiche case in pietra. La Chiesa di Santa Teresa, costruita nel XVII secolo, è un altro importante punto di interesse. All'interno della chiesa si trova una pregevole pala d'altare del pittore barocco Giovanni Lanfranco.\n\nCaprarola è circondata da una natura incontaminata e offre la possibilità di fare escursioni e passeggiate nella campagna circostante. Nei dintorni si trovano anche diversi laghi, come il Lago di Vico e il Lago di Bolsena, che offrono opportunità per attività all'aperto come il nuoto, la pesca e il birdwatching.\n\nIl comune di Caprarola è anche famoso per la sua produzione di olio d'oliva e vino. Durante il periodo estivo si svolgono diverse sagre e feste locali, dove è possibile assaggiare i prodotti tipici della zona.\n\nIn conclusione, Caprarola è un comune ricco di storia, arte e bellezze naturali. Il suo Palazzo Farnese è una meta imperdibile per gli amanti dell'architettura rinascimentale, mentre il suo centro storico e la sua campagna offrono un'atmosfera autentica e rilassante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 600,
+        "total_tokens": 631
+    }
+}

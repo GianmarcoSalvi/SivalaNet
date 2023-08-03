@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnPeOQUQaBXi9fE9yp8SnYxLPoCZ",
+    "object": "chat.completion",
+    "created": 1690195746,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria del Monte si trova nel comune di Sutri, in provincia di Viterbo, Italia. È situata sulla sommità di una collina, da cui si può godere di una vista panoramica mozzafiato sulla campagna circostante.\n\nLa chiesa risale al XII secolo ed è considerata uno dei più importanti esempi di architettura romanica della zona. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture di animali fantastici e motivi geometrici. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di Cristo e dei santi. Uno degli affreschi più famosi è quello raffigurante la Madonna col Bambino, che si trova sull'abside.\n\nLa chiesa è anche nota per il suo campanile, che risale al XIV secolo. È una torre a pianta quadrata, con una serie di finestre ad arco che si aprono lungo le pareti. La cima del campanile è decorata con una guglia a forma di piramide, che conferisce all'intero edificio un aspetto imponente.\n\nOltre alla sua bellezza architettonica, la Chiesa di Santa Maria del Monte è anche un importante luogo di culto per la comunità locale. Viene utilizzata per la celebrazione di messe e altre cerimonie religiose, ed è meta di pellegrinaggi da parte dei fedeli.\n\nLa chiesa si trova in una posizione suggestiva, circondata da un ampio spazio verde. Nei dintorni è possibile fare delle passeggiate panoramiche e godere della tranquillità della campagna. Inoltre, nelle vicinanze si trovano anche altri luoghi di interesse storico e culturale, come l'anfiteatro romano di Sutri.\n\nIn conclusione, la Chiesa di Santa Maria del Monte a Sutri è un gioiello dell'architettura romanica, con affreschi antichi e una posizione panoramica. È un luogo di culto importante per la comunità locale e una meta interessante per i visitatori che desiderano immergersi nella storia e nella bellezza della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 602,
+        "total_tokens": 638
+    }
+}

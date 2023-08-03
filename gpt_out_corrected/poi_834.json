@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpsmOOtK6hREXa4rDMFgkclIpx6k",
+    "object": "chat.completion",
+    "created": 1690205240,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Collegiata Santa Maria della Presentazione si trova nel comune di Vignanello, nella regione del Lazio, in Italia. È uno dei principali luoghi di culto della zona e rappresenta un importante esempio di architettura religiosa.\n\nLa chiesa è situata nel centro storico di Vignanello e risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La facciata principale è caratterizzata da un portale in pietra con un arco a tutto sesto, sormontato da una finestra ad arco. Sopra la finestra si trova un rosone circolare, che conferisce un tocco di eleganza e luminosità all'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Le pareti sono decorate con affreschi e dipinti che raffigurano scene religiose e santi. Al centro dell'abside si trova l'altare maggiore, sormontato da un crocifisso ligneo.\n\nUno degli elementi più interessanti della chiesa è la cappella di San Giovanni Battista, situata sul lato destro dell'edificio. Questa cappella è decorata con affreschi del XV secolo, che raffigurano la vita e il martirio di San Giovanni Battista. Gli affreschi sono di grande valore artistico e storico e sono stati restaurati per preservarne la bellezza.\n\nLa Chiesa Collegiata Santa Maria della Presentazione è un luogo di culto molto frequentato dai fedeli e ospita regolarmente celebrazioni religiose e liturgiche. È anche un importante punto di riferimento per gli amanti dell'arte e della storia, grazie alle sue opere d'arte e alla sua architettura affascinante.\n\nInoltre, la chiesa si trova in una posizione panoramica, che offre una vista mozzafiato sulla campagna circostante. Questo la rende un luogo ideale per una visita tranquilla e rilassante, dove è possibile ammirare l'arte sacra e godere della bellezza della natura circostante.\n\nIn conclusione, la Chiesa Collegiata Santa Maria della Presentazione è un gioiello architettonico e artistico nel comune di Vignanello. Con la sua storia secolare, le sue opere d'arte e la sua atmosfera suggestiva, rappresenta un luogo di grande importanza culturale e spirituale per la comunità locale e per i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 634,
+        "total_tokens": 674
+    }
+}

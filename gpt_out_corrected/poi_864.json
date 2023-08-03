@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq1r8KAk7KRioL04f1VBevA1EUPF",
+    "object": "chat.completion",
+    "created": 1690205803,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario Madonna della Quercia si trova nel comune di Viterbo, nella regione del Lazio, in Italia. È un importante luogo di culto cattolico dedicato alla Vergine Maria.\n\nIl santuario è situato su una collina, circondato da una vasta area verde. La sua costruzione risale al XV secolo, anche se la storia del luogo di culto risale a tempi ancora più antichi. La leggenda narra che nel 1484 un contadino trovò un'immagine della Madonna appesa a una quercia, da cui deriva il nome del santuario.\n\nL'edificio principale del santuario è la chiesa, che presenta uno stile architettonico rinascimentale. La facciata è caratterizzata da un portico con colonne e archi, mentre l'interno è decorato con affreschi e dipinti che raffigurano scene della vita di Maria.\n\nAll'interno del santuario si trova anche una cappella dedicata a San Giuseppe, patrono dei lavoratori, e una cappella dedicata a San Francesco d'Assisi. Quest'ultima è particolarmente significativa perché ospita una statua del santo che, secondo la tradizione, avrebbe miracolosamente aperto gli occhi.\n\nIl santuario è meta di numerosi pellegrinaggi e visite da parte dei fedeli, soprattutto durante le festività religiose legate alla Vergine Maria. Ogni anno, il 15 agosto, si celebra la festa dell'Assunzione di Maria, con una processione che parte dal centro di Viterbo e arriva al santuario.\n\nOltre alla dimensione religiosa, il Santuario Madonna della Quercia offre anche un'atmosfera di tranquillità e serenità grazie alla sua posizione immersa nella natura. Molte persone visitano il santuario per godere della bellezza del paesaggio circostante e per trascorrere momenti di preghiera e riflessione.\n\nIn conclusione, il Santuario Madonna della Quercia è un luogo di grande importanza spirituale e culturale nel comune di Viterbo. La sua storia millenaria, l'architettura affascinante e la bellezza del paesaggio circostante lo rendono un luogo di grande fascino per i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 538,
+        "total_tokens": 577
+    }
+}

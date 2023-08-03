@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flwkUKR5Kk30rOmmpZztv0yoRX9X",
+    "object": "chat.completion",
+    "created": 1690190110,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Parco Archeologico Naturalistico di Vulci si trova nel comune di Montalto di Castro, nella regione del Lazio, in Italia. Si estende su una superficie di circa 1.300 ettari e rappresenta uno dei siti archeologici più importanti e suggestivi dell'intera regione.\n\nIl parco è situato nella valle del fiume Fiora e comprende una vasta area di interesse archeologico, naturalistico e paesaggistico. La sua storia risale all'antica città etrusca di Vulci, che fu uno dei centri più importanti della civiltà etrusca tra il VII e il IV secolo a.C. Il sito archeologico è stato scoperto nel XIX secolo e da allora sono state effettuate numerose campagne di scavo che hanno portato alla luce importanti reperti e testimonianze dell'antica civiltà etrusca.\n\nAll'interno del parco è possibile visitare diverse aree archeologiche, tra cui l'acropoli, il ponte etrusco, le tombe a tumulo e le necropoli. L'acropoli è la parte più antica del sito e ospita i resti di un tempio etrusco, di un teatro e di una cinta muraria. Il ponte etrusco, invece, è un'antica struttura che attraversa il fiume Fiora e rappresenta uno dei pochi esempi di ponte etrusco ancora visibili.\n\nLe tombe a tumulo sono delle sepolture monumentali risalenti all'epoca etrusca e sono caratterizzate da grandi tumuli di terra che coprono le camere funerarie. Alcune di queste tombe sono state restaurate e possono essere visitate, offrendo un'interessante panoramica sulla cultura e le tradizioni funerarie degli antichi etruschi.\n\nOltre alle aree archeologiche, il parco offre anche una ricca biodiversità e una varietà di paesaggi naturali. È possibile fare escursioni lungo i sentieri che attraversano il parco e ammirare la flora e la fauna locali. Tra le specie animali presenti nel parco vi sono il cinghiale, il capriolo, il tasso e numerose specie di uccelli.\n\nIl Parco Archeologico Naturalistico di Vulci è un luogo ideale per gli amanti della storia, della natura e del trekking. Offre la possibilità di immergersi nella storia millenaria dell'antica civiltà etrusca e di godere di paesaggi suggestivi e incontaminati."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 610,
+        "total_tokens": 651
+    }
+}

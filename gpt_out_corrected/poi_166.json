@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7end6GBeaGNnYupTZgfedPOrVncFI",
+    "object": "chat.completion",
+    "created": 1689958252,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni è un edificio religioso situato nel comune di Calcata, in Italia. Si trova nel centro storico del paese, affacciandosi sulla piazza principale.\n\nLa chiesa risale al XII secolo e presenta uno stile architettonico romanico. La facciata è semplice ma elegante, con un portale d'ingresso sormontato da un rosone circolare. Sopra il portale, si trova un affresco raffigurante San Giovanni Battista, da cui la chiesa prende il nome.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di San Giovanni Battista e di altri santi. Tra gli affreschi più notevoli vi è una rappresentazione del Battesimo di Cristo.\n\nNella parte posteriore della chiesa si trova un altare in marmo, sormontato da una pala d'altare raffigurante San Giovanni Battista. L'altare è circondato da una balaustra in ferro battuto, che aggiunge un tocco di eleganza all'ambiente.\n\nLa Chiesa di San Giovanni è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per la comunità locale, che la considera un simbolo di identità e tradizione.\n\nOltre al suo valore religioso e storico, la chiesa offre anche una vista panoramica mozzafiato sulla valle circostante. Dalla piazza antistante è possibile ammirare il paesaggio collinare e godere di un'atmosfera tranquilla e suggestiva.\n\nIn conclusione, la Chiesa di San Giovanni a Calcata è un gioiello architettonico e artistico che merita una visita. La sua bellezza e la sua importanza storica la rendono un luogo di grande interesse per i visitatori e un punto di riferimento per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 502,
+        "total_tokens": 535
+    }
+}

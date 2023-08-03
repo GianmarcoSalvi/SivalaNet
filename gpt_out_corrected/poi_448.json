@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flsFkySbXCacRwOdpT90JLm65VjT",
+    "object": "chat.completion",
+    "created": 1690189831,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Orsini-Farnese è un imponente edificio storico situato nel comune di Marta, in provincia di Viterbo, nella regione del Lazio, Italia. Si trova sulla riva del Lago di Bolsena, offrendo una vista panoramica mozzafiato sulle acque del lago.\n\nIl palazzo è stato costruito nel XVI secolo come residenza estiva per la famiglia Orsini, una delle più importanti famiglie nobiliari italiane dell'epoca. Successivamente, nel XVII secolo, è passato alla famiglia Farnese, che ha apportato alcune modifiche e ampliamenti all'edificio.\n\nL'architettura del palazzo è un mix di stili rinascimentali e barocchi. La facciata principale è caratterizzata da un portale d'ingresso monumentale, sormontato da un balcone con una balaustra in pietra. Le finestre sono decorate con cornici in pietra e sono disposte simmetricamente lungo la facciata.\n\nAll'interno, il palazzo conserva ancora molti degli arredi originali, tra cui affreschi, stucchi e pavimenti in marmo. Le stanze sono ampie e luminose, con soffitti alti e decorazioni elaborate. Alcune delle sale più importanti includono la Sala degli Specchi, la Sala dei Fiumi e la Sala delle Stagioni, ognuna con un tema decorativo specifico.\n\nIl palazzo è circondato da un vasto parco, che offre un'oasi di tranquillità e bellezza naturale. Il parco è ricco di alberi secolari, aiuole fiorite e fontane, creando un ambiente ideale per passeggiate rilassanti e momenti di relax.\n\nOggi, il Palazzo Orsini-Farnese è aperto al pubblico e ospita eventi culturali, mostre d'arte e visite guidate. È anche possibile affittare alcune delle sue sale per matrimoni, conferenze e altri eventi speciali.\n\nIn sintesi, il Palazzo Orsini-Farnese è un gioiello architettonico e storico nel comune di Marta. La sua bellezza e la sua posizione privilegiata sul Lago di Bolsena lo rendono una meta imperdibile per gli amanti dell'arte, della storia e della natura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 553,
+        "total_tokens": 588
+    }
+}

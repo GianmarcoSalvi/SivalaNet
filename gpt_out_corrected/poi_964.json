@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqbTaVmBMHtMVtrkXK7ffIHkW8vD",
+    "object": "chat.completion",
+    "created": 1690208011,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Facoltà di conservazione dei beni culturali dell'Università degli studi della Tuscia si trova nel comune di Viterbo, in Italia. È una biblioteca specializzata che offre una vasta gamma di risorse per gli studenti, i ricercatori e gli appassionati di conservazione dei beni culturali.\n\nLa biblioteca è situata all'interno del campus universitario e occupa uno spazio ampio e moderno. Dispone di diverse sale studio, aree di lettura e postazioni per la consultazione dei materiali. L'ambiente è accogliente e silenzioso, ideale per lo studio e la ricerca.\n\nLa collezione della biblioteca è ricca e variegata, comprendendo libri, riviste, periodici, tesi di laurea, documenti elettronici e altro materiale di riferimento. Gli argomenti trattati spaziano dalla conservazione e restauro dei beni culturali, all'archeologia, all'arte, alla storia dell'arte e alla museologia.\n\nLa biblioteca offre anche l'accesso a numerosi database e risorse online, che consentono agli utenti di accedere a una vasta gamma di informazioni e pubblicazioni scientifiche nel campo della conservazione dei beni culturali.\n\nIl personale della biblioteca è altamente qualificato e disponibile ad assistere gli utenti nella ricerca e nell'utilizzo delle risorse. Sono inoltre organizzati corsi di formazione e workshop per aiutare gli studenti a sviluppare le competenze necessarie per la ricerca accademica.\n\nLa Biblioteca della Facoltà di conservazione dei beni culturali dell'Università degli studi della Tuscia è un importante punto di riferimento per gli studiosi e gli appassionati di conservazione dei beni culturali nella regione. La sua vasta collezione e le sue risorse moderne la rendono un luogo ideale per lo studio e la ricerca nel campo della conservazione dei beni culturali."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 53,
+        "completion_tokens": 454,
+        "total_tokens": 507
+    }
+}

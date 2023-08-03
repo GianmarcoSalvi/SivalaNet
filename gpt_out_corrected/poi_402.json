@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flVjJSHftnRlPMg8PiRvVDesymmR",
+    "object": "chat.completion",
+    "created": 1690188435,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "I Romitori di Ischia di Castro sono un complesso di grotte e caverne situato nel comune di Ischia di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. Questo sito è di grande interesse storico e archeologico, poiché rappresenta un importante esempio di insediamento rupestre.\n\nLe grotte dei Romitori si trovano su una collina rocciosa, circondata da una fitta vegetazione e con una vista panoramica sulla valle circostante. Questo luogo è stato abitato sin dai tempi antichi, come dimostrano i numerosi reperti archeologici rinvenuti in loco.\n\nLe grotte sono state utilizzate come rifugi e abitazioni dagli eremiti e dai monaci che si ritiravano in queste zone per condurre una vita di preghiera e meditazione. Questi romitori, da cui prende il nome il sito, erano solitari che cercavano la solitudine e la contemplazione nella natura.\n\nLe grotte sono costituite da diverse stanze e corridoi scavati nella roccia, con pareti irregolari e soffitti bassi. Alcune di esse sono state adattate per scopi religiosi, con nicchie e altari scavati nella roccia stessa. Alcune delle grotte sono state anche utilizzate come cimiteri, come dimostrano le tombe scavate nella roccia.\n\nOltre alle grotte, il complesso dei Romitori di Ischia di Castro comprende anche una chiesa rupestre, dedicata a San Michele Arcangelo. Questa chiesa è stata costruita all'interno di una grande caverna e presenta affreschi e decorazioni risalenti al XIII secolo.\n\nOggi, i Romitori di Ischia di Castro sono aperti al pubblico e rappresentano una meta turistica molto apprezzata. I visitatori possono esplorare le grotte e ammirare gli affreschi e le opere d'arte presenti nella chiesa rupestre. Inoltre, il sito offre una vista panoramica mozzafiato sulla campagna circostante, rendendolo un luogo ideale per una passeggiata tranquilla e rilassante.\n\nIn sintesi, i Romitori di Ischia di Castro sono un complesso di grotte e caverne che rappresentano un importante sito storico e archeologico nel comune di Ischia di Castro. Questo luogo offre ai visitatori l'opportunità di immergersi nella storia e nella spiritualità, esplorando le grotte e ammirando le opere d'arte presenti nella chiesa rupestre."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 634,
+        "total_tokens": 670
+    }
+}

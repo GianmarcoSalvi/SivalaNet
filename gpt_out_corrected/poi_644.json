@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnQ1xmy0VwXtt6bCdKsOHPlfycfa",
+    "object": "chat.completion",
+    "created": 1690195769,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Porta Morone è una delle quattro porte di accesso al centro storico di Sutri, un comune situato nella provincia di Viterbo, nel Lazio, Italia. Questa porta è situata sul lato nord-est del centro storico e prende il nome dalla famiglia Morone, una delle famiglie nobili che governavano la città nel Medioevo.\n\nLa porta è stata costruita nel XIII secolo ed è caratterizzata da una struttura massiccia e imponente. È composta da un arco a tutto sesto, realizzato in pietra locale, che è sormontato da una torre di forma quadrangolare. La torre è dotata di feritoie e finestre, che permettevano di controllare l'accesso alla città.\n\nPorta Morone è stata oggetto di diverse modifiche nel corso dei secoli. Durante il periodo rinascimentale, sono state aggiunte delle decorazioni in stile rinascimentale sulla facciata esterna della porta, tra cui un portale in pietra con un arco a tutto sesto e un balcone con ringhiera in ferro battuto.\n\nOggi, Porta Morone è uno dei principali punti di accesso al centro storico di Sutri ed è una delle attrazioni turistiche più importanti della città. La sua posizione strategica, sulla strada principale che collega Sutri a Roma, la rende un punto di riferimento per i visitatori che arrivano in città.\n\nAttraversando Porta Morone, si entra nel cuore del centro storico di Sutri, con le sue stradine acciottolate, le case in pietra e i numerosi monumenti storici. La porta è circondata da un'atmosfera medievale e offre una vista panoramica sulla campagna circostante.\n\nInoltre, nei pressi di Porta Morone si trovano alcuni dei principali luoghi di interesse di Sutri, come l'anfiteatro romano, la chiesa di Santa Maria del Parto e il Museo Civico Archeologico. La porta è anche il punto di partenza per esplorare il Parco Archeologico di Sutri, che comprende numerosi siti archeologici di epoca romana e medievale.\n\nIn conclusione, Porta Morone è una porta storica di grande importanza nel comune di Sutri. La sua maestosità architettonica e la sua posizione strategica la rendono un punto di riferimento per i visitatori che desiderano esplorare il centro storico della città e i suoi dintorni."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 605,
+        "total_tokens": 637
+    }
+}

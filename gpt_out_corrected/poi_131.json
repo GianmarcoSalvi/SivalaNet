@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enRpzsnqplJjKwRBvhPssG7X6VuV",
+    "object": "chat.completion",
+    "created": 1689957553,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro in Santo Francesco è un importante luogo culturale situato nel comune di Bolsena, in Italia. Si trova all'interno di un antico convento francescano, risalente al XIII secolo, che è stato restaurato e adattato per ospitare spettacoli teatrali e culturali.\n\nIl teatro si caratterizza per la sua architettura affascinante e suggestiva, che combina elementi medievali con influenze rinascimentali. La struttura è composta da una sala principale a pianta rettangolare, con un palcoscenico centrale e una platea a gradoni che può ospitare fino a 200 spettatori. Le pareti sono decorate con affreschi originali, che risalgono al periodo francescano, e creano un'atmosfera unica e suggestiva.\n\nIl Teatro in Santo Francesco offre una programmazione variegata e di alta qualità, che spazia dalla prosa al teatro di figura, dalla danza alla musica. Ospita spettacoli di compagnie teatrali locali, nazionali e internazionali, nonché eventi culturali e conferenze. La programmazione è curata con attenzione e offre una vasta gamma di proposte artistiche, che spaziano dal teatro classico al contemporaneo, offrendo al pubblico una varietà di esperienze teatrali uniche.\n\nOltre alle rappresentazioni teatrali, il Teatro in Santo Francesco ospita anche mostre d'arte, workshop e laboratori per promuovere la cultura e l'arte nella comunità locale. La struttura è dotata di moderne attrezzature tecniche e di illuminazione, che consentono di realizzare spettacoli di alta qualità e di creare atmosfere suggestive.\n\nIl Teatro in Santo Francesco è un luogo di incontro e di scambio culturale, che promuove l'arte e la cultura nella comunità di Bolsena e nelle zone circostanti. Grazie alla sua posizione centrale nel centro storico della città, è facilmente accessibile e rappresenta un punto di riferimento per gli amanti del teatro e della cultura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 503,
+        "total_tokens": 535
+    }
+}

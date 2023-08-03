@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmLYISTxYm5dqk8hi38tISZ1Omzx",
+    "object": "chat.completion",
+    "created": 1690191648,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Porta Romana è una delle quattro porte di accesso al centro storico del comune di Nepi, situato nella provincia di Viterbo, nella regione del Lazio, in Italia. \n\nLa porta è situata sul lato orientale del centro storico e rappresenta uno dei principali punti di accesso alla città. Essa prende il nome da una delle vie principali che conduceva a Roma, la Via Cassia, che passava proprio attraverso questa porta.\n\nLa Porta Romana è caratterizzata da un imponente arco a tutto sesto, realizzato in pietra locale, che si apre su un ampio spazio aperto. Sopra l'arco si trova una piccola finestra rettangolare, decorata con motivi architettonici.\n\nLa porta è stata costruita nel periodo medievale, ma presenta anche elementi di epoca romana, come ad esempio i blocchi di pietra riutilizzati per la sua costruzione. Questo testimonia l'importanza strategica di Nepi durante l'epoca romana, quando la città era un importante centro di comunicazione e commercio lungo la Via Cassia.\n\nOltre al suo valore storico e architettonico, la Porta Romana rappresenta anche un punto di riferimento per i residenti e i visitatori di Nepi. Essa segna l'ingresso al centro storico, con le sue stradine acciottolate, i palazzi storici e le chiese antiche. Attraverso la porta, è possibile accedere a numerosi luoghi di interesse, come la Rocca dei Borgia, il Duomo di Nepi e il Palazzo Comunale.\n\nLa Porta Romana è un simbolo di Nepi e della sua storia millenaria. Essa rappresenta un punto di passaggio tra il passato e il presente, tra la tradizione e la modernità, e incarna l'identità e l'orgoglio della comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 453,
+        "total_tokens": 484
+    }
+}

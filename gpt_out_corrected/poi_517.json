@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmEzlcZ5kmF6MHsI7HkCtu5oSlgr",
+    "object": "chat.completion",
+    "created": 1690191241,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Porta Porciana è una delle principali porte d'accesso al centro storico di Nepi, un comune situato nella provincia di Viterbo, nel Lazio, Italia. Questa porta è una delle quattro porte medievali che si aprono lungo le mura cittadine.\n\nLa Porta Porciana è situata sul lato nord-est del centro storico e prende il nome dalla famiglia Porciani, che governava Nepi nel XIII secolo. La porta è stata costruita nel XIII secolo e presenta un'architettura tipicamente medievale.\n\nLa struttura della porta è caratterizzata da un arco a tutto sesto, realizzato in pietra locale, che si apre su un passaggio coperto. Sopra l'arco si trova una loggia con una serie di archi a sesto acuto, sostenuti da colonne in pietra. Questa loggia era utilizzata come punto di osservazione e difesa durante gli assedi.\n\nLa Porta Porciana è dotata di una torre di guardia, che si erge sopra la porta stessa. La torre è di forma quadrata e presenta feritoie per consentire il tiro con l'arco e la difesa della porta. La torre è accessibile tramite una scala interna ed è possibile salire fino alla sommità per godere di una vista panoramica sulla città e sulla campagna circostante.\n\nLa Porta Porciana è stata oggetto di restauri nel corso dei secoli, ma ha mantenuto intatta la sua struttura originale. Oggi è uno dei principali punti di accesso al centro storico di Nepi e rappresenta un importante simbolo della storia e dell'architettura medievale della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 406,
+        "total_tokens": 438
+    }
+}

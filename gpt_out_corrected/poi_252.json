@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoKxHzM8ogCsUtwPKMfbfrTnKJHG",
+    "object": "chat.completion",
+    "created": 1689960971,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna delle Grazie si trova nel comune di Castiglione in Teverina, in provincia di Viterbo, Italia. Questo edificio religioso è uno dei principali punti di riferimento della comunità locale e rappresenta un importante luogo di culto per i fedeli.\n\nLa chiesa è situata in una posizione panoramica, affacciata sulla valle del fiume Tevere, e si distingue per la sua architettura semplice ma suggestiva. La facciata è caratterizzata da un portale in pietra, sormontato da un rosone circolare che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Le pareti sono decorate con affreschi raffiguranti scene della vita di Maria e dei santi, realizzati da artisti locali nel corso dei secoli.\n\nAl centro dell'altare maggiore si trova una statua della Madonna delle Grazie, oggetto di grande devozione da parte dei fedeli. La statua, realizzata in legno policromo, rappresenta la Madonna con il Bambino Gesù tra le braccia e è considerata un'opera d'arte di grande valore artistico e religioso.\n\nLa chiesa è anche dotata di una cappella laterale, dedicata a San Giuseppe, che ospita un altare e una statua del santo. Questo spazio è utilizzato per la celebrazione di messe e per momenti di preghiera più intimi.\n\nLa Chiesa della Madonna delle Grazie è un luogo di incontro per la comunità locale, che si riunisce qui per partecipare alle celebrazioni religiose e per pregare. Oltre ad essere un importante centro di culto, la chiesa rappresenta anche un punto di riferimento storico e artistico per il comune di Castiglione in Teverina."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 488,
+        "total_tokens": 529
+    }
+}

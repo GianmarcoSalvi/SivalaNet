@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmEgbO9X0kz5w7mBCSq8w1TAINfo",
+    "object": "chat.completion",
+    "created": 1690191222,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli dei Tre Ponti si trova nel comune di Nepi, nella regione del Lazio, in Italia. È un sito archeologico di grande importanza storica e culturale, che risale all'epoca etrusca.\n\nLa necropoli si estende su una vasta area di circa 30 ettari, ed è composta da numerose tombe a tumulo, risalenti al VII e VI secolo a.C. Queste tombe erano utilizzate per seppellire i defunti e venivano costruite con pietre e terra, formando delle collinette artificiali.\n\nLe tombe a tumulo presenti nella necropoli sono di diverse tipologie, tra cui le più comuni sono le tombe a camera, che consistono in una camera sepolcrale sotterranea, accessibile tramite un corridoio. Alcune di queste camere erano decorate con affreschi e contenevano oggetti funerari come vasi, gioielli e armi.\n\nOltre alle tombe a tumulo, nella necropoli sono presenti anche tombe a fossa, che consistono in una semplice buca nel terreno, e tombe a dado, che sono delle strutture rettangolari in pietra.\n\nLa necropoli dei Tre Ponti prende il nome dai tre ponti che attraversano il fiume Treja, che si trovano nelle vicinanze del sito. Questi ponti erano di fondamentale importanza per la comunicazione e il commercio tra Nepi e le altre città etrusche della regione.\n\nIl sito archeologico della necropoli dei Tre Ponti è stato oggetto di scavi e ricerche sin dagli anni '60, e ha restituito numerosi reperti di grande valore storico. Oggi è possibile visitare il sito e ammirare le tombe a tumulo e gli oggetti funerari esposti nel museo archeologico di Nepi.\n\nLa necropoli dei Tre Ponti rappresenta un importante testimonianza dell'antica civiltà etrusca e offre un'opportunità unica per immergersi nella storia e nella cultura di questa antica civiltà."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 502,
+        "total_tokens": 537
+    }
+}

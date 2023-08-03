@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoXIKbLFJF985dDQw3pfpNt5Rp0x",
+    "object": "chat.completion",
+    "created": 1689961736,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Montalto è un'imponente residenza storica situata nel comune di Civita Castellana, nella regione del Lazio, in Italia. Si trova nel centro storico della città, in una posizione dominante che offre una vista panoramica sulla valle del Tevere.\n\nIl palazzo risale al XV secolo ed è considerato uno dei più importanti esempi di architettura rinascimentale nella zona. La sua facciata è caratterizzata da una serie di finestre ad arco, decorate con dettagli in pietra e cornici in stile classico. La struttura è costruita principalmente in pietra locale, conferendo al palazzo un aspetto solido e imponente.\n\nL'interno del palazzo è altrettanto affascinante, con una serie di sale e stanze che conservano ancora gli arredi originali dell'epoca. Tra le stanze più interessanti vi è la sala dei ricevimenti, con un soffitto a cassettoni decorato e affreschi sulle pareti raffiguranti scene mitologiche. Altre stanze includono la sala da pranzo, la biblioteca e le camere da letto, tutte arredate con mobili d'epoca e opere d'arte.\n\nIl palazzo è circondato da un ampio giardino all'italiana, con aiuole geometriche, fontane e statue. Il giardino offre un'oasi di tranquillità e bellezza, con viste panoramiche sulla campagna circostante.\n\nOggi, il Palazzo Montalto è aperto al pubblico e ospita eventi culturali, mostre d'arte e visite guidate. È anche possibile affittare il palazzo per matrimoni, conferenze e altri eventi speciali.\n\nIn sintesi, il Palazzo Montalto è un gioiello architettonico nel cuore di Civita Castellana. Con la sua storia affascinante, gli interni sontuosi e il giardino incantevole, rappresenta una tappa imperdibile per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 477,
+        "total_tokens": 511
+    }
+}

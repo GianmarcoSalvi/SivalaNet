@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmk6SaLAydxSaijg3i2gWlkOTcyE",
+    "object": "chat.completion",
+    "created": 1690193170,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Curia vescovile nel comune di Orte, Italia, è un'importante istituzione culturale che si trova all'interno del Palazzo Vescovile, situato nel centro storico della città. La biblioteca è di proprietà della Diocesi di Orte e si occupa principalmente di conservare, catalogare e mettere a disposizione del pubblico una vasta collezione di libri, manoscritti, documenti storici e archivi ecclesiastici.\n\nLa biblioteca è stata fondata nel XVIII secolo e nel corso degli anni ha accumulato una ricca collezione di oltre 20.000 volumi, che spaziano in diversi campi del sapere, come la teologia, la filosofia, la storia, la letteratura e la scienza. Tra i tesori più preziosi della biblioteca vi sono numerosi manoscritti antichi, alcuni dei quali risalenti al Medioevo, che testimoniano la ricchezza culturale e religiosa della regione.\n\nLa struttura della biblioteca è composta da diverse sale, ognuna dedicata a un particolare tema o periodo storico. Le sale sono arredate con mobili d'epoca e offrono un'atmosfera accogliente e suggestiva per gli studiosi e i visitatori che desiderano consultare i libri o fare ricerche.\n\nLa Biblioteca della Curia vescovile è aperta al pubblico e offre servizi di consultazione e prestito dei libri, nonché la possibilità di accedere a risorse digitali e a una sala di lettura. Inoltre, organizza regolarmente mostre, conferenze e eventi culturali per promuovere la conoscenza e la diffusione della cultura e della storia locale.\n\nLa biblioteca è un importante punto di riferimento per gli studiosi, gli studenti e gli appassionati di storia e cultura, che possono trovare in essa una fonte preziosa di informazioni e un luogo di studio e ricerca. La sua posizione nel cuore del centro storico di Orte la rende facilmente accessibile a tutti coloro che desiderano approfondire la conoscenza della storia e della cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 505,
+        "total_tokens": 542
+    }
+}

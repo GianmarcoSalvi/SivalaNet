@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enZYhnp4PD41q09qHpyNc0OQ36iX",
+    "object": "chat.completion",
+    "created": 1689958032,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa dei Santi Cornelio e Cipriano si trova nel comune di Calcata, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La facciata è semplice ma elegante, con un portale architravato e un rosone centrale. Sopra il portale si trova una lunetta affrescata raffigurante i santi titolari della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, che rappresentano scene della vita di Cristo e dei santi. Tra gli affreschi più importanti vi è una Madonna con Bambino, attribuita a Pietro Cavallini, uno dei più importanti pittori del periodo.\n\nNella chiesa si trovano anche alcune opere d'arte di grande valore, tra cui una croce processionale in argento dorato del XV secolo e un crocifisso ligneo del XIV secolo.\n\nLa Chiesa dei Santi Cornelio e Cipriano è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche una meta turistica molto apprezzata, grazie alla sua bellezza architettonica e artistica.\n\nLa chiesa si trova nel centro storico di Calcata, un borgo medievale caratterizzato da stradine strette e case in pietra. La sua posizione panoramica offre una vista mozzafiato sulla valle del fiume Treja.\n\nIn conclusione, la Chiesa dei Santi Cornelio e Cipriano è un gioiello architettonico e artistico nel comune di Calcata. La sua storia millenaria e le sue opere d'arte la rendono una tappa imperdibile per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 471,
+        "total_tokens": 511
+    }
+}

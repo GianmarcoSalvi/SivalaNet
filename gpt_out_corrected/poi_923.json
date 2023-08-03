@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqJajXFGgtXxGQjJ4ds8g5IjJzGL",
+    "object": "chat.completion",
+    "created": 1690206902,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex chiesa di Santo Biagio si trova nel comune di Viterbo, in Italia. Questo edificio religioso è un importante esempio di architettura romanica e rappresenta uno dei principali luoghi di culto della città.\n\nLa chiesa di Santo Biagio è stata costruita nel XII secolo e presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra con decorazioni scolpite. L'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate.\n\nGli affreschi all'interno della chiesa sono particolarmente notevoli e risalgono al XIII secolo. Raffigurano scene della vita di Santo Biagio, il santo patrono della chiesa, nonché episodi della vita di Cristo e dei santi. Gli affreschi sono stati restaurati nel corso degli anni, ma conservano ancora la loro bellezza originale.\n\nL'ex chiesa di Santo Biagio è stata dismessa come luogo di culto nel corso dei secoli e oggi è utilizzata per eventi culturali e mostre d'arte. La sua posizione centrale nel comune di Viterbo la rende un punto di riferimento per i visitatori che desiderano immergersi nella storia e nell'arte della città.\n\nLa chiesa di Santo Biagio è un luogo di grande importanza storica e artistica, che testimonia l'importanza del cristianesimo nella storia di Viterbo. La sua architettura romanica e gli affreschi medievali la rendono un luogo affascinante da visitare per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 402,
+        "total_tokens": 439
+    }
+}

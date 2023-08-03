@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flxi9Hhuwv9dsX2CYXMclXSW9D6w",
+    "object": "chat.completion",
+    "created": 1690190170,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Montalto di Castro è un importante punto di riferimento culturale per la comunità locale. Situata nel centro del comune, la biblioteca offre una vasta gamma di servizi e risorse per soddisfare le esigenze di lettori di tutte le età.\n\nLa struttura della biblioteca è moderna e accogliente, con ampie sale di lettura e spazi dedicati a diverse attività. All'ingresso, c'è un'area dedicata all'accoglienza e all'informazione, dove i visitatori possono ottenere assistenza e orientamento sui servizi offerti.\n\nLa biblioteca dispone di una vasta collezione di libri, che spazia da romanzi, saggi, poesie, libri per bambini e ragazzi, fino a testi di storia, arte, scienze e molto altro ancora. Gli scaffali sono organizzati in modo chiaro e accessibile, facilitando la ricerca e la consultazione dei libri.\n\nOltre ai libri, la biblioteca offre anche una vasta gamma di materiali multimediali, come CD, DVD e audiolibri, che possono essere presi in prestito dagli utenti. Inoltre, sono disponibili anche riviste e giornali, che permettono di rimanere aggiornati sulle ultime novità e tendenze.\n\nLa biblioteca comunale di Montalto di Castro organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e laboratori per bambini. Queste attività contribuiscono a promuovere la lettura e la cultura all'interno della comunità, offrendo opportunità di apprendimento e di svago per tutti.\n\nI servizi offerti dalla biblioteca includono anche la possibilità di utilizzare computer e connessione internet, consentendo agli utenti di accedere a risorse digitali e svolgere ricerche online. Inoltre, è possibile richiedere il servizio di prestito interbibliotecario, che consente di ottenere libri e materiali non presenti nella collezione della biblioteca.\n\nLa biblioteca comunale di Montalto di Castro è gestita da personale competente e disponibile, che offre supporto e consulenza agli utenti in tutte le loro esigenze. L'obiettivo principale della biblioteca è quello di promuovere la cultura e l'educazione, offrendo un ambiente accogliente e stimolante per la lettura e lo studio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 571,
+        "total_tokens": 605
+    }
+}

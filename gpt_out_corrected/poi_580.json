@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmqnwzi539mIAWIVwINaSzk9mRk2",
+    "object": "chat.completion",
+    "created": 1690193585,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Biagio si trova nel comune di Orte, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale decorato e una grande finestra centrale. La struttura è realizzata in pietra locale, che conferisce un aspetto solido e resistente all'edificio.\n\nAll'interno, la chiesa presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di San Biagio e altri santi. Gli affreschi sono di grande valore artistico e sono stati restaurati per preservarne la bellezza nel corso degli anni.\n\nL'altare maggiore è un capolavoro di scultura romanica, con dettagli finemente intagliati e decorazioni elaborate. Sopra l'altare si trova una grande pala d'altare, dipinta nel XVII secolo, che raffigura San Biagio in trono circondato da angeli e santi.\n\nLa chiesa ospita anche una serie di opere d'arte, tra cui dipinti, sculture e reliquie. Tra le opere più importanti vi è una statua di San Biagio, patrono della chiesa, che viene portata in processione durante le festività religiose.\n\nLa Chiesa di San Biagio è un luogo di culto attivo e accoglie regolarmente celebrazioni religiose e messe. È anche aperta ai visitatori che desiderano ammirare l'architettura e l'arte all'interno della chiesa.\n\nLa sua posizione nel comune di Orte, circondata da un paesaggio suggestivo, la rende un luogo di grande fascino e spiritualità. La chiesa è un importante punto di riferimento per la comunità locale e un luogo di interesse per i turisti che visitano la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 512,
+        "total_tokens": 547
+    }
+}

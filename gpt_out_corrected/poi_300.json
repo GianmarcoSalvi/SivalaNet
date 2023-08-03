@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoYLh7ASkAUP9MpoQImmUjUXJwAC",
+    "object": "chat.completion",
+    "created": 1689961801,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Santa Maria si trova nel comune di Civitella d'Agliano, nella regione del Lazio, in Italia. Si tratta di un antico castello medievale che risale al XIII secolo e che si erge maestoso su una collina, offrendo una vista panoramica mozzafiato sulla valle del fiume Tevere.\n\nIl castello è stato costruito come una fortezza difensiva per proteggere il territorio circostante e controllare le vie di comunicazione strategiche. La sua posizione elevata e le mura imponenti testimoniano la sua importanza storica e militare.\n\nL'edificio è caratterizzato da una struttura a pianta quadrata, con quattro torri angolari che si ergono verso il cielo. Le mura esterne sono realizzate in pietra e mattoni, mentre gli interni presentano affreschi e decorazioni che testimoniano il passato nobile del castello.\n\nAll'interno del castello si trovano diverse sale, tra cui la sala del trono, la sala delle armi e la cappella. Quest'ultima è particolarmente interessante, con i suoi affreschi ben conservati che raffigurano scene religiose e simboli cristiani.\n\nOltre alle sale, il castello ospita anche un museo che racconta la storia della zona e del castello stesso. Qui è possibile ammirare reperti archeologici, armature medievali e altri oggetti storici che offrono una visione approfondita della vita nel castello e nella regione circostante nel corso dei secoli.\n\nOggi il Castello di Santa Maria è aperto al pubblico e offre visite guidate che permettono ai visitatori di immergersi nella storia e nell'atmosfera di un autentico castello medievale. Inoltre, il castello è spesso sede di eventi culturali, mostre d'arte e concerti che animano la sua atmosfera suggestiva.\n\nIn conclusione, il Castello di Santa Maria a Civitella d'Agliano è un gioiello storico e architettonico che rappresenta un importante patrimonio culturale della regione. La sua posizione panoramica, la sua struttura imponente e le sue ricche decorazioni lo rendono una meta imperdibile per gli amanti della storia e dell'arte."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 552,
+        "total_tokens": 590
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq0x8XLbBJY1eeDuKEQAyNUGLGZR",
+    "object": "chat.completion",
+    "created": 1690205747,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Piazza del Plebiscito è una delle piazze principali nel comune di Viterbo, situata nel centro storico della città. È una piazza di forma rettangolare, circondata da importanti edifici storici e rappresenta uno dei luoghi più caratteristici e suggestivi di Viterbo.\n\nAl centro della piazza si trova una grande fontana, chiamata Fontana Grande o Fontana di Piazza del Plebiscito, risalente al XVI secolo. La fontana è composta da una vasca circolare con una serie di bocche d'acqua che spruzzano acqua in modo armonioso. È un punto di riferimento per i visitatori e un luogo di incontro per i viterbesi.\n\nLa piazza è circondata da importanti edifici storici, tra cui il Palazzo dei Priori, che è il municipio di Viterbo. Questo imponente palazzo risale al XIII secolo ed è caratterizzato da una facciata gotica con una torre centrale. È possibile visitare il palazzo e ammirare gli affreschi e le opere d'arte al suo interno.\n\nUn altro edificio di rilievo che si affaccia sulla piazza è il Palazzo del Podestà, che risale al XII secolo. Questo edificio presenta una facciata in stile romanico e ospita il Museo Civico di Viterbo, dove è possibile ammirare una vasta collezione di reperti archeologici e opere d'arte.\n\nLa Piazza del Plebiscito è anche un luogo di eventi e manifestazioni culturali. Durante l'anno, la piazza ospita concerti, spettacoli teatrali e fiere, attirando visitatori da tutto il territorio.\n\nLa piazza è circondata da caffè, ristoranti e negozi, che offrono la possibilità di gustare la cucina locale e acquistare prodotti tipici. È un luogo ideale per passeggiare, rilassarsi e godersi l'atmosfera unica di Viterbo.\n\nIn conclusione, la Piazza del Plebiscito è una piazza centrale e affascinante nel comune di Viterbo, caratterizzata da importanti edifici storici, una fontana suggestiva e una vivace atmosfera. È un luogo da non perdere durante una visita a Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 566,
+        "total_tokens": 601
+    }
+}

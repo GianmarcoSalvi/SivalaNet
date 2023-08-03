@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flbYMpBvhb1LP7Z3SQ0ZnOm0mcNx",
+    "object": "chat.completion",
+    "created": 1690188796,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Rocco si trova nel comune di Ischia di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. È una chiesa di piccole dimensioni, ma di grande importanza storica e artistica.\n\nLa chiesa è dedicata a Santo Rocco, un santo molto venerato in Italia per la sua intercessione contro la peste. È situata nel centro storico del paese, circondata da stradine acciottolate e case antiche. La sua facciata è semplice e sobria, con un portale in pietra e una finestra circolare sopra di esso.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti bianche. Sulle pareti sono presenti diverse opere d'arte, tra cui dipinti e affreschi. Uno degli affreschi più importanti raffigura Santo Rocco, con il suo cane fedele accanto a lui. Questo affresco è stato realizzato nel XVII secolo e rappresenta uno dei pochi esempi di arte sacra di quel periodo nella zona.\n\nNella chiesa è presente anche un altare in marmo, decorato con intarsi e sculture. Sopra l'altare si trova una statua di Santo Rocco, realizzata in legno e dipinta a mano. La statua è molto dettagliata e mostra il santo con il suo bastone da pellegrino e il suo cane.\n\nLa Chiesa di Santo Rocco è un luogo di culto molto amato dalla comunità locale. Ogni anno, il 16 agosto, si celebra una festa in onore di Santo Rocco, durante la quale la statua del santo viene portata in processione per le strade del paese. Durante la festa, la chiesa è decorata con fiori e luminarie, creando un'atmosfera festosa e religiosa.\n\nLa chiesa è anche aperta al pubblico durante tutto l'anno, permettendo ai visitatori di ammirare le sue opere d'arte e di partecipare alle celebrazioni religiose. La sua posizione nel centro storico di Ischia di Castro la rende facilmente accessibile e un punto di riferimento importante per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 542,
+        "total_tokens": 578
+    }
+}

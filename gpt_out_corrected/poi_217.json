@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enwpDTs7JfyXvZmAAhzQxWKJ5vEm",
+    "object": "chat.completion",
+    "created": 1689959475,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Santo Marco - Suore del Divino Amore è un istituto religioso situato nel comune di Caprarola, in Italia. L'istituto è composto da suore che si dedicano alla preghiera, alla contemplazione e all'assistenza spirituale e materiale ai bisognosi.\n\nLa struttura si trova in una posizione tranquilla e panoramica, circondata da un ampio giardino che offre un'atmosfera di pace e serenità. L'edificio principale è una grande casa conventuale, che ospita le suore e offre spazi per la preghiera e la meditazione.\n\nLe suore del Divino Amore seguono una vita di preghiera e contemplazione, dedicando gran parte del loro tempo alla preghiera personale e comunitaria. Sono impegnate nella recita del Rosario, nella celebrazione della Messa e nella partecipazione alle liturgie quotidiane.\n\nOltre alla vita di preghiera, le suore si dedicano anche all'assistenza spirituale e materiale ai bisognosi. Offrono sostegno e conforto alle persone che cercano aiuto e consolazione, sia attraverso la preghiera che attraverso l'ascolto e il supporto emotivo.\n\nL'istituto ospita anche ritiri spirituali e incontri di formazione per coloro che desiderano approfondire la loro fede e la loro relazione con Dio. Durante questi ritiri, le suore offrono insegnamenti spirituali, momenti di preghiera e meditazione, e accompagnano i partecipanti nel loro percorso di crescita spirituale.\n\nSanto Marco - Suore del Divino Amore è un luogo di accoglienza e di rifugio per coloro che cercano pace interiore, conforto spirituale e sostegno emotivo. Le suore sono disponibili ad ascoltare, consigliare e offrire una parola di speranza a coloro che si rivolgono a loro.\n\nIn sintesi, Santo Marco - Suore del Divino Amore è un istituto religioso che offre un ambiente di preghiera e contemplazione, insieme all'assistenza spirituale e materiale ai bisognosi. Le suore sono impegnate nella preghiera, nella meditazione e nell'accompagnamento spirituale, offrendo un luogo di accoglienza e di rifugio per coloro che cercano conforto e sostegno."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 562,
+        "total_tokens": 601
+    }
+}

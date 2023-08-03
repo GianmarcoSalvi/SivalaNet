@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enUSmfknoVSlZPZepwA73PLrxoN2",
+    "object": "chat.completion",
+    "created": 1689957716,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Misericordia si trova nel comune di Bomarzo, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nel centro storico di Bomarzo, circondata da stradine acciottolate e antiche case in pietra. La sua costruzione risale al XV secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti.\n\nL'edificio presenta uno stile architettonico tipicamente rinascimentale, con una facciata semplice ma elegante. La parte centrale della facciata è dominata da un grande portale in pietra, sormontato da un arco a tutto sesto. Sopra il portale si apre una finestra rettangolare, che permette l'ingresso di luce naturale all'interno della chiesa.\n\nAll'interno, la Chiesa della Misericordia presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi e dipinti di grande valore artistico, che rappresentano scene religiose e figure di santi. Sulle pareti laterali sono presenti delle cappelle, ognuna delle quali ospita un altare dedicato a un santo o a una santa.\n\nUno degli elementi più suggestivi della chiesa è il soffitto a cassettoni, decorato con affreschi che raffigurano scene bibliche e simboli religiosi. Le volte a crociera delle navate laterali sono anch'esse decorate con affreschi di grande bellezza.\n\nLa Chiesa della Misericordia è un luogo di culto molto amato dalla comunità di Bomarzo, che vi si riunisce regolarmente per celebrare le funzioni religiose. Oltre ad essere un importante centro di spiritualità, la chiesa è anche un'attrazione turistica molto apprezzata, grazie alla sua bellezza architettonica e artistica.\n\nIn conclusione, la Chiesa della Misericordia nel comune di Bomarzo, Italia, è un edificio religioso di grande valore storico e artistico. La sua architettura rinascimentale, gli affreschi e i dipinti che adornano le pareti, e il suggestivo soffitto a cassettoni la rendono una meta imperdibile per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 566,
+        "total_tokens": 602
+    }
+}

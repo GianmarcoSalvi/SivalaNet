@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqqg6hxq4Jn1M3iGpf5wQa2uD9dJ",
+    "object": "chat.completion",
+    "created": 1690208954,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Marta è un comune situato nella provincia di Viterbo, nella regione del Lazio, in Italia. Si trova sulle rive del lago di Bolsena, il più grande lago vulcanico d'Europa.\n\nIl comune di Marta è caratterizzato da un'atmosfera tranquilla e pittoresca, con stradine strette e case colorate che si affacciano sul lago. Il centro storico è ricco di storia e cultura, con edifici antichi e chiese che risalgono al periodo medievale.\n\nUna delle attrazioni principali di Marta è il suo porto turistico, che offre una vista mozzafiato sul lago di Bolsena. Il porto è un luogo ideale per passeggiare lungo il lungolago, godersi il panorama e ammirare le barche che si riflettono sull'acqua.\n\nMarta è anche famosa per la sua tradizione di pesca, in particolare per la pesca del coregone, un pesce tipico del lago di Bolsena. Ogni anno, a luglio, si tiene la \"Sagra del Coregone\", una festa dedicata a questo pesce, durante la quale è possibile gustare piatti tradizionali a base di coregone.\n\nIl comune di Marta è circondato da una natura incontaminata, con colline verdi e boschi che offrono numerose possibilità per escursioni e attività all'aria aperta. È possibile fare passeggiate lungo i sentieri che si snodano tra i campi e i vigneti, oppure fare una gita in bicicletta lungo le strade panoramiche.\n\nMarta è anche un punto di partenza ideale per visitare altre località della zona, come Viterbo, con le sue terme e il suo centro storico ben conservato, o Civita di Bagnoregio, un affascinante borgo medievale situato su una collina di tufo.\n\nIn sintesi, Marta è un comune affascinante e tranquillo, che offre una combinazione unica di storia, cultura, natura e tradizioni locali legate al lago di Bolsena. È un luogo ideale per chi cerca una vacanza rilassante e autentica in Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 522,
+        "total_tokens": 551
+    }
+}

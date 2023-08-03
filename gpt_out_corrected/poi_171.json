@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enecbHrHtPfBg1hr2IFAT78HMuu8",
+    "object": "chat.completion",
+    "created": 1689958346,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello dei Conti Anguillara si trova nel comune di Canepina, nella provincia di Viterbo, nella regione del Lazio, in Italia. Si tratta di un imponente castello medievale che domina il paesaggio circostante dalla sua posizione strategica su una collina.\n\nIl castello fu costruito nel XII secolo dalla famiglia Anguillara, una delle più potenti famiglie nobiliari dell'epoca. La struttura originale era costituita da una torre di avvistamento circondata da mura difensive, ma nel corso dei secoli venne ampliata e trasformata in una residenza signorile.\n\nL'aspetto attuale del castello risale al XV secolo, quando vennero aggiunte le caratteristiche torri angolari e il mastio centrale. La facciata è imponente e presenta un portale d'ingresso in pietra con un arco a tutto sesto. Le mura esterne sono decorate con merli e feritoie, testimonianza della funzione difensiva originaria del castello.\n\nAll'interno, il castello conserva ancora molti degli arredi originali, come affreschi, camini in pietra e pavimenti in cotto. Le stanze sono ampie e luminose, con soffitti a volta e finestre ad arco che offrono una vista panoramica sulla campagna circostante.\n\nIl castello è circondato da un vasto parco, che comprende un giardino all'italiana con aiuole geometriche e una corte interna con un pozzo centrale. Il parco è arricchito da alberi secolari e da una suggestiva vista sulla valle sottostante.\n\nOggi il Castello dei Conti Anguillara è aperto al pubblico e ospita eventi culturali, mostre e matrimoni. La sua posizione panoramica e la sua architettura storica lo rendono una meta turistica molto apprezzata, offrendo ai visitatori l'opportunità di immergersi nella storia e nell'atmosfera medievale di Canepina."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 501,
+        "total_tokens": 538
+    }
+}

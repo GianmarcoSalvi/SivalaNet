@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flUnQd6Ag3MgTNr60MCwHfk8Kf0Y",
+    "object": "chat.completion",
+    "created": 1690188377,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella del Santissimo Sacramento si trova nel comune di Grotte di Castro, in Italia. Questa cappella è un importante luogo di culto per la comunità locale e rappresenta un esempio significativo di architettura religiosa.\n\nLa cappella è situata in una posizione panoramica, affacciata su una collina che offre una vista mozzafiato sulla campagna circostante. La sua posizione isolata e tranquilla la rende un luogo ideale per la preghiera e la meditazione.\n\nL'edificio è di piccole dimensioni ma presenta una struttura solida e ben conservata. La facciata è semplice ma elegante, con una porta d'ingresso in legno scuro e una finestra a forma di croce sulla parte superiore. Sopra la porta è presente un piccolo campanile con una campana che suona regolarmente per segnalare le funzioni religiose.\n\nAll'interno, la cappella è caratterizzata da un'atmosfera di pace e tranquillità. Le pareti sono decorate con affreschi raffiguranti scene religiose e simboli sacri. L'altare principale è ornato con sculture e dipinti che rappresentano il Santissimo Sacramento.\n\nLa cappella è dotata di panche in legno per i fedeli e di un organo per l'accompagnamento musicale durante le celebrazioni. La luce naturale filtra attraverso le finestre colorate, creando un'atmosfera suggestiva e spirituale.\n\nLa Cappella del Santissimo Sacramento è un luogo di grande importanza per la comunità di Grotte di Castro. Oltre alle funzioni religiose regolari, la cappella ospita anche eventi speciali come matrimoni, battesimi e funerali. La sua bellezza architettonica e la sua atmosfera spirituale la rendono un luogo di grande attrazione per i visitatori che desiderano immergersi nella spiritualità e nella storia della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 478,
+        "total_tokens": 516
+    }
+}

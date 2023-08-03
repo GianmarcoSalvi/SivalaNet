@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flISkFjD6TkXhSF348J1dDnr0Qee",
+    "object": "chat.completion",
+    "created": 1690187612,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Complesso di Santo Leonardo si trova nel comune di Graffignano, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di un antico complesso religioso che comprende una chiesa e un monastero.\n\nLa chiesa, dedicata a Santo Leonardo, risale al XII secolo ed è caratterizzata da uno stile romanico. La facciata è semplice e sobria, con un portale d'ingresso sormontato da un rosone. L'interno è a navata unica, con un altare maggiore decorato da affreschi e una serie di cappelle laterali. Gli affreschi, risalenti al XIV secolo, raffigurano scene della vita di Santo Leonardo e di altri santi.\n\nAccanto alla chiesa si trova il monastero, che un tempo ospitava una comunità di monaci. Oggi il monastero è stato trasformato in un centro di accoglienza e ospitalità, dove i visitatori possono soggiornare e partecipare a ritiri spirituali. Il complesso è immerso in un ambiente tranquillo e suggestivo, circondato da un ampio giardino con alberi secolari.\n\nIl Complesso di Santo Leonardo è un luogo di grande importanza storica e religiosa per la comunità locale. Oltre ad essere un centro di culto, è anche un punto di riferimento per la spiritualità e la meditazione. Molte persone visitano il complesso per trovare pace e tranquillità, per riflettere e per godere della bellezza dell'architettura e dell'ambiente circostante.\n\nInoltre, il complesso organizza eventi culturali e religiosi, come concerti, mostre d'arte e incontri di preghiera. Durante l'anno, vengono anche celebrati i festeggiamenti in onore di Santo Leonardo, con processioni e cerimonie religiose.\n\nIl Complesso di Santo Leonardo è un luogo che unisce storia, arte e spiritualità, offrendo ai visitatori un'esperienza unica e suggestiva."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 494,
+        "total_tokens": 529
+    }
+}

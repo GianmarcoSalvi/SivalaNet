@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7frQA5JUXKgiYpphdLrjCDfvLzSGt",
+    "object": "chat.completion",
+    "created": 1690211154,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "I sotterranei di Vignanello sono un complesso di grotte e cunicoli sotterranei situati nel comune di Vignanello, nella regione del Lazio, in Italia. Questi sotterranei sono un vero e proprio labirinto sotterraneo che si estende per oltre 15 chilometri sotto il paese.\n\nI sotterranei di Vignanello sono stati scavati nel tufo, una roccia vulcanica porosa, e risalgono a diverse epoche storiche. Si ritiene che la loro origine risalga all'epoca etrusca, ma sono stati utilizzati e ampliati anche durante il periodo romano e medievale. Questi sotterranei sono stati utilizzati per scopi diversi nel corso dei secoli, tra cui come rifugi durante le guerre e come cantine per conservare il cibo e il vino.\n\nL'accesso ai sotterranei di Vignanello avviene attraverso una serie di ingressi situati in diversi punti del paese. Una volta all'interno, ci si trova in un intricato labirinto di cunicoli, camere e grotte. Alcuni dei passaggi sono stretti e bassi, richiedendo ai visitatori di piegarsi o strisciare per avanzare. Altri sono più ampi e alti, permettendo di camminare comodamente.\n\nDurante la visita ai sotterranei di Vignanello, è possibile ammirare le pareti di tufo intagliate e le strutture architettoniche che testimoniano la storia e l'evoluzione di questo luogo nel corso dei secoli. Ci sono anche alcune stanze che sono state adattate per ospitare mostre e esposizioni temporanee, dove è possibile apprendere ulteriori informazioni sulla storia e l'utilizzo dei sotterranei.\n\nLa visita ai sotterranei di Vignanello è un'esperienza unica e affascinante, che permette di immergersi nella storia e nell'archeologia di questa regione. È consigliabile indossare abbigliamento comodo e scarpe adatte, in quanto il terreno può essere scivoloso e irregolare. Inoltre, è consigliabile essere accompagnati da una guida esperta che possa fornire informazioni dettagliate sulla storia e le caratteristiche dei sotterranei."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 567,
+        "total_tokens": 607
+    }
+}

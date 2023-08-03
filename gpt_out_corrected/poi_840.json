@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpuiTqc3JKcfKa4C7qSDHbOUFciJ",
+    "object": "chat.completion",
+    "created": 1690205360,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Giardino di Prato Giardino si trova nel comune di Viterbo, in Italia. Si tratta di un incantevole giardino pubblico situato nel centro storico della città, a pochi passi dalla famosa Piazza del Plebiscito.\n\nIl giardino è caratterizzato da una vasta area verde, ricca di alberi secolari, fiori colorati e prati ben curati. È un luogo ideale per rilassarsi e godersi la natura in un'atmosfera tranquilla e serena.\n\nAll'interno del giardino, si possono trovare diverse panchine e aree ombreggiate, perfette per sedersi e leggere un libro o semplicemente godersi il panorama. Ci sono anche alcune fontane e laghetti artificiali che aggiungono un tocco di freschezza e bellezza al paesaggio.\n\nIl Giardino di Prato Giardino è molto amato dai residenti e dai visitatori di Viterbo, che spesso lo scelgono come luogo di incontro o per fare una passeggiata. È un'oasi di tranquillità nel cuore della città, dove è possibile staccare dalla frenesia quotidiana e rigenerarsi immersi nella natura.\n\nInoltre, il giardino ospita anche eventi culturali e ricreativi durante tutto l'anno, come concerti, spettacoli teatrali e mostre d'arte. Questi eventi contribuiscono a rendere il giardino un luogo vivace e dinamico, che attira persone di tutte le età e interessi.\n\nIn conclusione, il Giardino di Prato Giardino è un luogo incantevole nel comune di Viterbo, dove è possibile godersi la bellezza della natura, rilassarsi e partecipare a eventi culturali. È un luogo da non perdere per chiunque visiti la città e desideri trascorrere del tempo immerso nella tranquillità e nella serenità della natura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 475,
+        "total_tokens": 512
+    }
+}

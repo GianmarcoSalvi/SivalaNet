@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fptmsjlIZh74IzHmsUQiQegMFYkJ",
+    "object": "chat.completion",
+    "created": 1690205302,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli rupestre di Castel d'Asso è un sito archeologico situato nel comune di Viterbo, nella regione del Lazio, in Italia. Si tratta di una necropoli etrusca risalente al VII secolo a.C., che si estende su una superficie di circa 30 ettari.\n\nLa necropoli è composta da numerose tombe scavate nella roccia tufacea, che si trovano all'interno di un'area boscosa e collinare. Le tombe sono disposte in modo irregolare e sono caratterizzate da diverse tipologie architettoniche, come tombe a camera, a tumulo e a fossa.\n\nLe tombe a camera sono le più comuni e sono costituite da una camera sepolcrale scavata nella roccia, con un'entrata a forma di pozzo. Alcune di queste camere sono decorate con affreschi e rilievi, che rappresentano scene di vita quotidiana, divinità e simboli religiosi.\n\nLe tombe a tumulo sono invece caratterizzate da un tumulo di terra che copre la camera sepolcrale. Queste tombe erano riservate alle persone di alto rango sociale e spesso contenevano oggetti preziosi come gioielli, ceramiche e armi.\n\nLe tombe a fossa sono le più semplici e consistono in una fossa scavata nella roccia, senza alcuna struttura architettonica. Queste tombe erano destinate alle persone di rango inferiore.\n\nOltre alle tombe, la necropoli comprende anche una serie di strade e sentieri che collegano le diverse aree funerarie. Questi percorsi sono stati scavati nella roccia e sono ancora visibili oggi.\n\nLa necropoli di Castel d'Asso è stata scoperta nel 1842 e da allora sono stati effettuati numerosi scavi archeologici, che hanno portato alla luce numerosi reperti, come ceramiche, gioielli e oggetti di uso quotidiano. Questi reperti sono esposti presso il Museo Nazionale Etrusco di Villa Giulia a Roma.\n\nLa necropoli rupestre di Castel d'Asso rappresenta un importante sito archeologico per lo studio della civiltà etrusca e offre ai visitatori la possibilità di immergersi nella storia e nella cultura di questa antica civiltà."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 559,
+        "total_tokens": 601
+    }
+}

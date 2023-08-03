@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enqlnKdGAVsrDd1rWMHHKAB3l0XT",
+    "object": "chat.completion",
+    "created": 1689959099,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario della Madonna del Piano si trova nel comune di Capranica, nella provincia di Viterbo, Italia. Questo santuario è un importante luogo di culto e pellegrinaggio per i fedeli cattolici della regione.\n\nIl santuario è situato su una collina panoramica, circondato da una vasta area verde. La sua posizione offre una vista mozzafiato sulla campagna circostante e sulle montagne in lontananza.\n\nLa costruzione del santuario risale al XVII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. L'edificio è caratterizzato da uno stile architettonico barocco, con una facciata imponente e decorata.\n\nAll'interno del santuario si trova una grande navata centrale, con altari laterali dedicati a vari santi e una cappella dedicata alla Madonna del Piano. La cappella è ornata da affreschi e dipinti raffiguranti la Madonna con il Bambino.\n\nIl santuario è particolarmente noto per la sua statua della Madonna del Piano, che viene venerata dai fedeli. La statua, risalente al XVII secolo, rappresenta la Madonna con il Bambino Gesù in braccio. È considerata miracolosa e si dice che abbia compiuto numerosi prodigi nel corso degli anni.\n\nOgni anno, il santuario attira un gran numero di pellegrini e visitatori, soprattutto durante le festività religiose dedicate alla Madonna del Piano. Durante questi eventi, il santuario diventa un luogo di preghiera, celebrazioni e processioni.\n\nOltre alla sua importanza religiosa, il Santuario della Madonna del Piano è anche un luogo di interesse storico e artistico. Gli affreschi e i dipinti presenti all'interno dell'edificio sono opere d'arte di grande valore e testimoniano la ricca storia del santuario.\n\nIn conclusione, il Santuario della Madonna del Piano a Capranica è un luogo di grande devozione religiosa, ma anche un luogo di bellezza artistica e storica. La sua posizione panoramica e la sua atmosfera spirituale lo rendono un luogo ideale per la preghiera e la contemplazione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 532,
+        "total_tokens": 567
+    }
+}

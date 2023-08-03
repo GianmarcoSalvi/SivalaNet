@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eohRmYkwCaWvD93DhZKvWImfgBQs",
+    "object": "chat.completion",
+    "created": 1689962365,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Decollato si trova nel comune di Faleria, in Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nel centro storico del paese e risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è semplice ed elegante, con un portale in pietra e una piccola finestra circolare. Sopra il portale è presente un affresco raffigurante San Giovanni Decollato, il santo a cui la chiesa è dedicata.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. Sulle pareti laterali sono presenti diverse cappelle, ognuna delle quali contiene opere d'arte di grande valore. Tra queste spicca la cappella dedicata a San Giovanni Decollato, con un altare in marmo e una statua del santo.\n\nNella navata centrale si trova l'altare maggiore, anch'esso in marmo, con un tabernacolo decorato e una pala d'altare raffigurante la decapitazione di San Giovanni. Quest'opera è attribuita a un importante pittore del Rinascimento italiano.\n\nLa Chiesa di San Giovanni Decollato è un luogo di culto molto frequentato dai fedeli del paese, che vi si recano per pregare e partecipare alle messe. Inoltre, è spesso utilizzata per celebrare matrimoni e altre cerimonie religiose.\n\nOltre al suo valore religioso, la chiesa è anche un importante punto di riferimento storico e culturale per il comune di Faleria. La sua architettura e le opere d'arte al suo interno rappresentano un patrimonio artistico di grande rilevanza, che attira visitatori e studiosi da tutto il mondo.\n\nIn conclusione, la Chiesa di San Giovanni Decollato nel comune di Faleria è un edificio religioso di grande bellezza e importanza storica. La sua architettura, le opere d'arte e l'atmosfera di spiritualità che si respira al suo interno la rendono un luogo di grande fascino e suggestione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 554,
+        "total_tokens": 591
+    }
+}

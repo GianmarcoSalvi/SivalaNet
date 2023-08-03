@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eobPeKvLuLimBxaAwUFSe4kWjwfA",
+    "object": "chat.completion",
+    "created": 1689961991,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca comunale Santo Valentino si trova nel comune di Corchiano, in Italia. È situata in una posizione centrale, facilmente accessibile a piedi o in auto.\n\nLa biblioteca è ospitata in un edificio moderno e accogliente, con ampie finestre che permettono l'ingresso di luce naturale. L'interno è spazioso e ben organizzato, con scaffali che contengono una vasta selezione di libri, riviste e giornali.\n\nLa biblioteca offre una vasta gamma di materiali per soddisfare le esigenze di lettori di tutte le età e interessi. Ci sono sezioni dedicate alla narrativa, alla saggistica, alla letteratura per ragazzi e giovani adulti, nonché una vasta collezione di libri in lingua straniera.\n\nOltre ai libri, la biblioteca offre anche servizi come l'accesso a internet, la consultazione di database online e la possibilità di prendere in prestito DVD e CD musicali. Ci sono anche postazioni di lettura e studio, dove i visitatori possono sedersi comodamente e dedicarsi alla lettura o allo studio.\n\nLa biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e mostre d'arte. Questi eventi offrono ai residenti di Corchiano l'opportunità di incontrarsi, condividere interessi comuni e scoprire nuovi autori e opere.\n\nIl personale della biblioteca è cordiale e disponibile, pronto ad assistere i visitatori nella ricerca di libri o nell'utilizzo dei servizi offerti. Sono inoltre disponibili servizi di prestito interbibliotecario, che consentono ai lettori di accedere a materiali presenti in altre biblioteche della rete.\n\nLa Biblioteca comunale Santo Valentino è un luogo importante per la comunità di Corchiano, offrendo un ambiente accogliente e risorse culturali di alta qualità. È un luogo ideale per gli amanti dei libri, gli studenti e tutti coloro che desiderano approfondire le proprie conoscenze o semplicemente trascorrere del tempo immersi nella lettura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 517,
+        "total_tokens": 553
+    }
+}

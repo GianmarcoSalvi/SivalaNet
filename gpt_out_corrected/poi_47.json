@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en1UGW6TVYMs2P1LPAYFTZqTr4eS",
+    "object": "chat.completion",
+    "created": 1689955920,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Lorenzo Martire e San Michele Arcangelo si trova nel comune di Acquapendente, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La facciata principale è caratterizzata da un portale romanico con un arco a tutto sesto, decorato con motivi geometrici e vegetali. Sopra il portale si trova una finestra ad arco, che illumina l'interno della chiesa.\n\nL'interno è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV e XV secolo, raffiguranti scene della vita di Cristo e dei santi. Tra gli affreschi più importanti si trovano quelli raffiguranti il Martirio di Santo Lorenzo e l'Arcangelo Michele che sconfigge il diavolo.\n\nNella chiesa sono presenti anche diverse opere d'arte, tra cui una statua lignea di San Michele Arcangelo, risalente al XV secolo, e un crocifisso ligneo del XVI secolo. Sull'altare maggiore si trova un prezioso paliotto in marmo, decorato con intarsi di pietre preziose.\n\nLa Chiesa di Santo Lorenzo Martire e San Michele Arcangelo è un luogo di culto molto frequentato dai fedeli, ma è anche meta di numerosi turisti e appassionati d'arte, che vengono attratti dalla sua bellezza e dalla sua storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 392,
+        "total_tokens": 435
+    }
+}

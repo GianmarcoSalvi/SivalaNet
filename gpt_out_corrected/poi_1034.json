@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqxxXIN53pPDQFM1XMjSbd3ImoPX",
+    "object": "chat.completion",
+    "created": 1690209405,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Vejano è un piccolo borgo situato nel comune di Vejano, nella regione del Lazio, in Italia. Si trova a circa 60 chilometri a nord di Roma, nella provincia di Viterbo.\n\nIl borgo di Vejano è caratterizzato da un'atmosfera tranquilla e suggestiva, con stradine strette e tortuose, case in pietra e un'architettura tipica dei borghi medievali. Il centro storico è dominato dalla presenza di un imponente castello, che risale al XII secolo e che rappresenta uno dei principali punti di interesse del paese.\n\nIl castello di Vejano è stato costruito come struttura difensiva e presenta una maestosa torre di avvistamento, che offre una vista panoramica sulla campagna circostante. All'interno del castello si possono ammirare affreschi e decorazioni originali, che testimoniano la sua antica storia.\n\nOltre al castello, Vejano vanta anche una chiesa parrocchiale dedicata a San Giovanni Battista, risalente al XV secolo. La chiesa presenta un bellissimo portale in stile gotico e un interno riccamente decorato con affreschi e opere d'arte.\n\nIl paese offre anche diverse opportunità per gli amanti della natura e degli sport all'aria aperta. Nelle vicinanze si trovano sentieri escursionistici che conducono a panorami mozzafiato e a luoghi di interesse naturalistico, come la Riserva Naturale di Monterano.\n\nVejano è anche famoso per la sua tradizione culinaria, con numerosi ristoranti e trattorie che offrono piatti tipici della cucina laziale. Tra i piatti più famosi ci sono la porchetta, i primi piatti a base di pasta fresca e i dolci tradizionali.\n\nIn sintesi, Vejano è un incantevole borgo medievale che offre una combinazione di storia, cultura, natura e gastronomia. È un luogo ideale per chi cerca una fuga dalla vita frenetica della città e desidera immergersi nella bellezza e nell'autenticità della campagna italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 516,
+        "total_tokens": 547
+    }
+}

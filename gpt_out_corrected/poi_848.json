@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpxAT04uwgz3eaGa7RqMbBznHsAk",
+    "object": "chat.completion",
+    "created": 1690205512,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Montecalvello si trova nel comune di Viterbo, nella regione del Lazio, in Italia. Si tratta di un antico castello medievale situato su una collina panoramica, a circa 10 chilometri dal centro di Viterbo.\n\nIl castello risale al XII secolo ed è stato costruito come una fortezza difensiva per proteggere la zona circostante. La sua posizione strategica offre una vista mozzafiato sulla campagna circostante e sulle colline circostanti.\n\nL'edificio è caratterizzato da una struttura imponente, con mura spesse e torri di guardia. L'ingresso principale è sormontato da un arco a tutto sesto, che conduce a un cortile interno. All'interno del castello si trovano diverse stanze, tra cui sale per ricevimenti, camere da letto e una cappella.\n\nIl castello è circondato da un ampio parco, con giardini ben curati e alberi secolari. All'interno del parco si trovano anche una piscina e una terrazza panoramica, che offrono ulteriori spazi per rilassarsi e godersi la vista.\n\nOggi il Castello di Montecalvello è stato restaurato e trasformato in una struttura ricettiva di lusso. È possibile prenotare camere e suite all'interno del castello, che sono arredate con mobili d'epoca e dotate di tutti i comfort moderni. Gli ospiti possono anche usufruire di servizi come ristorante, bar e spa.\n\nIl Castello di Montecalvello è un luogo ideale per coloro che desiderano vivere un'esperienza unica e immersiva nella storia e nella bellezza del Medioevo italiano. La sua posizione tranquilla e panoramica lo rende perfetto per matrimoni, eventi speciali e vacanze rilassanti."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 459,
+        "total_tokens": 494
+    }
+}

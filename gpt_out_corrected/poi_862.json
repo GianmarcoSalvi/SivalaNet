@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq1I0yhw6e6F6kyvwmFVzJLJt8Rh",
+    "object": "chat.completion",
+    "created": 1690205768,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Andrea è un importante edificio religioso situato nel comune di Viterbo, in Italia. Si trova nel centro storico della città, vicino alla famosa Piazza del Plebiscito.\n\nLa chiesa risale al XII secolo ed è considerata uno dei migliori esempi di architettura romanica della regione. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture e bassorilievi che raffigurano scene bibliche. Sopra il portale si trova una grande finestra circolare, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali. L'altare maggiore è ornato da un prezioso paliotto in marmo, mentre ai lati dell'altare si trovano due cappelle laterali, dedicate rispettivamente alla Madonna e a Sant'Andrea.\n\nUno degli elementi più interessanti della Chiesa di Sant'Andrea è il suo campanile, che risale al XIII secolo. Questa torre in pietra ha una forma slanciata e presenta una serie di bifore e trifore, che permettono la vista panoramica sulla città di Viterbo.\n\nLa chiesa è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua bellezza e autenticità. Oggi è ancora utilizzata per le celebrazioni religiose e rappresenta una meta di interesse per i visitatori che desiderano ammirare l'arte e l'architettura romanica.\n\nLa Chiesa di Sant'Andrea è un luogo di grande importanza storica e culturale per la città di Viterbo, e rappresenta un esempio significativo dell'architettura religiosa medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 471,
+        "total_tokens": 507
+    }
+}

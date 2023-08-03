@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fr2u5rNxNEdQTjwcLcLRedwD7RTN",
+    "object": "chat.completion",
+    "created": 1690209712,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Lucia Carbognano si trova nel comune di Carbognano, nella provincia di Viterbo, nella regione del Lazio, in Italia. È una piccola chiesa che risale al XIII secolo e rappresenta un importante esempio di architettura religiosa medievale.\n\nLa chiesa è situata su una collina, circondata da un suggestivo paesaggio rurale. La sua facciata è semplice e sobria, con un portale in pietra e una finestra a bifora. L'interno è a navata unica, con un soffitto a capriate in legno e pareti affrescate.\n\nGli affreschi all'interno della chiesa sono particolarmente notevoli e rappresentano scene della vita di Santa Lucia, la santa patrona della chiesa. Questi affreschi risalgono al XIV secolo e sono stati restaurati nel corso degli anni per preservarne la bellezza e l'integrità.\n\nLa chiesa è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari. Durante le festività dedicate a Santa Lucia, la chiesa diventa un importante punto di riferimento per la comunità locale, che si riunisce per pregare e celebrare insieme.\n\nLa Chiesa di Santa Lucia Carbognano è anche un luogo di interesse storico e artistico per i visitatori. La sua architettura semplice e autentica, insieme agli affreschi medievali, offre un'esperienza unica e suggestiva. La chiesa è aperta al pubblico e i visitatori possono ammirare gli affreschi, pregare o semplicemente godersi la tranquillità e la bellezza del luogo.\n\nInoltre, la chiesa si trova in una posizione panoramica, che offre una vista mozzafiato sulla campagna circostante. È possibile fare una passeggiata nei dintorni della chiesa e godersi la natura incontaminata e la pace del luogo.\n\nIn conclusione, la Chiesa di Santa Lucia Carbognano è un gioiello architettonico e artistico nel comune di Carbognano. Con la sua storia millenaria, gli affreschi medievali e la sua posizione suggestiva, rappresenta un luogo di culto e un'attrazione turistica di grande valore."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 556,
+        "total_tokens": 593
+    }
+}

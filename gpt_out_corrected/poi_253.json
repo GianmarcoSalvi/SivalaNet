@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoLC0cVljBzN4QFenDcyXZE3I9wa",
+    "object": "chat.completion",
+    "created": 1689960986,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex Chiesa di San Giovanni si trova nel comune di Castiglione in Teverina, in provincia di Viterbo, Italia. Questo edificio religioso è un importante esempio di architettura romanica e rappresenta una testimonianza storica di grande valore per la comunità locale.\n\nLa chiesa è situata in una posizione panoramica, su una collina che domina il paesaggio circostante. La sua costruzione risale al XII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. L'edificio è realizzato in pietra locale, con una facciata semplice ma elegante.\n\nLa chiesa presenta una pianta a croce latina, con una navata centrale e due navate laterali. L'interno è caratterizzato da un soffitto a capriate in legno e da una serie di colonne che separano le navate. Le pareti sono decorate con affreschi risalenti al XIII secolo, che rappresentano scene della vita di San Giovanni Battista, il santo patrono della chiesa.\n\nUno degli elementi più interessanti della chiesa è il campanile, che si erge maestoso accanto all'edificio principale. Questa torre campanaria è stata costruita in epoca medievale e presenta una struttura solida e imponente. È possibile salire sulla cima del campanile e godere di una vista panoramica mozzafiato sulla campagna circostante.\n\nNel corso dei secoli, l'ex Chiesa di San Giovanni ha subito diverse trasformazioni e utilizzi. Dopo essere stata abbandonata come luogo di culto, è stata utilizzata come deposito e successivamente come abitazione privata. Negli ultimi anni, l'edificio è stato restaurato e riportato al suo antico splendore, diventando un importante punto di riferimento per la comunità locale.\n\nOggi, l'ex Chiesa di San Giovanni viene utilizzata per eventi culturali e mostre d'arte. La sua architettura affascinante e la sua storia ricca di significato la rendono un luogo di grande interesse per i visitatori che desiderano immergersi nella storia e nella cultura di Castiglione in Teverina."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 540,
+        "total_tokens": 580
+    }
+}

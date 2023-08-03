@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpGoRx5uwjnHrWf0HbsQ4kdkJZx0",
+    "object": "chat.completion",
+    "created": 1690202886,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Antica Via Clodia è un'antica strada romana che attraversa il comune di Tuscania, situato nella regione del Lazio, in Italia. Questa strada faceva parte della rete di strade romane che collegava Roma con la città di Clusium (l'odierna Chiusi) in Etruria.\n\nLa strada, che prende il nome dalla gens Clodia, una famiglia romana influente dell'epoca, è stata costruita nel II secolo a.C. e ha svolto un ruolo importante nel collegamento tra Roma e le città etrusche dell'area. L'Antica Via Clodia era una delle principali vie di comunicazione dell'epoca e ha avuto un ruolo strategico per il commercio e il trasporto di merci.\n\nLa strada attraversa il territorio di Tuscania per una lunghezza di circa 5 chilometri. È caratterizzata da un percorso rettilineo e ben conservato, con un pavimento lastricato di basalto e ciottoli. Lungo il percorso, si possono ancora ammirare i resti di antiche strutture come ponti, mura e tombe romane.\n\nL'Antica Via Clodia offre anche una vista panoramica sulla campagna circostante, con i suoi paesaggi collinari e i campi coltivati. Lungo il percorso, è possibile osservare la vegetazione tipica della zona, come olivi, querce e cipressi.\n\nOggi, l'Antica Via Clodia è una meta turistica molto apprezzata, sia per gli amanti della storia che per gli appassionati di escursioni. La strada è stata restaurata e segnalata con appositi cartelli informativi, che forniscono dettagli sulla sua storia e sulle attrazioni lungo il percorso.\n\nCamminare lungo l'Antica Via Clodia offre l'opportunità di immergersi nella storia romana e di apprezzare la bellezza naturale della campagna laziale. È un'esperienza unica che permette di rivivere l'atmosfera dell'antica Roma e di scoprire i tesori nascosti di Tuscania."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 516,
+        "total_tokens": 549
+    }
+}

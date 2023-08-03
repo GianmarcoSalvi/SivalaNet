@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enlDXCuPTVQPaiUDRGPfKUZpFTLh",
+    "object": "chat.completion",
+    "created": 1689958755,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Tomba François è un importante sito archeologico situato nel comune di Canino, nella provincia di Viterbo, Italia. Questa tomba etrusca risale al IV secolo a.C. ed è considerata uno dei più importanti esempi di arte funeraria etrusca.\n\nLa tomba prende il nome dal suo scopritore, Alessandro François, un archeologo belga che la scoprì nel 1857. Si trova all'interno di un tumulo artificiale, che è stato scavato per rivelare una camera funeraria a pianta rettangolare. La camera è costruita con blocchi di tufo e misura circa 6 metri di lunghezza, 3 metri di larghezza e 2 metri di altezza.\n\nL'interno della tomba è decorato con affreschi straordinariamente ben conservati. Le pareti sono dipinte con scene di vita quotidiana, raffiguranti uomini e donne in varie attività come la danza, la musica, la caccia e la lavorazione dei campi. Le figure sono dipinte con colori vivaci e dettagliate con grande maestria. Questi affreschi sono considerati tra i migliori esempi di pittura etrusca.\n\nLa tomba era originariamente destinata a ospitare i resti di una famiglia aristocratica etrusca. All'interno sono state trovate urne cinerarie, vasi di ceramica e altri oggetti funerari. Questi oggetti sono stati rimossi e sono ora esposti presso il Museo Archeologico Nazionale di Villa Giulia a Roma.\n\nLa Tomba François è un importante sito archeologico che offre un'importante testimonianza della cultura etrusca. È un luogo di grande interesse per gli appassionati di storia e archeologia, nonché per i visitatori che desiderano conoscere meglio la ricca storia dell'Italia antica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 451,
+        "total_tokens": 481
+    }
+}

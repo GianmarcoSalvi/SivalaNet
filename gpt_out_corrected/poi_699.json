@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp44ykh7x6EkQsgq6eCOT2LpQ08i",
+    "object": "chat.completion",
+    "created": 1690202096,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre Presso Santa Maria di Castello è una torre medievale situata nel comune di Tarquinia, in Italia. Si trova all'interno del complesso della chiesa di Santa Maria di Castello, che risale al XII secolo.\n\nLa torre è alta circa 25 metri ed è costruita in pietra. La sua forma è cilindrica e presenta una base molto solida, che si restringe leggermente man mano che si sale verso l'alto. La struttura è caratterizzata da una serie di finestre ad arco, che permettono la luce di filtrare all'interno.\n\nL'accesso alla torre avviene attraverso una scala a chiocciola, che conduce fino alla sommità. Lungo il percorso, è possibile ammirare le pareti interne della torre, che sono decorate con affreschi e graffiti risalenti al periodo medievale.\n\nDalla cima della torre, si può godere di una vista panoramica mozzafiato sulla città di Tarquinia e sui suoi dintorni. È possibile ammirare i tetti delle case antiche, le strade strette e tortuose e i monumenti storici che caratterizzano il centro storico.\n\nLa Torre Presso Santa Maria di Castello rappresenta un importante punto di riferimento storico e culturale per la città di Tarquinia. È un luogo che permette di immergersi nella storia medievale e di apprezzare la bellezza architettonica di questo periodo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 354,
+        "total_tokens": 391
+    }
+}

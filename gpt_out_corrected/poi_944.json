@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqSPSqrtdc8X8P9zQ1GazUYJqoCw",
+    "object": "chat.completion",
+    "created": 1690207449,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana del Borgo Dentro è un'affascinante fontana situata nel comune di Viterbo, in Italia. Si trova nel cuore del centro storico della città, nella piazza omonima.\n\nLa fontana è stata costruita nel XVII secolo e rappresenta uno dei principali punti di riferimento della città. È stata realizzata in pietra e presenta un design elegante e raffinato. La sua forma è rettangolare, con una serie di nicchie e colonne che adornano la sua struttura.\n\nAl centro della fontana si trova una grande vasca rettangolare, dalla quale sgorga l'acqua. Sopra di essa, si erge una statua raffigurante una figura femminile, che tiene in mano una brocca dalla quale l'acqua scorre in modo continuo. Questa figura rappresenta la dea romana della fertilità e dell'abbondanza, simbolo di prosperità per la città.\n\nLa Fontana del Borgo Dentro è circondata da un'ampia area pavimentata, che offre uno spazio ideale per sedersi e godersi la vista della fontana. È circondata da edifici storici e da una serie di negozi e caffè, che rendono l'area molto vivace e animata.\n\nLa fontana è particolarmente suggestiva di notte, quando viene illuminata da luci soffuse che creano un'atmosfera magica e romantica. È un luogo molto amato dai residenti e dai turisti, che spesso si fermano per fare una pausa e ammirare la sua bellezza.\n\nLa Fontana del Borgo Dentro rappresenta un importante patrimonio storico e artistico per la città di Viterbo. È un luogo che incanta per la sua eleganza e per la sua atmosfera suggestiva, e rappresenta una tappa imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 454,
+        "total_tokens": 489
+    }
+}

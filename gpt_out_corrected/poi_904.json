@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqEBBFjlgQ6vNBheAyg12YMEuvYS",
+    "object": "chat.completion",
+    "created": 1690206567,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Parrocchiale di Santo Stefano si trova nel comune di Viterbo, in Italia. È uno dei principali luoghi di culto della città e rappresenta un importante punto di riferimento per la comunità locale.\n\nLa chiesa è situata nel centro storico di Viterbo, in Piazza San Lorenzo, ed è facilmente riconoscibile per la sua imponente facciata in stile romanico. Costruita nel XII secolo, la chiesa è caratterizzata da un'architettura semplice ma elegante, con un portale d'ingresso decorato e una serie di finestre ad arco che illuminano l'interno.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Le pareti sono decorate con affreschi e dipinti sacri, che rappresentano scene della vita di Santo Stefano e altri santi venerati nella tradizione cattolica.\n\nUno degli elementi più suggestivi della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi raffiguranti episodi della vita di Cristo. L'altare è sormontato da un grande crocifisso ligneo, che rappresenta il sacrificio di Gesù.\n\nLa Chiesa Parrocchiale di Santo Stefano è anche nota per ospitare una serie di opere d'arte di grande valore storico e artistico. Tra queste, spicca un dipinto del XV secolo raffigurante la Madonna con il Bambino, attribuito a un famoso pittore rinascimentale.\n\nLa chiesa è aperta al pubblico durante le ore di culto e accoglie regolarmente celebrazioni religiose, come messe e matrimoni. È anche un luogo di incontro per la comunità, che si riunisce per eventi speciali e per celebrare le festività religiose.\n\nLa Chiesa Parrocchiale di Santo Stefano rappresenta quindi un importante patrimonio storico e culturale per la città di Viterbo, offrendo ai visitatori un'esperienza spirituale e artistica unica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 532,
+        "total_tokens": 571
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enHPBFIwW4UukgWcFfF5OSbcbG7U",
+    "object": "chat.completion",
+    "created": 1689956907,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le necropoli rupestri di San Giovenale e Terrone si trovano nel comune di Blera, nella regione del Lazio, in Italia. Queste necropoli sono un importante sito archeologico che risale all'epoca etrusca, tra il VII e il IV secolo a.C.\n\nLe necropoli sono situate su una collina rocciosa, a circa 4 chilometri a nord-ovest del centro di Blera. Sono composte da numerose tombe scavate nella roccia, che si estendono per diversi ettari. Le tombe sono disposte in modo irregolare e sono caratterizzate da diverse tipologie architettoniche, come tombe a camera, tombe a pozzo e tombe a tumulo.\n\nLe tombe a camera sono le più comuni e sono costituite da una camera sepolcrale scavata nella roccia, con un'entrata a forma di corridoio. Alcune di queste camere sono decorate con affreschi, che rappresentano scene di vita quotidiana, divinità e simboli religiosi. Questi affreschi sono un importante testimonianza dell'arte etrusca.\n\nLe tombe a pozzo sono caratterizzate da un pozzo verticale che conduce a una camera sepolcrale sottostante. Queste tombe erano probabilmente riservate a persone di alto rango sociale.\n\nLe tombe a tumulo sono invece costituite da una camera sepolcrale circondata da un tumulo di terra. Queste tombe erano probabilmente riservate a persone comuni.\n\nLe necropoli di San Giovenale e Terrone sono importanti non solo per la loro architettura e decorazioni, ma anche per i reperti archeologici rinvenuti al loro interno. Sono stati trovati oggetti come ceramiche, gioielli, armi e utensili, che forniscono preziose informazioni sulla vita quotidiana degli etruschi.\n\nOggi, le necropoli rupestri di San Giovenale e Terrone sono aperte al pubblico e visitabili. Sono un'importante attrazione turistica per gli amanti dell'archeologia e della storia antica. Inoltre, il sito è stato dichiarato patrimonio dell'umanità dall'UNESCO nel 2004, insieme ad altri siti etruschi della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 547,
+        "total_tokens": 590
+    }
+}

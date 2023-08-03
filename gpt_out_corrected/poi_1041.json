@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fr0DWxYxrIKfNWNWX6RsXHPMnDKu",
+    "object": "chat.completion",
+    "created": 1690209545,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo della Ceramica d'uso a Corneto si trova nel comune di Tarquinia, in Italia. Questo museo è dedicato alla ceramica d'uso, ovvero alla produzione di oggetti in ceramica utilizzati nella vita quotidiana.\n\nIl museo si trova all'interno di un edificio storico, che in passato era una fornace per la produzione di ceramica. L'edificio è stato restaurato e adattato per ospitare la collezione di ceramiche.\n\nLa collezione del museo è composta da una vasta gamma di oggetti in ceramica, che coprono un periodo che va dal XVIII secolo fino ai giorni nostri. Gli oggetti esposti includono piatti, tazze, vasi, brocche e molti altri oggetti utilizzati nella vita quotidiana.\n\nLe ceramiche esposte provengono da diverse regioni italiane, ma la maggior parte della collezione è composta da ceramiche locali prodotte a Corneto. Queste ceramiche sono caratterizzate da colori vivaci e da motivi decorativi tradizionali.\n\nIl museo offre anche una sezione dedicata alla storia della produzione di ceramica a Corneto. Qui è possibile apprendere le tecniche di produzione utilizzate nel corso dei secoli e scoprire l'importanza della ceramica nella vita quotidiana delle persone.\n\nIl Museo della Ceramica d'uso a Corneto è un luogo ideale per gli amanti dell'arte e della storia, ma anche per coloro che sono interessati alla cultura e alle tradizioni locali. La visita al museo offre l'opportunità di scoprire l'arte della ceramica e di apprezzare la bellezza e l'importanza di questi oggetti nella vita quotidiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 413,
+        "total_tokens": 454
+    }
+}

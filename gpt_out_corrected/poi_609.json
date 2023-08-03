@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fn0GjVKLmz04FiDfCAXPtLoxjtJk",
+    "object": "chat.completion",
+    "created": 1690194172,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Eusebio si trova nel comune di Ronciglione, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di origine medievale che risale al XII secolo, anche se è stata oggetto di modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata in una posizione panoramica sulla sommità di una collina, dominando il centro storico di Ronciglione. La sua facciata è semplice e sobria, con un portale in pietra e una finestra a bifora. L'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti in pietra.\n\nUno dei principali elementi di interesse della Chiesa di Sant'Eusebio è il suo altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi. L'altare ospita una pala d'altare raffigurante Sant'Eusebio, opera di un artista locale del XVIII secolo.\n\nLa chiesa conserva anche alcune opere d'arte di valore, tra cui una Madonna con Bambino del XV secolo e una statua di Sant'Eusebio del XVIII secolo. Inoltre, all'interno della chiesa sono presenti diverse cappelle laterali, ognuna delle quali contiene altari e opere d'arte di epoche diverse.\n\nLa Chiesa di Sant'Eusebio è un importante punto di riferimento per la comunità di Ronciglione e viene utilizzata regolarmente per le celebrazioni religiose. La sua posizione panoramica offre anche una vista spettacolare sulla campagna circostante e sul lago di Vico.\n\nIn conclusione, la Chiesa di Sant'Eusebio a Ronciglione è un edificio religioso di grande importanza storica e artistica. La sua architettura medievale, le opere d'arte e la sua posizione panoramica la rendono una meta di interesse per i visitatori che desiderano esplorare il patrimonio culturale della regione del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 512,
+        "total_tokens": 549
+    }
+}

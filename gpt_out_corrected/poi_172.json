@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enet5tqyyjX8kVZ1qZo3SrONIdcs",
+    "object": "chat.completion",
+    "created": 1689958363,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Parrocchiale Cattedrale di Santa Maria Assunta si trova nel comune di Canepina, in provincia di Viterbo, Italia. È una delle principali attrazioni storiche e religiose della zona.\n\nLa chiesa è situata nel centro storico di Canepina e risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. È stata elevata al rango di cattedrale nel 1986, quando la diocesi di Civita Castellana è stata soppressa e unita alla diocesi di Viterbo.\n\nL'edificio presenta uno stile architettonico romanico-gotico, con una facciata imponente e maestosa. La facciata è decorata con un portale in marmo bianco, sormontato da una lunetta affrescata raffigurante la Madonna con il Bambino. Sopra il portale principale si trova una grande finestra rotonda, che illumina l'interno della chiesa.\n\nL'interno della cattedrale è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le pareti sono decorate con affreschi che raffigurano scene della vita di Gesù e dei santi. L'altare maggiore è ornato con sculture e dipinti sacri, mentre il presbiterio è decorato con un coro ligneo intagliato.\n\nUno dei punti salienti della chiesa è la cappella del Santissimo Sacramento, situata sul lato destro dell'altare maggiore. La cappella è decorata con affreschi del XV secolo che raffigurano la Passione di Cristo. Al centro della cappella si trova un altare in marmo, sormontato da un tabernacolo dorato.\n\nLa Chiesa Parrocchiale Cattedrale di Santa Maria Assunta è un luogo di culto molto importante per la comunità di Canepina. Oltre alle funzioni religiose regolari, la chiesa ospita anche eventi speciali come matrimoni, battesimi e funerali. È un luogo di grande bellezza artistica e spirituale, che attira visitatori da tutto il mondo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 44,
+        "completion_tokens": 533,
+        "total_tokens": 577
+    }
+}

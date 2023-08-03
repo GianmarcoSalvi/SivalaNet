@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm24vIdBtcKqWc8zMHDWC7Jbwsyi",
+    "object": "chat.completion",
+    "created": 1690190440,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro Comunale Rotonda si trova nel comune di Monte Romano, in Italia. Si tratta di un edificio storico che risale al XIX secolo e che rappresenta uno dei principali punti di riferimento culturali della zona.\n\nL'edificio è caratterizzato da una struttura architettonica elegante e imponente, con una facciata in stile neoclassico. La sua forma circolare, da cui deriva il nome \"Rotonda\", conferisce al teatro un aspetto unico e suggestivo.\n\nAll'interno, il Teatro Comunale Rotonda dispone di una sala principale con una capienza di circa 300 posti a sedere. La sala è arredata con poltrone comode e offre una vista ottimale del palcoscenico da ogni angolazione. L'acustica è stata curata nei minimi dettagli, garantendo un'esperienza di ascolto di alta qualità durante gli spettacoli.\n\nIl palcoscenico è ampio e ben attrezzato, con tutti i dispositivi necessari per ospitare spettacoli teatrali, concerti, balletti e altre performance artistiche. Il teatro è dotato di moderne attrezzature tecniche, come luci, suoni e sistemi di proiezione, che consentono di creare effetti speciali e di garantire una produzione di alto livello.\n\nIl Teatro Comunale Rotonda ospita regolarmente una varietà di eventi culturali, tra cui rappresentazioni teatrali, concerti di musica classica, opere liriche, balletti e spettacoli di danza contemporanea. Inoltre, vengono organizzati anche eventi speciali, come conferenze, presentazioni e proiezioni cinematografiche.\n\nGrazie alla sua posizione centrale nel comune di Monte Romano, il Teatro Comunale Rotonda è facilmente accessibile sia per i residenti che per i visitatori. Dispone di un parcheggio nelle vicinanze e si trova in prossimità di bar, ristoranti e altri servizi.\n\nIn conclusione, il Teatro Comunale Rotonda è un luogo di grande importanza culturale nel comune di Monte Romano. Grazie alla sua struttura elegante, alle attrezzature moderne e alla varietà di eventi ospitati, rappresenta un punto di riferimento per gli amanti delle arti performative e contribuisce alla promozione della cultura e dell'arte nella regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 581,
+        "total_tokens": 616
+    }
+}

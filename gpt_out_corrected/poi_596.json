@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmwfKEfKyj7ziCBuuCqFWkE3iFB1",
+    "object": "chat.completion",
+    "created": 1690193949,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Agnese si trova nel comune di Proceno, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo e presenta uno stile romanico tipico dell'epoca. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi geometrici e vegetali. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di San Agnese e altri santi. Gli affreschi sono di grande valore artistico e sono stati restaurati nel corso degli anni per preservarne la bellezza.\n\nNella parte sinistra della chiesa si trova una cappella dedicata a San Sebastiano, con un altare in marmo e una statua del santo. Nella parte destra si trova invece una cappella dedicata alla Madonna del Rosario, con un altare in legno intagliato e una statua della Madonna.\n\nLa Chiesa di San Agnese è un luogo di culto molto frequentato dai fedeli del comune di Proceno, che vi si recano per partecipare alle messe e per pregare. Oltre alla sua importanza religiosa, la chiesa è anche un importante punto di riferimento storico e artistico per la comunità locale.\n\nLa sua posizione panoramica, sulla sommità di una collina, offre una vista mozzafiato sulla campagna circostante, rendendo la visita alla chiesa un'esperienza suggestiva e suggestiva. La sua architettura romanica e gli affreschi antichi la rendono un luogo di grande fascino per gli amanti dell'arte e della storia.\n\nIn conclusione, la Chiesa di San Agnese nel comune di Proceno è un gioiello architettonico e artistico che merita sicuramente una visita. La sua bellezza e la sua importanza storica la rendono un luogo di grande interesse per i visitatori che desiderano immergersi nella storia e nella cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 552,
+        "total_tokens": 587
+    }
+}

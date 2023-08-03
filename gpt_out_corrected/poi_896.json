@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqC50bIGVvAxkYzFxHSfQHdckg6K",
+    "object": "chat.completion",
+    "created": 1690206437,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo della Casa di Santa Rosa si trova nel comune di Viterbo, in Italia, ed è dedicato alla figura di Santa Rosa da Viterbo, una santa molto venerata nella città.\n\nIl museo si trova all'interno di un edificio storico, noto come Casa di Santa Rosa, che è la casa natale della santa. L'edificio è stato restaurato e adattato per ospitare il museo, conservando al contempo l'aspetto originale dell'abitazione.\n\nIl museo offre una descrizione dettagliata della vita di Santa Rosa, dalla sua nascita nel 1233 fino alla sua morte nel 1251. Attraverso una serie di esposizioni, il museo racconta la storia della santa, la sua infanzia, la sua vocazione religiosa e il suo impegno per la comunità.\n\nAll'interno del museo è possibile ammirare una vasta collezione di oggetti legati alla vita di Santa Rosa, tra cui reliquie, dipinti, sculture e manoscritti. Ci sono anche reperti archeologici che testimoniano la storia della città di Viterbo durante il periodo in cui Santa Rosa visse.\n\nUna delle attrazioni principali del museo è la camera da letto di Santa Rosa, che è stata ricostruita fedelmente secondo le testimonianze storiche. Questo spazio offre ai visitatori l'opportunità di immergersi nell'ambiente in cui la santa ha vissuto e pregato.\n\nIl museo offre anche una sezione interattiva, dove i visitatori possono approfondire la conoscenza di Santa Rosa attraverso video, documentari e giochi interattivi. Ci sono anche guide esperte che forniscono spiegazioni dettagliate e rispondono alle domande dei visitatori.\n\nOltre alle esposizioni permanenti, il museo organizza anche mostre temporanee e eventi culturali legati alla figura di Santa Rosa e alla storia di Viterbo.\n\nIn conclusione, il Museo della Casa di Santa Rosa è un luogo di grande importanza storica e religiosa nel comune di Viterbo. Offre ai visitatori l'opportunità di conoscere la vita e il lavoro di Santa Rosa da Viterbo attraverso una vasta collezione di oggetti e una ricostruzione accurata della sua casa natale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 528,
+        "total_tokens": 564
+    }
+}

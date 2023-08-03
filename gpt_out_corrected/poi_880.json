@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq6vxS8wGN95f77AiDmGcrT2ef26",
+    "object": "chat.completion",
+    "created": 1690206117,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo Padre Felice Rossetti di arte moderna si trova nel comune di Viterbo, in Italia. È dedicato all'arte moderna e contemporanea e prende il nome dal suo fondatore, Padre Felice Rossetti, un sacerdote e appassionato d'arte.\n\nIl museo si trova all'interno di un edificio storico, che un tempo era un convento francescano. L'edificio è stato restaurato e adattato per ospitare le opere d'arte, ma ha mantenuto il suo fascino originale. Le sale espositive sono ampie e luminose, offrendo un ambiente ideale per ammirare le opere d'arte.\n\nLa collezione del museo comprende opere di artisti italiani e internazionali, con un'attenzione particolare all'arte contemporanea. Ci sono dipinti, sculture, fotografie e installazioni che coprono una vasta gamma di stili e temi. Le opere esposte sono selezionate con cura per offrire una panoramica completa dell'arte moderna e contemporanea.\n\nIl museo organizza regolarmente mostre temporanee, che offrono l'opportunità di scoprire nuovi artisti e tendenze artistiche. Queste mostre sono spesso accompagnate da eventi e conferenze, che permettono ai visitatori di approfondire la loro conoscenza dell'arte contemporanea.\n\nOltre alle mostre, il museo offre anche attività educative per tutte le età. Ci sono laboratori artistici per bambini, visite guidate per scuole e workshop per adulti. Queste attività sono progettate per stimolare la creatività e l'interesse per l'arte.\n\nIl Museo Padre Felice Rossetti di arte moderna è un luogo di incontro per gli amanti dell'arte e un punto di riferimento per la comunità artistica locale. Offre una piacevole esperienza culturale per i visitatori di tutte le età e contribuisce alla promozione dell'arte moderna e contemporanea nella regione di Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 489,
+        "total_tokens": 531
+    }
+}

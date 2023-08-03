@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqIVUEWRZkhmNurCHjG8iRCQJ25w",
+    "object": "chat.completion",
+    "created": 1690206835,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca San Giuseppe si trova nel comune di Viterbo, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è situata in un edificio storico, che aggiunge un tocco di fascino e autenticità all'ambiente. All'interno, gli spazi sono organizzati in modo funzionale e accogliente, con ampie sale di lettura e aree dedicate a diverse categorie di libri.\n\nLa collezione della biblioteca è estremamente ricca e variegata. Oltre ai classici romanzi, saggi e manuali, sono disponibili anche libri per bambini, giovani adulti e anziani. La biblioteca si impegna a mantenere aggiornata la sua collezione, acquisendo regolarmente nuovi titoli e rispondendo alle richieste dei lettori.\n\nOltre ai libri, la biblioteca offre anche una vasta gamma di risorse digitali. Ci sono computer con accesso a Internet, che consentono ai visitatori di navigare online e svolgere ricerche. Inoltre, sono disponibili anche e-book e riviste digitali, che possono essere scaricati e letti su dispositivi personali.\n\nLa Biblioteca San Giuseppe organizza regolarmente eventi culturali e attività per coinvolgere la comunità. Ci sono presentazioni di libri, conferenze, laboratori per bambini e molto altro ancora. Questi eventi sono un'opportunità per gli abitanti di Viterbo di incontrarsi, condividere interessi comuni e approfondire la loro conoscenza.\n\nIl personale della biblioteca è cordiale e disponibile. Sono pronti ad assistere i visitatori nella ricerca di libri specifici, a fornire consigli di lettura e a rispondere a qualsiasi domanda o dubbio. La biblioteca è un luogo accogliente e inclusivo, dove tutti sono i benvenuti.\n\nIn conclusione, la Biblioteca San Giuseppe a Viterbo è un'istituzione culturale di grande valore per la comunità locale. Offre una vasta gamma di risorse, servizi e attività che promuovono la lettura, l'apprendimento e l'incontro tra le persone. È un luogo che incarna l'importanza della cultura e dell'accesso all'informazione nella società contemporanea."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 553,
+        "total_tokens": 591
+    }
+}

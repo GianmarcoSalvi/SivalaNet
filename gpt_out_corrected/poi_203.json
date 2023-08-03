@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enra5ZE9qwHZNkvjialfPbaIYt9Z",
+    "object": "chat.completion",
+    "created": 1689959150,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Villa Sansoni, già Thierry, è una splendida residenza situata nel comune di Capranica, in Italia. Questa villa storica è immersa in un ampio parco privato, circondata da alberi secolari e giardini ben curati.\n\nLa villa è un esempio di architettura neoclassica, con una facciata imponente e elegante. La struttura è composta da due piani, con ampie finestre che permettono una vista panoramica sulla campagna circostante.\n\nAll'interno, la villa è arredata con gusto e raffinatezza. Gli spazi sono ampi e luminosi, con soffitti alti e dettagli architettonici di pregio. I pavimenti sono in marmo pregiato e le pareti sono decorate con affreschi e dipinti d'epoca.\n\nLa villa dispone di numerose stanze, tra cui camere da letto spaziose e confortevoli, bagni lussuosi, una sala da pranzo elegante e una cucina completamente attrezzata. Ci sono anche diverse sale di intrattenimento, come una sala giochi, una biblioteca e una sala da musica.\n\nAll'esterno, la villa offre una serie di spazi per il relax e il divertimento. C'è una grande piscina circondata da lettini e ombrelloni, ideale per rinfrescarsi durante le calde giornate estive. Ci sono anche aree per barbecue e pranzi all'aperto, perfette per godersi il clima mediterraneo.\n\nLa Villa Sansoni, già Thierry, è un luogo ideale per chi cerca una vacanza di lusso e tranquillità. La sua posizione isolata e la bellezza naturale circostante la rendono perfetta per chi desidera fuggire dal trambusto della vita quotidiana e immergersi nella bellezza della campagna italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 442,
+        "total_tokens": 477
+    }
+}

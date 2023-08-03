@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqlK0RETAvA9a3e95ID8oPq1MV8V",
+    "object": "chat.completion",
+    "created": 1690208622,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Celleno è un comune situato nella regione del Lazio, nel centro Italia. Si trova nella provincia di Viterbo, a circa 90 chilometri a nord di Roma. Il paese è situato su una collina, a un'altitudine di circa 400 metri, e offre una vista panoramica mozzafiato sulla valle del fiume Tevere.\n\nCelleno è un tipico borgo medievale, con strade strette e tortuose, case in pietra e un'atmosfera suggestiva. Il centro storico è ben conservato e offre numerosi punti di interesse per i visitatori. Uno dei principali luoghi da visitare è il Castello Orsini, una maestosa fortezza risalente al XIII secolo. Il castello è stato restaurato ed è aperto al pubblico, offrendo la possibilità di esplorare le sue torri, le sale e le mura.\n\nUn'altra attrazione di Celleno è la Chiesa di San Giovanni Battista, una chiesa romanica del XII secolo. All'interno si possono ammirare affreschi e opere d'arte antiche. Nei pressi della chiesa si trova anche un antico lavatoio pubblico, un luogo pittoresco che testimonia la vita quotidiana del passato.\n\nIl paese è circondato da una natura incontaminata e offre numerose opportunità per escursioni e attività all'aperto. Nelle vicinanze si trova il Parco Naturale Regionale del Monte Rufeno, un'area protetta con sentieri per trekking, aree picnic e una ricca flora e fauna. È possibile fare passeggiate a piedi o in bicicletta lungo i sentieri e godere della bellezza del paesaggio circostante.\n\nCelleno è anche famosa per la sua produzione di olio d'oliva di alta qualità. Le colline circostanti sono coperte da uliveti secolari, e molti agriturismi offrono la possibilità di degustare e acquistare olio d'oliva locale.\n\nIl paese ospita anche diverse manifestazioni culturali e tradizionali durante l'anno, come la Sagra della Castagna, una festa dedicata alle castagne, e la Festa Medievale, che riporta il borgo indietro nel tempo con spettacoli, costumi e cibi tipici dell'epoca.\n\nIn sintesi, Celleno è un incantevole borgo medievale immerso nella natura, che offre una combinazione perfetta di storia, cultura e bellezze naturali. È un luogo ideale per chi cerca una fuga dalla vita frenetica della città e desidera immergersi nella tranquillità e nell'autenticità dell'Italia rurale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 649,
+        "total_tokens": 678
+    }
+}

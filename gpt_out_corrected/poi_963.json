@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqbAB8ToNyeqvSAjDsrzXx9wnlm5",
+    "object": "chat.completion",
+    "created": 1690207992,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il quartiere San Pellegrino si trova nel comune di Viterbo, una città situata nella regione del Lazio, in Italia. Questo quartiere è situato nella parte nord-ovest della città, a breve distanza dal centro storico.\n\nSan Pellegrino è un quartiere residenziale caratterizzato da una serie di palazzi e case a schiera. È una zona tranquilla e ben servita, ideale per le famiglie e per chi cerca una vita tranquilla lontano dal caos del centro città.\n\nUna delle caratteristiche principali di San Pellegrino è la sua posizione panoramica. Infatti, il quartiere si trova su una collina che offre una vista spettacolare sulla città di Viterbo e sulle campagne circostanti. Questo rende il quartiere particolarmente affascinante e piacevole da vivere.\n\nSan Pellegrino è anche ben collegato al resto della città grazie a una rete di trasporti pubblici efficiente. Ci sono diverse fermate degli autobus nelle vicinanze che consentono di raggiungere facilmente il centro città e altre zone di interesse.\n\nNelle immediate vicinanze del quartiere si trovano anche alcuni servizi essenziali, come supermercati, negozi, farmacie e scuole. Inoltre, il quartiere è circondato da aree verdi e parchi, che offrono opportunità per attività all'aperto e momenti di relax.\n\nSan Pellegrino è anche famoso per la presenza di alcuni siti storici e culturali di rilievo. Ad esempio, nelle vicinanze si trova il Parco di Villa Lante, un giardino rinascimentale famoso per le sue fontane e i suoi giardini all'italiana. Inoltre, il quartiere è vicino al centro storico di Viterbo, che è ricco di monumenti, chiese e palazzi storici.\n\nComplessivamente, il quartiere San Pellegrino è un luogo ideale per chi cerca una vita tranquilla e panoramica, ma allo stesso tempo ben collegata al resto della città. La sua posizione, i servizi disponibili e la presenza di siti storici e culturali lo rendono un luogo molto interessante e piacevole da vivere."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 529,
+        "total_tokens": 565
+    }
+}

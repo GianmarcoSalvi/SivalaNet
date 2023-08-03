@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flf6sWcDFgsNfXbmhZsTCMikzQsO",
+    "object": "chat.completion",
+    "created": 1690189016,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Clemente si trova nel comune di Latera, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale architravato e un rosone centrale. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali.\n\nUno dei punti salienti della chiesa è il suo campanile, che risale al XIII secolo. È una torre a pianta quadrata, con bifore e trifore che si aprono sulle quattro facciate. Il campanile è stato restaurato nel corso dei secoli, ma conserva ancora la sua struttura originale.\n\nAll'interno della chiesa si trovano numerosi tesori artistici. Tra questi spicca un altare in marmo bianco, decorato con sculture e rilievi raffiguranti scene bibliche. Ci sono anche diverse opere d'arte, tra cui dipinti e statue, che risalgono a diversi periodi storici.\n\nLa Chiesa di San Clemente è anche famosa per il suo chiostro, che si trova accanto all'edificio principale. Il chiostro è un'opera d'arte in sé, con colonne in pietra e archi gotici. È un luogo tranquillo e suggestivo, ideale per una passeggiata o per una pausa di riflessione.\n\nLa chiesa è ancora attiva e viene utilizzata per le celebrazioni religiose. È anche aperta al pubblico per visite turistiche, consentendo ai visitatori di ammirare la sua bellezza e scoprire la sua storia.\n\nIn sintesi, la Chiesa di San Clemente nel comune di Latera è un gioiello architettonico e artistico. Con la sua facciata romanica, il campanile storico, gli affreschi medievali e il suggestivo chiostro, rappresenta una tappa imperdibile per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 527,
+        "total_tokens": 561
+    }
+}

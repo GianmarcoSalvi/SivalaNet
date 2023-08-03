@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmqXxHSmeHQNzIDdmy3ICcoTUrPG",
+    "object": "chat.completion",
+    "created": 1690193569,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Seripola Porto Fluviale sul Tevere è un'area situata nel comune di Orte, in Italia. Si trova lungo le rive del fiume Tevere e rappresenta un importante punto di attracco per le imbarcazioni che navigano lungo il fiume.\n\nL'area di Seripola Porto Fluviale sul Tevere è caratterizzata da un ampio spazio aperto, con una serie di pontili e ormeggi per le barche. Questo rende l'area ideale per l'attracco temporaneo o permanente di imbarcazioni di diverse dimensioni.\n\nIl porto fluviale offre una serie di servizi e strutture per i diportisti e i visitatori. Ci sono punti di rifornimento per carburante, servizi igienici, docce e lavanderie. Inoltre, sono disponibili anche servizi di manutenzione e riparazione per le imbarcazioni.\n\nL'area circostante il porto fluviale è caratterizzata da una natura incontaminata e da paesaggi mozzafiato. Lungo le rive del fiume Tevere si possono ammirare splendide vedute panoramiche e godere di tranquille passeggiate lungo il fiume.\n\nSeripola Porto Fluviale sul Tevere è anche un punto di partenza ideale per esplorare la regione circostante. La città di Orte, con il suo centro storico ben conservato, è facilmente raggiungibile e offre una varietà di attrazioni culturali e storiche. Inoltre, la posizione del porto fluviale permette di raggiungere facilmente altre destinazioni turistiche come Roma, Viterbo e Terni.\n\nIn sintesi, Seripola Porto Fluviale sul Tevere è un'area affascinante e ben attrezzata lungo le rive del fiume Tevere nel comune di Orte. Offre una serie di servizi per i diportisti e i visitatori, oltre a splendide vedute panoramiche e la possibilità di esplorare la regione circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 491,
+        "total_tokens": 529
+    }
+}

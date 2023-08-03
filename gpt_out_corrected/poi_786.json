@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpbVk8kf6rqe1bMB4CYZsUkfyfUe",
+    "object": "chat.completion",
+    "created": 1690204169,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Celestini si trova nel comune di Vasanello, nella regione del Lazio, in Italia. Si tratta di un imponente edificio storico che risale al XVII secolo e rappresenta uno dei principali punti di interesse della città.\n\nIl palazzo è situato nel centro storico di Vasanello, in una posizione dominante che offre una vista panoramica sulla valle circostante. La sua architettura è caratterizzata da uno stile rinascimentale, con influenze barocche, che lo rendono un esempio di grande valore artistico e storico.\n\nL'edificio si sviluppa su più piani e presenta una facciata imponente, con un portale d'ingresso decorato e finestre elegantemente decorate. All'interno, il palazzo conserva ancora molti degli elementi originali, come affreschi, stucchi e pavimenti in marmo, che testimoniano la sua antica grandezza.\n\nIl Palazzo Celestini è stato costruito dalla famiglia Celestini, una delle famiglie nobili più importanti di Vasanello. Nel corso dei secoli, è stato utilizzato come residenza nobiliare, ma anche come sede di istituzioni pubbliche e religiose. Oggi, ospita il municipio del comune di Vasanello e alcune sale sono aperte al pubblico per visite guidate.\n\nAll'interno del palazzo, è possibile ammirare una serie di sale affrescate, che raccontano la storia della famiglia Celestini e della città di Vasanello. Tra le stanze più importanti, vi è la Sala degli Specchi, caratterizzata da un soffitto a cassettoni decorato e da pareti rivestite di specchi, che conferiscono un'atmosfera di grande eleganza.\n\nIl Palazzo Celestini rappresenta un importante punto di riferimento per la comunità di Vasanello e un luogo di grande interesse per i visitatori che desiderano immergersi nella storia e nell'arte della regione. La sua bellezza architettonica e la sua posizione panoramica lo rendono un luogo suggestivo da visitare durante un viaggio nella regione del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 512,
+        "total_tokens": 545
+    }
+}

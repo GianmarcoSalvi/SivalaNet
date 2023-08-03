@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emrvNOBtBBcPADmUiBSL9D84DJUk",
+    "object": "chat.completion",
+    "created": 1689955327,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale Macchione è una struttura situata nel comune di Acquapendente, in Italia. Si trova in una posizione panoramica e tranquilla, immersa nella campagna toscana e circondata da colline verdi e boschi.\n\nIl casale è un edificio storico che risale al XVIII secolo e conserva ancora il suo fascino originale. È stato ristrutturato con cura per offrire agli ospiti un ambiente accogliente e confortevole, pur mantenendo intatte le caratteristiche architettoniche tradizionali.\n\nLa struttura dispone di diverse camere, arredate con gusto e dotate di tutti i comfort moderni. Ogni camera è unica nel suo genere, con dettagli originali come travi in legno a vista, pavimenti in cotto e mobili d'epoca. Alcune camere offrono anche una vista panoramica sulle colline circostanti.\n\nGli ospiti possono godere di una colazione abbondante e gustosa, preparata con prodotti locali freschi e biologici. Durante il giorno, è possibile rilassarsi nel giardino o sulla terrazza, ammirando il paesaggio mozzafiato e respirando l'aria fresca della campagna.\n\nCasale Macchione è anche dotato di una piscina all'aperto, ideale per rinfrescarsi durante le calde giornate estive. Ci sono anche aree comuni, come un salotto con camino, dove gli ospiti possono rilassarsi e socializzare.\n\nLa posizione del casale è perfetta per esplorare la regione circostante. Acquapendente è un affascinante borgo medievale, con stradine pittoresche e un'atmosfera autentica. Nei dintorni si trovano anche numerosi siti di interesse storico e culturale, come il lago di Bolsena, il monte Amiata e le città di Orvieto e Pitigliano.\n\nCasale Macchione è quindi la scelta ideale per coloro che desiderano trascorrere una vacanza rilassante e immersa nella natura, scoprendo al contempo le bellezze della regione toscana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 522,
+        "total_tokens": 557
+    }
+}

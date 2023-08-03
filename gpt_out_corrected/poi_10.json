@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emqdLgVQq1XeU85mk3meG1f3Rco0",
+    "object": "chat.completion",
+    "created": 1689955247,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Rocco si trova nel comune di Acquapendente, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di origine medievale, situata nel centro storico del paese.\n\nLa chiesa è dedicata a San Rocco, un santo molto venerato per la sua intercessione contro la peste e le malattie contagiose. La sua costruzione risale al XIII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti.\n\nL'edificio presenta uno stile architettonico romanico-gotico, con una facciata in pietra caratterizzata da un portale d'ingresso sormontato da un rosone. La facciata è decorata con bassorilievi raffiguranti scene della vita di San Rocco e altri santi.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le pareti sono decorate con affreschi raffiguranti scene della vita di San Rocco e altri episodi della storia cristiana. L'altare maggiore è ornato da un prezioso paliotto in marmo intarsiato.\n\nUno degli elementi più interessanti della chiesa è la cappella dedicata a San Rocco, situata sul lato destro dell'edificio. La cappella è decorata con affreschi del XV secolo che raffigurano la vita del santo e le sue miracolose guarigioni. Al centro della cappella si trova una statua di San Rocco, realizzata in legno intagliato e dipinto.\n\nLa Chiesa di San Rocco è un importante luogo di culto per la comunità di Acquapendente e attira numerosi fedeli e turisti che desiderano ammirare la sua bellezza artistica e storica. La chiesa è anche sede di importanti celebrazioni religiose durante l'anno, in particolare durante la festa di San Rocco, che si tiene il 16 agosto. Durante questa festa, la statua del santo viene portata in processione per le strade del paese, seguita da una folla di fedeli."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 528,
+        "total_tokens": 565
+    }
+}

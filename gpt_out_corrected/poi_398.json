@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flUTD2HU4rMrbAdvpgpQhBAtYSz7",
+    "object": "chat.completion",
+    "created": 1690188357,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria dell'Annunziata si trova nel comune di Grotte di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. È una chiesa di origine medievale che si distingue per la sua architettura gotica.\n\nLa chiesa è situata nel centro storico del paese e risale al XIII secolo. È costruita in pietra locale e presenta una facciata semplice ma elegante, caratterizzata da un portale ad arco ogivale e da una finestra centrale a bifora. La facciata è decorata con alcuni elementi scolpiti, come archetti pensili e cornici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di Maria e di Gesù. Tra gli affreschi più importanti vi è una Madonna con Bambino, attribuita a un artista locale del periodo.\n\nLa chiesa ospita anche un altare in marmo, risalente al XVII secolo, che presenta una pala d'altare raffigurante l'Annunciazione. L'altare è decorato con sculture e intagli in legno dorato, che aggiungono un tocco di eleganza all'ambiente.\n\nLa Chiesa di Santa Maria dell'Annunziata è un importante luogo di culto per la comunità locale e viene utilizzata per le celebrazioni religiose e per le funzioni liturgiche. È anche una meta turistica per gli amanti dell'arte e della storia, che possono ammirare l'architettura gotica e gli affreschi medievali.\n\nLa chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante e sul lago di Bolsena. È circondata da un piccolo cortile e da un giardino, che aggiungono un'atmosfera tranquilla e suggestiva al luogo.\n\nIn conclusione, la Chiesa di Santa Maria dell'Annunziata a Grotte di Castro è un gioiello architettonico e artistico che merita una visita per ammirare la sua bellezza e per immergersi nella storia e nella spiritualità del luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 556,
+        "total_tokens": 598
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqAKSWkdzjrAwSljqL3cx7JUv8vN",
+    "object": "chat.completion",
+    "created": 1690206328,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Battista del Gonfalone si trova nel comune di Viterbo, in Italia. È una delle chiese più antiche della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa fu costruita nel XII secolo e presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra con un arco a tutto sesto. Sopra il portale si trova una finestra circolare, tipica dell'architettura romanica, che permetteva l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Lungo le pareti si trovano affreschi risalenti al XIII secolo, raffiguranti scene della vita di San Giovanni Battista, il patrono della chiesa. Questi affreschi sono di grande valore artistico e storico e sono stati restaurati nel corso degli anni per preservarne la bellezza.\n\nAl centro dell'abside si trova l'altare maggiore, decorato con marmi policromi e affiancato da due colonne in stile romanico. Sopra l'altare si trova una grande pala d'altare raffigurante San Giovanni Battista, opera di un artista locale del XVII secolo.\n\nLa Chiesa di San Giovanni Battista del Gonfalone è anche famosa per il suo campanile, che risale al XIII secolo. Questa torre campanaria, alta e slanciata, è un simbolo della città di Viterbo e offre una vista panoramica mozzafiato sulla città e sui suoi dintorni.\n\nLa chiesa è ancora oggi utilizzata per le celebrazioni religiose e rappresenta un importante punto di riferimento per la comunità locale. La sua bellezza architettonica e artistica, unita alla sua storia millenaria, la rendono una meta turistica molto apprezzata dai visitatori che desiderano immergersi nella storia e nella cultura di Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 513,
+        "total_tokens": 553
+    }
+}

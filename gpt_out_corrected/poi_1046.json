@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fr1KG5unT0w1jlByV046vWz3GtWh",
+    "object": "chat.completion",
+    "created": 1690209614,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Pietro Apostolo si trova nel comune di Carbognano, nella regione del Lazio, in Italia. È una chiesa di origine medievale, che risale al XII secolo, anche se è stata oggetto di modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata su una collina, dominando il paesaggio circostante. La sua facciata è semplice e sobria, con un portale d'ingresso in pietra e una finestra a rosone al centro. La torre campanaria si erge accanto alla chiesa, aggiungendo un elemento verticale al suo profilo.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XV secolo, raffiguranti scene della vita di San Pietro e altri santi. L'altare maggiore è ornato da un dipinto del XVII secolo raffigurante San Pietro in trono.\n\nLa Chiesa di San Pietro Apostolo è un importante luogo di culto per la comunità di Carbognano. Oltre alle funzioni religiose regolari, la chiesa ospita anche eventi speciali come matrimoni e battesimi. Durante le festività religiose, la chiesa diventa un punto di riferimento per le processioni e le celebrazioni della comunità.\n\nLa chiesa è anche un luogo di interesse storico e artistico, attirando visitatori che desiderano ammirare l'architettura medievale e gli affreschi antichi. La sua posizione panoramica offre anche una vista mozzafiato sulla campagna circostante, rendendola un luogo ideale per una visita tranquilla e riflessiva.\n\nIn sintesi, la Chiesa di San Pietro Apostolo a Carbognano è un gioiello architettonico e artistico che testimonia la storia e la fede della comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 479,
+        "total_tokens": 519
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqVJlMH4aiAuw2vUbUB5AQJKFiWf",
+    "object": "chat.completion",
+    "created": 1690207629,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca del Liceo classico statale Mariano Buratti si trova nel comune di Viterbo, in Italia. È una biblioteca scolastica che serve gli studenti e gli insegnanti del liceo classico Mariano Buratti, ma è aperta anche al pubblico esterno.\n\nLa biblioteca è situata all'interno del liceo e occupa uno spazio ampio e luminoso. È divisa in diverse sezioni, ognuna dedicata a un particolare argomento o materia di studio. Ci sono sezioni per la letteratura classica, la storia, la filosofia, le lingue straniere, la matematica e le scienze.\n\nLa biblioteca offre una vasta collezione di libri, riviste, giornali e materiale multimediale. Gli studenti possono accedere a testi classici in lingua originale, come le opere di Omero, Virgilio e Platone, ma ci sono anche libri moderni e contemporanei. La biblioteca è costantemente aggiornata con nuove acquisizioni per soddisfare le esigenze degli studenti e degli insegnanti.\n\nOltre ai materiali di lettura, la biblioteca offre anche servizi come la consultazione di internet, la stampa e la fotocopiatura. Gli studenti possono utilizzare i computer della biblioteca per fare ricerche online o per scrivere i loro compiti. Ci sono anche spazi di studio tranquilli dove gli studenti possono concentrarsi e lavorare in silenzio.\n\nLa biblioteca organizza anche eventi culturali e incontri con autori, al fine di promuovere la lettura e l'interesse per la cultura. Gli studenti possono partecipare a discussioni letterarie, presentazioni di libri e workshop tematici.\n\nLa Biblioteca del Liceo classico statale Mariano Buratti è un luogo di apprendimento e di cultura, dove gli studenti possono approfondire le loro conoscenze e sviluppare le loro competenze. È un punto di riferimento per la comunità scolastica e per tutti coloro che sono interessati alla letteratura classica e alla cultura in generale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 495,
+        "total_tokens": 538
+    }
+}

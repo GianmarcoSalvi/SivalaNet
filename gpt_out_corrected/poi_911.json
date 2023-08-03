@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqGCX8FniTsWGZ9Q6TRYkVwbw74A",
+    "object": "chat.completion",
+    "created": 1690206692,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo Civico di Viterbo è situato nel centro storico della città, precisamente in Piazza del Plebiscito. È ospitato all'interno del Palazzo dei Priori, un edificio di grande valore storico e architettonico.\n\nIl museo è diviso in diverse sezioni che raccontano la storia e l'arte di Viterbo e della sua provincia. La sezione archeologica è una delle più importanti, con reperti che risalgono all'epoca etrusca e romana. Qui è possibile ammirare ceramiche, monete, statue e altri oggetti che testimoniano la vita quotidiana di quei tempi.\n\nLa sezione medievale è dedicata alla storia della città durante il periodo medioevale, quando Viterbo era una delle città più importanti del Papato. Qui si possono ammirare affreschi, sculture e manoscritti che raccontano la vita religiosa e politica di quei tempi.\n\nLa sezione rinascimentale è dedicata all'arte del Rinascimento, con opere di artisti locali e internazionali. Tra le opere più famose vi è il dipinto \"Madonna col Bambino\" di Lorenzo Lotto. In questa sezione è possibile ammirare anche mobili, oggetti d'arte e abiti dell'epoca.\n\nIl museo ospita anche una sezione dedicata all'arte contemporanea, con opere di artisti locali e nazionali. Qui è possibile scoprire le tendenze artistiche più recenti e ammirare opere di grande valore.\n\nOltre alle sezioni permanenti, il Museo Civico di Viterbo organizza regolarmente mostre temporanee, conferenze e eventi culturali. Inoltre, offre anche attività didattiche per le scuole e visite guidate per i visitatori.\n\nIn conclusione, il Museo Civico di Viterbo è un luogo di grande interesse culturale e storico, che permette di immergersi nella storia e nell'arte di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 464,
+        "total_tokens": 498
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpieqK2n271BUQWoWGllwrand2uV",
+    "object": "chat.completion",
+    "created": 1690204612,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Vejano, situata nel comune omonimo in Italia, è un importante punto di riferimento per gli abitanti della zona e per gli appassionati di lettura. \n\nLa struttura si trova in una posizione centrale, facilmente accessibile a piedi o in auto, e dispone di un ampio parcheggio nelle vicinanze. L'edificio che ospita la biblioteca è moderno e accogliente, con spazi luminosi e ben organizzati.\n\nAll'interno, i visitatori possono trovare una vasta selezione di libri, riviste, giornali e altri materiali di lettura. La biblioteca offre una vasta gamma di generi letterari, che spaziano dalla narrativa alla saggistica, dalla poesia ai libri per bambini. Inoltre, sono disponibili anche opere in diverse lingue straniere, per soddisfare le esigenze di una comunità multiculturale.\n\nLa biblioteca comunale di Vejano è particolarmente attenta alle esigenze dei suoi utenti, offrendo servizi aggiuntivi come il prestito interbibliotecario, che consente di richiedere libri da altre biblioteche della rete nazionale. Inoltre, è possibile accedere a internet gratuitamente utilizzando i computer presenti in biblioteca o connettendosi alla rete Wi-Fi disponibile.\n\nLa struttura organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e laboratori per bambini. Queste attività contribuiscono a creare un ambiente vivace e stimolante, che promuove la lettura e l'interesse per la cultura.\n\nIl personale della biblioteca è sempre disponibile ad aiutare i visitatori nella ricerca di libri specifici o nell'orientamento all'interno della vasta collezione. Inoltre, sono disponibili servizi di consulenza e assistenza per la ricerca e la consultazione di materiale bibliografico.\n\nIn conclusione, la biblioteca comunale di Vejano è un luogo accogliente e ricco di risorse per gli amanti della lettura. Grazie alla sua vasta collezione, ai servizi offerti e agli eventi culturali organizzati, rappresenta un importante punto di riferimento per la comunità locale e per tutti coloro che desiderano approfondire le proprie conoscenze e trascorrere del tempo immersi nella lettura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 566,
+        "total_tokens": 599
+    }
+}

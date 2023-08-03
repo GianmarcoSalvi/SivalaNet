@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fphnW6hMHCnBb6b3rKY5TELZXezi",
+    "object": "chat.completion",
+    "created": 1690204559,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'ex chiesa di Santo Sebastiano si trova nel comune di Vasanello, in provincia di Viterbo, Italia. Questo edificio religioso è un importante esempio di architettura religiosa nel territorio e ha una storia ricca e affascinante.\n\nLa chiesa di Santo Sebastiano è stata costruita nel XV secolo e inizialmente era dedicata a San Giovanni Battista. Nel corso dei secoli, l'edificio è stato oggetto di diverse modifiche e ampliamenti, fino a raggiungere l'aspetto attuale.\n\nL'esterno della chiesa presenta una facciata semplice ma elegante, con un portale in pietra e una finestra circolare sopra di esso. La facciata è decorata con elementi architettonici classici, come lesene e cornici, che conferiscono un senso di solennità all'edificio.\n\nAll'interno, la chiesa presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi e dipinti che raffigurano scene religiose e santi. L'altare maggiore è particolarmente imponente, con una ricca decorazione in marmo e sculture.\n\nUno degli elementi più interessanti della chiesa è la cappella dedicata a Santo Sebastiano, da cui prende il nome. Questa cappella è decorata con affreschi che raffigurano la vita e il martirio di Santo Sebastiano, uno dei santi più venerati nella tradizione cattolica.\n\nNel corso dei secoli, la chiesa di Santo Sebastiano ha subito diverse trasformazioni e restauri, ma ha mantenuto intatta la sua bellezza e il suo fascino. Oggi, l'edificio non è più utilizzato per scopi religiosi, ma è aperto al pubblico come luogo di interesse storico e artistico.\n\nL'ex chiesa di Santo Sebastiano rappresenta un importante patrimonio culturale per il comune di Vasanello e attira numerosi visitatori che desiderano ammirare la sua architettura e le sue opere d'arte."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 510,
+        "total_tokens": 546
+    }
+}

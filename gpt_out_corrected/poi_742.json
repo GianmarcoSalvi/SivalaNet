@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpIJihAUhCt9eMVfUB1R6KlD4MoH",
+    "object": "chat.completion",
+    "created": 1690202979,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli \"Madonna dell'Olivo\" è un importante sito archeologico situato nel comune di Tuscania, in Italia. Si tratta di una necropoli etrusca risalente al VII secolo a.C., che si estende su una superficie di circa 40 ettari.\n\nLa necropoli prende il nome dalla vicina chiesa di Santa Maria dell'Olivo, che si trova proprio accanto al sito archeologico. È considerata una delle necropoli più grandi e meglio conservate dell'Etruria meridionale.\n\nIl sito è composto da numerose tombe a tumulo, che sono state scavate nella roccia tufacea. Le tombe sono di diverse tipologie, tra cui tombe a camera, a fossa e a tumulo. Alcune di esse sono decorate con affreschi e rilievi, che rappresentano scene di vita quotidiana, divinità e simboli religiosi.\n\nAll'interno delle tombe sono stati rinvenuti numerosi oggetti funerari, come ceramiche, gioielli, armi e utensili, che testimoniano la ricchezza e l'importanza sociale dei defunti. Questi reperti sono oggi esposti nel Museo Archeologico Nazionale di Tuscania.\n\nLa necropoli è circondata da un paesaggio suggestivo, caratterizzato da colline e campi coltivati. È possibile visitare il sito archeologico seguendo un percorso segnalato, che permette di ammirare le tombe e godere della vista panoramica sulla campagna circostante.\n\nLa Necropoli \"Madonna dell'Olivo\" rappresenta un importante testimonianza dell'antica civiltà etrusca e offre ai visitatori l'opportunità di immergersi nella storia e nella cultura di questa antica civiltà."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 425,
+        "total_tokens": 465
+    }
+}

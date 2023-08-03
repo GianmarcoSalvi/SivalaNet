@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqDIhCFN9oFcQ3XzL2JnC25zAnSz",
+    "object": "chat.completion",
+    "created": 1690206512,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Porta Romana è una delle porte di accesso al centro storico della città di Viterbo, situata nella parte meridionale delle mura medievali. Questa imponente porta, costruita nel XIII secolo, è uno dei principali simboli della città e rappresenta un importante punto di riferimento storico e culturale.\n\nLa porta è caratterizzata da una struttura massiccia e imponente, con un arco a tutto sesto sormontato da una torre quadrangolare. La torre, alta circa 25 metri, è dotata di merlature e finestre ad arco che permettono una vista panoramica sulla città e sulle campagne circostanti.\n\nL'ingresso principale della porta è costituito da un grande arco, sormontato da un frontone triangolare decorato con stemmi e motivi ornamentali. Sopra l'arco si trova una loggia con tre finestre ad arco, che conferiscono alla porta un aspetto elegante e maestoso.\n\nAll'interno della porta si trova un cortile, che fungeva da spazio di accoglienza per i visitatori e i mercanti che entravano in città. Attualmente, il cortile è utilizzato come spazio espositivo per mostre temporanee e eventi culturali.\n\nPorta Romana è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua struttura originale. Oggi rappresenta un importante punto di accesso al centro storico di Viterbo, che è stato dichiarato Patrimonio dell'Umanità dall'UNESCO.\n\nLa porta è circondata da un'area pedonale, che permette ai visitatori di passeggiare lungo le mura medievali e godere di una vista panoramica sulla città. Nei dintorni si trovano anche alcuni punti di interesse, come il Parco di Porta Romana, un'area verde con alberi secolari e panchine, ideale per rilassarsi e godere della tranquillità del luogo.\n\nIn conclusione, Porta Romana è un'importante testimonianza storica e architettonica nel comune di Viterbo. La sua imponente struttura e la sua posizione strategica la rendono un luogo di grande fascino e interesse per i visitatori che desiderano immergersi nella storia e nella cultura di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 568,
+        "total_tokens": 600
+    }
+}

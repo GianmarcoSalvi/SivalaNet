@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7foxVb9j3UjsD52jluEVal9Re5RwD",
+    "object": "chat.completion",
+    "created": 1690201689,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giacomo è un edificio religioso situato nel comune di Tarquinia, in Italia. Si trova nel centro storico della città, vicino alla famosa necropoli etrusca.\n\nLa chiesa risale al XII secolo ed è uno dei principali esempi di architettura romanica nella regione del Lazio. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture e motivi geometrici. Sopra il portale si trova una finestra a bifora, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di San Giacomo e altri santi. Sull'altare maggiore si trova una statua di San Giacomo, patrono della chiesa.\n\nLa Chiesa di San Giacomo è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto gran parte della sua struttura originale. È un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose.\n\nOltre al suo valore religioso, la chiesa è anche un importante punto di riferimento storico e culturale per la città di Tarquinia. La sua posizione nel centro storico e la sua architettura affascinante la rendono una meta turistica molto visitata.\n\nInoltre, la Chiesa di San Giacomo si trova nelle vicinanze della necropoli etrusca di Tarquinia, che è stata dichiarata Patrimonio dell'Umanità dall'UNESCO. Questo la rende un punto di partenza ideale per visitare sia il patrimonio religioso che quello archeologico della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 463,
+        "total_tokens": 499
+    }
+}

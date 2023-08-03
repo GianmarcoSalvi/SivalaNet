@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmiFoyL7Pd8Ci3IUwfxoBHS99LnE",
+    "object": "chat.completion",
+    "created": 1690193055,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Agostino si trova nel comune di Orte, in Italia. È un edificio religioso di grande importanza storica e artistica, risalente al XIII secolo.\n\nLa chiesa è situata nel centro storico di Orte, in una posizione dominante che permette di ammirare un panorama mozzafiato sulla città e sulla valle del Tevere. La sua facciata è caratterizzata da un portale gotico, sormontato da un rosone decorato con motivi floreali e geometrici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le pareti sono decorate con affreschi di grande valore artistico, risalenti al XIV secolo, che raffigurano scene della vita di Santo Agostino e di altri santi.\n\nNella chiesa sono conservate anche numerose opere d'arte, tra cui una statua lignea di Santo Agostino, risalente al XV secolo, e un crocifisso ligneo del XVI secolo. Sono presenti anche altari laterali, decorati con dipinti e sculture di notevole bellezza.\n\nLa Chiesa di Santo Agostino è un luogo di culto molto frequentato dai fedeli, che vi si recano per pregare e partecipare alle celebrazioni religiose. È anche meta di numerosi turisti e appassionati d'arte, che vengono attratti dalla sua bellezza architettonica e artistica.\n\nLa chiesa è aperta al pubblico e offre la possibilità di visitare il suo interno e ammirare le opere d'arte che vi sono conservate. È un luogo di grande suggestione e spiritualità, che merita sicuramente una visita per chi si trova a Orte o nelle vicinanze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 436,
+        "total_tokens": 471
+    }
+}

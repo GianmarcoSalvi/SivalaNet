@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqikleS1XxZstc1MKGFFhjf33BPW",
+    "object": "chat.completion",
+    "created": 1690208462,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Canepina è un comune italiano situato nella provincia di Viterbo, nella regione del Lazio, nel centro Italia. Si trova a circa 80 chilometri a nord-ovest di Roma e a 20 chilometri a nord-est di Viterbo.\n\nIl paese di Canepina è situato su una collina a un'altitudine di circa 500 metri sul livello del mare, offrendo una vista panoramica sulla campagna circostante. Il territorio comunale si estende su una superficie di circa 18 chilometri quadrati.\n\nIl centro storico di Canepina è caratterizzato da strette stradine lastricate e da antiche case in pietra, che conferiscono al paese un'atmosfera medievale. Le mura medievali che circondano il centro storico sono ancora in parte conservate, con alcune torri e porte d'accesso ben visibili.\n\nTra i principali punti di interesse di Canepina vi è la Chiesa di San Giovanni Battista, risalente al XIII secolo, che presenta un bellissimo portale in stile romanico. All'interno della chiesa si possono ammirare affreschi e dipinti di grande valore artistico.\n\nUn altro luogo di interesse è il Palazzo Comunale, un edificio storico che ospita la sede del municipio. Il palazzo è caratterizzato da una facciata imponente e da un cortile interno con una fontana.\n\nCanepina è anche famosa per la sua produzione di olio d'oliva di alta qualità. Nelle campagne circostanti si trovano numerosi uliveti, che contribuiscono alla bellezza del paesaggio.\n\nIl comune di Canepina offre anche diverse opportunità per gli amanti della natura e degli sport all'aria aperta. Ci sono sentieri escursionistici che permettono di esplorare la campagna circostante, così come aree attrezzate per il picnic e per il campeggio.\n\nInoltre, Canepina è ben collegata con le città circostanti grazie alla sua posizione strategica. È possibile raggiungere facilmente Viterbo, con le sue famose terme, e altre località di interesse turistico come Civita di Bagnoregio e il Lago di Bolsena.\n\nIn sintesi, Canepina è un affascinante comune italiano che offre una combinazione di storia, cultura, bellezze naturali e prodotti tipici, rendendolo un luogo ideale per una visita o un soggiorno rilassante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 592,
+        "total_tokens": 623
+    }
+}

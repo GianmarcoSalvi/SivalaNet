@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnCvaZcuSwxbFQwM0c28o9SzgUi7",
+    "object": "chat.completion",
+    "created": 1690194957,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Agostino si trova nel comune di Soriano nel Cimino, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XIII secolo ed è stata costruita in stile romanico-gotico. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, sormontato da una lunetta decorata con un bassorilievo raffigurante Sant'Agostino. Sopra il portale si trova una finestra ad arco ogivale, che illumina l'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di Sant'Agostino e altri santi. Sull'altare maggiore si trova una pregevole pala d'altare del XVII secolo, raffigurante la Madonna con il Bambino e i santi Agostino e Monica.\n\nNella cappella laterale si trova un altare dedicato a Sant'Antonio da Padova, con una statua lignea del santo. Nella stessa cappella si possono ammirare anche affreschi del XV secolo raffiguranti scene della vita di Sant'Antonio.\n\nLa Chiesa di Sant'Agostino è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per gli amanti dell'arte e della storia, che possono ammirare gli affreschi e le opere d'arte presenti all'interno della chiesa.\n\nLa chiesa si trova in una posizione panoramica, affacciata sulla valle del fiume Tevere e circondata da un suggestivo paesaggio collinare. È facilmente raggiungibile a piedi dal centro storico di Soriano nel Cimino e rappresenta una tappa imperdibile per chi visita questa incantevole località."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 512,
+        "total_tokens": 552
+    }
+}

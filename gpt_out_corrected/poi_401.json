@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flVRgvDvG25B0IrH9QLa9NccYqjI",
+    "object": "chat.completion",
+    "created": 1690188417,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo della Basilica - Santuario di Maria Santissima del Suffragio si trova nel comune di Grotte di Castro, in Italia. Questo museo è situato all'interno del complesso del Santuario di Maria Santissima del Suffragio, una delle principali attrazioni religiose della zona.\n\nIl museo è ospitato in un edificio adiacente alla basilica e offre ai visitatori la possibilità di esplorare la storia e la cultura legate al santuario. La struttura del museo è moderna e accogliente, con spazi espositivi ben organizzati e illuminati.\n\nAll'interno del museo, i visitatori possono ammirare una vasta collezione di opere d'arte sacra, tra cui dipinti, sculture e oggetti liturgici. Queste opere d'arte risalgono a diverse epoche storiche e rappresentano sia artisti locali che internazionali.\n\nUna delle principali attrazioni del museo è la collezione di ex voto, che sono offerte votive fatte dai fedeli in segno di gratitudine per grazie ricevute. Questi ex voto sono esposti in modo suggestivo e offrono un'interessante testimonianza della devozione popolare.\n\nIl museo offre anche una sezione dedicata alla storia del santuario, con documenti e fotografie che raccontano la sua fondazione e il suo sviluppo nel corso dei secoli. Questa sezione fornisce una panoramica completa della storia religiosa e culturale della zona.\n\nOltre alle esposizioni permanenti, il museo ospita anche mostre temporanee che presentano opere d'arte contemporanea e temi legati alla spiritualità e alla religione.\n\nNel complesso, il Museo della Basilica - Santuario di Maria Santissima del Suffragio è un luogo affascinante che offre ai visitatori la possibilità di immergersi nella storia e nella cultura religiosa della zona. La sua posizione all'interno del santuario lo rende un luogo ideale per riflettere e meditare, oltre che per apprezzare l'arte sacra."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 498,
+        "total_tokens": 546
+    }
+}

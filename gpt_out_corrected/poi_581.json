@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmr5ztdJBZMfjH4QQJKpB0fEyzdg",
+    "object": "chat.completion",
+    "created": 1690193603,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre Zelli è un'imponente struttura situata nel comune di Orte, in Italia. Si tratta di una torre medievale che risale al XIII secolo e che si erge maestosa nel centro storico della città.\n\nLa torre, alta circa 30 metri, è caratterizzata da una solida struttura in pietra che ne conferisce un aspetto imponente e suggestivo. La sua forma è cilindrica e presenta una serie di finestre e feritoie che permettevano di difendersi dagli attacchi esterni.\n\nLa Torre Zelli faceva parte di un sistema difensivo che comprendeva anche le mura cittadine, ed era utilizzata come punto di osservazione e controllo del territorio circostante. Durante il periodo medievale, la torre era abitata da una guarnigione militare che garantiva la sicurezza della città.\n\nOggi la Torre Zelli è uno dei principali simboli di Orte e rappresenta un importante patrimonio storico e culturale della città. È possibile visitarla e ammirare la sua architettura antica, che testimonia la storia e le vicende del passato.\n\nAll'interno della torre si possono ancora osservare alcuni elementi originali, come le scale in pietra che portano ai vari piani e le feritoie che permettevano di sparare contro gli assalitori. Inoltre, dalla sommità della torre si può godere di una vista panoramica mozzafiato sulla città e sui dintorni.\n\nLa Torre Zelli rappresenta un'importante attrazione turistica per Orte e attira visitatori da tutto il mondo. La sua presenza nel centro storico contribuisce a creare un'atmosfera suggestiva e affascinante, che riporta indietro nel tempo e permette di immergersi nella storia di questa antica città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 447,
+        "total_tokens": 478
+    }
+}

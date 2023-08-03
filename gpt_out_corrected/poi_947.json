@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqTDKq74stEhcsmaB99mh06dj7IX",
+    "object": "chat.completion",
+    "created": 1690207499,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Domus Dei è un'antica struttura situata nel comune di Viterbo, in Italia. Si tratta di un edificio storico che ha una grande importanza culturale e religiosa nella regione.\n\nLa Domus Dei è una chiesa che risale al XIII secolo ed è considerata uno dei migliori esempi di architettura romanica nella zona. La sua facciata è caratterizzata da un portale in pietra con decorazioni scolpite, che rappresentano scene bibliche e simboli religiosi. La struttura è costruita principalmente in pietra, con un tetto a doppia falda e una torre campanaria.\n\nAll'interno della chiesa si possono ammirare affreschi medievali ben conservati, che rappresentano scene della vita di Cristo e dei santi. Le pareti sono decorate con motivi geometrici e simboli religiosi, mentre l'altare principale è ornato con sculture e dipinti sacri.\n\nLa Domus Dei è stata oggetto di vari interventi di restauro nel corso dei secoli, ma è ancora possibile apprezzare la sua bellezza originale. La chiesa è aperta al pubblico e viene utilizzata per celebrazioni religiose e eventi culturali.\n\nOltre alla sua importanza storica e artistica, la Domus Dei è anche un luogo di spiritualità e devozione per i fedeli. La chiesa ospita regolarmente messe e altre cerimonie religiose, attirando visitatori e pellegrini da tutto il mondo.\n\nLa Domus Dei si trova in una posizione centrale nel comune di Viterbo, rendendola facilmente accessibile per i visitatori. La sua bellezza architettonica e la sua atmosfera spirituale la rendono una tappa imperdibile per chi visita la città e desidera immergersi nella sua storia e cultura religiosa."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 449,
+        "total_tokens": 481
+    }
+}

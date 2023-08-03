@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en6FL7LH3xCTY58qMiYcZHz4wotp",
+    "object": "chat.completion",
+    "created": 1689956215,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Fondazione Agosti si trova nel comune di Bagnoregio, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è situata in un edificio storico, che aggiunge un fascino unico all'ambiente. L'interno è spazioso e accogliente, con ampie finestre che permettono l'ingresso di luce naturale. L'arredamento è moderno e confortevole, con comode sedie e tavoli per gli utenti che desiderano studiare o leggere.\n\nLa collezione della biblioteca è molto ampia e diversificata. Include libri di narrativa, saggistica, poesia, romanzi, libri per bambini e giovani adulti, nonché una vasta selezione di riviste e giornali. La biblioteca offre anche una vasta gamma di risorse digitali, come e-book, audiolibri e database online, che possono essere facilmente accessibili tramite computer o dispositivi mobili.\n\nLa biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, letture pubbliche e mostre d'arte. Questi eventi sono aperti al pubblico e offrono un'opportunità per gli autori locali di condividere il loro lavoro e per la comunità di incontrarsi e discutere di temi culturali.\n\nLa biblioteca offre anche servizi di prestito interbibliotecario, che permette agli utenti di richiedere libri o altri materiali da altre biblioteche della regione o del paese. Inoltre, è possibile utilizzare i computer della biblioteca per accedere a Internet, stampare documenti o utilizzare programmi di produttività.\n\nIl personale della biblioteca è cordiale e disponibile, pronto ad assistere gli utenti nelle loro ricerche o a fornire raccomandazioni di lettura. Inoltre, la biblioteca offre servizi di consulenza e orientamento per studenti e ricercatori che necessitano di supporto nella ricerca di informazioni.\n\nLa Biblioteca della Fondazione Agosti è un luogo di incontro e di apprendimento per la comunità di Bagnoregio. Offre un ambiente tranquillo e stimolante per studiare, leggere e scoprire nuove idee. Con la sua vasta collezione e i suoi servizi di alta qualità, la biblioteca è un punto di riferimento culturale per la città e un luogo che promuove l'amore per la lettura e l'apprendimento."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 589,
+        "total_tokens": 626
+    }
+}

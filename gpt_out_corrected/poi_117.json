@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enNjvMLFFAF8RhfS4iiNLNRsMNBP",
+    "object": "chat.completion",
+    "created": 1689957299,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana di San Rocco si trova nel comune di Bolsena, una pittoresca cittadina situata nella regione del Lazio, in Italia. Questa fontana è uno dei principali punti di riferimento della città e rappresenta un importante esempio di architettura rinascimentale.\n\nLa fontana è situata nella piazza principale di Bolsena, Piazza Matteotti, ed è dedicata a San Rocco, il santo patrono della città. È stata costruita nel XVI secolo e presenta un design elegante e raffinato. La fontana è realizzata in pietra locale e presenta una serie di vasche sovrapposte, che si susseguono in modo armonioso.\n\nLa parte inferiore della fontana è costituita da una grande vasca circolare, decorata con motivi floreali e sculture di animali marini. Da questa vasca, l'acqua scorre attraverso una serie di piccole vasche, creando un piacevole effetto di cascata. Le vasche superiori sono decorate con statue di putti e figure mitologiche, che aggiungono un tocco di bellezza e grazia all'intera struttura.\n\nLa Fontana di San Rocco è un luogo molto amato dai residenti e dai visitatori di Bolsena. Durante le calde giornate estive, la fontana diventa un punto di ristoro e di incontro per le persone che desiderano rinfrescarsi e godersi la bellezza del luogo. È anche un luogo popolare per scattare fotografie e ammirare l'architettura rinascimentale.\n\nLa fontana è circondata da una piazza vivace, con caffè, ristoranti e negozi che si affacciano su di essa. Durante le festività locali, la piazza si anima di eventi e celebrazioni, rendendo la Fontana di San Rocco il cuore pulsante della vita sociale di Bolsena.\n\nIn conclusione, la Fontana di San Rocco è un gioiello architettonico nel comune di Bolsena. Con il suo design elegante e la sua posizione centrale, rappresenta un punto di riferimento per la città e un luogo di incontro per i residenti e i visitatori. Se ti trovi a Bolsena, non puoi perderti la bellezza di questa fontana rinascimentale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 553,
+        "total_tokens": 586
+    }
+}

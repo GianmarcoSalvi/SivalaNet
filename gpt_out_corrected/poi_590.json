@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmtTxGhPjCII5Zrampxmn7spr4ph",
+    "object": "chat.completion",
+    "created": 1690193751,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Portico del Palazzo Comunale si trova nel comune di Piansano, in provincia di Viterbo, Italia. Si tratta di un'antica struttura architettonica che risale al XVIII secolo e che rappresenta uno dei principali punti di interesse storico e culturale del paese.\n\nIl portico si estende lungo il lato nord del Palazzo Comunale, che è la sede del municipio di Piansano. La sua costruzione è caratterizzata da una serie di arcate a tutto sesto, sostenute da colonne in pietra locale. Le colonne sono disposte in modo regolare e creano un effetto di prospettiva molto suggestivo.\n\nIl portico è decorato con vari elementi architettonici, come capitelli corinzi e architravi finemente lavorati. Le arcate sono intervallate da finestre con cornici in pietra, che permettono l'ingresso di luce naturale all'interno del portico.\n\nAll'interno del portico si trovano diverse attività commerciali, come negozi, bar e ristoranti, che rendono questo luogo un punto di ritrovo per i residenti e i visitatori del paese. Durante le belle giornate, il portico diventa un luogo ideale per passeggiare e godersi l'atmosfera tranquilla e pittoresca di Piansano.\n\nIl Portico del Palazzo Comunale rappresenta un importante esempio di architettura civile del XVIII secolo e testimonia la storia e la cultura del paese. La sua bellezza e la sua importanza storica lo rendono una meta turistica molto apprezzata, che attira visitatori da tutto il mondo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 402,
+        "total_tokens": 438
+    }
+}

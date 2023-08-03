@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpsWcBOVOJMeJy1S9LU1aGGZY8yl",
+    "object": "chat.completion",
+    "created": 1690205224,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Decollato si trova nel comune di Vignanello, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La facciata è semplice e sobria, con un portale in pietra e una finestra centrale. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi.\n\nUno degli elementi più interessanti della chiesa è l'altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi. Sopra l'altare si trova un dipinto raffigurante il martirio di San Giovanni Battista, opera di un artista locale del XVII secolo.\n\nLa chiesa conserva anche diverse opere d'arte di grande valore, tra cui una statua lignea di San Giovanni Decollato, patrono della chiesa, e una pala d'altare raffigurante la Madonna con il Bambino e i Santi Giovanni Battista e Giovanni Evangelista.\n\nOgni anno, il 29 agosto, si celebra la festa di San Giovanni Decollato con una processione che parte dalla chiesa e si snoda per le vie del paese. Durante la festa, la chiesa è adornata con fiori e luminarie, creando un'atmosfera suggestiva e coinvolgente.\n\nLa Chiesa di San Giovanni Decollato è un luogo di culto molto amato dalla comunità di Vignanello e rappresenta un importante punto di riferimento per la spiritualità e la tradizione religiosa del luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 420,
+        "total_tokens": 458
+    }
+}

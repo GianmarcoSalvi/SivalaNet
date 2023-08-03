@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmQO35OUalqVce3hYwPoDFQ8X0rH",
+    "object": "chat.completion",
+    "created": 1690191948,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Oriolo Romano è un importante punto di riferimento culturale per la comunità locale. Situata nel centro del paese, la biblioteca offre una vasta gamma di servizi e risorse per soddisfare le esigenze di lettori di tutte le età.\n\nLa struttura della biblioteca è moderna e accogliente, con ampie sale di lettura e spazi dedicati a diverse attività. All'ingresso, c'è un'area dedicata all'accoglienza e all'informazione, dove i visitatori possono ottenere assistenza e orientamento sui servizi offerti.\n\nLa biblioteca dispone di una vasta collezione di libri, che spazia da romanzi, saggi, poesie, libri per bambini e ragazzi, fino a testi di storia, arte, scienze e molto altro ancora. Gli scaffali sono organizzati in modo chiaro e accessibile, facilitando la ricerca e la consultazione dei libri.\n\nOltre ai libri, la biblioteca offre anche una vasta gamma di materiali multimediali, come CD, DVD e audiolibri, che possono essere presi in prestito dagli utenti. Inoltre, sono disponibili anche riviste e giornali locali e nazionali, per tenersi aggiornati sulle ultime notizie e tendenze.\n\nLa biblioteca comunale di Oriolo Romano organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e laboratori per bambini. Queste attività sono un'opportunità per la comunità di incontrarsi, condividere interessi comuni e promuovere la cultura locale.\n\nI dipendenti della biblioteca sono sempre disponibili ad aiutare i visitatori nella ricerca di informazioni, nella scelta di libri adatti alle loro esigenze e nell'utilizzo delle risorse digitali disponibili. Inoltre, la biblioteca offre anche servizi di prestito interbibliotecario, che permettono di ottenere libri e materiali da altre biblioteche della rete nazionale.\n\nLa biblioteca comunale di Oriolo Romano è un luogo di apprendimento, svago e socializzazione, che promuove la cultura e l'accesso alla conoscenza per tutti i cittadini. È un punto di incontro per gli amanti dei libri e un luogo dove la comunità può crescere e svilupparsi attraverso la condivisione di idee e esperienze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 575,
+        "total_tokens": 609
+    }
+}

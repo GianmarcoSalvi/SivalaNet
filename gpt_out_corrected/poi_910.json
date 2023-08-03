@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqFsfxz4rUSeHe0KW09pcWSOkXZF",
+    "object": "chat.completion",
+    "created": 1690206672,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca del convento della Santissima Trinità dell'Ordine eremitano di Santo Agostino si trova nel comune di Viterbo, in Italia. Questa biblioteca è situata all'interno del convento agostiniano, che è un importante edificio religioso e storico della città.\n\nLa biblioteca è conosciuta per la sua vasta collezione di libri e manoscritti antichi, che risalgono a diversi secoli fa. La sua origine risale al XIII secolo, quando il convento fu fondato dagli agostiniani. Nel corso dei secoli, la biblioteca è stata arricchita grazie a donazioni e acquisizioni di opere letterarie e scientifiche.\n\nLa biblioteca conserva una vasta gamma di testi, tra cui opere teologiche, filosofiche, storiche, scientifiche e letterarie. La sua collezione di manoscritti è particolarmente preziosa, con documenti che risalgono al Medioevo e all'epoca rinascimentale. Questi manoscritti includono opere di autori famosi come Sant'Agostino e altri importanti teologi e filosofi dell'epoca.\n\nOltre ai libri e ai manoscritti, la biblioteca ospita anche una collezione di incunaboli, che sono libri stampati prima del 1501. Questi libri sono considerati estremamente rari e preziosi, e rappresentano una parte importante del patrimonio culturale della biblioteca.\n\nLa biblioteca è aperta al pubblico, ma è necessario prenotare in anticipo per poter accedere alla sua collezione. Gli studiosi e i ricercatori sono particolarmente benvenuti, poiché la biblioteca offre un ambiente tranquillo e ricco di risorse per lo studio e la ricerca.\n\nInoltre, la biblioteca organizza regolarmente mostre e eventi culturali per promuovere la conoscenza e l'apprezzamento del suo patrimonio librario. Questi eventi includono conferenze, presentazioni di libri e mostre tematiche che mettono in mostra alcuni dei tesori più preziosi della biblioteca.\n\nIn conclusione, la Biblioteca del convento della Santissima Trinità dell'Ordine eremitano di Santo Agostino è un luogo di grande importanza storica e culturale nel comune di Viterbo. La sua vasta collezione di libri, manoscritti e incunaboli la rende un luogo di grande interesse per gli studiosi e gli appassionati di storia e cultura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 52,
+        "completion_tokens": 592,
+        "total_tokens": 644
+    }
+}

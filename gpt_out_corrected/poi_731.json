@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpDIlWgDsrD9doHw0Lj8Cl02MIYp",
+    "object": "chat.completion",
+    "created": 1690202668,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli Pian di Mola è un importante sito archeologico situato nel comune di Tuscania, nella regione del Lazio, in Italia. Questa necropoli è considerata una delle più grandi e meglio conservate della regione.\n\nLa necropoli si estende su un'area di circa 40 ettari e risale all'epoca etrusca, tra il VII e il III secolo a.C. È composta da oltre 6.000 tombe, che sono state scavate nella roccia tufacea che caratterizza la zona. Le tombe sono di diversi tipi, tra cui tombe a tumulo, a camera e a fossa.\n\nLe tombe a tumulo sono le più comuni e sono caratterizzate da una struttura a forma di tumulo con una camera sepolcrale al suo interno. Alcuni tumuli sono stati decorati con pitture murali, che rappresentano scene di vita quotidiana, divinità e simboli religiosi.\n\nLe tombe a camera sono invece scavate direttamente nella roccia e sono dotate di una camera sepolcrale. Queste tombe sono spesso decorate con affreschi, che mostrano scene mitologiche e rituali.\n\nLe tombe a fossa sono le più semplici e consistono in una fossa scavata nel terreno, dove venivano deposti i defunti insieme ai loro oggetti personali.\n\nOltre alle tombe, la necropoli comprende anche un'area sacra, dove si trovano alcuni altari e un tempio dedicato alla dea etrusca Uni. Questo tempio è stato scoperto nel 2005 ed è uno dei pochi esempi di architettura religiosa etrusca ancora visibili.\n\nLa Necropoli Pian di Mola è stata oggetto di scavi archeologici sin dal XIX secolo e ha restituito numerosi reperti di grande valore, tra cui ceramiche, gioielli, armi e oggetti di uso quotidiano. Molti di questi reperti sono esposti nel Museo Archeologico Nazionale di Tuscania.\n\nLa necropoli è aperta al pubblico e offre la possibilità di visitare le tombe e ammirare gli affreschi e le decorazioni che ancora oggi adornano le pareti. È un luogo di grande importanza storica e culturale, che permette di immergersi nell'antica civiltà etrusca e di scoprire la loro arte e le loro tradizioni funerarie."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 574,
+        "total_tokens": 611
+    }
+}

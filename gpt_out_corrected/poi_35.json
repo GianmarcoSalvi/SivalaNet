@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emyBUfAoBh9qIkq1VLSGWyoK6GdQ",
+    "object": "chat.completion",
+    "created": 1689955715,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro Boni è un importante edificio culturale situato nel comune di Acquapendente, in Italia. Si trova nel centro storico della città, in una posizione strategica che lo rende facilmente accessibile a residenti e visitatori.\n\nL'edificio è stato costruito nel XIX secolo e presenta uno stile architettonico neoclassico, con una facciata imponente e ben conservata. L'interno del teatro è altrettanto affascinante, con una sala principale che può ospitare fino a 300 persone. La sala è caratterizzata da una disposizione a ferro di cavallo, con palchi e balconate che circondano l'ampio palcoscenico.\n\nIl Teatro Boni è stato oggetto di importanti restauri nel corso degli anni, che hanno permesso di preservare la sua bellezza originale e di adeguarlo alle esigenze moderne. Oggi, il teatro è dotato di moderne attrezzature tecniche e di illuminazione, che consentono di realizzare spettacoli di alta qualità.\n\nIl Teatro Boni è un punto di riferimento per la cultura e lo spettacolo nella zona di Acquapendente. Ospita regolarmente rappresentazioni teatrali, concerti, proiezioni cinematografiche e altri eventi culturali. La programmazione del teatro è varia e offre una vasta gamma di spettacoli, che spaziano dalla commedia al dramma, dalla musica classica al jazz.\n\nOltre alle rappresentazioni artistiche, il Teatro Boni è anche utilizzato per conferenze, presentazioni e incontri culturali. La sua posizione centrale e la sua capacità di ospitare un gran numero di persone lo rendono un luogo ideale per eventi di vario genere.\n\nIl Teatro Boni è un luogo di grande importanza per la comunità di Acquapendente, che lo considera un punto di riferimento per la cultura e l'intrattenimento. Grazie alla sua programmazione variegata e alla sua bellezza architettonica, il teatro attira un pubblico diversificato e contribuisce a arricchire la vita culturale della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 507,
+        "total_tokens": 541
+    }
+}

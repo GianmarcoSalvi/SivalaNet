@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en8a50gLP0ogu39SMw7d530jFL2w",
+    "object": "chat.completion",
+    "created": 1689956360,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Francesco di Paola si trova nel comune di Bagnoregio, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa fu costruita nel XVII secolo, in stile barocco, e dedicata a San Francesco di Paola, un santo italiano del XV secolo. Si trova nella parte alta del centro storico di Bagnoregio, in una posizione panoramica che offre una vista mozzafiato sulla valle sottostante.\n\nL'esterno della chiesa è caratterizzato da una facciata semplice ma elegante, con un portale in pietra e una finestra centrale. La facciata è decorata con alcuni elementi architettonici tipici dello stile barocco, come lesene e cornici.\n\nL'interno della chiesa è a navata unica, con una volta a botte decorata con affreschi raffiguranti scene della vita di San Francesco di Paola. Le pareti laterali sono adornate da altari barocchi, con dipinti e sculture di grande valore artistico. Al centro dell'altare maggiore si trova una statua del santo, realizzata in marmo bianco.\n\nLa chiesa conserva anche alcune opere d'arte di notevole importanza, tra cui dipinti di artisti locali del XVII e XVIII secolo. Tra questi, spicca un dipinto raffigurante la Madonna con il Bambino, attribuito a un allievo di Caravaggio.\n\nLa Chiesa di San Francesco di Paola è un luogo di culto molto frequentato dai fedeli, ma è anche una meta turistica per gli amanti dell'arte e dell'architettura. La sua posizione panoramica e la sua bellezza architettonica la rendono una tappa imperdibile per chi visita Bagnoregio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 444,
+        "total_tokens": 482
+    }
+}

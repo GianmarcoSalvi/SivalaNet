@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flX5MApGIP8grjlzJTYNKHg4Es0u",
+    "object": "chat.completion",
+    "created": 1690188519,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca Comunale di Ischia di Castro è un importante punto di riferimento culturale per la comunità locale. Situata nel cuore del comune, la biblioteca offre una vasta gamma di servizi e risorse per soddisfare le esigenze di lettori di tutte le età.\n\nLa struttura della biblioteca è moderna e accogliente, con spazi luminosi e ben organizzati. All'ingresso, c'è un'ampia sala di lettura con comode poltrone e tavoli, dove i visitatori possono consultare libri, giornali e riviste. Ci sono anche postazioni per l'accesso a Internet, consentendo agli utenti di navigare online e svolgere ricerche.\n\nLa biblioteca offre una vasta collezione di libri, che spaziano dai classici della letteratura italiana e straniera, ai romanzi contemporanei, ai libri per bambini e ragazzi. Gli scaffali sono ben organizzati e i libri sono catalogati in modo da facilitare la ricerca e il prestito.\n\nOltre ai libri, la biblioteca offre anche una vasta gamma di materiali multimediali, come CD, DVD e audiolibri. Questi materiali sono disponibili per il prestito e offrono ai visitatori la possibilità di accedere a contenuti culturali in diversi formati.\n\nLa biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze e incontri con autori. Questi eventi sono aperti al pubblico e offrono un'opportunità per gli amanti della lettura di incontrare e interagire con autori e esperti del settore.\n\nLa Biblioteca Comunale di Ischia di Castro è un luogo di incontro e di scambio culturale per la comunità locale. Offre un ambiente accogliente e stimolante per la lettura e lo studio, promuovendo la cultura e l'educazione nella zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 450,
+        "total_tokens": 484
+    }
+}

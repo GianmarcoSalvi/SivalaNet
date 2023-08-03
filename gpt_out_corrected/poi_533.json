@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmK5NhtMtxTCRfF0F6sZagpjAVOu",
+    "object": "chat.completion",
+    "created": 1690191557,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Tolomeo si trova nel comune di Nepi, in provincia di Viterbo, nella regione del Lazio, Italia. Questa chiesa è uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura religiosa medievale.\n\nLa chiesa risale al XII secolo e presenta uno stile romanico tipico dell'epoca. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture e motivi ornamentali. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti in pietra. Lungo le pareti si trovano affreschi risalenti al XIII secolo, che rappresentano scene della vita di San Tolomeo e altri santi. Questi affreschi sono di grande valore artistico e storico e sono stati restaurati nel corso degli anni per preservarne l'integrità.\n\nNel presbiterio si trova l'altare maggiore, decorato con sculture e dipinti raffiguranti scene religiose. Dietro l'altare si trova un coro ligneo intagliato, risalente al XVII secolo, che aggiunge un tocco di eleganza e bellezza all'ambiente.\n\nLa Chiesa di San Tolomeo è un luogo di culto attivo e viene utilizzata per la celebrazione di messe e altre cerimonie religiose. È anche aperta ai visitatori che desiderano ammirare l'architettura e l'arte all'interno della chiesa.\n\nLa posizione della chiesa, sulla sommità di una collina, offre anche una vista panoramica sulla città di Nepi e sui suoi dintorni. Questo la rende un luogo ideale per una visita turistica, in quanto permette di combinare la bellezza artistica e religiosa con la bellezza naturale del paesaggio circostante.\n\nIn sintesi, la Chiesa di San Tolomeo a Nepi è un gioiello architettonico e artistico che rappresenta un importante punto di riferimento per la comunità locale e un'attrazione turistica per i visitatori che desiderano immergersi nella storia e nella cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 581,
+        "total_tokens": 616
+    }
+}

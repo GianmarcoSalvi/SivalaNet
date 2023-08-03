@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqyxCSbHGFemFVeo2rOjKu8JgaEA",
+    "object": "chat.completion",
+    "created": 1690209467,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Viterbo è una città situata nella regione del Lazio, nel centro Italia. È il capoluogo della provincia di Viterbo e si trova a circa 80 chilometri a nord-ovest di Roma.\n\nLa città di Viterbo è famosa per il suo centro storico ben conservato, che è circondato da mura medievali. Le mura, costruite nel XII secolo, sono una delle caratteristiche distintive di Viterbo e offrono una vista panoramica sulla città e sulla campagna circostante.\n\nIl centro storico di Viterbo è un labirinto di strade strette e tortuose, la maggior parte delle quali sono pedonali. Le strade sono fiancheggiate da edifici storici, chiese, palazzi e piazze pittoresche. Una delle piazze più famose è Piazza del Plebiscito, che ospita il Palazzo dei Papi, un imponente edificio medievale che fu residenza dei papi nel XIII secolo.\n\nUn'altra attrazione principale di Viterbo è il quartiere di San Pellegrino, noto per le sue strade medievali e i suoi palazzi storici. Qui si trova anche la famosa Fontana di San Pellegrino, una fontana rinascimentale decorata con statue e bassorilievi.\n\nViterbo è anche famosa per le sue terme, che risalgono all'epoca romana. Le terme di Viterbo offrono una varietà di trattamenti termali e sono un luogo ideale per rilassarsi e rigenerarsi.\n\nLa città è anche conosciuta per la sua festa tradizionale chiamata \"Santa Rosa\", che si tiene il 3 settembre di ogni anno. Durante questa festa, una grande torcia illuminata, alta 30 metri e pesante 52 quintali, viene portata in processione per le strade della città in onore di Santa Rosa, la patrona di Viterbo.\n\nInoltre, Viterbo è circondata da una splendida campagna, con colline verdi, vigneti e uliveti. La zona circostante offre molte opportunità per escursioni, passeggiate e gite in bicicletta.\n\nIn sintesi, Viterbo è una città ricca di storia, cultura e bellezze naturali. Il suo centro storico ben conservato, le terme, le feste tradizionali e la campagna circostante la rendono una meta affascinante per i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 579,
+        "total_tokens": 610
+    }
+}

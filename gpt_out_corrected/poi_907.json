@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqF7Ou8eTDVz5U0Nu7iVgU1fCwhe",
+    "object": "chat.completion",
+    "created": 1690206625,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Chigi è un edificio storico situato nel comune di Viterbo, in Italia. Si trova nella centralissima Piazza del Plebiscito, nel cuore del centro storico della città.\n\nIl palazzo è stato costruito nel XV secolo come residenza della nobile famiglia Chigi, una delle più importanti e influenti di Viterbo. L'edificio presenta uno stile architettonico rinascimentale, con una facciata imponente e maestosa. È caratterizzato da una struttura a tre piani, con un portale d'ingresso principale sormontato da un balcone e da finestre elegantemente decorate.\n\nL'interno del palazzo è altrettanto affascinante, con numerose sale e stanze riccamente decorate. Tra le più famose vi sono la Sala degli Specchi, la Sala del Trono e la Sala delle Feste. Queste stanze sono caratterizzate da affreschi, stucchi e decorazioni in stile barocco, che testimoniano la ricchezza e il prestigio della famiglia Chigi.\n\nOltre alle sale, il palazzo ospita anche una cappella privata, dedicata a San Sebastiano, che presenta un altare in marmo e affreschi di grande valore artistico.\n\nAttualmente, il Palazzo Chigi è di proprietà del Comune di Viterbo e ospita la sede del Municipio. È possibile visitare alcune delle stanze principali del palazzo, che sono aperte al pubblico durante determinati orari. Inoltre, il palazzo è spesso utilizzato per eventi culturali e mostre temporanee.\n\nIl Palazzo Chigi rappresenta un importante punto di riferimento storico e culturale per la città di Viterbo, testimoniando la sua ricca storia e il suo patrimonio artistico."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 424,
+        "total_tokens": 456
+    }
+}

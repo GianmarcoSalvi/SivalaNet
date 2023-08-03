@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emqvznOuFdUi4eQ50Y4RqVn5yRvr",
+    "object": "chat.completion",
+    "created": 1689955265,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Vittoria si trova nel comune di Acquapendente, nella provincia di Viterbo, nella regione del Lazio, in Italia. È una chiesa di origine medievale che risale al XII secolo, anche se è stata oggetto di numerosi interventi di restauro nel corso dei secoli.\n\nLa chiesa è situata in una posizione panoramica sulla sommità di una collina, dominando il paesaggio circostante. È costruita in stile romanico e presenta una facciata semplice ma elegante, caratterizzata da un portale d'ingresso sormontato da un rosone. La facciata è realizzata in pietra locale, che conferisce un aspetto rustico ed affascinante all'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali. Tra le opere d'arte più importanti presenti all'interno della chiesa, si possono ammirare un crocifisso ligneo del XV secolo e una Madonna con Bambino del XVI secolo.\n\nLa Chiesa di Santa Vittoria è particolarmente nota per il suo campanile, che si erge maestoso accanto all'edificio principale. Il campanile è alto circa 40 metri ed è caratterizzato da una serie di bifore e trifore, che conferiscono un aspetto slanciato e elegante alla struttura. Dalla cima del campanile si può godere di una vista panoramica mozzafiato sulla campagna circostante.\n\nLa chiesa è dedicata a Santa Vittoria, una martire cristiana che secondo la tradizione sarebbe stata sepolta proprio in questo luogo. La sua tomba è ancora visibile all'interno della chiesa e attira numerosi pellegrini e visitatori.\n\nLa Chiesa di Santa Vittoria è un importante luogo di culto e un punto di riferimento storico e artistico per la comunità di Acquapendente. La sua bellezza architettonica e le opere d'arte che ospita la rendono una meta turistica molto apprezzata da chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 526,
+        "total_tokens": 564
+    }
+}

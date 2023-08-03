@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoQ6vtAxGl8PUpQUy93ahCQh2cUH",
+    "object": "chat.completion",
+    "created": 1689961290,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Parrocchia Santa Maria Assunta si trova nel comune di Cellere, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di culto cattolico che sorge nel centro storico del paese.\n\nLa chiesa è dedicata a Santa Maria Assunta, che è anche la patrona del comune di Cellere. La sua costruzione risale al XIII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti. La facciata principale è in stile romanico, con un portale d'ingresso sormontato da un rosone circolare. La facciata è decorata con bassorilievi e sculture che rappresentano scene bibliche.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi e dipinti che raffigurano scene religiose. L'altare maggiore è ornato da un grande dipinto raffigurante l'Assunzione di Maria in cielo. Nella chiesa sono presenti anche diverse cappelle laterali, ognuna dedicata a un santo o a una santa.\n\nLa Parrocchia Santa Maria Assunta è un importante punto di riferimento per la comunità di Cellere. Oltre alle funzioni religiose, la chiesa ospita anche eventi culturali e musicali, come concerti e mostre d'arte. Durante le festività religiose, la chiesa diventa il centro delle celebrazioni, con processioni e cerimonie speciali.\n\nLa Parrocchia Santa Maria Assunta è un luogo di grande importanza storica e artistica per il comune di Cellere. La sua architettura e le opere d'arte al suo interno rappresentano un patrimonio culturale di grande valore. La chiesa è aperta al pubblico e accoglie visitatori e fedeli che desiderano ammirare la sua bellezza e partecipare alle celebrazioni religiose."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 481,
+        "total_tokens": 515
+    }
+}

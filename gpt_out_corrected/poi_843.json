@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpvVRJlrAwC6bPouBij1AYrArSqf",
+    "object": "chat.completion",
+    "created": 1690205409,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana Grande è uno dei monumenti più importanti e iconici nel comune di Viterbo, situato nella regione del Lazio, in Italia. Questa fontana si trova nella piazza principale della città, Piazza del Plebiscito, e rappresenta uno dei simboli più riconoscibili di Viterbo.\n\nLa Fontana Grande è stata costruita nel XIII secolo e presenta uno stile gotico. È composta da una serie di vasche sovrapposte, che si innalzano in altezza, culminando con una statua al centro. Le vasche sono decorate con sculture e rilievi che raffigurano scene bibliche e mitologiche.\n\nLa statua che si trova sulla cima della fontana rappresenta una figura femminile, conosciuta come \"Matelda\", che tiene in mano una conchiglia. Questa figura è stata ispirata dalla Divina Commedia di Dante Alighieri, in cui Matelda è un personaggio che rappresenta la purificazione dell'anima.\n\nLa Fontana Grande è alimentata da una sorgente d'acqua naturale, che scorre attraverso una serie di canali sotterranei e si riversa nelle vasche della fontana. L'acqua che sgorga dalla fontana è limpida e fresca, ed è stata utilizzata per secoli come fonte di approvvigionamento idrico per la città.\n\nOltre alla sua bellezza estetica, la Fontana Grande ha anche un significato storico e culturale per la città di Viterbo. Nel corso dei secoli, è stata il punto di ritrovo per la popolazione locale, che si riuniva intorno alla fontana per discutere, socializzare e raccogliere acqua. Ancora oggi, la fontana è un luogo di incontro per i residenti e i visitatori di Viterbo.\n\nLa Fontana Grande è un'attrazione turistica molto popolare e viene spesso fotografata dai visitatori che desiderano catturare la sua bellezza e il suo fascino. Durante le festività e le celebrazioni locali, la fontana viene spesso decorata con luci e addobbi, creando un'atmosfera ancora più suggestiva.\n\nIn sintesi, la Fontana Grande nel comune di Viterbo è un monumento storico e artistico di grande importanza. La sua bellezza architettonica, le sculture dettagliate e la sua posizione centrale la rendono un luogo imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 582,
+        "total_tokens": 613
+    }
+}

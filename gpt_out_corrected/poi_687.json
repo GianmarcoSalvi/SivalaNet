@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp0xOucIYTZsjXEeMXz9n8s0tn38",
+    "object": "chat.completion",
+    "created": 1690201903,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Duomo dei Santi Margherita e Martino si trova nel comune di Tarquinia, in Italia. Questo imponente edificio religioso è uno dei principali punti di riferimento della città e rappresenta un importante esempio di architettura romanica.\n\nIl Duomo è stato costruito nel XII secolo e presenta una facciata in stile romanico con un portale centrale sormontato da un rosone. La facciata è decorata con sculture e rilievi che rappresentano scene bibliche e simboli religiosi. Sopra il portale centrale si trova una lunetta con una raffigurazione della Madonna con il Bambino.\n\nL'interno del Duomo è a pianta basilicale, con tre navate separate da colonne e archi. Le navate laterali sono coperte da volte a crociera, mentre la navata centrale è coperta da una volta a botte. Lungo le navate si trovano numerose cappelle laterali, alcune delle quali sono decorate con affreschi e opere d'arte.\n\nUno degli elementi più significativi del Duomo è il suo coro, che risale al XIII secolo. Il coro è caratterizzato da un'abside semicircolare decorata con affreschi raffiguranti scene della vita di Cristo e dei santi. Sopra l'abside si trova un tiburio ottagonale, che conferisce all'edificio un'imponente presenza architettonica.\n\nIl Duomo dei Santi Margherita e Martino è anche famoso per ospitare il Museo Diocesano di Tarquinia, che conserva una ricca collezione di opere d'arte sacra, tra cui dipinti, sculture e oggetti liturgici.\n\nIn conclusione, il Duomo dei Santi Margherita e Martino è un importante esempio di architettura romanica nel comune di Tarquinia. La sua facciata decorata, l'interno a pianta basilicale e il coro affrescato lo rendono una meta imperdibile per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 499,
+        "total_tokens": 538
+    }
+}

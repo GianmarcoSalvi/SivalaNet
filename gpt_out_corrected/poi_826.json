@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpqSdEhy885JVZbvXc8EFta1uexI",
+    "object": "chat.completion",
+    "created": 1690205096,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Duomo di Vetralla è una maestosa chiesa situata nel comune di Vetralla, nella regione del Lazio, in Italia. Questo edificio religioso è uno dei principali punti di riferimento della città e rappresenta un importante esempio di architettura religiosa medievale.\n\nIl Duomo è dedicato a Santa Maria Assunta ed è stato costruito nel XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La facciata principale è imponente e presenta un portale in stile romanico, decorato con sculture e bassorilievi che raffigurano scene bibliche e simboli religiosi.\n\nL'interno del Duomo è a pianta basilicale, con tre navate separate da colonne di marmo. Le navate laterali sono decorate con affreschi e dipinti che rappresentano episodi della vita di Cristo e dei santi. L'altare maggiore è ornato da un prezioso paliotto in marmo intarsiato, risalente al XV secolo.\n\nUno degli elementi più suggestivi del Duomo di Vetralla è la sua cripta, situata sotto l'altare maggiore. Questo spazio sotterraneo è decorato con affreschi medievali ben conservati, che raffigurano scene della Passione di Cristo e dei martiri locali.\n\nIl Duomo di Vetralla è anche famoso per il suo campanile, alto circa 40 metri, che offre una vista panoramica sulla città e sulle campagne circostanti. La torre campanaria è stata costruita in stile romanico e presenta una serie di bifore e trifore che illuminano l'interno.\n\nOgni anno, il Duomo di Vetralla attira numerosi visitatori e fedeli che vengono ad ammirare la sua bellezza architettonica e a partecipare alle celebrazioni religiose. La chiesa è anche sede di importanti eventi culturali e musicali, che contribuiscono a valorizzare il patrimonio storico e artistico della città di Vetralla."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 499,
+        "total_tokens": 533
+    }
+}

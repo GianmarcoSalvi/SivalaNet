@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flQx1SNnv2GNDn3ouyKFJl3PnzNT",
+    "object": "chat.completion",
+    "created": 1690188139,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Presutti è un edificio storico situato nel comune di Grotte di Castro, in provincia di Viterbo, Italia. Si trova nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle del lago di Bolsena.\n\nIl palazzo risale al XVIII secolo ed è stato costruito in stile neoclassico. Si presenta come un imponente edificio a tre piani, con una facciata simmetrica e un portale d'ingresso decorato. Le finestre sono ampie e regolari, con cornici in pietra e balconi in ferro battuto.\n\nL'interno del palazzo è altrettanto affascinante, con ampi saloni decorati con stucchi e affreschi. Le stanze sono arredate con mobili d'epoca e opere d'arte, che testimoniano la ricchezza e l'eleganza dei proprietari che vi hanno abitato nel corso dei secoli.\n\nIl Palazzo Presutti è circondato da un ampio giardino all'italiana, con aiuole fiorite, statue e fontane. Il giardino offre un luogo tranquillo e suggestivo dove passeggiare e godere della vista panoramica sulla campagna circostante.\n\nAttualmente, il palazzo è di proprietà privata e non è aperto al pubblico. Tuttavia, la sua imponente presenza nel centro storico di Grotte di Castro lo rende un punto di riferimento architettonico e un simbolo della storia e della cultura del paese."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 370,
+        "total_tokens": 405
+    }
+}

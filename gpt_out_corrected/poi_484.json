@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm3PqiFhavoEwj24tiqRtPFTZ5vC",
+    "object": "chat.completion",
+    "created": 1690190523,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria di Montedoro si trova nel comune di Montefiascone, in provincia di Viterbo, nella regione del Lazio, Italia. Questa chiesa è un importante luogo di culto e un simbolo storico per la città.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua posizione è particolarmente suggestiva, poiché si trova su una collina che domina il paesaggio circostante. Questa posizione elevata offre una vista panoramica mozzafiato sulla città e sulla campagna circostante.\n\nL'edificio è caratterizzato da una facciata semplice ma elegante, con un portale d'ingresso decorato con sculture romaniche. L'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate.\n\nUno degli elementi più notevoli della chiesa è il suo campanile, che risale al XIII secolo. Questa torre campanaria è alta e slanciata, con una serie di finestre ad arco che permettono alla luce di filtrare all'interno. Il campanile è stato restaurato nel corso degli anni, ma conserva ancora la sua struttura originale.\n\nAll'interno della chiesa si trovano anche diverse opere d'arte di valore. Tra queste spicca un affresco del XIV secolo raffigurante la Madonna con il Bambino, che si trova sull'altare maggiore. Ci sono anche altre opere di pittori locali che decorano le pareti della chiesa.\n\nLa Chiesa di Santa Maria di Montedoro è un luogo di culto attivo, con regolari celebrazioni liturgiche. È anche un importante punto di riferimento per i visitatori che desiderano esplorare la storia e l'arte della regione.\n\nInoltre, la chiesa è situata in una posizione strategica per godere di una vista panoramica sulla città di Montefiascone e sulla campagna circostante. Molti visitatori si fermano qui per ammirare il paesaggio e scattare fotografie.\n\nIn conclusione, la Chiesa di Santa Maria di Montedoro è un gioiello architettonico e artistico nel comune di Montefiascone. La sua posizione panoramica, la sua storia millenaria e le sue opere d'arte la rendono un luogo di grande interesse per i visitatori e un importante punto di riferimento per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 601,
+        "total_tokens": 640
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fltzXj8XORwQoBcvFmCrgeYP1V6L",
+    "object": "chat.completion",
+    "created": 1690189939,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Sito Templare di Castell'Araldo si trova nel comune di Marta, nella provincia di Viterbo, Italia. Si tratta di un'antica struttura templare risalente al XII secolo, che rappresenta un importante esempio di architettura religiosa medievale.\n\nIl sito si trova su una collina panoramica, circondato da una suggestiva campagna e da una fitta vegetazione. L'edificio principale è una chiesa a pianta rettangolare, con un'abside semicircolare sul lato orientale. La facciata è caratterizzata da un portale romanico, decorato con sculture e motivi geometrici.\n\nAll'interno della chiesa si possono ammirare affreschi medievali ben conservati, raffiguranti scene religiose e simboli templari. Le pareti sono decorate con motivi geometrici e simboli misteriosi, che testimoniano l'importanza e il misticismo dell'ordine dei Templari.\n\nAccanto alla chiesa si trovano i resti di un'antica torre di avvistamento, utilizzata dai Templari per controllare il territorio circostante. La torre offre una vista panoramica mozzafiato sulla campagna circostante e sul lago di Bolsena.\n\nIl Sito Templare di Castell'Araldo è stato oggetto di studi e ricerche da parte di archeologi e storici, che hanno contribuito a ricostruire la storia e l'importanza di questo luogo. La sua posizione strategica e la sua architettura suggestiva lo rendono un luogo di grande fascino e interesse per i visitatori.\n\nOggi il sito è aperto al pubblico e offre la possibilità di visitare la chiesa, la torre e di ammirare gli affreschi medievali. È anche possibile partecipare a visite guidate e eventi culturali organizzati periodicamente, che permettono di approfondire la conoscenza di questo luogo affascinante e misterioso."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 479,
+        "total_tokens": 516
+    }
+}

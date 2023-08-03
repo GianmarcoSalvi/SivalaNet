@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqnL4LJUWomFAR6gGjY539EgAEGF",
+    "object": "chat.completion",
+    "created": 1690208747,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Fabrica di Roma è un comune situato nella regione del Lazio, nel centro Italia. Si trova nella provincia di Viterbo, a circa 70 chilometri a nord-ovest di Roma.\n\nIl comune di Fabrica di Roma è caratterizzato da una posizione geografica privilegiata, circondato da una natura rigogliosa e da paesaggi mozzafiato. Si estende su una superficie di circa 47 chilometri quadrati e conta una popolazione di circa 4.000 abitanti.\n\nLa storia di Fabrica di Roma risale all'epoca romana, quando era un importante centro di produzione di ceramiche. Il nome stesso del comune deriva dal latino \"fabrica\", che significa \"fabbrica\" o \"officina\". Ancora oggi, l'arte della ceramica è una tradizione importante nella zona e molte botteghe artigiane producono oggetti unici e di alta qualità.\n\nUno dei principali punti di interesse di Fabrica di Roma è il suo centro storico, caratterizzato da stradine strette e tortuose, case in pietra e antiche chiese. La Chiesa di San Giovanni Battista, risalente al XIII secolo, è particolarmente degna di nota per i suoi affreschi e il suo campanile romanico.\n\nNelle vicinanze del centro storico si trova il Parco Archeologico di Ocriculum, un'importante area archeologica che conserva i resti di un'antica città romana. Qui è possibile ammirare le rovine di un anfiteatro, un teatro, terme, un tempio e una necropoli. Il parco offre anche percorsi naturalistici immersi nella natura, ideali per passeggiate e escursioni.\n\nFabrica di Roma è anche famosa per la sua tradizione culinaria. La cucina locale offre piatti tipici della tradizione laziale, come la pasta all'amatriciana, la coda alla vaccinara e la porchetta. Inoltre, il comune è circondato da vigneti e oliveti, che producono vini e olio d'oliva di alta qualità.\n\nGrazie alla sua posizione strategica, Fabrica di Roma è un punto di partenza ideale per visitare altre città e attrazioni della regione del Lazio. Roma, con tutte le sue meraviglie storiche e culturali, è facilmente raggiungibile in auto o in treno. Altre destinazioni interessanti nelle vicinanze includono Viterbo, con le sue terme medievali, e il Lago di Bolsena, il più grande lago vulcanico d'Europa.\n\nIn sintesi, Fabrica di Roma è un comune affascinante e ricco di storia, immerso in una natura incontaminata. Offre una combinazione unica di tradizioni artigianali, arte, archeologia e cucina locale, rendendolo un luogo ideale per una visita autentica e indimenticabile."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 686,
+        "total_tokens": 719
+    }
+}

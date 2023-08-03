@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqUeAgBhHpwjuYWIWuVNz7MdDiOm",
+    "object": "chat.completion",
+    "created": 1690207588,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Provincia romana presso il Convento di Santo Francesco alla Rocca è situata nel comune di Viterbo, in Italia. Questa biblioteca è ospitata all'interno di un antico convento francescano, che risale al XIII secolo.\n\nIl convento si trova sulla collina di San Francesco, che offre una vista panoramica sulla città di Viterbo. L'edificio è un esempio di architettura medievale, con le sue mura in pietra e i suoi affreschi antichi. Il convento è stato restaurato e adattato per ospitare la biblioteca, ma ha mantenuto intatta la sua atmosfera storica e suggestiva.\n\nLa biblioteca è specializzata nella conservazione e nella diffusione di documenti e opere relative alla storia e alla cultura della provincia romana. Il suo patrimonio comprende una vasta collezione di libri, manoscritti, incunaboli, mappe e documenti storici. La biblioteca è particolarmente nota per la sua collezione di testi antichi e rari, che attira studiosi e ricercatori da tutto il mondo.\n\nGli spazi della biblioteca sono organizzati in modo da offrire un ambiente accogliente e tranquillo per la consultazione dei materiali. Ci sono diverse sale di lettura, ognuna arredata con mobili d'epoca e dotata di postazioni di lavoro moderne. Gli scaffali sono colmi di libri, disposti in modo ordinato e catalogati secondo un sistema di classificazione preciso.\n\nLa biblioteca offre anche servizi di ricerca e consulenza per coloro che desiderano approfondire determinati argomenti o accedere a documenti specifici. Il personale è altamente qualificato e disponibile ad assistere i visitatori nella ricerca e nell'utilizzo dei materiali presenti nella biblioteca.\n\nOltre alla sua funzione di conservazione e ricerca, la biblioteca organizza regolarmente eventi culturali, come conferenze, mostre e presentazioni di libri. Queste iniziative contribuiscono a promuovere la conoscenza e l'interesse per la storia e la cultura della provincia romana.\n\nIn conclusione, la Biblioteca della Provincia romana presso il Convento di Santo Francesco alla Rocca è un luogo di grande valore storico e culturale. Ospitata in un antico convento francescano, offre un ambiente suggestivo e accogliente per la consultazione di documenti e opere relative alla storia e alla cultura della provincia romana. La biblioteca è un punto di riferimento per studiosi e ricercatori, ma è aperta anche al pubblico interessato a scoprire il patrimonio culturale della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 623,
+        "total_tokens": 671
+    }
+}

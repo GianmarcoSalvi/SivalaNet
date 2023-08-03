@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fly6j7IkmWWoxlucReYUDwlG5Qhx",
+    "object": "chat.completion",
+    "created": 1690190194,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello Guglielmi si trova nel comune di Montalto di Castro, nella regione del Lazio, in Italia. Si tratta di un imponente edificio storico che risale al XIII secolo e che rappresenta uno dei principali punti di interesse della zona.\n\nIl castello è situato su una collina, da cui si può godere di una vista panoramica mozzafiato sulla campagna circostante e sul Mar Tirreno. La sua posizione strategica, infatti, permetteva di controllare il territorio circostante e di difendersi dagli attacchi nemici.\n\nL'edificio è caratterizzato da una struttura massiccia e imponente, con mura spesse e torri di avvistamento. La sua architettura è tipica del periodo medievale, con elementi gotici e rinascimentali. All'interno, si possono ammirare numerosi affreschi e decorazioni che testimoniano la ricchezza e l'importanza storica del castello.\n\nIl Castello Guglielmi è stato oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua atmosfera antica e suggestiva. Oggi, l'edificio è aperto al pubblico e ospita eventi culturali, mostre e visite guidate.\n\nOltre alla sua bellezza architettonica, il castello è anche famoso per le leggende e le storie che lo circondano. Si racconta che sia stato teatro di numerosi avvenimenti storici e che sia abitato da fantasmi e presenze misteriose.\n\nIl Castello Guglielmi rappresenta quindi una tappa imperdibile per chi visita Montalto di Castro e la sua zona circostante. La sua storia millenaria, la sua bellezza architettonica e la sua posizione panoramica lo rendono un luogo affascinante e suggestivo, capace di trasportare i visitatori indietro nel tempo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 458,
+        "total_tokens": 494
+    }
+}

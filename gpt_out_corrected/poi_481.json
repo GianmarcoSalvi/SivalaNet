@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm2SIEXLF4rqtyt9EKNnx6g4fN01",
+    "object": "chat.completion",
+    "created": 1690190464,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro Eliseo si trova nel comune di Montefiascone, in Italia. È un teatro storico che ha una lunga tradizione nel campo delle arti performative.\n\nIl teatro è situato nel centro storico di Montefiascone, in una posizione panoramica che offre una vista mozzafiato sulla città e sulla campagna circostante. È ospitato in un edificio storico che risale al XVIII secolo e che è stato restaurato e rinnovato nel corso degli anni.\n\nL'interno del Teatro Eliseo è elegante e raffinato, con una sala principale che può ospitare fino a 300 spettatori. La sala è caratterizzata da una bellissima volta a botte e da una decorazione ricca di dettagli, che crea un'atmosfera suggestiva e accogliente.\n\nIl teatro ospita una varietà di spettacoli, tra cui opere teatrali, concerti, balletti e performance di danza. È noto per la sua programmazione di alta qualità e per aver ospitato artisti di fama nazionale e internazionale.\n\nOltre alla sala principale, il Teatro Eliseo dispone anche di una sala più piccola, adatta per spettacoli più intimi e per eventi culturali di vario genere. Ci sono anche spazi dedicati agli artisti, come camerini e sale prove.\n\nIl Teatro Eliseo è un punto di riferimento culturale per la comunità di Montefiascone e per la regione circostante. Oltre agli spettacoli regolari, il teatro organizza anche eventi speciali, come festival teatrali e concerti all'aperto durante l'estate.\n\nIn conclusione, il Teatro Eliseo è un gioiello culturale nel comune di Montefiascone, offrendo una varietà di spettacoli di alta qualità in un ambiente storico e affascinante. È un luogo da non perdere per gli amanti delle arti performative e per coloro che desiderano immergersi nella cultura locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 490,
+        "total_tokens": 524
+    }
+}

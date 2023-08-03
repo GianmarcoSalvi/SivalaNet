@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enYcCbyZzZtqPlLH9tfYrZJqO2my",
+    "object": "chat.completion",
+    "created": 1689957974,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Casa Weller è una residenza storica situata nel comune di Calcata, in Italia. Questa casa è un esempio di architettura tradizionale italiana e rappresenta un importante patrimonio culturale nella regione del Lazio.\n\nLa Casa Weller è una struttura a due piani, costruita con pietra locale e mattoni. La facciata esterna è caratterizzata da un design elegante e sobrio, con finestre ad arco e una porta d'ingresso imponente. La casa è circondata da un giardino ben curato, con alberi secolari e fiori colorati.\n\nAll'interno, la Casa Weller presenta un'atmosfera accogliente e affascinante. I pavimenti sono realizzati in cotto, mentre le pareti sono decorate con affreschi e dipinti murali che risalgono al periodo rinascimentale. I soffitti sono alti e decorati con travi in legno a vista, che conferiscono un tocco rustico all'ambiente.\n\nLa casa dispone di diverse stanze, tra cui camere da letto spaziose, un salotto elegante, una sala da pranzo e una cucina completamente attrezzata. Ogni stanza è arredata con mobili antichi e pezzi d'arte, che aggiungono un tocco di classe e raffinatezza all'ambiente.\n\nUno dei punti di forza della Casa Weller è la vista panoramica che offre sulla campagna circostante. Dalle finestre e dal balcone, è possibile ammirare un paesaggio mozzafiato, con colline verdi, uliveti e vigneti che si estendono all'orizzonte.\n\nLa Casa Weller è anche dotata di servizi moderni, come il riscaldamento centralizzato, l'aria condizionata e l'accesso a internet. Inoltre, la casa dispone di un parcheggio privato e di un'area esterna attrezzata con tavoli e sedie, ideale per godersi il sole e organizzare cene all'aperto.\n\nLa posizione della Casa Weller nel comune di Calcata è ideale per coloro che desiderano esplorare la regione del Lazio. Calcata è una città storica, famosa per le sue stradine medievali, le case scavate nella roccia e le numerose chiese antiche. Inoltre, la casa si trova a breve distanza da Roma, permettendo agli ospiti di visitare facilmente la capitale italiana e tutte le sue attrazioni.\n\nIn conclusione, la Casa Weller è una residenza storica di grande fascino nel comune di Calcata, Italia. Con la sua architettura tradizionale, gli interni affascinanti e la vista panoramica, questa casa offre un'esperienza unica e indimenticabile per coloro che desiderano immergersi nella storia e nella bellezza del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 685,
+        "total_tokens": 716
+    }
+}

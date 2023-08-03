@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq4NR2sst3B3TwLsIWu32YfoWH0R",
+    "object": "chat.completion",
+    "created": 1690205959,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Piazza XX Settembre si trova nel centro storico di Viterbo, una città situata nella regione del Lazio, in Italia. La piazza è una delle principali aree pubbliche della città e rappresenta un punto di incontro e di passaggio per i residenti e i visitatori.\n\nLa piazza è circondata da importanti edifici storici, tra cui il Palazzo dei Priori, che è il municipio di Viterbo. Questo imponente palazzo risale al XIII secolo ed è considerato uno dei migliori esempi di architettura medievale in Italia. La sua facciata è caratterizzata da una serie di archi gotici e da una torre campanaria.\n\nUn altro edificio di rilievo che si affaccia sulla piazza è il Palazzo del Podestà, che risale al XIV secolo. Questo edificio presenta una facciata in stile gotico e ospita oggi il Museo Civico di Viterbo, che espone una vasta collezione di opere d'arte e manufatti storici legati alla storia della città.\n\nLa piazza è anche dominata dalla presenza di una grande fontana, chiamata Fontana Grande o Fontana di Piazza, che è stata realizzata nel XVI secolo. Questa fontana è caratterizzata da una serie di vasche sovrapposte e da una statua centrale raffigurante una figura femminile che rappresenta la città di Viterbo.\n\nPiazza XX Settembre è un luogo vivace e animato, soprattutto durante le ore serali, quando i locali e i ristoranti che si affacciano sulla piazza si riempiono di persone. La piazza è anche il punto di partenza per molte delle principali vie dello shopping di Viterbo, che offrono una vasta selezione di negozi, boutique e caffè.\n\nInoltre, la piazza è spesso sede di eventi culturali e manifestazioni, come concerti, spettacoli teatrali e mostre d'arte. Durante il periodo natalizio, la piazza ospita anche un mercatino di Natale, che attira visitatori da tutta la regione.\n\nIn sintesi, Piazza XX Settembre è una piazza centrale e affascinante nel cuore di Viterbo, che offre una combinazione di storia, cultura, architettura e vita sociale. È un luogo da non perdere per chi visita la città e rappresenta un punto di riferimento importante per i residenti."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 582,
+        "total_tokens": 616
+    }
+}

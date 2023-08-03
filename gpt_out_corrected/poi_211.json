@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7envG8Eg14IRZQSSbEo11r56Mg5Rp",
+    "object": "chat.completion",
+    "created": 1689959378,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Madonna delle Grazie si trova nel comune di Caprarola, in provincia di Viterbo, Italia. Si tratta di una chiesa di origine antica, risalente al XV secolo, che si erge maestosa nel centro storico del paese.\n\nL'edificio presenta uno stile architettonico tipicamente rinascimentale, con una facciata semplice ma elegante. La facciata è caratterizzata da un portale in pietra, sormontato da un rosone circolare che permette l'ingresso di luce naturale all'interno della chiesa. Sopra il rosone, si trova un piccolo campanile a vela, che aggiunge un tocco di verticalità all'edificio.\n\nL'interno della chiesa è a navata unica, con una serie di cappelle laterali che ospitano altari dedicati a diversi santi. Le pareti sono decorate con affreschi e dipinti che raffigurano scene religiose, mentre il soffitto è impreziosito da una volta a crociera con decorazioni in stucco.\n\nUno degli elementi più suggestivi della Chiesa Madonna delle Grazie è sicuramente il suo altare maggiore. Questo è realizzato in marmo bianco e presenta una serie di colonne scanalate e capitelli corinzi, che conferiscono un aspetto maestoso all'ambiente. Sull'altare si trova una statua della Madonna delle Grazie, che rappresenta la Vergine Maria con il Bambino Gesù tra le braccia.\n\nLa chiesa è un luogo di culto molto frequentato dai fedeli del paese, che vi si recano per pregare e partecipare alle celebrazioni religiose. Inoltre, la Chiesa Madonna delle Grazie è anche un importante punto di riferimento per gli amanti dell'arte e dell'architettura, che apprezzano la sua bellezza e il suo valore storico.\n\nNel complesso, la Chiesa Madonna delle Grazie a Caprarola è un luogo di grande importanza religiosa e culturale, che merita sicuramente una visita per ammirare la sua architettura rinascimentale e per immergersi nella sua atmosfera di spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 537,
+        "total_tokens": 572
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqjfmimQa0NJfHOK4l1jP2GUMw9k",
+    "object": "chat.completion",
+    "created": 1690208519,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Capranica è un comune italiano situato nella regione del Lazio, nella provincia di Viterbo. Si trova a circa 60 chilometri a nord-ovest di Roma e si estende su una superficie di circa 32 chilometri quadrati.\n\nIl centro storico di Capranica è caratterizzato da un'atmosfera medievale, con stradine strette e tortuose, case in pietra e antiche mura che circondano il borgo. Il cuore del paese è rappresentato da Piazza San Francesco, una piazza centrale con una fontana e diversi edifici storici.\n\nUno dei principali punti di interesse di Capranica è il Castello degli Anguillara, un'imponente fortezza medievale che domina il paese dall'alto di una collina. Costruito nel XII secolo, il castello è stato successivamente ampliato e modificato nel corso dei secoli. Oggi ospita un museo che racconta la storia del castello e del territorio circostante.\n\nUn'altra attrazione di Capranica è la Chiesa di San Francesco, situata proprio di fronte al castello. Questa chiesa risale al XIII secolo ed è caratterizzata da un bellissimo portale gotico e da affreschi medievali all'interno.\n\nNelle vicinanze di Capranica si trova anche il Parco Naturale Regionale di Marturanum, un'area protetta che offre la possibilità di fare escursioni e passeggiate immersi nella natura. Il parco è caratterizzato da una varietà di paesaggi, tra cui boschi, prati e corsi d'acqua.\n\nCapranica è anche famosa per la sua produzione di olio d'oliva e vino. Numerosi agriturismi e aziende agricole della zona offrono la possibilità di degustare e acquistare questi prodotti locali.\n\nInoltre, il comune di Capranica organizza diverse manifestazioni e eventi durante l'anno, tra cui sagre, fiere e spettacoli culturali, che permettono ai visitatori di immergersi nella tradizione e nella cultura locale.\n\nIn conclusione, Capranica è un affascinante comune nel cuore del Lazio, che offre una combinazione di storia, natura e tradizione. Un luogo ideale per chi desidera scoprire l'autentica bellezza dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 562,
+        "total_tokens": 593
+    }
+}

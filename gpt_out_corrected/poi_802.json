@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpgVaot9dlrIlueMcXR8ooPiOrwb",
+    "object": "chat.completion",
+    "created": 1690204479,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Del Modio - Mariani è un'imponente residenza storica situata nel comune di Vasanello, in provincia di Viterbo, Italia. Questo palazzo rappresenta un importante esempio di architettura rinascimentale e si distingue per la sua maestosità e bellezza.\n\nIl palazzo è stato costruito nel XVI secolo e appartenne alla famiglia Mariani, una delle famiglie nobili più influenti della zona. La struttura si sviluppa su più piani e presenta una facciata imponente caratterizzata da un portale d'ingresso in pietra e da finestre elegantemente decorate.\n\nAll'interno, il palazzo conserva ancora molti degli elementi originali, come affreschi, stucchi e pavimenti in cotto. Le stanze sono ampie e luminose, con soffitti alti e decorazioni raffinate. Alcune delle stanze più importanti includono la sala dei ricevimenti, la sala da pranzo e le camere da letto principali.\n\nIl palazzo è circondato da un vasto parco, che offre un'atmosfera tranquilla e suggestiva. Il parco è caratterizzato da alberi secolari, aiuole fiorite e sentieri panoramici. Inoltre, è presente anche una cappella privata all'interno del complesso, che testimonia l'importanza religiosa della famiglia Mariani.\n\nOggi, il Palazzo Del Modio - Mariani è stato restaurato e trasformato in una struttura ricettiva di lusso. Ospita un hotel boutique, che offre ai visitatori la possibilità di soggiornare in un ambiente storico e di godere di tutti i comfort moderni. Inoltre, il palazzo è spesso utilizzato per eventi speciali, come matrimoni, conferenze e mostre d'arte.\n\nIn sintesi, il Palazzo Del Modio - Mariani è un gioiello architettonico nel comune di Vasanello. La sua bellezza e la sua storia affascinante lo rendono una meta ideale per chi desidera immergersi nell'atmosfera rinascimentale e vivere un'esperienza unica nel cuore dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 521,
+        "total_tokens": 557
+    }
+}

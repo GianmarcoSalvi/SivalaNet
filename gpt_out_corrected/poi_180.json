@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enkzk96Kss3FzukZa4Tbv5RcusXq",
+    "object": "chat.completion",
+    "created": 1689958741,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa degli Apostoli Giovanni e Andrea si trova nel comune di Canino, nella provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è semplice ed elegante, con un portale in pietra sormontato da un rosone circolare. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi.\n\nUno degli elementi più notevoli della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con sculture raffiguranti scene della vita di Cristo. L'altare è sormontato da un baldacchino in legno intagliato, che aggiunge un tocco di maestosità all'ambiente.\n\nLa Chiesa degli Apostoli Giovanni e Andrea ospita anche diverse opere d'arte di grande valore. Tra queste, spicca un dipinto del XVII secolo raffigurante la Madonna con il Bambino e i Santi Giovanni e Andrea, attribuito al pittore italiano Giovanni Battista Gaulli.\n\nLa chiesa è un luogo di culto attivo e viene utilizzata per la celebrazione di messe e altre cerimonie religiose. È anche aperta al pubblico per visite turistiche, consentendo ai visitatori di ammirare la sua bellezza architettonica e artistica.\n\nLa Chiesa degli Apostoli Giovanni e Andrea rappresenta un importante punto di riferimento per la comunità locale e un luogo di interesse per i visitatori che desiderano immergersi nella storia e nell'arte della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 420,
+        "total_tokens": 456
+    }
+}

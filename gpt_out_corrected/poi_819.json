@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpmw46ktnIKEhtUN3mPRn9WKyLKq",
+    "object": "chat.completion",
+    "created": 1690204878,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria in foro Cassio si trova nel comune di Vetralla, nella provincia di Viterbo, Italia. Questo antico edificio religioso è situato nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle circostante.\n\nLa chiesa risale al XII secolo ed è stata costruita su un sito che risale all'epoca romana, come suggerisce il nome \"in foro Cassio\". L'edificio è stato costruito in stile romanico, con una facciata semplice ma imponente. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi geometrici e sculture di animali.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti in pietra. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di Cristo e dei santi. Al centro dell'abside si trova un altare in marmo, sormontato da una pala d'altare che raffigura la Madonna con il Bambino.\n\nLa Chiesa di Santa Maria in foro Cassio è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua bellezza e autenticità. Oggi è ancora utilizzata per le celebrazioni religiose e attira numerosi visitatori che desiderano ammirare l'arte e l'architettura storica.\n\nLa chiesa è anche circondata da un piccolo cortile, dove si trovano alcune tombe medievali e un campanile a torre. Questo campanile offre una vista panoramica sulla campagna circostante e sul paesaggio collinare.\n\nLa Chiesa di Santa Maria in foro Cassio è un importante punto di riferimento storico e culturale per il comune di Vetralla. La sua bellezza architettonica e artistica, unita alla sua posizione suggestiva, la rende una meta ideale per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 514,
+        "total_tokens": 553
+    }
+}

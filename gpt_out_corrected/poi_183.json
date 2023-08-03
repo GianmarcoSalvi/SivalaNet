@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enlkEk6FlA6gzR8rdVEjmHHSvPie",
+    "object": "chat.completion",
+    "created": 1689958788,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Tomba Francois è un importante sito archeologico situato nel comune di Canino, nella regione del Lazio, in Italia. Questa tomba è considerata uno dei più significativi esempi di tomba etrusca a camera, risalente al periodo etrusco, che va dal IX al III secolo a.C.\n\nLa Tomba Francois prende il nome dal suo scopritore, Alessandro Francois, che la scoprì nel 1857. Si trova all'interno di un'area archeologica più ampia, nota come Necropoli di Vulci, che comprende numerose tombe etrusche.\n\nLa tomba è composta da una camera funeraria sotterranea, scavata nella roccia tufacea. L'accesso alla tomba avviene attraverso un lungo corridoio, che conduce alla camera principale. La camera è di forma rettangolare e presenta pareti decorate con affreschi di straordinaria bellezza e ricchezza iconografica.\n\nGli affreschi raffigurano scene di vita quotidiana, mitologia e rituali funerari. Sono presenti figure umane, animali, divinità e simboli religiosi, dipinti con colori vivaci e dettagliati. Questi affreschi sono considerati tra i migliori esempi di pittura etrusca sopravvissuti fino ai giorni nostri.\n\nLa Tomba Francois è stata oggetto di numerosi studi e ricerche archeologiche, che hanno permesso di scoprire importanti informazioni sulla cultura etrusca e sulle pratiche funerarie dell'epoca. Gli oggetti rinvenuti all'interno della tomba, come gioielli, ceramiche e armi, sono esposti presso il Museo Archeologico Nazionale di Vulci, consentendo ai visitatori di ammirare l'arte e la cultura etrusca.\n\nLa Tomba Francois è aperta al pubblico e può essere visitata con l'accompagnamento di una guida esperta. È un luogo di grande interesse per gli appassionati di archeologia e per coloro che desiderano conoscere meglio la storia e la cultura dell'antico popolo etrusco."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 511,
+        "total_tokens": 541
+    }
+}

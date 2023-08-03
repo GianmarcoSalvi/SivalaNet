@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flEnr3oLLjWtDWhi5C38LEQe1NDR",
+    "object": "chat.completion",
+    "created": 1690187385,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Magno si trova nel comune di Gradoli, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di origine medievale che risale al XII secolo, anche se è stata oggetto di modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata nel centro storico di Gradoli, in una posizione dominante che offre una vista panoramica sulla campagna circostante e sul Lago di Bolsena. È costruita in stile romanico, con una facciata semplice ma elegante, caratterizzata da un portale d'ingresso sormontato da un rosone circolare.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi risalenti al XIV secolo. Gli affreschi raffigurano scene della vita di Cristo e dei santi, e sono considerati un importante esempio di arte medievale nella regione.\n\nUno degli elementi più interessanti della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con intarsi di pietre preziose. L'altare è sormontato da un baldacchino in legno intagliato, che aggiunge un tocco di eleganza e maestosità all'ambiente.\n\nLa Chiesa di Santo Magno è anche nota per ospitare una preziosa reliquia: il braccio di Santo Magno, il santo patrono di Gradoli. La reliquia è conservata in una teca di vetro all'interno della chiesa e viene esposta durante le festività religiose.\n\nOgni anno, il 19 agosto, si celebra una solenne processione in onore di Santo Magno, durante la quale la reliquia viene portata in giro per le strade del paese. La processione è un momento di grande devozione e partecipazione per la comunità locale.\n\nLa Chiesa di Santo Magno è un importante luogo di culto per i residenti di Gradoli e un'attrazione turistica per i visitatori che desiderano ammirare l'arte e l'architettura medievale. La sua posizione panoramica e la sua storia millenaria la rendono un luogo suggestivo e affascinante da visitare."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 554,
+        "total_tokens": 588
+    }
+}

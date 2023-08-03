@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flCnwgrv8vQIw6WNsnX4DCjSTeBn",
+    "object": "chat.completion",
+    "created": 1690187261,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Agostino si trova nel comune di Gallese, in provincia di Viterbo, nella regione del Lazio, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XIII secolo ed è stata costruita in stile romanico. La facciata è semplice e sobria, con un portale d'ingresso sormontato da un rosone circolare. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi.\n\nUno degli elementi più significativi della chiesa è il suo campanile, che risale al XIV secolo. È una torre a pianta quadrata, con una base in pietra e una parte superiore in mattoni. Il campanile è decorato con bifore e trifore, tipiche dell'architettura romanica.\n\nAll'interno della chiesa si trovano numerosi tesori artistici. Tra questi spicca il polittico di Santo Agostino, un'opera del XV secolo attribuita a Jacopo di Mino del Pellicciaio. Il polittico è composto da diverse tavole dipinte raffiguranti scene della vita di Santo Agostino e dei suoi seguaci.\n\nAltri elementi di interesse sono gli affreschi che decorano le pareti della chiesa. Questi affreschi risalgono al XIV e XV secolo e raffigurano scene religiose e figure di santi. Tra i più notevoli ci sono quelli che rappresentano la Madonna con il Bambino e San Giovanni Battista.\n\nLa Chiesa di Santo Agostino è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per gli amanti dell'arte e della storia, che possono ammirare le opere d'arte e l'architettura di grande valore che la chiesa custodisce."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 475,
+        "total_tokens": 511
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flel2igS7DWPc9hsgGi6vfuFh7jS",
+    "object": "chat.completion",
+    "created": 1690188995,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "I Quattro Archi è un antico edificio situato nel comune di Latera, in provincia di Viterbo, Italia. Questa struttura storica è considerata uno dei principali punti di riferimento del paese e rappresenta un importante esempio di architettura medievale.\n\nL'edificio prende il nome dai quattro archi che caratterizzano la sua facciata principale. Questi archi sono realizzati in pietra locale e conferiscono all'edificio un aspetto imponente e suggestivo. Ogni arco è decorato con dettagli scolpiti a mano, che testimoniano l'abilità artigianale dell'epoca.\n\nLa struttura è composta da tre piani, ognuno dei quali presenta caratteristiche architettoniche uniche. Il piano terra è caratterizzato da ampie arcate che si aprono su un cortile interno. Questo spazio è stato utilizzato nel corso dei secoli per ospitare mercati, fiere e altre attività commerciali.\n\nIl primo piano è caratterizzato da una serie di finestre ad arco, che permettono l'ingresso di luce naturale all'interno dell'edificio. Questo piano era originariamente utilizzato come residenza per le famiglie nobili del paese.\n\nIl secondo piano, invece, presenta una serie di balconi in ferro battuto che si affacciano sulla piazza principale di Latera. Questi balconi sono decorati con dettagli floreali e aggiungono un tocco di eleganza all'edificio.\n\nOggi, I Quattro Archi è utilizzato come spazio polifunzionale, ospitando eventi culturali, mostre d'arte e altre manifestazioni. L'edificio è stato restaurato nel corso degli anni per preservarne l'integrità architettonica e garantirne la fruibilità.\n\nLa sua posizione centrale nel comune di Latera lo rende un punto di riferimento per i residenti e i visitatori, che possono ammirare la sua bellezza e scoprire la storia del paese attraverso le sue mura. I Quattro Archi rappresenta un importante patrimonio culturale e architettonico per la comunità di Latera e per l'intera regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 531,
+        "total_tokens": 563
+    }
+}

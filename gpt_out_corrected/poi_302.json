@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoYwnAS8WepPgMW8v9z8kypLkDFF",
+    "object": "chat.completion",
+    "created": 1689961838,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Montholon è un'imponente residenza storica situata nel comune di Civitella d'Agliano, nella regione del Lazio, in Italia. Questo palazzo, che risale al XVIII secolo, è considerato uno dei più importanti esempi di architettura neoclassica della zona.\n\nIl palazzo si trova nel centro storico di Civitella d'Agliano, circondato da un ampio parco e da un giardino all'italiana. La sua facciata principale è caratterizzata da un'elegante scalinata che conduce all'ingresso principale, sormontato da un balcone con una balaustra in ferro battuto.\n\nL'interno del palazzo è altrettanto affascinante, con ampi saloni decorati con stucchi, affreschi e mobili d'epoca. Le stanze sono arredate con gusto e ricche di dettagli, come soffitti a cassettoni, pavimenti in marmo e camini in pietra.\n\nIl palazzo ospita anche una cappella privata, dove è possibile ammirare pregevoli opere d'arte religiosa. La cappella è decorata con affreschi e dipinti che rappresentano scene bibliche e santi.\n\nOltre agli interni, il Palazzo Montholon offre anche una vista panoramica mozzafiato sulla campagna circostante. Dalle finestre e dai balconi si può ammirare un paesaggio caratterizzato da colline verdi, campi coltivati e uliveti.\n\nAttualmente, il Palazzo Montholon è di proprietà privata e non è aperto al pubblico. Tuttavia, è possibile ammirare la sua bellezza esterna passeggiando per le vie del centro storico di Civitella d'Agliano. Il palazzo rappresenta un importante patrimonio storico e architettonico per la comunità locale e contribuisce a creare un'atmosfera affascinante e suggestiva nel cuore del paese."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 478,
+        "total_tokens": 515
+    }
+}

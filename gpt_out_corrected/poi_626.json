@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnDEMxEGaUtUbr1ZET0W0afroBvY",
+    "object": "chat.completion",
+    "created": 1690194976,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Misericordia si trova nel comune di Soriano nel Cimino, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nel centro storico del paese, in una posizione dominante che permette di ammirare un panorama mozzafiato sulla valle sottostante. La sua costruzione risale al XV secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico gotico, con una facciata in pietra caratterizzata da un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale si apre una grande finestra ad arco ogivale, che permette l'ingresso di luce naturale all'interno della chiesa.\n\nAll'interno, la Chiesa della Misericordia presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi e dipinti di grande valore artistico, che rappresentano scene religiose e episodi della vita di Cristo.\n\nUno degli elementi più suggestivi della chiesa è il soffitto a cassettoni, realizzato in legno intagliato e dipinto con motivi geometrici e floreali. Questo soffitto conferisce all'ambiente un'atmosfera calda e accogliente, creando un contrasto con la sobrietà delle pareti in pietra.\n\nAl centro dell'abside si trova l'altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi raffiguranti scene della Passione di Cristo. Ai lati dell'altare sono collocate due statue di santi, mentre lungo le navate laterali si trovano diverse cappelle con altari minori.\n\nLa Chiesa della Misericordia è un luogo di culto molto frequentato dai fedeli del paese, che vi si recano per partecipare alle celebrazioni religiose e per pregare. Oltre alla sua importanza religiosa, l'edificio rappresenta anche un importante patrimonio storico e artistico per la comunità di Soriano nel Cimino e per l'intera regione del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 567,
+        "total_tokens": 606
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpw7JdJ9ENoR3wLS8pVD4kYRtmjM",
+    "object": "chat.completion",
+    "created": 1690205447,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Piazza della Morte si trova nel comune di Viterbo, una città situata nella regione del Lazio, in Italia. Questa piazza è una delle più antiche e suggestive della città, ricca di storia e fascino.\n\nLa piazza prende il nome da un antico cimitero che si trovava in questa zona nel Medioevo, dove venivano sepolti i morti della città. Oggi, la piazza è un luogo di incontro e di passaggio per i residenti e i visitatori di Viterbo.\n\nLa Piazza della Morte è circondata da edifici storici e monumenti che testimoniano la ricca storia della città. Uno dei principali punti di interesse è il Palazzo dei Papi, un imponente edificio medievale che fu residenza dei papi durante il periodo del Papato di Avignone. Il palazzo è caratterizzato da una facciata imponente e da una torre campanaria, che offre una vista panoramica sulla città.\n\nAccanto al Palazzo dei Papi si trova la Chiesa di San Lorenzo, un altro importante monumento di Viterbo. Questa chiesa risale al XIII secolo ed è caratterizzata da un bellissimo portale gotico e da un interno riccamente decorato.\n\nLa piazza è anche circondata da caffè, ristoranti e negozi, che la rendono un luogo vivace e animato. Durante il giorno, è possibile sedersi all'aperto e godersi un caffè o un pasto, ammirando l'architettura storica e l'atmosfera unica della piazza.\n\nLa Piazza della Morte è anche un punto di partenza ideale per esplorare il centro storico di Viterbo. Da qui è possibile raggiungere a piedi altre importanti attrazioni, come la Fontana Grande, il quartiere medievale di San Pellegrino e il Palazzo dei Priori, che ospita il Museo Civico.\n\nIn sintesi, la Piazza della Morte è una piazza affascinante e ricca di storia nel comune di Viterbo. Con i suoi monumenti storici, i caffè e i negozi, è un luogo ideale per immergersi nell'atmosfera unica di questa città medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 534,
+        "total_tokens": 567
+    }
+}

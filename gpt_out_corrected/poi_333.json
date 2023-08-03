@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eohkevHhXKgF17ZwfiyjzGPqgIOg",
+    "object": "chat.completion",
+    "created": 1689962384,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna di Pietrafitta si trova nel comune di Faleria, in Italia. Questo edificio religioso è situato in una posizione panoramica, su una collina che domina la valle del Tevere.\n\nLa chiesa è stata costruita nel XIII secolo e presenta uno stile architettonico romanico. La facciata è semplice e sobria, con un portale d'ingresso sormontato da un rosone circolare. Sulle pareti esterne sono presenti alcuni affreschi risalenti al XV secolo, che rappresentano scene della vita di Maria.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi di epoche diverse, che rappresentano scene bibliche e santi. Al centro dell'altare maggiore si trova una statua della Madonna di Pietrafitta, risalente al XIV secolo, che è oggetto di grande devozione da parte dei fedeli.\n\nLa chiesa è circondata da un piccolo cimitero, dove sono sepolti alcuni personaggi illustri del luogo. Attorno all'edificio religioso si estende un ampio spazio verde, con alberi secolari e panchine, che offre un luogo di tranquillità e meditazione.\n\nLa Chiesa della Madonna di Pietrafitta è un luogo di culto molto amato dalla comunità locale, che vi si riunisce per celebrare le messe e partecipare alle festività religiose. Inoltre, la chiesa è meta di pellegrinaggi da parte di persone provenienti da altre località, che vengono per pregare e chiedere grazie alla Madonna di Pietrafitta.\n\nLa sua posizione panoramica e l'atmosfera suggestiva che si respira all'interno la rendono un luogo di grande fascino e spiritualità. La Chiesa della Madonna di Pietrafitta rappresenta un importante patrimonio storico e religioso per il comune di Faleria e per l'intera regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 491,
+        "total_tokens": 528
+    }
+}

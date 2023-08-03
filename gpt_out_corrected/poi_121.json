@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enOzGljBzNoR1a4cDr0DccHTN4lH",
+    "object": "chat.completion",
+    "created": 1689957377,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Parco di Turona si trova nel comune di Bolsena, in Italia, e si estende su una superficie di circa 20 ettari. È situato nella parte nord-ovest del lago di Bolsena, uno dei laghi vulcanici più grandi d'Europa.\n\nIl parco è caratterizzato da una varietà di paesaggi, che vanno dalle colline boschive alle rive del lago. È un luogo ideale per gli amanti della natura e per coloro che desiderano trascorrere del tempo all'aria aperta.\n\nAll'interno del parco si possono trovare diversi sentieri che permettono di esplorare l'area circostante. Questi sentieri sono adatti sia per passeggiate tranquille che per escursioni più impegnative. Lungo i percorsi si possono ammirare panorami mozzafiato sul lago e sulla campagna circostante.\n\nIl parco è ricco di flora e fauna. Tra le specie vegetali presenti vi sono querce, lecci, pini e numerosi arbusti. È possibile avvistare diverse specie di uccelli, come aironi, germani reali e folaghe, che popolano le rive del lago. Inoltre, il parco ospita anche una varietà di animali selvatici, tra cui cinghiali, volpi e istrici.\n\nAll'interno del parco si trova anche un'area attrezzata per picnic, dove è possibile rilassarsi e godersi un pranzo all'aperto. Inoltre, sono presenti anche alcune aree giochi per i più piccoli.\n\nIl Parco di Turona è un luogo ideale per gli amanti dello sport all'aria aperta. È possibile praticare escursioni a piedi, in bicicletta o a cavallo lungo i sentieri del parco. Inoltre, il lago offre la possibilità di praticare sport acquatici come la vela, il windsurf e il kayak.\n\nIl parco è aperto tutto l'anno e l'ingresso è gratuito. È un luogo perfetto per trascorrere una giornata immersi nella natura, lontano dal caos della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 515,
+        "total_tokens": 547
+    }
+}

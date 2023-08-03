@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpWYcwmNr3Nr6HLRYUyvba0DwsoO",
+    "object": "chat.completion",
+    "created": 1690203862,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario Mariano della Madonna del Ruscello si trova nel comune di Vallerano, nella regione del Lazio, in Italia. Questo luogo di culto è dedicato alla Madonna e rappresenta un importante punto di riferimento per i fedeli della zona.\n\nLa chiesa è situata in una posizione panoramica, immersa nella natura e circondata da boschi e colline. La sua costruzione risale al XVII secolo, anche se sono stati apportati diversi interventi nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico tipico delle chiese rurali italiane, con una facciata semplice e una pianta a croce latina. La facciata è caratterizzata da un portale in pietra e da una finestra centrale, entrambi decorati con elementi floreali e sculture religiose.\n\nAll'interno della chiesa si trovano diverse opere d'arte di grande valore. Tra queste spicca un affresco raffigurante la Madonna del Ruscello, che dà il nome al santuario. Questo dipinto risale al XVII secolo ed è considerato un'opera di grande bellezza e spiritualità.\n\nAccanto all'affresco si trova un altare in marmo, decorato con sculture e intagli di grande maestria. Sulla parete dietro l'altare è collocato un grande crocifisso ligneo, che rappresenta la sofferenza di Cristo.\n\nIl santuario è anche famoso per la sua cripta, situata sotto l'altare maggiore. Questo spazio sacro è decorato con affreschi che raffigurano scene della vita di Gesù e della Madonna. La cripta è un luogo di preghiera e meditazione, dove i fedeli possono trovare pace e tranquillità.\n\nOgni anno, il santuario attira numerosi pellegrini e visitatori, soprattutto durante le festività religiose dedicate alla Madonna. Durante questi eventi, la chiesa si anima di processioni, messe solenni e momenti di devozione.\n\nIl Santuario Mariano della Madonna del Ruscello è un luogo di grande spiritualità e bellezza, che offre ai fedeli e ai visitatori un'esperienza di fede e di contemplazione. La sua posizione suggestiva e le opere d'arte che ospita lo rendono un luogo unico nel suo genere, da visitare assolutamente per chi si trova nella zona di Vallerano."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 586,
+        "total_tokens": 629
+    }
+}

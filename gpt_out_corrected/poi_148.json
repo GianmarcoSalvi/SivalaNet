@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enWpYK4RFw556ZJTyK9hXL3Jecwz",
+    "object": "chat.completion",
+    "created": 1689957863,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Madonna della Valle si trova nel comune di Bomarzo, in Italia. È una chiesa di origine medievale, situata in una posizione panoramica sulla valle circostante.\n\nLa chiesa è costruita in stile romanico e presenta una facciata semplice ma affascinante. La sua struttura è caratterizzata da un portale d'ingresso con un arco a tutto sesto e una serie di archi ciechi decorativi. Sopra il portale, si trova una finestra a bifora che permette l'ingresso di luce all'interno dell'edificio.\n\nAll'interno, la chiesa presenta una navata unica con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene religiose e santi. Questi affreschi sono stati restaurati nel corso degli anni per preservarne la bellezza e l'integrità.\n\nUno degli elementi più interessanti della Chiesa Madonna della Valle è il suo campanile, che si erge maestoso accanto all'edificio principale. Il campanile è di forma quadrata e presenta una serie di finestre ad arco che permettono la vista panoramica sulla valle circostante. La sua struttura è realizzata in pietra locale, conferendo un aspetto rustico e affascinante.\n\nLa chiesa è circondata da un piccolo cortile con un giardino ben curato. Questo spazio offre un'atmosfera tranquilla e serena, ideale per momenti di riflessione e preghiera. La vista panoramica sulla valle circostante aggiunge un tocco di bellezza naturale al luogo.\n\nLa Chiesa Madonna della Valle è un importante punto di riferimento per la comunità locale e un luogo di culto per i fedeli. Oltre ad essere un luogo di preghiera, la chiesa ospita anche eventi religiosi e celebrazioni durante tutto l'anno.\n\nIn conclusione, la Chiesa Madonna della Valle a Bomarzo è un gioiello architettonico di origine medievale. La sua bellezza semplice e affascinante, unita alla sua posizione panoramica, la rende un luogo di grande interesse storico e spirituale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 554,
+        "total_tokens": 588
+    }
+}

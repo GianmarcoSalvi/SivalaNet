@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnQwfpunodMDjFhhTWGjXKQfFuwe",
+    "object": "chat.completion",
+    "created": 1690195826,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Piazza del Comune è il cuore pulsante del comune di Sutri, una piccola cittadina situata nella regione del Lazio, in Italia. Questa piazza è il punto di incontro e di ritrovo per i residenti e i visitatori, ed è circondata da importanti edifici storici.\n\nLa piazza è di forma rettangolare e presenta un pavimento in ciottoli, tipico delle piazze italiane. Al centro della piazza si trova una fontana, che aggiunge un tocco di freschezza e vivacità all'ambiente circostante. La fontana è decorata con sculture e offre un luogo ideale per sedersi e rilassarsi durante le calde giornate estive.\n\nIntorno alla piazza si ergono alcuni degli edifici più significativi di Sutri. Uno di questi è il Palazzo Comunale, un imponente edificio che ospita l'amministrazione comunale. Il palazzo è caratterizzato da una facciata elegante e presenta elementi architettonici tipici del periodo rinascimentale.\n\nAccanto al Palazzo Comunale si trova la Chiesa di Santa Maria del Parto, un edificio religioso di grande importanza storica. La chiesa risale al XII secolo e presenta una facciata romanica con un portale decorato e un rosone centrale. All'interno, è possibile ammirare affreschi e opere d'arte di grande valore.\n\nUn altro edificio di rilievo che si affaccia sulla Piazza del Comune è il Teatro Romano, un antico anfiteatro risalente al I secolo a.C. Questo teatro è uno dei principali siti archeologici di Sutri e offre una visione affascinante della storia romana della città.\n\nLa Piazza del Comune è anche circondata da caffè, ristoranti e negozi, che aggiungono vita e animazione all'area. Durante le serate estive, la piazza diventa il palcoscenico di eventi culturali, concerti e spettacoli teatrali, che attirano visitatori da tutto il territorio.\n\nIn sintesi, la Piazza del Comune di Sutri è un luogo affascinante e vivace, che racchiude la storia e la cultura di questa piccola cittadina italiana. Con i suoi edifici storici, la fontana centrale e l'atmosfera accogliente, la piazza è un luogo da non perdere durante una visita a Sutri."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 589,
+        "total_tokens": 622
+    }
+}

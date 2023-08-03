@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq6K71GWkjsl5AIqIS4UcD4sgK1T",
+    "object": "chat.completion",
+    "created": 1690206080,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana del Piano è una delle fontane più importanti e caratteristiche del comune di Viterbo, situato nella regione del Lazio, in Italia. Si trova nel centro storico della città, precisamente in Piazza del Plebiscito, una delle piazze principali.\n\nLa fontana è stata costruita nel XVII secolo e rappresenta un importante esempio di architettura barocca. È stata progettata da Carlo Fontana, un famoso architetto italiano dell'epoca, e presenta una struttura imponente e maestosa.\n\nLa Fontana del Piano è composta da una serie di vasche sovrapposte, che creano un effetto di cascata. Le vasche sono decorate con sculture e rilievi che rappresentano figure mitologiche, animali e elementi naturali. Al centro della fontana si erge una statua di Nettuno, il dio del mare, che regge un tridente e rappresenta il potere delle acque.\n\nLa fontana è alimentata da un sistema di condotte sotterranee che portano l'acqua da una sorgente naturale situata nelle vicinanze. L'acqua sgorga dalle bocche delle sculture e scorre lungo le vasche, creando un suono rilassante e un'atmosfera suggestiva.\n\nLa Fontana del Piano è un luogo molto amato dai cittadini di Viterbo e dai turisti che visitano la città. È un punto di ritrovo e di relax, dove le persone possono sedersi sui gradini della fontana e godersi la vista e il suono dell'acqua. Durante le calde giornate estive, la fontana diventa anche un luogo di rinfresco, dove le persone possono bagnarsi i piedi o rinfrescarsi con l'acqua fresca.\n\nLa fontana è circondata da edifici storici e da altre attrazioni turistiche, come il Palazzo dei Papi e la Cattedrale di San Lorenzo, che la rendono ancora più affascinante e suggestiva. È un luogo che incarna la storia e la bellezza di Viterbo, e rappresenta un importante punto di riferimento per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 519,
+        "total_tokens": 551
+    }
+}

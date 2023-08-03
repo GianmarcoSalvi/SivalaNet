@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmwrdbG25j3yVn2JK6Q8KLdTweJJ",
+    "object": "chat.completion",
+    "created": 1690193961,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa del Santissimo Salvatore si trova nel comune di Proceno, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di Cristo e dei santi. Questi affreschi sono di grande valore artistico e sono stati restaurati per preservarne la bellezza nel corso degli anni.\n\nNella parte posteriore della chiesa si trova un altare in marmo, sormontato da un crocifisso ligneo. Questo altare è stato realizzato nel XVII secolo e presenta dettagli scolpiti di grande precisione. Ai lati dell'altare si trovano due cappelle laterali, decorate con dipinti e statue di santi.\n\nLa Chiesa del Santissimo Salvatore è un luogo di culto attivo, dove si svolgono regolarmente messe e cerimonie religiose. È anche una meta turistica molto apprezzata, grazie alla sua bellezza architettonica e artistica. La chiesa si trova in una posizione panoramica, che offre una vista mozzafiato sulla campagna circostante.\n\nIn conclusione, la Chiesa del Santissimo Salvatore a Proceno è un gioiello architettonico e artistico, che rappresenta un importante punto di riferimento per la comunità locale e una meta turistica di grande interesse."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 481,
+        "total_tokens": 517
+    }
+}

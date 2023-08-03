@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flPh0XkdxLZyDygRQhTr33ooJ0Km",
+    "object": "chat.completion",
+    "created": 1690188061,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria di Castelvecchio si trova nel comune di Grotte di Castro, nella provincia di Viterbo, Italia. Questo edificio religioso è situato all'interno del borgo medievale di Castelvecchio, che si erge su una collina panoramica che domina il Lago di Bolsena.\n\nLa chiesa risale al XII secolo ed è un esempio di architettura romanica. La sua facciata è semplice e sobria, con un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di Cristo e dei santi. Questi affreschi sono stati restaurati nel corso degli anni, ma conservano ancora la loro bellezza e vivacità.\n\nUno degli elementi più interessanti della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con intarsi di pietre colorate. L'altare è sormontato da un crocifisso ligneo, risalente al XV secolo, che rappresenta il Cristo crocifisso.\n\nLa Chiesa di Santa Maria di Castelvecchio è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per i visitatori che desiderano immergersi nella storia e nell'arte della regione.\n\nLa posizione panoramica della chiesa, con la vista sul Lago di Bolsena e sulle colline circostanti, la rende un luogo suggestivo e affascinante da visitare. È possibile accedere alla chiesa attraverso una scalinata che conduce al borgo medievale di Castelvecchio, offrendo ai visitatori un'esperienza unica e suggestiva."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 507,
+        "total_tokens": 548
+    }
+}

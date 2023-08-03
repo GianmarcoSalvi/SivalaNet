@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enRWioArFhO1wG0mXDEBkfYZ3aII",
+    "object": "chat.completion",
+    "created": 1689957534,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella del Miracolo è un luogo di culto situato nel comune di Bolsena, in Italia. Questa cappella è famosa per essere il luogo in cui si è verificato il Miracolo di Bolsena nel XIII secolo.\n\nLa cappella si trova all'interno del centro storico di Bolsena, vicino alla piazza principale. È una piccola struttura di forma rettangolare, con una facciata semplice ma affascinante. La sua architettura è tipica del periodo medievale, con muri in pietra e un tetto a due spioventi.\n\nAll'interno della cappella si trova un altare in marmo bianco, decorato con sculture e rilievi dettagliati. Sopra l'altare è presente un dipinto raffigurante il Miracolo di Bolsena, che rappresenta il momento in cui una particola dell'ostia consacrata si trasformò in carne umana durante la messa celebrata da un sacerdote scettico. Questo miracolo è considerato uno dei più importanti della storia della Chiesa cattolica e ha portato alla creazione della festa del Corpus Domini.\n\nLa cappella è un luogo di pellegrinaggio per i fedeli cattolici, che vengono qui per pregare e riflettere sulla fede. Ogni anno, il 25 giugno, si tiene una processione che commemora il Miracolo di Bolsena, durante la quale l'ostensorio contenente l'ostia consacrata viene portato in processione per le strade del paese.\n\nOltre al suo significato religioso, la Cappella del Miracolo è anche un luogo di interesse storico e artistico. La sua architettura medievale e le opere d'arte al suo interno la rendono un luogo affascinante da visitare per gli amanti dell'arte e della storia.\n\nIn conclusione, la Cappella del Miracolo a Bolsena è un luogo di culto di grande importanza storica e religiosa. La sua architettura medievale e le opere d'arte al suo interno la rendono un luogo affascinante da visitare per coloro che sono interessati alla storia, all'arte e alla spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 539,
+        "total_tokens": 573
+    }
+}

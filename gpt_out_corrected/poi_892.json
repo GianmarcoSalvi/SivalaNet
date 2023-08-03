@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqAeNeKC7NWhPBffDl0sC870tcjY",
+    "object": "chat.completion",
+    "created": 1690206348,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo del Sodalizio dei Facchini di Santa Rosa si trova nel comune di Viterbo, in Italia. Questo museo è dedicato alla celebre festa di Santa Rosa, una tradizione che risale al XVII secolo e che coinvolge i facchini che portano a spalla un'imponente macchina illuminata, chiamata \"Macchina di Santa Rosa\", lungo le strade della città.\n\nIl museo si trova all'interno di un edificio storico, che un tempo era la sede del Sodalizio dei Facchini, l'associazione che organizza la festa di Santa Rosa. L'edificio è stato restaurato e adattato per ospitare il museo, che è stato inaugurato nel 2010.\n\nAll'interno del museo, i visitatori possono ammirare una vasta collezione di oggetti legati alla festa di Santa Rosa. Ci sono costumi tradizionali indossati dai facchini durante la processione, fotografie e documenti storici che raccontano la storia della festa nel corso dei secoli.\n\nUno dei punti salienti del museo è la sala dedicata alla Macchina di Santa Rosa. Qui è possibile vedere una replica in scala della macchina, che è alta oltre 30 metri e pesa circa 5 tonnellate. La macchina è decorata con luci e statue raffiguranti scene religiose e simboli della città di Viterbo.\n\nIl museo offre anche una sezione interattiva, dove i visitatori possono imparare di più sulla storia e le tradizioni legate alla festa di Santa Rosa. Ci sono video, giochi e attività che coinvolgono i visitatori di tutte le età.\n\nInoltre, il museo organizza regolarmente mostre temporanee e eventi legati alla festa di Santa Rosa. Questi eventi includono conferenze, spettacoli teatrali e concerti, che offrono ai visitatori l'opportunità di immergersi completamente nella cultura e nelle tradizioni di Viterbo.\n\nIl Museo del Sodalizio dei Facchini di Santa Rosa è un luogo affascinante per conoscere la storia e le tradizioni di questa festa unica. È un'attrazione imperdibile per i visitatori che desiderano scoprire di più sulla cultura e l'identità di Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 47,
+        "completion_tokens": 539,
+        "total_tokens": 586
+    }
+}

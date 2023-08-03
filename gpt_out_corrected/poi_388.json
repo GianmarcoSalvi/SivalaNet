@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flRZZcUHyYXwHGlzmd5Eb1IkNEkj",
+    "object": "chat.completion",
+    "created": 1690188177,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Cordelli è un edificio storico situato nel comune di Grotte di Castro, in provincia di Viterbo, Italia. Si trova nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle circostante.\n\nL'edificio risale al XVII secolo ed è stato costruito in stile rinascimentale. È caratterizzato da una facciata imponente e regolare, con un portale d'ingresso decorato e finestre eleganti. La struttura è realizzata in pietra locale, che conferisce al palazzo un aspetto solido e maestoso.\n\nAll'interno, il Palazzo Cordelli presenta un'architettura affascinante e ricca di dettagli. Le stanze sono ampie e luminose, con soffitti alti e affreschi decorativi. Gli arredi sono in stile d'epoca, con mobili antichi e opere d'arte che arricchiscono gli ambienti.\n\nIl palazzo è circondato da un giardino ben curato, con alberi secolari e fiori colorati. Questo spazio esterno offre un luogo tranquillo e piacevole per passeggiare o rilassarsi, godendo della vista panoramica sulla campagna circostante.\n\nOggi, il Palazzo Cordelli è utilizzato come residenza privata e non è aperto al pubblico. Tuttavia, la sua bellezza e il suo valore storico lo rendono un punto di riferimento importante nel comune di Grotte di Castro, contribuendo a preservare la memoria e l'identità della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 387,
+        "total_tokens": 421
+    }
+}

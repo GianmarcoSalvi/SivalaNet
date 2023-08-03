@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7empRGwieVviIWYMpH6WoDps47365",
+    "object": "chat.completion",
+    "created": 1689955173,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale Campo del Prete è una struttura situata nel comune di Acquapendente, in Italia. Si tratta di un antico casale rurale che è stato ristrutturato e trasformato in un'accogliente struttura ricettiva.\n\nIl casale si trova in una posizione panoramica, circondato da un ampio giardino e da campi coltivati. La sua posizione isolata lo rende un luogo ideale per chi cerca tranquillità e relax lontano dal caos della città.\n\nLa struttura dispone di diverse camere, arredate in stile rustico e dotate di tutti i comfort moderni. Ogni camera è unica nel suo genere, con dettagli originali come travi in legno a vista e pavimenti in cotto. Alcune camere offrono anche una vista panoramica sulla campagna circostante.\n\nGli ospiti possono godere di una colazione continentale servita ogni mattina nella sala da pranzo, che include una varietà di prodotti locali freschi e fatti in casa. Durante il giorno, è possibile rilassarsi nel giardino o fare una passeggiata nei dintorni per esplorare la campagna circostante.\n\nCasale Campo del Prete offre anche diverse attività per gli ospiti, come escursioni a piedi o in bicicletta lungo i sentieri locali, visite alle cantine vinicole della zona o lezioni di cucina tradizionale italiana.\n\nLa struttura è anche un punto di partenza ideale per esplorare i dintorni. Acquapendente è una città ricca di storia e cultura, con numerosi siti di interesse come la Cattedrale di San Sepolcro e il Palazzo Vescovile. Inoltre, il casale si trova nelle vicinanze del Lago di Bolsena, che offre numerose attività acquatiche come nuoto, vela e pesca.\n\nIn conclusione, Casale Campo del Prete è una struttura accogliente e tranquilla nel comune di Acquapendente, ideale per chi cerca una vacanza rilassante immersa nella natura e nella cultura italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 506,
+        "total_tokens": 542
+    }
+}

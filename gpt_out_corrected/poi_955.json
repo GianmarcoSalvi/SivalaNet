@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqVb2tSEmOk9TwFVJhcMiDMMU9c8",
+    "object": "chat.completion",
+    "created": 1690207647,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca Pio XII si trova nel comune di Viterbo, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è situata in un edificio storico nel centro di Viterbo, vicino a Piazza del Plebiscito. È facilmente accessibile sia a piedi che in auto, con parcheggi disponibili nelle vicinanze.\n\nAll'interno della biblioteca, gli utenti troveranno un ambiente accogliente e tranquillo, ideale per lo studio, la ricerca e la lettura. La struttura dispone di diverse sale studio, dotate di tavoli, sedie e prese elettriche per consentire agli utenti di lavorare in modo confortevole.\n\nLa biblioteca offre una vasta collezione di libri, riviste, giornali e materiale audiovisivo. Gli utenti possono consultare e prendere in prestito questi materiali per un determinato periodo di tempo. La biblioteca dispone anche di un sistema di prestito interbibliotecario, che consente agli utenti di richiedere libri e altri materiali da altre biblioteche della regione.\n\nInoltre, la Biblioteca Pio XII offre servizi di consulenza e assistenza nella ricerca e nell'utilizzo delle risorse bibliotecarie. Il personale è disponibile per aiutare gli utenti a trovare informazioni specifiche, a utilizzare i computer e a navigare in Internet.\n\nLa biblioteca organizza anche eventi culturali e incontri, come presentazioni di libri, conferenze e mostre. Questi eventi offrono agli utenti l'opportunità di incontrare autori, partecipare a discussioni e scoprire nuovi interessi.\n\nLa Biblioteca Pio XII è un importante punto di riferimento per la comunità di Viterbo, offrendo un ambiente stimolante per l'apprendimento, la cultura e lo sviluppo personale. Con la sua vasta collezione di risorse e i suoi servizi di alta qualità, la biblioteca è un luogo ideale per gli studenti, i ricercatori e gli appassionati di lettura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 496,
+        "total_tokens": 530
+    }
+}

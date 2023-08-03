@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqWAIQy4mn9X8rbMiZ3yNdju04P8",
+    "object": "chat.completion",
+    "created": 1690207682,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'Accademia di belle arti Lorenzo da Viterbo si trova nel comune di Viterbo, in Italia. È situata all'interno del complesso dell'Accademia di belle arti, un istituto di formazione artistica di grande prestigio.\n\nLa biblioteca è specializzata nelle discipline artistiche e offre una vasta collezione di libri, riviste, cataloghi d'arte, materiali audiovisivi e digitali. Il suo patrimonio librario è costituito da oltre 20.000 volumi, che coprono un ampio spettro di argomenti legati alle arti visive, alla storia dell'arte, alla teoria e alla pratica artistica.\n\nLa struttura della biblioteca è moderna e accogliente, con spazi studi attrezzati con postazioni per la consultazione dei materiali e per la ricerca. È possibile accedere al catalogo online per individuare i libri di interesse e prenotarli in anticipo.\n\nLa biblioteca offre anche servizi di consulenza e assistenza nella ricerca bibliografica, aiutando gli studenti e i ricercatori a trovare le risorse più adatte alle loro esigenze. Inoltre, organizza regolarmente mostre, conferenze e incontri culturali per promuovere la conoscenza e la diffusione delle arti visive.\n\nGli utenti della biblioteca includono studenti, docenti, ricercatori e appassionati d'arte, che possono usufruire dei servizi offerti gratuitamente. La biblioteca è aperta durante l'orario di apertura dell'Accademia di belle arti e il personale è sempre disponibile per fornire assistenza e supporto.\n\nIn conclusione, la Biblioteca dell'Accademia di belle arti Lorenzo da Viterbo è un importante punto di riferimento per gli appassionati d'arte e per coloro che desiderano approfondire la conoscenza delle discipline artistiche. Con la sua vasta collezione e i servizi offerti, rappresenta un luogo ideale per la ricerca e lo studio nel campo delle arti visive."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 486,
+        "total_tokens": 531
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fql0eS1iuz0oq07xTLRSERMqr9EG",
+    "object": "chat.completion",
+    "created": 1690208602,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Castiglione in Teverina è un piccolo comune situato nella regione dell'Umbria, nel centro Italia. Si trova a circa 100 chilometri a nord di Roma e a 30 chilometri a sud di Orvieto. Il paese è situato su una collina che domina la valle del fiume Tevere, offrendo una vista panoramica mozzafiato sulla campagna circostante.\n\nIl centro storico di Castiglione in Teverina è caratterizzato da strette strade lastricate, case in pietra e antiche mura medievali. Le case sono tipicamente costruite in pietra locale e sono state restaurate con cura per preservare il loro fascino originale. Le strade sono piene di negozi, ristoranti e caffè, che offrono ai visitatori l'opportunità di assaggiare la cucina locale e acquistare prodotti artigianali.\n\nUno dei punti focali del paese è il Castello Orsini, un'imponente fortezza medievale che domina il centro storico. Costruito nel XIII secolo, il castello è stato restaurato e aperto al pubblico. All'interno si possono ammirare affreschi originali, armature antiche e una vista panoramica dalla torre di avvistamento.\n\nUn'altra attrazione importante di Castiglione in Teverina è la Chiesa di San Giovanni Battista, una chiesa romanica del XII secolo. L'interno della chiesa è decorato con affreschi medievali ben conservati e un altare in marmo scolpito. La chiesa è un luogo di culto attivo e ospita regolarmente messe e cerimonie religiose.\n\nNelle vicinanze di Castiglione in Teverina si trovano anche numerose attrazioni naturali. La campagna circostante è caratterizzata da colline verdi, vigneti e uliveti, che offrono un ambiente ideale per escursioni a piedi o in bicicletta. Il fiume Tevere è anche un luogo popolare per attività come la pesca e il kayak.\n\nIn sintesi, Castiglione in Teverina è un affascinante comune umbro che offre una combinazione di storia, cultura e bellezze naturali. Con il suo centro storico ben conservato, il castello medievale e la chiesa romanica, il paese è un luogo ideale per immergersi nella storia e nella tradizione italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 587,
+        "total_tokens": 628
+    }
+}

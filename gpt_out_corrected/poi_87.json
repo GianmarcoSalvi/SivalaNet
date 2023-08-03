@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enCSN0RoxISuj9035rdmd57ozIN8",
+    "object": "chat.completion",
+    "created": 1689956600,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria dei Monti si trova nel comune di Bassano Romano, nella regione del Lazio, in Italia. Questo edificio religioso è uno dei principali punti di riferimento della comunità locale e rappresenta un importante esempio di architettura religiosa.\n\nLa chiesa risale al XV secolo e presenta uno stile architettonico gotico. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi floreali e sculture. Sopra il portale si trova una finestra a bifora, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XV secolo, raffiguranti scene religiose e figure di santi. L'altare maggiore è ornato da un prezioso paliotto in marmo, arricchito da intarsi e sculture.\n\nUno degli elementi più interessanti della Chiesa di Santa Maria dei Monti è la presenza di una torre campanaria, che si erge accanto all'edificio principale. La torre è alta e slanciata, con una serie di finestre ad arco che permettono la vista panoramica sulla campagna circostante.\n\nLa chiesa è circondata da un piccolo sagrato, con un giardino curato e alberi secolari. Questo spazio esterno è utilizzato per eventi religiosi e celebrazioni comunitarie.\n\nLa Chiesa di Santa Maria dei Monti rappresenta un importante luogo di culto per la comunità di Bassano Romano, ma è anche una meta turistica per gli amanti dell'arte e dell'architettura. La sua bellezza e la sua storia la rendono un luogo di grande interesse culturale e spirituale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 469,
+        "total_tokens": 507
+    }
+}

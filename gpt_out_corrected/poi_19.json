@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emtLCZvhmYkGYZkHTwNU6XlbVyc7",
+    "object": "chat.completion",
+    "created": 1689955415,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale San Vittorio è una struttura situata nel comune di Acquapendente, in Italia. Si tratta di un antico casale rurale che è stato ristrutturato e trasformato in un'accogliente struttura ricettiva.\n\nIl casale si trova in una posizione panoramica, circondato da un ampio giardino e da campi coltivati. La sua posizione elevata offre una vista mozzafiato sulla campagna circostante e sulle colline che si estendono fino all'orizzonte.\n\nLa struttura dispone di diverse camere, arredate in stile rustico e dotate di tutti i comfort moderni. Ogni camera è unica nel suo genere, con dettagli caratteristici che richiamano l'atmosfera tradizionale del casale. Alcune camere offrono anche una vista panoramica sul paesaggio circostante.\n\nCasale San Vittorio offre anche una serie di servizi per rendere il soggiorno dei suoi ospiti il più confortevole possibile. Tra questi vi sono una piscina all'aperto, ideale per rinfrescarsi durante le calde giornate estive, un ristorante che propone piatti della cucina locale e un'area relax dove gli ospiti possono godersi momenti di tranquillità e relax.\n\nLa struttura è anche il punto di partenza ideale per esplorare la zona circostante. Acquapendente è una cittadina ricca di storia e cultura, con numerosi siti di interesse da visitare, come la Cattedrale di San Sepolcro e il Palazzo Vescovile. Inoltre, la struttura si trova anche vicino al Lago di Bolsena, uno dei laghi più grandi d'Europa, dove gli ospiti possono praticare sport acquatici o semplicemente rilassarsi sulla spiaggia.\n\nIn conclusione, Casale San Vittorio è un luogo incantevole dove trascorrere una vacanza immersi nella natura e nella tranquillità della campagna italiana. Con la sua posizione panoramica, le camere confortevoli e i servizi di qualità, questa struttura offre un'esperienza indimenticabile per tutti coloro che desiderano scoprire la bellezza di Acquapendente e dei suoi dintorni."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 543,
+        "total_tokens": 579
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flry7p4E9Cdr9FCDIEAKH6Zz5gU4",
+    "object": "chat.completion",
+    "created": 1690189814,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Comunale di Marta è un edificio storico situato nel centro del comune di Marta, in provincia di Viterbo, Italia. \n\nL'edificio risale al XVIII secolo ed è stato costruito in stile neoclassico. Si trova in una posizione privilegiata, affacciato sulla piazza principale del paese, ed è circondato da altri edifici storici e monumenti.\n\nIl Palazzo Comunale si presenta come un imponente edificio a due piani, con una facciata simmetrica e un portico a colonne che si estende lungo tutto il fronte. Le colonne sono di ordine dorico e sostengono un balcone al primo piano, decorato con eleganti ringhiere in ferro battuto.\n\nLa facciata è caratterizzata da una serie di finestre rettangolari, con cornici in pietra e persiane in legno. Al centro della facciata si trova il portale principale, sormontato da un frontone triangolare e decorato con elementi scultorei.\n\nAll'interno del Palazzo Comunale si trovano diverse sale, utilizzate per le attività amministrative del comune. Tra queste, spicca il Salone del Consiglio Comunale, un'ampia sala con soffitto a volta e pareti affrescate. Questa sala è utilizzata per le riunioni del consiglio comunale e per eventi pubblici.\n\nIl Palazzo Comunale di Marta rappresenta un importante punto di riferimento per la comunità locale, non solo per le sue funzioni amministrative, ma anche per il suo valore storico e architettonico. La sua imponente presenza e la sua posizione centrale lo rendono un simbolo del paese e un luogo di interesse per i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 429,
+        "total_tokens": 461
+    }
+}

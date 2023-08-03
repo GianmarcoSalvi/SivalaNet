@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flBIpfSce1qCsE0xYuANOrEtXUzc",
+    "object": "chat.completion",
+    "created": 1690187168,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Assunta si trova nel comune di Gallese, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è in stile romanico, con un portale decorato da sculture e un rosone centrale. L'interno è a navata unica, con un soffitto a capriate lignee e pareti affrescate.\n\nUno dei principali tesori artistici della chiesa è il ciclo di affreschi risalenti al XIV secolo, attribuiti alla scuola di Pietro Cavallini. Questi affreschi raffigurano scene della vita di Maria, tra cui l'Annunciazione, la Natività e l'Assunzione. Sono caratterizzati da colori vivaci e dettagli finemente dipinti.\n\nLa chiesa ospita anche diverse opere d'arte, tra cui una Madonna con Bambino del XV secolo, una statua lignea di San Sebastiano del XVI secolo e un crocifisso ligneo del XVII secolo. Inoltre, sono presenti numerosi altari laterali, decorati con dipinti e sculture di pregio.\n\nLa Chiesa di Santa Maria Assunta è un luogo di culto attivo, dove si svolgono regolarmente messe e cerimonie religiose. È anche una meta turistica molto apprezzata, grazie alla sua bellezza architettonica e artistica. La chiesa si trova nel centro storico di Gallese, circondata da stradine medievali e affacciata su una piazza pittoresca."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 415,
+        "total_tokens": 451
+    }
+}

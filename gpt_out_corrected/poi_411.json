@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flYn2oV3BUXkRO8Saoo1r52Tgle6",
+    "object": "chat.completion",
+    "created": 1690188625,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Duomo di San Ermete si trova nel comune di Ischia di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. È una delle principali attrazioni storiche e culturali della zona.\n\nIl Duomo è dedicato a San Ermete, il patrono di Ischia di Castro. La sua costruzione risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. L'edificio attuale è il risultato di un restauro avvenuto nel XVIII secolo.\n\nL'esterno del Duomo presenta una facciata semplice ma elegante, con un portale in stile romanico e una serie di finestre ad arco. La facciata è decorata con un rosone centrale e una serie di sculture e bassorilievi raffiguranti scene religiose.\n\nL'interno del Duomo è a navata unica, con una serie di cappelle laterali. Le pareti sono decorate con affreschi e dipinti che rappresentano scene bibliche e santi. L'altare maggiore è particolarmente imponente, con una serie di colonne e una pala d'altare che raffigura San Ermete.\n\nUna delle caratteristiche più interessanti del Duomo di San Ermete è la presenza di una cripta sotterranea. Questa cripta, risalente al XII secolo, contiene le spoglie di San Ermete e di altri santi locali. È un luogo di grande devozione per i fedeli e viene visitato da numerosi pellegrini.\n\nIl Duomo di San Ermete è un importante centro di culto e spiritualità per la comunità di Ischia di Castro. Oltre alle funzioni religiose, ospita anche eventi culturali e musicali durante tutto l'anno. La sua posizione panoramica offre una vista mozzafiato sulla campagna circostante e sul paesaggio collinare.\n\nIn conclusione, il Duomo di San Ermete a Ischia di Castro è un luogo di grande importanza storica e religiosa. La sua architettura affascinante, gli affreschi e la cripta sotterranea lo rendono una meta imperdibile per i visitatori che desiderano immergersi nella storia e nella cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 539,
+        "total_tokens": 575
+    }
+}

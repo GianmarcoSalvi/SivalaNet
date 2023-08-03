@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmMCnx1eYKoQCZ9oCC1ouZ0EWKXC",
+    "object": "chat.completion",
+    "created": 1690191688,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna delle Grazie si trova nel comune di Onano, un piccolo paese situato nella provincia di Viterbo, nella regione del Lazio, in Italia. Questa chiesa è uno dei principali luoghi di culto del paese e rappresenta un importante punto di riferimento per la comunità locale.\n\nLa chiesa è dedicata alla Madonna delle Grazie, una delle figure più venerate nella tradizione cattolica. La sua costruzione risale al XVII secolo, anche se nel corso dei secoli ha subito diverse modifiche e restauri. La facciata della chiesa è semplice ed elegante, con un portale d'ingresso in pietra e una finestra centrale che illumina l'interno.\n\nL'interno della chiesa è caratterizzato da una navata unica, con un soffitto a volta decorato con affreschi raffiguranti scene religiose. Lungo le pareti laterali si trovano diverse cappelle, ognuna dedicata a un santo o a una figura religiosa specifica. Le cappelle sono ornate da altari in marmo e dipinti sacri, che aggiungono un tocco di bellezza e devozione all'ambiente.\n\nAl centro dell'altare maggiore si trova una statua della Madonna delle Grazie, che rappresenta la Vergine Maria con il Bambino Gesù tra le braccia. Questa statua è oggetto di grande venerazione da parte dei fedeli, che spesso si recano nella chiesa per pregare e chiedere grazie e protezione.\n\nLa Chiesa della Madonna delle Grazie è anche sede di importanti celebrazioni religiose durante l'anno, come la festa della Madonna delle Grazie, che si tiene il 2 luglio. Durante questa festa, la statua della Madonna viene portata in processione per le strade del paese, seguita da una folla di fedeli che recitano preghiere e cantano inni religiosi.\n\nOltre al suo valore religioso, la chiesa è anche un importante punto di riferimento storico e culturale per il comune di Onano. La sua architettura e le opere d'arte al suo interno rappresentano un patrimonio artistico di grande valore, che testimonia la ricca storia e la tradizione religiosa della zona.\n\nIn conclusione, la Chiesa della Madonna delle Grazie nel comune di Onano è un luogo di culto di grande importanza per la comunità locale. La sua bellezza architettonica e le opere d'arte al suo interno la rendono un luogo di grande fascino e devozione, che attira fedeli e visitatori da tutto il territorio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 637,
+        "total_tokens": 672
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpmdxkeSm7CDDyekqpVzUD4Gzyaw",
+    "object": "chat.completion",
+    "created": 1690204859,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Norchia si trova nel comune di Vetralla, nella regione del Lazio, in Italia. Si tratta di un antico castello medievale situato su una collina, a circa 15 chilometri a nord di Viterbo.\n\nIl castello è stato costruito nel XII secolo e ha subito diverse modifiche e ampliamenti nel corso dei secoli. La sua posizione strategica, su una collina dominante la valle del fiume Treja, lo rendeva un importante punto di controllo e difesa nella zona.\n\nL'aspetto attuale del castello risale principalmente al periodo rinascimentale, quando furono aggiunte torri e bastioni per rafforzare le difese. La struttura è circondata da mura imponenti, con un ingresso principale sormontato da un arco a tutto sesto.\n\nAll'interno del castello si trovano diverse sale e cortili, che testimoniano la sua storia e la sua importanza come residenza nobiliare. Alcune delle stanze sono ancora arredate con mobili d'epoca e dipinti, mentre altre sono state trasformate in musei o spazi espositivi.\n\nUno dei punti salienti del castello è la sua torre panoramica, dalla quale si può godere di una vista mozzafiato sulla campagna circostante. La torre offre anche una panoramica sulla città di Vetralla e sulle colline circostanti.\n\nIl Castello di Norchia è anche famoso per i suoi giardini, che sono stati restaurati e riportati al loro antico splendore. I giardini sono caratterizzati da fontane, statue e aiuole fiorite, che creano un'atmosfera incantevole e romantica.\n\nOggi il castello è aperto al pubblico e ospita eventi culturali, mostre e visite guidate. È possibile esplorare le sue sale, ammirare gli affreschi e scoprire la storia del castello attraverso le esposizioni. Il Castello di Norchia è un luogo affascinante che offre una combinazione unica di storia, arte e bellezze naturali."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 501,
+        "total_tokens": 534
+    }
+}

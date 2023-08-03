@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flOkWUsfaF0D6z2NLAWCtUsp7UpF",
+    "object": "chat.completion",
+    "created": 1690188002,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale Poggio la Camera è una splendida struttura situata nel comune di Grotte di Castro, in Italia. Questo casale rurale è immerso nella campagna toscana, circondato da colline verdi e panorami mozzafiato.\n\nIl casale è stato ristrutturato con grande cura e attenzione per i dettagli, mantenendo intatta l'atmosfera rustica e autentica della tradizione toscana. Le pietre originali, i soffitti con travi in legno e i pavimenti in cotto conferiscono al casale un fascino unico e accogliente.\n\nLa struttura dispone di diverse camere, ognuna arredata con gusto e dotata di tutti i comfort moderni. Le camere sono spaziose e luminose, con ampie finestre che offrono una vista panoramica sulla campagna circostante. Alcune camere hanno anche un camino, perfetto per creare un'atmosfera romantica nelle serate più fresche.\n\nAll'esterno del casale si trova un ampio giardino ben curato, con prati verdi, alberi secolari e fiori colorati. Qui gli ospiti possono rilassarsi e godersi la tranquillità della campagna, magari facendo una passeggiata o leggendo un libro all'ombra di un albero.\n\nInoltre, Casale Poggio la Camera dispone di una piscina all'aperto, ideale per rinfrescarsi durante le calde giornate estive. La piscina è circondata da lettini e ombrelloni, dove gli ospiti possono prendere il sole e godersi il panorama circostante.\n\nLa struttura offre anche un ristorante, dove gli ospiti possono gustare piatti tipici della cucina toscana preparati con ingredienti freschi e di alta qualità. Il ristorante offre anche una selezione di vini locali, perfetti per accompagnare i pasti.\n\nCasale Poggio la Camera è il luogo ideale per chi cerca una vacanza rilassante e autentica nella campagna toscana. La sua posizione tranquilla e la bellezza naturale circostante lo rendono il luogo perfetto per staccare dalla frenesia della vita quotidiana e rigenerarsi immersi nella natura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 545,
+        "total_tokens": 582
+    }
+}

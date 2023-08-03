@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpQR106HgBihBY2IvrtHJ1vSHOqW",
+    "object": "chat.completion",
+    "created": 1690203483,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Lo Spazio Teatrale Supercinema si trova nel comune di Tuscania, in Italia. Si tratta di un teatro polifunzionale che offre una vasta gamma di spettacoli e eventi culturali.\n\nL'edificio che ospita il teatro è un ex cinema, che è stato ristrutturato e trasformato in uno spazio dedicato alle arti performative. La struttura conserva ancora alcuni elementi dell'originale sala cinematografica, come il grande schermo e le poltrone, che conferiscono al teatro un'atmosfera unica.\n\nLo Spazio Teatrale Supercinema dispone di una sala principale con una capienza di circa 200 posti a sedere. La sala è dotata di un palcoscenico completamente attrezzato, con luci, suoni e attrezzature tecniche all'avanguardia. Questo permette di realizzare spettacoli di alta qualità, che spaziano dalla prosa al teatro di figura, dalla danza al teatro musicale.\n\nOltre alla sala principale, il teatro dispone anche di una sala più piccola, adatta per spettacoli più intimi o per eventi culturali di dimensioni ridotte. Questa sala è ideale per spettacoli di teatro sperimentale, letture di poesie, concerti acustici e altre performance artistiche di piccolo formato.\n\nLo Spazio Teatrale Supercinema è anche un luogo di incontro per la comunità locale. Oltre agli spettacoli, il teatro organizza workshop, laboratori e corsi di formazione per giovani artisti e per chiunque sia interessato a sviluppare le proprie competenze artistiche. Inoltre, il teatro ospita regolarmente mostre d'arte, presentazioni di libri e altri eventi culturali.\n\nGrazie alla sua posizione nel comune di Tuscania, lo Spazio Teatrale Supercinema è facilmente accessibile sia per i residenti locali che per i visitatori. La città stessa è ricca di storia e cultura, con numerosi siti archeologici e monumenti storici da visitare. Il teatro si trova in una posizione centrale, vicino a ristoranti, bar e altre attrazioni turistiche, rendendolo un luogo ideale per trascorrere una serata di spettacolo e cultura.\n\nIn conclusione, lo Spazio Teatrale Supercinema è un teatro polifunzionale situato nel comune di Tuscania, in Italia. Offre una varietà di spettacoli e eventi culturali, ed è un punto di riferimento per la comunità locale e per i visitatori che desiderano immergersi nell'arte e nella cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 636,
+        "total_tokens": 672
+    }
+}

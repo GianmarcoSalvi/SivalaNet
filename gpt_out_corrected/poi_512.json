@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmC1h48dg5BmtGgS3qPLkuJWvk1I",
+    "object": "chat.completion",
+    "created": 1690191057,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Celsi è un edificio storico situato nel comune di Nepi, in provincia di Viterbo, Italia. Si trova nel centro storico del paese, in Piazza XX Settembre, e rappresenta uno dei principali punti di interesse della zona.\n\nIl palazzo risale al XV secolo ed è stato costruito dalla famiglia Celsi, una delle famiglie nobiliari più importanti di Nepi. L'edificio presenta uno stile architettonico tipico del periodo rinascimentale, con influenze gotiche e medievali.\n\nLa facciata del palazzo è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi floreali e sculture. Sopra il portale si trova uno stemma della famiglia Celsi, che testimonia la loro importanza e potere nella zona.\n\nL'interno del palazzo è altrettanto affascinante, con ampi saloni decorati con affreschi e stucchi. Le stanze sono arredate con mobili d'epoca e opere d'arte, che testimoniano il lusso e la ricchezza della famiglia Celsi.\n\nOltre alle sue caratteristiche architettoniche e artistiche, il Palazzo Celsi ha anche un'importanza storica. Durante il periodo rinascimentale, il palazzo fu un importante centro culturale e politico, frequentato da artisti, letterati e personaggi di spicco dell'epoca.\n\nOggi, il Palazzo Celsi è aperto al pubblico e ospita eventi culturali, mostre e conferenze. È possibile visitare le sue sale e ammirare gli affreschi e le opere d'arte che adornano le pareti. Inoltre, il palazzo offre una vista panoramica sulla città di Nepi e sui suoi dintorni, che rende la visita ancora più suggestiva.\n\nIn conclusione, il Palazzo Celsi è un gioiello architettonico e storico nel comune di Nepi. Con la sua bellezza e la sua importanza culturale, rappresenta una tappa imperdibile per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 500,
+        "total_tokens": 532
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpz9aaBwh0nvaKcQAH6vBVsvUvGN",
+    "object": "chat.completion",
+    "created": 1690205635,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casa Poscia è una residenza storica situata nel comune di Viterbo, in Italia. Questa casa colonica tradizionale è immersa nella campagna viterbese, circondata da un paesaggio mozzafiato e da una natura incontaminata.\n\nLa struttura di Casa Poscia risale al XVIII secolo e conserva ancora molti degli elementi architettonici originali, come le pareti in pietra, i soffitti a volta e i pavimenti in cotto. La casa è stata ristrutturata con cura per preservare il suo fascino storico, ma allo stesso tempo offre tutti i comfort moderni per garantire un soggiorno piacevole e confortevole.\n\nLa casa è composta da diverse unità abitative, ognuna delle quali è arredata con gusto e attenzione ai dettagli. Gli interni sono caratterizzati da un mix di stile rustico e contemporaneo, con mobili in legno massello, tessuti pregiati e colori caldi che creano un'atmosfera accogliente e rilassante.\n\nLe camere da letto sono spaziose e luminose, dotate di letti comodi e biancheria di alta qualità. I bagni sono moderni e ben attrezzati, con docce ampie e prodotti per la cura del corpo di lusso.\n\nCasa Poscia dispone anche di una cucina completamente attrezzata, dove gli ospiti possono preparare i propri pasti utilizzando ingredienti freschi e locali. La sala da pranzo è ideale per gustare i pasti in compagnia, mentre il salotto offre un luogo accogliente per rilassarsi davanti al camino o guardare un film sulla TV a schermo piatto.\n\nAll'esterno, Casa Poscia offre un ampio giardino con prato verde, alberi secolari e una piscina privata. Gli ospiti possono godere di momenti di relax e tranquillità, prendendo il sole sulle sdraio, facendo un tuffo nella piscina o organizzando un barbecue con gli amici e la famiglia.\n\nLa posizione di Casa Poscia è ideale per esplorare la regione di Viterbo. La città medievale di Viterbo è a breve distanza in auto e offre numerose attrazioni, come il Palazzo dei Papi e le Terme dei Papi. Inoltre, la casa è ben collegata alle principali strade e autostrade, consentendo agli ospiti di raggiungere facilmente altre destinazioni popolari, come il Lago di Bolsena e le città di Orvieto e Civita di Bagnoregio.\n\nIn sintesi, Casa Poscia è una residenza storica incantevole nel cuore della campagna viterbese, che offre un'esperienza autentica e rilassante. Con il suo fascino storico, interni accoglienti e posizione ideale, è il luogo perfetto per una vacanza indimenticabile in Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 702,
+        "total_tokens": 734
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpAcl1XbJslaWBNWb22aYnpIUMEi",
+    "object": "chat.completion",
+    "created": 1690202502,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli di Tarquinia è un sito archeologico situato nel comune di Tarquinia, nella regione del Lazio, in Italia. È uno dei siti più importanti e meglio conservati di necropoli etrusche, risalenti al periodo compreso tra il VII e il II secolo a.C.\n\nLa necropoli si estende su un'area di circa 600 ettari e comprende oltre 6.000 tombe, che sono state scavate nella roccia tufacea. Le tombe sono di diversi tipi e dimensioni, da semplici fosse a tombe a tumulo e a camera. Molte di esse sono decorate con affreschi che rappresentano scene di vita quotidiana, mitologia, rituali religiosi e riti funerari.\n\nUna delle tombe più famose della necropoli è la Tomba dei Leoni, così chiamata per i due leoni scolpiti che la decorano. Altre tombe notevoli includono la Tomba dei Giocolieri, la Tomba del Triclinio e la Tomba delle Olimpiadi.\n\nAll'interno del sito archeologico è presente anche un museo, il Museo Nazionale Tarquiniense, che ospita una vasta collezione di reperti provenienti dalla necropoli. Tra i reperti esposti ci sono ceramiche, gioielli, armi, oggetti di uso quotidiano e statue.\n\nLa Necropoli di Tarquinia è stata dichiarata Patrimonio dell'Umanità dall'UNESCO nel 2004, in quanto rappresenta un importante testimonianza dell'arte e della cultura etrusca. La sua importanza storica e artistica la rende una meta turistica molto popolare, attirando visitatori da tutto il mondo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 404,
+        "total_tokens": 440
+    }
+}

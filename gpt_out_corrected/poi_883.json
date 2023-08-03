@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq7i3jl3mADJZgXHpwBd6u8oNySJ",
+    "object": "chat.completion",
+    "created": 1690206166,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria della Porta si trova nel comune di Viterbo, in Italia. È una delle chiese più antiche della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa è situata vicino alle mura medievali della città, proprio accanto a una delle porte di accesso principali, da cui prende il nome. La sua costruzione risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta una facciata semplice ma elegante, caratterizzata da un portale romanico con un arco a tutto sesto e una lunetta decorata con bassorilievi. Sopra il portale si trova una finestra ad arco, che permette l'ingresso di luce all'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di Maria e di Cristo. Tra gli affreschi più notevoli vi è una Madonna con Bambino, attribuita a Lorenzo da Viterbo, un importante pittore del periodo.\n\nNel corso dei secoli, la chiesa ha subito diverse modifiche e restauri. Durante il Rinascimento, fu aggiunta una cappella laterale dedicata a San Giovanni Battista, che presenta un altare in marmo e un dipinto raffigurante il santo.\n\nLa Chiesa di Santa Maria della Porta è un luogo di culto ancora attivo, dove vengono celebrati regolarmente matrimoni e messe. È anche un importante punto di riferimento storico e artistico per la città di Viterbo, attirando visitatori e turisti interessati all'arte e all'architettura romanica.\n\nIn conclusione, la Chiesa di Santa Maria della Porta è un gioiello architettonico e artistico nel comune di Viterbo. La sua bellezza e la sua storia la rendono una tappa imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 504,
+        "total_tokens": 541
+    }
+}

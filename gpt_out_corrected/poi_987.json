@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqi2ItkRT54VwOJDFbIotA8CjWfj",
+    "object": "chat.completion",
+    "created": 1690208418,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Bomarzo è un comune situato nella regione del Lazio, nel centro Italia. Si trova nella provincia di Viterbo, a circa 90 chilometri a nord-ovest di Roma. Il paese è noto principalmente per il suo parco dei mostri, un luogo unico e affascinante che attira visitatori da tutto il mondo.\n\nIl parco dei mostri, chiamato anche Sacro Bosco, è un giardino rinascimentale creato nel XVI secolo dal nobile italiano Pier Francesco Orsini. Il parco è caratterizzato da una serie di sculture monumentali e bizzarre, che rappresentano creature mitologiche, animali fantastici e figure umane. Le sculture sono disposte in modo casuale e sembrano emergere dalla vegetazione circostante, creando un'atmosfera surreale e misteriosa.\n\nTra le opere più famose del parco ci sono il Colosso, una gigantesca statua raffigurante un uomo sdraiato, la Bocca della Verità, una grande maschera scolpita nella roccia, e il Tempio del Sole, una struttura a forma di piramide con un occhio al centro. Ogni scultura ha un significato simbolico e misterioso, che lascia spazio a molte interpretazioni.\n\nOltre al parco dei mostri, Bomarzo offre anche altri luoghi di interesse. Il centro storico del paese è caratterizzato da strette stradine medievali, case in pietra e una bellissima piazza principale. Qui si trova anche il Palazzo Orsini, una maestosa residenza nobiliare che risale al XV secolo e che ospita oggi un museo.\n\nBomarzo è circondata da una splendida campagna, con colline verdi e boschi che offrono molte opportunità per escursioni e passeggiate. Nei dintorni si trovano anche altre attrazioni turistiche, come il lago di Bolsena, il parco naturale di Monte Rufeno e le città medievali di Viterbo e Orvieto.\n\nIn sintesi, Bomarzo è un luogo affascinante e unico, che offre ai visitatori la possibilità di immergersi in un mondo di fantasia e mistero. Il parco dei mostri è una tappa imperdibile per chiunque visiti la regione del Lazio, regalando un'esperienza indimenticabile."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 570,
+        "total_tokens": 602
+    }
+}

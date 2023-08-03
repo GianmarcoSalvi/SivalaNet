@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7frRHcdfDFlddkFJFZKFuUK05jTXI",
+    "object": "chat.completion",
+    "created": 1690211223,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Oasi WWF di Pian Sant'Angelo si trova nel comune di Corchiano, nella regione del Lazio, in Italia. Questa riserva naturale è stata istituita nel 1990 e si estende su una superficie di circa 400 ettari.\n\nL'Oasi WWF di Pian Sant'Angelo è caratterizzata da una grande varietà di habitat, che vanno dalle aree umide alle praterie, dai boschi alle zone rocciose. Questa diversità di ambienti crea un ricco ecosistema che ospita numerosi animali e piante.\n\nTra le specie animali presenti nell'oasi, vi sono il cinghiale, il capriolo, la volpe, il tasso, la donnola e il riccio. Inoltre, l'area è un importante punto di sosta per molte specie di uccelli migratori, come la cicogna bianca, l'airone cenerino, il falco pellegrino e il gufo reale.\n\nL'oasi è attraversata dal fiume Treja, che crea delle suggestive gole e cascate. Lungo il corso d'acqua si possono ammirare anche antichi mulini ad acqua, testimonianze dell'attività umana che si è svolta in questa zona nel corso dei secoli.\n\nL'accesso all'oasi è possibile attraverso sentieri ben segnalati, che permettono di esplorare l'area in modo sicuro e rispettoso dell'ambiente. Lungo i percorsi si trovano punti di osservazione e aree attrezzate per il pic-nic, che consentono di godere appieno della bellezza del luogo.\n\nL'Oasi WWF di Pian Sant'Angelo è anche sede di un centro di educazione ambientale, dove vengono organizzate attività didattiche e visite guidate per sensibilizzare i visitatori sull'importanza della conservazione della natura.\n\nIn conclusione, l'Oasi WWF di Pian Sant'Angelo è un luogo di straordinaria bellezza naturale, che offre la possibilità di immergersi nella natura incontaminata e di scoprire la ricchezza della flora e della fauna del territorio. È un'esperienza unica per gli amanti della natura e per coloro che desiderano trascorrere una giornata all'aria aperta, circondati da paesaggi mozzafiato."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 563,
+        "total_tokens": 603
+    }
+}

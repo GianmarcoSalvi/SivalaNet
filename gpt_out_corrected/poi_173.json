@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enj5glIBHXIdUEnwiAnM1JiUX3dO",
+    "object": "chat.completion",
+    "created": 1689958623,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Michele Arcangelo si trova nel comune di Canepina, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è semplice ed elegante, con un portale in pietra sormontato da un rosone circolare. L'interno è a navata unica, con un soffitto a capriate lignee e pareti decorate con affreschi.\n\nUno dei principali tesori artistici della chiesa è l'altare maggiore, realizzato nel XVII secolo in marmo policromo. L'altare è decorato con sculture raffiguranti scene della vita di San Michele Arcangelo, tra cui la sua vittoria sul demonio.\n\nAltre opere d'arte presenti nella chiesa includono una statua lignea di San Michele Arcangelo, risalente al XV secolo, e una pala d'altare raffigurante l'Arcangelo Michele che sconfigge il demonio, realizzata nel XVIII secolo.\n\nLa Chiesa di San Michele Arcangelo è un luogo di culto molto frequentato dai fedeli del comune di Canepina e delle zone circostanti. Oltre alla sua importanza religiosa, la chiesa è anche un importante punto di riferimento storico e artistico per la comunità locale.\n\nLa sua posizione panoramica, sulla sommità di una collina, offre una vista mozzafiato sulla campagna circostante e sul paesaggio circostante. La chiesa è circondata da un piccolo cortile e da un giardino, che contribuiscono a creare un'atmosfera tranquilla e suggestiva.\n\nLa Chiesa di San Michele Arcangelo è un luogo di grande fascino e spiritualità, che merita sicuramente una visita per chiunque si trovi a Canepina o nelle vicinanze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 472,
+        "total_tokens": 508
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnF2O6XBKHfBaV1see0wjuYuEOtE",
+    "object": "chat.completion",
+    "created": 1690195088,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria delle Grazie si trova nel comune di Soriano nel Cimino, nella provincia di Viterbo, nella regione del Lazio, in Italia. Questa chiesa è uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura religiosa.\n\nLa chiesa è situata nel centro storico di Soriano nel Cimino, circondata da stradine acciottolate e affiancata da edifici storici. La sua facciata è semplice ma elegante, con un portale in pietra e una finestra centrale. La chiesa è costruita in stile romanico, con influenze gotiche.\n\nL'interno della chiesa è spazioso e luminoso, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi e dipinti che raffigurano scene religiose. L'altare maggiore è particolarmente imponente, con un baldacchino decorato e una statua della Madonna delle Grazie al centro.\n\nLa chiesa ospita anche diverse cappelle laterali, ognuna dedicata a un santo o a un evento religioso specifico. Queste cappelle sono decorate con altari, dipinti e statue, creando un'atmosfera di devozione e spiritualità.\n\nUno dei punti salienti della Chiesa di Santa Maria delle Grazie è la sua torre campanaria, che si erge maestosa accanto alla chiesa. La torre campanaria è alta e slanciata, con una serie di finestre e una cuspide affusolata. È possibile salire sulla torre campanaria per godere di una vista panoramica sulla città e sulla campagna circostante.\n\nLa Chiesa di Santa Maria delle Grazie è un luogo di culto attivo, con regolari celebrazioni liturgiche e servizi religiosi. È anche un importante punto di riferimento culturale per la comunità locale, ospitando concerti, mostre d'arte e altri eventi culturali.\n\nIn conclusione, la Chiesa di Santa Maria delle Grazie a Soriano nel Cimino è un gioiello architettonico e spirituale. Con la sua bellezza e la sua storia, rappresenta un importante punto di riferimento per la comunità locale e un luogo di devozione per i fedeli."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 567,
+        "total_tokens": 607
+    }
+}

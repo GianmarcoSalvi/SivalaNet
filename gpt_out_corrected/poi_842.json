@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpvE2HwqgKpYz3L9SmhhGnGTPWY5",
+    "object": "chat.completion",
+    "created": 1690205392,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le mura medievali di Viterbo sono un'imponente struttura difensiva che circonda il centro storico della città. Costruite nel XII secolo, le mura sono state progettate per proteggere Viterbo da eventuali attacchi esterni e sono uno dei migliori esempi di architettura militare medievale in Italia.\n\nLe mura si estendono per circa 3 chilometri e mezzo e sono costituite da una serie di torri, bastioni e porte fortificate. Le torri, alte e imponenti, erano utilizzate come punti di osservazione e di difesa, mentre i bastioni erano progettati per resistere agli attacchi nemici. Le porte fortificate, come la Porta Romana, la Porta Fiorentina e la Porta San Pietro, erano gli accessi principali alla città e venivano chiuse durante la notte o in caso di pericolo.\n\nLe mura medievali sono realizzate principalmente in pietra e mattoni, con alcuni tratti ancora ben conservati. Lungo il percorso delle mura si possono ammirare anche alcuni affreschi e decorazioni che testimoniano la ricchezza e l'importanza storica di Viterbo.\n\nOltre alla loro funzione difensiva, le mura medievali di Viterbo sono diventate anche un'attrazione turistica molto apprezzata. Camminare lungo le mura offre una vista panoramica mozzafiato sulla città e permette di immergersi nella storia e nell'atmosfera medievale di Viterbo. Lungo il percorso delle mura si trovano anche alcuni punti di sosta e aree verdi, ideali per una pausa rilassante o per scattare fotografie.\n\nLe mura medievali di Viterbo sono un simbolo della storia e dell'identità della città e rappresentano un importante patrimonio culturale. La loro presenza è un richiamo al passato glorioso di Viterbo e testimonia l'importanza strategica che la città ha avuto nel corso dei secoli."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 486,
+        "total_tokens": 518
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enQMO7KKgvsjcxA7hMMduS4P1Xs1",
+    "object": "chat.completion",
+    "created": 1689957462,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Comunale di Bolsena è un edificio storico situato nel centro del comune di Bolsena, in provincia di Viterbo, Italia. \n\nL'edificio risale al XIII secolo ed è considerato uno dei principali simboli della città. Si trova in Piazza Matteotti, la piazza principale di Bolsena, e si affaccia sul lago omonimo.\n\nIl Palazzo Comunale presenta uno stile architettonico tipico del periodo medievale, con una facciata in pietra e mattoni. L'edificio si sviluppa su due piani, con una torre centrale che si erge sopra il tetto. La torre è caratterizzata da una merlatura guelfa, tipica dell'epoca, e da una piccola loggia con archi gotici.\n\nAll'interno del Palazzo Comunale si trovano diverse sale che conservano ancora l'aspetto originale. Tra queste, la Sala del Consiglio è particolarmente suggestiva, con le sue pareti affrescate e i soffitti decorati. Alcuni degli affreschi rappresentano scene storiche e simboli della città.\n\nOltre alle sale, il Palazzo Comunale ospita anche l'ufficio del sindaco e degli amministratori locali. È possibile visitare l'edificio durante gli orari di apertura e ammirare l'architettura storica e gli affreschi che lo adornano.\n\nIl Palazzo Comunale di Bolsena è un importante punto di riferimento per la comunità locale e un luogo di interesse per i visitatori che desiderano immergersi nella storia e nella cultura della città. La sua posizione centrale lo rende facilmente accessibile e offre una vista panoramica sul lago di Bolsena, che contribuisce a rendere l'esperienza ancora più suggestiva."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 429,
+        "total_tokens": 461
+    }
+}

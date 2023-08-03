@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enYyKkQH4UJ6OJ2pJVVwYXlIbkdB",
+    "object": "chat.completion",
+    "created": 1689957996,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Giardino Portoghesi-Massobrio si trova nel comune di Calcata, un affascinante borgo medievale situato nella regione del Lazio, in Italia. Questo giardino è una vera e propria oasi di tranquillità e bellezza, che si estende su una superficie di circa 2.000 metri quadrati.\n\nIl giardino è stato progettato e realizzato dal famoso architetto portoghese Álvaro Siza Vieira e dal paesaggista italiano Paolo Pejrone. La loro visione era quella di creare uno spazio che si integrasse perfettamente con l'ambiente circostante, rispettando la storia e l'architettura del borgo di Calcata.\n\nIl giardino è caratterizzato da una serie di terrazze che si susseguono in modo armonioso, seguendo il profilo naturale del terreno. Ogni terrazza è ricca di piante e fiori, creando un mix di colori e profumi che incanta i visitatori. Le piante sono state scelte con cura per adattarsi al clima e al terreno della zona, creando un ambiente naturale e rigoglioso.\n\nAl centro del giardino si trova una grande fontana, che aggiunge un tocco di freschezza e serenità all'atmosfera. Intorno alla fontana ci sono panchine e sedie, dove i visitatori possono sedersi e godersi la bellezza del luogo.\n\nIl giardino offre anche una vista panoramica mozzafiato sulla valle circostante e sul borgo di Calcata. Da qui si possono ammirare i tetti delle case in pietra, le stradine tortuose e il paesaggio collinare che circonda il borgo.\n\nIl Giardino Portoghesi-Massobrio è aperto al pubblico e offre un'esperienza unica per gli amanti della natura e dell'architettura. È un luogo ideale per passeggiare, rilassarsi e godersi la bellezza della natura incontaminata."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 493,
+        "total_tokens": 531
+    }
+}

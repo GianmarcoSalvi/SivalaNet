@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmsv8aXNskbsGvNFQNx8r5GkDZeF",
+    "object": "chat.completion",
+    "created": 1690193717,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Bernardino da Siena si trova nel comune di Piansano, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è dedicata a San Bernardino da Siena, un frate francescano del XV secolo noto per la sua predicazione e il suo impegno sociale. La sua figura è molto venerata nella zona e la chiesa è diventata un importante luogo di culto per i fedeli.\n\nL'edificio risale al XV secolo, anche se ha subito diverse modifiche e ampliamenti nel corso dei secoli. La facciata è semplice e sobria, con un portale in pietra e una finestra centrale. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi.\n\nUno degli elementi più interessanti della chiesa è l'altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi. Sopra l'altare si trova una pala d'altare raffigurante San Bernardino da Siena, opera di un artista locale del XVII secolo.\n\nLa chiesa ospita anche diverse opere d'arte di valore, tra cui dipinti e sculture. Tra questi spicca una Madonna con Bambino del XV secolo, attribuita a un artista della scuola senese.\n\nLa Chiesa di San Bernardino da Siena è un luogo di grande spiritualità e devozione per i fedeli di Piansano e delle zone circostanti. Oltre alle funzioni religiose regolari, la chiesa ospita anche eventi culturali e musicali, che contribuiscono a rendere questo luogo ancora più vivo e vibrante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 420,
+        "total_tokens": 457
+    }
+}

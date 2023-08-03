@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqtif9LZJhKtLl5SE8TM3EXk9cdb",
+    "object": "chat.completion",
+    "created": 1690209142,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Piansano è un comune italiano situato nella regione del Lazio, nella provincia di Viterbo. Si trova a circa 90 chilometri a nord-ovest di Roma e a pochi chilometri dal lago di Bolsena.\n\nIl paese si estende su una collina a un'altitudine di circa 400 metri sul livello del mare, offrendo una vista panoramica sulla campagna circostante. La sua posizione elevata lo rende un luogo ideale per godere di un clima piacevole e di un'aria fresca, soprattutto durante i mesi estivi.\n\nPiansano è un tipico borgo medievale, con stradine strette e tortuose, case in pietra e un'atmosfera tranquilla e rilassante. Il centro storico è dominato dalla chiesa di San Giovanni Battista, risalente al XIII secolo, che rappresenta uno dei principali punti di riferimento del paese.\n\nIl comune di Piansano è circondato da una natura incontaminata, con colline verdi, campi coltivati e boschi. Questo rende il luogo perfetto per gli amanti della natura e per chi desidera fare escursioni a piedi o in bicicletta. Inoltre, la vicinanza al lago di Bolsena offre la possibilità di praticare sport acquatici come la vela, il windsurf e la pesca.\n\nPiansano è anche famoso per la sua produzione di olio d'oliva di alta qualità. Le colline circostanti sono ricoperte da uliveti secolari, che producono un olio pregiato e aromatico. Durante l'anno, vengono organizzate diverse sagre e feste dedicate all'olio d'oliva, dove è possibile degustare e acquistare i prodotti locali.\n\nIl paese offre anche una buona selezione di ristoranti, trattorie e bar, dove è possibile gustare la cucina tradizionale locale. I piatti tipici includono pasta fatta in casa, carne di cinghiale, funghi porcini e formaggi locali.\n\nIn sintesi, Piansano è un incantevole borgo medievale immerso nella natura, che offre una combinazione perfetta di storia, cultura, paesaggi mozzafiato e prodotti enogastronomici di alta qualità. È un luogo ideale per chi cerca una fuga dalla vita frenetica della città e desidera immergersi nella tranquillità e nella bellezza della campagna italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 601,
+        "total_tokens": 632
+    }
+}

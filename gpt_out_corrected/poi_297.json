@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoXYw1xeJqYHhvvHZmf4q5HO9B9P",
+    "object": "chat.completion",
+    "created": 1689961752,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Oratorio del Sacro Cuore di Maria si trova nel comune di Civita Castellana, in provincia di Viterbo, nella regione del Lazio, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nL'oratorio è situato all'interno del complesso del Monastero delle Suore Benedettine, che risale al XVII secolo. L'edificio è stato costruito in stile barocco e presenta una facciata imponente e riccamente decorata. La facciata è caratterizzata da un portale d'ingresso sormontato da un timpano curvilineo, decorato con motivi floreali e sculture raffiguranti angeli.\n\nAll'interno dell'oratorio si trova una navata unica, con una volta a botte decorata con affreschi raffiguranti scene della vita di Maria. Le pareti laterali sono adornate da dipinti raffiguranti santi e scene bibliche. Al centro dell'altare maggiore si trova una statua della Madonna del Sacro Cuore, circondata da angeli e decorazioni floreali.\n\nL'oratorio è arricchito da numerosi elementi decorativi, come stucchi dorati, marmi pregiati e affreschi di grande valore artistico. Le cappelle laterali sono decorate con dipinti e sculture raffiguranti santi e scene religiose.\n\nL'Oratorio del Sacro Cuore di Maria è un luogo di culto molto frequentato dai fedeli, che vi si recano per pregare e partecipare alle celebrazioni religiose. L'edificio è anche aperto ai visitatori, che possono ammirare la sua bellezza architettonica e artistica.\n\nInoltre, l'oratorio è spesso sede di concerti e eventi culturali, grazie alla sua acustica eccezionale e alla sua atmosfera suggestiva. La sua posizione panoramica, che offre una vista mozzafiato sulla città di Civita Castellana, lo rende un luogo ideale per organizzare eventi speciali e matrimoni.\n\nIn conclusione, l'Oratorio del Sacro Cuore di Maria è un gioiello architettonico e artistico nel comune di Civita Castellana. La sua bellezza e la sua importanza storica lo rendono un luogo di grande interesse per i visitatori e un punto di riferimento per la comunità religiosa locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 581,
+        "total_tokens": 620
+    }
+}

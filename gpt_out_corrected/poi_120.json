@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enOfZckaYLuenDXTsOVvqu71PamF",
+    "object": "chat.completion",
+    "created": 1689957357,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale Gazzetta è una struttura situata nel comune di Bolsena, in Italia. Si tratta di un antico casale ristrutturato che offre una sistemazione confortevole e un'atmosfera accogliente per i suoi ospiti.\n\nIl casale si trova in una posizione privilegiata, immerso nella campagna toscana e circondato da un ampio giardino ben curato. La sua posizione tranquilla e appartata lo rende il luogo ideale per coloro che cercano una fuga dalla frenesia della vita quotidiana.\n\nLa struttura dispone di diverse camere, arredate con gusto e dotate di tutti i comfort moderni. Ogni camera è unica nel suo genere, con dettagli e arredi che richiamano lo stile rustico e tradizionale della zona. Alcune camere offrono anche una vista panoramica sul paesaggio circostante.\n\nCasale Gazzetta offre anche una serie di servizi per rendere il soggiorno dei suoi ospiti il più piacevole possibile. Tra questi vi sono una piscina all'aperto, ideale per rinfrescarsi durante le calde giornate estive, e un ampio patio dove è possibile rilassarsi e godersi la vista sul giardino.\n\nLa struttura dispone anche di un ristorante interno, dove gli ospiti possono gustare piatti tradizionali della cucina italiana preparati con ingredienti freschi e locali. Il ristorante offre un'ampia selezione di vini locali, che completano perfettamente i piatti proposti.\n\nCasale Gazzetta è inoltre un punto di partenza ideale per esplorare la zona circostante. Il comune di Bolsena è famoso per il suo lago omonimo, il lago di Bolsena, che offre numerose attività all'aperto come il nuoto, la vela e la pesca. La struttura si trova anche a breve distanza da altre attrazioni turistiche, come il centro storico di Bolsena e il Parco Naturale Regionale del Monte Rufeno.\n\nIn sintesi, Casale Gazzetta è un luogo incantevole dove trascorrere una vacanza rilassante immersi nella natura e nella bellezza della campagna toscana. Con la sua atmosfera accogliente, le camere confortevoli e i servizi di qualità, questa struttura offre un'esperienza indimenticabile per i suoi ospiti."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 577,
+        "total_tokens": 609
+    }
+}

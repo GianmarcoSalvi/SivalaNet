@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpcVpkiybdIZQPS0DEvrneLTqUir",
+    "object": "chat.completion",
+    "created": 1690204231,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cella di Santa Rosa è un antico monastero situato nel comune di Vasanello, nella regione del Lazio, in Italia. Questo monastero risale al XIII secolo ed è dedicato a Santa Rosa da Viterbo, una santa italiana del XIII secolo.\n\nLa Cella di Santa Rosa è situata in una posizione panoramica, su una collina circondata da boschi e campi verdi. L'edificio è costruito in pietra e presenta un'architettura medievale, con mura spesse e finestre piccole. La struttura è stata restaurata nel corso degli anni, ma ha mantenuto il suo aspetto originale.\n\nAll'interno della Cella di Santa Rosa si trovano diverse stanze, tra cui una chiesa, una sala capitolare, celle per i monaci e una cucina. La chiesa è particolarmente interessante, con affreschi e dipinti che risalgono al XIII secolo. Questi dipinti raffigurano scene della vita di Santa Rosa e sono considerati un importante esempio dell'arte medievale.\n\nLa Cella di Santa Rosa è stata abitata da monaci fino al XVIII secolo, quando è stata abbandonata. Negli ultimi decenni è stata restaurata e aperta al pubblico come museo e luogo di culto. Oggi è possibile visitare la Cella di Santa Rosa e ammirare l'architettura medievale, gli affreschi e i dipinti.\n\nLa Cella di Santa Rosa è anche un luogo di pellegrinaggio per i devoti di Santa Rosa da Viterbo. Ogni anno, il 4 settembre, si tiene una processione che parte dalla Cella di Santa Rosa e arriva a Viterbo, dove si trova la tomba della santa. Durante questa processione, i partecipanti portano una macchina votiva, chiamata \"macchina di Santa Rosa\", che pesa circa 52 quintali e viene portata a spalla da un gruppo di uomini.\n\nIn conclusione, la Cella di Santa Rosa è un antico monastero situato nel comune di Vasanello, Italia. Questo edificio storico è un importante esempio di architettura medievale e ospita affreschi e dipinti del XIII secolo. È un luogo di culto e pellegrinaggio per i devoti di Santa Rosa da Viterbo e offre ai visitatori la possibilità di immergersi nella storia e nell'arte medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 581,
+        "total_tokens": 614
+    }
+}

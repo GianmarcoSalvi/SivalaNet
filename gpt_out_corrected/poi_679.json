@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7foyvFP1Ihimg2Khv04WU6LmLJXoh",
+    "object": "chat.completion",
+    "created": 1690201777,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre del Seminario e Casa Medievale si trova nel comune di Tarquinia, in Italia. Questo edificio storico è situato nel centro storico della città, vicino alla famosa necropoli etrusca.\n\nLa Torre del Seminario è una torre medievale alta circa 20 metri, costruita nel XII secolo. È realizzata in pietra e mattoni, con una base quadrata e una struttura slanciata che si restringe verso l'alto. La torre è caratterizzata da una serie di finestre ad arco e da una merlatura sulla sommità. Durante il Medioevo, la torre era utilizzata come punto di osservazione e difesa per la città.\n\nAccanto alla Torre del Seminario si trova la Casa Medievale, un edificio residenziale che risale al XIII secolo. Questa casa presenta una facciata in pietra con finestre ad arco e un portale d'ingresso decorato. All'interno, sono presenti diverse stanze che conservano ancora tracce dell'architettura medievale, come soffitti a volta e pavimenti in cotto.\n\nLa Torre del Seminario e Casa Medievale rappresentano un importante esempio di architettura medievale nella regione. Questi edifici testimoniano la storia e la cultura di Tarquinia, che è stata un importante centro etrusco e romano. Oggi, la torre e la casa sono aperte al pubblico e possono essere visitate per ammirare l'architettura e scoprire di più sulla storia della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 382,
+        "total_tokens": 421
+    }
+}

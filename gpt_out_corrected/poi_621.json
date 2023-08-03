@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnBiIyT8FEid2ZGI7SfazHK7f281",
+    "object": "chat.completion",
+    "created": 1690194882,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Doria Pamphilj è una sontuosa residenza nobiliare situata nel comune di San Martino al Cimino, nella regione del Lazio, in Italia. Si trova su una collina che domina il paesaggio circostante, offrendo una vista panoramica mozzafiato.\n\nIl palazzo è stato costruito nel XVII secolo per volere della famiglia Doria Pamphilj, una delle più importanti famiglie nobiliari di Roma. La struttura è un esempio eccezionale dell'architettura barocca italiana, con una facciata imponente e riccamente decorata.\n\nL'edificio si sviluppa su tre piani e presenta una pianta rettangolare. La facciata principale è caratterizzata da un portale d'ingresso monumentale, sormontato da un balcone con una balaustra in ferro battuto. Le finestre sono ornate da cornici elaborate e decorazioni scolpite.\n\nAll'interno, il palazzo ospita una serie di sale affrescate, riccamente decorate con dipinti, stucchi e arredi d'epoca. Tra le sale più famose vi è la Galleria Doria Pamphilj, che ospita una vasta collezione di opere d'arte, tra cui dipinti di artisti rinomati come Caravaggio, Tiziano, Raffaello e Bernini.\n\nIl palazzo è circondato da un vasto parco all'italiana, con giardini formali, fontane e statue. Il parco offre anche una vista panoramica sulla campagna circostante e sul paesaggio collinare.\n\nOggi, il Palazzo Doria Pamphilj è aperto al pubblico e funge anche da sede per eventi culturali e mostre temporanee. La visita al palazzo offre un'opportunità unica per immergersi nella storia e nell'arte italiana, ammirando opere d'arte di inestimabile valore e godendo della bellezza architettonica e paesaggistica che lo circonda."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 482,
+        "total_tokens": 521
+    }
+}

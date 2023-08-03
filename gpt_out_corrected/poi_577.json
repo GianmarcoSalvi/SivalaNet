@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmpwo77M7Zyr1EjfopspBxOZEyaI",
+    "object": "chat.completion",
+    "created": 1690193532,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Francesco si trova nel comune di Orte, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa fu costruita nel XIII secolo e inizialmente faceva parte di un complesso conventuale francescano. L'edificio presenta uno stile architettonico gotico, con una facciata semplice ma elegante. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, sormontato da una lunetta decorata con un bassorilievo raffigurante San Francesco.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di San Francesco e altri santi francescani. Tra gli affreschi più importanti vi è una Madonna con Bambino, attribuita a Pietro Cavallini, uno dei più importanti pittori del periodo.\n\nNella chiesa sono conservate anche numerose opere d'arte, tra cui una Crocifissione di scuola umbra del XV secolo e una statua lignea di San Francesco. Inoltre, la chiesa ospita una cappella dedicata a Santa Caterina da Siena, con un altare in marmo e affreschi raffiguranti la vita della santa.\n\nLa Chiesa di San Francesco è un luogo di culto ancora attivo, ma è anche aperta ai visitatori che desiderano ammirare le sue bellezze artistiche e immergersi nella storia e nella spiritualità che essa rappresenta. La sua posizione nel centro storico di Orte la rende facilmente accessibile e la sua architettura e opere d'arte la rendono una tappa imperdibile per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 451,
+        "total_tokens": 484
+    }
+}

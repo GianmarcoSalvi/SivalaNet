@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqU39mZ2AG7nmIXaxPmZDSlA1CMa",
+    "object": "chat.completion",
+    "created": 1690207551,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Viterbo Sotterranea è un complesso di grotte e cunicoli sotterranei situato nel comune di Viterbo, in Italia. Questo affascinante labirinto sotterraneo si estende per oltre 2 chilometri sotto il centro storico della città.\n\nLe origini di Viterbo Sotterranea risalgono all'epoca etrusca, quando vennero scavate le prime grotte per scopi funerari e di approvvigionamento idrico. Nel corso dei secoli, queste grotte furono ampliate e utilizzate per vari scopi, come rifugi durante le guerre, cantine per conservare il cibo e persino come nascondigli per i contrabbandieri.\n\nOggi, Viterbo Sotterranea è aperta al pubblico e offre un'esperienza unica per esplorare la storia nascosta della città. Durante la visita guidata, si può ammirare una varietà di ambienti sotterranei, tra cui grotte, cunicoli, pozzi e cisterne. Alcune di queste strutture sono ancora in uso, come ad esempio le cisterne che raccoglievano l'acqua piovana per l'approvvigionamento idrico della città.\n\nDurante il percorso, gli esperti guide turistiche forniscono interessanti informazioni sulla storia e l'architettura di Viterbo Sotterranea. Si possono ammirare affreschi medievali, graffiti lasciati dai visitatori nel corso dei secoli e scoprire i segreti di questo affascinante mondo sotterraneo.\n\nLa visita a Viterbo Sotterranea è un'opportunità unica per immergersi nella storia di Viterbo e scoprire una parte nascosta della città. È consigliabile indossare abbigliamento comodo e scarpe adatte, in quanto il percorso può essere stretto e irregolare in alcuni punti.\n\nIn conclusione, Viterbo Sotterranea è un'attrazione turistica affascinante che offre un'esperienza unica per esplorare la storia sotterranea di Viterbo. Con le sue grotte, cunicoli e cisterne, questo complesso sotterraneo offre una prospettiva unica sulla vita passata della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 555,
+        "total_tokens": 591
+    }
+}

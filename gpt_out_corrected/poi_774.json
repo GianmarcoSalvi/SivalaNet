@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpWDhCDfUXS2nuFt1GImg9wPcPHh",
+    "object": "chat.completion",
+    "created": 1690203841,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario Mariano Madonna della Pieve si trova nel comune di Vallerano, nella regione del Lazio, in Italia. Questo santuario è uno dei luoghi di culto più importanti della zona e attira numerosi pellegrini e visitatori ogni anno.\n\nIl santuario è situato su una collina, circondato da un paesaggio mozzafiato e immerso nella natura. La sua posizione elevata offre una vista panoramica sulla campagna circostante e sulle colline circostanti.\n\nLa costruzione del santuario risale al XIII secolo, anche se è stato oggetto di diverse modifiche e ampliamenti nel corso dei secoli. L'edificio attuale presenta uno stile architettonico gotico, con una facciata imponente e una serie di archi e finestre decorate.\n\nAll'interno del santuario si trova la statua della Madonna della Pieve, che è oggetto di grande devozione da parte dei fedeli. La statua, risalente al XIV secolo, raffigura la Madonna con il Bambino Gesù e viene considerata miracolosa da molti credenti. Ogni anno, il 15 agosto, si tiene una solenne processione in onore della Madonna, durante la quale la statua viene portata in giro per il paese.\n\nIl santuario è anche famoso per i suoi affreschi e dipinti, che decorano le pareti interne. Queste opere d'arte risalgono a diversi periodi storici e rappresentano scene religiose e figure sante. Gli affreschi più antichi risalgono al XIV secolo e sono stati realizzati da artisti locali.\n\nOltre alla parte religiosa, il santuario offre anche un'atmosfera di pace e tranquillità. I visitatori possono passeggiare nei giardini circostanti, che sono ben curati e offrono un luogo ideale per la meditazione e la riflessione. Ci sono anche alcune panchine e aree picnic dove i visitatori possono rilassarsi e godersi il panorama.\n\nIl Santuario Mariano Madonna della Pieve è un luogo di grande importanza spirituale e culturale per la comunità locale e per i visitatori. La sua bellezza architettonica, la statua miracolosa e l'atmosfera serena lo rendono un luogo da non perdere per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 555,
+        "total_tokens": 593
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoNrUoDrRgdrcFBq6lwVn7QEpRt7",
+    "object": "chat.completion",
+    "created": 1689961151,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello Orsini è un'imponente fortezza situata nel comune di Celleno, nella regione del Lazio, in Italia. Costruito nel XIII secolo, il castello è uno dei più grandi e meglio conservati della regione.\n\nIl castello si erge su una collina rocciosa, dominando il paesaggio circostante. La sua posizione strategica offre una vista panoramica mozzafiato sulla valle del fiume Tevere e sulle colline circostanti.\n\nL'edificio è caratterizzato da una struttura massiccia, con mura spesse e torri di difesa. L'ingresso principale è sormontato da un grande arco a tutto sesto, che conduce a un cortile interno. Qui si trovano numerosi edifici, tra cui la residenza principale, la cappella, le prigioni e le scuderie.\n\nLa residenza principale del castello è un edificio a tre piani, con ampie sale decorate con affreschi e arredi d'epoca. Alcune delle stanze conservano ancora i loro soffitti a cassettoni originali e i pavimenti in cotto antico. Le finestre sono dotate di eleganti inferriate di ferro battuto e offrono una vista panoramica sulla campagna circostante.\n\nLa cappella del castello è un gioiello architettonico, con un altare in marmo e affreschi che raffigurano scene religiose. La cappella è ancora utilizzata per cerimonie religiose e matrimoni.\n\nLe prigioni del castello sono un altro punto di interesse. Queste celle sotterranee sono state utilizzate per detenere prigionieri durante il periodo medievale. Oggi, le prigioni sono aperte al pubblico e offrono una visione suggestiva della vita all'interno del castello durante quel periodo.\n\nIl Castello Orsini è stato restaurato e aperto al pubblico negli ultimi anni. Oltre alle visite guidate, il castello ospita anche eventi culturali, mostre d'arte e spettacoli teatrali. Inoltre, alcune parti del castello sono state convertite in alloggi turistici, offrendo ai visitatori la possibilità di soggiornare in un'atmosfera medievale unica.\n\nIn sintesi, il Castello Orsini a Celleno è un'importante testimonianza storica e architettonica. La sua maestosità e la sua posizione panoramica lo rendono una meta turistica molto apprezzata, offrendo ai visitatori un'esperienza indimenticabile nel cuore dell'Italia medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 629,
+        "total_tokens": 661
+    }
+}

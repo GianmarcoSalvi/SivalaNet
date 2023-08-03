@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emzZYJohjJmAxrkO0oCEWIvJJ0Zj",
+    "object": "chat.completion",
+    "created": 1689955801,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Cozza-Nardelli è un edificio storico situato nel comune di Acquapendente, in provincia di Viterbo, nella regione del Lazio, Italia. Si trova nel centro storico del paese, in una posizione privilegiata che offre una vista panoramica sulla valle circostante.\n\nL'edificio risale al XVII secolo ed è considerato uno dei più importanti esempi di architettura rinascimentale della zona. È stato costruito in stile barocco, con una facciata imponente e riccamente decorata. La facciata è caratterizzata da un portale d'ingresso in pietra, sormontato da un balcone con ringhiera in ferro battuto.\n\nIl palazzo si sviluppa su più piani ed è circondato da un ampio giardino, che contribuisce a conferire all'edificio un'atmosfera elegante e raffinata. All'interno, il palazzo conserva ancora molti degli elementi originali, come affreschi, stucchi e pavimenti in marmo.\n\nIl Palazzo Cozza-Nardelli è stato oggetto di importanti restauri nel corso degli anni, che hanno permesso di preservare la sua bellezza e autenticità. Oggi, l'edificio è utilizzato come residenza privata e non è aperto al pubblico, ma la sua maestosità può essere ammirata anche dall'esterno.\n\nLa sua posizione centrale nel comune di Acquapendente lo rende un punto di riferimento per i visitatori che desiderano esplorare la città e le sue attrazioni. Nei dintorni del palazzo si trovano numerosi negozi, ristoranti e caffè, che offrono l'opportunità di immergersi nella vita quotidiana del paese.\n\nIn sintesi, il Palazzo Cozza-Nardelli è un gioiello architettonico nel cuore di Acquapendente, che rappresenta un importante esempio di architettura rinascimentale. La sua bellezza e la sua storia lo rendono un luogo di grande interesse per gli amanti dell'arte e della cultura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 511,
+        "total_tokens": 548
+    }
+}

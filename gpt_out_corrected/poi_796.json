@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpeoiYmRoXbI6M4nTZvGm7J1V8fc",
+    "object": "chat.completion",
+    "created": 1690204374,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella di San Lanno si trova nel comune di Vasanello, nella regione del Lazio, in Italia. Questa cappella è un importante luogo di culto e rappresenta un esempio significativo di architettura religiosa nella zona.\n\nLa cappella è dedicata a San Lanno, un santo venerato nella tradizione locale. Si ritiene che San Lanno sia stato un eremita che visse in questa zona nel VI secolo. La sua figura è molto venerata dai fedeli, che si recano in pellegrinaggio presso la cappella per pregare e chiedere grazie.\n\nDal punto di vista architettonico, la Cappella di San Lanno presenta uno stile romanico, con influenze gotiche. La facciata è caratterizzata da un portale in pietra, decorato con sculture e rilievi che raffigurano scene religiose. Sopra il portale si trova una finestra a bifora, che permette l'ingresso di luce all'interno della cappella.\n\nL'interno della cappella è a navata unica, con un altare maggiore decorato con affreschi e statue raffiguranti San Lanno e altri santi. Le pareti sono adornate da dipinti murali che narrano la vita del santo e scene bibliche. L'atmosfera all'interno della cappella è molto suggestiva e tranquilla, invitando alla preghiera e alla riflessione.\n\nLa Cappella di San Lanno è un luogo di grande importanza religiosa e storica per la comunità di Vasanello. Oltre ad essere un punto di riferimento per i fedeli, la cappella attira anche turisti e appassionati di arte e architettura, che possono ammirare la bellezza e l'importanza storica di questo luogo di culto."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 440,
+        "total_tokens": 475
+    }
+}

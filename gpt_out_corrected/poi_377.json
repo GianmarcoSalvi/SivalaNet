@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flKMeRQ1ta4GrVAPTkCiTJRgrBEl",
+    "object": "chat.completion",
+    "created": 1690187730,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario della Madonna del Castellonchio si trova nel comune di Graffignano, nella provincia di Viterbo, nella regione del Lazio, in Italia. Questo santuario è un importante luogo di culto e pellegrinaggio per i fedeli della zona.\n\nIl santuario è situato su una collina, circondato da una splendida cornice naturale di boschi e campi verdi. La sua posizione elevata offre una vista panoramica mozzafiato sulla campagna circostante.\n\nLa costruzione del santuario risale al XV secolo, anche se è stato oggetto di diverse ristrutturazioni nel corso dei secoli. La facciata principale è caratterizzata da un portico con tre archi, sormontato da una statua della Madonna con il Bambino. L'interno del santuario è decorato con affreschi e dipinti che raffigurano scene religiose.\n\nLa Madonna del Castellonchio è la patrona del santuario ed è oggetto di grande devozione da parte dei fedeli. La sua statua è posta sull'altare maggiore e viene venerata durante le celebrazioni religiose. Ogni anno, il 15 agosto, si tiene una grande festa in onore della Madonna, che attira numerosi pellegrini da tutta la regione.\n\nIl santuario è anche un luogo di pace e tranquillità, dove i visitatori possono rifugiarsi per un momento di preghiera e meditazione. Molte persone vengono qui per trovare conforto spirituale e cercare la protezione della Madonna.\n\nOltre al suo significato religioso, il Santuario della Madonna del Castellonchio è anche un importante punto di riferimento storico e culturale per la comunità locale. La sua architettura e le opere d'arte al suo interno rappresentano un patrimonio artistico di grande valore.\n\nIn conclusione, il Santuario della Madonna del Castellonchio è un luogo di grande importanza religiosa, storica e culturale nel comune di Graffignano. La sua bellezza e la sua atmosfera serena lo rendono un luogo ideale per la preghiera, la riflessione e il pellegrinaggio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 517,
+        "total_tokens": 556
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flvAdYXGo09Zf623thfNisQVoKMG",
+    "object": "chat.completion",
+    "created": 1690190012,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Lungolago di Marta è una bellissima passeggiata lungo le rive del Lago di Bolsena, nel comune di Marta, in Italia. Si estende per circa un chilometro e offre una vista mozzafiato sul lago e sulle colline circostanti.\n\nLa passeggiata è caratterizzata da un percorso pedonale ben curato e da una pista ciclabile, che la rendono ideale per una piacevole passeggiata o una corsa mattutina. Lungo il percorso si trovano panchine e aree verdi, dove è possibile sedersi e godersi la tranquillità del luogo.\n\nIl Lungolago di Marta è anche un luogo molto amato dai pescatori, grazie alla ricchezza di pesce nel lago. È possibile vedere pescatori intenti nella loro attività lungo le rive o sulle barche.\n\nDurante il percorso si possono ammirare diverse specie di uccelli che vivono nelle acque del lago, come cigni, anatre e aironi. È un vero paradiso per gli amanti della natura e della fotografia.\n\n Lungo il Lungolago si trovano anche alcuni ristoranti e bar, dove è possibile gustare piatti tipici della cucina locale o semplicemente rilassarsi con un drink ammirando il panorama.\n\nIl Lungolago di Marta è un luogo ideale per trascorrere del tempo all'aria aperta, immersi nella natura e lontani dal caos della città. È un luogo perfetto per una passeggiata romantica al tramonto o per una giornata di relax in famiglia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 391,
+        "total_tokens": 425
+    }
+}

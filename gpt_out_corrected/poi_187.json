@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enmqlOIVdLJYvCbLKz7CsrHhCLka",
+    "object": "chat.completion",
+    "created": 1689958856,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Parco Naturalistico Archeologico di Vulci si trova nel comune di Canino, nella regione del Lazio, in Italia. Si estende su una superficie di circa 1.300 ettari e rappresenta uno dei siti archeologici più importanti e suggestivi della regione.\n\nIl parco è situato nella valle del fiume Fiora e comprende una vasta area di interesse naturalistico e archeologico. La sua storia risale all'antica città etrusca di Vulci, che fu uno dei centri più importanti della civiltà etrusca. La città fu fondata nel VII secolo a.C. e raggiunse il suo massimo splendore tra il VI e il IV secolo a.C.\n\nAll'interno del parco si possono ammirare numerosi reperti archeologici, tra cui le imponenti mura ciclopiche che circondavano l'antica città, le tombe etrusche, i resti di templi e teatri, nonché una necropoli con oltre 2.000 tombe.\n\nIl parco offre anche una ricca flora e fauna, con una varietà di habitat naturali, tra cui boschi, prati, fiumi e laghi. È possibile fare escursioni lungo i sentieri che attraversano il parco e ammirare la bellezza della natura circostante.\n\nInoltre, il parco organizza regolarmente eventi culturali e didattici, come visite guidate, laboratori e conferenze, per far conoscere e valorizzare il patrimonio storico e naturalistico di Vulci.\n\nIl Parco Naturalistico Archeologico di Vulci è un luogo ideale per gli amanti della storia, della natura e dell'archeologia, offrendo un'esperienza unica e affascinante nel cuore dell'antica civiltà etrusca."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 431,
+        "total_tokens": 473
+    }
+}

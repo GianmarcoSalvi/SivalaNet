@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq7BmpvOiRxKl8QvDZMyBpYJg3zo",
+    "object": "chat.completion",
+    "created": 1690206133,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cattedrale di San Lorenzo si trova nel comune di Viterbo, in Italia. È uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura religiosa medievale.\n\nLa cattedrale è dedicata a San Lorenzo, uno dei santi più venerati nella tradizione cattolica. La sua costruzione risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. L'edificio è situato nella piazza principale di Viterbo, Piazza San Lorenzo, e si affaccia su una serie di strade storiche e palazzi antichi.\n\nL'esterno della cattedrale presenta una facciata in stile romanico, caratterizzata da un portale centrale sormontato da un rosone. La facciata è decorata con sculture e rilievi che raffigurano scene bibliche e simboli religiosi. Sopra il portale principale si trova una statua di San Lorenzo, mentre ai lati sono presenti due torri campanarie.\n\nL'interno della cattedrale è a pianta basilicale, con tre navate separate da colonne e archi. Le navate laterali sono decorate con affreschi e dipinti che raffigurano scene della vita di San Lorenzo e altri episodi religiosi. Nella navata centrale si trova l'altare maggiore, sormontato da un baldacchino e circondato da opere d'arte sacra.\n\nUno dei punti salienti della cattedrale è la Cappella del Sacramento, situata sul lato destro dell'edificio. Questa cappella è decorata con affreschi del XV secolo che raffigurano scene della vita di Cristo. Al centro della cappella si trova un altare in marmo, sormontato da una pala d'altare che raffigura l'Ultima Cena.\n\nLa Cattedrale di San Lorenzo è un importante centro di culto e spiritualità per la comunità di Viterbo. Oltre alle funzioni religiose regolari, la cattedrale ospita anche eventi speciali e celebrazioni durante tutto l'anno, attirando visitatori e fedeli da tutto il mondo. La sua bellezza architettonica e artistica, insieme alla sua importanza storica e religiosa, la rendono una tappa imperdibile per i visitatori che si trovano a Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 577,
+        "total_tokens": 611
+    }
+}

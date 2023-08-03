@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqIEsNybQMZCRe3oWxKsFpyQRrj6",
+    "object": "chat.completion",
+    "created": 1690206818,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Facoltà di Scienze Politiche dell'Università degli studi della Tuscia si trova nel comune di Viterbo, in Italia. È situata all'interno del campus universitario, offrendo un ambiente accogliente e tranquillo per lo studio e la ricerca.\n\nLa biblioteca è specializzata nella raccolta di materiale bibliografico e documentario riguardante le scienze politiche, offrendo una vasta gamma di risorse per gli studenti, i docenti e i ricercatori. La sua collezione comprende libri, riviste, periodici, tesi di laurea, pubblicazioni accademiche e materiali multimediali.\n\nLa biblioteca offre anche l'accesso a numerosi database online, consentendo agli utenti di accedere a una vasta gamma di risorse digitali, come articoli accademici, e-book, banche dati e altro ancora. Questo permette agli studenti e ai ricercatori di accedere a informazioni aggiornate e di alta qualità per i loro studi e le loro ricerche.\n\nLa struttura della biblioteca è moderna e ben organizzata, con diverse aree di studio e postazioni di lavoro. Ci sono anche spazi dedicati alla consultazione dei materiali, come sale lettura e postazioni computer. Inoltre, la biblioteca offre servizi di prestito, fotocopie e consulenza bibliografica, per supportare gli utenti nelle loro esigenze di studio e ricerca.\n\nIl personale della biblioteca è altamente qualificato e disponibile ad assistere gli utenti nella ricerca di informazioni e nell'utilizzo delle risorse disponibili. Organizzano anche workshop e sessioni di formazione per aiutare gli utenti a sviluppare le loro competenze di ricerca e utilizzo delle risorse bibliografiche.\n\nIn conclusione, la Biblioteca della Facoltà di Scienze Politiche dell'Università degli studi della Tuscia è un'importante risorsa per gli studenti e i ricercatori nel campo delle scienze politiche. Offre una vasta gamma di risorse bibliografiche e documentarie, servizi di alta qualità e un ambiente di studio ideale per la ricerca accademica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 51,
+        "completion_tokens": 502,
+        "total_tokens": 553
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7foz8VfvxdCPVtMEJnZ5owhbtHM3X",
+    "object": "chat.completion",
+    "created": 1690201790,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana Nova è una delle attrazioni principali nel comune di Tarquinia, situato nella regione del Lazio, in Italia. Questa fontana storica si trova nel centro storico della città, nella piazza principale, Piazza Cavour.\n\nLa Fontana Nova è stata costruita nel XVII secolo, durante il periodo del Rinascimento, ed è considerata uno dei simboli di Tarquinia. È stata progettata dall'architetto Carlo Fontana, da cui prende il nome, ed è stata realizzata in marmo bianco.\n\nLa fontana presenta un design elegante e raffinato, con una struttura a tre livelli. Al centro si trova un grande bacino circolare, decorato con sculture e rilievi che rappresentano scene mitologiche e allegoriche. Sopra il bacino, si erge una colonna centrale, sormontata da una statua di Nettuno, il dio del mare, che regge un tridente.\n\nIntorno alla colonna centrale, ci sono quattro piccoli bacini più piccoli, decorati con teste di leone che gettano acqua. Questi bacini sono collegati al bacino principale attraverso delle piccole canalizzazioni, creando un piacevole effetto di flusso d'acqua.\n\nLa Fontana Nova è un punto di riferimento per i residenti e i visitatori di Tarquinia. È un luogo ideale per rilassarsi e godersi l'atmosfera della piazza circostante. Durante le calde giornate estive, molte persone si riuniscono intorno alla fontana per rinfrescarsi e ammirare la sua bellezza.\n\nLa fontana è anche un luogo popolare per scattare fotografie, grazie al suo design affascinante e alla sua posizione centrale. È spesso utilizzata come sfondo per matrimoni, eventi e celebrazioni speciali.\n\nLa Fontana Nova rappresenta un importante patrimonio storico e artistico per Tarquinia. È un esempio di architettura rinascimentale e testimonia la ricchezza e l'importanza della città nel corso dei secoli. La sua bellezza e la sua maestosità la rendono una tappa imperdibile per chi visita Tarquinia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 539,
+        "total_tokens": 570
+    }
+}

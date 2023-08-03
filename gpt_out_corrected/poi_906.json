@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqEnttiA0CqXr60oAvoLeflzXcZe",
+    "object": "chat.completion",
+    "created": 1690206605,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il centro storico di Viterbo è situato nel comune omonimo, nella regione del Lazio, in Italia. È un affascinante labirinto di strade medievali, piazze e palazzi che raccontano la storia millenaria della città.\n\nUna delle caratteristiche più distintive del centro storico di Viterbo è il suo imponente sistema di mura medievali, che circonda l'intera area. Queste mura sono state costruite nel XII secolo e sono ancora in gran parte intatte, offrendo una vista spettacolare sulla città e sulla campagna circostante.\n\nAll'interno delle mura, si trovano numerose piazze pittoresche, come Piazza del Plebiscito e Piazza San Lorenzo, che sono il cuore pulsante della vita sociale di Viterbo. Qui è possibile trovare caffè, ristoranti e negozi, nonché importanti monumenti storici.\n\nUno dei luoghi più emblematici del centro storico è il Palazzo dei Papi, un imponente edificio gotico che fu la residenza dei papi nel XIII secolo. Oggi è possibile visitare il palazzo e ammirare gli affreschi medievali e le sale riccamente decorate.\n\nUn'altra attrazione imperdibile è la Cattedrale di San Lorenzo, una maestosa chiesa romanica che risale al XII secolo. All'interno, si possono ammirare opere d'arte di grande valore, tra cui il famoso Crocifisso di Santa Rosa, un'icona religiosa molto venerata.\n\nIl centro storico di Viterbo è anche famoso per le sue terme, che risalgono all'epoca romana. Le Terme dei Papi sono le più famose e offrono una vasta gamma di trattamenti termali e benessere. È possibile immergersi nelle acque termali calde e rigeneranti, godendo di un'esperienza di relax unica.\n\nInfine, il centro storico di Viterbo è noto per la sua festa tradizionale chiamata \"Macchina di Santa Rosa\". Ogni anno, il 3 settembre, una grande torre illuminata viene portata in processione per le strade del centro storico, per commemorare Santa Rosa, la patrona della città.\n\nIn sintesi, il centro storico di Viterbo è un luogo affascinante e ricco di storia, dove è possibile immergersi nell'atmosfera medievale della città, ammirare importanti monumenti e godere di trattamenti termali rigeneranti."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 586,
+        "total_tokens": 623
+    }
+}

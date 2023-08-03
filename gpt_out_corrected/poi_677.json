@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7foyJncuyPgnSfEYGRrW1q8dRdl3u",
+    "object": "chat.completion",
+    "created": 1690201739,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Porto Clementino è una località situata nel comune di Tarquinia, in provincia di Viterbo, nella regione del Lazio, Italia. Si trova lungo la costa tirrenica, a circa 5 chilometri a nord del centro storico di Tarquinia.\n\nPorto Clementino è una località balneare molto apprezzata, grazie alle sue spiagge sabbiose e al mare cristallino. La sua posizione privilegiata, immersa nella natura e circondata da una pineta secolare, la rende un luogo ideale per trascorrere le vacanze estive.\n\nLe spiagge di Porto Clementino sono ampie e ben attrezzate, con stabilimenti balneari che offrono servizi come ombrelloni, lettini, bar e ristoranti. La sabbia è fine e dorata, perfetta per rilassarsi al sole o per fare lunghe passeggiate lungo la riva. Il mare è pulito e poco profondo, adatto anche ai bambini.\n\nOltre alle spiagge, Porto Clementino offre anche la possibilità di praticare diverse attività sportive e ricreative. Ci sono campi da tennis, campi da calcetto e campi da beach volley, dove è possibile organizzare partite con amici o partecipare a tornei. È anche possibile noleggiare canoe o pedalò per esplorare la costa o fare escursioni in barca per ammirare il panorama marino.\n\nNelle vicinanze di Porto Clementino si trovano anche alcuni punti di interesse storico e culturale. A pochi chilometri di distanza si trova la città di Tarquinia, famosa per le sue necropoli etrusche, che sono state dichiarate Patrimonio dell'Umanità dall'UNESCO. È possibile visitare le tombe dipinte degli antichi etruschi e scoprire la loro storia e cultura.\n\nInoltre, Porto Clementino è ben collegato ad altre località turistiche della zona, come Civitavecchia e Santa Marinella, che offrono ulteriori opportunità di svago e divertimento.\n\nIn sintesi, Porto Clementino è una località balneare incantevole nel comune di Tarquinia, con spiagge sabbiose, mare cristallino e una natura incontaminata. È un luogo ideale per trascorrere le vacanze estive, godendo del sole, del mare e delle numerose attività offerte dalla zona circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 579,
+        "total_tokens": 611
+    }
+}

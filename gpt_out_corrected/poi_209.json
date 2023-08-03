@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enueHPPQ2VjOX91moBM3Uzsmpmet",
+    "object": "chat.completion",
+    "created": 1689959340,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Parrocchia San Michele Arcangelo si trova nel comune di Caprarola, in Italia. È una chiesa di culto cattolico dedicata all'arcangelo Michele, uno dei principali santi della tradizione cristiana.\n\nLa chiesa è situata nel centro storico di Caprarola, in una posizione prominente che la rende visibile da diverse parti del paese. La sua facciata è imponente e presenta un portale d'ingresso decorato con sculture e rilievi che rappresentano scene bibliche.\n\nL'interno della chiesa è caratterizzato da una navata centrale ampia e luminosa, con soffitto a volta e pareti affrescate. Gli affreschi raffigurano episodi della vita di San Michele Arcangelo e altre scene religiose. L'altare maggiore è ornato con sculture e dipinti che rappresentano l'arcangelo Michele in varie forme.\n\nLa Parrocchia San Michele Arcangelo è un importante punto di riferimento per la comunità cattolica di Caprarola. Oltre alle celebrazioni liturgiche regolari, la chiesa ospita anche eventi speciali come matrimoni, battesimi e funerali. È un luogo di preghiera e riflessione per i fedeli, che possono trovare qui un ambiente tranquillo e sereno per dedicarsi alla loro spiritualità.\n\nLa chiesa è anche un importante patrimonio storico e artistico per il comune di Caprarola. La sua architettura e le opere d'arte al suo interno rappresentano un esempio significativo dello stile religioso dell'epoca in cui è stata costruita.\n\nInoltre, la Parrocchia San Michele Arcangelo è circondata da un cortile e da un giardino, che offrono uno spazio verde e tranquillo per momenti di contemplazione e relax. Questo rende la chiesa non solo un luogo di culto, ma anche un punto di incontro per la comunità locale.\n\nIn sintesi, la Parrocchia San Michele Arcangelo a Caprarola è una chiesa cattolica di grande importanza storica, artistica e spirituale. La sua bellezza architettonica e le opere d'arte al suo interno la rendono un luogo di grande fascino per i visitatori e un punto di riferimento per la comunità cattolica locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 558,
+        "total_tokens": 593
+    }
+}

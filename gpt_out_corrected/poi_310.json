@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eob9ucMtjdXv9A5wOQHsAK0tVdtd",
+    "object": "chat.completion",
+    "created": 1689961975,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna delle Grazie si trova nel comune di Corchiano, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nel centro storico del paese, circondata da un suggestivo paesaggio collinare. La sua costruzione risale al XV secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico tipicamente rinascimentale, con una facciata semplice ma elegante. La porta d'ingresso è sormontata da un arco a tutto sesto, mentre sopra di essa si trova una finestra rettangolare. La facciata è decorata con alcuni affreschi che raffigurano scene religiose.\n\nAll'interno, la chiesa presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi di grande valore artistico, realizzati da importanti pittori dell'epoca. Tra le opere più significative si possono ammirare la Madonna delle Grazie, da cui la chiesa prende il nome, e una serie di scene della vita di Gesù.\n\nL'altare maggiore è particolarmente imponente, con una ricca decorazione in marmo e una pala d'altare che raffigura la Madonna con il Bambino. Ai lati dell'altare si trovano due cappelle laterali, anch'esse decorate con affreschi e sculture di pregio.\n\nLa Chiesa della Madonna delle Grazie è un luogo di culto molto frequentato dai fedeli, che vi si recano per pregare e partecipare alle celebrazioni religiose. Oltre al suo valore religioso, l'edificio rappresenta anche un importante patrimonio storico e artistico per il comune di Corchiano e per l'intera regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 465,
+        "total_tokens": 501
+    }
+}

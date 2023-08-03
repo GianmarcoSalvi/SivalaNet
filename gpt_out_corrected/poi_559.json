@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmjYRrfsgKs2oTOwwU2oChNaAkwQ",
+    "object": "chat.completion",
+    "created": 1690193136,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Orte, situata nel cuore del comune in una posizione centrale e facilmente accessibile, è un importante punto di riferimento per la comunità locale. \n\nLa struttura della biblioteca è moderna e accogliente, con ampie sale luminose e spazi dedicati alla lettura, allo studio e alla consultazione dei materiali presenti. Dispone di un vasto catalogo di libri, riviste, giornali e pubblicazioni di vario genere, che coprono diverse discipline e interessi.\n\nLa biblioteca offre un servizio di prestito gratuito, permettendo ai residenti di Orte di accedere a una vasta gamma di materiali per arricchire la propria conoscenza e soddisfare le proprie passioni. Gli utenti possono richiedere i libri desiderati e portarli a casa per un determinato periodo di tempo, garantendo così la massima flessibilità e comodità.\n\nOltre al servizio di prestito, la biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, incontri con autori e laboratori per bambini e adulti. Queste attività mirano a promuovere la lettura, stimolare la curiosità e favorire lo scambio di idee e opinioni tra i membri della comunità.\n\nLa biblioteca comunale di Orte è anche dotata di una sala multimediale, attrezzata con computer e accesso a internet, che consente agli utenti di svolgere ricerche online, consultare risorse digitali e accedere a servizi online.\n\nIl personale della biblioteca è altamente qualificato e disponibile ad assistere gli utenti nella ricerca di materiali, nella navigazione online e nella partecipazione alle attività proposte. Inoltre, la biblioteca offre servizi di consulenza e orientamento per la scelta di libri e risorse adatti alle diverse esigenze e interessi degli utenti.\n\nIn conclusione, la biblioteca comunale di Orte rappresenta un luogo di cultura, conoscenza e socializzazione per la comunità locale. Grazie alla sua vasta offerta di materiali, servizi e attività, si pone come un punto di riferimento per gli abitanti di Orte che desiderano arricchire la propria vita culturale e accedere a risorse di qualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 544,
+        "total_tokens": 576
+    }
+}

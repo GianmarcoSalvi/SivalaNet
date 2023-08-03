@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqp2Epc6vc7NaPS5TB1D7vmWQQaP",
+    "object": "chat.completion",
+    "created": 1690208852,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Graffignano è un piccolo comune situato nella regione del Lazio, nella provincia di Viterbo, in Italia. Si trova a circa 80 chilometri a nord di Roma e a pochi chilometri a sud-ovest di Viterbo.\n\nIl paese è situato su una collina, a un'altitudine di circa 400 metri sul livello del mare, e offre una vista panoramica sulla campagna circostante. La sua posizione elevata lo rende un luogo ideale per godere di un clima piacevole e di un'aria fresca.\n\nGraffignano è un tipico borgo medievale, con stradine strette e tortuose, case in pietra e un'atmosfera tranquilla e suggestiva. Il centro storico è ben conservato e offre numerosi punti di interesse, come la chiesa di San Giovanni Battista, risalente al XIII secolo, con il suo campanile a vela e il portale in stile romanico.\n\nIl paese è circondato da una campagna verde e rigogliosa, caratterizzata da colline, campi coltivati e boschi. Questo ambiente naturale offre molte opportunità per escursioni a piedi o in bicicletta, permettendo ai visitatori di esplorare la bellezza della campagna italiana.\n\nGraffignano è anche famoso per la sua produzione di olio d'oliva di alta qualità. Le colline circostanti sono ricoperte da uliveti secolari, che producono un olio pregiato e aromatico. Durante il periodo della raccolta delle olive, è possibile assistere al processo di produzione dell'olio e acquistare prodotti locali direttamente dai produttori.\n\nIl paese ospita anche diverse manifestazioni culturali e tradizionali durante l'anno, come sagre, fiere e festival. Questi eventi offrono l'opportunità di immergersi nella cultura locale, gustare la cucina tradizionale e partecipare a spettacoli e attività divertenti.\n\nIn sintesi, Graffignano è un incantevole borgo medievale immerso nella campagna laziale, che offre una combinazione di storia, natura e tradizioni locali. È un luogo ideale per coloro che cercano una fuga tranquilla dalla vita urbana e desiderano scoprire la bellezza autentica dell'Italia rurale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 576,
+        "total_tokens": 610
+    }
+}

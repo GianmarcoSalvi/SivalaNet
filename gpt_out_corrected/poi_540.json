@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmMbW18hpDVCbnLGdGsueSbquPH7",
+    "object": "chat.completion",
+    "created": 1690191713,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna del Piano si trova nel comune di Onano, in provincia di Viterbo, Italia. Questo edificio religioso è situato su una collina panoramica, circondata da un paesaggio suggestivo e immerso nella natura.\n\nLa chiesa è stata costruita nel XVII secolo e presenta uno stile architettonico tipico delle chiese rurali dell'epoca. La facciata è semplice ma elegante, con un portale in pietra e una finestra centrale. Sopra il portale è presente un affresco raffigurante la Madonna del Piano, da cui la chiesa prende il nome.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. L'altare maggiore è ornato da una pala d'altare raffigurante la Madonna del Piano, opera di un artista locale. Ai lati dell'altare sono presenti due cappelle laterali, dedicate a santi e patroni locali.\n\nLa Chiesa della Madonna del Piano è un luogo di culto molto amato dalla comunità locale. Ogni anno, il 15 agosto, si celebra una festa religiosa in onore della Madonna del Piano, che attira numerosi fedeli e visitatori da tutto il territorio circostante.\n\nOltre al suo valore religioso, la chiesa offre anche una vista panoramica mozzafiato sulla campagna circostante. Dalla sua posizione elevata, è possibile ammirare le colline, i campi coltivati e i borghi medievali che caratterizzano questa parte dell'Italia.\n\nLa Chiesa della Madonna del Piano rappresenta quindi un importante punto di riferimento per la comunità di Onano, sia dal punto di vista religioso che culturale. La sua bellezza architettonica e la sua posizione suggestiva la rendono un luogo di grande fascino e interesse per i visitatori che desiderano immergersi nella storia e nella spiritualità di questa regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 480,
+        "total_tokens": 514
+    }
+}

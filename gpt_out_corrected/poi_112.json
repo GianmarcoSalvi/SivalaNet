@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enMMc31xqC15eXb8tCAa8gw92cZ5",
+    "object": "chat.completion",
+    "created": 1689957214,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il complesso architettonico e paesaggistico di Viale Colesanti si trova nel comune di Bolsena, in Italia. Si tratta di una strada alberata che si estende per circa un chilometro, collegando il centro storico di Bolsena al lago omonimo.\n\nIl viale è caratterizzato da una serie di edifici storici e residenziali che risalgono principalmente al XIX secolo. Questi edifici sono costruiti in stile neoclassico e neogotico, con facciate decorate e dettagli architettonici eleganti. Alcuni di essi sono stati restaurati e conservano ancora gli elementi originali, come le cornici delle finestre e le decorazioni in ferro battuto.\n\nLungo il viale si trovano anche alcuni giardini pubblici, che offrono un'oasi di verde e tranquillità nel contesto urbano. Questi giardini sono ben curati e sono dotati di panchine e aree giochi per bambini, rendendoli luoghi ideali per una passeggiata o per rilassarsi all'ombra degli alberi.\n\nIl viale offre anche una vista panoramica sul lago di Bolsena, uno dei laghi vulcanici più grandi d'Europa. Le acque cristalline del lago si estendono fino all'orizzonte, creando un paesaggio mozzafiato che si può ammirare da diversi punti lungo il viale.\n\nDurante l'estate, Viale Colesanti diventa un luogo di ritrovo per i residenti e i turisti, che si godono la fresca brezza del lago e le attività ricreative offerte dalla zona circostante. Ci sono numerosi ristoranti, bar e gelaterie lungo il viale, dove è possibile gustare la cucina locale e i prodotti tipici della regione.\n\nComplessivamente, il complesso architettonico e paesaggistico di Viale Colesanti è un luogo affascinante che combina l'architettura storica con la bellezza naturale del lago di Bolsena. È un luogo ideale per una passeggiata rilassante, per ammirare l'architettura e per godersi la vista panoramica sul lago."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 538,
+        "total_tokens": 584
+    }
+}

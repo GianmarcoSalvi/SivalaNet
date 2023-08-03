@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eocC3oY6nSWm7wp1wM4c1hmVMgfe",
+    "object": "chat.completion",
+    "created": 1689962040,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria del Rosario si trova nel comune di Corchiano, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di culto cattolico e rappresenta uno dei principali luoghi di culto della zona.\n\nLa chiesa è situata nel centro storico di Corchiano, circondata da un suggestivo paesaggio collinare. La sua costruzione risale al XVII secolo, anche se sono state apportate modifiche e restauri nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico barocco, con una facciata semplice ma elegante. La facciata è caratterizzata da un portale d'ingresso in pietra, sormontato da un timpano triangolare. Sopra il portale è presente una finestra circolare, che permette l'ingresso di luce naturale all'interno della chiesa.\n\nL'interno della Chiesa di Santa Maria del Rosario è a navata unica, con una volta a botte decorata con affreschi raffiguranti scene religiose. Le pareti laterali sono adornate da dipinti e statue di santi, che aggiungono un tocco di bellezza e spiritualità all'ambiente.\n\nL'altare maggiore è particolarmente imponente, con una struttura in marmo riccamente decorata. Sopra l'altare è collocata una grande pala d'altare raffigurante la Madonna del Rosario, circondata da angeli e santi. Questa rappresentazione religiosa è molto venerata dai fedeli e rappresenta uno dei principali oggetti di devozione della chiesa.\n\nLa Chiesa di Santa Maria del Rosario è un luogo di culto molto frequentato dai residenti di Corchiano e dai visitatori che desiderano ammirare l'arte e l'architettura religiosa. Oltre alle funzioni religiose regolari, la chiesa ospita anche eventi speciali come matrimoni, battesimi e funerali.\n\nLa sua posizione nel centro storico di Corchiano la rende facilmente accessibile a piedi o in auto. La chiesa è circondata da stradine acciottolate e da un'atmosfera tranquilla e suggestiva, che invita alla riflessione e alla preghiera.\n\nIn conclusione, la Chiesa di Santa Maria del Rosario a Corchiano è un luogo di culto di grande importanza storica e artistica. La sua architettura barocca, gli affreschi e le opere d'arte al suo interno la rendono un luogo di grande bellezza e spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 637,
+        "total_tokens": 674
+    }
+}

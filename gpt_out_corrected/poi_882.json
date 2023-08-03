@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq7V2j8RwWaJFwDj96QtLDH9rPkz",
+    "object": "chat.completion",
+    "created": 1690206153,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'Istituto San Giuseppe artigiano si trova nel comune di Viterbo, in Italia. È situata all'interno dell'Istituto San Giuseppe artigiano, un istituto di formazione professionale che offre corsi di formazione nel settore artigianale.\n\nLa biblioteca è un luogo accogliente e silenzioso, ideale per lo studio e la ricerca. Dispone di un vasto assortimento di libri, riviste, giornali e materiali multimediali, che coprono una vasta gamma di argomenti. La collezione comprende testi di letteratura, storia, scienze, arte, musica, filosofia, psicologia e molto altro ancora.\n\nLa biblioteca offre anche servizi di prestito, consultazione e ricerca. Gli utenti possono prendere in prestito libri per un determinato periodo di tempo e possono consultare i materiali in loco. Inoltre, il personale della biblioteca è disponibile per aiutare gli utenti nella ricerca di informazioni e nella consultazione di risorse.\n\nLa struttura della biblioteca è moderna e ben organizzata. Dispone di spazi di studio individuali e di gruppo, dotati di tavoli, sedie e prese elettriche per laptop e dispositivi elettronici. Inoltre, la biblioteca offre anche accesso a internet e computer per la ricerca online.\n\nLa Biblioteca dell'Istituto San Giuseppe artigiano è aperta a studenti, docenti e al pubblico in generale. È un luogo ideale per gli studenti che desiderano approfondire le proprie conoscenze e per coloro che sono interessati alla cultura e alla ricerca."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 389,
+        "total_tokens": 430
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoiY4GcpsKCoPDe2pydP0DOERDvQ",
+    "object": "chat.completion",
+    "created": 1689962434,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Giuliano si trova nel comune di Faleria, in provincia di Viterbo, nella regione del Lazio, Italia. Questo edificio religioso è uno dei principali punti di riferimento storici e culturali della zona.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale d'ingresso decorato con sculture e un rosone centrale. La struttura è realizzata in pietra locale, che conferisce un aspetto rustico e affascinante.\n\nAll'interno, la chiesa presenta una navata unica con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di Santo Giuliano, il santo patrono della chiesa. Gli affreschi sono di grande valore artistico e storico e sono stati restaurati per preservarne la bellezza.\n\nNella parte posteriore della chiesa si trova un altare in marmo, sormontato da una statua di Santo Giuliano. L'altare è ornato con intagli dettagliati e offre un punto focale per la preghiera e la devozione dei fedeli.\n\nLa Chiesa di Santo Giuliano è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari, come messe e matrimoni. È anche aperta ai visitatori che desiderano ammirare l'architettura e l'arte sacra all'interno.\n\nLa chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante. È circondata da un piccolo cortile e da un giardino ben curato, che aggiunge ulteriore bellezza al suo ambiente.\n\nLa Chiesa di Santo Giuliano rappresenta un importante patrimonio storico e culturale per la comunità di Faleria e per i visitatori che desiderano immergersi nella storia e nella spiritualità della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 495,
+        "total_tokens": 530
+    }
+}

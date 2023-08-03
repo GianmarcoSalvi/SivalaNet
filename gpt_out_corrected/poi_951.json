@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqUN0ijHB9gcdt8elMHshz69haaz",
+    "object": "chat.completion",
+    "created": 1690207571,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'Archivio di Stato di Viterbo si trova nel comune di Viterbo, in Italia. È una biblioteca specializzata che fa parte dell'Archivio di Stato di Viterbo, un istituto che conserva documenti storici di grande importanza per la città e la regione circostante.\n\nLa biblioteca è situata all'interno del complesso dell'Archivio di Stato, che si trova in Via San Lorenzo, nel centro storico di Viterbo. L'edificio che ospita la biblioteca è di grande valore storico e architettonico, risalente al XIII secolo e appartenente all'antico monastero di San Lorenzo.\n\nLa biblioteca è specializzata nella conservazione e nella consultazione di libri, periodici, manoscritti e altre pubblicazioni di interesse storico e culturale. Il suo patrimonio librario è composto da oltre 50.000 volumi, che coprono un ampio spettro di argomenti, tra cui storia, arte, letteratura, diritto e scienze sociali.\n\nGli utenti della biblioteca possono accedere alle collezioni per la consultazione in sede, previa registrazione e richiesta di un permesso di consultazione. La biblioteca offre anche servizi di fotocopie e riproduzioni digitali dei documenti, previa autorizzazione e pagamento di una tariffa.\n\nIl personale della biblioteca è altamente qualificato e disponibile ad assistere gli utenti nella ricerca e nella consultazione dei materiali. Inoltre, organizza regolarmente mostre, conferenze e altre attività culturali per promuovere la conoscenza e la diffusione del patrimonio storico e culturale della regione.\n\nLa Biblioteca dell'Archivio di Stato di Viterbo è un luogo di grande importanza per gli studiosi, gli studenti e tutti coloro che sono interessati alla storia e alla cultura della città e della regione circostante. La sua vasta collezione di libri e documenti offre una preziosa fonte di informazioni e risorse per la ricerca e lo studio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 482,
+        "total_tokens": 525
+    }
+}

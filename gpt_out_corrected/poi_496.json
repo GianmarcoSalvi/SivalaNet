@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm76dIs1q3Ua3n7VEeA0NhAUImmx",
+    "object": "chat.completion",
+    "created": 1690190752,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Andrea in Campo si trova nel comune di Montefiascone, in provincia di Viterbo, nella regione del Lazio, Italia. È una delle chiese più importanti e antiche della città.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale decorato e una grande finestra centrale. La facciata è realizzata in pietra locale, che conferisce un aspetto rustico ma affascinante alla struttura.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti in pietra. Le pareti sono decorate con affreschi medievali, che rappresentano scene religiose e figure di santi. Questi affreschi sono un importante esempio dell'arte medievale nella regione.\n\nLa chiesa ospita anche diverse opere d'arte, tra cui una Madonna con Bambino del XV secolo e una Crocifissione del XVI secolo. Queste opere sono esempi di arte sacra e sono state realizzate da artisti locali.\n\nUno degli elementi più interessanti della Chiesa di Sant'Andrea in Campo è la sua cripta. La cripta è accessibile tramite una scala situata all'interno della chiesa e ospita una serie di affreschi medievali ben conservati. Questi affreschi rappresentano scene della vita di Sant'Andrea e sono considerati un importante esempio di arte medievale.\n\nLa chiesa è ancora utilizzata per le celebrazioni religiose e attira numerosi visitatori che desiderano ammirare la sua architettura e le sue opere d'arte. La sua posizione nel centro storico di Montefiascone la rende facilmente accessibile e un punto di riferimento importante nella città.\n\nIn sintesi, la Chiesa di Sant'Andrea in Campo è un gioiello architettonico e artistico nel comune di Montefiascone. La sua storia millenaria, la sua architettura romanica e le sue opere d'arte la rendono una tappa imperdibile per i visitatori interessati alla storia e all'arte medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 529,
+        "total_tokens": 567
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eo4tjRcwbDpuRGqnnknHq9UmyFNH",
+    "object": "chat.completion",
+    "created": 1689959975,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa dei santi Giacomo e Filippo si trova nel comune di Castiglione in Teverina, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è semplice ed elegante, con un portale in pietra sormontato da un rosone circolare. L'interno è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi.\n\nUno degli elementi più interessanti della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi. Sopra l'altare si trova un grande crocifisso ligneo, risalente al XV secolo, che rappresenta il Cristo crocifisso.\n\nLa chiesa conserva anche diverse opere d'arte di grande valore. Tra queste spicca un dipinto raffigurante la Madonna con il Bambino, attribuito a un artista del XVI secolo. Ci sono anche diverse statue di santi e una serie di affreschi che narrano storie bibliche.\n\nLa Chiesa dei santi Giacomo e Filippo è un luogo di culto molto amato dalla comunità locale e viene utilizzata per le celebrazioni religiose regolari. È anche aperta ai visitatori che desiderano ammirare l'architettura e le opere d'arte all'interno.\n\nLa sua posizione nel comune di Castiglione in Teverina offre anche una vista panoramica sulla campagna circostante, rendendo la visita alla chiesa un'esperienza ancora più suggestiva."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 429,
+        "total_tokens": 474
+    }
+}

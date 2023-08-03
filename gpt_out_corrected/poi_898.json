@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqCj6xkBtIZ111D2bKLiCKo4awFB",
+    "object": "chat.completion",
+    "created": 1690206477,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro dell'Unione è un importante edificio teatrale situato nel comune di Viterbo, in Italia. Si trova nel centro storico della città, precisamente in Piazza Verdi, ed è considerato uno dei principali luoghi culturali della zona.\n\nL'edificio è stato costruito nel 1854 su progetto dell'architetto viterbese Alessandro Sarti, che si ispirò al Teatro La Fenice di Venezia. La struttura presenta uno stile neoclassico, con una facciata imponente e una serie di colonne che conferiscono un aspetto maestoso all'edificio.\n\nAll'interno, il Teatro dell'Unione offre una sala principale con una capienza di circa 600 posti a sedere, distribuiti su tre ordini di palchi. La sala è caratterizzata da una decorazione elegante, con affreschi sul soffitto e decorazioni dorate. L'acustica è eccellente, rendendo il teatro ideale per spettacoli di musica, teatro e danza.\n\nOltre alla sala principale, il Teatro dell'Unione dispone anche di una sala più piccola, chiamata Sala Pasolini, che può ospitare circa 100 persone. Questa sala è utilizzata per spettacoli più intimi, conferenze e proiezioni cinematografiche.\n\nIl teatro ospita una vasta gamma di eventi culturali, tra cui rappresentazioni teatrali, concerti, balletti, opere liriche e proiezioni cinematografiche. Ogni anno, vengono organizzate stagioni teatrali e musicali, che attirano sia artisti locali che internazionali.\n\nIl Teatro dell'Unione è anche sede di importanti festival e rassegne culturali, come il Festival Internazionale di Musica da Camera e il Festival Internazionale di Danza Contemporanea. Questi eventi contribuiscono a rendere il teatro un punto di riferimento per la cultura e l'arte nella regione.\n\nInoltre, il Teatro dell'Unione è stato oggetto di importanti lavori di restauro nel corso degli anni, al fine di preservare e valorizzare il suo patrimonio storico e artistico. Grazie a questi interventi, l'edificio è stato riportato al suo antico splendore, offrendo al pubblico un ambiente accogliente e suggestivo.\n\nIn conclusione, il Teatro dell'Unione di Viterbo è un luogo di grande importanza culturale e artistica, che offre al pubblico una vasta gamma di spettacoli di alta qualità. La sua bellezza architettonica e la sua programmazione variegata lo rendono un punto di riferimento per gli amanti del teatro e della cultura nella regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 648,
+        "total_tokens": 682
+    }
+}

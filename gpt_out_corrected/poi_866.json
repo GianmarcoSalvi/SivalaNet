@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq2Xy4sEwDOkv1lrad6I86Zjg1BO",
+    "object": "chat.completion",
+    "created": 1690205845,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Piazza Santo Pellegrino si trova nel centro storico di Viterbo, una città situata nella regione del Lazio, in Italia. La piazza è considerata uno dei luoghi più suggestivi e caratteristici della città, grazie alla sua architettura medievale e al suo fascino storico.\n\nLa piazza prende il nome dalla chiesa di Santo Pellegrino, che si trova al suo centro. La chiesa, risalente al XIII secolo, è un esempio di architettura romanica e presenta una facciata in pietra con un portale decorato e una grande finestra centrale. All'interno, la chiesa conserva affreschi e opere d'arte di grande valore storico e artistico.\n\nLa piazza è circondata da edifici storici, tra cui palazzi medievali e rinascimentali, che testimoniano la ricchezza e l'importanza storica di Viterbo. Questi edifici sono caratterizzati da facciate in pietra, balconi in ferro battuto e portali decorati, che conferiscono alla piazza un'atmosfera suggestiva e affascinante.\n\nNella piazza si trovano anche alcuni caffè e ristoranti, dove è possibile gustare la cucina locale e godere di una vista panoramica sulla chiesa e sugli edifici circostanti. Durante il periodo estivo, la piazza diventa un luogo di incontro per gli abitanti e i turisti, che si riuniscono per socializzare e godere dell'atmosfera vivace della città.\n\nPiazza Santo Pellegrino è anche il punto di partenza per esplorare il centro storico di Viterbo. Da qui è possibile raggiungere a piedi altre attrazioni turistiche, come il Palazzo dei Papi, la Fontana Grande e il quartiere medievale di San Pellegrino.\n\nIn conclusione, Piazza Santo Pellegrino è un luogo affascinante e suggestivo nel cuore di Viterbo, che offre una combinazione unica di storia, architettura e atmosfera vivace. È un luogo da non perdere per chi visita la città e desidera immergersi nella sua ricca storia e cultura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 524,
+        "total_tokens": 559
+    }
+}

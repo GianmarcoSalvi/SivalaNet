@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fprNeybnApCEIl8KPcNbOKcdF7jk",
+    "object": "chat.completion",
+    "created": 1690205153,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Sebastiano Martire si trova nel comune di Vignanello, in provincia di Viterbo, Italia. È una chiesa di origine medievale, che risale al XIII secolo, anche se ha subito diverse modifiche e ampliamenti nel corso dei secoli.\n\nL'edificio è realizzato in pietra locale e presenta uno stile architettonico romanico-gotico. La facciata è semplice e sobria, con un portale d'ingresso ad arco a tutto sesto e una finestra centrale. Sopra il portale è presente un affresco raffigurante San Sebastiano, il santo patrono della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di San Sebastiano e di altri santi. Sull'altare maggiore è presente una statua di San Sebastiano, realizzata in legno intagliato e dipinto.\n\nLa chiesa conserva anche alcune opere d'arte di pregio, tra cui una Madonna con Bambino del XV secolo e un crocifisso ligneo del XVI secolo. Nell'abside si trova un coro ligneo intagliato, risalente al XVII secolo.\n\nLa Chiesa di San Sebastiano Martire è un luogo di culto molto importante per la comunità di Vignanello, che vi celebra regolarmente le messe e altre cerimonie religiose. È anche meta di pellegrinaggi e visite turistiche, grazie alla sua bellezza artistica e al suo valore storico.\n\nLa chiesa si trova in una posizione panoramica, affacciata sulla campagna circostante. Nei dintorni è possibile ammirare anche il Castello Ruspoli, un'imponente fortezza medievale che domina il paesaggio. La combinazione di questi due monumenti storici rende Vignanello un luogo di grande interesse culturale e artistico."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 494,
+        "total_tokens": 537
+    }
+}

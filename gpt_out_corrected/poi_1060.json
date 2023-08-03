@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7frOtFnVdMVd0hhdMSe0yhURxDXKY",
+    "object": "chat.completion",
+    "created": 1690211075,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le Terme di Orte sono un complesso termale situato nel comune di Orte, in Italia. Queste terme sono famose per le loro acque termali curative e per le loro strutture moderne e accoglienti.\n\nIl complesso termale si estende su una vasta area verde, circondata da alberi e piante, che crea un'atmosfera rilassante e tranquilla. Le acque termali delle Terme di Orte sono di origine vulcanica e sono ricche di minerali benefici per la salute. Queste acque sono utilizzate per una varietà di trattamenti termali, come bagni termali, fangoterapia, idromassaggio e cure inalatorie.\n\nLe strutture delle Terme di Orte sono moderne e ben attrezzate. Ci sono diverse piscine termali, sia interne che esterne, con temperature diverse per soddisfare le esigenze di tutti i visitatori. Le piscine sono dotate di idromassaggio e cascate d'acqua per un'esperienza di relax completa.\n\nIl centro termale offre anche una vasta gamma di trattamenti benessere e estetici. Ci sono sale per massaggi, saune, bagni turchi e percorsi benessere per rigenerare il corpo e la mente. Gli esperti terapisti termali sono disponibili per consigliare e personalizzare i trattamenti in base alle esigenze individuali.\n\nLe Terme di Orte offrono anche servizi medici specializzati. Ci sono medici termali e fisioterapisti che possono prescrivere trattamenti specifici per problemi di salute come reumatismi, mal di schiena e problemi respiratori.\n\nOltre alle strutture termali, il complesso offre anche servizi di ristorazione e alloggio. Ci sono ristoranti che offrono piatti salutari e leggeri, preparati con ingredienti locali e di stagione. Gli alloggi sono confortevoli e ben arredati, ideali per un soggiorno rilassante e rigenerante.\n\nLe Terme di Orte sono un luogo ideale per chi cerca una pausa dallo stress quotidiano e desidera prendersi cura del proprio benessere. Le acque termali curative, le strutture moderne e l'atmosfera tranquilla rendono questo complesso termale una destinazione popolare per i visitatori in cerca di relax e cura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 560,
+        "total_tokens": 593
+    }
+}

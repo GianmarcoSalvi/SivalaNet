@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eo3IfhtWIJhJLFbNOqi1rLMKv4AO",
+    "object": "chat.completion",
+    "created": 1689959876,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna della Neve si trova nel comune di Castiglione in Teverina, in provincia di Viterbo, Italia. Questo edificio religioso è uno dei principali punti di riferimento della comunità locale e rappresenta un importante esempio di architettura religiosa nella regione.\n\nLa chiesa è situata in una posizione panoramica, su una collina che domina il paesaggio circostante. La sua costruzione risale al XV secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. L'edificio è realizzato in pietra locale e presenta uno stile architettonico tipico delle chiese rurali dell'epoca.\n\nLa facciata della chiesa è semplice ma elegante, con un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale è presente una finestra circolare che permette l'ingresso di luce naturale all'interno dell'edificio. La facciata è decorata con alcuni elementi scolpiti, come cornici e architravi, che conferiscono un tocco di raffinatezza all'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Le pareti sono decorate con affreschi e dipinti religiosi, alcuni dei quali risalenti al XV secolo. L'altare maggiore è ornato da una statua della Madonna della Neve, che rappresenta la patrona della chiesa.\n\nLa Chiesa della Madonna della Neve è un luogo di culto molto frequentato dalla comunità locale, che vi si riunisce per celebrare le messe e partecipare ad altre cerimonie religiose. Inoltre, la chiesa è aperta ai visitatori che desiderano ammirare l'architettura e l'arte sacra presenti all'interno dell'edificio.\n\nLa posizione panoramica della chiesa offre anche una vista mozzafiato sulla campagna circostante, rendendo la visita ancora più suggestiva. La Chiesa della Madonna della Neve rappresenta quindi un importante punto di riferimento storico e culturale per la comunità di Castiglione in Teverina e un luogo di grande interesse per i visitatori che desiderano immergersi nella storia e nella spiritualità della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 584,
+        "total_tokens": 625
+    }
+}

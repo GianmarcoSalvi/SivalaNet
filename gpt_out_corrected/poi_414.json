@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flbuCcINoJ3dAEvjelMkgwF5y67E",
+    "object": "chat.completion",
+    "created": 1690188818,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Intus Civitatem si trova nel comune di Ischia di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. Questa chiesa è uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura religiosa medievale.\n\nLa chiesa è situata nel centro storico di Ischia di Castro, circondata da strette strade lastricate e affiancata da antiche case in pietra. La sua posizione elevata offre una vista panoramica sulla città e sulla campagna circostante.\n\nLa Chiesa di Santa Maria Intus Civitatem risale al XII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. La facciata principale è semplice e sobria, con un portale in pietra e una finestra a bifora. L'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate.\n\nGli affreschi all'interno della chiesa sono particolarmente degni di nota. Rappresentano scene della vita di Gesù e della Vergine Maria, realizzate da artisti locali nel corso dei secoli. Questi affreschi sono un esempio significativo dell'arte sacra medievale e offrono uno sguardo sulla storia e la cultura della comunità locale.\n\nLa Chiesa di Santa Maria Intus Civitatem è ancora oggi un luogo di culto attivo, con regolari celebrazioni religiose. È anche un importante punto di riferimento per i visitatori che desiderano esplorare il patrimonio storico e artistico della città.\n\nLa chiesa si trova in una posizione centrale, vicino ad altri siti di interesse storico e culturale, come il Castello Orsini e la Piazza del Comune. La sua bellezza architettonica e la sua importanza storica la rendono una tappa imperdibile per chi visita Ischia di Castro."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 482,
+        "total_tokens": 522
+    }
+}

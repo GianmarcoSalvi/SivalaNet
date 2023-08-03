@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en2HGqpu5epa5CTyYJdzFPmIcSfj",
+    "object": "chat.completion",
+    "created": 1689955969,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Porta Albana è una delle porte d'accesso al centro storico del comune di Bagnoregio, situato nella provincia di Viterbo, nella regione del Lazio, in Italia. Questa porta è una delle quattro principali porte che permettono l'ingresso nella città vecchia, insieme alla Porta Romana, alla Porta Santa Maria e alla Porta Cavour.\n\nLa Porta Albana si trova nella parte nord-ovest del centro storico e prende il nome dalla strada che conduce alla città di Orvieto, chiamata appunto \"strada Albana\". Questa porta è caratterizzata da una struttura imponente e maestosa, che risale al periodo medievale. È stata costruita in pietra e presenta un arco a tutto sesto, sormontato da una torre di forma quadrangolare.\n\nLa porta è dotata di un ponte levatoio, che in passato veniva alzato per difendere la città da eventuali attacchi esterni. Attualmente il ponte levatoio non è più funzionante, ma la sua presenza contribuisce a creare un'atmosfera suggestiva e ricorda il passato storico di Bagnoregio.\n\nAttraversando la Porta Albana si accede a un suggestivo borgo medievale, con stradine lastricate e case in pietra. Lungo il percorso si possono ammirare antiche abitazioni, botteghe artigiane e piccoli negozi che vendono prodotti tipici locali.\n\nLa Porta Albana rappresenta un importante punto di riferimento per i visitatori che desiderano esplorare il centro storico di Bagnoregio. È un luogo ricco di storia e di fascino, che permette di immergersi nell'atmosfera unica di questo antico borgo medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 442,
+        "total_tokens": 475
+    }
+}

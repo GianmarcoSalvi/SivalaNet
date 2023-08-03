@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoZoMchXEk12nsL4v7MbsSL5dJMI",
+    "object": "chat.completion",
+    "created": 1689961892,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Mottura si trova nel comune di Civitella d'Agliano, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di un edificio storico di grande importanza e bellezza architettonica.\n\nIl palazzo risale al XVII secolo ed è stato costruito in stile rinascimentale. È situato nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle del fiume Tevere.\n\nL'edificio si sviluppa su tre piani ed è caratterizzato da una facciata imponente e ben conservata. La parte centrale della facciata è dominata da un portale d'ingresso in pietra, sormontato da un balcone con ringhiera in ferro battuto. Le finestre sono elegantemente decorate con cornici in pietra e presentano dettagli architettonici raffinati.\n\nAll'interno, il palazzo conserva ancora molti degli elementi originali, come pavimenti in cotto, soffitti a volta e affreschi. Le stanze sono ampie e luminose, con arredi d'epoca che conferiscono un'atmosfera di grande fascino e raffinatezza.\n\nIl Palazzo Mottura è stato oggetto di importanti restauri nel corso degli anni, che hanno permesso di preservare e valorizzare al meglio le sue caratteristiche architettoniche e storiche. Oggi è utilizzato come sede di eventi culturali e mostre, oltre ad ospitare una parte degli uffici comunali.\n\nLa sua posizione centrale nel paese lo rende facilmente accessibile e visibile, e rappresenta un importante punto di riferimento per la comunità locale. Il Palazzo Mottura è un esempio significativo dell'architettura rinascimentale nella zona e rappresenta un patrimonio culturale di grande valore per Civitella d'Agliano e per l'intera regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 465,
+        "total_tokens": 503
+    }
+}

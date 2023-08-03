@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmHzi3jBxzWFMHbmy8hcNDuuhlyX",
+    "object": "chat.completion",
+    "created": 1690191427,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo Civico Archeologico di Nepi si trova nel comune di Nepi, in Italia. È situato all'interno del Palazzo Orsini, un edificio storico che risale al XIII secolo.\n\nIl museo è dedicato alla storia e all'archeologia della città di Nepi e delle sue vicinanze. La sua collezione comprende reperti archeologici che coprono un periodo che va dall'età del bronzo all'epoca romana.\n\nUna delle principali attrazioni del museo è la Sala delle Tombe, che ospita una serie di tombe etrusche provenienti dalla necropoli di Nepi. Queste tombe sono state scoperte nel corso degli scavi archeologici condotti nella zona e sono state ricostruite all'interno del museo per consentire ai visitatori di ammirarle da vicino.\n\nOltre alle tombe etrusche, il museo ospita anche una vasta collezione di reperti romani, tra cui monete, ceramiche, gioielli e statue. Questi reperti offrono un'interessante panoramica della vita quotidiana nell'antica Roma e della sua influenza sulla città di Nepi.\n\nIl museo offre anche una sezione dedicata alla storia medievale di Nepi, con reperti che documentano l'evoluzione della città durante questo periodo. Ci sono anche esposizioni temporanee che presentano temi specifici legati all'archeologia e alla storia locale.\n\nIl Museo Civico Archeologico di Nepi è un luogo ideale per gli appassionati di archeologia e storia antica. Offre una preziosa opportunità di conoscere e comprendere la storia di Nepi e della sua regione attraverso reperti autentici e ben conservati."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 404,
+        "total_tokens": 445
+    }
+}

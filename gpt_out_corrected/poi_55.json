@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en3YJHpHSWrqzjWD5WuzvsaGqP53",
+    "object": "chat.completion",
+    "created": 1689956048,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Girolamo si trova nel comune di Bagnoregio, in provincia di Viterbo, Italia. È situata nella parte alta del paese, vicino al famoso borgo medievale di Civita di Bagnoregio.\n\nLa chiesa è dedicata a San Girolamo, uno dei più importanti dottori della Chiesa e traduttore della Bibbia in latino. È stata costruita nel XV secolo e presenta uno stile architettonico gotico.\n\nL'edificio è caratterizzato da una facciata semplice ma elegante, con un portale in pietra e una finestra a bifora. All'interno, la chiesa presenta una navata unica con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XV secolo, raffiguranti scene della vita di San Girolamo e altri santi.\n\nUno degli elementi più interessanti della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con sculture e bassorilievi. L'altare ospita una statua di San Girolamo, risalente al XVII secolo, che rappresenta il santo con il suo tradizionale attributo, il leone.\n\nLa Chiesa di Santo Girolamo è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari. È anche un importante punto di riferimento storico e culturale per la comunità locale, che la considera un simbolo della loro identità e tradizione.\n\nLa chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla valle circostante. È circondata da un piccolo cortile e da un giardino, che aggiungono ulteriore fascino all'edificio.\n\nLa Chiesa di Santo Girolamo è un luogo di grande importanza per i residenti di Bagnoregio e per i visitatori che desiderano immergersi nella storia e nella spiritualità di questa affascinante regione italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 490,
+        "total_tokens": 527
+    }
+}

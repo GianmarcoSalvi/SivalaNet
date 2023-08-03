@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoM5DLdaeNGI1eWKR1wOW59hfUbH",
+    "object": "chat.completion",
+    "created": 1689961041,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le mura medievali di Celleno, un comune situato nella provincia di Viterbo, Italia, sono un'imponente struttura difensiva che circonda il centro storico del paese. Queste mura risalgono al XIII secolo e sono state costruite per proteggere il villaggio dagli attacchi esterni durante il periodo medievale.\n\nLe mura sono realizzate principalmente in pietra locale e sono caratterizzate da una forma rettangolare, con quattro porte principali che consentono l'accesso al centro storico. Le porte sono chiamate Porta Romana, Porta San Giovanni, Porta San Martino e Porta San Michele, ognuna delle quali ha un proprio stile architettonico unico.\n\nLe mura medievali di Celleno sono ben conservate e offrono una vista panoramica mozzafiato sulla campagna circostante. Lungo le mura, è possibile notare diverse torri di avvistamento, che erano utilizzate per sorvegliare il territorio circostante e per difendere il paese dagli attacchi nemici.\n\nAll'interno delle mura, si possono trovare numerosi edifici storici, tra cui la Chiesa di San Giovanni Battista, che risale al XII secolo, e il Palazzo Comunale, che ospita il municipio del comune. Questi edifici contribuiscono a creare un'atmosfera suggestiva e affascinante all'interno del centro storico.\n\nLe mura medievali di Celleno sono un importante punto di riferimento per il comune e rappresentano una testimonianza tangibile della storia e della cultura del luogo. Sono un luogo ideale per una passeggiata tranquilla e per immergersi nell'atmosfera medievale del paese."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 416,
+        "total_tokens": 447
+    }
+}

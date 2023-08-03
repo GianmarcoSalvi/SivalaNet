@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmuvrnj6G3ovtUXDkxhbX9BF5LuW",
+    "object": "chat.completion",
+    "created": 1690193841,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Proceno è un antico edificio situato nel comune di Proceno, nella provincia di Viterbo, nella regione del Lazio, in Italia. Si trova su una collina che domina il paesaggio circostante, offrendo una vista panoramica mozzafiato.\n\nIl castello risale al XII secolo ed è stato costruito come una fortezza difensiva per proteggere il territorio circostante. È stato successivamente ampliato e modificato nel corso dei secoli, assumendo l'aspetto attuale di una residenza signorile.\n\nL'edificio è caratterizzato da una struttura imponente, con mura spesse e torri di avvistamento. L'ingresso principale è sormontato da un arco a tutto sesto, decorato con stemmi e motivi ornamentali. All'interno, si possono ammirare affreschi e dipinti che raccontano la storia del castello e della famiglia che lo ha abitato.\n\nIl castello è circondato da un ampio parco, con giardini ben curati e alberi secolari. All'interno del parco si trovano anche una cappella e una torre di avvistamento, che offrono ulteriori punti di interesse.\n\nOggi, il Castello di Proceno è aperto al pubblico e ospita eventi culturali e mostre d'arte. È anche possibile visitare le stanze interne del castello, che sono state restaurate e arredate con mobili d'epoca, per immergersi nell'atmosfera storica dell'edificio.\n\nIl Castello di Proceno è un luogo affascinante che combina storia, arte e bellezze naturali. È un'attrazione turistica molto popolare nella regione, che attira visitatori da tutto il mondo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 430,
+        "total_tokens": 462
+    }
+}

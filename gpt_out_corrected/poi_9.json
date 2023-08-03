@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7emqMZRGwjMZKUyhEjrinf4DDYV0E",
+    "object": "chat.completion",
+    "created": 1689955230,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Agostino si trova nel comune di Acquapendente, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di origine medievale che risale al XIII secolo, anche se ha subito diverse modifiche e ampliamenti nel corso dei secoli.\n\nLa chiesa è situata nel centro storico di Acquapendente, in una posizione dominante che offre una vista panoramica sulla città e sulla campagna circostante. È costruita in stile romanico-gotico, con una facciata in pietra e un campanile a vela.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi e dipinti. Uno degli elementi più interessanti è l'altare maggiore, realizzato in marmo intarsiato e decorato con sculture e rilievi.\n\nLa chiesa ospita anche diverse opere d'arte di valore, tra cui dipinti e sculture. Uno dei pezzi più importanti è un crocifisso ligneo del XV secolo, considerato un'opera di grande maestria artistica.\n\nLa Chiesa di Santo Agostino è un importante luogo di culto per la comunità di Acquapendente e viene utilizzata regolarmente per le celebrazioni religiose. È anche una meta turistica per gli amanti dell'arte e della storia, che possono ammirare l'architettura e le opere d'arte all'interno della chiesa.\n\nInoltre, la chiesa è situata in una posizione strategica per visitare altre attrazioni turistiche della zona, come il centro storico di Acquapendente, il Lago di Bolsena e le città medievali circostanti.\n\nIn conclusione, la Chiesa di Santo Agostino nel comune di Acquapendente è un importante esempio di architettura medievale e un luogo di culto di grande valore artistico e storico."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 486,
+        "total_tokens": 524
+    }
+}

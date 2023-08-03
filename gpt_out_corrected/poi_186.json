@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enmatLSePq2LUm0Hlnle1lU3dTja",
+    "object": "chat.completion",
+    "created": 1689958840,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre Campanaria della Chiesa degli Apostoli Giovanni e Andrea si trova nel comune di Canino, nella provincia di Viterbo, Italia. La torre è un'imponente struttura che si erge accanto alla chiesa, dominando il paesaggio circostante.\n\nLa torre campanaria risale al XIII secolo ed è considerata uno dei simboli più importanti di Canino. È costruita in pietra locale e presenta un'architettura gotica, con una base quadrata che si restringe man mano che si sale verso l'alto. La torre raggiunge un'altezza di circa 30 metri e si distingue per la sua maestosità e imponenza.\n\nLa torre campanaria è dotata di una serie di finestre ad arco che si aprono lungo le sue pareti, permettendo la luce di filtrare all'interno. Alcune di queste finestre sono decorate con motivi ornamentali, aggiungendo un tocco di eleganza alla struttura. In cima alla torre si trova una guglia a forma di piramide, che ospita le campane della chiesa.\n\nLa torre campanaria è stata oggetto di vari interventi di restauro nel corso dei secoli, ma è ancora possibile ammirarne la bellezza originale. La sua posizione elevata offre una vista panoramica sulla città di Canino e sulle campagne circostanti, rendendola un punto di riferimento per i visitatori e un luogo di grande interesse storico e culturale.\n\nLa Torre Campanaria della Chiesa degli Apostoli Giovanni e Andrea rappresenta un importante esempio di architettura medievale e testimonia la ricca storia di Canino. La sua presenza imponente e la sua bellezza intramontabile la rendono una delle attrazioni più visitate della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 436,
+        "total_tokens": 478
+    }
+}

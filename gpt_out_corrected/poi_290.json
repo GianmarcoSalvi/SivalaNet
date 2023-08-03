@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoVdgEtcgxeXVZItEbFnMRUFjQzU",
+    "object": "chat.completion",
+    "created": 1689961633,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa Privata Santo Antonio Abate si trova nel comune di Civita Castellana, in Italia. Questa chiesa è dedicata a Santo Antonio Abate, un santo molto venerato nella tradizione cattolica come protettore degli animali e dei contadini.\n\nLa chiesa è situata in una posizione panoramica, su una collina che domina il paesaggio circostante. È circondata da un ampio cortile e da un giardino ben curato, che contribuiscono a creare un'atmosfera tranquilla e serena.\n\nL'edificio della chiesa è di piccole dimensioni ma molto suggestivo. La facciata è caratterizzata da un portale in pietra, sormontato da un rosone decorato. Le pareti esterne sono realizzate in pietra locale, che conferisce un aspetto rustico ed elegante alla struttura.\n\nAll'interno, la chiesa presenta una sola navata con un soffitto a volta. Le pareti sono decorate con affreschi raffiguranti scene della vita di Santo Antonio Abate e altri santi. L'altare maggiore è ornato con sculture e dipinti sacri, mentre ai lati della navata sono presenti alcune cappelle laterali dedicate a santi specifici.\n\nLa chiesa è un luogo di culto molto frequentato dalla comunità locale, che vi si riunisce per le celebrazioni religiose e le messe. In particolare, la festa di Santo Antonio Abate, che cade il 17 gennaio, è un momento di grande devozione e festa per i fedeli.\n\nLa Chiesa Privata Santo Antonio Abate rappresenta un importante punto di riferimento per la comunità di Civita Castellana, sia dal punto di vista religioso che culturale. La sua bellezza architettonica e la sua atmosfera suggestiva la rendono un luogo di grande interesse per i visitatori che desiderano immergersi nella storia e nella spiritualità di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 478,
+        "total_tokens": 517
+    }
+}

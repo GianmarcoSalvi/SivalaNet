@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm5ZkFI81sWDaNKvK9KaDCKxpEdQ",
+    "object": "chat.completion",
+    "created": 1690190657,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria della Potenza, anche conosciuta come Chiesa del Divino Amore, si trova nel comune di Montefiascone, in provincia di Viterbo, Italia. Questo edificio religioso è uno dei principali luoghi di culto della città e rappresenta un importante punto di riferimento per i fedeli locali.\n\nLa chiesa è situata in una posizione panoramica, sulla sommità di una collina, da cui si può godere di una vista mozzafiato sulla città e sulla campagna circostante. La sua posizione elevata la rende visibile da diverse parti del comune, conferendole un aspetto maestoso e imponente.\n\nLa Chiesa di Santa Maria della Potenza è stata costruita nel XV secolo e presenta uno stile architettonico gotico. La facciata è caratterizzata da un portale in pietra, decorato con sculture e rilievi che raffigurano scene religiose. Sopra il portale si trova una grande finestra a rosone, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le pareti sono decorate con dipinti che raffigurano scene della vita di Maria e di Gesù, realizzati da artisti locali. Al centro dell'altare maggiore si trova una statua di Santa Maria della Potenza, venerata dai fedeli come protettrice della città.\n\nLa chiesa è anche famosa per il suo campanile, alto e slanciato, che si erge accanto all'edificio principale. La torre campanaria è stata costruita in laterizio e presenta una serie di finestre ad arco che permettono la vista panoramica sulla città e sulla campagna circostante.\n\nLa Chiesa di Santa Maria della Potenza è un luogo di culto molto frequentato dai fedeli, che vi si recano per pregare e partecipare alle celebrazioni religiose. Inoltre, la chiesa è spesso utilizzata per matrimoni e altre cerimonie religiose, grazie alla sua bellezza e alla sua atmosfera suggestiva.\n\nIn conclusione, la Chiesa di Santa Maria della Potenza o del Divino Amore è un importante edificio religioso nel comune di Montefiascone, Italia. La sua architettura gotica, le decorazioni interne e la posizione panoramica la rendono un luogo di grande interesse artistico e spirituale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 44,
+        "completion_tokens": 613,
+        "total_tokens": 657
+    }
+}

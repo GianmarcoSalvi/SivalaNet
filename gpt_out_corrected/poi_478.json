@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm1OtbXOsZl2FCLVORsibbf38Gn2",
+    "object": "chat.completion",
+    "created": 1690190398,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La biblioteca comunale di Monte Romano, situata nel comune omonimo in Italia, è un importante punto di riferimento per gli abitanti della zona e per gli appassionati di lettura. \n\nLa biblioteca si trova in una posizione centrale, facilmente accessibile a piedi o in auto, e dispone di un ampio parcheggio nelle vicinanze. L'edificio è moderno e accogliente, con spazi luminosi e ben organizzati.\n\nAll'interno della biblioteca, i visitatori troveranno una vasta selezione di libri, riviste, giornali e altri materiali di lettura. La collezione comprende opere di narrativa, saggistica, poesia, romanzi gialli, libri per bambini e ragazzi, nonché una sezione dedicata alla storia locale e alla cultura del territorio.\n\nLa biblioteca offre anche un servizio di prestito, che consente ai lettori di portare a casa i libri per un determinato periodo di tempo. È possibile consultare il catalogo online per verificare la disponibilità dei titoli e prenotare i libri desiderati.\n\nOltre alla vasta selezione di libri, la biblioteca comunale organizza regolarmente eventi culturali, come presentazioni di libri, incontri con autori, letture pubbliche e laboratori per bambini. Queste attività sono aperte a tutti e offrono un'opportunità per la comunità di incontrarsi, condividere interessi e scoprire nuovi autori e opere letterarie.\n\nLa biblioteca comunale di Monte Romano è gestita da un team di bibliotecari competenti e appassionati, pronti ad assistere i visitatori nella ricerca di libri e a fornire informazioni sulle attività in corso. L'atmosfera è accogliente e tranquilla, ideale per trascorrere del tempo immersi nella lettura o nello studio.\n\nIn conclusione, la biblioteca comunale di Monte Romano è un luogo di grande valore per la comunità locale, offrendo una vasta selezione di libri e materiali di lettura, servizi di prestito, eventi culturali e un ambiente accogliente per gli amanti della lettura di tutte le età."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 525,
+        "total_tokens": 558
+    }
+}

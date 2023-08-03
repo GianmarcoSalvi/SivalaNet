@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpRw7Iv3wI9uYSzCvWhj29U67gZH",
+    "object": "chat.completion",
+    "created": 1690203576,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria dell'Eschio si trova nel comune di Valentano, in provincia di Viterbo, nella regione del Lazio, Italia. Questo edificio religioso è uno dei principali punti di riferimento storico e culturale della zona.\n\nLa chiesa risale al XIII secolo ed è stata costruita in stile romanico. La sua posizione è particolarmente suggestiva, poiché si trova su una collina che domina la valle circostante. Questa posizione strategica ha reso la chiesa un punto di riferimento visibile da diverse parti del territorio circostante.\n\nL'edificio è caratterizzato da una facciata semplice ma elegante, con un portale d'ingresso sormontato da un rosone. L'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali.\n\nUno degli elementi più interessanti della chiesa è il suo campanile, che risale al XIV secolo. Questa torre campanaria è stata costruita in pietra e mattoni, e presenta una serie di finestre ad arco che permettono la luce di filtrare all'interno.\n\nLa Chiesa di Santa Maria dell'Eschio è stata oggetto di vari interventi di restauro nel corso dei secoli, ma ha mantenuto intatta la sua struttura originale. Oggi è ancora utilizzata per le celebrazioni religiose e rappresenta un importante punto di riferimento per la comunità locale.\n\nOltre al suo valore religioso, la chiesa è anche un luogo di interesse turistico, grazie alla sua bellezza architettonica e alla sua posizione panoramica. I visitatori possono ammirare gli affreschi medievali all'interno della chiesa e godere di una vista mozzafiato sulla campagna circostante dalla collina su cui sorge.\n\nInoltre, la Chiesa di Santa Maria dell'Eschio è situata nelle vicinanze di altri luoghi di interesse storico e culturale, come il Castello di Valentano e il centro storico del comune. Questo la rende una tappa ideale per coloro che desiderano esplorare la storia e la cultura della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 538,
+        "total_tokens": 575
+    }
+}

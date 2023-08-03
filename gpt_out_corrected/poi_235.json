@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eo2f02FEkCGhIMSwlvPNeXNsx1WJ",
+    "object": "chat.completion",
+    "created": 1689959837,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Pontificio Santuario Maria Santissimo \"ad Rupes\" si trova nel comune di Castel Sant'Elia, nella regione del Lazio, in Italia. È un importante luogo di culto cattolico dedicato alla Vergine Maria.\n\nIl santuario è situato su una collina rocciosa, da cui prende il nome \"ad Rupes\", che significa \"sulle rocce\". La sua posizione panoramica offre una vista mozzafiato sulla valle del fiume Tevere e sui paesaggi circostanti.\n\nLa storia del santuario risale al XIII secolo, quando venne costruita una piccola cappella dedicata alla Madonna. Nel corso dei secoli, il santuario è stato ampliato e ristrutturato più volte, assumendo l'aspetto attuale nel corso del XVIII secolo.\n\nL'edificio principale del santuario è una maestosa chiesa in stile barocco, con una facciata imponente e decorata. All'interno, si possono ammirare affreschi, dipinti e sculture che rappresentano la vita di Maria e momenti significativi della storia cristiana.\n\nUna delle caratteristiche più interessanti del santuario è la Grotta della Madonna, una grotta naturale situata sotto la chiesa. La grotta è stata adattata per ospitare una statua della Madonna, che viene venerata dai fedeli. Si dice che la grotta abbia avuto un ruolo importante nelle apparizioni mariane avvenute in passato.\n\nIl santuario è meta di pellegrinaggi da parte di fedeli provenienti da tutto il mondo. Ogni anno, migliaia di persone visitano il santuario per pregare, partecipare alle messe e ricevere la benedizione della Madonna.\n\nOltre alla dimensione religiosa, il santuario offre anche un'esperienza culturale e turistica. La sua posizione panoramica e l'architettura suggestiva lo rendono un luogo ideale per ammirare il paesaggio circostante e scattare fotografie.\n\nInoltre, il santuario organizza eventi e celebrazioni speciali durante tutto l'anno, come processioni, concerti e mostre d'arte. Questi eventi contribuiscono a rendere il santuario un luogo vivo e vibrante, che attrae visitatori di tutte le età e provenienze.\n\nIn conclusione, il Pontificio Santuario Maria Santissimo \"ad Rupes\" è un luogo di grande importanza religiosa e culturale nel comune di Castel Sant'Elia. La sua bellezza architettonica, la storia ricca di significato e la vista panoramica lo rendono un luogo imperdibile per i visitatori che desiderano immergersi nella spiritualità e nella bellezza dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 44,
+        "completion_tokens": 653,
+        "total_tokens": 697
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq3gWZfiqyZdkqr2Cjr7elfwVhMG",
+    "object": "chat.completion",
+    "created": 1690205916,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca San Giuseppe si trova nel comune di Viterbo, in Italia. È situata in una posizione centrale, vicino al centro storico della città. La biblioteca è ospitata in un edificio storico, che aggiunge un fascino unico all'ambiente.\n\nLa biblioteca offre una vasta gamma di servizi e risorse per soddisfare le esigenze degli utenti. Dispone di una vasta collezione di libri, riviste, giornali e materiale audiovisivo, che copre una vasta gamma di argomenti e interessi. Gli utenti possono accedere a questi materiali per la lettura in loco o per il prestito a domicilio.\n\nLa Biblioteca San Giuseppe è particolarmente nota per la sua sezione dedicata alla storia locale e alla cultura viterbese. Qui gli utenti possono trovare libri e documenti che raccontano la storia della città, le sue tradizioni e le sue personalità più importanti. Questa sezione è una risorsa preziosa per gli studenti, i ricercatori e gli appassionati di storia.\n\nLa biblioteca offre anche servizi di consulenza e assistenza agli utenti. Il personale qualificato è disponibile per aiutare gli utenti a trovare le risorse di cui hanno bisogno, a fornire informazioni e a rispondere alle domande. Inoltre, la biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze e mostre, per promuovere la cultura e l'educazione nella comunità.\n\nL'ambiente della biblioteca è accogliente e tranquillo, con spazi dedicati alla lettura e allo studio. Ci sono anche aree per il lavoro di gruppo e per l'utilizzo di computer e internet. La biblioteca è dotata di connessione Wi-Fi gratuita, consentendo agli utenti di accedere a risorse online e di utilizzare i propri dispositivi durante la visita.\n\nLa Biblioteca San Giuseppe è un punto di riferimento importante per la comunità di Viterbo. Oltre a fornire risorse e servizi di alta qualità, la biblioteca svolge un ruolo fondamentale nella promozione della cultura e dell'educazione nella città. È un luogo dove le persone possono incontrarsi, imparare e scoprire nuove idee e conoscenze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 536,
+        "total_tokens": 570
+    }
+}

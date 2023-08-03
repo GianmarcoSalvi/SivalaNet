@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp4d7WSiWfXl2KJfoRFkt8pCtAkC",
+    "object": "chat.completion",
+    "created": 1690202131,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli di Tarquinia è un sito archeologico situato nel comune di Tarquinia, nella regione del Lazio, in Italia. È uno dei siti più importanti e meglio conservati di necropoli etrusche, risalenti al periodo compreso tra il VII e il II secolo a.C.\n\nLa necropoli si estende su un'area di circa 600 ettari e comprende oltre 6.000 tombe, che sono state scavate nella roccia tufacea. Le tombe sono di diversi tipi e dimensioni, da semplici fosse a tombe a tumulo e a camera. Molte di esse sono decorate con affreschi che rappresentano scene di vita quotidiana, mitologia, rituali religiosi e riti funerari.\n\nUna delle tombe più famose della necropoli è la Tomba dei Leoni, così chiamata per i due leoni scolpiti che la decorano. Altre tombe notevoli includono la Tomba dei Giocolieri, la Tomba del Triclinio e la Tomba delle Olimpiadi.\n\nLa necropoli di Tarquinia offre un'importante testimonianza dell'arte e della cultura etrusca. Gli affreschi presenti nelle tombe sono di grande valore artistico e forniscono informazioni preziose sulla vita e le credenze degli antichi etruschi. Le scene raffigurate mostrano la ricchezza e la complessità della società etrusca, con dettagliati ritratti di uomini e donne, scene di banchetti, danze, giochi e rituali religiosi.\n\nIl sito è stato dichiarato Patrimonio dell'Umanità dall'UNESCO nel 2004, riconoscendo il suo valore storico e artistico. Oggi, la necropoli di Tarquinia è aperta al pubblico e offre la possibilità di esplorare le tombe e ammirare gli affreschi. Un museo archeologico è stato anche allestito nelle vicinanze, dove sono esposti reperti e manufatti provenienti dalla necropoli e dalla regione etrusca circostante.\n\nLa necropoli di Tarquinia è un luogo affascinante per gli amanti dell'archeologia e della storia antica, offrendo una finestra unica sulla civiltà etrusca e sulla sua arte funeraria."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 546,
+        "total_tokens": 578
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq3P1hfSW667qns0xa4ud4fPG2sm",
+    "object": "chat.completion",
+    "created": 1690205899,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Battista degli Almadiani si trova nel comune di Viterbo, in Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa fu costruita nel XIII secolo e presenta uno stile architettonico romanico-gotico. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto e una lunetta decorata con bassorilievi raffiguranti scene bibliche. Sopra il portale si trova una grande finestra a bifora, tipica dell'architettura gotica.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di San Giovanni Battista e altri santi. Sull'altare maggiore si trova una pregevole pala d'altare, realizzata nel XV secolo, raffigurante il Battesimo di Cristo.\n\nLa chiesa conserva anche alcune opere d'arte di grande valore, tra cui una statua lignea policroma raffigurante San Giovanni Battista, risalente al XV secolo, e un crocifisso ligneo del XIV secolo.\n\nOltre al valore artistico, la Chiesa di San Giovanni Battista degli Almadiani ha anche un grande valore storico. Infatti, è stata utilizzata come sede di una confraternita religiosa, gli Almadiani, che si occupavano di assistenza ai poveri e di opere di carità. Ancora oggi, la chiesa è utilizzata per celebrazioni religiose e rappresenta un importante punto di riferimento per la comunità locale.\n\nIn conclusione, la Chiesa di San Giovanni Battista degli Almadiani a Viterbo è un luogo di grande interesse artistico e storico, che merita sicuramente una visita per ammirare le sue opere d'arte e per immergersi nella storia e nella spiritualità che essa rappresenta."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 494,
+        "total_tokens": 534
+    }
+}

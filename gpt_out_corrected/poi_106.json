@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enHiBCnKYPUGE88n5BxGhDlJE27Q",
+    "object": "chat.completion",
+    "created": 1689956926,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Assunta in Cielo e San Vivenzio si trova nel comune di Blera, nella provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. La facciata è realizzata in pietra locale e presenta un portale romanico con un arco a tutto sesto decorato con motivi floreali e geometrici. Sopra il portale si trova una finestra ad arco, mentre ai lati sono presenti due lesene che dividono la facciata in tre parti.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate lignee. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di Gesù e dei santi. Sull'altare maggiore si trova un dipinto raffigurante l'Assunzione di Maria in cielo, opera del pittore viterbese Sebastiano Conca.\n\nLa chiesa conserva anche un prezioso crocifisso ligneo del XV secolo, attribuito alla scuola di Donatello. Questa scultura è considerata una delle opere d'arte più importanti della chiesa.\n\nAccanto alla chiesa si trova il campanile, che risale al XIII secolo. È una torre a pianta quadrata, realizzata in pietra e mattoni, con una copertura a cuspide. Il campanile ospita tre campane, che vengono suonate durante le celebrazioni religiose.\n\nLa Chiesa di Santa Maria Assunta in Cielo e San Vivenzio è un luogo di culto molto amato dalla comunità locale e un importante punto di riferimento per i visitatori che desiderano conoscere l'arte e la storia della regione. La sua architettura romanica e gli affreschi medievali la rendono un luogo di grande fascino e bellezza."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 498,
+        "total_tokens": 544
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnRdfaBhDpXjA5uZTHOQvQrusyjd",
+    "object": "chat.completion",
+    "created": 1690195869,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Sentiero Natura Il Grande Leccio è un percorso escursionistico situato nel comune di Sutri, in Italia. Si tratta di un sentiero immerso nella natura che offre ai visitatori la possibilità di esplorare la bellezza del territorio circostante.\n\nIl sentiero inizia presso il centro storico di Sutri e si snoda lungo un percorso di circa 10 chilometri. Durante il percorso, i visitatori avranno l'opportunità di ammirare una varietà di paesaggi, tra cui boschi, prati e colline. Lungo il sentiero, sono presenti anche diversi punti panoramici che offrono viste mozzafiato sulla campagna circostante.\n\nUno dei punti salienti del sentiero è la presenza di numerosi lecci secolari, da cui prende il nome. Questi alberi maestosi e imponenti creano un'atmosfera suggestiva e offrono un riparo ombroso durante le giornate calde.\n\nDurante il percorso, i visitatori avranno anche l'opportunità di scoprire la ricca storia di Sutri. Lungo il sentiero, infatti, si trovano diversi siti archeologici, come l'anfiteatro romano e la necropoli etrusca. Questi luoghi offrono un'interessante finestra sul passato e permettono ai visitatori di immergersi nella storia antica della zona.\n\nIl sentiero è ben segnalato e facilmente accessibile, adatto a escursionisti di tutti i livelli di esperienza. È possibile percorrere l'intero sentiero in una sola giornata, ma è anche possibile suddividerlo in più tappe, per godere appieno della bellezza del paesaggio e delle attrazioni lungo il percorso.\n\nIn conclusione, il Sentiero Natura Il Grande Leccio è un'esperienza unica per gli amanti della natura e della storia. Offre la possibilità di immergersi nella bellezza del territorio di Sutri, scoprendo la sua storia millenaria e godendo di panorami mozzafiato lungo il percorso."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 515,
+        "total_tokens": 552
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eo4cKmZNyDmeZDXaKaMyiSqdQ9eX",
+    "object": "chat.completion",
+    "created": 1689959958,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Piazza Maggiore è la piazza principale del comune di Castiglione in Teverina, situato nella regione dell'Umbria, in Italia. La piazza è il cuore pulsante del paese e rappresenta un importante punto di incontro e di socializzazione per i residenti e i visitatori.\n\nLa piazza è caratterizzata da un design tradizionale e affascinante, con un pavimento in ciottoli e una serie di edifici storici che la circondano. Al centro della piazza si trova una fontana, che aggiunge un tocco di freschezza e di bellezza al luogo.\n\nUno dei principali edifici che si affacciano sulla piazza è il Palazzo Comunale, un imponente edificio risalente al XIII secolo. Questo palazzo è un esempio di architettura medievale e ospita gli uffici amministrativi del comune. La sua facciata è decorata con stemmi e affreschi che raccontano la storia del paese.\n\nUn altro edificio di rilievo che si affaccia sulla piazza è la Chiesa di San Giovanni Battista, una chiesa romanica del XII secolo. Questa chiesa presenta una facciata semplice ma elegante, con un portale decorato e una serie di finestre ad arco. All'interno, si possono ammirare affreschi e opere d'arte religiosa.\n\nLa piazza è anche circondata da una serie di negozi, caffè e ristoranti, che offrono una varietà di prodotti locali e piatti tipici umbri. Questi luoghi sono ideali per fare una pausa e godersi l'atmosfera vivace della piazza.\n\nDurante l'anno, la piazza ospita anche una serie di eventi e manifestazioni, come concerti, mercati e festival. Queste occasioni sono un'ottima opportunità per immergersi nella cultura e nelle tradizioni locali e per vivere l'energia e l'ospitalità del paese.\n\nIn sintesi, Piazza Maggiore a Castiglione in Teverina è un luogo affascinante e vivace, che rappresenta il cuore pulsante del paese. Con i suoi edifici storici, la fontana centrale e l'atmosfera accogliente, la piazza è un luogo da visitare assolutamente durante un viaggio in questa parte dell'Umbria."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 571,
+        "total_tokens": 609
+    }
+}

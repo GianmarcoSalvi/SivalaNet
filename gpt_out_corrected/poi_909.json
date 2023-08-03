@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqFaiDO6uAEogRrCNWdQQOLydzUE",
+    "object": "chat.completion",
+    "created": 1690206654,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Museo Nazionale Etrusco di Rocca Albornoz è situato nel comune di Viterbo, in Italia. Si trova all'interno di un imponente castello medievale, noto come Rocca Albornoziana, che fu costruito nel XIV secolo per volere del cardinale Albornoz, legato pontificio e governatore di Viterbo.\n\nIl museo è dedicato alla civiltà etrusca, una delle più antiche e affascinanti culture dell'Italia antica. La collezione del museo comprende una vasta gamma di reperti archeologici provenienti da siti etruschi della regione, tra cui Viterbo, Tarquinia, Cerveteri e Vulci.\n\nAll'interno del museo, i visitatori possono ammirare una varietà di oggetti, tra cui ceramiche, gioielli, armi, sculture e affreschi. Questi reperti offrono un'importante testimonianza della vita quotidiana, delle credenze religiose e delle pratiche funerarie degli antichi etruschi.\n\nUna delle principali attrazioni del museo è la Sala degli Ori, che ospita una straordinaria collezione di gioielli etruschi. Questi preziosi oggetti sono caratterizzati da un'eccezionale maestria artigianale e sono decorati con motivi simbolici e iconografici tipici dell'arte etrusca.\n\nIl museo offre anche una serie di mostre temporanee e attività educative per i visitatori di tutte le età. Ci sono guide esperte disponibili per fornire informazioni e approfondimenti sulla storia e la cultura etrusca.\n\nOltre alle esposizioni, il museo offre una vista panoramica sulla città di Viterbo e sulla campagna circostante dalla sommità della Rocca Albornoziana. Questo rende la visita al museo un'esperienza unica, che combina l'arte e la storia con la bellezza del paesaggio.\n\nIn conclusione, il Museo Nazionale Etrusco di Rocca Albornoz è un luogo imperdibile per gli appassionati di storia e archeologia. Offre una preziosa testimonianza della ricca cultura etrusca e permette ai visitatori di immergersi in un affascinante viaggio nel passato."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 533,
+        "total_tokens": 579
+    }
+}

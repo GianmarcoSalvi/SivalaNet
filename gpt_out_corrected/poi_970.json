@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqdBBReGrZevnnblxraFBGbeEA9v",
+    "object": "chat.completion",
+    "created": 1690208117,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Assunta in Cielo si trova nel comune di Vitorchiano, in provincia di Viterbo, Italia. È una delle principali attrazioni turistiche della zona e rappresenta un importante esempio di architettura religiosa medievale.\n\nLa chiesa risale al XII secolo ed è situata nel centro storico di Vitorchiano, circondata da strette stradine e antiche case in pietra. La facciata della chiesa è semplice ma elegante, con un portale in pietra sormontato da un rosone circolare. Sopra il portale è presente un affresco raffigurante la Madonna con il Bambino.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Le pareti sono decorate con affreschi che rappresentano scene della vita di Maria e di Cristo, realizzati da artisti locali nel corso dei secoli. Tra gli affreschi più notevoli vi è una Madonna con il Bambino, attribuita a Antoniazzo Romano, un famoso pittore rinascimentale.\n\nNel presbiterio si trova l'altare maggiore, decorato con marmi policromi e affiancato da due colonne in stile romanico. Sopra l'altare è presente un grande crocifisso ligneo, risalente al XV secolo. Ai lati dell'altare si trovano due cappelle laterali, dedicate rispettivamente a San Giuseppe e a San Giovanni Battista.\n\nLa chiesa di Santa Maria Assunta in Cielo è un luogo di culto ancora attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per gli abitanti di Vitorchiano, che partecipano alle celebrazioni religiose e alle festività tradizionali che si svolgono nella chiesa.\n\nLa chiesa di Santa Maria Assunta in Cielo rappresenta un importante patrimonio storico e artistico per la comunità di Vitorchiano e per tutti coloro che visitano la zona. La sua architettura medievale, gli affreschi e le opere d'arte al suo interno offrono un'esperienza unica e suggestiva per i visitatori interessati alla storia e alla cultura dell'Italia medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 577,
+        "total_tokens": 617
+    }
+}

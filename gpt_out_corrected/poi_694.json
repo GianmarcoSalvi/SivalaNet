@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp2iHHgQejS3D9BsoYeIKf4V6K2D",
+    "object": "chat.completion",
+    "created": 1690202012,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli di Monterozzi è un sito archeologico situato nel comune di Tarquinia, nella regione italiana del Lazio. È uno dei siti etruschi più importanti e meglio conservati in Italia, ed è stato dichiarato Patrimonio dell'Umanità dall'UNESCO nel 2004.\n\nLa necropoli si estende su una superficie di circa 10 ettari e contiene oltre 6.000 tombe etrusche, risalenti al periodo compreso tra il VII e il II secolo a.C. Le tombe sono state scavate nella roccia tufacea e sono decorate con affreschi che rappresentano scene di vita quotidiana, mitologia, rituali religiosi e riti funerari.\n\nLe tombe sono di diversi tipi, tra cui tumuli, tombe a dado e tombe a camera. I tumuli sono grandi tumuli di terra che coprono le tombe sotterranee, mentre le tombe a dado sono strutture rettangolari con una camera sepolcrale. Le tombe a camera sono le più elaborate e sono costituite da una serie di stanze interconnesse, decorate con affreschi.\n\nGli affreschi presenti nella necropoli di Monterozzi sono considerati tra i migliori esempi dell'arte etrusca. Rappresentano una varietà di soggetti, tra cui figure umane, animali, scene di caccia, banchetti, danze e giochi. Gli affreschi sono caratterizzati da colori vivaci e dettagliati, che mostrano la maestria degli artisti etruschi.\n\nOltre alle tombe, la necropoli di Monterozzi comprende anche un museo che ospita una vasta collezione di reperti archeologici provenienti dal sito. Il museo offre una panoramica della cultura etrusca, con oggetti come ceramiche, gioielli, armi e utensili.\n\nLa necropoli di Monterozzi è un luogo di grande importanza storica e archeologica, che offre una preziosa testimonianza della civiltà etrusca. La sua bellezza e la sua ricchezza artistica la rendono una meta turistica molto popolare, attirando visitatori da tutto il mondo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 515,
+        "total_tokens": 554
+    }
+}

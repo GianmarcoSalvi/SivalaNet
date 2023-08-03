@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpbB8MA6RUVKFUA9CUKNej9v8c6k",
+    "object": "chat.completion",
+    "created": 1690204149,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Diga Poligonale nel comune di Vasanello, Italia, è una struttura idraulica di grande importanza per la zona. Si trova lungo il fiume Marta, a pochi chilometri dal centro abitato di Vasanello.\n\nLa diga è stata costruita con una forma poligonale, da cui prende il nome, ed è realizzata in cemento armato. La sua lunghezza totale è di circa 200 metri, mentre l'altezza raggiunge i 30 metri. Queste dimensioni la rendono una delle dighe più imponenti della regione.\n\nLa funzione principale della Diga Poligonale è quella di regolare il flusso del fiume Marta, garantendo un adeguato apporto idrico alla zona circostante. Inoltre, la diga è stata progettata per prevenire il rischio di inondazioni, soprattutto durante i periodi di piogge intense.\n\nLa struttura è dotata di un sistema di prese d'acqua che permette di regolare il flusso idrico in base alle necessità del territorio. Inoltre, è presente anche una centrale idroelettrica che sfrutta la forza dell'acqua per produrre energia elettrica.\n\nLa Diga Poligonale è circondata da un ampio bacino artificiale, che si estende per diversi chilometri quadrati. Questo bacino è utilizzato per la raccolta dell'acqua, che viene poi distribuita per scopi irrigui e per l'approvvigionamento idrico della zona.\n\nLa diga è stata realizzata nel corso degli anni '70 e rappresenta un importante punto di riferimento per l'intera comunità di Vasanello. Oltre alla sua funzione pratica, la Diga Poligonale è anche un luogo di interesse turistico, grazie alla sua imponenza e alla bellezza del paesaggio circostante.\n\nIn conclusione, la Diga Poligonale nel comune di Vasanello, Italia, è una struttura idraulica di grande importanza per la zona. Grazie alla sua forma poligonale, alle sue dimensioni imponenti e alle sue funzioni di regolazione idrica, rappresenta un punto di riferimento per la comunità locale e un luogo di interesse turistico."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 546,
+        "total_tokens": 579
+    }
+}

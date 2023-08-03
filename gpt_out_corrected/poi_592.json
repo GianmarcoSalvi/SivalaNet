@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmu0RDJnlSCxp5sFqJwkI4nFbrHM",
+    "object": "chat.completion",
+    "created": 1690193784,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Oratorio di Santo Antonio si trova nel comune di Proceno, in Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nL'oratorio è situato nel centro storico del paese, in una posizione panoramica che offre una vista mozzafiato sulla campagna circostante. La sua costruzione risale al XVII secolo, periodo in cui il culto di Santo Antonio era molto diffuso in questa zona.\n\nL'edificio presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra e una finestra centrale. Sopra il portale è presente una piccola nicchia contenente una statua del santo. La facciata è decorata con alcuni elementi architettonici tipici del periodo, come cornici e lesene.\n\nAll'interno, l'oratorio presenta una pianta rettangolare con un'unica navata. Le pareti sono affrescate con scene della vita di Santo Antonio, realizzate da artisti locali dell'epoca. Gli affreschi sono di grande valore artistico e rappresentano un importante esempio di arte sacra del XVII secolo.\n\nL'altare maggiore è dedicato a Santo Antonio e presenta una statua del santo in posizione centrale. Attorno all'altare sono presenti alcuni dipinti raffiguranti scene della vita del santo e dei suoi miracoli. L'altare è decorato con intagli in legno dorato e presenta una ricca decorazione barocca.\n\nL'atmosfera dell'oratorio è molto suggestiva, grazie alla luce che filtra dalle finestre e agli affreschi che decorano le pareti. L'edificio è stato restaurato nel corso degli anni, ma ha mantenuto intatta la sua bellezza originale.\n\nL'Oratorio di Santo Antonio è un luogo di culto molto amato dalla comunità locale e viene utilizzato per la celebrazione di messe e altre cerimonie religiose. È anche aperto al pubblico, che può visitarlo per ammirare la sua bellezza artistica e per immergersi nella storia e nella spiritualità di Proceno."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 499,
+        "total_tokens": 531
+    }
+}

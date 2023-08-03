@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flyOdqqRIcE5DfvIdDbYVSHHJuad",
+    "object": "chat.completion",
+    "created": 1690190212,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il centro storico di Montalto di Castro è situato nella regione del Lazio, nella provincia di Viterbo, in Italia. Questa affascinante cittadina si trova su una collina a circa 8 chilometri dalla costa tirrenica.\n\nIl centro storico di Montalto di Castro è caratterizzato da strette strade lastricate, edifici storici e una ricca storia che risale all'epoca etrusca. La città è stata abitata sin dai tempi antichi, come dimostrano i numerosi reperti archeologici che sono stati scoperti nella zona.\n\nUna delle principali attrazioni del centro storico è la Chiesa di San Rocco, un edificio religioso risalente al XVII secolo. La chiesa presenta una facciata in stile barocco e un interno riccamente decorato con affreschi e opere d'arte.\n\nUn'altra attrazione da non perdere è il Castello Guglielmi, un'imponente fortezza medievale che domina il centro storico. Costruito nel XIII secolo, il castello offre una vista panoramica sulla città e sulla campagna circostante.\n\nNel centro storico si trovano anche numerosi negozi, ristoranti e caffè, dove è possibile gustare la cucina tradizionale italiana e acquistare prodotti locali.\n\nDurante l'estate, il centro storico di Montalto di Castro ospita anche eventi culturali e festival, che attirano visitatori da tutto il paese. Questi eventi includono spettacoli teatrali, concerti, mostre d'arte e molto altro ancora.\n\nIn sintesi, il centro storico di Montalto di Castro è un luogo affascinante e ricco di storia, che offre ai visitatori la possibilità di immergersi nella cultura e nella tradizione italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 423,
+        "total_tokens": 457
+    }
+}

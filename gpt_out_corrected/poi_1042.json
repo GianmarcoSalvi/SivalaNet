@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fr0S3KmrsKLcTIeC65dWYkyaxfWg",
+    "object": "chat.completion",
+    "created": 1690209560,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le Necropoli di Tuscania sono un complesso archeologico situato nel comune di Tuscania, nella regione del Lazio, in Italia. Questo sito archeologico è uno dei più importanti e meglio conservati dell'intera regione.\n\nLe necropoli si estendono su una vasta area e sono composte da diverse tombe e monumenti funerari risalenti all'epoca etrusca, che va dal VII al III secolo a.C. Tuscania era una delle città più importanti della civiltà etrusca, e le necropoli testimoniano la ricchezza e l'importanza della città in quel periodo.\n\nLe tombe sono state scavate nella roccia vulcanica e sono caratterizzate da una varietà di stili e decorazioni. Alcune tombe sono semplici e sobrie, mentre altre sono più elaborate e riccamente decorate. Molte di esse presentano affreschi e rilievi che raffigurano scene di vita quotidiana, divinità e simboli religiosi.\n\nTra le tombe più famose delle Necropoli di Tuscania vi è la Tomba dei Leoni, così chiamata per i due leoni scolpiti che la decorano. Questa tomba è un esempio straordinario dell'arte etrusca e rappresenta uno dei monumenti più iconici della città.\n\nOltre alle tombe, le necropoli includono anche un museo archeologico che ospita una vasta collezione di reperti provenienti dagli scavi. Il museo offre una panoramica completa sulla civiltà etrusca e permette ai visitatori di approfondire la conoscenza di questa antica cultura.\n\nLe Necropoli di Tuscania sono un luogo di grande interesse storico e archeologico, che offre ai visitatori l'opportunità di immergersi nella storia dell'antica civiltà etrusca. La bellezza e la maestosità delle tombe e dei monumenti funerari rendono questo sito unico nel suo genere e un must per gli appassionati di archeologia e storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 489,
+        "total_tokens": 525
+    }
+}

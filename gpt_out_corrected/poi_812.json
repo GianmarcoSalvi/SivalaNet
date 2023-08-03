@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpjRBeWVsEEF77DtNpwhQzJErRiQ",
+    "object": "chat.completion",
+    "created": 1690204661,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli rupestre di Norchia si trova nel comune di Vetralla, nella regione del Lazio, in Italia. È un sito archeologico di grande importanza storica e artistica, che risale all'epoca etrusca, tra il IV e il III secolo a.C.\n\nLa necropoli è situata su una collina, circondata da una fitta vegetazione, e si estende su una superficie di circa 20 ettari. È composta da numerose tombe rupestri, scavate nella roccia vulcanica, che si presentano come vere e proprie grotte artificiali.\n\nLe tombe sono di diverse tipologie e dimensioni, ma tutte presentano una caratteristica comune: la facciata scolpita con raffigurazioni di figure umane e animali. Queste sculture sono di straordinaria bellezza e precisione, e rappresentano uno dei migliori esempi di arte etrusca.\n\nLe figure rappresentate sono principalmente uomini e donne, spesso vestiti con abiti tradizionali etruschi, ma ci sono anche raffigurazioni di divinità e animali. Le scene raffigurate sono molto varie, e spaziano dalla vita quotidiana, come il lavoro nei campi o la preparazione del cibo, a scene mitologiche e religiose.\n\nOltre alle tombe, la necropoli comprende anche un'area sacra, con un tempio dedicato alla dea etrusca Norzia, da cui prende il nome il sito. Il tempio è stato parzialmente ricostruito, ma conserva ancora alcuni elementi originali, come le colonne e le basi dei pilastri.\n\nLa necropoli di Norchia è stata scoperta nel XIX secolo, ma solo negli ultimi decenni è stata oggetto di scavi e studi approfonditi. Oggi è aperta al pubblico e visitabile, offrendo un'esperienza unica per immergersi nell'antica civiltà etrusca e ammirare le straordinarie opere d'arte che sono state conservate nel corso dei secoli."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 489,
+        "total_tokens": 527
+    }
+}

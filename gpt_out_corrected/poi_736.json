@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpGQAl5w8TiaWxSS8289Axpakndo",
+    "object": "chat.completion",
+    "created": 1690202862,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Marco si trova nel comune di Tuscania, in Italia. È un edificio religioso di grande importanza storica e artistica, risalente al XII secolo.\n\nLa chiesa è situata nel centro storico di Tuscania, circondata da strette strade medievali e affacciata su una piazza pittoresca. La sua facciata è caratterizzata da un portale romanico con un arco a tutto sesto, decorato con sculture di animali fantastici e motivi vegetali. Sopra il portale si trova un rosone circolare, che illumina l'interno della chiesa con una luce soffusa.\n\nL'interno della Chiesa di San Marco è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XIII secolo e raffigurano scene della vita di Cristo, dei santi e degli apostoli. Le pareti sono decorate con motivi geometrici e vegetali, che creano un'atmosfera suggestiva e mistica.\n\nUno degli elementi più interessanti della chiesa è il suo pavimento in mosaico. Il pavimento è composto da tessere di marmo bianco e nero, disposte in motivi geometrici e figurativi. I mosaici raffigurano scene bibliche, animali fantastici e simboli cristiani, creando un effetto visivo mozzafiato.\n\nLa Chiesa di San Marco è anche famosa per il suo campanile, che si erge maestoso accanto all'edificio principale. Il campanile è di forma quadrata e presenta una serie di finestre bifore e trifore, che permettono alla luce di filtrare all'interno. La sommità del campanile è decorata con archetti pensili e una guglia a forma di piramide.\n\nOltre alla sua bellezza architettonica, la Chiesa di San Marco ha anche un grande valore storico. È stata costruita durante il periodo medievale e ha subito diverse modifiche nel corso dei secoli. La chiesa è stata testimone di numerosi eventi storici e religiosi, ed è ancora oggi un luogo di culto attivo per la comunità locale.\n\nIn conclusione, la Chiesa di San Marco a Tuscania è un gioiello architettonico e artistico. Con la sua facciata romanica, gli affreschi medievali, il pavimento in mosaico e il maestoso campanile, la chiesa incanta i visitatori con la sua bellezza e la sua atmosfera spirituale. È un luogo imperdibile per chi visita Tuscania e desidera immergersi nella storia e nell'arte della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 649,
+        "total_tokens": 683
+    }
+}

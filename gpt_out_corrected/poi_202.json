@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enrKHq99setcIJybQuVlhJ5UKJ3r",
+    "object": "chat.completion",
+    "created": 1689959134,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Area Picnic TRIALART si trova nel comune di Capranica, in Italia. È un'area dedicata al picnic e al relax immersa nella natura, ideale per trascorrere piacevoli momenti all'aria aperta con amici e familiari.\n\nL'area picnic è situata in una posizione panoramica, circondata da alberi e prati verdi, che offrono un'atmosfera tranquilla e rilassante. È dotata di tavoli e panche in legno, dove è possibile sistemarsi comodamente per consumare pasti e bevande.\n\nL'area è ben curata e pulita, con un'ampia zona verde attrezzata per giochi e attività all'aperto. Ci sono anche aree dedicate al barbecue, dove è possibile cucinare e gustare deliziosi pasti all'aperto.\n\nL'Area Picnic TRIALART è particolarmente apprezzata dagli amanti della natura e degli sport all'aria aperta, in quanto si trova in prossimità di sentieri e percorsi per escursioni a piedi, in bicicletta o a cavallo. È possibile organizzare piacevoli passeggiate nella natura circostante, godendo di panorami mozzafiato e respirando aria fresca.\n\nL'area è facilmente accessibile, con un ampio parcheggio disponibile per i visitatori. È aperta tutto l'anno e l'ingresso è gratuito. È consigliabile portare con sé cibo e bevande, ma è anche possibile trovare bar e ristoranti nelle vicinanze per eventuali necessità.\n\nIn sintesi, l'Area Picnic TRIALART nel comune di Capranica è un luogo ideale per trascorrere una giornata all'aperto, godendo della natura e del relax. È perfetta per organizzare picnic, barbecue e attività all'aria aperta, offrendo un'esperienza piacevole e rigenerante per tutti i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 468,
+        "total_tokens": 502
+    }
+}

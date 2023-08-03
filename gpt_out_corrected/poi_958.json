@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqWRVSKtUcLgWs1ICcksY9NWayGV",
+    "object": "chat.completion",
+    "created": 1690207699,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca San Paolo dei frati minori cappuccini della Provincia Romana si trova nel comune di Viterbo, in Italia. È una biblioteca specializzata che fa parte del complesso dei frati minori cappuccini, situato nel centro storico della città.\n\nLa biblioteca è ospitata in un edificio storico, che risale al XVII secolo, e conserva una vasta collezione di libri, manoscritti, incunaboli e documenti antichi. La sua collezione si concentra principalmente sulla teologia, la filosofia, la storia della Chiesa e la spiritualità francescana.\n\nLa biblioteca è aperta al pubblico e offre servizi di consultazione e prestito dei libri. Dispone di una sala di lettura tranquilla e accogliente, dove gli utenti possono studiare e fare ricerche. Il personale della biblioteca è disponibile per fornire assistenza e supporto nella ricerca di materiali specifici.\n\nLa Biblioteca San Paolo dei frati minori cappuccini della Provincia Romana è anche un importante centro di ricerca per gli studiosi interessati alla storia della Chiesa e alla spiritualità francescana. Oltre alla sua collezione di libri, la biblioteca conserva anche una vasta gamma di documenti e archivi storici, che possono essere consultati su richiesta.\n\nInoltre, la biblioteca organizza regolarmente eventi culturali, come conferenze, presentazioni di libri e mostre, per promuovere la conoscenza e la diffusione della cultura e della spiritualità francescana.\n\nIn sintesi, la Biblioteca San Paolo dei frati minori cappuccini della Provincia Romana è un luogo di grande importanza per gli studiosi e gli appassionati di storia della Chiesa e spiritualità francescana. Con la sua vasta collezione di libri e documenti antichi, offre un ambiente ideale per la ricerca e lo studio, oltre a promuovere la cultura attraverso eventi culturali."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 47,
+        "completion_tokens": 463,
+        "total_tokens": 510
+    }
+}

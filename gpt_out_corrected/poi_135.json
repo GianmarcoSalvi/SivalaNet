@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7enT0uTmNLjaGdmq3VTTKmtpT25Au",
+    "object": "chat.completion",
+    "created": 1689957626,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Oratorio di Santo Leonardo è un edificio religioso situato nel comune di Bolsena, in Italia. Si trova nella parte più antica della città, vicino alla piazza principale.\n\nL'oratorio è dedicato a Santo Leonardo, un santo molto venerato nella tradizione cattolica. L'edificio risale al XIII secolo ed è considerato uno dei migliori esempi di architettura romanica della zona.\n\nL'esterno dell'oratorio è caratterizzato da una facciata semplice ma elegante, con un portale in pietra decorato con sculture di motivi religiosi. La facciata è affiancata da due piccole finestre ad arco, che permettono l'ingresso di luce naturale all'interno dell'edificio.\n\nAll'interno, l'oratorio presenta una navata unica con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di Santo Leonardo e altri santi. Gli affreschi sono stati restaurati nel corso degli anni, ma conservano ancora la loro bellezza originale.\n\nAl centro dell'oratorio si trova l'altare principale, decorato con sculture e dipinti raffiguranti la Passione di Cristo. Sopra l'altare è collocata una statua di Santo Leonardo, che viene venerata dai fedeli.\n\nL'atmosfera all'interno dell'oratorio è molto suggestiva e tranquilla, con una luce soffusa che crea un'atmosfera di spiritualità. L'edificio è aperto al pubblico e i visitatori possono ammirare l'arte e l'architettura storica che caratterizzano questo luogo di culto.\n\nL'Oratorio di Santo Leonardo è un importante punto di riferimento per la comunità locale e un luogo di preghiera per i fedeli. La sua bellezza e la sua storia lo rendono una tappa imperdibile per i visitatori che desiderano immergersi nella cultura e nella spiritualità di Bolsena."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 484,
+        "total_tokens": 516
+    }
+}

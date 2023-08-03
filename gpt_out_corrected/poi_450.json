@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flss0oGGWORCYMRv8AnCJVuDRYzO",
+    "object": "chat.completion",
+    "created": 1690189870,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Sforza-Ciotti è un edificio storico situato nel comune di Marta, in provincia di Viterbo, Italia. Si trova nel centro storico del paese, a pochi passi dal lago di Bolsena.\n\nL'edificio risale al XVIII secolo ed è stato costruito in stile neoclassico. È composto da due piani e presenta una facciata elegante e sobria, caratterizzata da una serie di finestre con cornici in pietra e un portale d'ingresso centrale.\n\nIl palazzo è stato la residenza della famiglia Sforza-Ciotti, una delle famiglie nobili più importanti della zona. La famiglia Sforza-Ciotti ha avuto un ruolo significativo nella storia di Marta e ha contribuito allo sviluppo e alla crescita del paese.\n\nAll'interno del palazzo, si possono ammirare affreschi e decorazioni originali che testimoniano la ricchezza e l'eleganza dell'epoca. Le stanze sono arredate con mobili d'epoca e oggetti preziosi, che offrono un'atmosfera suggestiva e un tuffo nel passato.\n\nAttualmente, il Palazzo Sforza-Ciotti è di proprietà privata e non è aperto al pubblico. Tuttavia, la sua bellezza e importanza storica lo rendono un punto di riferimento per il patrimonio culturale di Marta e un luogo di grande interesse per gli appassionati di storia e architettura.\n\nInoltre, la posizione del palazzo, nel cuore del centro storico di Marta e vicino al lago di Bolsena, lo rende un punto di partenza ideale per esplorare la bellezza naturale della zona e le altre attrazioni turistiche della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 426,
+        "total_tokens": 461
+    }
+}

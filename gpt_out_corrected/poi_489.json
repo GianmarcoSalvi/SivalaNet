@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm4xeWg0jtdHJTBv01Xo8xEsYPjw",
+    "object": "chat.completion",
+    "created": 1690190619,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca del Seminario vescovile Barbarigo si trova nel comune di Montefiascone, in Italia. È una biblioteca di grande importanza storica e culturale, che conserva una vasta collezione di libri antichi e manoscritti.\n\nLa biblioteca prende il nome dal vescovo Marco Antonio Barbarigo, che nel XVII secolo promosse la sua fondazione. È situata all'interno del Seminario vescovile, un edificio di grande bellezza architettonica che risale al XVII secolo.\n\nLa biblioteca è composta da diverse sale, ognuna dedicata a una specifica tematica. La sala principale è caratterizzata da una maestosa volta affrescata e da scaffali che ospitano migliaia di volumi. Qui si trovano principalmente libri di teologia, filosofia e storia della Chiesa.\n\nOltre alla sala principale, la biblioteca dispone di una sala dedicata ai manoscritti, dove sono conservati preziosi documenti antichi. Questa sala è particolarmente suggestiva, con le sue pareti rivestite di legno e i mobili d'epoca.\n\nLa Biblioteca del Seminario vescovile Barbarigo è aperta al pubblico, ma è necessario prenotare una visita guidata per poter accedere. Durante la visita, è possibile ammirare non solo i libri e i manoscritti, ma anche altri oggetti di valore come antiche mappe geografiche e incisioni.\n\nLa biblioteca svolge anche un ruolo importante nella promozione della cultura e dell'istruzione nella comunità locale. Organizza regolarmente eventi culturali, conferenze e mostre, che coinvolgono sia gli studenti del Seminario che il pubblico esterno.\n\nIn conclusione, la Biblioteca del Seminario vescovile Barbarigo è un luogo di grande valore storico e culturale nel comune di Montefiascone. Con la sua vasta collezione di libri antichi e manoscritti, rappresenta una risorsa preziosa per gli studiosi e gli appassionati di storia e cultura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 496,
+        "total_tokens": 538
+    }
+}

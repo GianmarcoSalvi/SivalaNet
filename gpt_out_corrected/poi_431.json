@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fllVhi0ipUTMtwJmdfKyWIZ9CekL",
+    "object": "chat.completion",
+    "created": 1690189413,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Piazza della Rocca è una delle principali piazze nel comune di Latera, situato nella regione del Lazio, in Italia. La piazza si trova nel centro storico del paese, circondata da antichi edifici e affacciata sulla maestosa Rocca dei Papi, che domina l'intera area.\n\nLa piazza è caratterizzata da un design tradizionale, con un pavimento in pietra e una fontana al centro. È un luogo di incontro e di socializzazione per i residenti e i visitatori, che possono godere di un'atmosfera tranquilla e rilassante.\n\nIntorno alla piazza si trovano diversi edifici storici, tra cui la Chiesa di San Clemente, un importante luogo di culto che risale al XIII secolo. La chiesa presenta una facciata in stile romanico e un interno riccamente decorato con affreschi e opere d'arte.\n\nNelle vicinanze si trova anche il Palazzo Comunale, un edificio storico che ospita gli uffici amministrativi del comune. Il palazzo è caratterizzato da una facciata elegante e da un cortile interno, che offre una vista panoramica sulla piazza e sulla Rocca dei Papi.\n\nPiazza della Rocca è anche il punto di partenza per esplorare il resto del centro storico di Latera. Le strade circostanti sono piene di negozi, caffè e ristoranti, dove è possibile gustare la cucina locale e acquistare prodotti tipici.\n\nLa piazza è anche il luogo in cui si svolgono eventi e manifestazioni durante tutto l'anno, come concerti, fiere e sagre. Durante queste occasioni, la piazza si anima di musica, colori e profumi, attirando visitatori da tutto il territorio circostante.\n\nIn sintesi, Piazza della Rocca è il cuore pulsante del centro storico di Latera, un luogo affascinante e suggestivo che offre una combinazione unica di storia, cultura e tradizione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 484,
+        "total_tokens": 517
+    }
+}

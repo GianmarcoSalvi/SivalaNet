@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en5bPs6YPX4o3LYZHZOImzBnbe3C",
+    "object": "chat.completion",
+    "created": 1689956175,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca del Centro Studi Bonaventuriani si trova nel comune di Bagnoregio, in Italia. È una biblioteca specializzata che si concentra sulla figura di San Bonaventura da Bagnoregio, uno dei più importanti teologi e filosofi medievali.\n\nLa biblioteca è situata all'interno del complesso del Centro Studi Bonaventuriani, che comprende anche un museo e un centro di ricerca. È un luogo di grande importanza per gli studiosi e gli appassionati di San Bonaventura, che possono accedere a una vasta collezione di libri, manoscritti e documenti relativi alla sua vita e al suo pensiero.\n\nLa biblioteca offre un ambiente tranquillo e accogliente, ideale per lo studio e la ricerca. Dispone di una sala lettura attrezzata con postazioni di lavoro, dove è possibile consultare i libri e i materiali presenti nella collezione. Inoltre, è possibile richiedere l'accesso a specifici documenti o opere tramite il personale della biblioteca.\n\nLa collezione della biblioteca comprende una vasta gamma di testi, tra cui edizioni rare e antiche delle opere di San Bonaventura, studi critici e commentari su di lui, nonché pubblicazioni recenti riguardanti la sua figura e il suo pensiero. La biblioteca è costantemente aggiornata con nuove acquisizioni e offre anche servizi di prestito interbibliotecario per gli utenti che desiderano consultare materiali non presenti nella collezione.\n\nOltre alla sua funzione di conservazione e diffusione del patrimonio bonaventuriano, la biblioteca organizza anche eventi culturali, come conferenze, seminari e mostre, per promuovere la conoscenza e lo studio di San Bonaventura e del suo contesto storico.\n\nIn conclusione, la Biblioteca del Centro Studi Bonaventuriani è un luogo di grande importanza per gli studiosi e gli appassionati di San Bonaventura, offrendo una vasta collezione di libri e documenti relativi alla sua vita e al suo pensiero. È un ambiente accogliente e tranquillo, ideale per lo studio e la ricerca, e offre anche servizi di prestito interbibliotecario e organizza eventi culturali legati al suo campo di interesse."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 547,
+        "total_tokens": 588
+    }
+}

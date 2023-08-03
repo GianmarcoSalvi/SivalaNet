@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqdmOQEOT1L4oJSEXGM3j8nqQfWt",
+    "object": "chat.completion",
+    "created": 1690208154,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Santissima Trinità si trova nel comune di Vitorchiano, in provincia di Viterbo, nella regione del Lazio, Italia. Questa chiesa è un importante luogo di culto per la comunità locale e rappresenta un esempio significativo di architettura religiosa nella zona.\n\nLa chiesa è situata nel centro storico di Vitorchiano, circondata da strette stradine e antiche case in pietra. La sua costruzione risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico romanico-gotico, con una facciata in pietra caratterizzata da un portale d'ingresso decorato con sculture e un rosone centrale. La facciata è sormontata da una piccola torre campanaria.\n\nAll'interno, la chiesa presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi e dipinti che rappresentano scene religiose e santi. L'altare maggiore è ornato con sculture e dipinti raffiguranti la Santissima Trinità.\n\nUno degli elementi più interessanti della chiesa è la cappella della Madonna del Rosario, situata sul lato destro dell'edificio. Questa cappella è decorata con affreschi del XV secolo che raffigurano la vita di Maria e il mistero del Rosario.\n\nLa Chiesa della Santissima Trinità è un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per i visitatori che desiderano conoscere la storia e l'arte religiosa della regione.\n\nLa sua posizione nel centro storico di Vitorchiano la rende facilmente accessibile a piedi o in auto. La chiesa è aperta al pubblico durante il giorno e i visitatori possono ammirare l'architettura, gli affreschi e le opere d'arte al suo interno."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 512,
+        "total_tokens": 551
+    }
+}

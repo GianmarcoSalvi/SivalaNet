@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmheYuKcJWRvXHC8vYmoIl3ZSsfn",
+    "object": "chat.completion",
+    "created": 1690193018,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario della Santissima Trinità si trova nel comune di Orte, nella regione del Lazio, in Italia. Questo santuario è uno dei luoghi di culto più importanti della zona e attira numerosi visitatori e pellegrini ogni anno.\n\nIl santuario è situato su una collina panoramica, circondato da un paesaggio naturale mozzafiato. La sua posizione elevata offre una vista spettacolare sulla campagna circostante e sul fiume Tevere.\n\nLa costruzione del santuario risale al XVII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. L'edificio è caratterizzato da uno stile architettonico barocco, con una facciata imponente e decorazioni elaborate.\n\nAll'interno del santuario si trova una vasta navata centrale, con altari laterali e cappelle dedicate a santi e sante. Le pareti sono adornate da affreschi e dipinti religiosi, che rappresentano scene della vita di Gesù e dei santi venerati nella tradizione cattolica.\n\nUno degli elementi più significativi del santuario è la statua della Santissima Trinità, posta sull'altare maggiore. Questa statua raffigura la Trinità divina, con il Padre, il Figlio e lo Spirito Santo, ed è oggetto di grande devozione da parte dei fedeli.\n\nIl santuario è anche famoso per la sua festa annuale, che si tiene il 1° maggio. Durante questa festa, la statua della Santissima Trinità viene portata in processione per le strade del comune di Orte, seguita da una folla di fedeli che recitano preghiere e cantano inni religiosi.\n\nIl Santuario della Santissima Trinità è un luogo di pace e spiritualità, dove i visitatori possono trovare rifugio e tranquillità. La sua bellezza architettonica e la sua importanza religiosa lo rendono una meta imperdibile per coloro che visitano la regione del Lazio."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 496,
+        "total_tokens": 533
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqoixew5BjH6l3wUvSeQByRxL12Q",
+    "object": "chat.completion",
+    "created": 1690208832,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Gradoli è un comune situato nella provincia di Viterbo, nella regione del Lazio, in Italia. Si trova sulla sponda nord-occidentale del Lago di Bolsena, uno dei laghi vulcanici più grandi d'Europa.\n\nIl paese di Gradoli è caratterizzato da un'atmosfera tranquilla e pittoresca, con stradine strette e tortuose che si snodano tra le antiche case in pietra. Il centro storico è dominato dal maestoso Castello Farnese, un'imponente fortezza risalente al XIV secolo, che offre una vista panoramica mozzafiato sulla campagna circostante e sul lago.\n\nLe strade del paese sono adornate da fiori colorati e piante rigogliose, creando un'atmosfera accogliente e romantica. Numerosi negozi, ristoranti e caffè si trovano lungo le vie principali, offrendo ai visitatori la possibilità di assaporare la cucina locale e acquistare prodotti tipici.\n\nGradoli è famosa per la produzione di vino, in particolare il vino Est! Est!! Est!!!, un bianco secco e frizzante che viene prodotto nella zona circostante. I vigneti si estendono sulle colline che circondano il paese, creando un paesaggio suggestivo e invitante per gli amanti del vino.\n\nIl lago di Bolsena, che si trova a pochi passi dal centro di Gradoli, offre numerose opportunità per attività all'aperto. Gli amanti della natura possono fare escursioni lungo i sentieri che costeggiano il lago, fare picnic sulle sue rive o praticare sport acquatici come la vela e il windsurf.\n\nOgni anno, a luglio, Gradoli ospita la famosa Sagra del Purgatorio, una festa tradizionale che celebra il patrono del paese. Durante questa festa, le strade si animano di musica, danze, spettacoli e bancarelle che vendono prodotti locali e artigianato.\n\nIn sintesi, Gradoli è un incantevole paese sulle rive del Lago di Bolsena, che offre una combinazione perfetta di storia, cultura, natura e gastronomia. È un luogo ideale per chi cerca una fuga rilassante e autentica in un'atmosfera tipicamente italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 568,
+        "total_tokens": 597
+    }
+}

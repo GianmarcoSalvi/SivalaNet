@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmuHWRbSyCHYk9glxwY6zuqcFehZ",
+    "object": "chat.completion",
+    "created": 1690193801,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo di Guido Ascanio Sforza si trova nel comune di Proceno, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di un imponente edificio storico che risale al XV secolo e che rappresenta uno dei principali punti di interesse della zona.\n\nIl palazzo fu costruito per volere di Guido Ascanio Sforza, un nobile italiano appartenente alla famiglia Sforza, che fu signore di Proceno nel periodo compreso tra il 1476 e il 1517. La struttura è situata nel centro storico del paese, in una posizione dominante che permette di godere di una vista panoramica sulla campagna circostante.\n\nL'edificio si sviluppa su più piani e presenta uno stile architettonico tipico del Rinascimento italiano. La facciata è caratterizzata da un portale d'ingresso in pietra, sormontato da un balcone con ringhiera in ferro battuto. Le finestre sono decorate con cornici in pietra e presentano eleganti motivi ornamentali.\n\nAll'interno del palazzo si trovano diverse sale, ognuna con caratteristiche architettoniche e decorazioni uniche. Tra le più importanti vi è la Sala degli Stemmi, che presenta affreschi raffiguranti gli stemmi delle famiglie nobiliari che hanno governato Proceno nel corso dei secoli. Altre sale notevoli sono la Sala delle Feste, con un soffitto a cassettoni decorato, e la Sala del Trono, che ospita un prezioso trono in legno intagliato.\n\nIl Palazzo di Guido Ascanio Sforza è stato oggetto di vari interventi di restauro nel corso degli anni, al fine di preservarne l'integrità e valorizzarne le caratteristiche storiche. Attualmente, l'edificio è aperto al pubblico e ospita un museo che racconta la storia di Proceno e delle famiglie nobiliari che vi hanno risieduto.\n\nIl palazzo rappresenta un importante punto di riferimento per la comunità locale e un'attrazione turistica per i visitatori che desiderano immergersi nella storia e nell'arte del territorio. La sua imponenza architettonica e le sue ricche decorazioni lo rendono un luogo affascinante da visitare, offrendo un'esperienza unica nel cuore della campagna italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 575,
+        "total_tokens": 613
+    }
+}

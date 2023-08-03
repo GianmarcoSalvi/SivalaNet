@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmBgcHuONKZE1c2TEdfL0cvgMvz7",
+    "object": "chat.completion",
+    "created": 1690191036,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Vito si trova nel comune di Nepi, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale architravato e un rosone centrale. Sopra il portale si trova una lunetta affrescata raffigurante San Vito, il santo patrono della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di San Vito e altri santi. Sull'altare maggiore si trova una pregevole pala d'altare in marmo, risalente al XVII secolo, che rappresenta la Madonna con il Bambino e i santi.\n\nLa chiesa conserva anche alcune opere d'arte di grande valore, tra cui una statua lignea di San Vito del XV secolo e un crocifisso ligneo del XVI secolo. Nell'abside si trova un coro ligneo intagliato, risalente al XVIII secolo, con sedili per i fedeli.\n\nLa Chiesa di San Vito è un luogo di culto molto frequentato dai fedeli e ospita regolarmente celebrazioni religiose. È anche una meta turistica per gli amanti dell'arte e della storia, che possono ammirare le sue bellezze architettoniche e artistiche.\n\nLa chiesa si trova in una posizione panoramica, affacciata sulla valle del fiume Treja, e offre una vista mozzafiato sulla campagna circostante. È circondata da un piccolo cortile con un giardino, dove è possibile fare una piacevole passeggiata e godere della tranquillità del luogo.\n\nIn conclusione, la Chiesa di San Vito nel comune di Nepi è un gioiello architettonico e artistico che merita una visita. La sua bellezza e la sua storia la rendono un luogo di grande fascino e spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 537,
+        "total_tokens": 571
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmjqtDlnCIdPmyM0bRXc75UKuowx",
+    "object": "chat.completion",
+    "created": 1690193154,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'Ente ottava medievale si trova nel comune di Orte, in Italia. Questa biblioteca è un importante centro di ricerca e conservazione di documenti e manoscritti medievali.\n\nLa biblioteca è situata in un edificio storico, che risale al XIII secolo, e che è stato restaurato per ospitare la collezione di libri e documenti dell'Ente ottava medievale. L'edificio stesso è un esempio di architettura medievale, con mura in pietra e un cortile interno.\n\nLa biblioteca contiene una vasta collezione di libri, manoscritti e documenti che coprono un periodo che va dal IX al XV secolo. Questi documenti sono di grande importanza storica e culturale, e sono utilizzati da ricercatori e studiosi per studiare la storia medievale.\n\nLa biblioteca è divisa in diverse sezioni, ognuna dedicata a un periodo specifico della storia medievale. Ci sono sezioni dedicate all'arte, alla letteratura, alla storia e alla religione medievale. Ogni sezione contiene libri e documenti che sono stati accuratamente catalogati e conservati per garantirne la preservazione nel tempo.\n\nOltre alla collezione di libri e documenti, la biblioteca offre anche servizi di ricerca e consulenza per coloro che sono interessati a studiare la storia medievale. Gli studiosi possono accedere alla biblioteca e consultare i documenti in loco, o richiedere copie digitali dei documenti di loro interesse.\n\nLa Biblioteca dell'Ente ottava medievale è un luogo di grande importanza per la ricerca e lo studio della storia medievale. Grazie alla sua vasta collezione di libri e documenti, è diventata una destinazione popolare per gli studiosi e gli appassionati di storia che desiderano approfondire la loro conoscenza del periodo medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 447,
+        "total_tokens": 486
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpvr0k64wfI9T285jxOp6b4VPJrD",
+    "object": "chat.completion",
+    "created": 1690205431,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Santissima Trinità si trova nel comune di Viterbo, in Italia. È una delle chiese più importanti e antiche della città, risalente al XII secolo.\n\nL'edificio è costruito in stile romanico e presenta una facciata semplice ma imponente, caratterizzata da un portale centrale sormontato da un rosone. La facciata è realizzata in pietra e presenta alcuni elementi decorativi, come archi ciechi e lesene.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di Gesù e dei santi. Al centro dell'abside si trova un altare in marmo, sormontato da una croce.\n\nLa Chiesa della Santissima Trinità è particolarmente nota per il suo campanile, alto circa 50 metri. La torre campanaria è realizzata in mattoni e presenta una serie di bifore e trifore che permettono l'illuminazione interna. Il campanile è considerato uno dei simboli della città di Viterbo e offre una vista panoramica spettacolare sulla città e sui dintorni.\n\nLa chiesa è ancora oggi utilizzata per le celebrazioni religiose e rappresenta un importante punto di riferimento per la comunità locale. La sua posizione centrale nel comune di Viterbo la rende facilmente accessibile e visitabile dai turisti che desiderano ammirare l'arte e l'architettura romanica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 396,
+        "total_tokens": 434
+    }
+}

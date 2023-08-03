@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fouduNGgnyuMZPx1Wq1yNGvjnjym",
+    "object": "chat.completion",
+    "created": 1690201511,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'atrio comunale di Sutri è un edificio situato nel centro storico del comune, nella regione del Lazio, in Italia. Si trova in Piazza del Comune, di fronte al Palazzo Comunale.\n\nL'atrio comunale è un edificio di grande importanza storica e architettonica per la città. La sua costruzione risale al XV secolo, durante il periodo rinascimentale, e presenta uno stile architettonico tipico di quell'epoca.\n\nL'edificio è caratterizzato da una facciata imponente e maestosa, con un portico a tre arcate che si apre sulla piazza. Le arcate sono sostenute da colonne in pietra, che conferiscono all'atrio un aspetto elegante e solenne. Sopra il portico si trova un balcone con una balaustra in ferro battuto, che offre una vista panoramica sulla piazza e sui dintorni.\n\nAll'interno dell'atrio comunale si trova un ampio spazio aperto, utilizzato per eventi pubblici e cerimonie. Le pareti sono decorate con affreschi e dipinti che rappresentano scene storiche e simboli della città. Al centro dell'atrio si trova una fontana in pietra, che aggiunge un tocco di freschezza e vivacità all'ambiente.\n\nL'atrio comunale è un luogo di incontro e di rappresentanza per la comunità di Sutri. Qui si svolgono importanti eventi pubblici, come concerti, spettacoli teatrali e manifestazioni culturali. Inoltre, l'edificio ospita anche uffici comunali e amministrativi, che lo rendono un punto di riferimento per i cittadini.\n\nGrazie alla sua posizione centrale e alla sua bellezza architettonica, l'atrio comunale di Sutri è diventato un simbolo della città e una meta turistica molto apprezzata. I visitatori possono ammirare la sua struttura storica, passeggiare nella piazza circostante e godere dell'atmosfera unica che caratterizza questo luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 511,
+        "total_tokens": 545
+    }
+}

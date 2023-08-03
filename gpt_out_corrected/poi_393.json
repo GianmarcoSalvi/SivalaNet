@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flSuRpgdOEN6Q4hz7DmnH71wcVMO",
+    "object": "chat.completion",
+    "created": 1690188260,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Iuzzi è un edificio storico situato nel comune di Grotte di Castro, in provincia di Viterbo, Italia. Si trova nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle del lago di Bolsena.\n\nL'edificio risale al XVIII secolo ed è stato costruito in stile neoclassico. Si presenta come una maestosa residenza signorile, con una facciata imponente e ben conservata. La struttura è caratterizzata da un portale d'ingresso principale, sormontato da un balcone con ringhiera in ferro battuto.\n\nIl palazzo si sviluppa su tre piani, con una pianta rettangolare. Al piano terra si trovano gli ambienti di servizio, come le cantine e le stalle, mentre i piani superiori ospitano gli appartamenti nobiliari. Le stanze sono ampie e luminose, con soffitti alti e affreschi decorativi sulle pareti.\n\nAll'interno del palazzo si possono ammirare numerosi dettagli architettonici di pregio, come le cornici in stucco, i pavimenti in marmo e i soffitti a cassettoni. Gli arredi sono in stile d'epoca, con mobili antichi e opere d'arte che arricchiscono gli ambienti.\n\nIl Palazzo Iuzzi è circondato da un ampio giardino, con alberi secolari e aiuole fiorite. Questo spazio esterno offre un'atmosfera tranquilla e rilassante, ideale per passeggiate o momenti di relax.\n\nOggi il Palazzo Iuzzi è di proprietà privata e non è aperto al pubblico. Tuttavia, la sua imponente presenza nel centro storico di Grotte di Castro contribuisce a rendere il paese un luogo affascinante e ricco di storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 461,
+        "total_tokens": 495
+    }
+}

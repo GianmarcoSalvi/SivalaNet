@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqQkYENjteevVnu9XvMGXyn6ezuP",
+    "object": "chat.completion",
+    "created": 1690207346,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni in Zoccoli si trova nel comune di Viterbo, in Italia. È una chiesa di origine medievale, situata nel centro storico della città.\n\nLa chiesa è dedicata a San Giovanni Battista ed è stata costruita nel XII secolo. La sua architettura è di stile romanico, con una facciata semplice e sobria. La facciata è caratterizzata da un portale in pietra, sormontato da un rosone circolare. Sopra il portale, si trova una lunetta affrescata raffigurante San Giovanni Battista.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi medievali, che rappresentano scene della vita di San Giovanni Battista e altri santi. Sull'altare maggiore si trova una statua di San Giovanni Battista, risalente al XV secolo.\n\nLa chiesa è particolarmente nota per i suoi zoccoli, da cui prende il nome. Gli zoccoli sono delle strutture in pietra che si trovano all'esterno della chiesa, lungo le pareti laterali. Queste strutture erano utilizzate come appoggi per le scale che permettevano di accedere al piano superiore della chiesa. Gli zoccoli sono decorati con bassorilievi raffiguranti scene bibliche e simboli religiosi.\n\nLa Chiesa di San Giovanni in Zoccoli è un importante luogo di culto e un'attrazione turistica nel comune di Viterbo. La sua architettura romanica e gli affreschi medievali la rendono un luogo di grande interesse artistico e storico. La chiesa è aperta al pubblico e regolarmente utilizzata per celebrazioni religiose."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 444,
+        "total_tokens": 482
+    }
+}

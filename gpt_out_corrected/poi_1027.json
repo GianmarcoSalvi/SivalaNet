@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqvOsCF7cGK0091kqUOWNPZvcP8J",
+    "object": "chat.completion",
+    "created": 1690209246,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Soriano nel Cimino è un comune situato nella provincia di Viterbo, nella regione del Lazio, Italia. Si trova a circa 80 chilometri a nord di Roma, nella Valle del Tevere, ai piedi dei Monti Cimini.\n\nIl paese di Soriano nel Cimino è caratterizzato da un'atmosfera medievale, con strade strette e tortuose, case in pietra e un castello imponente che domina il centro storico. Il castello, noto come Castello Orsini, risale al XIII secolo ed è uno dei principali punti di interesse del comune. Oltre al castello, ci sono anche diverse chiese storiche, come la Chiesa di San Giorgio e la Chiesa di Santa Maria Assunta, che meritano una visita.\n\nIl centro storico di Soriano nel Cimino è un labirinto di vicoli e piazzette pittoresche, con negozi, ristoranti e caffè che offrono prodotti locali e piatti tradizionali. La cucina locale è influenzata dalla tradizione contadina e offre specialità come la porchetta, i pici (una pasta fatta in casa) e il vino dei Monti Cimini.\n\nLa natura circostante è un'altra caratteristica di Soriano nel Cimino. Il comune si trova all'interno del Parco Naturale Regionale dei Monti Cimini, che offre numerosi sentieri escursionistici e panorami mozzafiato. È possibile fare escursioni a piedi o in bicicletta lungo i sentieri che attraversano boschi di castagni, querce e faggi, e visitare le sorgenti termali di Bullicame.\n\nSoriano nel Cimino è anche famoso per il suo Carnevale, che si tiene ogni anno nel mese di febbraio. Durante questa festa, il paese si anima con sfilate di carri allegorici, spettacoli di strada e feste in maschera.\n\nIn sintesi, Soriano nel Cimino è un affascinante comune medievale immerso nella natura, che offre una combinazione di storia, cultura, cucina e bellezze naturali. È un luogo ideale per chi cerca una fuga dalla vita frenetica della città e desidera immergersi nella tranquillità e nell'autenticità dell'Italia rurale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 564,
+        "total_tokens": 602
+    }
+}

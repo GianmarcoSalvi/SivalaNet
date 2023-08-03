@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flRBmmtPVTXISiptk03FjLyNFrFl",
+    "object": "chat.completion",
+    "created": 1690188153,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Casale Borgo è una struttura situata nel comune di Grotte di Castro, in Italia. Si tratta di un antico casale ristrutturato che offre una sistemazione confortevole e un'atmosfera accogliente per i suoi ospiti.\n\nIl casale si trova in una posizione privilegiata, immerso nella campagna toscana e circondato da un paesaggio mozzafiato. La struttura è circondata da ampi giardini, prati verdi e alberi secolari, che creano un'atmosfera tranquilla e rilassante.\n\nCasale Borgo dispone di diverse tipologie di alloggi, tra cui camere e appartamenti. Le camere sono arredate in stile rustico e offrono tutti i comfort moderni, come aria condizionata, TV a schermo piatto, connessione Wi-Fi gratuita e bagno privato. Gli appartamenti sono dotati di cucina completamente attrezzata, ideale per coloro che desiderano preparare i propri pasti durante il soggiorno.\n\nLa struttura offre anche una serie di servizi e attività per rendere il soggiorno dei suoi ospiti ancora più piacevole. Tra questi vi sono una piscina all'aperto, un campo da tennis, un campo da calcetto e un parco giochi per bambini. È inoltre possibile organizzare escursioni a piedi o in bicicletta per esplorare la campagna circostante.\n\nCasale Borgo è anche un luogo ideale per eventi speciali, come matrimoni, feste di compleanno o riunioni di lavoro. La struttura dispone di ampi spazi all'aperto e interni, che possono essere adattati alle esigenze specifiche degli ospiti.\n\nLa posizione di Casale Borgo è perfetta per esplorare le attrazioni della zona. Il comune di Grotte di Castro è famoso per il suo lago di Bolsena, uno dei laghi vulcanici più grandi d'Europa. Qui è possibile praticare sport acquatici, fare escursioni in barca o semplicemente rilassarsi sulle sue spiagge.\n\nInoltre, nelle vicinanze si trovano anche altre attrazioni turistiche, come il Parco Naturale della Maremma, le terme di Saturnia e le città medievali di Pitigliano, Sorano e Sovana.\n\nIn conclusione, Casale Borgo è una struttura incantevole nel comune di Grotte di Castro, che offre una sistemazione confortevole e una vasta gamma di servizi e attività per i suoi ospiti. La sua posizione strategica e il suo ambiente tranquillo lo rendono il luogo ideale per una vacanza rilassante e per esplorare le bellezze della campagna toscana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 652,
+        "total_tokens": 686
+    }
+}

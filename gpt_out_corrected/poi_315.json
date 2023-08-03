@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eocY8PSRQuQs2QaUswD5u5f37H9h",
+    "object": "chat.completion",
+    "created": 1689962062,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Biagio si trova nel comune di Corchiano, in provincia di Viterbo, nella regione del Lazio, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XII secolo ed è stata costruita in stile romanico. La sua facciata è semplice ma elegante, con un portale architravato sormontato da una lunetta decorata con un bassorilievo raffigurante San Biagio, il santo patrono della chiesa. Sopra il portale si trova una finestra a bifora, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di San Biagio e altri santi. Gli affreschi sono di grande valore artistico e sono stati restaurati per preservarne la bellezza nel corso degli anni.\n\nNell'abside si trova l'altare maggiore, decorato con un paliotto in marmo intarsiato. Sopra l'altare si trova una pala d'altare raffigurante San Biagio, opera di un artista locale del XVII secolo. Ai lati dell'altare ci sono due cappelle laterali, una dedicata alla Madonna del Rosario e l'altra a San Sebastiano.\n\nLa Chiesa di San Biagio è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari. È anche una meta turistica molto apprezzata per la sua bellezza architettonica e artistica. La chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante, che la rende ancora più suggestiva.\n\nIn conclusione, la Chiesa di San Biagio a Corchiano è un gioiello architettonico e artistico che rappresenta un importante patrimonio storico e culturale per la comunità locale e per tutti coloro che la visitano."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 523,
+        "total_tokens": 559
+    }
+}

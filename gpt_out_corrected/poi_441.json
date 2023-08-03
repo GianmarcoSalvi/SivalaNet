@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7floblKO2hNoWCrgWxwQWPgEW8CDw",
+    "object": "chat.completion",
+    "created": 1690189605,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Caterina si trova nel comune di Lubriano, in provincia di Viterbo, Italia. Si tratta di un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa risale al XIII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. La sua facciata è caratterizzata da un portale gotico in pietra, decorato con motivi floreali e scolpito con grande maestria. Sopra il portale si apre una finestra a bifora, anch'essa in stile gotico.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono affrescate con scene della vita di Santa Caterina d'Alessandria, la santa patrona della chiesa. Gli affreschi risalgono al XIV secolo e sono attribuiti ad artisti locali.\n\nUno degli elementi più suggestivi della chiesa è il suo altare maggiore, realizzato in marmo bianco e decorato con intarsi di pietre preziose. L'altare ospita una statua di Santa Caterina, scolpita in legno e dipinta con colori vivaci.\n\nAccanto all'altare maggiore si trova una cappella laterale, dedicata a San Sebastiano, con un altare in marmo nero e una statua del santo. La cappella è decorata con affreschi raffiguranti scene della vita di San Sebastiano.\n\nLa Chiesa di Santa Caterina è un luogo di culto molto amato dalla comunità locale e viene utilizzata regolarmente per le celebrazioni religiose. Oltre alla sua importanza religiosa, la chiesa è anche una meta turistica molto apprezzata per la sua bellezza artistica e architettonica.\n\nLa sua posizione panoramica, sulla sommità di una collina, offre una vista mozzafiato sulla campagna circostante e sul paesaggio caratteristico della Tuscia viterbese. La chiesa è facilmente raggiungibile a piedi dal centro storico di Lubriano e rappresenta una tappa imperdibile per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 524,
+        "total_tokens": 559
+    }
+}

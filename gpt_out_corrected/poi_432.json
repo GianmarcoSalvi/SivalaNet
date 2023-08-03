@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fllhqmhhiGXCIrCIx4Ye86F5RPRw",
+    "object": "chat.completion",
+    "created": 1690189425,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa della Madonna del Carmine si trova nel comune di Latera, in provincia di Viterbo, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa è situata nel centro storico del paese, circondata da stradine acciottolate e antiche case in pietra. La sua costruzione risale al XV secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico tipico del Rinascimento italiano, con una facciata semplice ma elegante. La parte centrale è caratterizzata da un portale in pietra, sormontato da un rosone circolare. Ai lati del portale si trovano due finestre rettangolari, mentre sulla sommità della facciata si erge un piccolo campanile a vela.\n\nAll'interno, la chiesa della Madonna del Carmine presenta una navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XVII secolo e raffigurano scene della vita di Maria e di Gesù. Sulle pareti laterali si trovano anche alcune cappelle laterali, decorate con altari in marmo e dipinti religiosi.\n\nIl punto focale della chiesa è l'altare maggiore, dedicato alla Madonna del Carmine. L'altare è ornato da una statua della Madonna, realizzata in legno e dipinta a mano. Attorno all'altare si trovano anche alcuni dipinti e sculture raffiguranti santi e angeli.\n\nLa Chiesa della Madonna del Carmine è un luogo di culto molto amato dalla comunità di Latera e viene frequentata dai fedeli per le celebrazioni religiose e le festività. La sua bellezza architettonica e artistica la rende anche una meta turistica per coloro che visitano la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 467,
+        "total_tokens": 502
+    }
+}

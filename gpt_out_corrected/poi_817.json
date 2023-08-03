@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpku6pQ4gR8RqeTyIvSfDXI02uef",
+    "object": "chat.completion",
+    "created": 1690204752,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Tempio di Demetra si trova nel comune di Vetralla, nella regione del Lazio, in Italia. Questo antico tempio è dedicato alla dea greca Demetra, la divinità della fertilità, dell'agricoltura e dei raccolti.\n\nIl tempio risale al IV secolo a.C. ed è uno dei pochi esempi di architettura greca presente in Italia. È situato su una collina, circondato da un paesaggio suggestivo e immerso nella natura.\n\nL'edificio è costruito in stile dorico, con una pianta rettangolare e un pronao, ovvero un portico con colonne, sulla facciata anteriore. Le colonne sono scanalate e hanno capitelli semplici, tipici dello stile dorico.\n\nAll'interno del tempio si trovava una statua di Demetra, che purtroppo non è più presente. Tuttavia, sono ancora visibili alcuni resti dell'altare e delle basi delle colonne.\n\nIl Tempio di Demetra era un luogo di culto molto importante nell'antichità e attirava pellegrini da tutto il territorio circostante. Era considerato un luogo sacro e veniva utilizzato per celebrare riti religiosi e sacrifici in onore della dea.\n\nOggi, il tempio è aperto al pubblico e può essere visitato. È un luogo affascinante per gli amanti della storia e dell'archeologia, che possono ammirare i resti di questo antico edificio e immaginare come fosse in passato.\n\nInoltre, la posizione del tempio offre una vista panoramica sulla campagna circostante, che rende la visita ancora più suggestiva. È un luogo ideale per una passeggiata tranquilla e per godersi la bellezza della natura.\n\nIl Tempio di Demetra è un importante sito archeologico che testimonia la presenza della cultura greca nell'antica Italia. È un luogo che merita sicuramente una visita per chiunque sia interessato alla storia e alla cultura dell'antichità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 500,
+        "total_tokens": 534
+    }
+}

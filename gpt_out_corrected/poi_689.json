@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp1Uu32xsb3ocd3bkiqen1IxVWTC",
+    "object": "chat.completion",
+    "created": 1690201936,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria del Suffragio si trova nel comune di Tarquinia, in Italia. È una chiesa di origine medievale, situata nel centro storico della città.\n\nLa chiesa è stata costruita nel XV secolo e presenta uno stile architettonico gotico. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi floreali e sculture di angeli. Sopra il portale si trova una finestra a bifora, che permette l'ingresso di luce all'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XV secolo, raffiguranti scene della vita di Gesù e dei santi. Sull'altare maggiore si trova una pala d'altare, realizzata nel XVII secolo, raffigurante la Madonna con il Bambino e i santi.\n\nLa Chiesa di Santa Maria del Suffragio è particolarmente nota per il suo campanile, che si erge maestoso accanto alla chiesa. Il campanile è alto circa 40 metri ed è caratterizzato da una base quadrata e da una torre ottagonale. È decorato con lesene e finestre ad arco, e culmina con una guglia a forma di piramide.\n\nLa chiesa è ancora utilizzata per le celebrazioni religiose e rappresenta un importante punto di riferimento per la comunità locale. La sua posizione nel centro storico di Tarquinia la rende anche una meta turistica molto apprezzata, sia per la sua bellezza architettonica che per la sua storia millenaria."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 429,
+        "total_tokens": 467
+    }
+}

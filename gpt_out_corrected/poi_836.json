@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fptUv00HdCuQAl4TygQXIzCDLFDB",
+    "object": "chat.completion",
+    "created": 1690205284,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La sala capitolare della Ven. Confraternita del Santissimo Sacramento e Santo Rosario si trova nel comune di Viterbo, in Italia. Questa sala è un luogo di grande importanza storica e religiosa per la comunità locale.\n\nLa sala capitolare è situata all'interno di un edificio religioso, probabilmente una chiesa o un convento, che risale a un periodo antico. L'architettura dell'edificio è caratterizzata da elementi gotici e rinascimentali, con volte a crociera e affreschi decorativi sulle pareti.\n\nAll'interno della sala capitolare si trovano numerosi arredi sacri e opere d'arte di grande valore. Tra questi, spicca un altare in legno intagliato e dorato, che rappresenta il Santissimo Sacramento e il Santo Rosario. L'altare è ornato da statue di santi e angeli, e al centro è presente un tabernacolo contenente l'ostia consacrata.\n\nLe pareti della sala sono decorate con affreschi raffiguranti scene bibliche e religiose. Questi affreschi sono realizzati con grande maestria e ricchezza di dettagli, e rappresentano un importante esempio dell'arte sacra dell'epoca.\n\nLa sala capitolare è utilizzata per le riunioni e le cerimonie della confraternita, che è un'associazione religiosa di fedeli dedicata alla venerazione del Santissimo Sacramento e alla preghiera del Santo Rosario. La confraternita organizza processioni, celebrazioni liturgiche e altre attività spirituali all'interno della sala capitolare.\n\nLa sala capitolare della Ven. Confraternita del Santissimo Sacramento e Santo Rosario è un luogo di grande devozione e spiritualità per i fedeli di Viterbo. La sua bellezza artistica e la sua importanza storica la rendono un luogo di grande interesse per i visitatori che desiderano conoscere la ricca tradizione religiosa e culturale della città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 479,
+        "total_tokens": 527
+    }
+}

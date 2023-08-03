@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpAL2BLJZi90xWUfZohglONGbaf3",
+    "object": "chat.completion",
+    "created": 1690202485,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Cencelle è una frazione del comune di Tarquinia, situata nella regione del Lazio, in Italia. Si trova a circa 5 chilometri a nord-ovest del centro storico di Tarquinia, sulla costa tirrenica.\n\nCencelle è un piccolo borgo marinaro che si affaccia sul Mar Tirreno. È caratterizzato da una spiaggia sabbiosa e da un mare cristallino, che lo rendono una meta ideale per gli amanti del mare e del relax. La spiaggia di Cencelle è lunga e larga, con acque poco profonde e fondali sabbiosi, perfetta per le famiglie con bambini.\n\nIl borgo di Cencelle è composto principalmente da case e villette, molte delle quali sono seconde case di residenti di Tarquinia e di altre città vicine. La maggior parte delle abitazioni ha uno stile architettonico tipico della zona, con facciate colorate e balconi fioriti.\n\nNel centro di Cencelle si trovano alcuni servizi essenziali, come un piccolo supermercato, un bar e alcuni ristoranti che offrono piatti di pesce fresco e specialità locali. Durante l'estate, il borgo si anima grazie alla presenza di turisti e visitatori che affollano le spiagge e i locali lungo la costa.\n\nNei dintorni di Cencelle è possibile visitare alcune attrazioni turistiche di interesse storico e culturale. A breve distanza si trova la città di Tarquinia, famosa per i suoi siti archeologici etruschi, tra cui le tombe dipinte della Necropoli di Monterozzi, riconosciute come Patrimonio dell'Umanità dall'UNESCO. Tarquinia è anche nota per il suo centro storico medievale, con le sue stradine pittoresche e i suoi palazzi storici.\n\nIn conclusione, Cencelle è un incantevole borgo marinaro nel comune di Tarquinia, che offre una spiaggia sabbiosa e un mare cristallino. È un luogo ideale per trascorrere una vacanza rilassante, godendo delle bellezze naturali della costa tirrenica e visitando le attrazioni storiche e culturali della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 538,
+        "total_tokens": 569
+    }
+}

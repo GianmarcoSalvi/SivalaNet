@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqRaibu85AJAgv7HaQTlIV0FM7RK",
+    "object": "chat.completion",
+    "created": 1690207398,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Nuova si trova nel comune di Viterbo, in Italia. È una delle chiese più importanti e antiche della città, risalente al XII secolo.\n\nL'edificio presenta uno stile romanico-gotico, con una facciata a capanna decorata con archi ciechi e un rosone centrale. La facciata è realizzata in pietra locale, conferendo all'edificio un aspetto solido e imponente.\n\nAll'interno, la chiesa presenta una pianta a croce latina, con una navata centrale e due navate laterali. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di Gesù e dei santi. Gli affreschi sono stati restaurati nel corso degli anni, ma conservano ancora la loro bellezza originale.\n\nUno degli elementi più notevoli della chiesa è il suo soffitto a cassettoni, realizzato in legno intagliato e dipinto. I cassettoni sono decorati con motivi geometrici e floreali, creando un effetto visivo affascinante.\n\nLa chiesa ospita anche diverse opere d'arte, tra cui dipinti e sculture. Uno dei pezzi più importanti è un crocifisso ligneo del XV secolo, considerato un capolavoro dell'arte sacra.\n\nLa Chiesa di Santa Maria Nuova è anche famosa per il suo campanile, alto circa 50 metri. La torre campanaria offre una vista panoramica sulla città di Viterbo e sui suoi dintorni, ed è possibile salire fino alla cima per godere di questa vista spettacolare.\n\nLa chiesa è ancora attiva come luogo di culto, ma è anche aperta ai visitatori che desiderano ammirare la sua architettura e le sue opere d'arte. È un luogo di grande importanza storica e culturale per la città di Viterbo, e rappresenta una tappa imperdibile per chi visita la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 483,
+        "total_tokens": 519
+    }
+}

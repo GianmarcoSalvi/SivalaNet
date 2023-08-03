@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoMJFE8e4Gp7unKzbkjC7DXES1Uv",
+    "object": "chat.completion",
+    "created": 1689961055,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Egidio si trova nel comune di Cellere, in provincia di Viterbo, nella regione del Lazio, Italia. È un edificio religioso di grande importanza storica e artistica per la comunità locale.\n\nLa chiesa risale al XIII secolo ed è stata costruita in stile romanico. La facciata è semplice ma elegante, con un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale, si trova una finestra a bifora che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno che conferisce un'atmosfera calda e accogliente. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di Santo Egidio, il santo patrono della chiesa. Gli affreschi sono di grande valore artistico e sono stati restaurati per preservarne la bellezza nel corso degli anni.\n\nL'altare maggiore è ornato da un prezioso paliotto in marmo intarsiato, risalente al XVII secolo. Sopra l'altare, si trova una pala d'altare raffigurante Santo Egidio in preghiera, opera di un artista locale del XVIII secolo.\n\nLa chiesa ospita anche una cappella laterale dedicata alla Madonna del Rosario, con un altare in marmo bianco e una statua della Vergine Maria. Questa cappella è molto amata dalla comunità locale e viene utilizzata per le celebrazioni e le preghiere quotidiane.\n\nLa Chiesa di Santo Egidio è un luogo di culto molto importante per la comunità di Cellere, che vi si riunisce regolarmente per le messe e le celebrazioni religiose. È anche un luogo di grande interesse per i visitatori che desiderano ammirare l'arte e l'architettura storica della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 502,
+        "total_tokens": 537
+    }
+}

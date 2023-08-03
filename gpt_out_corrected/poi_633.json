@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnFWSyfaU7VUPmeS9zo0NinJQ2bW",
+    "object": "chat.completion",
+    "created": 1690195118,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Monumento Naturale Corviano si trova nel comune di Soriano nel Cimino, nella regione del Lazio, in Italia. Questo monumento naturale è una riserva naturale che si estende su una superficie di circa 200 ettari.\n\nIl territorio del Monumento Naturale Corviano è caratterizzato da una grande varietà di paesaggi, che vanno dalle colline alle gole, dai boschi alle praterie. La sua posizione geografica, a circa 500 metri sul livello del mare, offre una vista panoramica mozzafiato sulla valle del fiume Tevere e sulle montagne circostanti.\n\nLa flora del Monumento Naturale Corviano è molto ricca e diversificata. Si possono trovare numerose specie di alberi, come querce, castagni, faggi e pini. Inoltre, la riserva ospita una vasta gamma di piante erbacee e fiori selvatici, che colorano il paesaggio durante la primavera e l'estate.\n\nLa fauna del Monumento Naturale Corviano è altrettanto interessante. Tra gli animali che si possono avvistare ci sono il cinghiale, il capriolo, la volpe, il tasso e il riccio. Inoltre, la riserva è un importante punto di sosta per molti uccelli migratori, come l'aquila reale, il falco pellegrino e il gufo reale.\n\nAll'interno del Monumento Naturale Corviano sono presenti anche alcuni siti archeologici di grande interesse storico e culturale. Tra questi, spicca la necropoli etrusca di Corviano, che risale al VII secolo a.C. e che testimonia la presenza di antiche civiltà in questa zona.\n\nLa riserva offre anche numerose attività per i visitatori. Ci sono sentieri escursionistici ben segnalati che permettono di esplorare la bellezza naturale del luogo. Inoltre, è possibile praticare il birdwatching, l'arrampicata e il pic-nic nelle aree appositamente attrezzate.\n\nIl Monumento Naturale Corviano è un luogo ideale per gli amanti della natura e per coloro che desiderano trascorrere una giornata immersi nella tranquillità e nella bellezza del paesaggio. La sua posizione strategica, vicino al centro abitato di Soriano nel Cimino, lo rende facilmente accessibile e una meta ideale per una gita fuori porta."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 586,
+        "total_tokens": 625
+    }
+}

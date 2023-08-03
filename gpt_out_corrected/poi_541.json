@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmMwB6ZijeOfBeoDYfYsXj2KTLeB",
+    "object": "chat.completion",
+    "created": 1690191734,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello di Onano è un antico edificio situato nel comune di Onano, nella provincia di Viterbo, nella regione del Lazio, in Italia. Si trova su una collina che domina il paese e offre una vista panoramica mozzafiato sulla campagna circostante.\n\nIl castello risale al XII secolo ed è stato costruito come una fortezza difensiva per proteggere il territorio circostante. È stato successivamente ampliato e modificato nel corso dei secoli, assumendo l'aspetto attuale di una residenza signorile.\n\nL'edificio è caratterizzato da una struttura imponente, con mura spesse e torri di avvistamento. L'ingresso principale è sormontato da un arco a tutto sesto, decorato con stemmi e motivi ornamentali. All'interno, si possono ammirare affreschi e dipinti che testimoniano la ricchezza e l'eleganza della dimora.\n\nIl castello è circondato da un ampio parco, con giardini ben curati e alberi secolari. All'interno del parco si trovano anche una cappella e una torre di avvistamento, che offrono ulteriori elementi di interesse storico e architettonico.\n\nOggi, il Castello di Onano è aperto al pubblico e ospita eventi culturali e mostre temporanee. È anche possibile visitare le stanze interne, che sono state restaurate e arredate con mobili d'epoca, per immergersi completamente nell'atmosfera di un tempo.\n\nIl Castello di Onano rappresenta un importante patrimonio storico e culturale per la comunità locale e attira numerosi visitatori ogni anno, desiderosi di scoprire la sua bellezza e la sua storia affascinante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 431,
+        "total_tokens": 463
+    }
+}

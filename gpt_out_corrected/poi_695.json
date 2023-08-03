@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp2zHLrDOE4hk2LCCtF6ye2j8rDf",
+    "object": "chat.completion",
+    "created": 1690202029,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santo Martino il Vecchio si trova nel comune di Tarquinia, in Italia. È un edificio religioso di grande importanza storica e artistica, risalente al XII secolo.\n\nLa chiesa è situata nel centro storico di Tarquinia, circondata da strette strade medievali e affacciata su una piccola piazza. La sua facciata è semplice ed elegante, caratterizzata da un portale romanico con un arco a tutto sesto e una lunetta decorata con un bassorilievo raffigurante il Cristo Pantocratore.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi medievali. Questi affreschi sono uno dei principali tesori della chiesa e rappresentano scene della vita di Santo Martino, patrono della chiesa, nonché episodi della vita di Cristo e dei santi.\n\nTra gli affreschi più notevoli vi è una rappresentazione del Giudizio Universale, che copre l'intera parete di fondo dell'abside. Questo affresco è particolarmente interessante per la sua vivacità e per la ricchezza di dettagli, che includono figure di angeli, demoni e anime in pena.\n\nLa chiesa ospita anche una serie di altari laterali, decorati con dipinti e sculture di grande valore artistico. Tra questi, spicca l'altare dedicato a San Sebastiano, con una statua del santo e un dipinto raffigurante il suo martirio.\n\nLa Chiesa di Santo Martino il Vecchio è un luogo di culto ancora attivo, ma è anche aperta al pubblico per visite turistiche. La sua bellezza e la sua importanza storica la rendono una tappa imperdibile per chi visita Tarquinia, offrendo un'opportunità unica di ammirare l'arte e l'architettura medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 468,
+        "total_tokens": 506
+    }
+}

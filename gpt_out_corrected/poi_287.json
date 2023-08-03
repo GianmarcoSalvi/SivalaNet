@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoUlDvxd6qYpXuDwLF4sHt5nFiqE",
+    "object": "chat.completion",
+    "created": 1689961579,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca dell'ISIS Colasanti è situata nel comune di Civita Castellana, in Italia. È una biblioteca scolastica che fa parte dell'Istituto di Istruzione Superiore \"Colasanti\", un istituto che offre istruzione secondaria superiore in diverse discipline.\n\nLa biblioteca è un luogo di studio e ricerca per gli studenti dell'istituto, ma è aperta anche al pubblico esterno. È un ambiente accogliente e tranquillo, progettato per favorire la concentrazione e lo studio.\n\nLa biblioteca offre una vasta gamma di risorse, tra cui libri di testo, romanzi, saggi, enciclopedie, riviste e giornali. Gli studenti possono accedere a questi materiali per approfondire le loro conoscenze e svolgere ricerche per i loro progetti scolastici.\n\nLa biblioteca è dotata di postazioni di lavoro con computer e accesso a Internet, che consentono agli studenti di effettuare ricerche online e utilizzare risorse digitali. Inoltre, sono disponibili anche servizi di stampa e fotocopie per agevolare la preparazione dei materiali di studio.\n\nIl personale della biblioteca è disponibile per fornire assistenza e supporto agli studenti, aiutandoli a trovare le risorse di cui hanno bisogno e a utilizzare al meglio gli strumenti a loro disposizione.\n\nOltre a essere un luogo di studio, la biblioteca ospita anche eventi culturali e incontri con autori, che offrono agli studenti l'opportunità di incontrare esperti e approfondire le loro conoscenze in vari campi.\n\nLa Biblioteca dell'ISIS Colasanti è un importante punto di riferimento per gli studenti e la comunità locale, offrendo un ambiente stimolante e risorse di qualità per l'apprendimento e la crescita personale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 437,
+        "total_tokens": 476
+    }
+}

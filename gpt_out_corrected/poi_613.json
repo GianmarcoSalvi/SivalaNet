@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fn7aRDnyg2Vl0jvv5mr8C2yVEakZ",
+    "object": "chat.completion",
+    "created": 1690194626,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Duomo di Ronciglione è una maestosa chiesa situata nel comune di Ronciglione, in provincia di Viterbo, nella regione del Lazio, Italia. \n\nLa sua costruzione risale al XII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti. La facciata principale è caratterizzata da un portale in stile romanico, sormontato da un rosone circolare. La facciata è decorata con sculture e bassorilievi raffiguranti scene religiose.\n\nL'interno del Duomo è a pianta basilicale, con tre navate separate da colonne di marmo. Le navate laterali sono decorate con affreschi e dipinti che raffigurano episodi della vita di Cristo e dei santi. L'altare maggiore è ornato da un prezioso tabernacolo in marmo, mentre il soffitto è affrescato con scene bibliche.\n\nUno degli elementi più suggestivi del Duomo è la cappella del Santissimo Sacramento, situata sul lato destro dell'edificio. Questa cappella è decorata con marmi policromi e affreschi che raffigurano la Cena del Signore. Al centro della cappella si trova un altare in marmo, sormontato da un baldacchino decorato con sculture.\n\nIl Duomo di Ronciglione è un importante luogo di culto per la comunità locale e ospita regolarmente celebrazioni religiose e liturgiche. La sua architettura imponente e le opere d'arte al suo interno lo rendono una meta di interesse per i visitatori che desiderano ammirare l'arte e l'architettura religiosa dell'Italia medievale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 429,
+        "total_tokens": 461
+    }
+}

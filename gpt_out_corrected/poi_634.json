@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnFse3JvjiDxRpRk1AQWN2tBVh8r",
+    "object": "chat.completion",
+    "created": 1690195140,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Castello Orsini è un'imponente fortezza situata nel comune di Soriano nel Cimino, nella regione del Lazio, in Italia. Costruito nel XII secolo, il castello si erge maestoso su una collina che domina il paesaggio circostante.\n\nL'edificio è caratterizzato da una struttura imponente e massiccia, con mura di pietra e torri di difesa che conferiscono al castello un aspetto imponente e suggestivo. La sua posizione strategica, in cima alla collina, permetteva di controllare e difendere il territorio circostante.\n\nL'ingresso al castello avviene attraverso un imponente portale, sormontato da un arco a tutto sesto, che conduce a un cortile interno. Qui si trovano numerosi edifici, tra cui la residenza principale, le prigioni, le scuderie e le cucine. Le stanze sono arredate con mobili d'epoca e decorazioni che richiamano lo stile medievale.\n\nUna delle caratteristiche più interessanti del castello è la sua cinta muraria, che circonda l'intera struttura. Questa cinta muraria è dotata di numerose torri di difesa, che offrivano una vista panoramica sul territorio circostante e permettevano di avvistare eventuali nemici in avvicinamento.\n\nAll'interno del castello si trovano anche una cappella, decorata con affreschi e opere d'arte religiosa, e una sala delle armi, dove sono esposte antiche armature e armi da guerra.\n\nOggi il Castello Orsini è aperto al pubblico e ospita eventi culturali, mostre e spettacoli. È possibile visitare le varie stanze del castello, ammirare gli affreschi e godere della vista panoramica dalla cima delle torri di difesa.\n\nIl Castello Orsini rappresenta un importante esempio di architettura medievale e offre ai visitatori l'opportunità di immergersi nella storia e nell'atmosfera di un tempo passato. La sua posizione panoramica e la sua imponente struttura lo rendono una meta turistica molto apprezzata, sia per gli amanti della storia che per gli appassionati di architettura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 559,
+        "total_tokens": 595
+    }
+}

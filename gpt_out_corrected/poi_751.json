@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpMSovs8s1lWB33cXaXs9GbzbKfe",
+    "object": "chat.completion",
+    "created": 1690203236,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli della Peschiera e Tomba a Dado si trova nel comune di Tuscania, in Italia. Si tratta di un sito archeologico di grande importanza storica e culturale, che risale all'epoca etrusca.\n\nLa necropoli si estende su un'area di circa 30 ettari e comprende numerose tombe a tumulo, risalenti al VII e VI secolo a.C. Le tombe sono caratterizzate da una forma circolare o ellittica e sono costruite con pietre e terra. Alcune di esse sono decorate con sculture e rilievi, che rappresentano scene di vita quotidiana, divinità e simboli religiosi.\n\nLa Tomba a Dado è una delle tombe più importanti della necropoli. Prende il nome dalla sua forma a dado, con quattro pareti verticali e un tetto piatto. La tomba è decorata con rilievi che rappresentano scene di caccia, banchetti e danze, che offrono preziose informazioni sulla vita e le tradizioni degli antichi etruschi.\n\nAll'interno della necropoli sono stati rinvenuti anche numerosi oggetti funerari, come vasi di ceramica, gioielli, armi e utensili, che testimoniano l'importanza e la ricchezza dei defunti. Questi reperti sono oggi conservati nel Museo Archeologico di Tuscania, che offre un'interessante esposizione sulla civiltà etrusca.\n\nLa Necropoli della Peschiera e Tomba a Dado rappresenta un importante sito di interesse archeologico e turistico, che permette di immergersi nella storia e nella cultura degli antichi etruschi. La sua posizione panoramica, circondata da un paesaggio suggestivo, rende la visita ancora più affascinante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 432,
+        "total_tokens": 474
+    }
+}

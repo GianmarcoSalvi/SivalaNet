@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnCJfNQJ6yWBW7IxIDOjvJn7r3SP",
+    "object": "chat.completion",
+    "created": 1690194919,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Abbazia di San Martino al Cimino si trova nel comune di San Martino al Cimino, nella regione del Lazio, in Italia. Situata su una collina a circa 500 metri di altitudine, l'abbazia domina la valle del fiume Marta e offre una vista panoramica mozzafiato sulla campagna circostante.\n\nL'abbazia fu fondata nel XII secolo dai monaci cistercensi e divenne uno dei centri religiosi più importanti della zona. La sua posizione strategica, vicino alla Via Francigena, la rendeva un punto di riferimento per i pellegrini che si dirigevano verso Roma.\n\nL'abbazia presenta uno stile architettonico romanico-gotico, con una facciata imponente e una torre campanaria che si erge maestosa. L'interno è caratterizzato da una navata centrale e da due navate laterali, con volte a crociera e colonne in pietra. Le pareti sono decorate con affreschi e dipinti che rappresentano scene religiose e simboli cristiani.\n\nUno dei punti salienti dell'abbazia è il chiostro, un'oasi di tranquillità e bellezza. Il chiostro è circondato da un portico con archi a tutto sesto e colonne in pietra, e al centro si trova un giardino con alberi secolari e fiori colorati. È il luogo ideale per una passeggiata rilassante o per godersi la vista panoramica sulla valle sottostante.\n\nOltre alla bellezza architettonica, l'abbazia ospita anche un museo che conserva una collezione di manoscritti, libri antichi e oggetti liturgici. Questo museo offre ai visitatori l'opportunità di immergersi nella storia e nella cultura religiosa della zona.\n\nL'Abbazia di San Martino al Cimino è un luogo di grande importanza storica e spirituale, che attira visitatori da tutto il mondo. La sua bellezza architettonica, la sua posizione panoramica e la sua atmosfera tranquilla la rendono un luogo ideale per una visita rilassante e suggestiva."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 43,
+        "completion_tokens": 534,
+        "total_tokens": 577
+    }
+}

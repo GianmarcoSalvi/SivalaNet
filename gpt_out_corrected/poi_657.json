@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnUJvNvGPfzLNZ3BawVYkG6oUiCq",
+    "object": "chat.completion",
+    "created": 1690196035,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Mitreo di Sutri è un antico tempio romano situato nel comune di Sutri, nella regione del Lazio, in Italia. Si tratta di uno dei pochi esempi di mitreo ancora visibili in Italia.\n\nIl tempio fu costruito nel II secolo d.C. ed è stato scoperto nel 1924 durante i lavori di scavo per la costruzione di una strada. È stato successivamente restaurato e aperto al pubblico.\n\nIl Mitreo di Sutri è un edificio sotterraneo, situato sotto una collina. L'accesso avviene attraverso una scala che conduce a una serie di corridoi e stanze. La sala principale, chiamata \"cavea\", è circolare e presenta un soffitto a volta decorato con affreschi.\n\nGli affreschi raffigurano scene mitologiche e religiose legate al culto di Mitra, una divinità persiana adorata anche dai romani. Tra le scene più importanti vi sono la nascita di Mitra dalla roccia, la sua lotta contro il toro e il banchetto sacro.\n\nIl tempio era utilizzato per i riti segreti del culto di Mitra, che coinvolgevano iniziazioni e cerimonie di purificazione. Il Mitreo di Sutri era un luogo di culto riservato solo agli iniziati, ed era considerato un luogo sacro e misterioso.\n\nOltre alla sala principale, il Mitreo di Sutri comprende anche altre stanze, come una piccola cisterna per l'acqua e una sala di culto più piccola, chiamata \"antro\". Quest'ultima presenta un altare e una nicchia per le offerte.\n\nLa visita al Mitreo di Sutri offre un'opportunità unica per immergersi nell'antica religione romana e per ammirare gli affreschi ben conservati che raccontano la storia del culto di Mitra. È un luogo di grande interesse archeologico e storico, che permette di comprendere meglio la vita e le credenze dei romani dell'epoca."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 501,
+        "total_tokens": 535
+    }
+}

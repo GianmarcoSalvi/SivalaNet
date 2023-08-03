@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqQBrzTndBIwaxAW2VUVKxEqmXOn",
+    "object": "chat.completion",
+    "created": 1690207311,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria del Suffragio si trova nel comune di Viterbo, in Italia. È un edificio religioso di grande importanza storica e artistica, situato nel centro storico della città.\n\nLa chiesa fu costruita nel XVII secolo su un'area che in precedenza ospitava un ospedale per i poveri e gli ammalati. La sua architettura è caratterizzata da uno stile barocco, con una facciata imponente e riccamente decorata. La facciata è divisa in tre sezioni, con un portale centrale sormontato da un timpano curvilineo e due nicchie laterali contenenti statue.\n\nL'interno della chiesa è altrettanto impressionante, con una navata centrale ampia e luminosa, decorata con affreschi e stucchi. Le pareti sono adornate da dipinti raffiguranti scene religiose e figure di santi. Al centro dell'altare maggiore si trova un grande dipinto raffigurante la Madonna del Suffragio, da cui la chiesa prende il nome.\n\nLa chiesa è anche famosa per il suo organo a canne, costruito nel XVIII secolo da un rinomato artigiano. L'organo è ancora funzionante e viene utilizzato durante le celebrazioni liturgiche e i concerti.\n\nOltre alla sua bellezza artistica, la Chiesa di Santa Maria del Suffragio ha anche un significato storico importante per la comunità locale. Durante la Seconda Guerra Mondiale, l'edificio fu gravemente danneggiato dai bombardamenti, ma fu successivamente restaurato e riaperto al culto.\n\nOggi, la chiesa è un luogo di culto attivo e accoglie regolarmente celebrazioni religiose. È anche aperta ai visitatori che desiderano ammirare la sua architettura e le opere d'arte al suo interno. La Chiesa di Santa Maria del Suffragio rappresenta un importante patrimonio culturale per la città di Viterbo e un luogo di spiritualità per la comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 38,
+        "completion_tokens": 508,
+        "total_tokens": 546
+    }
+}

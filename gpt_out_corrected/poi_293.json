@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoWUzY2Bfztx4Ig6gCccvgJTQqCZ",
+    "object": "chat.completion",
+    "created": 1689961686,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa parrocchiale di Santo Gregorio si trova nel comune di Civita Castellana, in provincia di Viterbo, Italia. È una delle principali chiese della città e rappresenta un importante punto di riferimento per la comunità locale.\n\nLa chiesa è dedicata a Santo Gregorio Magno, uno dei più importanti papi della storia della Chiesa cattolica. La sua costruzione risale al XII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti.\n\nL'edificio presenta uno stile architettonico romanico, tipico delle chiese dell'epoca. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con sculture e bassorilievi raffiguranti scene religiose. Sopra il portale si apre una grande finestra circolare, che illumina l'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi e dipinti raffiguranti scene della vita di Santo Gregorio e altri santi. Lungo le pareti laterali si trovano diverse cappelle, ognuna dedicata a un santo o a una devozione particolare.\n\nL'altare maggiore è ornato da un prezioso paliotto in marmo intarsiato, mentre dietro di esso si trova un grande crocifisso ligneo. Ai lati dell'altare si trovano due pulpiti in legno intagliato, che venivano utilizzati per le letture durante le funzioni religiose.\n\nLa chiesa conserva anche diverse opere d'arte di grande valore, tra cui dipinti, sculture e reliquiari. Tra le opere più importanti vi è un dipinto raffigurante la Madonna con il Bambino, attribuito a un famoso pittore del Rinascimento italiano.\n\nLa Chiesa parrocchiale di Santo Gregorio è un luogo di culto molto frequentato dai fedeli, che vi si recano per partecipare alle messe e alle celebrazioni religiose. È anche un importante punto di riferimento per la comunità locale, che vi si riunisce per eventi e incontri di carattere religioso e sociale.\n\nLa chiesa si trova in una posizione centrale nel comune di Civita Castellana, ed è facilmente raggiungibile a piedi o in auto. La sua imponente facciata e il suo interno ricco di opere d'arte la rendono una meta di interesse per i turisti che visitano la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 627,
+        "total_tokens": 668
+    }
+}

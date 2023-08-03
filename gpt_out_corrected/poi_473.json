@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flzuqHe0z7Zlpmx2g61wfdZqpolg",
+    "object": "chat.completion",
+    "created": 1690190306,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana a largo Santa Corona si trova nel comune di Monte Romano, in Italia. Si tratta di una fontana pubblica situata in una piazza centrale del paese, chiamata appunto largo Santa Corona.\n\nLa fontana è caratterizzata da un design tradizionale e semplice, con una struttura in pietra che si erge al centro della piazza. È composta da una base rettangolare su cui poggia una colonna cilindrica, entrambe realizzate in pietra locale. La colonna presenta delle scanalature verticali che le conferiscono un aspetto elegante e decorativo.\n\nDalla sommità della colonna, sgorga l'acqua che cade in una vasca rettangolare posta alla base. La vasca è circondata da un bordo in pietra che funge da seduta per i visitatori che desiderano riposarsi o ammirare la fontana.\n\nLa Fontana a largo Santa Corona è un punto di riferimento per la comunità locale e un luogo di ritrovo per i residenti. Durante le giornate calde, è comune vedere persone che si rinfrescano con l'acqua della fontana o che si siedono sul bordo per godersi un momento di relax.\n\nLa fontana è circondata da alberi e fiori, che contribuiscono a creare un'atmosfera piacevole e accogliente. Durante le festività locali o gli eventi speciali, la fontana viene spesso decorata con luci o addobbi, diventando un punto focale per le celebrazioni.\n\nLa Fontana a largo Santa Corona rappresenta un importante elemento di arredo urbano nel comune di Monte Romano, contribuendo a valorizzare l'aspetto estetico della piazza e a fornire un servizio essenziale di approvvigionamento idrico per i residenti e i visitatori."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 446,
+        "total_tokens": 480
+    }
+}

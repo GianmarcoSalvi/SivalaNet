@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flzemedKcpc6wUWNBV2pDP2n5Q05",
+    "object": "chat.completion",
+    "created": 1690190290,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Teatro Comunale Lea Padovani si trova nel comune di Montalto di Castro, in Italia. È un importante punto di riferimento culturale per la comunità locale e per la regione circostante.\n\nIl teatro è intitolato a Lea Padovani, una famosa attrice italiana nata a Montalto di Castro. È stato inaugurato nel 2002 e da allora ha ospitato numerosi spettacoli teatrali, concerti, proiezioni cinematografiche e altri eventi culturali.\n\nLa struttura del teatro è moderna ed elegante, con una capacità di circa 300 posti a sedere. L'auditorium è progettato per offrire una buona acustica e una visibilità ottimale da ogni angolo della sala. Ci sono anche spazi dedicati agli artisti, come camerini e sale prove.\n\nIl programma del Teatro Comunale Lea Padovani è vario e ricco di proposte culturali. Oltre alle rappresentazioni teatrali, si possono trovare concerti di musica classica, jazz e pop, spettacoli di danza, proiezioni di film d'autore e molto altro ancora. Il teatro ospita anche eventi speciali, come conferenze, presentazioni di libri e mostre d'arte.\n\nGrazie alla sua posizione strategica, il Teatro Comunale Lea Padovani è facilmente accessibile sia per i residenti di Montalto di Castro che per i visitatori provenienti da altre città. È situato nel centro del paese, vicino a parcheggi e servizi pubblici.\n\nIn conclusione, il Teatro Comunale Lea Padovani è un luogo di grande importanza culturale per Montalto di Castro e per la regione circostante. Offre una vasta gamma di spettacoli e eventi, contribuendo a promuovere l'arte e la cultura nella comunità locale."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 447,
+        "total_tokens": 486
+    }
+}

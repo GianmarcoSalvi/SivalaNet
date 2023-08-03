@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmH53mUkUnuctpJyK7vxwdq5QBgk",
+    "object": "chat.completion",
+    "created": 1690191371,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Porta Nica è una delle porte d'accesso al centro storico del comune di Nepi, situato nella provincia di Viterbo, nella regione del Lazio, in Italia. \n\nLa porta si trova lungo le mura medievali che circondano il centro storico di Nepi, risalenti al XIII secolo. È situata nella parte nord-est del paese, in prossimità della piazza principale, Piazza Umberto I.\n\nPorta Nica è caratterizzata da un imponente arco a tutto sesto, realizzato in pietra locale, che si apre tra due torri di forma quadrangolare. Le torri, che si ergono su entrambi i lati dell'arco, presentano delle feritoie e delle finestre ad arco che permettevano di sorvegliare l'accesso alla città.\n\nL'arco centrale di Porta Nica è decorato con un motivo a denti di sega, tipico dell'architettura medievale, che conferisce un'atmosfera suggestiva e storica al luogo. Sopra l'arco, è presente una piccola finestra ad arco che permetteva di osservare chi si avvicinava alla porta.\n\nPorta Nica rappresenta uno dei principali punti di accesso al centro storico di Nepi ed è un importante simbolo della storia e dell'identità del paese. Attraversando questa porta, si entra in un labirinto di stradine medievali, caratterizzate da antiche case in pietra, palazzi storici e chiese, che raccontano la storia millenaria di Nepi.\n\nOggi, Porta Nica è ben conservata e rappresenta una delle principali attrazioni turistiche di Nepi. La sua maestosità e la sua bellezza architettonica attirano numerosi visitatori che desiderano immergersi nell'atmosfera unica del centro storico di Nepi e scoprire le sue bellezze storiche e culturali."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 467,
+        "total_tokens": 498
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqsiqJAR6GM5Fq1yBmClqrhamyh1",
+    "object": "chat.completion",
+    "created": 1690209080,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Onano è un comune italiano situato nella provincia di Viterbo, nella regione del Lazio, nel centro Italia. Si trova a circa 500 metri sul livello del mare, su una collina che domina la valle del fiume Paglia.\n\nIl paese di Onano è caratterizzato da un'atmosfera tranquilla e suggestiva, con stradine strette e tortuose, case in pietra e un'architettura tipica dei borghi medievali. Le sue origini risalgono all'epoca etrusca, come testimoniano i numerosi reperti archeologici trovati nella zona.\n\nIl centro storico di Onano è dominato dalla maestosa Rocca Alfina, un'imponente fortezza medievale che offre una vista panoramica mozzafiato sulla campagna circostante. La rocca è stata costruita nel XII secolo e rappresenta uno dei principali punti di interesse del paese.\n\nAltre attrazioni di Onano includono la Chiesa di San Giorgio, risalente al XIII secolo, con il suo campanile romanico e gli affreschi medievali, e il Museo Civico Archeologico, che ospita una collezione di reperti etruschi e romani.\n\nIl territorio intorno a Onano è caratterizzato da una natura incontaminata e da paesaggi suggestivi. La zona è ricca di sentieri escursionistici che permettono di esplorare le colline circostanti, i boschi e i laghi. In particolare, il Lago di Bolsena, il più grande lago vulcanico d'Europa, si trova a breve distanza da Onano e offre numerose opportunità per attività all'aperto come nuoto, pesca e vela.\n\nLa cucina di Onano è tipica della tradizione laziale, con piatti a base di carne, formaggi locali e prodotti agricoli freschi. Il paese è famoso per il suo olio d'oliva di alta qualità e per il vino prodotto nelle cantine locali.\n\nOnano è un luogo ideale per chi cerca tranquillità e autenticità, lontano dal turismo di massa. Con la sua storia millenaria, la sua bellezza naturale e la sua atmosfera accogliente, Onano offre un'esperienza unica nel cuore dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 546,
+        "total_tokens": 575
+    }
+}

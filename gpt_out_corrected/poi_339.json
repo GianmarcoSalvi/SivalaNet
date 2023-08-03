@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eojQYvUhyoQoENakHxdWNoextmWe",
+    "object": "chat.completion",
+    "created": 1689962488,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa del Santissimo Salvatore si trova nel comune di Farnese, nella provincia di Viterbo, Italia. Questo edificio religioso è uno dei principali punti di riferimento storici e culturali della zona.\n\nLa chiesa risale al XIII secolo e presenta uno stile architettonico romanico-gotico. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi floreali e geometrici. Sopra il portale si trova una finestra a bifora, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di Cristo e dei santi. Sull'altare maggiore si trova una pregevole pala d'altare, realizzata nel XVII secolo, che rappresenta il Santissimo Salvatore.\n\nLa chiesa conserva anche alcune opere d'arte di grande valore, tra cui una statua lignea del Cristo morto, risalente al XV secolo, e una Madonna con Bambino del XVI secolo. Inoltre, sono presenti diverse cappelle laterali, ognuna dedicata a un santo o a una santa, con altari e dipinti che rappresentano le loro storie e le loro vite.\n\nLa Chiesa del Santissimo Salvatore è un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per i visitatori che desiderano immergersi nella storia e nell'arte della regione.\n\nLa sua posizione nel comune di Farnese, circondata da un paesaggio suggestivo e incantevole, rende la visita alla chiesa ancora più affascinante. La sua architettura e le opere d'arte che ospita testimoniano la ricchezza culturale e artistica di questa zona dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 503,
+        "total_tokens": 540
+    }
+}

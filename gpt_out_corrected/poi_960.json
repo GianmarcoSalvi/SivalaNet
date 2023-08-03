@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqYhXM0C0ftuQ2k7d20kuE8oM6Us",
+    "object": "chat.completion",
+    "created": 1690207839,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca della Camera di commercio, industria, artigianato e agricoltura (CCIAA) di Viterbo è un importante centro di documentazione e ricerca situato nel comune di Viterbo, in Italia. La biblioteca è specializzata nel settore economico e offre una vasta gamma di risorse per imprenditori, professionisti e studenti interessati al mondo degli affari.\n\nLa biblioteca dispone di una vasta collezione di libri, riviste, periodici, pubblicazioni specialistiche e documenti di carattere economico, commerciale e giuridico. Gli utenti possono accedere a una vasta gamma di informazioni e risorse per approfondire argomenti come l'economia, il diritto commerciale, la gestione aziendale, il marketing, l'innovazione tecnologica e molto altro.\n\nLa biblioteca offre anche servizi di consulenza e assistenza nella ricerca di informazioni specifiche, nella compilazione di documenti e nella consulenza legale e commerciale. Gli utenti possono richiedere l'accesso a risorse digitali, come banche dati, e-book e risorse online, che consentono di accedere a informazioni aggiornate e di alta qualità.\n\nLa Biblioteca della CCIAA di Viterbo è un luogo accogliente e moderno, dotato di spazi di studio e di lavoro attrezzati con computer, stampanti e connessione internet. Gli utenti possono usufruire di servizi di fotocopie, scanner e stampa per facilitare la consultazione e la riproduzione di documenti.\n\nLa biblioteca organizza anche eventi, seminari e workshop su tematiche economiche e commerciali, offrendo agli utenti l'opportunità di approfondire le proprie conoscenze e di incontrare esperti del settore. Inoltre, la biblioteca collabora con altre istituzioni e organizzazioni locali per promuovere la cultura imprenditoriale e sostenere lo sviluppo economico della regione.\n\nIn conclusione, la Biblioteca della CCIAA di Viterbo è un importante punto di riferimento per imprenditori, professionisti e studenti interessati al settore economico. Offre una vasta gamma di risorse e servizi per la ricerca e la consulenza, contribuendo allo sviluppo e alla crescita delle attività commerciali e imprenditoriali nella regione di Viterbo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 53,
+        "completion_tokens": 555,
+        "total_tokens": 608
+    }
+}

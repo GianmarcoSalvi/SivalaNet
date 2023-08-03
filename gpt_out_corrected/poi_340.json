@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eojgK3Pq3NOiTgsfeXUsRk62eZhe",
+    "object": "chat.completion",
+    "created": 1689962504,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria della Neve si trova nel comune di Farnese, nella provincia di Viterbo, Italia. Questo edificio religioso è uno dei principali punti di riferimento storici e culturali della zona.\n\nLa chiesa risale al XV secolo ed è stata costruita in stile romanico-gotico. La sua facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, decorato con motivi floreali e sculture di angeli. Sopra il portale si trova una finestra circolare, che permette l'ingresso di luce naturale all'interno dell'edificio.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Gli affreschi risalgono al XVI secolo e raffigurano scene della vita di Maria, madre di Gesù, e di altri santi. Le pareti sono decorate con dipinti di alta qualità, che mostrano una grande maestria artistica.\n\nUno degli elementi più interessanti della chiesa è l'altare maggiore, realizzato in marmo bianco e decorato con sculture e intagli dettagliati. L'altare ospita una statua di Santa Maria della Neve, patrona della chiesa, che viene festeggiata ogni anno il 5 agosto con una processione e una messa solenne.\n\nAccanto alla chiesa si trova anche un campanile, che risale al XVII secolo. La torre campanaria è alta e slanciata, con una serie di finestre ad arco che permettono la fuoriuscita del suono delle campane.\n\nLa Chiesa di Santa Maria della Neve è un luogo di culto molto amato dalla comunità locale e un importante punto di interesse per i visitatori. La sua architettura affascinante e gli affreschi storici la rendono un luogo di grande bellezza e spiritualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 471,
+        "total_tokens": 508
+    }
+}

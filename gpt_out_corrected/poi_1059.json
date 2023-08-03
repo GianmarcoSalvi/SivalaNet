@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7frObfHRIuYArZfOmTGBAUAxJplnd",
+    "object": "chat.completion",
+    "created": 1690211057,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Le Gole del Biedano sono una meraviglia naturale situata nel comune di Barbarano Romano, nella regione del Lazio, in Italia. Questa spettacolare formazione geologica è caratterizzata da una serie di profonde gole scavate dal fiume Biedano nel corso dei secoli.\n\nLe gole si estendono per circa 2 chilometri e sono incastonate in una valle verde e lussureggiante, circondata da una fitta vegetazione e da alte pareti rocciose. Il fiume Biedano scorre tra le gole creando cascate, rapide e piscine naturali, che rendono il luogo un vero paradiso per gli amanti della natura e degli sport acquatici.\n\nLe pareti delle gole sono costituite da rocce calcaree stratificate, che creano un affascinante gioco di colori e forme. Lungo il percorso delle gole, è possibile ammirare diverse formazioni rocciose interessanti, come archi naturali, grotte e piccole cascate.\n\nLe Gole del Biedano offrono anche una ricca flora e fauna. La vegetazione è caratterizzata da alberi di querce, lecci, castagni e piante di macchia mediterranea. È possibile avvistare diverse specie di uccelli, come l'aquila reale, il falco pellegrino e il gufo reale, oltre a mammiferi come il cinghiale e il tasso.\n\nIl percorso attraverso le gole è adatto a escursionisti di tutti i livelli di esperienza. Ci sono sentieri ben segnalati che permettono di esplorare le gole a piedi, godendo di panorami mozzafiato e di una sensazione di pace e tranquillità. È anche possibile fare il bagno nelle piscine naturali del fiume Biedano o praticare attività come il kayak o il canyoning.\n\nLe Gole del Biedano sono un luogo ideale per trascorrere una giornata immersi nella natura, lontani dal caos della città. La loro bellezza e la loro atmosfera suggestiva le rendono una meta imperdibile per gli amanti dell'avventura e della natura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 526,
+        "total_tokens": 561
+    }
+}

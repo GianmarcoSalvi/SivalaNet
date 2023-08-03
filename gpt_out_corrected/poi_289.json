@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoVJpKEI4XUBCafDSlYfk2I9QVlT",
+    "object": "chat.completion",
+    "created": 1689961613,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella della Madonna delle Rose si trova nel comune di Civita Castellana, in Italia. Questo luogo di culto è situato all'interno del complesso del Santuario della Madonna delle Grazie, che si erge su una collina panoramica nella parte nord-ovest della città.\n\nLa cappella è dedicata alla Madonna delle Rose, un titolo mariano che richiama l'immagine della Vergine Maria circondata da rose, simbolo di purezza e bellezza. La sua costruzione risale al XVII secolo, ma è stata oggetto di diverse ristrutturazioni nel corso dei secoli.\n\nL'edificio presenta uno stile architettonico barocco, con una facciata semplice ma elegante. La porta d'ingresso è sormontata da un arco a tutto sesto, mentre sopra di essa si trova una finestra rettangolare. La facciata è decorata con stucchi e affreschi che raffigurano scene religiose legate alla figura della Madonna.\n\nAll'interno della cappella si trova un altare in marmo bianco, ornato da statue e dipinti raffiguranti la Madonna delle Rose. Sulle pareti laterali sono presenti affreschi che narrano episodi della vita di Maria, come l'Annunciazione e la Natività. Il soffitto è decorato con un affresco che rappresenta l'Assunzione della Vergine.\n\nLa Cappella della Madonna delle Rose è un luogo di grande devozione per i fedeli di Civita Castellana e delle zone circostanti. Ogni anno, il 15 agosto, si celebra una solenne processione in onore della Madonna, durante la quale l'immagine sacra viene portata in giro per le vie della città.\n\nLa cappella è anche un punto di riferimento per gli amanti dell'arte e dell'architettura, grazie alla sua bellezza e alla sua storia secolare. La sua posizione panoramica offre una vista mozzafiato sulla città e sulla campagna circostante, rendendo la visita ancora più suggestiva.\n\nIn conclusione, la Cappella della Madonna delle Rose è un gioiello architettonico e spirituale nel comune di Civita Castellana. La sua bellezza artistica e la sua importanza religiosa la rendono un luogo di grande interesse per i visitatori che desiderano immergersi nella storia e nella cultura di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 572,
+        "total_tokens": 609
+    }
+}

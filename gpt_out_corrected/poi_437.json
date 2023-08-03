@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flnJs3AVELTM4yHWI1mIK8alyXqZ",
+    "object": "chat.completion",
+    "created": 1690189525,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Battista si trova nel comune di Lubriano, in provincia di Viterbo, nella regione del Lazio, Italia. È una chiesa di origine medievale che risale al XII secolo, anche se è stata oggetto di modifiche e ampliamenti nel corso dei secoli successivi.\n\nLa chiesa è situata su una collina che domina il paesaggio circostante, offrendo una vista panoramica mozzafiato sulla valle del fiume Tevere e sulle campagne circostanti. La sua posizione strategica la rende un punto di riferimento visibile da lontano.\n\nL'edificio è realizzato in pietra locale e presenta uno stile architettonico romanico, tipico delle chiese medievali italiane. La facciata è semplice e sobria, con un portale d'ingresso sormontato da un arco a tutto sesto. Sopra il portale si trova una finestra circolare che permette l'ingresso di luce naturale all'interno della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi risalenti al XV secolo. Gli affreschi raffigurano scene della vita di San Giovanni Battista, il patrono della chiesa, e sono di grande valore artistico e storico.\n\nNella parte posteriore della chiesa si trova un altare in marmo, sormontato da una pala d'altare raffigurante il Battesimo di Gesù. L'altare è circondato da una balaustra in ferro battuto, che delimita lo spazio sacro riservato alle celebrazioni religiose.\n\nLa Chiesa di San Giovanni Battista è ancora oggi un luogo di culto attivo, dove vengono celebrate messe regolarmente. È anche un importante punto di riferimento per la comunità locale, che partecipa alle celebrazioni religiose e ai festeggiamenti in onore del santo patrono.\n\nLa chiesa è aperta al pubblico e rappresenta una meta interessante per i turisti che visitano la zona. La sua posizione panoramica e la sua architettura storica la rendono un luogo suggestivo e affascinante da visitare."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 556,
+        "total_tokens": 592
+    }
+}

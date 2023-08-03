@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqv5nmZ5x3fcgmvP8AzN6gNy3MLe",
+    "object": "chat.completion",
+    "created": 1690209227,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "San Martino al Cimino è un comune situato nella regione del Lazio, in Italia. Si trova a circa 70 chilometri a nord di Roma, nella provincia di Viterbo. Il comune prende il nome dal suo principale centro abitato, che si trova su una collina a 600 metri sul livello del mare.\n\nSan Martino al Cimino è famoso per il suo castello medievale, che domina il paesaggio circostante. Il castello, costruito nel XII secolo, è stato utilizzato come residenza estiva dai papi nel corso dei secoli. Oggi è aperto al pubblico e ospita un museo che racconta la storia del castello e della zona circostante.\n\nIl centro storico di San Martino al Cimino è caratterizzato da strette stradine lastricate e da antiche case in pietra. Le vie sono piene di negozi, ristoranti e caffè, che offrono ai visitatori la possibilità di assaggiare la cucina locale e acquistare prodotti artigianali.\n\nLa chiesa principale del paese è la Chiesa di San Martino, che risale al XIII secolo. All'interno si possono ammirare affreschi e opere d'arte di grande valore storico e artistico.\n\nSan Martino al Cimino è circondato da una natura incontaminata e da paesaggi mozzafiato. Nei dintorni si trovano boschi di castagni e querce secolari, che offrono la possibilità di fare escursioni a piedi o in bicicletta. La zona è anche famosa per le sue sorgenti termali, che offrono trattamenti di benessere e relax.\n\nIl comune di San Martino al Cimino è un luogo ideale per chi cerca tranquillità e bellezze naturali, ma offre anche la possibilità di visitare città storiche come Viterbo, che si trova a soli 10 chilometri di distanza. Inoltre, la posizione strategica del comune permette di raggiungere facilmente altre destinazioni turistiche come il Lago di Bolsena e le Terme dei Papi.\n\nIn sintesi, San Martino al Cimino è un incantevole comune nel cuore dell'Italia, che offre una combinazione unica di storia, cultura e natura."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 553,
+        "total_tokens": 592
+    }
+}

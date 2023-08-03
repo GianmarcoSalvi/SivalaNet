@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fm33HnhoUjXeyGAHVlh0kK7I2ZRn",
+    "object": "chat.completion",
+    "created": 1690190501,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Francesco si trova nel comune di Montefiascone, in provincia di Viterbo, Italia. È un importante edificio religioso che risale al XIII secolo e rappresenta uno dei principali luoghi di culto della città.\n\nLa chiesa è situata nella parte alta del centro storico di Montefiascone, in una posizione panoramica che offre una vista mozzafiato sulla valle circostante. L'edificio è costruito in stile gotico e presenta una facciata semplice ma elegante, caratterizzata da un portale in pietra e da una grande finestra rotonda.\n\nAll'interno, la Chiesa di San Francesco presenta una navata unica con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, che raffigurano scene della vita di San Francesco d'Assisi e di altri santi francescani. Tra gli affreschi più famosi vi è quello raffigurante la \"Madonna con Bambino\", attribuito al pittore Jacopo Torriti.\n\nNella chiesa si trovano anche diverse cappelle laterali, ognuna delle quali presenta opere d'arte di grande valore. Tra queste, spicca la Cappella del Crocifisso, che ospita un crocifisso ligneo del XV secolo, considerato uno dei più belli della regione.\n\nLa Chiesa di San Francesco è anche famosa per ospitare la tomba del cardinale Giovanni de' Conti, che fu vescovo di Montefiascone nel XV secolo. La tomba è realizzata in marmo e presenta una scultura raffigurante il cardinale in posizione inginocchiata.\n\nOgni anno, la chiesa attira numerosi visitatori e fedeli che vengono ad ammirare la sua bellezza architettonica e le opere d'arte al suo interno. Inoltre, la chiesa è spesso utilizzata per celebrare matrimoni e altre cerimonie religiose.\n\nLa Chiesa di San Francesco rappresenta quindi un importante patrimonio storico e artistico per la città di Montefiascone, testimoniando la ricca tradizione religiosa e culturale della zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 532,
+        "total_tokens": 567
+    }
+}

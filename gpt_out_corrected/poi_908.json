@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqFLtuuhzg3MdZqCfL7jDsjMPlSO",
+    "object": "chat.completion",
+    "created": 1690206639,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Torre della Branca, anche conosciuta come Torre della Galliana, è un'imponente struttura situata nel comune di Viterbo, in Italia. Si trova nella parte nord-ovest della città, vicino al quartiere di San Pellegrino.\n\nLa torre risale al XIII secolo ed è considerata uno dei simboli storici di Viterbo. La sua costruzione è attribuita alla famiglia Branca, una delle più influenti della città durante il Medioevo. La torre era originariamente parte di un complesso fortificato che comprendeva anche un palazzo signorile.\n\nLa Torre della Branca si erge per circa 30 metri di altezza ed è caratterizzata da una struttura a pianta quadrata. È costruita principalmente in mattoni e pietra, con alcuni elementi decorativi in cotto. La torre presenta diverse finestre e feritoie, che servivano a scopi difensivi durante il periodo medievale.\n\nAll'interno della torre si trovano diverse stanze, che in passato erano utilizzate come residenza e come punto di osservazione strategico. Oggi, la torre è aperta al pubblico e ospita un museo che racconta la storia di Viterbo e della famiglia Branca. I visitatori possono salire fino alla cima della torre, da dove si può godere di una vista panoramica mozzafiato sulla città e sui suoi dintorni.\n\nLa Torre della Branca è un importante punto di riferimento per gli abitanti di Viterbo e un'attrazione turistica molto apprezzata. La sua maestosità e la sua storia affascinante la rendono un luogo imperdibile per chi visita la città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 410,
+        "total_tokens": 449
+    }
+}

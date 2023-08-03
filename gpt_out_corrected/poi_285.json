@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoUDxqNryFm5HZes20o3qjP0p8OA",
+    "object": "chat.completion",
+    "created": 1689961545,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Benedetto si trova nel comune di Civita Castellana, in provincia di Viterbo, nella regione del Lazio, Italia. È una delle principali chiese della città e rappresenta un importante punto di riferimento per la comunità locale.\n\nLa chiesa è dedicata a San Benedetto, il fondatore dell'ordine benedettino, ed è situata nel centro storico di Civita Castellana, in una posizione panoramica che offre una vista mozzafiato sulla valle del Tevere.\n\nLa sua costruzione risale al XII secolo, anche se nel corso dei secoli ha subito diverse modifiche e ampliamenti. L'edificio attuale presenta uno stile romanico-gotico, con una facciata in pietra caratterizzata da un portale decorato e una grande finestra rotonda.\n\nAll'interno, la chiesa è a navata unica, con un soffitto a capriate in legno e pareti affrescate. Tra gli affreschi più importanti si possono ammirare quelli raffiguranti scene della vita di San Benedetto e della Vergine Maria.\n\nLa chiesa ospita anche diverse opere d'arte, tra cui una statua di San Benedetto e un crocifisso ligneo del XV secolo. Inoltre, è presente un altare maggiore in marmo, decorato con intarsi e sculture.\n\nLa Chiesa di San Benedetto è un luogo di culto attivo, dove vengono celebrate regolarmente messe e cerimonie religiose. È anche un importante punto di riferimento per eventi culturali e musicali, grazie alla sua acustica eccezionale.\n\nLa sua posizione centrale nel comune di Civita Castellana la rende facilmente accessibile a piedi o in auto. Nei dintorni della chiesa si trovano anche altri luoghi di interesse, come il Palazzo Comunale e il Duomo di San Lorenzo.\n\nIn conclusione, la Chiesa di San Benedetto è un gioiello architettonico e artistico nel comune di Civita Castellana. La sua storia millenaria, le sue opere d'arte e la sua posizione panoramica la rendono una tappa imperdibile per i visitatori che desiderano immergersi nella storia e nella cultura di questa affascinante città italiana."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 552,
+        "total_tokens": 589
+    }
+}

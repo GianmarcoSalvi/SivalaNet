@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7en7jpiC1t9ooZiDJwikjwOqh16rt",
+    "object": "chat.completion",
+    "created": 1689956307,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cattedrale di San Nicola si trova nel comune di Bagnoregio, in Italia. È una delle principali attrazioni della città e rappresenta un importante esempio di architettura religiosa medievale.\n\nLa cattedrale è dedicata a San Nicola, il santo patrono di Bagnoregio. La sua costruzione risale al XII secolo, anche se subì diverse modifiche e ampliamenti nel corso dei secoli successivi. L'edificio è situato nella piazza principale della città, dominando il panorama circostante con la sua imponente facciata.\n\nLa facciata della cattedrale è caratterizzata da un portale romanico decorato con sculture e bassorilievi che raffigurano scene bibliche e simboli religiosi. Sopra il portale si trova una grande finestra a rosone, che permette l'ingresso di luce all'interno dell'edificio.\n\nL'interno della cattedrale è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi e dipinti. L'altare maggiore è ornato con sculture e dipinti raffiguranti scene della vita di San Nicola. Nella cattedrale sono presenti anche diverse cappelle laterali, ognuna delle quali ha il suo altare e le sue opere d'arte.\n\nUno degli elementi più interessanti della cattedrale è il suo campanile, che risale al XIII secolo. È alto circa 40 metri e offre una vista panoramica sulla città e sulla campagna circostante. Il campanile è decorato con archi e finestre gotiche, e ospita un concerto di campane che suonano regolarmente.\n\nLa Cattedrale di San Nicola è un luogo di culto attivo, dove vengono celebrati regolarmente servizi religiosi. È anche un importante punto di riferimento per i visitatori che desiderano conoscere la storia e l'arte della città di Bagnoregio. La sua bellezza architettonica e le opere d'arte al suo interno la rendono una tappa imperdibile per i turisti che visitano la zona."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 511,
+        "total_tokens": 546
+    }
+}

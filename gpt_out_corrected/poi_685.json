@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp0U9LlRG774WlFxzaQvq5Yn5vju",
+    "object": "chat.completion",
+    "created": 1690201874,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria di Castello si trova nel comune di Tarquinia, in Italia. È una delle chiese più antiche della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa è situata su una collina, dominando il centro storico di Tarquinia. La sua costruzione risale al XII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi. La facciata è caratterizzata da un portale romanico con un arco a tutto sesto, decorato con sculture e motivi geometrici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono affrescate con scene religiose e decorazioni geometriche. Uno degli elementi più interessanti è il pavimento in cotto, che presenta un mosaico del XIII secolo raffigurante il ciclo della vita di Cristo.\n\nLa chiesa ospita anche diverse opere d'arte, tra cui una Madonna con Bambino del XV secolo e una Crocifissione del XVI secolo. Inoltre, è possibile ammirare una serie di affreschi risalenti al XIV secolo, che rappresentano scene della vita di San Nicola di Bari.\n\nLa Chiesa di Santa Maria di Castello è un luogo di culto ancora attivo, ma è anche aperta ai visitatori che desiderano ammirare la sua bellezza e scoprire la storia e l'arte che racchiude. La sua posizione panoramica offre anche una vista mozzafiato sulla città di Tarquinia e sulla campagna circostante."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 384,
+        "total_tokens": 421
+    }
+}

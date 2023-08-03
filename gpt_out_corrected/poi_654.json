@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnTLwYEEvFqtT0GGYjDsAzcGYiim",
+    "object": "chat.completion",
+    "created": 1690195975,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Cappella di Santa Maria del Tempio, anche conosciuta come Cappella dei Cavalieri di Malta, si trova nel comune di Sutri, in Italia. Questa cappella è un gioiello architettonico e storico che risale al XII secolo.\n\nLa cappella è situata all'interno del complesso del Tempio di Mitra, un antico edificio di culto pagano che fu successivamente convertito in una chiesa cristiana. La Cappella dei Cavalieri di Malta è stata costruita sopra una delle antiche sale del tempio, che è ancora visibile sotto il pavimento della cappella.\n\nL'edificio è di piccole dimensioni, con una pianta rettangolare e un'unica navata. La facciata è semplice, con un portale in pietra sormontato da un arco a tutto sesto. Sopra il portale si trova un rosone circolare, che permette l'ingresso di luce naturale all'interno della cappella.\n\nAll'interno, la cappella è decorata con affreschi risalenti al XIII secolo. Gli affreschi raffigurano scene della vita di Cristo, tra cui la Natività, la Crocifissione e la Resurrezione. Le pareti sono dipinte con colori vivaci e dettagliate, che mostrano l'abilità artistica dell'epoca.\n\nAl centro della cappella si trova un altare in pietra, sormontato da una croce. Sopra l'altare è presente un dipinto della Madonna con il Bambino, che è considerato il punto focale della cappella. Questo dipinto è stato realizzato nel XV secolo e rappresenta una delle opere d'arte più importanti della cappella.\n\nLa Cappella di Santa Maria del Tempio è un luogo di grande importanza storica e religiosa. È considerata un esempio significativo di architettura romanica e rappresenta un importante punto di riferimento per la comunità locale. La cappella è aperta al pubblico e può essere visitata per ammirare la sua bellezza e scoprire la sua storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 511,
+        "total_tokens": 557
+    }
+}

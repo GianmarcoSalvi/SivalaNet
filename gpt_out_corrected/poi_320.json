@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoe8wSviGfOi2KWgaScx7VEUtE6r",
+    "object": "chat.completion",
+    "created": 1689962160,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca comunale Silvano Ricci si trova nel comune di Fabrica di Roma, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è intitolata a Silvano Ricci, un noto scrittore e poeta italiano originario di Fabrica di Roma. Questo rende la biblioteca un luogo di grande importanza culturale per la città.\n\nLa struttura della biblioteca è moderna e accogliente, con spazi luminosi e ben organizzati. Dispone di una vasta collezione di libri, riviste, giornali e materiale audiovisivo, che copre una vasta gamma di argomenti e interessi. Gli utenti possono accedere a questi materiali gratuitamente e prendere in prestito ciò che desiderano.\n\nLa biblioteca offre anche servizi di consultazione e ricerca, con personale qualificato disponibile per assistere gli utenti nella ricerca di informazioni specifiche o nella scelta di libri adatti ai loro interessi. Inoltre, organizza regolarmente eventi culturali, come presentazioni di libri, conferenze e mostre, per promuovere la lettura e la cultura nella comunità.\n\nUn altro servizio offerto dalla biblioteca è l'accesso a Internet e ai computer, consentendo agli utenti di navigare in rete, fare ricerche online o utilizzare programmi di produttività. Questo è particolarmente utile per gli studenti o per chiunque abbia bisogno di utilizzare un computer ma non ne ha uno a disposizione.\n\nLa Biblioteca comunale Silvano Ricci è un luogo di incontro e di apprendimento per la comunità di Fabrica di Roma. È un punto di riferimento per gli amanti dei libri e per coloro che desiderano approfondire la loro conoscenza su vari argomenti. Grazie alla sua vasta gamma di servizi e risorse, la biblioteca svolge un ruolo importante nella promozione della cultura e dell'istruzione nella città."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 477,
+        "total_tokens": 516
+    }
+}

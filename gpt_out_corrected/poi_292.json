@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoWFyCuLInVKf2YHgXvvCXC6CfgX",
+    "object": "chat.completion",
+    "created": 1689961671,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'Auditorium Santa Chiara si trova nel comune di Civita Castellana, in Italia. Si tratta di un moderno edificio dedicato alla cultura e alle arti, situato nel cuore della città.\n\nL'auditorium è stato progettato con uno stile architettonico contemporaneo, che si integra perfettamente con l'ambiente circostante. La struttura è caratterizzata da linee pulite e da una facciata vetrata, che permette alla luce naturale di filtrare all'interno dell'edificio.\n\nAll'interno dell'Auditorium Santa Chiara si trovano diverse sale, ognuna delle quali è attrezzata per ospitare eventi culturali, spettacoli teatrali, concerti e conferenze. La sala principale è dotata di un palcoscenico ampio e di un sistema audio-video di alta qualità, che garantisce un'esperienza di visione e ascolto ottimale per il pubblico.\n\nL'auditorium dispone anche di una sala conferenze più piccola, ideale per incontri e presentazioni di lavoro. Inoltre, sono presenti diverse sale per le prove e gli incontri degli artisti, nonché spazi per mostre d'arte e esposizioni.\n\nL'edificio è circondato da un ampio giardino, che offre un'atmosfera tranquilla e rilassante. Questo spazio esterno può essere utilizzato per eventi all'aperto durante i mesi più caldi dell'anno.\n\nL'Auditorium Santa Chiara è un importante punto di riferimento per la comunità di Civita Castellana e per la regione circostante. Grazie alla sua moderna struttura e alla sua programmazione culturale variegata, l'auditorium contribuisce a promuovere l'arte e la cultura nella zona, offrendo al pubblico una vasta gamma di eventi di alta qualità."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 446,
+        "total_tokens": 482
+    }
+}

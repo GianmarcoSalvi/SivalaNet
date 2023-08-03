@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fq9zgi0XQDfDSmZfFq0rz6Mz8ub6",
+    "object": "chat.completion",
+    "created": 1690206307,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Fontana del Pegaso è una delle attrazioni principali nel comune di Viterbo, situata nella piazza principale della città, Piazza del Plebiscito. La fontana è stata realizzata nel 1912 dallo scultore viterbese Arnaldo Zocchi.\n\nLa fontana è composta da una grande vasca circolare in marmo bianco, al centro della quale si erge una statua di bronzo raffigurante il mitico Pegaso, il cavallo alato della mitologia greca. La statua del Pegaso è posta su un alto piedistallo e rappresenta il cavallo che si alza in volo, con le ali spiegate e la criniera fluente al vento. Il Pegaso è un simbolo di forza, eleganza e libertà, e la sua presenza nella fontana conferisce un'atmosfera magica e fiabesca alla piazza.\n\nIntorno alla vasca della fontana sono presenti quattro piccole vasche più basse, anch'esse in marmo bianco, che rappresentano quattro delfini che gettano acqua. Questi delfini sono simboli di fertilità e abbondanza, e contribuiscono a creare un'atmosfera rinfrescante e suggestiva.\n\nLa Fontana del Pegaso è circondata da un ampio spazio pavimentato, che offre un luogo ideale per rilassarsi e godere della vista della fontana. Durante le giornate di sole, l'acqua che scorre e gli spruzzi dei delfini creano un piacevole sottofondo sonoro, mentre di notte la fontana è illuminata da luci che la rendono ancora più suggestiva.\n\nLa Fontana del Pegaso è diventata un simbolo di Viterbo e un punto di riferimento per i residenti e i visitatori della città. È un luogo molto frequentato, soprattutto durante le festività e gli eventi speciali, quando la piazza si anima di spettacoli e manifestazioni culturali.\n\nIn conclusione, la Fontana del Pegaso nel comune di Viterbo è un'opera d'arte affascinante e suggestiva, che incanta i visitatori con la sua bellezza e il suo simbolismo. È un luogo da non perdere per chiunque visiti la città e desideri immergersi nella sua storia e nella sua atmosfera unica."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 570,
+        "total_tokens": 604
+    }
+}

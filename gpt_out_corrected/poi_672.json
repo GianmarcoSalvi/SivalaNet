@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fox06JBsyyi1gBYDWg0sTQskNZLl",
+    "object": "chat.completion",
+    "created": 1690201658,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca Comunale Dante Alighieri si trova nel comune di Tarquinia, in Italia. È una biblioteca pubblica che offre una vasta gamma di servizi e risorse per la comunità locale.\n\nLa biblioteca è situata in un edificio storico nel centro della città, vicino a Piazza Cavour. È facilmente accessibile a piedi o in auto e dispone di un parcheggio nelle vicinanze.\n\nAll'interno della biblioteca, gli utenti troveranno un ambiente accogliente e tranquillo, ideale per lo studio, la ricerca o la lettura. La struttura è dotata di ampie sale di lettura, con posti a sedere confortevoli e illuminazione adeguata. Ci sono anche spazi dedicati ai bambini, con libri e giochi adatti alle diverse fasce d'età.\n\nLa biblioteca offre una vasta collezione di libri, riviste, giornali e materiale audiovisivo. Gli utenti possono accedere a romanzi, saggi, libri di storia, arte, scienza, letteratura e molto altro ancora. La biblioteca dispone anche di una sezione dedicata alla storia locale e alla cultura di Tarquinia, con libri e documenti che raccontano la storia della città e dei suoi abitanti.\n\nOltre alla collezione di libri, la biblioteca offre anche servizi digitali, come l'accesso a internet, computer e stampanti. Gli utenti possono utilizzare questi servizi per la ricerca online, la consultazione di risorse digitali o la stampa di documenti.\n\nLa biblioteca organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, mostre d'arte e incontri con autori. Questi eventi offrono agli utenti l'opportunità di incontrare e interagire con esperti del settore e di approfondire i propri interessi culturali.\n\nLa Biblioteca Comunale Dante Alighieri è un importante punto di riferimento per la comunità di Tarquinia. Offre un ambiente stimolante per l'apprendimento, la ricerca e la cultura, promuovendo la lettura e l'accesso alla conoscenza per tutti i cittadini."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 501,
+        "total_tokens": 538
+    }
+}

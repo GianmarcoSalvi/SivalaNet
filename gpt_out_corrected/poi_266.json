@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoOxyJjAYHdSlp5gLfHiqNDczAKE",
+    "object": "chat.completion",
+    "created": 1689961219,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Sant'Egidio si trova nel comune di Cellere, in provincia di Viterbo, nella regione del Lazio, Italia. Si tratta di una piccola chiesa situata nel centro storico del paese.\n\nLa chiesa è dedicata a Sant'Egidio, un santo eremita del VI secolo, noto per la sua vita di preghiera e penitenza. La sua figura è spesso rappresentata con un cervo, simbolo della sua vita solitaria e della sua stretta connessione con la natura.\n\nLa chiesa è di piccole dimensioni, con una facciata semplice e sobria. La sua architettura risale al periodo medievale, con alcune aggiunte e modifiche nel corso dei secoli. La facciata è caratterizzata da un portale in pietra, sormontato da un rosone circolare. Sopra il portale è presente una piccola finestra a bifora.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi e dipinti sacri, risalenti principalmente al XVII e XVIII secolo. Tra le opere più significative vi è un dipinto raffigurante Sant'Egidio, attribuito ad un artista locale.\n\nL'altare maggiore è ornato da un tabernacolo in legno intagliato, risalente al XVII secolo. Sopra l'altare è collocata una statua di Sant'Egidio, realizzata in legno policromo.\n\nLa Chiesa di Sant'Egidio è un luogo di culto importante per la comunità locale, che vi si riunisce per la celebrazione delle messe e per altre cerimonie religiose. Durante l'anno, vengono organizzate anche processioni e festività in onore del santo patrono.\n\nLa chiesa è aperta al pubblico e rappresenta una tappa interessante per chi visita il comune di Cellere, offrendo un'opportunità per immergersi nella storia e nella spiritualità del luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 501,
+        "total_tokens": 536
+    }
+}

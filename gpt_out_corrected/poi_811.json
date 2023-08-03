@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpjCL5Go0kx2D9jvkyLdrL6ZuQCY",
+    "object": "chat.completion",
+    "created": 1690204646,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Francesco si trova nel comune di Vetralla, in provincia di Viterbo, nella regione del Lazio, Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa fu costruita nel XIII secolo e inizialmente faceva parte di un convento francescano. L'edificio è realizzato in stile gotico, con una facciata semplice ma elegante. La facciata è caratterizzata da un portale in pietra con un arco a tutto sesto, sormontato da una finestra ad arco ogivale. Sopra la finestra si trova un rosone decorato con motivi geometrici.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIV secolo, raffiguranti scene della vita di San Francesco e altri santi. Tra gli affreschi più importanti si trovano quelli del coro, che rappresentano la Crocifissione e la Madonna con il Bambino.\n\nNella chiesa si trovano anche diverse cappelle laterali, ognuna delle quali contiene opere d'arte di grande valore. Una delle cappelle più importanti è la Cappella del Crocifisso, che ospita un crocifisso ligneo del XV secolo. Altre cappelle contengono dipinti e sculture di artisti locali.\n\nLa Chiesa di San Francesco è un luogo di culto ancora attivo, ma è anche aperta ai visitatori che desiderano ammirare l'arte e l'architettura storica. La sua posizione nel centro storico di Vetralla la rende facilmente accessibile e la sua bellezza la rende una tappa imperdibile per gli amanti dell'arte e della storia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 34,
+        "completion_tokens": 437,
+        "total_tokens": 471
+    }
+}

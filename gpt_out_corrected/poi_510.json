@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmBPXNvBDcdfd77gjBdh7NWNUYsG",
+    "object": "chat.completion",
+    "created": 1690191019,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Palazzo Comunale di Nepi è un edificio storico situato nel centro del comune di Nepi, nella provincia di Viterbo, Italia. \n\nL'edificio risale al XIII secolo ed è considerato uno dei principali esempi di architettura medievale della zona. Si trova in Piazza Umberto I, la piazza principale di Nepi, e domina l'intero centro storico con la sua imponente presenza.\n\nIl Palazzo Comunale è caratterizzato da una facciata in pietra, con una serie di finestre ad arco e un portale principale decorato. La struttura è composta da tre piani, ognuno dei quali presenta una serie di finestre che permettono l'illuminazione degli interni.\n\nAll'interno, il palazzo ospita gli uffici comunali e le sale del consiglio comunale. Le stanze sono arredate in stile rinascimentale e conservano molti dettagli originali, come affreschi, soffitti a cassettoni e pavimenti in cotto.\n\nUna delle sale più importanti è la Sala del Consiglio, che presenta un soffitto a cassettoni decorato con affreschi raffiguranti scene storiche legate alla città di Nepi. Questa sala è utilizzata per le riunioni del consiglio comunale e per eventi pubblici.\n\nIl Palazzo Comunale di Nepi è un importante punto di riferimento per la comunità locale e rappresenta un simbolo di identità e storia per il comune. La sua posizione centrale e la sua architettura affascinante lo rendono una meta turistica molto apprezzata dai visitatori che desiderano immergersi nell'atmosfera medievale di Nepi."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 414,
+        "total_tokens": 445
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fou1wTlT4GsmVtvjBAAgQSDvljb7",
+    "object": "chat.completion",
+    "created": 1690201473,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "L'anfiteatro romano di Sutri è un importante sito archeologico situato nel comune di Sutri, nella regione del Lazio, in Italia. Questo anfiteatro è uno dei più antichi e meglio conservati dell'intera penisola italiana.\n\nCostruito nel I secolo d.C., durante l'epoca dell'Impero Romano, l'anfiteatro di Sutri era utilizzato per ospitare spettacoli pubblici, come combattimenti tra gladiatori, venationes (combattimenti tra animali) e rappresentazioni teatrali. La sua posizione strategica, vicino alla Via Cassia, una delle principali vie di comunicazione dell'epoca romana, lo rendeva facilmente accessibile per gli abitanti della città e per i viaggiatori di passaggio.\n\nL'anfiteatro è costruito in pietra locale, con una forma ellittica e una capacità di circa 3.000 spettatori. La struttura è divisa in due parti principali: l'arena, dove si svolgevano gli spettacoli, e le gradinate, dove gli spettatori potevano sedersi per assistere agli eventi. Le gradinate erano suddivise in diverse sezioni, riservate a diverse classi sociali, con i posti migliori riservati all'élite romana.\n\nL'anfiteatro di Sutri è stato oggetto di scavi archeologici nel corso degli anni, che hanno portato alla luce numerosi reperti, come armi, monete e oggetti di uso quotidiano. Questi reperti sono esposti nel Museo Civico Archeologico di Sutri, che si trova nelle vicinanze dell'anfiteatro e offre una panoramica completa della storia e della cultura dell'antica città romana.\n\nOggi, l'anfiteatro di Sutri è aperto al pubblico e rappresenta una delle principali attrazioni turistiche della zona. I visitatori possono esplorare la struttura, ammirare l'architettura romana e immaginare gli spettacoli che si svolgevano in questo luogo più di duemila anni fa. L'anfiteatro è anche utilizzato per eventi culturali e spettacoli teatrali durante l'estate, offrendo un'esperienza unica che combina storia e intrattenimento."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 35,
+        "completion_tokens": 561,
+        "total_tokens": 596
+    }
+}

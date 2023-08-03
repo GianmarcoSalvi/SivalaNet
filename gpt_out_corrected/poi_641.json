@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fnP4oeDkWdIThlwCWter64sBKAIj",
+    "object": "chat.completion",
+    "created": 1690195710,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Nicola di Bari si trova nel comune di Soriano nel Cimino, in provincia di Viterbo, Italia. È una chiesa di origine medievale che risale al XII secolo, anche se subì diverse modifiche nel corso dei secoli successivi.\n\nL'edificio è situato nel centro storico del paese, in una posizione dominante che offre una vista panoramica sulla valle circostante. La facciata della chiesa è semplice ma elegante, con un portale in pietra e una finestra a rosone al di sopra. Sopra il portale è presente un affresco raffigurante San Nicola di Bari, il santo patrono della chiesa.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno e pareti decorate con affreschi. L'altare maggiore è ornato da un dipinto raffigurante San Nicola di Bari, opera di un artista locale del XVII secolo. Ai lati dell'altare sono presenti due cappelle laterali, una dedicata alla Madonna del Rosario e l'altra a San Giuseppe.\n\nLa chiesa conserva anche diverse opere d'arte di pregio, tra cui una statua lignea di San Nicola di Bari risalente al XV secolo e un crocifisso ligneo del XVI secolo. Sono inoltre presenti numerosi dipinti e affreschi di varie epoche, che rappresentano scene della vita di San Nicola e altri santi.\n\nLa Chiesa di San Nicola di Bari è un importante luogo di culto per la comunità locale e viene utilizzata regolarmente per le celebrazioni religiose. È anche una meta turistica per gli amanti dell'arte e della storia, che possono ammirare le sue bellezze architettoniche e artistiche.\n\nInoltre, la chiesa si trova all'interno del borgo medievale di Soriano nel Cimino, che offre ulteriori attrazioni turistiche come il Castello Orsini, le antiche mura cittadine e le pittoresche stradine medievali. La Chiesa di San Nicola di Bari rappresenta quindi un importante punto di riferimento culturale e storico per il comune di Soriano nel Cimino."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 550,
+        "total_tokens": 590
+    }
+}

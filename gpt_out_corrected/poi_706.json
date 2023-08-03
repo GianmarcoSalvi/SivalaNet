@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fp6D8Zl6fmIbeQLIpR2XMNeuZcN1",
+    "object": "chat.completion",
+    "created": 1690202229,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di San Giovanni Gerosolimitano si trova nel comune di Tarquinia, in Italia. È un edificio religioso di grande importanza storica e artistica.\n\nLa chiesa fu costruita nel XII secolo e presenta uno stile architettonico romanico. La facciata è caratterizzata da un portale in marmo bianco, decorato con sculture raffiguranti scene bibliche. Sopra il portale si trova un rosone circolare, che illumina l'interno della chiesa con la luce naturale.\n\nL'interno della chiesa è a navata unica, con un soffitto a capriate in legno. Le pareti sono decorate con affreschi risalenti al XIII secolo, raffiguranti scene della vita di San Giovanni Battista e di San Giovanni Evangelista. Questi affreschi sono considerati tra i migliori esempi dell'arte medievale in Italia.\n\nNella parte posteriore della chiesa si trova un altare in marmo, sormontato da una pala d'altare raffigurante la Madonna con il Bambino e i Santi Giovanni Battista e Giovanni Evangelista. Questa pala d'altare è attribuita al pittore rinascimentale Antoniazzo Romano.\n\nLa Chiesa di San Giovanni Gerosolimitano è anche famosa per il suo campanile, che risale al XIV secolo. È una torre a pianta quadrata, con una serie di finestre ad arco che si aprono lungo le pareti. Il campanile è stato restaurato nel corso dei secoli, ma conserva ancora la sua struttura originale.\n\nOggi la chiesa è utilizzata per le celebrazioni religiose e ospita anche eventi culturali e concerti. È un luogo di grande interesse per i visitatori che desiderano ammirare l'arte e l'architettura medievale. La Chiesa di San Giovanni Gerosolimitano rappresenta un importante patrimonio storico e culturale per la città di Tarquinia e per l'intera Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 498,
+        "total_tokens": 537
+    }
+}

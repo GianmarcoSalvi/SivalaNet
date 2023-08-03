@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7eoTsNBMB7pYE0rC7vlcQijeA97wT",
+    "object": "chat.completion",
+    "created": 1689961524,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Biblioteca comunale Enrico Minio si trova nel comune di Civita Castellana, in Italia. È situata in una posizione centrale, facilmente accessibile a piedi o in auto.\n\nLa biblioteca prende il nome da Enrico Minio, un illustre scrittore e poeta nato a Civita Castellana nel 1891. È un luogo di grande importanza culturale per la comunità locale, offrendo una vasta gamma di servizi e risorse per soddisfare le esigenze di lettori di tutte le età.\n\nL'edificio che ospita la biblioteca è moderno e accogliente, con ampie finestre che permettono l'ingresso di luce naturale. All'interno, gli spazi sono organizzati in modo funzionale e ben strutturato. Ci sono diverse aree dedicate alla lettura e allo studio, con comode sedie e tavoli. Inoltre, la biblioteca dispone di una sala multimediale dotata di computer e accesso a internet.\n\nLa collezione della biblioteca è molto ricca e variegata. Ci sono migliaia di libri di diversi generi e argomenti, tra cui narrativa, saggistica, poesia, storia, arte e molto altro ancora. Inoltre, la biblioteca offre anche una vasta selezione di giornali, riviste e periodici, sia locali che nazionali.\n\nLa biblioteca comunale Enrico Minio organizza regolarmente eventi culturali, come presentazioni di libri, conferenze, incontri con autori e letture pubbliche. Questi eventi sono aperti al pubblico e offrono un'opportunità per gli appassionati di letteratura di incontrarsi e condividere le proprie passioni.\n\nLa biblioteca offre anche servizi di prestito, permettendo ai membri di prendere in prestito libri e altri materiali per un determinato periodo di tempo. È possibile iscriversi come socio della biblioteca presentando un documento di identità e compilando un modulo di iscrizione.\n\nIn conclusione, la Biblioteca comunale Enrico Minio è un luogo di grande valore culturale per la comunità di Civita Castellana. Offre una vasta gamma di risorse e servizi per soddisfare le esigenze dei lettori di tutte le età e organizza regolarmente eventi culturali per promuovere la lettura e la condivisione di conoscenze."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 566,
+        "total_tokens": 605
+    }
+}

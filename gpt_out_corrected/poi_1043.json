@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fr0jyQfeC59BI3JLHs75k8X0vVIz",
+    "object": "chat.completion",
+    "created": 1690209577,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Necropoli di Farnese è un importante sito archeologico situato nel comune di Farnese, nella regione del Lazio, in Italia. Questa necropoli, che risale all'epoca etrusca, è stata scoperta nel 1964 durante i lavori di costruzione di una strada.\n\nLa necropoli si estende su un'area di circa 10 ettari e comprende oltre 6.000 tombe, che testimoniano l'importanza e la ricchezza della città etrusca di Farnese. Le tombe sono state scavate nella roccia tufacea e sono disposte in file regolari, creando un vero e proprio labirinto sotterraneo.\n\nLe tombe sono di diversi tipi e dimensioni, a seconda dello status sociale dei defunti. Alcune sono semplici fosse scavate nella roccia, mentre altre sono vere e proprie camere funerarie con pareti decorate e affreschi. Alcune tombe contengono anche oggetti preziosi, come gioielli, ceramiche e armi, che testimoniano la ricchezza e l'importanza dei defunti.\n\nUno dei punti salienti della necropoli è la Tomba dei Dadi, così chiamata per la presenza di dadi incisi sulle pareti. Questa tomba è particolarmente interessante perché mostra una raffigurazione dettagliata della vita quotidiana degli etruschi, con scene di caccia, banchetti e giochi.\n\nLa necropoli è stata oggetto di scavi e studi approfonditi, che hanno permesso di ricostruire la storia e la cultura degli etruschi di Farnese. Oggi, il sito è aperto al pubblico e offre la possibilità di visitare le tombe e ammirare gli affreschi e gli oggetti rinvenuti durante gli scavi.\n\nLa Necropoli di Farnese rappresenta un'importante testimonianza dell'antica civiltà etrusca e offre un'opportunità unica per immergersi nella storia e nella cultura di questa affascinante civiltà."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 489,
+        "total_tokens": 525
+    }
+}

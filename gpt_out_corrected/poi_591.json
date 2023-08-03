@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fmthG0MXk1tiYAMrUAzhmOZ8NEnf",
+    "object": "chat.completion",
+    "created": 1690193765,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria del Giglio si trova nel comune di Proceno, in provincia di Viterbo, nella regione del Lazio, Italia. Questo edificio religioso è uno dei principali punti di riferimento della città e rappresenta un importante esempio di architettura religiosa rinascimentale.\n\nLa chiesa fu costruita nel XVI secolo e presenta una facciata in stile rinascimentale, caratterizzata da un portale d'ingresso decorato con sculture e un rosone centrale. La facciata è realizzata in pietra locale e presenta una serie di lesene che dividono la superficie in tre sezioni.\n\nL'interno della chiesa è a navata unica, con un soffitto a cassettoni decorato con affreschi. Le pareti laterali sono adornate da dipinti e statue di santi. Al centro dell'altare maggiore si trova un dipinto raffigurante la Madonna del Giglio, da cui la chiesa prende il nome.\n\nLa chiesa è famosa anche per il suo campanile, che si erge maestoso accanto all'edificio principale. Il campanile è alto e slanciato, con una serie di finestre ad arco che si aprono lungo la sua struttura. La sommità del campanile è coronata da una guglia a forma di piramide.\n\nLa Chiesa di Santa Maria del Giglio è un luogo di culto attivo e viene utilizzata per le celebrazioni religiose regolari. È anche una meta turistica popolare per i visitatori che desiderano ammirare l'architettura rinascimentale e l'arte sacra.\n\nLa chiesa si trova in una posizione panoramica, con una vista mozzafiato sulla campagna circostante. È circondata da un piccolo cortile e da un giardino ben curato, che aggiunge ulteriore bellezza al suo ambiente.\n\nIn conclusione, la Chiesa di Santa Maria del Giglio nel comune di Proceno è un gioiello architettonico rinascimentale che merita una visita. La sua facciata imponente, l'interno riccamente decorato e il campanile maestoso la rendono un luogo di grande interesse storico e artistico."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 545,
+        "total_tokens": 581
+    }
+}

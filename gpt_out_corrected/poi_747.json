@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpLGRxudxCMeqSNPdz3iigTy9LgG",
+    "object": "chat.completion",
+    "created": 1690203162,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "La Chiesa di Santa Maria Maggiore si trova nel comune di Tuscania, in Italia. È uno dei principali luoghi di culto della città e rappresenta un importante esempio di architettura romanica.\n\nLa chiesa fu costruita nel XII secolo e presenta una facciata imponente e maestosa, caratterizzata da un portale centrale sormontato da un rosone. La facciata è decorata con sculture e bassorilievi che rappresentano scene bibliche e simboli religiosi.\n\nL'interno della chiesa è a pianta basilicale, con tre navate separate da colonne e archi. Le navate sono coperte da volte a crociera e sono decorate con affreschi risalenti al XIII secolo, che raffigurano scene della vita di Cristo e dei santi.\n\nUno degli elementi più suggestivi della chiesa è il suo pavimento cosmatesco, realizzato con marmi policromi che formano disegni geometrici e simbolici. Questo pavimento è considerato uno dei migliori esempi di arte cosmatesca in Italia.\n\nLa chiesa ospita anche diverse opere d'arte, tra cui una Madonna con Bambino del XIII secolo e un crocifisso ligneo del XV secolo. Inoltre, è possibile ammirare una serie di cappelle laterali, ognuna delle quali presenta affreschi e altari dedicati a santi e figure religiose.\n\nLa Chiesa di Santa Maria Maggiore è un luogo di grande importanza storica e artistica per Tuscania. La sua architettura romanica, le decorazioni interne e le opere d'arte che ospita la rendono una meta imperdibile per i visitatori che desiderano immergersi nella storia e nell'arte della regione."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 428,
+        "total_tokens": 468
+    }
+}

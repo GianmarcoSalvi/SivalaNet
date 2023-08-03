@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fqeLD6DcjPTXCtQJwx1BFiHDstvF",
+    "object": "chat.completion",
+    "created": 1690208189,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Piazzale Umberto I è una piazza situata nel comune di Vitorchiano, in Italia. Si trova nel centro storico del paese, circondata da edifici storici e caratteristici.\n\nLa piazza è di forma rettangolare e presenta un pavimento in ciottoli, tipico delle piazze italiane. Al centro della piazza si trova una fontana, che rappresenta uno dei punti focali del luogo. La fontana è decorata con sculture e presenta un getto d'acqua centrale che crea un piacevole effetto visivo e sonoro.\n\nIntorno alla piazza si trovano diversi edifici storici, tra cui la Chiesa di San Giovanni Battista. Questa chiesa risale al XIII secolo ed è caratterizzata da un'elegante facciata in stile romanico. All'interno, si possono ammirare affreschi e opere d'arte di grande valore storico e artistico.\n\nOltre alla chiesa, Piazzale Umberto I ospita anche alcuni negozi, bar e ristoranti. Questi locali offrono la possibilità di fare shopping, gustare piatti tipici della cucina locale o semplicemente rilassarsi all'aperto, godendo dell'atmosfera unica della piazza.\n\nLa piazza è frequentata dai residenti del paese e dai turisti che visitano Vitorchiano. Durante le giornate di mercato, la piazza si anima ulteriormente, con bancarelle che vendono prodotti locali, abbigliamento e oggetti artigianali.\n\nPiazzale Umberto I è un luogo ideale per fare una passeggiata, sedersi a un tavolino di un bar e godersi un caffè o semplicemente ammirare l'architettura e l'atmosfera del centro storico di Vitorchiano. È un punto di incontro per la comunità locale e un luogo di interesse per i visitatori che desiderano immergersi nella storia e nella cultura del paese."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 36,
+        "completion_tokens": 478,
+        "total_tokens": 514
+    }
+}

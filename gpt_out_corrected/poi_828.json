@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7fpr3usaXYdZ25gm5w3K6mODndmjH",
+    "object": "chat.completion",
+    "created": 1690205133,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "I Connutti è un ristorante situato nel comune di Vignanello, in Italia. Si trova in una posizione strategica, nel centro storico del paese, e offre un'atmosfera accogliente e familiare.\n\nIl ristorante è arredato in stile rustico, con pareti in pietra e travi a vista, che creano un'atmosfera calda e invitante. L'arredamento è semplice ma elegante, con tavoli e sedie in legno, e una luce soffusa che crea un'atmosfera intima.\n\nLa cucina de I Connutti è incentrata sulla tradizione culinaria italiana, con un'attenzione particolare ai prodotti locali e di stagione. Il menu offre una vasta selezione di piatti, che spaziano dalla pasta fatta in casa, ai piatti di carne e pesce, alle pizze cotte nel forno a legna.\n\nI Connutti si distingue per la qualità dei suoi ingredienti, che vengono selezionati con cura e attenzione. I piatti sono preparati con maestria e presentati in modo accattivante, per soddisfare sia il palato che la vista.\n\nIl personale del ristorante è cordiale e professionale, pronto ad accogliere gli ospiti con un sorriso e a fornire consigli sui piatti e sui vini da abbinare. Il servizio è attento e veloce, garantendo un'esperienza piacevole e senza intoppi.\n\nI Connutti è anche conosciuto per la sua carta dei vini, che offre una vasta selezione di etichette provenienti da diverse regioni italiane. Gli ospiti possono scegliere tra vini bianchi, rossi e spumanti, per accompagnare al meglio i loro pasti.\n\nIn conclusione, I Connutti è un ristorante di qualità nel comune di Vignanello, che offre un'esperienza culinaria autentica e piacevole. Con la sua cucina tradizionale, l'atmosfera accogliente e il servizio impeccabile, è una scelta ideale per chi desidera gustare i sapori e i profumi dell'Italia."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 33,
+        "completion_tokens": 520,
+        "total_tokens": 553
+    }
+}

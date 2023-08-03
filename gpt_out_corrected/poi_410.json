@@ -1,0 +1,21 @@
+{
+    "id": "chatcmpl-7flYWFD2tBjmag5NU8tutLCNdvHws",
+    "object": "chat.completion",
+    "created": 1690188608,
+    "model": "gpt-3.5-turbo-0613",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Il Santuario della Madonna del Giglio si trova nel comune di Ischia di Castro, nella provincia di Viterbo, nella regione del Lazio, in Italia. È un importante luogo di culto cattolico dedicato alla Vergine Maria.\n\nIl santuario è situato su una collina panoramica, circondato da un paesaggio suggestivo e immerso nella natura. La sua costruzione risale al XVII secolo, anche se sono state apportate modifiche e ampliamenti nel corso dei secoli successivi.\n\nL'edificio presenta uno stile architettonico barocco, con una facciata imponente e decorata. La parte centrale è dominata da un grande portale d'ingresso, sormontato da una finestra a forma di occhio. Sopra di essa, si trova una nicchia contenente una statua della Madonna del Giglio, che dà il nome al santuario.\n\nAll'interno, il santuario è caratterizzato da una navata unica, con una volta a botte affrescata e pareti decorate con stucchi e dipinti. L'altare maggiore è ornato da sculture e dipinti raffiguranti scene della vita di Maria. Ai lati dell'altare, ci sono cappelle laterali dedicate a santi e sante, ognuna con le proprie opere d'arte e arredi sacri.\n\nIl santuario è un luogo di pellegrinaggio molto frequentato, soprattutto durante le festività religiose dedicate alla Madonna del Giglio, che si svolgono il 15 agosto di ogni anno. Durante queste celebrazioni, il santuario diventa un centro di devozione e preghiera, attirando fedeli da tutto il territorio circostante.\n\nOltre al suo valore religioso, il Santuario della Madonna del Giglio offre anche una vista panoramica mozzafiato sulla campagna circostante e sul paesaggio collinare. È un luogo ideale per trascorrere momenti di tranquillità e riflessione, immersi nella bellezza della natura e nella spiritualità del luogo."
+            },
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 37,
+        "completion_tokens": 493,
+        "total_tokens": 530
+    }
+}
