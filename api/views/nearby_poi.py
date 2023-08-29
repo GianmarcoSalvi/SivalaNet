@@ -21,7 +21,7 @@ from django_project.settings import *
 class nearbyPoi(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Poi.objects.all().order_by('poi_id')
     serializer_class = PoiSerializer(many=True)
-    pagination_class = api.pagination.CustomPagination
+    pagination_class = api.pagination.GeoapifyStylePagination
 
     @extend_schema(
         parameters=([
