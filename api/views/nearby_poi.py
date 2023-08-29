@@ -30,8 +30,8 @@ class nearbyPoi(mixins.ListModelMixin, viewsets.GenericViewSet):
             OpenApiParameter(name="poi_id", type=OpenApiTypes.INT),
             # OpenApiParameter(name="limit", type=OpenApiTypes.INT, default=3, required=True,
             # description="Limit number of retrieved POI"),
-            # OpenApiParameter(name="radius", type=OpenApiTypes.INT, default=500, required=True,
-            # description="Radius in meters"),
+            OpenApiParameter(name="radius", type=OpenApiTypes.INT, default=500, required=True,
+                description="Radius in meters"),
         ]),
         description="Retrieve POI nearby a given poi_id or a generic (lat,lon) point.",
         responses=PoiSerializer(many=True)
@@ -42,7 +42,7 @@ class nearbyPoi(mixins.ListModelMixin, viewsets.GenericViewSet):
         lon = request.GET.get('lon')
         poi_id = request.GET.get('poi_id')
         # limit = int(request.GET.get('limit', 3))
-        # radius = int(request.GET.get('radius', 500))
+        radius = int(request.GET.get('radius', 500))
 
         if (poi_id and (lat or lon)) or (not poi_id and not (lat and lon)):
             return Response(status=status.HTTP_400_BAD_REQUEST,
@@ -59,7 +59,7 @@ class nearbyPoi(mixins.ListModelMixin, viewsets.GenericViewSet):
         point = Point(float(lat), float(lon), srid=4326)
         queryset = Poi.objects.annotate(
             distance=Distance('location', point)
-        ).exclude(pk=poi_id).order_by('distance')
+        ).exclude(pk=poi_id).order_by('distance').filter(distance__lte=radius)
 
         qs = self.paginate_queryset(queryset)
         serializer = PoiSerializer(instance=qs, many=True, context={'request': request})
