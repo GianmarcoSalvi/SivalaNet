@@ -3,6 +3,7 @@ from rest_framework.pagination import PageNumberPagination
 
 class CustomPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
+
     def get_page_size(self, request):
         # Get the `page_size` query parameter from the request
         page_size = request.query_params.get('page_size')

@@ -1,6 +1,6 @@
 from django.urls import path, include
 from .views import city, region, poi, province, user, image, tag, social_media, day_and_hour, precompiled_itinerary, geoapify, \
-    poi_opening_hour, generated_itinerary
+    poi_opening_hour, generated_itinerary, nearby_poi
 from rest_framework import routers
 
 router = routers.DefaultRouter()
@@ -17,7 +17,7 @@ router.register(r'day_and_hour', day_and_hour.DayAndHourViewSet, basename='day_a
 # router.register(r'register_backuser', backuser.RegisterBackUser, basename='register_backuser')  # 10
 router.register(r'accommodations', geoapify.AccommodationView, basename='accommodations')  # 10
 router.register(r'caterings', geoapify.CateringView, basename='caterings')  # 10
-router.register(r'nearby_poi', poi.nearbyPoi, basename='nearby_poi')  # 10
+router.register(r'nearby_poi', nearby_poi.nearbyPoi, basename='nearby_poi')  # 10
 router.register(r'precompiled_itinerary', precompiled_itinerary.PrecompiledItineraryViewSet, basename='precompiled_itinerary')  # 10
 router.register(r'generated_itinerary', generated_itinerary.GeneratedItineraryViewSet, basename='generated_itinerary')  # 10
 

@@ -80,7 +80,7 @@ class Poi(models.Model):
     poi_id = models.AutoField(primary_key=True)
     city = models.ForeignKey(City, models.DO_NOTHING)
     name = models.CharField(max_length=256)
-    location = models.PointField(geography=True)
+    location = models.PointField(geography=False)
     lat = models.DecimalField(max_digits=9, decimal_places=7)
     lon = models.DecimalField(max_digits=9, decimal_places=7)
     address = models.CharField(max_length=256, blank=True, null=True)
