@@ -160,7 +160,7 @@ def geoapify_routing_planner(days, user_preferences,
                              end_point_lon=None,
                              start_point_lat=None,
                              start_point_lon=None):
-    API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'
+    API_KEY = '37f1ed86af2b40a4820f21fb49aeb5ca'   # ORIGINAL
     api_request = 'https://api.geoapify.com/v1/routeplanner?'
     api_request += 'apiKey=' + API_KEY
 
