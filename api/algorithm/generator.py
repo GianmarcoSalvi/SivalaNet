@@ -106,7 +106,7 @@ def rank_text_search_poi_selection(poi_quantity, user_preferences):
 
         chosen_poi = set(choices(population=poi_list, weights=utility_score_list, k=poi_quantity))
 
-        while (len(chosen_poi) != len(poi_list)):
+        while len(chosen_poi) != len(poi_list):
             left_poi = len(poi_list) - len(chosen_poi)
             chosen_poi.update(set(choices(population=poi_list, weights=utility_score_list, k=left_poi)))
 
