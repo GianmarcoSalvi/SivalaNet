@@ -18,3 +18,5 @@ admin.site.register(User)
 admin.site.register(UserTag)
 admin.site.register(PoiOpeningHour)
 admin.site.register(Place)
+admin.site.register(PrecompiledItinerary)
+

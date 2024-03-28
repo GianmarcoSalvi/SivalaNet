@@ -118,6 +118,8 @@ class PoiSerializer(serializers.ModelSerializer):
         if data['distance'] is None:
             data.pop('distance')
         return data
+    
+    
 class PoiReadOnlySerializer(serializers.ModelSerializer):
     utility_score = serializers.SerializerMethodField()
     poi_opening_hour = PoiOpeningHourSerializer(read_only=True)
@@ -166,20 +168,61 @@ class DailyScheduleSerializer(serializers.Serializer):
 
 class PrecompiledItinerarySerializer(serializers.ModelSerializer):
     poi = PoiSerializer(many=True, read_only=True)
+    # poi = serializers.PrimaryKeyRelatedField(many=True, queryset=Poi.objects.all())
+    # poi = serializers.ListField(child=serializers.IntegerField(), write_only=True, allow_empty=False)
     midpoint_lat = serializers.SerializerMethodField()
     midpoint_lon = serializers.SerializerMethodField()
+        
     class Meta:
         model = PrecompiledItinerary
-        fields = '__all__'     # ['itinerary_id','description', 'poi','midpoint_lat','midpoint_lon']
+        fields = '__all__'
+    """
+    def create(self, validated_data):
+        pois_data = validated_data.pop('poi', [])
+        instance = super().create(validated_data)
+        self.save_poi_order(instance, pois_data)
+        return instance
+
+    def update(self, instance, validated_data):
+        pois_data = validated_data.pop('poi', [])
+        # instance = super().update(instance, validated_data)
+        self.save_poi_order(instance, pois_data)
+        instance.save()
+        return instance
+
+    def save_poi_order(self, instance, pois_data):
+        instance.poi.clear()
+        # Create new associations with order
+        for order, poi_id in enumerate(pois_data, start=1):
+            poi_instance = Poi.objects.get(pk=poi_id)  # Retrieve the Poi instance
+            instance.poi.add(poi_instance, through_defaults={'order': order})
+    """
+    
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        ordered_poi_ids = instance.poi.through.objects.filter(precompiled_itinerary=instance).order_by('order').values_list('poi_id', flat=True)
+        pois_data = []
+        for poi_id in ordered_poi_ids:
+            poi_instance = Poi.objects.get(pk=poi_id)
+            pois_data.append(PoiSerializer(poi_instance, context=self.context).data)
+    
+        # Update the representation with the serialized POIs
+        representation['poi'] = pois_data
+        return representation
+    
 
     def get_midpoint_lat(self, obj):
         lat = 0
+        if obj is None or obj.poi.count() == 0:
+            return 0
         for p in obj.poi.all():
             lat += float(p.lat)
         return lat / obj.poi.count()
 
     def get_midpoint_lon(self, obj):
         lon = 0
+        if obj is None or obj.poi.count() == 0:
+            return 0
         for p in obj.poi.all():
             lon += float(p.lon)
         return lon / obj.poi.count()

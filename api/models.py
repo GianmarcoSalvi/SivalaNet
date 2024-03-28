@@ -188,10 +188,22 @@ class Place(models.Model):
 class PrecompiledItinerary(models.Model):
     itinerary_id = models.AutoField(primary_key=True)
     description = models.CharField(null=True, blank=True)
-    poi = models.ManyToManyField(Poi, blank=True, related_name='poi')
-
+    # poi = models.ManyToManyField(Poi, blank=True, related_name='poi')
+    poi = models.ManyToManyField(Poi, through='PrecompiledItineraryPoi', blank=True, related_name='poi')
     # is_active = models.BooleanField(blank=True, null=True)
 
     class Meta:
         managed = True
         db_table = 'precompiled_itinerary'
+
+
+
+class PrecompiledItineraryPoi(models.Model):
+    precompiled_itinerary = models.ForeignKey(PrecompiledItinerary, on_delete=models.CASCADE)
+    poi = models.ForeignKey(Poi, on_delete=models.CASCADE)
+    order = models.IntegerField()
+
+    class Meta:
+        unique_together = ['precompiled_itinerary', 'poi']
+
+

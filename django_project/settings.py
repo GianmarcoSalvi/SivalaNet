@@ -19,6 +19,10 @@ from pathlib import Path
 from datetime import timedelta
 import os
 
+# import mimetypes
+# mimetypes.add_type("text/css", ".css", True)
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,14 +34,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0t126s_bkbhynr$@i(s(w__^_gr*598=#rzz7zh)*7^4qy!qa^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
+
+
+# CSRF_TRUSTED_ORIGINS = ["http://*", "https://*"]
 ALLOWED_HOSTS = ['*']
+ 
+# CORS_ALLOW_HEADERS = ['content-type']
+
+# CORS_ALLOWED_ORIGINS = ['*']
+# CORS_ALLOW_CREDENTIALS = True
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders', # for allowing CORS
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,8 +69,11 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'api.middleware.corsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -91,7 +108,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',  # 'django.db.backends.postgresql'
-        'HOST': 'localhost',  # PUT 'db' to work with docker localhost otherwise
+        'HOST': 'db',  # PUT 'db' to work with docker localhost otherwise
         'PORT': 5432,  # 5455 (?)
         'NAME': "postgres",
         'USER': "postgres",
@@ -161,10 +178,11 @@ USE_I18N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -174,16 +192,24 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 # GDAL_LIBRARY_PATH = "/opt/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib"
 # GEOS_LIBRARY_PATH = "/opt/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib"
 
-GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
+# GDAL_LIBRARY_PATH = '/opt/homebrew/opt/gdal/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/opt/homebrew/opt/geos/lib/libgeos_c.dylib'
 
 # GDAL_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/gdal/3.6.4/lib/libgdal.dylib'
 # GEOS_LIBRARY_PATH = '/Users/gianmarco/homebrew/Cellar/geos/3.11.2/lib/libgeos_c.dylib'
 
 # GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
 # GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ALLOW_CREDENTIALS = True
+
+# CORS_ALLOW_CREDENTIALS = True
